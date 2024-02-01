@@ -1,0 +1,583 @@
+@import url('https://webfontworld.github.io/NanumSquareRound/NanumSquareRound.css');
+/* NanumSquareRound */
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css); 
+/* Noto Sans KR */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+/* Open Sans */
+/* "Helvetica","Arial","sans-serif" */
+/* Font Awesome 5 Free */
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-size: 16px;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    tab-size: 4;
+    word-break: normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*, :after, :before {
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+}
+
+:after, :before {
+    text-decoration: inherit;
+    vertical-align: inherit;
+}
+
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.layout-application-wrap {
+    font-weight: 400;
+    line-height: 1;
+    color: rgb(51, 51, 51);
+    background-color: transparent;
+    background: #fff;
+    font-family: "Roboto",sans-serif;
+    display: flex;
+    position: relative;
+}
+
+.application-wrap {
+    backface-visibility: hidden;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    max-width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+.template-wrap {
+    font-family: "NanumSquareRound","Noto Sans KR","Open Sans","Helvetica","Arial","sans-serif";
+}
+
+.header-wrap-margin {
+    height: 52px;
+}
+
+header {
+    background: #fff;
+    border-bottom: 1px solid #e6e6e6;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,.1);
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 998;
+}
+
+.header-container {
+    align-items: center;
+    display: flex;
+    height: 52px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 1240px;
+}
+
+.h-left-box {
+    flex: 1;
+}
+
+.logo-box {
+    align-items: center;
+    cursor: pointer;
+    display: inline-flex;
+    vertical-align: top;
+}
+
+.logo-icon {
+    display: block;
+    max-height: 40px;
+    max-width: 120px;
+    border-style: none;
+}
+
+.logo-name {
+    color: #333;
+    font-size: 16px;
+    font-weight: 800;
+    margin-left: 10px;
+}
+
+.menu-button-open {
+    cursor: pointer;
+    display: none;
+    padding: 10px;
+}
+
+.bar-open {
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+.menu-box {
+    display: block!important;
+    position: relative;
+}
+
+.main-box-inner {
+    position: relative;
+}
+
+.menu {
+    position: relative;
+    padding-left: 0;
+    list-style: none;
+}
+
+.menu-item-history {
+    color: rgb(93, 63, 191);
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+    overflow: hidden;
+    padding: 8px 10px;
+    position: relative;
+}
+
+.history-background {
+    background-color: rgb(93, 63, 191);
+    display: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.history-text {
+    font-weight: 800;
+    position: relative;
+}
+
+.menu-item-teams {
+    color: rgb(93, 63, 191);
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+    overflow: hidden;
+    padding: 8px 10px;
+    position: relative;
+}
+
+.teams-background {
+    background-color: rgb(93, 63, 191);
+    display: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.teams-text {
+    font-weight: 800;
+    position: relative;
+}
+
+.menu-item-news {
+    color: rgb(93, 63, 191);
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+    overflow: hidden;
+    padding: 8px 10px;
+    position: relative;
+}
+
+.news-background {
+    background-color: rgb(93, 63, 191);
+    display: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.news-text {
+    font-weight: 800;
+    position: relative;
+}
+
+.menu-item-contact-us {
+    color: rgb(93, 63, 191);
+    margin-right: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+    overflow: hidden;
+    padding: 8px 10px;
+    position: relative;
+}
+
+.contact-us-background {
+    background-color: rgb(93, 63, 191);
+    display: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.contact-us-text {
+    font-weight: 800;
+    position: relative;
+}
+
+.menu::after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+}
+
+.menu-button-close {
+    bottom: -80px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: none;
+    height: 40px;
+    left: 0;
+    margin: 0 auto;
+    padding-top: 20px;
+    position: absolute;
+    right: 0;
+    width: 40px;
+}
+
+.description-wrap {
+    position: relative;
+}
+
+.description-background {
+    background-image: url("https://file.zillinks.com/prod/uploads/3f0bd88a2edd83d34f3a8bf2d32fa0bc_company-main-background.jpg");
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: 50%;
+    background-size: cover;
+    opacity: .9;
+}
+
+.description-color {
+    background-color: rgb(93, 63, 191);
+    opacity: 0.75;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.description-cover {
+    background: #000;
+    opacity: .35;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.description-container {
+    margin: 0 auto;
+    padding: 180px 0;
+    position: relative;
+    width: 1200px;
+}
+
+.description-text{
+    color: #fff;
+    font-family: "NanumSquareRound","Noto Sans KR","Open Sans","Helvetica","Arial","sans-serif";
+    font-size: 24px;
+    line-height: 1.4;
+    max-height: 302.4px;
+    overflow: hidden;
+    white-space: pre-wrap;
+}
+
+.section-history {
+    padding: 80px 0;
+}
+
+.history-container {
+    margin: 0 auto;
+    width: 900px;
+}
+
+.history-name-box {
+    text-align: center;
+}
+
+.history-name {
+    border-color: rgb(93, 63, 191);
+    color: rgb(93, 63, 191);
+    border: 1px solid;
+    border-radius: 8px;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 800;
+    padding: 10px 20px;
+}
+
+.history-content-box {
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.histroy-crop-line {
+    border-color: rgb(93, 63, 191);
+    border-top: 1px solid #ccc;
+    bottom: 0;
+    height: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.history-vertical-line {
+    background-color: rgb(93, 63, 191);
+    height: 100%;
+    left: 50%;
+    position: absolute;
+    top: 0;
+    width: 1px;
+}
+
+.history-content-group {
+    padding-top: 20px;
+}
+
+.year-base-history-group-one {
+    width: 450px;
+}
+
+.year-base-history-group-year {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    position: relative;
+
+}
+
+.year-line {
+    border-top-color: rgb(93, 63, 191);
+    border-top: 1px dashed;
+    bottom: -8px;
+    display: block;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.year-pointer {
+    background-color: rgb(93, 63, 191);
+    border-radius: 50%;
+    bottom: -12px;
+    display: block;
+    height: 8px;
+    position: absolute;
+    right: -4px;
+    width: 8px;
+}
+
+.year-year {
+    color: rgb(93, 63, 191);
+}
+
+.history-item {
+    display: flex;
+    margin-bottom: 10px;
+    padding-right: 30px;
+}
+
+.history-item-year {
+    color: #b3b3b3;
+    font-size: 20px;
+    font-weight: 800;
+    margin-right: 10px;
+}
+
+.history-item-content {
+    line-height: 1.4;
+}
+
+.year-base-history-group-two {
+    margin-top: -60px;
+    margin-left: 50%;
+    width: 450px;
+}
+
+.year-base-history-group-year-two{
+    padding-left: 30px;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.year-line-two{
+    border-top-color: rgb(93, 63, 191);
+    border-top: 1px dashed;
+    bottom: -8px;
+    display: block;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.year-pointer-two {
+    background-color: rgb(93, 63, 191);
+    left: -4px;
+    right: inherit;
+    border-radius: 50%;
+    bottom: -12px;
+    display: block;
+    height: 8px;
+    position: absolute;
+    width: 8px;
+}
+
+.year-year-two {
+    color: rgb(93, 63, 191);
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.history-item-two {
+    padding-left: 30px;
+    padding-right: 0;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.history-item-two-year {
+    color: #b3b3b3;
+    font-size: 20px;
+    font-weight: 800;
+    margin-right: 10px;
+}
+
+.history-item-two-content {
+    line-height: 1.4;
+}
+
+.year-base-history-group-three {
+    margin-top: -60px;
+    width: 450px;
+}
+
+.year-base-history-group-year-three {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.year-line-three {
+    border-top-color: rgb(93, 63, 191);
+    border-top: 1px dashed;
+    bottom: -8px;
+    display: block;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.year-pointer-three {
+    background-color: rgb(93, 63, 191);
+    border-radius: 50%;
+    bottom: -12px;
+    display: block;
+    height: 8px;
+    position: absolute;
+    right: -4px;
+    width: 8px;
+}
+
+.year-year-three {
+    color: rgb(93, 63, 191);
+}
+
+.history-item-three {
+    display: flex;
+    margin-bottom: 10px;
+    padding-right: 30px;
+}
+
+.history-item-three-year {
+    color: #b3b3b3;
+    font-size: 20px;
+    font-weight: 800;
+    margin-right: 10px;
+    line-height: 1.4;
+}
+
+.year-base-history-group-four {
+    margin-top: -60px;
+    margin-left: 50%;
+    width: 450px;
+}
+
+.year-base-history-group-year-four {
+    padding-left: 30px;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.year-line-four {
+    border-top-color: rgb(93, 63, 191);
+    border-top: 1px dashed;
+    bottom: -8px;
+    display: block;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.year-pointer-four {
+    background-color: rgb(93, 63, 191);
+    left: -4px;
+    right: inherit;
+    border-radius: 50%;
+    bottom: -12px;
+    display: block;
+    height: 8px;
+    position: absolute;
+    width: 8px;
+}
+
+.year-year-four {}
