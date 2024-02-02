@@ -164,10 +164,12 @@
                                                 class="main-user-info-input"
                                                 placeholder="맴버 검색"
                                                 type="search"
-                                                value
+                                                value=""
+                                                id="member-search"
                                             />
                                             <button
                                                 class="main-user-search-button"
+                                                id="member-button"
                                             >
                                                 <svg
                                                     viewBox="0 0 24 24"
@@ -175,6 +177,7 @@
                                                     class="main-user-search-box"
                                                 >
                                                     <path
+                                                        id="member-search-cansle"
                                                         fill-rule="evenodd"
                                                         clip-rule="evenodd"
                                                         d="M15.83 16.561a7.8 7.8 0 1 1 1.233-1.312l3.465 3.465a.9.9 0 1 1-1.272 1.273L15.83 16.56Zm1.13-5.961a6.16 6.16 0 1 1-12.32 0 6.16 6.16 0 0 1 12.32 0Z"
@@ -197,7 +200,8 @@
                                     >
                                 </div>
                                 <!-- 2번째 -->
-                                <div class="main-user-total-search">
+                                <!-- 일단은 없애요^^ -->
+                                <!-- <div class="main-user-total-search">
                                     <div class="main-user-total-member-status">
                                         <div
                                             class="main-user-total-member-list"
@@ -223,8 +227,8 @@
                                             </button>
                                         </div>
                                     </div>
-                                    <!-- 메시지 보내기 -->
-                                    <div class="main-user-total-message">
+                                    <-- 메시지 보내기 -->
+                                <!-- <div class="main-user-total-message">
                                         <button
                                             class="main-user-total-message-button"
                                         >
@@ -253,77 +257,29 @@
                                             </div>
                                         </button>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <!-- 전체 밑에 상태, 이름 등등 나타내는곳 -->
                             <div class="main-user-status">
                                 <!-- 여기에 넣으면 추가할수있습니다(가로넓이 width만 수정)) -->
                                 <div class="main-user-status-name">이름</div>
                                 <div class="main-user-status-status">상태</div>
-                                <button class="main-user-status-date">
-                                    <div class="main-user-status-div">
-                                        <span class="main-user-status-text"
-                                            >가입일</span
-                                        >
-                                        <svg
-                                            viewBox="0 0 6 10"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            class="main-user-status-svg"
-                                        >
-                                            <path
-                                                d="m3 0 3 4H0l3-4Z"
-                                                fill="#B9B9BB"
-                                            ></path>
-                                            <path
-                                                d="M3 10 0 6h6l-3 4Z"
-                                                fill="#333334"
-                                            ></path>
-                                        </svg>
-                                    </div>
-                                </button>
-                                <button class="main-user-status-pay">
-                                    <div class="main-user-status-pay-div">
-                                        <span class="main-user-status-pay-text"
-                                            >결제 금액</span
-                                        >
-                                        <svg
-                                            viewBox="0 0 6 10"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            class="main-user-status-pay-svg"
-                                        >
-                                            <path
-                                                d="m3 0 3 4H0l3-4ZM3 10 0 6h6l-3 4Z"
-                                                fill="#B9B9BB"
-                                            ></path>
-                                        </svg>
-                                    </div>
-                                </button>
+                                <div class="main-user-status-date">가입일</div>
+                                <div class="main-user-status-pay">
+                                    결제 금액
+                                </div>
                                 <div class="main-user-status-recent">
                                     최근 결제일
                                 </div>
-                                <button class="main-user-status-paycount">
-                                    <div class="main-user-status-paycount-div">
-                                        <span
-                                            class="main-user-status-paycount-text"
-                                            >결제 횟수</span
-                                        >
-                                        <svg
-                                            viewBox="0 0 6 10"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            class="main-user-status-paycount-svg"
-                                        >
-                                            <path
-                                                d="m3 0 3 4H0l3-4ZM3 10 0 6h6l-3 4Z"
-                                                fill="#B9B9BB"
-                                            ></path>
-                                        </svg>
-                                    </div>
-                                </button>
+                                <div class="main-user-status-paycount">
+                                    결제 횟수
+                                </div>
+
                                 <div class="main-user-status-message">
                                     메세지
+                                </div>
+                                <div class="main-user-status-stop">
+                                    활동정지
                                 </div>
                             </div>
                         </div>
@@ -337,6 +293,18 @@
                             <div class="main-user-list-paycount">23.02.01</div>
                             <div class="main-user-list-paycount">0</div>
                             <div class="main-user-list-message">0</div>
+                            <div class="main-user-list-ston">
+                                <button
+                                    class="member-user-list-button"
+                                    id="modalOpenButton"
+                                >
+                                    <img
+                                        src="/staticfiles/images/teenplay_logo/stop.img.png"
+                                        alt="활동 정지 사진"
+                                        class="main-user-list-stop-img"
+                                    />
+                                </button>
+                            </div>
                         </li>
                         <li class="main-user-list">
                             <div class="main-user-list-name">조관익</div>
@@ -346,6 +314,39 @@
                             <div class="main-user-list-paycount">23.02.01</div>
                             <div class="main-user-list-paycount">0</div>
                             <div class="main-user-list-message">0</div>
+                            <div class="main-user-list-ston">
+                                <button
+                                    class="member-user-list-button"
+                                    id="modalOpenButton"
+                                >
+                                    <img
+                                        src="/staticfiles/images/teenplay_logo/stop.img.png"
+                                        alt="활동 정지 사진"
+                                        class="main-user-list-stop-img"
+                                    />
+                                </button>
+                            </div>
+                        </li>
+                        <li class="main-user-list">
+                            <div class="main-user-list-name">조관익</div>
+                            <div class="main-user-list-status">상태</div>
+                            <div class="main-user-list-date">23.02.01</div>
+                            <div class="main-user-list-pay">50000</div>
+                            <div class="main-user-list-paycount">23.02.01</div>
+                            <div class="main-user-list-paycount">0</div>
+                            <div class="main-user-list-message">0</div>
+                            <div class="main-user-list-ston">
+                                <button
+                                    class="member-user-list-button"
+                                    id="modalOpenButton"
+                                >
+                                    <img
+                                        src="/staticfiles/images/teenplay_logo/stop.img.png"
+                                        alt="활동 정지 사진"
+                                        class="main-user-list-stop-img"
+                                    />
+                                </button>
+                            </div>
                         </li>
 
                         <!-- 유저가 없다면 아래 -->
@@ -389,5 +390,30 @@
                 </div>
             </div>
         </main>
+
+        <!-- 모달창 -->
+        <div id="admin-user-modal" class="hidden">
+            <h4 class="admin-user-modal-title">정지사유를 작성해주세요!</h4>
+            <div>
+                <input type="text" class="admin-user-modal-text" />
+            </div>
+            <div class="admin-user-modal-button">
+                <div class="admin-user-modal-left">
+                    <button
+                        class="admin-user-modal-left-button"
+                        id="modalCloseButton"
+                    >
+                        취소
+                    </button>
+                </div>
+                <div class="admin-user-modal-right">
+                    <button class="admin-user-modal-right-button">
+                        적용하기
+                    </button>
+                </div>
+            </div>
+        </div>
     </body>
+    <script src="/staticfiles/admin/user/user-search.js"></script>
+    <script src="/staticfiles/admin/user/user-modal.js"></script>
 </html>
