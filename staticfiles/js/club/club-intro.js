@@ -16,14 +16,16 @@ function autoSlide() {
     // 0s를 줘서 원래 1번 위치로 이동(슬라이드 효과는 안 보임)
     count++;
     if (count == 10) {
-        banner.style.transform = "translate(-" + 92 * (count + 1) + "%)";
+        banner.style.transform =
+            "translate(-" + (631 * (count + 1) - 67.5) + "px)";
         setTimeout(function () {
             banner.style.transition = "transform 0s";
-            banner.style.transform = `translate(-92%)`;
+            banner.style.transform = "translate(-563.5px)";
         }, 800);
         count = 0;
     } else {
-        banner.style.transform = "translate(-" + width * (count + 1) + "px)";
+        banner.style.transform =
+            "translate(-" + (631 * (count + 1) - 67.5) + "px)";
     }
 }
 
@@ -70,7 +72,7 @@ lastDiv.innerHTML = `<div class="main-slide-content-container">
 banner.insertBefore(lastDiv, document.getElementById("first-slide-banner"));
 
 // 첫 번째 배너는 10번이니까 왼쪽으로 한 번 밀어서 1번이 보이게 한다.
-banner.style.transform = `translate(-${width + 16}px)`;
+banner.style.transform = "translate(-563.5px)";
 
 // 4초마다 슬라이드 이동
 let inter = setInterval(autoSlide, 4000);
@@ -88,29 +90,29 @@ arrows.forEach((arrow) => {
             if (arrowType === "slide-left-arrow") {
                 count--;
                 if (count == -1) {
-                    banner.style.transform = `translate(-${10 * width}px)`;
+                    banner.style.transform = "translate(67.5px)";
                     setTimeout(function () {
                         banner.style.transition = "transform 0s";
-                        banner.style.transform = `translate(-${10 * width}px)`;
+                        banner.style.transform = "translate(-6242.5px)";
                     }, 800);
                     count = 9;
                 } else {
                     banner.style.transform =
-                        "translate(-" + width * (count + 1) + "%)";
+                        "translate(-" + (631 * (count + 1) - 67.5) + "px)";
                 }
             } else {
                 count++;
                 if (count == 10) {
                     banner.style.transform =
-                        "translate(-" + width * (count + 1) + "%)";
+                        "translate(-" + (631 * (count + 1) - 67.5) + "px)";
                     setTimeout(function () {
                         banner.style.transition = "transform 0s";
-                        banner.style.transform = `translate(-${width + 16}px)`;
+                        banner.style.transform = "translate(-563.5px)";
                     }, 800);
                     count = 0;
                 } else {
                     banner.style.transform =
-                        "translate(-" + width * (count + 1) + "px)";
+                        "translate(-" + (631 * (count + 1) - 67.5) + "px)";
                 }
             }
             inter = setInterval(autoSlide, 4000);

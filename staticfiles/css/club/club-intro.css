@@ -55,6 +55,19 @@ audio, canvas, embed, iframe, img, object, svg, video {
     vertical-align: middle;
 }
 
+button {
+    text-align: left;
+    cursor: pointer;
+    text-transform: none;
+    font-family: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
+
 * {
     scrollbar-color: auto;
     scrollbar-width: auto;
@@ -505,7 +518,7 @@ audio, canvas, embed, iframe, img, object, svg, video {
 }
 
 .main-slide-container {
-    max-width: 60%;
+    width: 750px;
     margin-top: 4rem;
     position: relative;
 }
@@ -533,7 +546,7 @@ audio, canvas, embed, iframe, img, object, svg, video {
 
 .main-slide-content-wrap {
     margin-right: 16px;
-    width: 82%;
+    width: 615px;
     flex-shrink: 0;
     height: 100%;
     position: relative;
@@ -565,7 +578,7 @@ audio, canvas, embed, iframe, img, object, svg, video {
 .main-slide-content-text {
     font-size: 1.25rem;
     line-height: 1.75rem;
-    font-weight: 700;
+    font-weight: 750;
 }
 
 .slide-left-arrow-wrap {
