@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- 로고 만들어지면 href수정 -->
+        <link
+            rel="shortcut icon"
+            href="/staticfiles/images/teenplay_logo/logo1.png"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="/staticfiles/admin/message/message.css" />
+        <title>틴플 : 관리자 페이지</title>
+    </head>
+    <body>
+        <!-- 헤더 먼저 해야합니다. 나중에 색상은 바꿔야합니다! -->
+        <header class="header-all">
+            <div class="header-logo-text">
+                <a href="" class="header-logo">
+                    <img
+                        class="header-logo-icon"
+                        src="/staticfiles/images/teenplay_logo/logo2.png"
+                        alt="로고"
+                    />
+                </a>
+                <div class="header-slash">|</div>
+                <div class="header-admin-text">
+                    <span>Admin Center</span>
+                </div>
+            </div>
+        </header>
+        <!-- 헤더  끝 좌측 안내부분 시작 -->
+        <main class="main-all">
+            <!-- 공통으로 들어가는 좌측부분 -->
+            <nav class="main-nav-wrap">
+                <!-- 위에 로그인 정보 및 로그아웃 칸 -->
+                <div class="main-admin-info">
+                    <div class="main-admin-wrap">
+                        <div class="main-admin-container">
+                            <button class="main-admin-button">
+                                <img
+                                    class="main-admin-image"
+                                    src="/staticfiles/images/teenplay_logo/logo1.png"
+                                    alt="admin사진"
+                                />
+                                <!-- 여기 중간에 뭐 이상한거 있긴한데 의미 없어보임 일단은 보류 -->
+                                <div class="main-admin-image-warp"></div>
+                            </button>
+                        </div>
+                        <h2 class="main-admin-name">TeenPlay</h2>
+                        <a href="" class="main-admin-logout">
+                            <button class="main-admin-logout-button">
+                                <div class="main-admin-logout-warp">
+                                    <div>로그아웃</div>
+                                </div>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <!-- 메뉴 선택할수 있는 칸 -->
+                <ul class="main-admin-select">
+                    <!-- 유저관리 -->
+                    <li class="main-message-other">
+                        <a href="" class="main-message-warp">
+                            <img
+                                class="main-message-image"
+                                src="/staticfiles/admin/admin-image/admin-user-img.png"
+                                alt="message-image"
+                            />
+                            <span class="main-message-text">유저 관리</span>
+                        </a>
+                    </li>
+                    <!-- 쪽지 관리 -->
+                    <li class="main-message">
+                        <a href="" class="main-message-warp">
+                            <img
+                                class="main-message-image"
+                                src="/staticfiles/admin/admin-image/message-img.png"
+                                alt="message-image"
+                            />
+                            <span class="main-message-text">쪽지 관리</span>
+                        </a>
+                    </li>
+                    <!-- 틴플레이관리 -->
+                    <li class="main-message-other">
+                        <a href="" class="main-message-warp">
+                            <img
+                                class="main-message-image"
+                                src="/staticfiles/admin/admin-image/play-img.png"
+                                alt="message-image"
+                            />
+                            <span class="main-message-text"
+                                >틴 플레이 관리</span
+                            >
+                        </a>
+                    </li>
+                    <!-- 게시글 관리 -->
+                    <li class="main-message-other">
+                        <a href="" class="main-message-warp">
+                            <img
+                                class="main-message-image"
+                                src="/staticfiles/admin/admin-image/post-img.png"
+                                alt="message-image"
+                            />
+                            <span class="main-message-text">게시글 관리</span>
+                        </a>
+                    </li>
+                    <!-- 전체모임 관리 -->
+                    <li class="main-message-other">
+                        <a href="" class="main-message-warp">
+                            <img
+                                class="main-message-image"
+                                src="/staticfiles/admin/admin-image/meeting-img.png"
+                                alt="message-image"
+                            />
+                            <span class="main-message-text">전체 모임관리</span>
+                        </a>
+                    </li>
+                    <!-- 축제관리 -->
+                    <li class="main-message-other">
+                        <a href="" class="main-message-warp">
+                            <img
+                                class="main-message-image"
+                                src="/staticfiles/admin/admin-image/festival-img.png"
+                                alt="message-image"
+                            />
+                            <span class="main-message-text">축제 관리</span>
+                        </a>
+                    </li>
+                    <!-- 공지사항 관리 -->
+                    <li class="main-message-other">
+                        <a href="" class="main-message-warp">
+                            <img
+                                class="main-message-image"
+                                src="/staticfiles/admin/admin-image/loudspeaker-img.png"
+                                alt="message-image"
+                            />
+                            <span class="main-message-text">공지사항 관리</span>
+                        </a>
+                    </li>
+                    <!-- 댓글관리 -->
+                    <li class="main-message-other">
+                        <a href="" class="main-message-warp">
+                            <img
+                                class="main-message-image"
+                                src="/staticfiles/admin/admin-image/comment-img.png"
+                                alt="message-image"
+                            />
+                            <span class="main-message-text">댓글 관리</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- 사실상 여기만 수정하면 모든게 끝입니다! -->
+            <div class="main-message-info-warp">
+                <div class="main-message-info-container">
+                    <div class="main-message-info-box">
+                        <div class="main-message-info-top">
+                            <!-- 유저관리, 검색하는곳 -->
+                            <header class="main-message-info-text">
+                                <h1 class="main-message-info-tag">쪽지 관리</h1>
+                                <div>
+                                    <div class="main-message-info-seach">
+                                        <label class="main-message-info-label">
+                                            <input
+                                                class="main-message-info-input"
+                                                placeholder="보낸사람 검색"
+                                                type="search"
+                                                value=""
+                                                id="member-search"
+                                            />
+                                            <button
+                                                class="main-message-search-button"
+                                                id="member-button"
+                                            >
+                                                <svg
+                                                    viewBox="0 0 24 24"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    class="main-message-search-box"
+                                                >
+                                                    <path
+                                                        id="member-search-cansle"
+                                                        fill-rule="evenodd"
+                                                        clip-rule="evenodd"
+                                                        d="M15.83 16.561a7.8 7.8 0 1 1 1.233-1.312l3.465 3.465a.9.9 0 1 1-1.272 1.273L15.83 16.56Zm1.13-5.961a6.16 6.16 0 1 1-12.32 0 6.16 6.16 0 0 1 12.32 0Z"
+                                                    ></path>
+                                                </svg>
+                                            </button>
+                                        </label>
+                                    </div>
+                                </div>
+                            </header>
+                            <!-- 전체 목록 갯수확인 -->
+                            <div class="main-message-total">
+                                <!-- 첫번째(왼쪽 전체0) -->
+                                <div class="main-message-total-list">
+                                    <span class="main-message-total-text"
+                                        >전체</span
+                                    >
+                                    <span class="main-message-total-number"
+                                        >0</span
+                                    >
+                                </div>
+                                <!-- 2번째 -->
+                                <!-- 일단은 없애요^^ -->
+                                <!-- <div class="main-user-total-search">
+                                    <div class="main-user-total-member-status">
+                                        <div
+                                            class="main-user-total-member-list"
+                                        >
+                                            <button
+                                                class="main-user-total-button"
+                                            >
+                                                <span
+                                                    class="main-user-total-span"
+                                                    >유저 상태</span
+                                                >
+                                                <svg
+                                                    viewBox="0 0 24 24"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    class="main-user-totam-svg"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        clip-rule="evenodd"
+                                                        d="M3.27 8.42a1.076 1.076 0 0 1 1.587-.13L12 14.832l7.143-6.544a1.076 1.076 0 0 1 1.586.13 1.26 1.26 0 0 1-.122 1.696L12 18l-8.607-7.885A1.26 1.26 0 0 1 3.27 8.42Z"
+                                                    ></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <-- 메시지 보내기 -->
+                                <!-- <div class="main-user-total-message">
+                                        <button
+                                            class="main-user-total-message-button"
+                                        >
+                                            <div
+                                                class="main-user-total-message-div"
+                                            >
+                                                <div
+                                                    class="main-user-total-message-text"
+                                                >
+                                                    메시지
+                                                </div>
+                                                <svg
+                                                    viewBox="0 0 24 24"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    height="16px"
+                                                    width="16px"
+                                                    class="main-user-total-message-svg"
+                                                >
+                                                    <path
+                                                        d="M11 7a1 1 0 0 0-1-1H4v14h14v-6a1 1 0 1 0-2 0v4H6V8h4a1 1 0 0 0 1-1Z"
+                                                    ></path>
+                                                    <path
+                                                        d="M19.01 3.829H20v6.656a1 1 0 1 1-2 0V7.244l-5.293 5.293a1 1 0 0 1-1.414-1.415l5.293-5.292h-3.243a1 1 0 1 1 0-2H19.01Z"
+                                                    ></path>
+                                                </svg>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <!-- 전체 밑에 상태, 이름 등등 나타내는곳 -->
+                            <div class="main-message-status">
+                                <!-- 여기에 넣으면 추가할수있습니다(가로넓이 width만 수정)) -->
+                                <div class="main-message-status-name">
+                                    보낸사람
+                                </div>
+                                <div class="main-message-status-status">
+                                    받은사람
+                                </div>
+                                <div class="main-message-status-date">
+                                    보낸 날짜
+                                </div>
+                                <div class="main-message-status-pay">
+                                    수신 여부
+                                </div>
+                                <div class="main-message-status-recent">
+                                    마지막 송신일
+                                </div>
+                                <div class="main-message-status-paycount">
+                                    총 보낸 횟수
+                                </div>
+
+                                <div class="main-message-status-message">
+                                    메세지 내용 확인
+                                </div>
+                                <div class="main-message-status-stop">
+                                    활동정지
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 맴버 정보 들어가야함 (지금은 없고 나중에어떤식인지 배워봅시다.) -->
+                        <!-- 일단 하나 만들어봅시다. -->
+
+                        <li class="main-message-list">
+                            <div class="main-message-list-name">조관익</div>
+                            <div class="main-message-list-status">조관익</div>
+                            <div class="main-message-list-date">23.02.01</div>
+                            <div class="main-message-list-pay">O</div>
+                            <div class="main-message-list-paycount">
+                                23.02.01
+                            </div>
+                            <div class="main-message-list-paycount">0</div>
+                            <div class="main-message-list-check">
+                                <button
+                                    class="member-message-list-button"
+                                    id="modalOpenButton"
+                                >
+                                    <img
+                                        src="/staticfiles/admin/admin-image/read-message.img.png"
+                                        alt="메시지 사진"
+                                        class="main-message-list-stop-img"
+                                    />
+                                </button>
+                            </div>
+                            <div class="main-message-list-stop">
+                                <button
+                                    class="member-user-list-button"
+                                    id="modalOpenButton"
+                                >
+                                    <img
+                                        src="/staticfiles/admin/admin-image/stop.img.png"
+                                        alt="활동 정지 사진"
+                                        class="main-message-list-stop-img"
+                                    />
+                                </button>
+                            </div>
+                        </li>
+                        <li class="main-message-list">
+                            <div class="main-message-list-name">조관익</div>
+                            <div class="main-message-list-status">조관익</div>
+                            <div class="main-message-list-date">23.02.01</div>
+                            <div class="main-message-list-pay">O</div>
+                            <div class="main-message-list-paycount">
+                                23.02.01
+                            </div>
+                            <div class="main-message-list-paycount">0</div>
+                            <div class="main-message-list-check">
+                                <button
+                                    class="member-message-list-button"
+                                    id="modalOpenButton"
+                                >
+                                    <img
+                                        src="/staticfiles/admin/admin-image/read-message.img.png"
+                                        alt="메시지 사진"
+                                        class="main-message-list-stop-img"
+                                    />
+                                </button>
+                            </div>
+                            <div class="main-message-list-stop">
+                                <button
+                                    class="member-user-list-button"
+                                    id="modalOpenButton"
+                                >
+                                    <img
+                                        src="/staticfiles/admin/admin-image/stop.img.png"
+                                        alt="활동 정지 사진"
+                                        class="main-message-list-stop-img"
+                                    />
+                                </button>
+                            </div>
+                        </li>
+                        <li class="main-message-list">
+                            <div class="main-message-list-name">조관익</div>
+                            <div class="main-message-list-status">조관익</div>
+                            <div class="main-message-list-date">23.02.01</div>
+                            <div class="main-message-list-pay">O</div>
+                            <div class="main-message-list-paycount">
+                                23.02.01
+                            </div>
+                            <div class="main-message-list-paycount">0</div>
+                            <div class="main-message-list-check">
+                                <button
+                                    class="member-message-list-button"
+                                    id="modalOpenButton"
+                                >
+                                    <img
+                                        src="/staticfiles/admin/admin-image/read-message.img.png"
+                                        alt="메시지 사진"
+                                        class="main-message-list-stop-img"
+                                    />
+                                </button>
+                            </div>
+                            <div class="main-message-list-stop">
+                                <button
+                                    class="member-user-list-button"
+                                    id="modalOpenButton"
+                                >
+                                    <img
+                                        src="/staticfiles/admin/admin-image/stop.img.png"
+                                        alt="활동 정지 사진"
+                                        class="main-message-list-stop-img"
+                                    />
+                                </button>
+                            </div>
+                        </li>
+
+                        <!-- 유저가 없다면 아래 -->
+                        <div class="main-message-status-list">
+                            <!-- 이거말고 차라리 로고로? -->
+                            <svg
+                                width="53"
+                                height="56"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="main-message-status-list-svg"
+                            >
+                                <path
+                                    d="M27.516 1.62c-6.654-4.436-21.823.626-21.821 10.475 0 5.567 1.956 10.31 3.889 14.205-1.403-.463-2.853-1.072-3.8-2.095-.466-.502-1.151-1.115-1.802-1.35-.993-.358-2.035.135-2.572.923-1.212 1.776-1.071 2.717-.403 4.643 4.364 5.647 8.167 5.53 11.275 5.435.286-.009.566-.017.84-.021.897 3.13 2.706 6.042 4.099 8.965 1.617 5.694 9.313 4.544 12.913 1.697 2.3-1.819 5.187-2.36 8.117-1.475 2.303.419 3.88-.68 5.236-1.624 1.031-.72 1.934-1.348 2.93-1.149 1.19.238 2.511.191 2.718-1.307.521-3.781-8.391-5.535-11.284-7.062 4.98-2.883 7.416-7.67 6.968-10.861-.31-2.2-2.168-2.967-4.076-1.773-2.206 1.38-2.758 3.32-5.42 4.348 1.822-6.821 3.386-14.515-7.807-21.975Z"
+                                    fill="#9D8DFF"
+                                ></path>
+                                <path
+                                    d="M15.33 17.017c.03.784-.382 1.385-.92 1.344-.54-.042-1.001-.71-1.032-1.494-.03-.784.382-1.385.921-1.343.54.041 1 .71 1.031 1.493ZM19.599 16.868c.03.784-.382 1.385-.921 1.344-.54-.042-1-.71-1.031-1.494-.03-.784.382-1.385.92-1.343.54.041 1.001.71 1.032 1.493Z"
+                                    fill="#060606"
+                                ></path>
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M11.457 29.625a.7.7 0 0 1 .755.64c.036.44.242.87.57 1.304.322.428.721.81 1.107 1.178l.027.026a.7.7 0 1 1-.967 1.012l-.05-.048c-.37-.353-.842-.804-1.235-1.325-.414-.55-.782-1.23-.847-2.033a.7.7 0 0 1 .64-.754ZM35.844 23.41a.7.7 0 0 0-.968.205 25.97 25.97 0 0 1-.389.571c-.235.34-.487.704-.68 1.032-.33.559-.626 1.212-.626 1.941a.7.7 0 1 0 1.4 0c0-.354.145-.745.43-1.228.18-.303.368-.573.573-.868.146-.21.3-.431.465-.684a.7.7 0 0 0-.205-.969Z"
+                                    fill="#000"
+                                ></path>
+                                <path
+                                    d="M17.917 19.838c-.158-.342-2.435-.62-2.138.915 1.156 3.742 2.834.598 2.138-.915Z"
+                                    fill="#030303"
+                                ></path>
+                                <path
+                                    d="M51.901 52.983c0 1.223-7.433 2.214-16.602 2.214-9.17 0-16.603-.991-16.603-2.214 0-1.222 7.433-2.213 16.603-2.213 9.17 0 16.602.99 16.602 2.213Z"
+                                    fill="#E3E3E3"
+                                ></path>
+                            </svg>
+                            <p class="main-message-status-list-text">
+                                쪽지가 없습니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- 모달창 / 활동정지-->
+        <!-- 모달창 -->
+
+        <!-- 메시지 모달창 -->
+        <div id="admin-message-modal" class="hidden">
+            <h4 class="admin-message-modal-title">메시지 내용</h4>
+            <div>
+                <input type="text" class="admin-message-modal-text" />
+            </div>
+            <div class="admin-message-modal-button">
+                <div class="admin-message-modal-left">
+                    <button
+                        class="admin-message-modal-left-button"
+                        id="modalCloseButton"
+                    >
+                        닫기
+                    </button>
+                </div>
+                <div class="admin-message-modal-right">
+                    <button class="admin-message-modal-right-button">
+                        수정하기
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- 회원정지 모달창 -->
+        <div id="admin-user-modal" class="hidden">
+            <h4 class="admin-user-modal-title">정지사유를 작성해주세요!</h4>
+            <div>
+                <input type="text" class="admin-user-modal-text" />
+            </div>
+            <div class="admin-user-modal-button">
+                <div class="admin-user-modal-left">
+                    <button
+                        class="admin-user-modal-left-button"
+                        id="modalCloseButton"
+                    >
+                        취소
+                    </button>
+                </div>
+                <div class="admin-user-modal-right">
+                    <button class="admin-user-modal-right-button">
+                        적용하기
+                    </button>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="/staticfiles/admin/message/message-search.js"></script>
+    <script src="/staticfiles/admin/message/message-modal.js"></script>
+</html>
