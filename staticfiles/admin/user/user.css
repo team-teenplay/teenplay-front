@@ -289,6 +289,11 @@ body {
     padding-right: 15px;
 }
 
+.member-user-list-button:hover{
+    border-color: #f3f3f4;
+    background-color: #f3f3f4;
+}
+
 .main-admin-logout-warp{
     justify-content: center;
     align-items: center;
@@ -631,10 +636,11 @@ color: #9ca3af;
     display: flex;
     margin-top: 20px;
     border-color: #e6e6e7;
+    justify-content: space-between;
 }
 
 .main-user-status-name{
-    width: 170px;
+
     justify-content: flex-start;
     align-items: center;
     flex-shrink: 0;
@@ -647,7 +653,7 @@ color: #9ca3af;
 }
 
 .main-user-status-status{
-    width: 72px;
+
     justify-content: flex-start;
     align-items: center;
     flex-shrink: 0;
@@ -660,7 +666,7 @@ color: #9ca3af;
 }
 
 .main-user-status-date{
-    width: 72px;
+
     justify-content: flex-start;
     align-items: center;
     flex-shrink: 0;
@@ -674,7 +680,7 @@ color: #9ca3af;
 
 
 .main-user-status-pay{
-    width: 72px;
+
     justify-content: flex-start;
     align-items: center;
     flex-shrink: 0;
@@ -696,7 +702,7 @@ color: #9ca3af;
 }
 
 .main-user-status-recent{
-    width: 72px;
+
     justify-content: flex-end;
     align-items: center;
     flex-shrink: 0;
@@ -709,7 +715,7 @@ color: #9ca3af;
 }
 
 .main-user-status-paycount{
-    width: 68px;
+
     justify-content: flex-end;
     align-items: center;
     flex-shrink: 0;
@@ -722,21 +728,9 @@ color: #9ca3af;
 }
 
 
-.main-user-status-message{
-    width: 150px;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    display: flex;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 18px;
-    color: #1d1d1e;
-    fill: #1d1d1e;
-}
 
 .main-user-status-stop{
-    width: 120px;
+
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
@@ -772,6 +766,7 @@ color: #9ca3af;
 }
 
 .main-user-list{
+    column-gap: 24px;
     padding-top: 16px;
     padding-bottom: 16px;
     padding-left: 8px;
@@ -780,10 +775,12 @@ color: #9ca3af;
     align-items: center;
     display: flex;
     border-color: #f3f3f4;
+
+    
 }
 
 .main-user-list-name{
-    width: 195px;
+    width: 90px;
     justify-content: flex-start;
     align-items: center;
     flex-shrink: 0;
@@ -793,10 +790,11 @@ color: #9ca3af;
     line-height: 18px;
     color: #1d1d1e;
     fill: #1d1d1e;
+    
 }
 
 .main-user-list-status{
-    width: 90px;
+    width: 145px;
     justify-content: flex-start;
     align-items: center;
     flex-shrink: 0;
@@ -809,7 +807,7 @@ color: #9ca3af;
 }
 
 .main-user-list-date{
-    width: 105px;
+    width: 150px;
     justify-content: flex-start;
     align-items: center;
     flex-shrink: 0;
@@ -822,7 +820,7 @@ color: #9ca3af;
 }
 
 .main-user-list-pay{
-    width: 110px;
+    width: 150px;
     justify-content: flex-start;
     align-items: center;
     flex-shrink: 0;
@@ -835,7 +833,7 @@ color: #9ca3af;
 }
 
 .main-user-list-paycount{
-    width: 120px;
+    width: 100px;
     justify-content: flex-start;
     align-items: center;
     flex-shrink: 0;
@@ -847,7 +845,7 @@ color: #9ca3af;
     fill: #1d1d1e;
 }
 .main-user-list-message{
-    width: 60px;
+    width: 80px;
     justify-content: flex-start;
     align-items: center;
     flex-shrink: 0;
@@ -860,48 +858,47 @@ color: #9ca3af;
 }
 
 .main-user-list-ston{
-    column-gap: 12px;
+
     align-items: center;
     display: flex;
-    margin-left: auto;
+
 }
 
 .member-user-list-button{
+    width: 90px;
+    border-style: solid;
     border-width: 1px;
-    border-radius: 9999px;
+    border-radius: 20px;
     justify-content: center;
     align-items: center;
-    width: 40px;
     height: 40px;
     display: flex;
-    border-color: #e6e6e7;
+    position: relative;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    border-color: rgba(0,0,0,.1);
+    color: #333334;
+    fill: #333334;
+    background-color: #fff;
     -webkit-appearance: button;
-    background-color: transparent;
     background-image: none;
     cursor: pointer;
     text-transform: none;
     font-family: inherit;
-    font-size: 100%;
-    font-weight: inherit;
-    line-height: inherit;
-    color: inherit;
     margin: 0;
     padding: 0;
-}
+    padding-left: 20px;
+    padding-right: 20px;
 
-.main-user-list-stop-img{
-    width: 30px;
-    height: 30px;
-    display: block;
-    vertical-align: middle;
 }
 
 
 /* 모달창 */
 #admin-user-modal{
-    height: 289px;
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
-    --tw-shadow: 0px 2px 8px rgba(0,0,0,.08);
+    height: auto;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    --tw-shadow: 0px 2px 8px rgba(0, 0, 0, .08);
     --tw-shadow-colored: 0px 2px 8px var(--tw-shadow-color);
     padding: 32px;
     border-width: 1px;
@@ -909,23 +906,30 @@ color: #9ca3af;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    transform: translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     --tw-translate-x: -50%;
     min-width: 360px;
     display: flex;
     box-sizing: border-box;
     z-index: 50;
-    top: 30px;
-    left: 50%;
     position: fixed;
     border-color: #e6e6e7;
     background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 100px;
+    resize: vertical;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+
+
   
   .admin-user-modal-text{
     width: 300px;
-    height: 150px;
-    text-align: center;
+    height: 50px;
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
@@ -933,12 +937,13 @@ color: #9ca3af;
     fill: #333334;
     background-color: #f3f3f4;
     padding-left: 12px;
-      padding-right: 12px;
-      border-radius: 8px;
-      align-items: center;
-      margin-bottom: 8px;
-      border: none;
-      outline: none;
+    padding-right: 12px;
+    border-radius: 8px;
+    align-items: center;
+    margin-bottom: 8px;
+    border: none;
+    outline: none;
+    height: auto;
     
   }
   
@@ -1026,5 +1031,22 @@ color: #9ca3af;
   }
   
   #admin-user-modal.hidden{
+    display: none;
+  }
+
+
+
+  #admin-user-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);  /* 어두운 배경색 지정 */
+    z-index: 35; /* 모달보다 뒤에 위치하도록 설정 */
+
+  }
+
+  #admin-user-modal-backdrop.hidden{
     display: none;
   }
