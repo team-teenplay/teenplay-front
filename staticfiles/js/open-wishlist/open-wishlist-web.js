@@ -117,3 +117,22 @@ modalCreateClose.addEventListener("click", () => {
 modalCreateFinish.addEventListener("click", () => {
     modalCreateInput.classList.add("hidden");
 });
+
+// 위시리스트 게시글 수정 모달창
+const postUpdateButton = document.getElementById("post-menu-open-update");
+const modalPostUpdate = document.querySelector(".modal-update");
+const modalPostUpdateClose = document.querySelector(".modal-update-back-botton");
+const modalPostUpdateFinish = document.querySelector(".modal-update-finsh-botton");
+
+
+postUpdateButton.addEventListener("click", () => {
+    modalPostUpdate.classList.remove("hidden");
+});
+
+modalPostUpdateClose.addEventListener("click", () => {
+    modalPostUpdate.classList.add("hidden");
+});
+
+modalPostUpdateFinish.addEventListener("click", () => {
+    modalPostUpdate.classList.add("hidden");
+});

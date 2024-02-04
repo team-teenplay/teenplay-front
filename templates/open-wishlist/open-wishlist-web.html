@@ -387,6 +387,64 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 위시리스트 포스트 수정 모달 부분 -->
+        <div class="modal-update hidden">
+            <div class="modal-full-wrap" role="dialog" aria-modal="true" data-headlessui-state="open" aria-labelledby="headlessui-dialog-title-42" aria-describedby="headlessui-description-43">
+                <div class="modal-screen"></div>
+                <div class="modal-divison">
+                    <!-- 위시리스트 입력 부분 -->
+                    <div class="modal-update-wrap" data-headlessui-state="open">
+                        <!-- 상단 메뉴 -->
+                        <div class="modal-update-top-wrap">
+                            <button class="modal-update-back-botton" type="button">
+                                <svg class="modal-update-back-botton-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="modal-update-back-botton-text">돌아가기</span>
+                            </button>
+                            <div style="display: flex">
+                                <select class="modal-update-public-private-wrap" name="category" required>
+                                    <option class="modal-update-public" value="공개" selected>공개</option>
+                                    <option value="비공개">비공개</option>
+                                </select>
+                                <div class="modal-update-finsh-botton-wrap">
+                                    <button class="modal-update-finsh-botton" type="submit"> 발행하기 </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 중간 부분 -->
+                        <div class="modal-update-middle-wrap">
+                            <select class="modal-update-category-choice-wrap" name="category" required>
+                                <option class="modal-update-category" disabled selected>카테고리</option>
+                                <option value="문화·예술">문화·예술</option>
+                                <option value="운동·액티비티">운동·액티비티</option>
+                                <option value="푸드·드링크">푸드·드링크</option>
+                                <option value="취미">취미</option>
+                                <option value="여행·동행">여행·동행</option>
+                                <option value="성장·자기계발">성장·자기계발</option>
+                                <option value="동네·또래">동네·또래</option>
+                                <option value="연애·소개팅">연애·소개팅</option>
+                                <option value="재테크">재테크</option>
+                                <option value="외국어">외국어</option>
+                                <option value="스터디">스터디</option>
+                                <option value="지역축제">지역축제</option>
+                                <option value="기타">기타</option>
+                            </select>
+                            <input class="modal-update-wishlist-input" name="wishlist-title" placeholder="위시리스트를 입력하세요" required>
+                        </div>
+                        <!-- 태그 부분 -->
+                        <div class="modal-update-bottom-wrap">
+                            <div class="modal-update-tag-wrap">
+                                <span class="modal-update-tag-text">태그입력</span>
+                                <div class="modal-update-tag">
+                                    <input class="modal-update-tag-input" type="text" placeholder="태그는 최대 5개까지, 1개당 10자까지 가능">
+                                </div>
+                            </div>
+                        </div>
                         
                     </div>
                 </div>
