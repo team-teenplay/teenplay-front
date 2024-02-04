@@ -1,4 +1,3 @@
-HTMLCollection.prototype.map = Array.prototype.map;
 const sendEmailATag = document.querySelector(".send-email");
 const sendEmailModal = document.querySelector(".send-email-modal-container");
 const checkBtn = document.querySelector(".check-btn");
@@ -18,35 +17,13 @@ const mypageMenu = document.querySelector(".mypage-menu");
 const AllWhithoutClass = document.querySelectorAll("body :not(.member-services) :not(.mypage-menu)");
 
 // 마이페이지 간이 목록 이외 클릭 시 none처리 이벤트
-// document.addEventListener("click", (e) => {
-//     if (!e.target.closest(".member-services")) {
-//         // mypageMenu.classList.toggle("display:none");
-//         mypageMenu.style.display = "none";
-//         console.log("if");
-//         console.log(e.target.closest(".member-services"));
-//     } else {
-//         if (e.target.closest(".mypage-menu")) {
-//             mypageMenu.style.display = "flex";
-//         } else {
-//             mypageMenu.style.display = "none";
-//         }
-//     }
-// });
-
 document.addEventListener("click", (e) => {
     if (!e.target.closest(".member-services")) {
-        // mypageMenu.classList.toggle("display:none");
         mypageMenu.classList.remove("display:flex");
-        // 리무브
-        // mypageMenu.style.display = "none";
-        console.log("if");
     } else {
         console.log("else");
         if (e.target.closest(".member-service-menu-btn")) {
-            // mypageMenu.style.display = "flex";
             mypageMenu.classList.toggle("display:flex");
-        } else {
-            // mypageMenu.style.display = "none";
         }
     }
 });
@@ -120,13 +97,6 @@ const countKeyword = () => {
     }
 };
 
-// 검색 기록 삭제 클릭 시 최근 검색어 목록 지우기
-const deleteSearchLogBtn = document.querySelector(".delete-search-log-btn");
-
-deleteSearchLogBtn.addEventListener("click", () => {
-    recentlyKeywordList.innerHTML = "";
-});
-
 // 검색어 삭제 버튼 클릭 시 해당 항목 삭제
 const createEvent = () => {
     const cancleBtns = document.querySelectorAll(".cancle-btn");
@@ -139,11 +109,18 @@ const createEvent = () => {
 
 createEvent();
 
+// 검색 기록 삭제 클릭 시 최근 검색어 목록 지우기
+const deleteSearchLogBtn = document.querySelector(".delete-search-log-btn");
+
+deleteSearchLogBtn.addEventListener("click", () => {
+    recentlyKeywordList.innerHTML = "";
+});
+
+// 검색 모달 내 더보기 버튼 클릭 시 더보기 사라지고 리스트에 클레스로 준 속성 지우기
 const recommendKeywordsMore = document.querySelector(".recommend-keywords-more");
 const recommendKeywordsList = document.querySelector(".recommend-keywords-list");
 
 recommendKeywordsMore.addEventListener("click", (e) => {
     recommendKeywordsList.className = "";
-    e.target.remove();
+    recommendKeywordsMore.style.display = "none";
 });
-// recommendKeywordsList
