@@ -1,0 +1,2163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>틴플 :: 모임 상세보기</title>
+        <link
+            rel="shortcut icon"
+            href="/staticfiles/images/teenplay_logo/logo1.png"
+            type="image/x-icon"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/staticfiles/css/club/club-detail.css" />
+    </head>
+    <body class loaded style="position: relative; min-height: 100%; top: 0px">
+        <!-- 헤더 -->
+        <header id="header"></header>
+        <!-- 모임 상세 페이지 시작 -->
+        <main class="club-detail-main">
+            <div>
+                <div>
+                    <img
+                        src="https://event-us.kr/Content/neweventus/image/hostcenter_top_image.jpg"
+                        alt="커버 이미지"
+                        class="club-cover-image"
+                    />
+                </div>
+                <div class="club-detail-wrap">
+                    <div class="club-detail-top">
+                        <img
+                            src="/staticfiles/images/club/club_detail/club_detail_profile_img.jpg"
+                            alt="프로필 사진"
+                            class="club-profile-image"
+                        />
+                        <div class="club-top-button-wrap">
+                            <div class="club-top-button-container">
+                                <div>
+                                    <button class="club-top-button">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="club-share-icon"
+                                            viewBox="0 0 20 20"
+                                            fill="currentColor"
+                                        >
+                                            <path
+                                                d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"
+                                            ></path>
+                                        </svg>
+                                        <span> 공유하기 </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="club-detail-title-wrap">
+                        <div class="club-detail-name-wrap">
+                            <div class="club-detail-name">TEEN_PLAYERS</div>
+                        </div>
+                        <div class="club-detail-stats-wrap">
+                            <span>
+                                <span class="club-detail-stats-name"
+                                    >구성원</span
+                                >
+                                <span class="club-detail-stats-count">30</span>
+                            </span>
+                            <span class="club-detail-stats-event">
+                                <span class="club-detail-stats-name"
+                                    >누적활동</span
+                                >
+                                <span class="club-detail-stats-count">18</span>
+                            </span>
+                        </div>
+                        <div class="club-detail-introduction">
+                            안녕하세요! TEEN_PLAYERS 입니다. 우리 모두
+                            틴플해요~!
+                        </div>
+                    </div>
+                    <div class="club-detail-desc-wrap">
+                        <div class="club-detail-filters-wrap">
+                            <div class="club-detail-filters-container">
+                                <div class="club-detail-filter-event">
+                                    <button class="club-detail-filter-button">
+                                        활동
+                                    </button>
+                                </div>
+                                <div class="club-detail-filter-info">
+                                    <button
+                                        class="club-detail-filter-button off"
+                                    >
+                                        모임 정보
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <!-- 활동 탭 클릭 시 표시되는 부분 -->
+                            <div class="club-detail-desc-container">
+                                <div class="club-detail-desc-boxes">
+                                    <div class="club-detail-active-events">
+                                        <div class="club-detail-active-desc">
+                                            진행중인 활동
+                                        </div>
+                                        <div class="club-detail-active-wrap">
+                                            <div
+                                                class="club-detail-active-container"
+                                            >
+                                                <!-- 아래 div가 반복 -->
+                                                <div class="club-detail-active">
+                                                    <div
+                                                        class="club-detail-img-wrap"
+                                                    >
+                                                        <a
+                                                            href="https://event-us.kr/kcost1/event/77343"
+                                                            class="club-detail-img-link"
+                                                        >
+                                                            <img
+                                                                src="/staticfiles/images/club/club_detail/club_detail_activity_img1.jpg"
+                                                                alt="활동 이미지"
+                                                                class="club-detail-img"
+                                                            />
+                                                        </a>
+                                                        <div
+                                                            class="club-detail-like-wrap"
+                                                        >
+                                                            <button
+                                                                class="club-detail-like-button"
+                                                            >
+                                                                <span>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon empty"
+                                                                        fill="none"
+                                                                        viewBox="0 0 24 24"
+                                                                        stroke="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            stroke-width="2"
+                                                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                                                                        ></path>
+                                                                    </svg>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon full"
+                                                                        viewBox="0 0 20 20"
+                                                                        fill="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            fill-rule="evenodd"
+                                                                            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                                                            clip-rule="evenodd"
+                                                                        ></path>
+                                                                    </svg>
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="club-detail-desc-box"
+                                                    >
+                                                        <div
+                                                            class="club-detail-date-wrap"
+                                                        >
+                                                            <div>
+                                                                <span
+                                                                    class="club-detail-date"
+                                                                >
+                                                                    02월06일(화)
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="event-title-wrap"
+                                                        >
+                                                            <a
+                                                                href="https://event-us.kr/kcost1/event/77343"
+                                                                class="event-title"
+                                                            >
+                                                                마포구 직장인
+                                                                독서모임
+                                                            </a>
+                                                        </div>
+                                                        <div
+                                                            class="event-detail-wrap"
+                                                        >
+                                                            <div
+                                                                class="event-price-wrap"
+                                                            >
+                                                                <span
+                                                                    >무료</span
+                                                                >
+                                                            </div>
+                                                            <div
+                                                                class="event-usercount-wrap"
+                                                            >
+                                                                <span
+                                                                    class="event-usercount"
+                                                                >
+                                                                    참여 384
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="club-detail-finished-events">
+                                        <div class="finished-events-bold">
+                                            종료 활동
+                                        </div>
+                                        <div class="finished-events-wrap">
+                                            <div
+                                                class="finished-events-container"
+                                            >
+                                                <!-- 아래 div가 17번 반복 -->
+                                                <!-- 처음에는 8개만 표시, 더보기 클릭 시 8개 더 표시 -->
+                                                <!-- 이하 구분 시 구분점으로 주석 사용 -->
+                                                <!-- 1 -->
+                                                <div
+                                                    class="finished-events-boxes"
+                                                >
+                                                    <div
+                                                        class="finished-events-img-wrap"
+                                                    >
+                                                        <a
+                                                            href=""
+                                                            class="finished-events-img-link"
+                                                        >
+                                                            <img
+                                                                src="/staticfiles/images/club/club_detail/club_detail_activity_img1.jpg"
+                                                                alt="활동 이미지"
+                                                                class="finished-events-img"
+                                                            />
+                                                            <div
+                                                                class="finished-events-img-back"
+                                                            ></div>
+                                                        </a>
+                                                        <div
+                                                            class="finished-events-like-wrap"
+                                                        >
+                                                            <button
+                                                                class="finished-events-like-btn"
+                                                            >
+                                                                <span>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon empty"
+                                                                        fill="none"
+                                                                        viewBox="0 0 24 24"
+                                                                        stroke="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            stroke-width="2"
+                                                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                                                                        ></path>
+                                                                    </svg>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon full"
+                                                                        viewBox="0 0 20 20"
+                                                                        fill="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            fill-rule="evenodd"
+                                                                            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                                                            clip-rule="evenodd"
+                                                                        ></path>
+                                                                    </svg>
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="finished-events-desc-wrap"
+                                                    >
+                                                        <div
+                                                            class="finished-events-finish-wrap"
+                                                        >
+                                                            <div>
+                                                                <div
+                                                                    class="finished-events-finish"
+                                                                >
+                                                                    종료
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="finished-events-name-wrap"
+                                                        >
+                                                            <a
+                                                                href=""
+                                                                class="finished-events-name"
+                                                                >관악구 직장인
+                                                                독서모임</a
+                                                            >
+                                                        </div>
+                                                        <div
+                                                            class="finished-events-price-wrap"
+                                                        >
+                                                            <div
+                                                                class="finished-events-price"
+                                                            >
+                                                                <span
+                                                                    >20,000원</span
+                                                                >
+                                                            </div>
+                                                            <div
+                                                                class="finished-events-count-wrap"
+                                                            >
+                                                                <span
+                                                                    class="finished-events-count"
+                                                                    >참여
+                                                                    288</span
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 2 -->
+                                                <div
+                                                    class="finished-events-boxes"
+                                                >
+                                                    <div
+                                                        class="finished-events-img-wrap"
+                                                    >
+                                                        <a
+                                                            href=""
+                                                            class="finished-events-img-link"
+                                                        >
+                                                            <img
+                                                                src="/staticfiles/images/club/club_detail/club_detail_activity_img1.jpg"
+                                                                alt="활동 이미지"
+                                                                class="finished-events-img"
+                                                            />
+                                                            <div
+                                                                class="finished-events-img-back"
+                                                            ></div>
+                                                        </a>
+                                                        <div
+                                                            class="finished-events-like-wrap"
+                                                        >
+                                                            <button
+                                                                class="finished-events-like-btn"
+                                                            >
+                                                                <span>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon empty"
+                                                                        fill="none"
+                                                                        viewBox="0 0 24 24"
+                                                                        stroke="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            stroke-width="2"
+                                                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                                                                        ></path>
+                                                                    </svg>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon full"
+                                                                        viewBox="0 0 20 20"
+                                                                        fill="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            fill-rule="evenodd"
+                                                                            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                                                            clip-rule="evenodd"
+                                                                        ></path>
+                                                                    </svg>
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="finished-events-desc-wrap"
+                                                    >
+                                                        <div
+                                                            class="finished-events-finish-wrap"
+                                                        >
+                                                            <div>
+                                                                <div
+                                                                    class="finished-events-finish"
+                                                                >
+                                                                    종료
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="finished-events-name-wrap"
+                                                        >
+                                                            <a
+                                                                href=""
+                                                                class="finished-events-name"
+                                                                >관악구 직장인
+                                                                독서모임</a
+                                                            >
+                                                        </div>
+                                                        <div
+                                                            class="finished-events-price-wrap"
+                                                        >
+                                                            <div
+                                                                class="finished-events-price"
+                                                            >
+                                                                <span
+                                                                    >20,000원</span
+                                                                >
+                                                            </div>
+                                                            <div
+                                                                class="finished-events-count-wrap"
+                                                            >
+                                                                <span
+                                                                    class="finished-events-count"
+                                                                    >참여
+                                                                    288</span
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 3 -->
+                                                <div
+                                                    class="finished-events-boxes"
+                                                >
+                                                    <div
+                                                        class="finished-events-img-wrap"
+                                                    >
+                                                        <a
+                                                            href=""
+                                                            class="finished-events-img-link"
+                                                        >
+                                                            <img
+                                                                src="/staticfiles/images/club/club_detail/club_detail_activity_img1.jpg"
+                                                                alt="활동 이미지"
+                                                                class="finished-events-img"
+                                                            />
+                                                            <div
+                                                                class="finished-events-img-back"
+                                                            ></div>
+                                                        </a>
+                                                        <div
+                                                            class="finished-events-like-wrap"
+                                                        >
+                                                            <button
+                                                                class="finished-events-like-btn"
+                                                            >
+                                                                <span>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon empty"
+                                                                        fill="none"
+                                                                        viewBox="0 0 24 24"
+                                                                        stroke="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            stroke-width="2"
+                                                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                                                                        ></path>
+                                                                    </svg>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon full"
+                                                                        viewBox="0 0 20 20"
+                                                                        fill="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            fill-rule="evenodd"
+                                                                            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                                                            clip-rule="evenodd"
+                                                                        ></path>
+                                                                    </svg>
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="finished-events-desc-wrap"
+                                                    >
+                                                        <div
+                                                            class="finished-events-finish-wrap"
+                                                        >
+                                                            <div>
+                                                                <div
+                                                                    class="finished-events-finish"
+                                                                >
+                                                                    종료
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="finished-events-name-wrap"
+                                                        >
+                                                            <a
+                                                                href=""
+                                                                class="finished-events-name"
+                                                                >관악구 직장인
+                                                                독서모임</a
+                                                            >
+                                                        </div>
+                                                        <div
+                                                            class="finished-events-price-wrap"
+                                                        >
+                                                            <div
+                                                                class="finished-events-price"
+                                                            >
+                                                                <span
+                                                                    >20,000원</span
+                                                                >
+                                                            </div>
+                                                            <div
+                                                                class="finished-events-count-wrap"
+                                                            >
+                                                                <span
+                                                                    class="finished-events-count"
+                                                                    >참여
+                                                                    288</span
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 4 -->
+                                                <div
+                                                    class="finished-events-boxes"
+                                                >
+                                                    <div
+                                                        class="finished-events-img-wrap"
+                                                    >
+                                                        <a
+                                                            href=""
+                                                            class="finished-events-img-link"
+                                                        >
+                                                            <img
+                                                                src="/staticfiles/images/club/club_detail/club_detail_activity_img1.jpg"
+                                                                alt="활동 이미지"
+                                                                class="finished-events-img"
+                                                            />
+                                                            <div
+                                                                class="finished-events-img-back"
+                                                            ></div>
+                                                        </a>
+                                                        <div
+                                                            class="finished-events-like-wrap"
+                                                        >
+                                                            <button
+                                                                class="finished-events-like-btn"
+                                                            >
+                                                                <span>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon empty"
+                                                                        fill="none"
+                                                                        viewBox="0 0 24 24"
+                                                                        stroke="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            stroke-width="2"
+                                                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                                                                        ></path>
+                                                                    </svg>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon full"
+                                                                        viewBox="0 0 20 20"
+                                                                        fill="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            fill-rule="evenodd"
+                                                                            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                                                            clip-rule="evenodd"
+                                                                        ></path>
+                                                                    </svg>
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="finished-events-desc-wrap"
+                                                    >
+                                                        <div
+                                                            class="finished-events-finish-wrap"
+                                                        >
+                                                            <div>
+                                                                <div
+                                                                    class="finished-events-finish"
+                                                                >
+                                                                    종료
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="finished-events-name-wrap"
+                                                        >
+                                                            <a
+                                                                href=""
+                                                                class="finished-events-name"
+                                                                >관악구 직장인
+                                                                독서모임</a
+                                                            >
+                                                        </div>
+                                                        <div
+                                                            class="finished-events-price-wrap"
+                                                        >
+                                                            <div
+                                                                class="finished-events-price"
+                                                            >
+                                                                <span
+                                                                    >20,000원</span
+                                                                >
+                                                            </div>
+                                                            <div
+                                                                class="finished-events-count-wrap"
+                                                            >
+                                                                <span
+                                                                    class="finished-events-count"
+                                                                    >참여
+                                                                    288</span
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 5 -->
+                                                <div
+                                                    class="finished-events-boxes"
+                                                >
+                                                    <div
+                                                        class="finished-events-img-wrap"
+                                                    >
+                                                        <a
+                                                            href=""
+                                                            class="finished-events-img-link"
+                                                        >
+                                                            <img
+                                                                src="/staticfiles/images/club/club_detail/club_detail_activity_img1.jpg"
+                                                                alt="활동 이미지"
+                                                                class="finished-events-img"
+                                                            />
+                                                            <div
+                                                                class="finished-events-img-back"
+                                                            ></div>
+                                                        </a>
+                                                        <div
+                                                            class="finished-events-like-wrap"
+                                                        >
+                                                            <button
+                                                                class="finished-events-like-btn"
+                                                            >
+                                                                <span>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon empty"
+                                                                        fill="none"
+                                                                        viewBox="0 0 24 24"
+                                                                        stroke="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            stroke-width="2"
+                                                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                                                                        ></path>
+                                                                    </svg>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon full"
+                                                                        viewBox="0 0 20 20"
+                                                                        fill="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            fill-rule="evenodd"
+                                                                            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                                                            clip-rule="evenodd"
+                                                                        ></path>
+                                                                    </svg>
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="finished-events-desc-wrap"
+                                                    >
+                                                        <div
+                                                            class="finished-events-finish-wrap"
+                                                        >
+                                                            <div>
+                                                                <div
+                                                                    class="finished-events-finish"
+                                                                >
+                                                                    종료
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="finished-events-name-wrap"
+                                                        >
+                                                            <a
+                                                                href=""
+                                                                class="finished-events-name"
+                                                                >관악구 직장인
+                                                                독서모임</a
+                                                            >
+                                                        </div>
+                                                        <div
+                                                            class="finished-events-price-wrap"
+                                                        >
+                                                            <div
+                                                                class="finished-events-price"
+                                                            >
+                                                                <span
+                                                                    >20,000원</span
+                                                                >
+                                                            </div>
+                                                            <div
+                                                                class="finished-events-count-wrap"
+                                                            >
+                                                                <span
+                                                                    class="finished-events-count"
+                                                                    >참여
+                                                                    288</span
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 6 -->
+                                                <div
+                                                    class="finished-events-boxes"
+                                                >
+                                                    <div
+                                                        class="finished-events-img-wrap"
+                                                    >
+                                                        <a
+                                                            href=""
+                                                            class="finished-events-img-link"
+                                                        >
+                                                            <img
+                                                                src="/staticfiles/images/club/club_detail/club_detail_activity_img1.jpg"
+                                                                alt="활동 이미지"
+                                                                class="finished-events-img"
+                                                            />
+                                                            <div
+                                                                class="finished-events-img-back"
+                                                            ></div>
+                                                        </a>
+                                                        <div
+                                                            class="finished-events-like-wrap"
+                                                        >
+                                                            <button
+                                                                class="finished-events-like-btn"
+                                                            >
+                                                                <span>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon empty"
+                                                                        fill="none"
+                                                                        viewBox="0 0 24 24"
+                                                                        stroke="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            stroke-width="2"
+                                                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                                                                        ></path>
+                                                                    </svg>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon full"
+                                                                        viewBox="0 0 20 20"
+                                                                        fill="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            fill-rule="evenodd"
+                                                                            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                                                            clip-rule="evenodd"
+                                                                        ></path>
+                                                                    </svg>
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="finished-events-desc-wrap"
+                                                    >
+                                                        <div
+                                                            class="finished-events-finish-wrap"
+                                                        >
+                                                            <div>
+                                                                <div
+                                                                    class="finished-events-finish"
+                                                                >
+                                                                    종료
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="finished-events-name-wrap"
+                                                        >
+                                                            <a
+                                                                href=""
+                                                                class="finished-events-name"
+                                                                >관악구 직장인
+                                                                독서모임</a
+                                                            >
+                                                        </div>
+                                                        <div
+                                                            class="finished-events-price-wrap"
+                                                        >
+                                                            <div
+                                                                class="finished-events-price"
+                                                            >
+                                                                <span
+                                                                    >20,000원</span
+                                                                >
+                                                            </div>
+                                                            <div
+                                                                class="finished-events-count-wrap"
+                                                            >
+                                                                <span
+                                                                    class="finished-events-count"
+                                                                    >참여
+                                                                    288</span
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 7 -->
+                                                <div
+                                                    class="finished-events-boxes"
+                                                >
+                                                    <div
+                                                        class="finished-events-img-wrap"
+                                                    >
+                                                        <a
+                                                            href=""
+                                                            class="finished-events-img-link"
+                                                        >
+                                                            <img
+                                                                src="/staticfiles/images/club/club_detail/club_detail_activity_img1.jpg"
+                                                                alt="활동 이미지"
+                                                                class="finished-events-img"
+                                                            />
+                                                            <div
+                                                                class="finished-events-img-back"
+                                                            ></div>
+                                                        </a>
+                                                        <div
+                                                            class="finished-events-like-wrap"
+                                                        >
+                                                            <button
+                                                                class="finished-events-like-btn"
+                                                            >
+                                                                <span>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon empty"
+                                                                        fill="none"
+                                                                        viewBox="0 0 24 24"
+                                                                        stroke="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            stroke-width="2"
+                                                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                                                                        ></path>
+                                                                    </svg>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon full"
+                                                                        viewBox="0 0 20 20"
+                                                                        fill="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            fill-rule="evenodd"
+                                                                            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                                                            clip-rule="evenodd"
+                                                                        ></path>
+                                                                    </svg>
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="finished-events-desc-wrap"
+                                                    >
+                                                        <div
+                                                            class="finished-events-finish-wrap"
+                                                        >
+                                                            <div>
+                                                                <div
+                                                                    class="finished-events-finish"
+                                                                >
+                                                                    종료
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="finished-events-name-wrap"
+                                                        >
+                                                            <a
+                                                                href=""
+                                                                class="finished-events-name"
+                                                                >관악구 직장인
+                                                                독서모임</a
+                                                            >
+                                                        </div>
+                                                        <div
+                                                            class="finished-events-price-wrap"
+                                                        >
+                                                            <div
+                                                                class="finished-events-price"
+                                                            >
+                                                                <span
+                                                                    >20,000원</span
+                                                                >
+                                                            </div>
+                                                            <div
+                                                                class="finished-events-count-wrap"
+                                                            >
+                                                                <span
+                                                                    class="finished-events-count"
+                                                                    >참여
+                                                                    288</span
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 8 -->
+                                                <div
+                                                    class="finished-events-boxes"
+                                                >
+                                                    <div
+                                                        class="finished-events-img-wrap"
+                                                    >
+                                                        <a
+                                                            href=""
+                                                            class="finished-events-img-link"
+                                                        >
+                                                            <img
+                                                                src="/staticfiles/images/club/club_detail/club_detail_activity_img1.jpg"
+                                                                alt="활동 이미지"
+                                                                class="finished-events-img"
+                                                            />
+                                                            <div
+                                                                class="finished-events-img-back"
+                                                            ></div>
+                                                        </a>
+                                                        <div
+                                                            class="finished-events-like-wrap"
+                                                        >
+                                                            <button
+                                                                class="finished-events-like-btn"
+                                                            >
+                                                                <span>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon empty"
+                                                                        fill="none"
+                                                                        viewBox="0 0 24 24"
+                                                                        stroke="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            stroke-width="2"
+                                                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                                                                        ></path>
+                                                                    </svg>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon full"
+                                                                        viewBox="0 0 20 20"
+                                                                        fill="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            fill-rule="evenodd"
+                                                                            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                                                            clip-rule="evenodd"
+                                                                        ></path>
+                                                                    </svg>
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="finished-events-desc-wrap"
+                                                    >
+                                                        <div
+                                                            class="finished-events-finish-wrap"
+                                                        >
+                                                            <div>
+                                                                <div
+                                                                    class="finished-events-finish"
+                                                                >
+                                                                    종료
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="finished-events-name-wrap"
+                                                        >
+                                                            <a
+                                                                href=""
+                                                                class="finished-events-name"
+                                                                >관악구 직장인
+                                                                독서모임</a
+                                                            >
+                                                        </div>
+                                                        <div
+                                                            class="finished-events-price-wrap"
+                                                        >
+                                                            <div
+                                                                class="finished-events-price"
+                                                            >
+                                                                <span
+                                                                    >20,000원</span
+                                                                >
+                                                            </div>
+                                                            <div
+                                                                class="finished-events-count-wrap"
+                                                            >
+                                                                <span
+                                                                    class="finished-events-count"
+                                                                    >참여
+                                                                    288</span
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 9 -->
+                                                <div
+                                                    class="finished-events-boxes"
+                                                >
+                                                    <div
+                                                        class="finished-events-img-wrap"
+                                                    >
+                                                        <a
+                                                            href=""
+                                                            class="finished-events-img-link"
+                                                        >
+                                                            <img
+                                                                src="/staticfiles/images/club/club_detail/club_detail_activity_img1.jpg"
+                                                                alt="활동 이미지"
+                                                                class="finished-events-img"
+                                                            />
+                                                            <div
+                                                                class="finished-events-img-back"
+                                                            ></div>
+                                                        </a>
+                                                        <div
+                                                            class="finished-events-like-wrap"
+                                                        >
+                                                            <button
+                                                                class="finished-events-like-btn"
+                                                            >
+                                                                <span>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon empty"
+                                                                        fill="none"
+                                                                        viewBox="0 0 24 24"
+                                                                        stroke="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            stroke-width="2"
+                                                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                                                                        ></path>
+                                                                    </svg>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon full"
+                                                                        viewBox="0 0 20 20"
+                                                                        fill="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            fill-rule="evenodd"
+                                                                            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                                                            clip-rule="evenodd"
+                                                                        ></path>
+                                                                    </svg>
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="finished-events-desc-wrap"
+                                                    >
+                                                        <div
+                                                            class="finished-events-finish-wrap"
+                                                        >
+                                                            <div>
+                                                                <div
+                                                                    class="finished-events-finish"
+                                                                >
+                                                                    종료
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="finished-events-name-wrap"
+                                                        >
+                                                            <a
+                                                                href=""
+                                                                class="finished-events-name"
+                                                                >관악구 직장인
+                                                                독서모임</a
+                                                            >
+                                                        </div>
+                                                        <div
+                                                            class="finished-events-price-wrap"
+                                                        >
+                                                            <div
+                                                                class="finished-events-price"
+                                                            >
+                                                                <span
+                                                                    >20,000원</span
+                                                                >
+                                                            </div>
+                                                            <div
+                                                                class="finished-events-count-wrap"
+                                                            >
+                                                                <span
+                                                                    class="finished-events-count"
+                                                                    >참여
+                                                                    288</span
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 10 -->
+                                                <div
+                                                    class="finished-events-boxes"
+                                                >
+                                                    <div
+                                                        class="finished-events-img-wrap"
+                                                    >
+                                                        <a
+                                                            href=""
+                                                            class="finished-events-img-link"
+                                                        >
+                                                            <img
+                                                                src="/staticfiles/images/club/club_detail/club_detail_activity_img1.jpg"
+                                                                alt="활동 이미지"
+                                                                class="finished-events-img"
+                                                            />
+                                                            <div
+                                                                class="finished-events-img-back"
+                                                            ></div>
+                                                        </a>
+                                                        <div
+                                                            class="finished-events-like-wrap"
+                                                        >
+                                                            <button
+                                                                class="finished-events-like-btn"
+                                                            >
+                                                                <span>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon empty"
+                                                                        fill="none"
+                                                                        viewBox="0 0 24 24"
+                                                                        stroke="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            stroke-width="2"
+                                                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                                                                        ></path>
+                                                                    </svg>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon full"
+                                                                        viewBox="0 0 20 20"
+                                                                        fill="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            fill-rule="evenodd"
+                                                                            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                                                            clip-rule="evenodd"
+                                                                        ></path>
+                                                                    </svg>
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="finished-events-desc-wrap"
+                                                    >
+                                                        <div
+                                                            class="finished-events-finish-wrap"
+                                                        >
+                                                            <div>
+                                                                <div
+                                                                    class="finished-events-finish"
+                                                                >
+                                                                    종료
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="finished-events-name-wrap"
+                                                        >
+                                                            <a
+                                                                href=""
+                                                                class="finished-events-name"
+                                                                >관악구 직장인
+                                                                독서모임</a
+                                                            >
+                                                        </div>
+                                                        <div
+                                                            class="finished-events-price-wrap"
+                                                        >
+                                                            <div
+                                                                class="finished-events-price"
+                                                            >
+                                                                <span
+                                                                    >20,000원</span
+                                                                >
+                                                            </div>
+                                                            <div
+                                                                class="finished-events-count-wrap"
+                                                            >
+                                                                <span
+                                                                    class="finished-events-count"
+                                                                    >참여
+                                                                    288</span
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 11 -->
+                                                <div
+                                                    class="finished-events-boxes"
+                                                >
+                                                    <div
+                                                        class="finished-events-img-wrap"
+                                                    >
+                                                        <a
+                                                            href=""
+                                                            class="finished-events-img-link"
+                                                        >
+                                                            <img
+                                                                src="/staticfiles/images/club/club_detail/club_detail_activity_img1.jpg"
+                                                                alt="활동 이미지"
+                                                                class="finished-events-img"
+                                                            />
+                                                            <div
+                                                                class="finished-events-img-back"
+                                                            ></div>
+                                                        </a>
+                                                        <div
+                                                            class="finished-events-like-wrap"
+                                                        >
+                                                            <button
+                                                                class="finished-events-like-btn"
+                                                            >
+                                                                <span>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon empty"
+                                                                        fill="none"
+                                                                        viewBox="0 0 24 24"
+                                                                        stroke="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            stroke-width="2"
+                                                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                                                                        ></path>
+                                                                    </svg>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon full"
+                                                                        viewBox="0 0 20 20"
+                                                                        fill="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            fill-rule="evenodd"
+                                                                            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                                                            clip-rule="evenodd"
+                                                                        ></path>
+                                                                    </svg>
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="finished-events-desc-wrap"
+                                                    >
+                                                        <div
+                                                            class="finished-events-finish-wrap"
+                                                        >
+                                                            <div>
+                                                                <div
+                                                                    class="finished-events-finish"
+                                                                >
+                                                                    종료
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="finished-events-name-wrap"
+                                                        >
+                                                            <a
+                                                                href=""
+                                                                class="finished-events-name"
+                                                                >관악구 직장인
+                                                                독서모임</a
+                                                            >
+                                                        </div>
+                                                        <div
+                                                            class="finished-events-price-wrap"
+                                                        >
+                                                            <div
+                                                                class="finished-events-price"
+                                                            >
+                                                                <span
+                                                                    >20,000원</span
+                                                                >
+                                                            </div>
+                                                            <div
+                                                                class="finished-events-count-wrap"
+                                                            >
+                                                                <span
+                                                                    class="finished-events-count"
+                                                                    >참여
+                                                                    288</span
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 12 -->
+                                                <div
+                                                    class="finished-events-boxes"
+                                                >
+                                                    <div
+                                                        class="finished-events-img-wrap"
+                                                    >
+                                                        <a
+                                                            href=""
+                                                            class="finished-events-img-link"
+                                                        >
+                                                            <img
+                                                                src="/staticfiles/images/club/club_detail/club_detail_activity_img1.jpg"
+                                                                alt="활동 이미지"
+                                                                class="finished-events-img"
+                                                            />
+                                                            <div
+                                                                class="finished-events-img-back"
+                                                            ></div>
+                                                        </a>
+                                                        <div
+                                                            class="finished-events-like-wrap"
+                                                        >
+                                                            <button
+                                                                class="finished-events-like-btn"
+                                                            >
+                                                                <span>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon empty"
+                                                                        fill="none"
+                                                                        viewBox="0 0 24 24"
+                                                                        stroke="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            stroke-width="2"
+                                                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                                                                        ></path>
+                                                                    </svg>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon full"
+                                                                        viewBox="0 0 20 20"
+                                                                        fill="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            fill-rule="evenodd"
+                                                                            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                                                            clip-rule="evenodd"
+                                                                        ></path>
+                                                                    </svg>
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="finished-events-desc-wrap"
+                                                    >
+                                                        <div
+                                                            class="finished-events-finish-wrap"
+                                                        >
+                                                            <div>
+                                                                <div
+                                                                    class="finished-events-finish"
+                                                                >
+                                                                    종료
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="finished-events-name-wrap"
+                                                        >
+                                                            <a
+                                                                href=""
+                                                                class="finished-events-name"
+                                                                >관악구 직장인
+                                                                독서모임</a
+                                                            >
+                                                        </div>
+                                                        <div
+                                                            class="finished-events-price-wrap"
+                                                        >
+                                                            <div
+                                                                class="finished-events-price"
+                                                            >
+                                                                <span
+                                                                    >20,000원</span
+                                                                >
+                                                            </div>
+                                                            <div
+                                                                class="finished-events-count-wrap"
+                                                            >
+                                                                <span
+                                                                    class="finished-events-count"
+                                                                    >참여
+                                                                    288</span
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 13 -->
+                                                <div
+                                                    class="finished-events-boxes"
+                                                >
+                                                    <div
+                                                        class="finished-events-img-wrap"
+                                                    >
+                                                        <a
+                                                            href=""
+                                                            class="finished-events-img-link"
+                                                        >
+                                                            <img
+                                                                src="/staticfiles/images/club/club_detail/club_detail_activity_img1.jpg"
+                                                                alt="활동 이미지"
+                                                                class="finished-events-img"
+                                                            />
+                                                            <div
+                                                                class="finished-events-img-back"
+                                                            ></div>
+                                                        </a>
+                                                        <div
+                                                            class="finished-events-like-wrap"
+                                                        >
+                                                            <button
+                                                                class="finished-events-like-btn"
+                                                            >
+                                                                <span>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon empty"
+                                                                        fill="none"
+                                                                        viewBox="0 0 24 24"
+                                                                        stroke="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            stroke-width="2"
+                                                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                                                                        ></path>
+                                                                    </svg>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon full"
+                                                                        viewBox="0 0 20 20"
+                                                                        fill="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            fill-rule="evenodd"
+                                                                            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                                                            clip-rule="evenodd"
+                                                                        ></path>
+                                                                    </svg>
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="finished-events-desc-wrap"
+                                                    >
+                                                        <div
+                                                            class="finished-events-finish-wrap"
+                                                        >
+                                                            <div>
+                                                                <div
+                                                                    class="finished-events-finish"
+                                                                >
+                                                                    종료
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="finished-events-name-wrap"
+                                                        >
+                                                            <a
+                                                                href=""
+                                                                class="finished-events-name"
+                                                                >관악구 직장인
+                                                                독서모임</a
+                                                            >
+                                                        </div>
+                                                        <div
+                                                            class="finished-events-price-wrap"
+                                                        >
+                                                            <div
+                                                                class="finished-events-price"
+                                                            >
+                                                                <span
+                                                                    >20,000원</span
+                                                                >
+                                                            </div>
+                                                            <div
+                                                                class="finished-events-count-wrap"
+                                                            >
+                                                                <span
+                                                                    class="finished-events-count"
+                                                                    >참여
+                                                                    288</span
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 14 -->
+                                                <div
+                                                    class="finished-events-boxes"
+                                                >
+                                                    <div
+                                                        class="finished-events-img-wrap"
+                                                    >
+                                                        <a
+                                                            href=""
+                                                            class="finished-events-img-link"
+                                                        >
+                                                            <img
+                                                                src="/staticfiles/images/club/club_detail/club_detail_activity_img1.jpg"
+                                                                alt="활동 이미지"
+                                                                class="finished-events-img"
+                                                            />
+                                                            <div
+                                                                class="finished-events-img-back"
+                                                            ></div>
+                                                        </a>
+                                                        <div
+                                                            class="finished-events-like-wrap"
+                                                        >
+                                                            <button
+                                                                class="finished-events-like-btn"
+                                                            >
+                                                                <span>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon empty"
+                                                                        fill="none"
+                                                                        viewBox="0 0 24 24"
+                                                                        stroke="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            stroke-width="2"
+                                                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                                                                        ></path>
+                                                                    </svg>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon full"
+                                                                        viewBox="0 0 20 20"
+                                                                        fill="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            fill-rule="evenodd"
+                                                                            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                                                            clip-rule="evenodd"
+                                                                        ></path>
+                                                                    </svg>
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="finished-events-desc-wrap"
+                                                    >
+                                                        <div
+                                                            class="finished-events-finish-wrap"
+                                                        >
+                                                            <div>
+                                                                <div
+                                                                    class="finished-events-finish"
+                                                                >
+                                                                    종료
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="finished-events-name-wrap"
+                                                        >
+                                                            <a
+                                                                href=""
+                                                                class="finished-events-name"
+                                                                >관악구 직장인
+                                                                독서모임</a
+                                                            >
+                                                        </div>
+                                                        <div
+                                                            class="finished-events-price-wrap"
+                                                        >
+                                                            <div
+                                                                class="finished-events-price"
+                                                            >
+                                                                <span
+                                                                    >20,000원</span
+                                                                >
+                                                            </div>
+                                                            <div
+                                                                class="finished-events-count-wrap"
+                                                            >
+                                                                <span
+                                                                    class="finished-events-count"
+                                                                    >참여
+                                                                    288</span
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 15 -->
+                                                <div
+                                                    class="finished-events-boxes"
+                                                >
+                                                    <div
+                                                        class="finished-events-img-wrap"
+                                                    >
+                                                        <a
+                                                            href=""
+                                                            class="finished-events-img-link"
+                                                        >
+                                                            <img
+                                                                src="/staticfiles/images/club/club_detail/club_detail_activity_img1.jpg"
+                                                                alt="활동 이미지"
+                                                                class="finished-events-img"
+                                                            />
+                                                            <div
+                                                                class="finished-events-img-back"
+                                                            ></div>
+                                                        </a>
+                                                        <div
+                                                            class="finished-events-like-wrap"
+                                                        >
+                                                            <button
+                                                                class="finished-events-like-btn"
+                                                            >
+                                                                <span>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon empty"
+                                                                        fill="none"
+                                                                        viewBox="0 0 24 24"
+                                                                        stroke="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            stroke-width="2"
+                                                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                                                                        ></path>
+                                                                    </svg>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon full"
+                                                                        viewBox="0 0 20 20"
+                                                                        fill="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            fill-rule="evenodd"
+                                                                            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                                                            clip-rule="evenodd"
+                                                                        ></path>
+                                                                    </svg>
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="finished-events-desc-wrap"
+                                                    >
+                                                        <div
+                                                            class="finished-events-finish-wrap"
+                                                        >
+                                                            <div>
+                                                                <div
+                                                                    class="finished-events-finish"
+                                                                >
+                                                                    종료
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="finished-events-name-wrap"
+                                                        >
+                                                            <a
+                                                                href=""
+                                                                class="finished-events-name"
+                                                                >관악구 직장인
+                                                                독서모임</a
+                                                            >
+                                                        </div>
+                                                        <div
+                                                            class="finished-events-price-wrap"
+                                                        >
+                                                            <div
+                                                                class="finished-events-price"
+                                                            >
+                                                                <span
+                                                                    >20,000원</span
+                                                                >
+                                                            </div>
+                                                            <div
+                                                                class="finished-events-count-wrap"
+                                                            >
+                                                                <span
+                                                                    class="finished-events-count"
+                                                                    >참여
+                                                                    288</span
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 16 -->
+                                                <div
+                                                    class="finished-events-boxes"
+                                                >
+                                                    <div
+                                                        class="finished-events-img-wrap"
+                                                    >
+                                                        <a
+                                                            href=""
+                                                            class="finished-events-img-link"
+                                                        >
+                                                            <img
+                                                                src="/staticfiles/images/club/club_detail/club_detail_activity_img1.jpg"
+                                                                alt="활동 이미지"
+                                                                class="finished-events-img"
+                                                            />
+                                                            <div
+                                                                class="finished-events-img-back"
+                                                            ></div>
+                                                        </a>
+                                                        <div
+                                                            class="finished-events-like-wrap"
+                                                        >
+                                                            <button
+                                                                class="finished-events-like-btn"
+                                                            >
+                                                                <span>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon empty"
+                                                                        fill="none"
+                                                                        viewBox="0 0 24 24"
+                                                                        stroke="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            stroke-width="2"
+                                                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                                                                        ></path>
+                                                                    </svg>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon full"
+                                                                        viewBox="0 0 20 20"
+                                                                        fill="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            fill-rule="evenodd"
+                                                                            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                                                            clip-rule="evenodd"
+                                                                        ></path>
+                                                                    </svg>
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="finished-events-desc-wrap"
+                                                    >
+                                                        <div
+                                                            class="finished-events-finish-wrap"
+                                                        >
+                                                            <div>
+                                                                <div
+                                                                    class="finished-events-finish"
+                                                                >
+                                                                    종료
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="finished-events-name-wrap"
+                                                        >
+                                                            <a
+                                                                href=""
+                                                                class="finished-events-name"
+                                                                >관악구 직장인
+                                                                독서모임</a
+                                                            >
+                                                        </div>
+                                                        <div
+                                                            class="finished-events-price-wrap"
+                                                        >
+                                                            <div
+                                                                class="finished-events-price"
+                                                            >
+                                                                <span
+                                                                    >20,000원</span
+                                                                >
+                                                            </div>
+                                                            <div
+                                                                class="finished-events-count-wrap"
+                                                            >
+                                                                <span
+                                                                    class="finished-events-count"
+                                                                    >참여
+                                                                    288</span
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 17 -->
+                                                <div
+                                                    class="finished-events-boxes"
+                                                >
+                                                    <div
+                                                        class="finished-events-img-wrap"
+                                                    >
+                                                        <a
+                                                            href=""
+                                                            class="finished-events-img-link"
+                                                        >
+                                                            <img
+                                                                src="/staticfiles/images/club/club_detail/club_detail_activity_img1.jpg"
+                                                                alt="활동 이미지"
+                                                                class="finished-events-img"
+                                                            />
+                                                            <div
+                                                                class="finished-events-img-back"
+                                                            ></div>
+                                                        </a>
+                                                        <div
+                                                            class="finished-events-like-wrap"
+                                                        >
+                                                            <button
+                                                                class="finished-events-like-btn"
+                                                            >
+                                                                <span>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon empty"
+                                                                        fill="none"
+                                                                        viewBox="0 0 24 24"
+                                                                        stroke="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            stroke-width="2"
+                                                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                                                                        ></path>
+                                                                    </svg>
+                                                                    <svg
+                                                                        data-v-e13ecf0e=""
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="club-detail-like-icon full"
+                                                                        viewBox="0 0 20 20"
+                                                                        fill="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            data-v-e13ecf0e=""
+                                                                            fill-rule="evenodd"
+                                                                            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                                                            clip-rule="evenodd"
+                                                                        ></path>
+                                                                    </svg>
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="finished-events-desc-wrap"
+                                                    >
+                                                        <div
+                                                            class="finished-events-finish-wrap"
+                                                        >
+                                                            <div>
+                                                                <div
+                                                                    class="finished-events-finish"
+                                                                >
+                                                                    종료
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="finished-events-name-wrap"
+                                                        >
+                                                            <a
+                                                                href=""
+                                                                class="finished-events-name"
+                                                                >관악구 직장인
+                                                                독서모임</a
+                                                            >
+                                                        </div>
+                                                        <div
+                                                            class="finished-events-price-wrap"
+                                                        >
+                                                            <div
+                                                                class="finished-events-price"
+                                                            >
+                                                                <span
+                                                                    >20,000원</span
+                                                                >
+                                                            </div>
+                                                            <div
+                                                                class="finished-events-count-wrap"
+                                                            >
+                                                                <span
+                                                                    class="finished-events-count"
+                                                                    >참여
+                                                                    288</span
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 위는 17개일 때의 예시이며 더 추가될 수 있습니다. -->
+                                        <!-- 아래는 이제 더보기 버튼입니다. -->
+                                        <div class="show-more-btn-wrap">
+                                            <button class="show-more-btn">
+                                                <div>더보기</div>
+                                                <div class="show-more-counts">
+                                                    (8/17)
+                                                </div>
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    class="show-more-arrow"
+                                                    viewBox="0 0 20 20"
+                                                    fill="currentColor"
+                                                >
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                        clip-rule="evenodd"
+                                                    ></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 모임 정보 탭 클릭 시 표시되는 부분 -->
+                            <div class="club-info">
+                                <div class="club-info-wrap">
+                                    <div class="club-info-container">
+                                        <div class="club-info-boxes">
+                                            <p class="club-info-box">
+                                                <img
+                                                    src="/staticfiles/images/club/club_detail/club_detail_info_img.png"
+                                                    alt="모임 정보 이미지"
+                                                />
+                                                &nbsp;
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <!-- 활동 문의 부분 -->
+                    <div class="club-contact-wrap">
+                        <div>
+                            <div class="club-contact-title">활동 문의</div>
+                            <div class="club-contact-info-wrap">
+                                <div class="club-contact-info-team">
+                                    <div class="club-contact-info-gray">
+                                        담당자
+                                    </div>
+                                    <div class="club-contact-info">
+                                        틴플레이어스 기획팀
+                                    </div>
+                                </div>
+                                <div class="club-contact-info-team not-first">
+                                    <div class="club-contact-info-gray">
+                                        이메일
+                                    </div>
+                                    <div class="club-contact-info">
+                                        planning@teenplay.com
+                                    </div>
+                                </div>
+                                <div class="club-contact-info-team not-first">
+                                    <div class="club-contact-info-gray">
+                                        전화번호
+                                    </div>
+                                    <div class="club-contact-info">
+                                        02-1234-1234
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="club-modal-wrap">
+            <div class="club-modal-bg"></div>
+            <div class="club-modal-container">
+                <div class="club-modal-like-wrap">
+                    <div>
+                        <h2 class="club-modal-like-title">
+                            <div class="club-modal-like-title-text">
+                                관심 활동에 추가되었습니다.
+                            </div>
+                        </h2>
+                    </div>
+                    <div class="club-modal-like-button-wrap">
+                        <button type="button" class="club-modal-like-button">
+                            닫기
+                        </button>
+                    </div>
+                </div>
+                <div class="club-modal-like-wrap unlike">
+                    <div>
+                        <h2 class="club-modal-like-title">
+                            <div class="club-modal-like-title-text">
+                                관심 활동에서 삭제되었습니다.
+                            </div>
+                        </h2>
+                    </div>
+                    <div class="club-modal-like-button-wrap">
+                        <button type="button" class="club-modal-unlike-button">
+                            닫기
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="/staticfiles/js/club/club-detail.js"></script>
+</html>
