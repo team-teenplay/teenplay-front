@@ -201,65 +201,6 @@
                                         >0</span
                                     >
                                 </div>
-                                <!-- 2번째 -->
-                                <!-- 일단은 없애요^^ -->
-                                <!-- <div class="main-user-total-search">
-                                    <div class="main-user-total-member-status">
-                                        <div
-                                            class="main-user-total-member-list"
-                                        >
-                                            <button
-                                                class="main-user-total-button"
-                                            >
-                                                <span
-                                                    class="main-user-total-span"
-                                                    >유저 상태</span
-                                                >
-                                                <svg
-                                                    viewBox="0 0 24 24"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    class="main-user-totam-svg"
-                                                >
-                                                    <path
-                                                        fill-rule="evenodd"
-                                                        clip-rule="evenodd"
-                                                        d="M3.27 8.42a1.076 1.076 0 0 1 1.587-.13L12 14.832l7.143-6.544a1.076 1.076 0 0 1 1.586.13 1.26 1.26 0 0 1-.122 1.696L12 18l-8.607-7.885A1.26 1.26 0 0 1 3.27 8.42Z"
-                                                    ></path>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <-- 메시지 보내기 -->
-                                <!-- <div class="main-user-total-message">
-                                        <button
-                                            class="main-user-total-message-button"
-                                        >
-                                            <div
-                                                class="main-user-total-message-div"
-                                            >
-                                                <div
-                                                    class="main-user-total-message-text"
-                                                >
-                                                    메시지
-                                                </div>
-                                                <svg
-                                                    viewBox="0 0 24 24"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    height="16px"
-                                                    width="16px"
-                                                    class="main-user-total-message-svg"
-                                                >
-                                                    <path
-                                                        d="M11 7a1 1 0 0 0-1-1H4v14h14v-6a1 1 0 1 0-2 0v4H6V8h4a1 1 0 0 0 1-1Z"
-                                                    ></path>
-                                                    <path
-                                                        d="M19.01 3.829H20v6.656a1 1 0 1 1-2 0V7.244l-5.293 5.293a1 1 0 0 1-1.414-1.415l5.293-5.292h-3.243a1 1 0 1 1 0-2H19.01Z"
-                                                    ></path>
-                                                </svg>
-                                            </div>
-                                        </button>
-                                    </div>
-                                </div> -->
                             </div>
                             <!-- 전체 밑에 상태, 이름 등등 나타내는곳 -->
                             <div class="main-message-status">
@@ -274,17 +215,13 @@
                                     보낸 날짜
                                 </div>
                                 <div class="main-message-status-pay">
-                                    수신 여부
+                                    읽은 날짜
                                 </div>
                                 <div class="main-message-status-recent">
-                                    마지막 송신일
+                                    메시지 내용 확인
                                 </div>
                                 <div class="main-message-status-paycount">
-                                    총 보낸 횟수
-                                </div>
-
-                                <div class="main-message-status-message">
-                                    메세지 내용 확인
+                                    상태
                                 </div>
                                 <div class="main-message-status-stop">
                                     활동정지
@@ -296,103 +233,51 @@
 
                         <li class="main-message-list">
                             <div class="main-message-list-name">조관익</div>
-                            <div class="main-message-list-status">조관익</div>
+                            <div class="main-message-list-status">김상철</div>
                             <div class="main-message-list-date">23.02.01</div>
-                            <div class="main-message-list-pay">O</div>
-                            <div class="main-message-list-paycount">
-                                23.02.01
-                            </div>
-                            <div class="main-message-list-paycount">0</div>
+                            <div class="main-message-list-pay">23.02.02</div>
                             <div class="main-message-list-check">
                                 <button
                                     class="member-message-list-button"
                                     id="modalOpenButton"
                                 >
-                                    <img
-                                        src="/staticfiles/admin/admin-image/read-message.img.png"
-                                        alt="메시지 사진"
-                                        class="main-message-list-stop-img"
-                                    />
+                                    메시지 확인
                                 </button>
+                            </div>
+                            <div data-id="1" class="main-message-list-paycount">
+                                활동중
                             </div>
                             <div class="main-message-list-stop">
                                 <button
-                                    class="member-user-list-button"
-                                    id="modalOpenButton"
+                                    class="member-user-list-button toggle-button"
+                                    data-target="1"
                                 >
-                                    <img
-                                        src="/staticfiles/admin/admin-image/stop.img.png"
-                                        alt="활동 정지 사진"
-                                        class="main-message-list-stop-img"
-                                    />
+                                    상태변경
                                 </button>
                             </div>
                         </li>
                         <li class="main-message-list">
-                            <div class="main-message-list-name">조관익</div>
-                            <div class="main-message-list-status">조관익</div>
+                            <div class="main-message-list-name">김중진</div>
+                            <div class="main-message-list-status">김상철</div>
                             <div class="main-message-list-date">23.02.01</div>
-                            <div class="main-message-list-pay">O</div>
-                            <div class="main-message-list-paycount">
-                                23.02.01
-                            </div>
-                            <div class="main-message-list-paycount">0</div>
+                            <div class="main-message-list-pay">23.02.02</div>
                             <div class="main-message-list-check">
                                 <button
                                     class="member-message-list-button"
                                     id="modalOpenButton"
                                 >
-                                    <img
-                                        src="/staticfiles/admin/admin-image/read-message.img.png"
-                                        alt="메시지 사진"
-                                        class="main-message-list-stop-img"
-                                    />
+                                    메시지 확인
                                 </button>
+                            </div>
+                            <div data-id="2" class="main-message-list-paycount">
+                                활동중
                             </div>
                             <div class="main-message-list-stop">
                                 <button
-                                    class="member-user-list-button"
-                                    id="modalOpenButton"
+                                    class="member-user-list-button toggle-button"
+                                    data-target="2"
                                 >
-                                    <img
-                                        src="/staticfiles/admin/admin-image/stop.img.png"
-                                        alt="활동 정지 사진"
-                                        class="main-message-list-stop-img"
-                                    />
-                                </button>
-                            </div>
-                        </li>
-                        <li class="main-message-list">
-                            <div class="main-message-list-name">조관익</div>
-                            <div class="main-message-list-status">조관익</div>
-                            <div class="main-message-list-date">23.02.01</div>
-                            <div class="main-message-list-pay">O</div>
-                            <div class="main-message-list-paycount">
-                                23.02.01
-                            </div>
-                            <div class="main-message-list-paycount">0</div>
-                            <div class="main-message-list-check">
-                                <button
-                                    class="member-message-list-button"
-                                    id="modalOpenButton"
-                                >
-                                    <img
-                                        src="/staticfiles/admin/admin-image/read-message.img.png"
-                                        alt="메시지 사진"
-                                        class="main-message-list-stop-img"
-                                    />
-                                </button>
-                            </div>
-                            <div class="main-message-list-stop">
-                                <button
-                                    class="member-user-list-button"
-                                    id="modalOpenButton"
-                                >
-                                    <img
-                                        src="/staticfiles/admin/admin-image/stop.img.png"
-                                        alt="활동 정지 사진"
-                                        class="main-message-list-stop-img"
-                                    />
+                                    상태변경
                                 </button>
                             </div>
                         </li>
@@ -442,11 +327,47 @@
         <!-- 모달창 / 활동정지-->
         <!-- 모달창 -->
 
+        <!-- 회원정지 모달창 -->
+        <div id="admin-user-modal" class="hidden">
+            <h4 class="admin-user-modal-title">정지사유를 작성해주세요!</h4>
+            <div>
+                <div>
+                    <textarea
+                        class="admin-user-modal-text"
+                        id="modal-text"
+                        oninput="resizeTextarea()"
+                    ></textarea>
+                </div>
+            </div>
+            <div class="admin-user-modal-button">
+                <div class="admin-user-modal-left">
+                    <button
+                        class="admin-user-modal-left-button"
+                        id="modalCloseButton"
+                    >
+                        취소
+                    </button>
+                </div>
+                <div class="admin-user-modal-right">
+                    <button
+                        class="admin-user-modal-right-button"
+                        id="modalApplyButton"
+                    >
+                        적용하기
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="admin-user-modal-backdrop" class="hidden"></div>
         <!-- 메시지 모달창 -->
         <div id="admin-message-modal" class="hidden">
             <h4 class="admin-message-modal-title">메시지 내용</h4>
             <div>
-                <input type="text" class="admin-message-modal-text" />
+                <textarea
+                    class="admin-user-modal-text"
+                    id="modal-message-text"
+                    oninput="resizeTextarea()"
+                ></textarea>
             </div>
             <div class="admin-message-modal-button">
                 <div class="admin-message-modal-left">
@@ -464,28 +385,7 @@
                 </div>
             </div>
         </div>
-        <!-- 회원정지 모달창 -->
-        <div id="admin-user-modal" class="hidden">
-            <h4 class="admin-user-modal-title">정지사유를 작성해주세요!</h4>
-            <div>
-                <input type="text" class="admin-user-modal-text" />
-            </div>
-            <div class="admin-user-modal-button">
-                <div class="admin-user-modal-left">
-                    <button
-                        class="admin-user-modal-left-button"
-                        id="modalCloseButton"
-                    >
-                        취소
-                    </button>
-                </div>
-                <div class="admin-user-modal-right">
-                    <button class="admin-user-modal-right-button">
-                        적용하기
-                    </button>
-                </div>
-            </div>
-        </div>
+        <div id="admin-message-modal-backdrop" class="hidden"></div>
     </body>
     <script src="/staticfiles/admin/message/message-search.js"></script>
     <script src="/staticfiles/admin/message/message-modal.js"></script>
