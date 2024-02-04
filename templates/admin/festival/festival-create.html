@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- 로고 만들어지면 href수정 -->
+        <link
+            rel="shortcut icon"
+            href="/staticfiles/images/teenplay_logo/logo1.png"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="/staticfiles/admin/festival/festival-create.css"
+        />
+        <title>틴플 : 관리자 페이지</title>
+    </head>
+    <body>
+        <!-- 헤더 먼저 해야합니다. 나중에 색상은 바꿔야합니다! -->
+        <header class="header-all">
+            <div class="header-logo-text">
+                <a href="" class="header-logo">
+                    <img
+                        class="header-logo-icon"
+                        src="/staticfiles/images/teenplay_logo/logo2.png"
+                        alt="로고"
+                    />
+                </a>
+                <div class="header-slash">|</div>
+                <div class="header-admin-text">
+                    <span>Admin Center</span>
+                </div>
+            </div>
+        </header>
+        <!-- 헤더  끝 좌측 안내부분 시작 -->
+        <main class="main-all">
+            <!-- 공통으로 들어가는 좌측부분 -->
+            <nav class="main-nav-wrap">
+                <!-- 위에 로그인 정보 및 로그아웃 칸 -->
+                <div class="main-admin-info">
+                    <div class="main-admin-wrap">
+                        <div class="main-admin-container">
+                            <button class="main-admin-button">
+                                <img
+                                    class="main-admin-image"
+                                    src="/staticfiles/images/teenplay_logo/logo1.png"
+                                    alt="admin사진"
+                                />
+                                <!-- 여기 중간에 뭐 이상한거 있긴한데 의미 없어보임 일단은 보류 -->
+                                <div class="main-admin-image-warp"></div>
+                            </button>
+                        </div>
+                        <h2 class="main-admin-name">TeenPlay</h2>
+                        <a href="" class="main-admin-logout">
+                            <button class="main-admin-logout-button">
+                                <div class="main-admin-logout-warp">
+                                    <div>로그아웃</div>
+                                </div>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <!-- 메뉴 선택할수 있는 칸 -->
+                <ul class="main-admin-select">
+                    <!-- 유저관리 -->
+                    <li class="main-user-other">
+                        <a href="" class="main-user-warp">
+                            <img
+                                class="main-user-image"
+                                src="/staticfiles/admin/admin-image/admin-user-img.png"
+                                alt="user-image"
+                            />
+                            <span class="main-user-text">유저 관리</span>
+                        </a>
+                    </li>
+                    <!-- 쪽지 관리 -->
+                    <li class="main-user-other">
+                        <a href="" class="main-user-warp">
+                            <img
+                                class="main-user-image"
+                                src="/staticfiles/admin/admin-image/message-img.png"
+                                alt="user-image"
+                            />
+                            <span class="main-user-text">쪽지 관리</span>
+                        </a>
+                    </li>
+                    <!-- 틴플레이관리 -->
+                    <li class="main-user-other">
+                        <a href="" class="main-user-warp">
+                            <img
+                                class="main-user-image"
+                                src="/staticfiles/admin/admin-image/play-img.png"
+                                alt="user-image"
+                            />
+                            <span class="main-user-text">틴 플레이 관리</span>
+                        </a>
+                    </li>
+                    <!-- 게시글 관리 -->
+                    <li class="main-user-other">
+                        <a href="" class="main-user-warp">
+                            <img
+                                class="main-user-image"
+                                src="/staticfiles/admin/admin-image/post-img.png"
+                                alt="user-image"
+                            />
+                            <span class="main-user-text">게시글 관리</span>
+                        </a>
+                    </li>
+                    <!-- 전체모임 관리 -->
+                    <li class="main-user-other">
+                        <a href="" class="main-user-warp">
+                            <img
+                                class="main-user-image"
+                                src="/staticfiles/admin/admin-image/meeting-img.png"
+                                alt="user-image"
+                            />
+                            <span class="main-user-text">전체 모임관리</span>
+                        </a>
+                    </li>
+                    <!-- 축제관리 -->
+                    <li class="main-user">
+                        <a href="" class="main-user-warp">
+                            <img
+                                class="main-user-image"
+                                src="/staticfiles/admin/admin-image/festival-img.png"
+                                alt="user-image"
+                            />
+                            <span class="main-user-text">축제 관리</span>
+                        </a>
+                    </li>
+                    <!-- 공지사항 관리 -->
+                    <li class="main-user-other">
+                        <a href="" class="main-user-warp">
+                            <img
+                                class="main-user-image"
+                                src="/staticfiles/admin/admin-image/loudspeaker-img.png"
+                                alt="user-image"
+                            />
+                            <span class="main-user-text">공지사항 관리</span>
+                        </a>
+                    </li>
+                    <!-- 댓글관리 -->
+                    <li class="main-user-other">
+                        <a href="" class="main-user-warp">
+                            <img
+                                class="main-user-image"
+                                src="/staticfiles/admin/admin-image/comment-img.png"
+                                alt="user-image"
+                            />
+                            <span class="main-user-text">댓글 관리</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- 사실상 여기만 수정하면 모든게 끝입니다! -->
+            <div class="main-user-info-warp">
+                <div class="main-user-info-container">
+                    <div class="main-user-info-box">
+                        <div class="main-user-info-top">
+                            <!-- 유저관리, 검색하는곳 -->
+                            <header class="main-user-info-text">
+                                <h1 class="main-user-info-tag">
+                                    축제 생성하기
+                                </h1>
+                                <div>
+                                    <div class="admin-festival-create-button">
+                                        <button class="admin-festival-create-button-cancle">취소하기</button>
+                                        <button class="admin-festival-create-button-create">작성하기</button>
+                                    </div>
+                                </div>
+                            </header>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 새로운곳 생성하는거 만들기 -->
+                    <div>asd</div>
+                </div>
+            </div>
+        </main>
+    </body>
+    <script src="/staticfiles/admin/festival/listview-search.js"></script>
+</html>

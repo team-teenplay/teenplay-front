@@ -9,6 +9,12 @@ input {
     }
   }
 
+.blow-up:hover{
+    transform: scale(1.2, 1.2); 
+    transition-duration: 0.5s;
+    transition-duration: 0.3s;
+
+}
 
 *{
     --tw-border-spacing-x: 0;
@@ -289,11 +295,6 @@ body {
     padding-right: 15px;
 }
 
-.member-user-list-button:hover{
-    border-color: #f3f3f4;
-    background-color: #f3f3f4;
-}
-
 .main-admin-logout-warp{
     justify-content: center;
     align-items: center;
@@ -376,7 +377,7 @@ body {
 }
 
 .main-user-info-container{
-    padding-bottom: 64px;
+    padding-bottom: 20px;
     row-gap: 0;
     column-gap: 16px;
     grid-template-columns: repeat(12,minmax(0,1fr));
@@ -564,6 +565,30 @@ color: #9ca3af;
     margin: 0;
 }
 
+.main-user-total-button:hover{
+    border-color: #f3f3f4;
+    background-color: #f3f3f4;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 16px;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    display: flex;
+    position: relative;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #333334;
+    fill: #333334;
+    -webkit-appearance: button;
+    background-image: none;
+    cursor: pointer;
+    text-transform: none;
+    font-family: inherit;
+
+}
+
 .main-user-total-span{
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -575,478 +600,107 @@ color: #9ca3af;
     fill: #333334;
 }
 
-.main-user-totam-svg{
-    flex-shrink: 0;
-    width: 10px;
-    height: 10px;
-    margin-left: 4px;
-    display: block;
-    vertical-align: middle;
+.admin-fesfival-list{
+    padding-bottom: 64px;
+    row-gap: 16px; /* 수정: 각 행 간의 간격을 조절합니다. */
+    column-gap: 16px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(100px, auto)); /* 수정: 각 행의 크기를 조절합니다. */
+    width: 944px;
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.main-user-total-message{
+.admin-fesfival-list-all{
+    grid-row-end: span 23;
+    visibility: visible;
+    width: 100%;
 }
 
-.main-user-total-message-button{
-    color: #b9b9bb;
-    fill: #b9b9bb;
-    background-color: #f3f3f4;
-    border-radius: 16px;
-    justify-content: center;
-    align-items: center;
-    height: 32px;
-    display: flex;
+.admin-fesfival-list-box{
+    border-radius: 0.375rem;
+    overflow: hidden;
     position: relative;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 16px;
-    cursor: default;
-    -webkit-appearance: button;
-    background-image: none;
-    text-transform: none;
-    font-family: inherit;
-    margin: 0;
-    padding: 0;
-    padding-left: 16px;
-    padding-right: 16px;
 }
 
-.main-user-total-message-div{
-    justify-content: center;
-    align-items: center;
-    display: flex;
+
+.admin-fesfival-list-imgbox{
+    transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .15s;
 }
 
-.main-user-total-message-svg{
-    flex-shrink: 0;
-    margin-left: 4px;
+.admin-fesfival-list-img{
+    transition-duration: .3s;
+    object-fit: contain;
+    border-radius: 0.375rem;
+    width: 100%;
+    height: auto;
+    transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    max-width: 100%;
     display: block;
     vertical-align: middle;
 }
 
-.main-user-status{
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-top: 9px;
-    padding-bottom: 9px;
-    border-top-width: 1px;
-    border-bottom-width: 1px;
-    column-gap: 24px;
-    align-items: center;
-    display: flex;
-    margin-top: 20px;
-    border-color: #e6e6e7;
-    justify-content: space-between;
+.admin-fesfival-list-status{
+    --tw-text-opacity: 1;
+    color: rgb(141 113 221/var(--tw-text-opacity));
+    font-size: .8125rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    --tw-bg-opacity: 1;
+    background-color: rgb(245 242 255/var(--tw-bg-opacity));
+    border-radius: 0.375rem;
+    display: inline-block;
+    top: 0.5rem;
+    right: 0.5rem;
+    position: absolute;
 }
 
-.main-user-status-name{
-
-    justify-content: flex-start;
-    align-items: center;
-    flex-shrink: 0;
-    display: flex;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 18px;
-    color: #1d1d1e;
-    fill: #1d1d1e;
-}
-
-.main-user-status-status{
-
-    justify-content: flex-start;
-    align-items: center;
-    flex-shrink: 0;
-    display: flex;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 18px;
-    color: #1d1d1e;
-    fill: #1d1d1e;
-}
-
-.main-user-status-date{
-
-    justify-content: flex-start;
-    align-items: center;
-    flex-shrink: 0;
-    display: flex;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 18px;
-    color: #1d1d1e;
-    fill: #1d1d1e;
-}
-
-
-.main-user-status-pay{
-
-    justify-content: flex-start;
-    align-items: center;
-    flex-shrink: 0;
-    display: flex;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 18px;
-    color: #1d1d1e;
-    fill: #1d1d1e;
-}
-
-.main-user-status-pay-div{
-    display: flex;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 18px;
-    color: #1d1d1e;
-    fill: #1d1d1e;
-}
-
-.main-user-status-recent{
-
-    justify-content: flex-end;
-    align-items: center;
-    flex-shrink: 0;
-    display: flex;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 18px;
-    color: #1d1d1e;
-    fill: #1d1d1e;
-}
-
-.main-user-status-paycount{
-
-    justify-content: flex-end;
-    align-items: center;
-    flex-shrink: 0;
-    display: flex;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 18px;
-    color: #1d1d1e;
-    fill: #1d1d1e;
-}
-
-
-
-.main-user-status-stop{
-
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    display: flex;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 18px;
-    color: #1d1d1e;
-    fill: #1d1d1e;
-}
-
-.main-user-status-list{
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    display: flex;
-    margin-top: 100px;
-}
-
-.main-user-status-list-svg{
-    display: block;
-    vertical-align: middle;
-}
-
-.main-user-status-list-text{
-    margin-top: 23px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #8a8a8b;
-    fill: #8a8a8b;
-    margin: 0;
-}
-
-.main-user-list{
-    column-gap: 24px;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-left: 8px;
-    padding-right: 8px;
-    border-bottom-width: 1px;
+.admin-fesfival-list-place{
+    font-size: .8125rem;
     align-items: center;
     display: flex;
-    border-color: #f3f3f4;
-
-    
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
-.main-user-list-name{
-    width: 90px;
-    justify-content: flex-start;
-    align-items: center;
-    flex-shrink: 0;
-    display: flex;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 18px;
-    color: #1d1d1e;
-    fill: #1d1d1e;
-    
+.admin-fesfival-list-place-detail{
+    --tw-text-opacity: 1;
+    color: rgb(135 141 145/var(--tw-text-opacity));
 }
 
-.main-user-list-status{
-    width: 145px;
-    justify-content: flex-start;
-    align-items: center;
-    flex-shrink: 0;
-    display: flex;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 18px;
-    color: #1d1d1e;
-    fill: #1d1d1e;
+.admin-fesfival-list-place-side{
+    --tw-text-opacity: 1;
+    color: rgb(225 228 230/var(--tw-text-opacity));
+    border-right-width: 1px;
+    height: 1rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
 }
 
-.main-user-list-date{
-    width: 150px;
-    justify-content: flex-start;
-    align-items: center;
-    flex-shrink: 0;
-    display: flex;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 18px;
-    color: #1d1d1e;
-    fill: #1d1d1e;
+.admin-fesfival-list-place-date{
+    --tw-text-opacity: 1;
+    color: rgb(135 141 145/var(--tw-text-opacity));
+    display: flex;    
 }
 
-.main-user-list-pay{
-    width: 150px;
-    justify-content: flex-start;
-    align-items: center;
-    flex-shrink: 0;
-    display: flex;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 18px;
-    color: #1d1d1e;
-    fill: #1d1d1e;
+.admin-fesfival-list-place-date-text{
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0.25rem*var(--tw-space-x-reverse));
+    margin-left: calc(0.25rem*(1 - var(--tw-space-x-reverse)));
 }
 
-.main-user-list-paycount{
-    width: 100px;
-    justify-content: flex-start;
-    align-items: center;
-    flex-shrink: 0;
-    display: flex;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 18px;
-    color: #1d1d1e;
-    fill: #1d1d1e;
-}
-.main-user-list-message{
-    width: 80px;
-    justify-content: flex-start;
-    align-items: center;
-    flex-shrink: 0;
-    display: flex;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 18px;
-    color: #1d1d1e;
-    fill: #1d1d1e;
-}
-
-.main-user-list-ston{
-
-    align-items: center;
-    display: flex;
-
-}
-
-.member-user-list-button{
-    width: 90px;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 20px;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-    display: flex;
-    position: relative;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 16px;
-    border-color: rgba(0,0,0,.1);
-    color: #333334;
-    fill: #333334;
-    background-color: #fff;
-    -webkit-appearance: button;
-    background-image: none;
-    cursor: pointer;
-    text-transform: none;
-    font-family: inherit;
-    margin: 0;
-    padding: 0;
-    padding-left: 20px;
-    padding-right: 20px;
-
-}
-
-
-/* 모달창 */
-#admin-user-modal{
-    height: auto;
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-    --tw-shadow: 0px 2px 8px rgba(0, 0, 0, .08);
-    --tw-shadow-colored: 0px 2px 8px var(--tw-shadow-color);
-    padding: 32px;
-    border-width: 1px;
-    border-radius: 16px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-    --tw-translate-x: -50%;
-    min-width: 360px;
-    display: flex;
-    box-sizing: border-box;
-    z-index: 50;
-    position: fixed;
-    border-color: #e6e6e7;
-    background-color: #fff;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-height: 100px;
-    resize: vertical;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-
-  
-  .admin-user-modal-text{
-    width: 300px;
-    height: 50px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    color: #333334;
-    fill: #333334;
-    background-color: #f3f3f4;
-    padding-left: 12px;
-    padding-right: 12px;
-    border-radius: 8px;
-    align-items: center;
-    margin-bottom: 8px;
-    border: none;
-    outline: none;
-    height: auto;
-    
-  }
-  
-  .admin-user-modal-title{
-  
+.admin-fesfival-list-title{
     font-weight: 700;
-    font-size: 20px;
-    line-height: 28px;
-    color: #1d1d1e;
-    fill: #1d1d1e;
-    margin: 0;
-    margin-bottom: 12px;
-  }
-  
-  
-  
-  .admin-user-modal-button{
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    display: flex;
-    margin-top: 24px;
-  }
-  
-  .admin-user-modal-left{
-    flex: 1 1 0%;
-  }
-  
-  .admin-user-modal-left-button{
-  
-    border-radius: 20px;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 40px;
-    display: flex;
-    position: relative;
-    font-weight: 600;
-      font-size: 14px;
-      line-height: 16px;
-      color: #333334;
-      fill: #333334;
-  
-      -webkit-appearance: button;
-  
-      background-image: none;
-      cursor: pointer;
-      text-transform: none;
-      font-family: inherit;
-      margin: 0;
-      padding: 0;
-      padding-left: 16px;
-      padding-right: 16px;
-      background-color: #f3f3f4;
-  }
-  
-  .admin-user-modal-right{
-    flex: 1 1 0%;
-    margin-left: 16px;
-  }
-  
-  .admin-user-modal-right-button{
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 20px;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 40px;
-    display: flex;
-    position: relative;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 16px;
-    color: #fff;
-    fill: #fff;
-    background-color: #1d1d1e;
-    -webkit-appearance: button;
-    background-image: none;
-    cursor: pointer;
-    text-transform: none;
-    font-family: inherit;
-    margin: 0;
-    padding: 0;
-  }
-  
-  #admin-user-modal.hidden{
-    display: none;
-  }
+}
 
-
-
-  #admin-user-modal-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);  /* 어두운 배경색 지정 */
-    z-index: 35; /* 모달보다 뒤에 위치하도록 설정 */
-
-  }
-
-  #admin-user-modal-backdrop.hidden{
-    display: none;
-  }
+.admin-fesfival-list-title-name{
+    transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .15s;
+}

@@ -64,7 +64,7 @@
                         <a href="" class="main-user-warp">
                             <img
                                 class="main-user-image"
-                                src="/staticfiles/images/teenplay_logo/admin-user-img.png"
+                                src="/staticfiles/admin/admin-image/admin-user-img.png"
                                 alt="user-image"
                             />
                             <span class="main-user-text">유저 관리</span>
@@ -75,7 +75,7 @@
                         <a href="" class="main-user-warp">
                             <img
                                 class="main-user-image"
-                                src="/staticfiles/images/teenplay_logo/message-img.png"
+                                src="/staticfiles/admin/admin-image/message-img.png"
                                 alt="user-image"
                             />
                             <span class="main-user-text">쪽지 관리</span>
@@ -86,7 +86,7 @@
                         <a href="" class="main-user-warp">
                             <img
                                 class="main-user-image"
-                                src="/staticfiles/images/teenplay_logo/play-img.png"
+                                src="/staticfiles/admin/admin-image/play-img.png"
                                 alt="user-image"
                             />
                             <span class="main-user-text">틴 플레이 관리</span>
@@ -97,7 +97,7 @@
                         <a href="" class="main-user-warp">
                             <img
                                 class="main-user-image"
-                                src="/staticfiles/images/teenplay_logo/post-img.png"
+                                src="/staticfiles/admin/admin-image/post-img.png"
                                 alt="user-image"
                             />
                             <span class="main-user-text">게시글 관리</span>
@@ -108,7 +108,7 @@
                         <a href="" class="main-user-warp">
                             <img
                                 class="main-user-image"
-                                src="/staticfiles/images/teenplay_logo/meeting-img.png"
+                                src="/staticfiles/admin/admin-image/meeting-img.png"
                                 alt="user-image"
                             />
                             <span class="main-user-text">전체 모임관리</span>
@@ -119,7 +119,7 @@
                         <a href="" class="main-user-warp">
                             <img
                                 class="main-user-image"
-                                src="/staticfiles/images/teenplay_logo/festival-img.png"
+                                src="/staticfiles/admin/admin-image/festival-img.png"
                                 alt="user-image"
                             />
                             <span class="main-user-text">축제 관리</span>
@@ -130,7 +130,7 @@
                         <a href="" class="main-user-warp">
                             <img
                                 class="main-user-image"
-                                src="/staticfiles/images/teenplay_logo/loudspeaker-img.png"
+                                src="/staticfiles/admin/admin-image/loudspeaker-img.png"
                                 alt="user-image"
                             />
                             <span class="main-user-text">공지사항 관리</span>
@@ -141,7 +141,7 @@
                         <a href="" class="main-user-warp">
                             <img
                                 class="main-user-image"
-                                src="/staticfiles/images/teenplay_logo/comment-img.png"
+                                src="/staticfiles/admin/admin-image/comment-img.png"
                                 alt="user-image"
                             />
                             <span class="main-user-text">댓글 관리</span>
@@ -263,21 +263,17 @@
                             <div class="main-user-status">
                                 <!-- 여기에 넣으면 추가할수있습니다(가로넓이 width만 수정)) -->
                                 <div class="main-user-status-name">이름</div>
-                                <div class="main-user-status-status">상태</div>
                                 <div class="main-user-status-date">가입일</div>
                                 <div class="main-user-status-pay">
-                                    결제 금액
+                                    개설 모임 수
                                 </div>
                                 <div class="main-user-status-recent">
-                                    최근 결제일
+                                    참여중인 모임 수
                                 </div>
                                 <div class="main-user-status-paycount">
-                                    결제 횟수
+                                    누적 활동 수
                                 </div>
-
-                                <div class="main-user-status-message">
-                                    메세지
-                                </div>
+                                <div class="main-user-status-status">상태</div>
                                 <div class="main-user-status-stop">
                                     활동정지
                                 </div>
@@ -287,64 +283,55 @@
                         <!-- 일단 하나 만들어봅시다. -->
                         <li class="main-user-list">
                             <div class="main-user-list-name">조관익</div>
-                            <div class="main-user-list-status">상태</div>
-                            <div class="main-user-list-date">23.02.01</div>
-                            <div class="main-user-list-pay">50000</div>
-                            <div class="main-user-list-paycount">23.02.01</div>
-                            <div class="main-user-list-paycount">0</div>
-                            <div class="main-user-list-message">0</div>
+                            <div class="main-user-list-status">23.02.01</div>
+                            <div class="main-user-list-date">0</div>
+                            <div class="main-user-list-pay">5</div>
+                            <div class="main-user-list-paycount">6</div>
+                            <div data-id="1" class="main-user-list-message">
+                                활동중
+                            </div>
                             <div class="main-user-list-ston">
                                 <button
-                                    class="member-user-list-button"
-                                    id="modalOpenButton"
+                                    class="member-user-list-button toggle-button"
+                                    data-target="1"
                                 >
-                                    <img
-                                        src="/staticfiles/images/teenplay_logo/stop.img.png"
-                                        alt="활동 정지 사진"
-                                        class="main-user-list-stop-img"
-                                    />
+                                    상태변경
                                 </button>
                             </div>
                         </li>
                         <li class="main-user-list">
-                            <div class="main-user-list-name">조관익</div>
-                            <div class="main-user-list-status">상태</div>
-                            <div class="main-user-list-date">23.02.01</div>
-                            <div class="main-user-list-pay">50000</div>
-                            <div class="main-user-list-paycount">23.02.01</div>
-                            <div class="main-user-list-paycount">0</div>
-                            <div class="main-user-list-message">0</div>
+                            <div class="main-user-list-name">박씨</div>
+                            <div class="main-user-list-status">23.01.01</div>
+                            <div class="main-user-list-date">4</div>
+                            <div class="main-user-list-pay">0</div>
+                            <div class="main-user-list-paycount">3</div>
+                            <div data-id="2" class="main-user-list-message">
+                                활동중
+                            </div>
                             <div class="main-user-list-ston">
                                 <button
-                                    class="member-user-list-button"
-                                    id="modalOpenButton"
+                                    class="member-user-list-button toggle-button"
+                                    data-target="2"
                                 >
-                                    <img
-                                        src="/staticfiles/images/teenplay_logo/stop.img.png"
-                                        alt="활동 정지 사진"
-                                        class="main-user-list-stop-img"
-                                    />
+                                    상태변경
                                 </button>
                             </div>
                         </li>
                         <li class="main-user-list">
-                            <div class="main-user-list-name">조관익</div>
-                            <div class="main-user-list-status">상태</div>
-                            <div class="main-user-list-date">23.02.01</div>
-                            <div class="main-user-list-pay">50000</div>
-                            <div class="main-user-list-paycount">23.02.01</div>
+                            <div class="main-user-list-name">김씨</div>
+                            <div class="main-user-list-status">23.05.01</div>
+                            <div class="main-user-list-date">2</div>
+                            <div class="main-user-list-pay">1</div>
                             <div class="main-user-list-paycount">0</div>
-                            <div class="main-user-list-message">0</div>
+                            <div data-id="3" class="main-user-list-message">
+                                활동중
+                            </div>
                             <div class="main-user-list-ston">
                                 <button
-                                    class="member-user-list-button"
-                                    id="modalOpenButton"
+                                    class="member-user-list-button toggle-button"
+                                    data-target="3"
                                 >
-                                    <img
-                                        src="/staticfiles/images/teenplay_logo/stop.img.png"
-                                        alt="활동 정지 사진"
-                                        class="main-user-list-stop-img"
-                                    />
+                                    상태변경
                                 </button>
                             </div>
                         </li>
@@ -389,31 +376,41 @@
                     </div>
                 </div>
             </div>
+            <!-- 모달창 -->
+            <div id="admin-user-modal" class="hidden">
+                <h4 class="admin-user-modal-title">정지사유를 작성해주세요!</h4>
+                <div>
+                    <div>
+                        <textarea
+                            class="admin-user-modal-text"
+                            id="modal-text"
+                            oninput="resizeTextarea()"
+                        ></textarea>
+                    </div>
+                </div>
+                <div class="admin-user-modal-button">
+                    <div class="admin-user-modal-left">
+                        <button
+                            class="admin-user-modal-left-button"
+                            id="modalCloseButton"
+                        >
+                            취소
+                        </button>
+                    </div>
+                    <div class="admin-user-modal-right">
+                        <button
+                            class="admin-user-modal-right-button"
+                            id="modalApplyButton"
+                        >
+                            적용하기
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="admin-user-modal-backdrop" class="hidden"></div>
         </main>
-
-        <!-- 모달창 -->
-        <div id="admin-user-modal" class="hidden">
-            <h4 class="admin-user-modal-title">정지사유를 작성해주세요!</h4>
-            <div>
-                <input type="text" class="admin-user-modal-text" />
-            </div>
-            <div class="admin-user-modal-button">
-                <div class="admin-user-modal-left">
-                    <button
-                        class="admin-user-modal-left-button"
-                        id="modalCloseButton"
-                    >
-                        취소
-                    </button>
-                </div>
-                <div class="admin-user-modal-right">
-                    <button class="admin-user-modal-right-button">
-                        적용하기
-                    </button>
-                </div>
-            </div>
-        </div>
     </body>
+
     <script src="/staticfiles/admin/user/user-search.js"></script>
     <script src="/staticfiles/admin/user/user-modal.js"></script>
 </html>
