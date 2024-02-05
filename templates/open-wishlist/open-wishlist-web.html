@@ -334,34 +334,34 @@
             </div>
         </div> -->
         <!-- 위시리스트 입력 모달 부분 -->
-        <div class="modal-create hidden">
+        <div class="post-create hidden">
             <div class="modal-full-wrap" role="dialog" aria-modal="true" data-headlessui-state="open" aria-labelledby="headlessui-dialog-title-42" aria-describedby="headlessui-description-43">
                 <div class="modal-screen"></div>
                 <div class="modal-divison">
                     <!-- 위시리스트 입력 부분 -->
-                    <div class="modal-create-wrap" data-headlessui-state="open">
+                    <div class="post-create-wrap" data-headlessui-state="open">
                         <!-- 상단 메뉴 -->
                         <div class="modal-create-top-wrap">
-                            <button class="modal-create-back-botton" type="button">
-                                <svg class="modal-create-back-botton-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <button class="create-close-container" type="button">
+                                <svg class="create-close-botton-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd" d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span class="modal-create-back-botton-text">돌아가기</span>
+                                <span class="create-close-botton-text">돌아가기</span>
                             </button>
                             <div style="display: flex">
-                                <select class="modal-create-public-private-wrap" name="category" required>
-                                    <option class="modal-create-public" value="공개" selected>공개</option>
+                                <select class="create-public-private-container" name="category" required>
+                                    <option class="create-public" value="공개" selected>공개</option>
                                     <option value="비공개">비공개</option>
                                 </select>
-                                <div class="modal-create-finsh-botton-wrap">
-                                    <button class="modal-create-finsh-botton" type="submit"> 발행하기 </button>
+                                <div class="create-finish-container">
+                                    <button class="create-finish-botton" type="submit"> 발행하기 </button>
                                 </div>
                             </div>
                         </div>
                         <!-- 중간 부분 -->
-                        <div class="modal-create-middle-wrap">
-                            <select class="modal-create-category-choice-wrap" name="category" required>
-                                <option class="modal-create-category" disabled selected>카테고리</option>
+                        <div class="create-category-wrap">
+                            <select class="create-category-container" name="category" required>
+                                <option class="create-category-default" disabled selected>카테고리</option>
                                 <option value="문화·예술">문화·예술</option>
                                 <option value="운동·액티비티">운동·액티비티</option>
                                 <option value="푸드·드링크">푸드·드링크</option>
@@ -376,50 +376,56 @@
                                 <option value="지역축제">지역축제</option>
                                 <option value="기타">기타</option>
                             </select>
-                            <input class="modal-create-wishlist-input" name="wishlist-title" placeholder="위시리스트를 입력하세요" required>
+                            <input class="create-category-input" name="wishlist-title" placeholder="위시리스트를 입력하세요" required>
                         </div>
                         <!-- 태그 부분 -->
-                        <div class="modal-create-bottom-wrap">
-                            <div class="modal-create-tag-wrap">
-                                <span class="modal-create-tag-text">태그입력</span>
-                                <div class="modal-create-tag">
-                                    <input class="modal-create-tag-input" type="text" placeholder="태그는 최대 5개까지, 1개당 10자까지 가능">
+                        <div class="create-tags-wrap">
+                            <div class="create-tags-title-container">
+                                <div class="create-tags-title">
+                                    <span class="create-tags-title-text">태그입력</span>
+                                </div>
+                                <div class="create-tags-input-container">
+                                    <div>
+                                        <input class="create-tags-input" type="text" placeholder="태그는 최대 5개, 1개당 10자까지 가능">
+                                    </div>
                                 </div>
                             </div>
+                            <div class="create-tag-list create-tag"></div>
+                            <div class="create-tag-error hidden">태그는 5개, 1개당 글자수 10자까지 생성이 가능합니다.</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- 위시리스트 포스트 수정 모달 부분 -->
-        <div class="modal-update hidden">
+        <div class="post-update hidden">
             <div class="modal-full-wrap" role="dialog" aria-modal="true" data-headlessui-state="open" aria-labelledby="headlessui-dialog-title-42" aria-describedby="headlessui-description-43">
                 <div class="modal-screen"></div>
                 <div class="modal-divison">
-                    <!-- 위시리스트 입력 부분 -->
-                    <div class="modal-update-wrap" data-headlessui-state="open">
-                        <!-- 상단 메뉴 -->
-                        <div class="modal-update-top-wrap">
-                            <button class="modal-update-back-botton" type="button">
-                                <svg class="modal-update-back-botton-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <!-- 위시리스트 게시글 수정 모달 부분 -->
+                    <div class="post-update-wrap" data-headlessui-state="open">
+                        <!-- 위시리스트 게시글 수정 상단 부분 -->
+                        <div class="update-top-wrap">
+                            <button class="update-close-container" type="button">
+                                <svg class="update-close-botton-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd" d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span class="modal-update-back-botton-text">돌아가기</span>
+                                <span class="update-close-botton-text">돌아가기</span>
                             </button>
                             <div style="display: flex">
-                                <select class="modal-update-public-private-wrap" name="category" required>
-                                    <option class="modal-update-public" value="공개" selected>공개</option>
+                                <select class="update-public-private-container" name="category" required>
+                                    <option class="update-public" value="공개" selected>공개</option>
                                     <option value="비공개">비공개</option>
                                 </select>
-                                <div class="modal-update-finsh-botton-wrap">
-                                    <button class="modal-update-finsh-botton" type="submit"> 발행하기 </button>
+                                <div class="update-finish-container">
+                                    <button class="update-finish-botton" type="submit"> 발행하기 </button>
                                 </div>
                             </div>
                         </div>
-                        <!-- 중간 부분 -->
-                        <div class="modal-update-middle-wrap">
-                            <select class="modal-update-category-choice-wrap" name="category" required>
-                                <option class="modal-update-category" disabled selected>카테고리</option>
+                        <!-- 게시글 카테고리 수정 부분 -->
+                        <div class="update-category-wrap">
+                            <select class="update-category-container" name="category" required>
+                                <option class="update-category-default" disabled selected>카테고리</option>
                                 <option value="문화·예술">문화·예술</option>
                                 <option value="운동·액티비티">운동·액티비티</option>
                                 <option value="푸드·드링크">푸드·드링크</option>
@@ -434,23 +440,23 @@
                                 <option value="지역축제">지역축제</option>
                                 <option value="기타">기타</option>
                             </select>
-                            <input class="modal-update-wishlist-input" name="wishlist-title" placeholder="위시리스트를 입력하세요" required>
+                            <input class="update-category-input" name="wishlist-title" placeholder="위시리스트를 입력하세요" required>
                         </div>
-                        <!-- 태그 부분 -->
-                        <div class="modal-update-bottom-wrap">
-                            <div class="modal-update-tag-wrap">
-                                <div class="tag-info-text">
-                                    <span class="modal-update-tag-text">태그입력</span>
+                        <!-- 게시글 태그 수정 부분 -->
+                        <div class="update-tags-wrap">
+                            <div class="update-tags-title-container">
+                                <div class="update-tags-title">
+                                    <span class="update-tags-title-text">태그입력</span>
                                 </div>
-                                <div class="modal-update-tag">
+                                <div class="update-tags-input-container">
                                     <div>
-                                        <input class="modal-update-tag-input" type="text" placeholder="태그는 최대 5개까지, 1개당 10자까지 가능">
+                                        <input class="update-tags-input" type="text" placeholder="태그는 최대 5개, 1개당 10자까지 가능">
                                     </div>
                                 </div>
                             </div>
-                            <div class="tag"></div>
+                            <div class="tag-list tag"></div>
+                            <div class="tag-error-text hidden">태그는 5개, 1개당 글자수 10자까지 생성이 가능합니다.</div>
                         </div>
-                        
                     </div>
                 </div>
             </div>
