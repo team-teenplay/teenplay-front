@@ -95,10 +95,6 @@ input, select, textarea {
     display: none!important;
 }
 
-.red::placeholder {
-    color: #CE201B
-}
-
 *, :after, :before {
     --tw-border-spacing-x: 0;
     --tw-border-spacing-y: 0;
@@ -233,6 +229,10 @@ input, select, textarea {
 
 .tag-search-text::placeholder {
     color: #A9AFB3;
+}
+
+.red::placeholder {
+    color: #CE201B
 }
 
 /* 위시리스트 전체 부분 */
