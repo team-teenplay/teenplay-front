@@ -44,19 +44,1322 @@
                                             <div class="font-bold-date">
                                                 <span>일시</span>
                                             </div>
-                                            <div class="date-list"></div>
+                                            <div class="date-list">
+                                                <div class="date-container">
+                                                    <div class="date-box">
+                                                        <input class="radio-everyday" id="ev-radio-98" type="radio" value="모든날" />
+                                                        <label class="cursor-point-day" for="ev-radio-98">
+                                                            <span>모든날</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="text-display-none-day">이 항목은 필수입니다.</div>
+                                                </div>
+                                                <div class="date-container" style="margin-top: 8px">
+                                                    <div class="date-box">
+                                                        <input class="radio-everyday" id="ev-radio-99" type="radio" value="오늘" />
+                                                        <label class="cursor-point-day" for="ev-radio-99">
+                                                            <span>오늘</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="text-display-none-day">이 항목은 필수입니다.</div>
+                                                </div>
+                                                <div class="date-container" style="margin-top: 8px">
+                                                    <div class="date-box">
+                                                        <input class="radio-everyday" id="ev-radio-100" type="radio" value="이번주" />
+                                                        <label class="cursor-point-day" for="ev-radio-100">
+                                                            <span>이번주</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="text-display-none-day">이 항목은 필수입니다.</div>
+                                                </div>
+                                                <div class="date-container" style="margin-top: 8px">
+                                                    <div class="date-box">
+                                                        <input class="radio-everyday" id="ev-radio-101" type="radio" value="이번달" />
+                                                        <label class="cursor-point-day" for="ev-radio-101">
+                                                            <span>이번달</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="text-display-none-day">이 항목은 필수입니다.</div>
+                                                </div>
+                                                <div class="date-container" style="margin-top: 8px">
+                                                    <div class="date-box">
+                                                        <input class="radio-everyday" id="ev-radio-102" type="radio" value="기간선택" />
+                                                        <label class="cursor-point-day" for="ev-radio-102">
+                                                            <span>기간선택</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="text-display-none-day">이 항목은 필수입니다.</div>
+                                                </div>
+                                                <div class="date-display-none">
+                                                    <!-- 아래쪽 달력요소, 기간 선택 클릭 시 숨겨진 display none을 변경해주고 기간 나올 시 해당 구역 클릭 시 달력 모달 창으로 표기 -->
+                                                    <!-- <div class="date-relative-full">
+                                                        <label class="relative-block">
+                                                            <input type="text" class="relative-date" placeholder="기간을 선택하세요" />
+                                                            <span class="text-overflow-hidden">
+                                                                <button type="button" class="date-selector">
+                                                                    <svg class="calender" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                                                    </svg>
+                                                                </button>
+                                                            </span>
+                                                        </label>
+                                                        <div class="calender-all-container">
+                                                            <div class="calender-all-box">
+                                                                <div class="calender-relative">
+                                                                    <div class="calender-flex-box">
+                                                                        <div class="flex-between-all">
+                                                                            <div class="flex-between-s-all">
+                                                                                <div class="flex-between-s-all-shadow"></div>
+                                                                            </div>
+                                                                            <div class="flex-left-all">
+                                                                                <div class="flex-left-items-center">
+                                                                                    <div></div>
+                                                                                    <div></div>
+                                                                                    <div></div>
+                                                                                </div>
+                                                                                <div></div>
+                                                                            </div>
+                                                                            <div></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div> -->
+                                                </div>
+                                                <div class="end-date-container" style="margin-top: 8px">
+                                                    <div class="end-date-box">
+                                                        <div class="end-date-tie">
+                                                            <input class="end-date-chk" id="ev-checkbox-104" ture-value="true" false-value="false" type="checkbox" value="true" />
+                                                            <label class="end-text-box" for="ev-checkbox-104">
+                                                                <span>모집 종료 행사</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="end-text-gray" style="margin-left: 24px">
+                                                        <span>모집 종료된 행사까지 포함하여 보기</span>
+                                                    </div>
+                                                    <div class="text-display-none-day">이 항목은 필수입니다.</div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
+                                        <div class="content-lotaction-container">
+                                            <div class="content-location-text">
+                                                <span>지역</span>
+                                            </div>
+                                            <select class="block-location">
+                                                <option value>전체</option>
+                                                <option value="서울/경기/인천">서울/경기/인천</option>
+                                                <option value="부산/울산/경남">부산/울산/경남</option>
+                                                <option value="대구/경북">대구/경북</option>
+                                                <option value="서울/경기">서울/경기</option>
+                                                <option value="서울/인천">서울/인천</option>
+                                                <option value="서울">서울</option>
+                                                <option value="진주">진주</option>
+                                            </select>
+                                        </div>
+                                        <div class="content-activity">
+                                            <div class="content-activity-text">
+                                                <span>행사분야</span>
+                                            </div>
+                                            <div class="content-activity-box">
+                                                <div class="activity-box">
+                                                    <div class="activity-tie">
+                                                        <div class="activity-center">
+                                                            <input class="activity-chk" id="ev-checkbox-105" ture-value="true" false-value="false" type="checkbox" value="true" />
+                                                            <label class="activity-box-text" for="ev-checkbox-105"> 창업 </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                                </div>
+                                                <div class="activity-box" style="margin-top: 8px">
+                                                    <div class="activity-tie">
+                                                        <div class="activity-center">
+                                                            <input class="activity-chk" id="ev-checkbox-106" ture-value="true" false-value="false" type="checkbox" value="true" />
+                                                            <label class="activity-box-text" for="ev-checkbox-106"> IT/프로그래밍 </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                                </div>
+                                                <div class="activity-box" style="margin-top: 8px">
+                                                    <div class="activity-tie">
+                                                        <div class="activity-center">
+                                                            <input class="activity-chk" id="ev-checkbox-107" ture-value="true" false-value="false" type="checkbox" value="true" />
+                                                            <label class="activity-box-text" for="ev-checkbox-107"> 라이프 </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                                </div>
+                                                <div class="activity-box" style="margin-top: 8px">
+                                                    <div class="activity-tie">
+                                                        <div class="activity-center">
+                                                            <input class="activity-chk" id="ev-checkbox-108" ture-value="true" false-value="false" type="checkbox" value="true" />
+                                                            <label class="activity-box-text" for="ev-checkbox-108"> 경제/금융 </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                                </div>
+                                                <div class="activity-box" style="margin-top: 8px">
+                                                    <div class="activity-tie">
+                                                        <div class="activity-center">
+                                                            <input class="activity-chk" id="ev-checkbox-109" ture-value="true" false-value="false" type="checkbox" value="true" />
+                                                            <label class="activity-box-text" for="ev-checkbox-109">경영</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                                </div>
+                                                <button class="another-view-btn" type="button" style="margin-top: 8px">
+                                                    <span class="view-btn-tie">
+                                                        <span>15개 모두 보기</span>
+                                                        <span>
+                                                            <svg class="rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="content-activity-category">
+                                            <div class="content-act-category-text">
+                                                <span>행사유형</span>
+                                            </div>
+                                            <div class="content-act-category-box">
+                                                <div class="act-category-box">
+                                                    <div class="act-category-tie">
+                                                        <div class="act-category-center">
+                                                            <input class="act-category-chk" id="ev-checkbox-110" ture-value="true" false-value="false" type="checkbox" value="true" />
+                                                            <label class="act-category-box-text" for="ev-checkbox-110"> 강연/세미나 </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                                </div>
+                                                <div class="act-category-box" style="margin-top: 8px">
+                                                    <div class="act-category-tie">
+                                                        <div class="act-category-center">
+                                                            <input class="act-category-chk" id="ev-checkbox-111" ture-value="true" false-value="false" type="checkbox" value="true" />
+                                                            <label class="act-category-box-text" for="ev-checkbox-111"> 모임/커뮤니티 </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                                </div>
+                                                <div class="act-category-box" style="margin-top: 8px">
+                                                    <div class="act-category-tie">
+                                                        <div class="act-category-center">
+                                                            <input class="act-category-chk" id="ev-checkbox-112" ture-value="true" false-value="false" type="checkbox" value="true" />
+                                                            <label class="act-category-box-text" for="ev-checkbox-112"> 멘토링/대외활동 </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                                </div>
+                                                <div class="act-category-box" style="margin-top: 8px">
+                                                    <div class="act-category-tie">
+                                                        <div class="act-category-center">
+                                                            <input class="act-category-chk" id="ev-checkbox-113" ture-value="true" false-value="false" type="checkbox" value="true" />
+                                                            <label class="act-category-box-text" for="ev-checkbox-113"> 대외/공모전 </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                                </div>
+                                                <div class="act-category-box" style="margin-top: 8px">
+                                                    <div class="act-category-tie">
+                                                        <div class="act-category-center">
+                                                            <input class="act-category-chk" id="ev-checkbox-114" ture-value="true" false-value="false" type="checkbox" value="true" />
+                                                            <label class="act-category-box-text" for="ev-checkbox-114"> 데모데이 </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                                </div>
+                                                <button class="another-view-btn" type="button" style="margin-top: 8px">
+                                                    <span class="view-btn-tie">
+                                                        <span>15개 모두 보기</span>
+                                                        <span>
+                                                            <svg class="rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="content-method">
+                                            <div class="content-method-text">
+                                                <span>참여 방법</span>
+                                            </div>
+                                            <div class="method-list">
+                                                <div class="method-container">
+                                                    <div class="method-box">
+                                                        <input class="radio-everyday" id="ev-radio-115" type="radio" value="all" />
+                                                        <label class="cursor-point-method" for="ev-radio-115">
+                                                            <span>전체</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="text-display-none-day">이 항목은 필수입니다.</div>
+                                                </div>
+                                                <div class="method-container">
+                                                    <div class="method-box" style="margin-top: 8px">
+                                                        <input class="radio-everyday" id="ev-radio-116" type="radio" value="online" />
+                                                        <label class="cursor-point-method" for="ev-radio-116">
+                                                            <span>온라인</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="text-display-none-day">이 항목은 필수입니다.</div>
+                                                </div>
+                                                <div class="method-container">
+                                                    <div class="method-box" style="margin-top: 8px">
+                                                        <input class="radio-everyday" id="ev-radio-117" type="radio" value="offline" />
+                                                        <label class="cursor-point-method" for="ev-radio-117">
+                                                            <span>오프라인</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="text-display-none-day">이 항목은 필수입니다.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 참여 방법과 똑같은 클래스 명을 사용 (아래 가격 범위 제외) -->
+                                        <div class="conntent-method">
+                                            <div class="content-method-text">
+                                                <span>가격</span>
+                                            </div>
+                                            <div class="method-list">
+                                                <div class="method-container">
+                                                    <div class="method-box">
+                                                        <input class="radio-everyday" id="ev-radio-118" type="radio" value="all" />
+                                                        <label class="cursor-point-method" for="ev-radio-118">
+                                                            <span>전체</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="text-display-none-day">이 항목은 필수입니다.</div>
+                                                </div>
+                                                <div class="method-container">
+                                                    <div class="method-box" style="margin-top: 8px">
+                                                        <input class="radio-everyday" id="ev-radio-119" type="radio" value="free" />
+                                                        <label class="cursor-point-method" for="ev-radio-119">
+                                                            <span>무료</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="text-display-none-day">이 항목은 필수입니다.</div>
+                                                </div>
+                                                <div class="method-price-tie">
+                                                    <div class="method-container">
+                                                        <div class="method-box" style="margin-top: 8px">
+                                                            <input class="radio-everyday" id="ev-radio-120" type="radio" value="non-free" />
+                                                            <label class="cursor-point-method" for="ev-radio-120">
+                                                                <span>유료</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="text-display-none-day">이 항목은 필수입니다.</div>
+                                                    </div>
+                                                    <span class="text-price">0 ~ 100,000원+</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-hidden-fiexd">
+                                            <div class="hidden-border-text"></div>
+                                            <button class="hidden-flex-center"></button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div></div>
+                        <div class="full-wrap">
+                            <div class="main-space-section" id="event-section">
+                                <div class="main-title">
+                                    <h1 class="text-title">
+                                        <span class="text-title-primary">695</span>
+                                        <span class="text-title-content">개의 행사가 검색되었습니다</span>
+                                    </h1>
+                                    <div class="right-text-box">
+                                        <div class="right-text-tie">
+                                            <button class="best-text-btn" type="button">
+                                                <span>
+                                                    <span>추천순</span>
+                                                </span>
+                                                <div class="best-icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="best-icon-radio" viewBox="0 0 20 20" fill="currentColor">
+                                                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+                                                    </svg>
+                                                    <div class="icon-hidden-content">
+                                                        <div class="hidden-content-border">
+                                                            " 이벤터스 추천순은 인기도, 신청률, 클릭률, "
+                                                            <br />
+                                                            " 검색 정확도 점수 등을 고려하여 정렬됩니다."
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="new-btn" type="button">
+                                                <span style="color: gray">새 행사순</span>
+                                            </button>
+                                            <button class="activity-sort-end" type="button">
+                                                <span style="color: gray">모집 마감일순</span>
+                                            </button>
+                                        </div>
+                                        <button class="hidden-right-btn" type="button">
+                                            <svg class="hidden-btn" viewBox="0 0 20 20" fill="currentColor">
+                                                <path
+                                                    d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z"
+                                                ></path>
+                                            </svg>
+                                            <span> 필터(2)</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- 검색 필터 none 인 경우 -->
+                                <div class="hidden-filter-container" style="display: none"></div>
+                                <!-- 검색 필터 사용되는 경우 
+                                <div class="hidden-filter-container">
+                                    <div class="find-filter-bg">
+                                        오늘
+                                        <button class="find-filter-exit">
+                                            <svg class="exit-icon-button" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                -->
+                                <div class="activity-find-all">
+                                    <div class="activity-window-bg">
+                                        <div class="activity-window">
+                                            <div class="act-window-image">
+                                                <a class="act-image-block" href="/wseminar/event/77701">
+                                                    <img class="act-image" src="https://eventusstorage.blob.core.windows.net/evs/Image/wseminar/77701/ProjectInfo/Cover/158267438f6343929286762c78822354.png" alt="사업자를 위한 K세미나 [비용처리]/절세/자산관리]" />
+                                                </a>
+                                                <div class="like-button-box">
+                                                    <button class="like-btn-shadow" type="button">
+                                                        <span class="like-btn-display-none">
+                                                            <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                                <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
+                                                            </svg>
+                                                        </span>
+                                                        <span class="like-btn-display">
+                                                            <svg class="like-btn-two" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="act-window-content">
+                                                <div class="act-content-date-location">
+                                                    <div class="act-content-date">
+                                                        <span class="act-content-date-text-inline">02월05일(월)</span>
+                                                        <span class="act-content-date-text-hidden">02월05일(월)</span>
+                                                    </div>
+                                                    <div class="act-content-location">
+                                                        <span>
+                                                            <span>동대문구</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="act-content-title">
+                                                    <a class="move-content" href="/wseminar/event/77701">사업자를 위한 K세미나[비용처리/절세/자산관리]</a>
+                                                </div>
+                                                <div class="act-content-money">
+                                                    <div class="money-result">
+                                                        <span class="range-money">10,000원</span>
+                                                    </div>
+                                                    <div class="check-view">
+                                                        <span class="check-view-text">조회 281</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="activity-window-bg">
+                                        <div class="activity-window">
+                                            <div class="act-window-image">
+                                                <a class="act-image-block" href="/wseminar/event/77701">
+                                                    <img class="act-image" src="https://eventusstorage.blob.core.windows.net/evs/Image/wseminar/77701/ProjectInfo/Cover/158267438f6343929286762c78822354.png" alt="사업자를 위한 K세미나 [비용처리]/절세/자산관리]" />
+                                                </a>
+                                                <div class="like-button-box">
+                                                    <button class="like-btn-shadow" type="button">
+                                                        <span class="like-btn-display-none">
+                                                            <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                                <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
+                                                            </svg>
+                                                        </span>
+                                                        <span class="like-btn-display">
+                                                            <svg class="like-btn-two" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="act-window-content">
+                                                <div class="act-content-date-location">
+                                                    <div class="act-content-date">
+                                                        <span class="act-content-date-text-inline">02월05일(월)</span>
+                                                        <span class="act-content-date-text-hidden">02월05일(월)</span>
+                                                    </div>
+                                                    <div class="act-content-location">
+                                                        <span>
+                                                            <span>동대문구</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="act-content-title">
+                                                    <a class="move-content" href="/wseminar/event/77701">사업자를 위한 K세미나[비용처리/절세/자산관리]</a>
+                                                </div>
+                                                <div class="act-content-money">
+                                                    <div class="money-result">
+                                                        <span class="range-money">10,000원</span>
+                                                    </div>
+                                                    <div class="check-view">
+                                                        <span class="check-view-text">조회 281</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="activity-window-bg">
+                                        <div class="activity-window">
+                                            <div class="act-window-image">
+                                                <a class="act-image-block" href="/wseminar/event/77701">
+                                                    <img class="act-image" src="https://eventusstorage.blob.core.windows.net/evs/Image/wseminar/77701/ProjectInfo/Cover/158267438f6343929286762c78822354.png" alt="사업자를 위한 K세미나 [비용처리]/절세/자산관리]" />
+                                                </a>
+                                                <div class="like-button-box">
+                                                    <button class="like-btn-shadow" type="button">
+                                                        <span class="like-btn-display-none">
+                                                            <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                                <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
+                                                            </svg>
+                                                        </span>
+                                                        <span class="like-btn-display">
+                                                            <svg class="like-btn-two" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="act-window-content">
+                                                <div class="act-content-date-location">
+                                                    <div class="act-content-date">
+                                                        <span class="act-content-date-text-inline">02월05일(월)</span>
+                                                        <span class="act-content-date-text-hidden">02월05일(월)</span>
+                                                    </div>
+                                                    <div class="act-content-location">
+                                                        <span>
+                                                            <span>동대문구</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="act-content-title">
+                                                    <a class="move-content" href="/wseminar/event/77701">사업자를 위한 K세미나[비용처리/절세/자산관리]</a>
+                                                </div>
+                                                <div class="act-content-money">
+                                                    <div class="money-result">
+                                                        <span class="range-money">10,000원</span>
+                                                    </div>
+                                                    <div class="check-view">
+                                                        <span class="check-view-text">조회 281</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="activity-window-bg">
+                                        <div class="activity-window">
+                                            <div class="act-window-image">
+                                                <a class="act-image-block" href="/wseminar/event/77701">
+                                                    <img class="act-image" src="https://eventusstorage.blob.core.windows.net/evs/Image/wseminar/77701/ProjectInfo/Cover/158267438f6343929286762c78822354.png" alt="사업자를 위한 K세미나 [비용처리]/절세/자산관리]" />
+                                                </a>
+                                                <div class="like-button-box">
+                                                    <button class="like-btn-shadow" type="button">
+                                                        <span class="like-btn-display-none">
+                                                            <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                                <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
+                                                            </svg>
+                                                        </span>
+                                                        <span class="like-btn-display">
+                                                            <svg class="like-btn-two" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="act-window-content">
+                                                <div class="act-content-date-location">
+                                                    <div class="act-content-date">
+                                                        <span class="act-content-date-text-inline">02월05일(월)</span>
+                                                        <span class="act-content-date-text-hidden">02월05일(월)</span>
+                                                    </div>
+                                                    <div class="act-content-location">
+                                                        <span>
+                                                            <span>동대문구</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="act-content-title">
+                                                    <a class="move-content" href="/wseminar/event/77701">사업자를 위한 K세미나[비용처리/절세/자산관리]</a>
+                                                </div>
+                                                <div class="act-content-money">
+                                                    <div class="money-result">
+                                                        <span class="range-money">10,000원</span>
+                                                    </div>
+                                                    <div class="check-view">
+                                                        <span class="check-view-text">조회 281</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="activity-window-bg">
+                                        <div class="activity-window">
+                                            <div class="act-window-image">
+                                                <a class="act-image-block" href="/wseminar/event/77701">
+                                                    <img class="act-image" src="https://eventusstorage.blob.core.windows.net/evs/Image/wseminar/77701/ProjectInfo/Cover/158267438f6343929286762c78822354.png" alt="사업자를 위한 K세미나 [비용처리]/절세/자산관리]" />
+                                                </a>
+                                                <div class="like-button-box">
+                                                    <button class="like-btn-shadow" type="button">
+                                                        <span class="like-btn-display-none">
+                                                            <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                                <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
+                                                            </svg>
+                                                        </span>
+                                                        <span class="like-btn-display">
+                                                            <svg class="like-btn-two" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="act-window-content">
+                                                <div class="act-content-date-location">
+                                                    <div class="act-content-date">
+                                                        <span class="act-content-date-text-inline">02월05일(월)</span>
+                                                        <span class="act-content-date-text-hidden">02월05일(월)</span>
+                                                    </div>
+                                                    <div class="act-content-location">
+                                                        <span>
+                                                            <span>동대문구</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="act-content-title">
+                                                    <a class="move-content" href="/wseminar/event/77701">사업자를 위한 K세미나[비용처리/절세/자산관리]</a>
+                                                </div>
+                                                <div class="act-content-money">
+                                                    <div class="money-result">
+                                                        <span class="range-money">10,000원</span>
+                                                    </div>
+                                                    <div class="check-view">
+                                                        <span class="check-view-text">조회 281</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="activity-window-bg">
+                                        <div class="activity-window">
+                                            <div class="act-window-image">
+                                                <a class="act-image-block" href="/wseminar/event/77701">
+                                                    <img class="act-image" src="https://eventusstorage.blob.core.windows.net/evs/Image/wseminar/77701/ProjectInfo/Cover/158267438f6343929286762c78822354.png" alt="사업자를 위한 K세미나 [비용처리]/절세/자산관리]" />
+                                                </a>
+                                                <div class="like-button-box">
+                                                    <button class="like-btn-shadow" type="button">
+                                                        <span class="like-btn-display-none">
+                                                            <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                                <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
+                                                            </svg>
+                                                        </span>
+                                                        <span class="like-btn-display">
+                                                            <svg class="like-btn-two" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="act-window-content">
+                                                <div class="act-content-date-location">
+                                                    <div class="act-content-date">
+                                                        <span class="act-content-date-text-inline">02월05일(월)</span>
+                                                        <span class="act-content-date-text-hidden">02월05일(월)</span>
+                                                    </div>
+                                                    <div class="act-content-location">
+                                                        <span>
+                                                            <span>동대문구</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="act-content-title">
+                                                    <a class="move-content" href="/wseminar/event/77701">사업자를 위한 K세미나[비용처리/절세/자산관리]</a>
+                                                </div>
+                                                <div class="act-content-money">
+                                                    <div class="money-result">
+                                                        <span class="range-money">10,000원</span>
+                                                    </div>
+                                                    <div class="check-view">
+                                                        <span class="check-view-text">조회 281</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="activity-window-bg">
+                                        <div class="activity-window">
+                                            <div class="act-window-image">
+                                                <a class="act-image-block" href="/wseminar/event/77701">
+                                                    <img class="act-image" src="https://eventusstorage.blob.core.windows.net/evs/Image/wseminar/77701/ProjectInfo/Cover/158267438f6343929286762c78822354.png" alt="사업자를 위한 K세미나 [비용처리]/절세/자산관리]" />
+                                                </a>
+                                                <div class="like-button-box">
+                                                    <button class="like-btn-shadow" type="button">
+                                                        <span class="like-btn-display-none">
+                                                            <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                                <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
+                                                            </svg>
+                                                        </span>
+                                                        <span class="like-btn-display">
+                                                            <svg class="like-btn-two" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="act-window-content">
+                                                <div class="act-content-date-location">
+                                                    <div class="act-content-date">
+                                                        <span class="act-content-date-text-inline">02월05일(월)</span>
+                                                        <span class="act-content-date-text-hidden">02월05일(월)</span>
+                                                    </div>
+                                                    <div class="act-content-location">
+                                                        <span>
+                                                            <span>동대문구</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="act-content-title">
+                                                    <a class="move-content" href="/wseminar/event/77701">사업자를 위한 K세미나[비용처리/절세/자산관리]</a>
+                                                </div>
+                                                <div class="act-content-money">
+                                                    <div class="money-result">
+                                                        <span class="range-money">10,000원</span>
+                                                    </div>
+                                                    <div class="check-view">
+                                                        <span class="check-view-text">조회 281</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="activity-window-bg">
+                                        <div class="activity-window">
+                                            <div class="act-window-image">
+                                                <a class="act-image-block" href="/wseminar/event/77701">
+                                                    <img class="act-image" src="https://eventusstorage.blob.core.windows.net/evs/Image/wseminar/77701/ProjectInfo/Cover/158267438f6343929286762c78822354.png" alt="사업자를 위한 K세미나 [비용처리]/절세/자산관리]" />
+                                                </a>
+                                                <div class="like-button-box">
+                                                    <button class="like-btn-shadow" type="button">
+                                                        <span class="like-btn-display-none">
+                                                            <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                                <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
+                                                            </svg>
+                                                        </span>
+                                                        <span class="like-btn-display">
+                                                            <svg class="like-btn-two" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="act-window-content">
+                                                <div class="act-content-date-location">
+                                                    <div class="act-content-date">
+                                                        <span class="act-content-date-text-inline">02월05일(월)</span>
+                                                        <span class="act-content-date-text-hidden">02월05일(월)</span>
+                                                    </div>
+                                                    <div class="act-content-location">
+                                                        <span>
+                                                            <span>동대문구</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="act-content-title">
+                                                    <a class="move-content" href="/wseminar/event/77701">사업자를 위한 K세미나[비용처리/절세/자산관리]</a>
+                                                </div>
+                                                <div class="act-content-money">
+                                                    <div class="money-result">
+                                                        <span class="range-money">10,000원</span>
+                                                    </div>
+                                                    <div class="check-view">
+                                                        <span class="check-view-text">조회 281</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="activity-window-bg">
+                                        <div class="activity-window">
+                                            <div class="act-window-image">
+                                                <a class="act-image-block" href="/wseminar/event/77701">
+                                                    <img class="act-image" src="https://eventusstorage.blob.core.windows.net/evs/Image/wseminar/77701/ProjectInfo/Cover/158267438f6343929286762c78822354.png" alt="사업자를 위한 K세미나 [비용처리]/절세/자산관리]" />
+                                                </a>
+                                                <div class="like-button-box">
+                                                    <button class="like-btn-shadow" type="button">
+                                                        <span class="like-btn-display-none">
+                                                            <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                                <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
+                                                            </svg>
+                                                        </span>
+                                                        <span class="like-btn-display">
+                                                            <svg class="like-btn-two" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="act-window-content">
+                                                <div class="act-content-date-location">
+                                                    <div class="act-content-date">
+                                                        <span class="act-content-date-text-inline">02월05일(월)</span>
+                                                        <span class="act-content-date-text-hidden">02월05일(월)</span>
+                                                    </div>
+                                                    <div class="act-content-location">
+                                                        <span>
+                                                            <span>동대문구</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="act-content-title">
+                                                    <a class="move-content" href="/wseminar/event/77701">사업자를 위한 K세미나[비용처리/절세/자산관리]</a>
+                                                </div>
+                                                <div class="act-content-money">
+                                                    <div class="money-result">
+                                                        <span class="range-money">10,000원</span>
+                                                    </div>
+                                                    <div class="check-view">
+                                                        <span class="check-view-text">조회 281</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="activity-window-bg">
+                                        <div class="activity-window">
+                                            <div class="act-window-image">
+                                                <a class="act-image-block" href="/wseminar/event/77701">
+                                                    <img class="act-image" src="https://eventusstorage.blob.core.windows.net/evs/Image/wseminar/77701/ProjectInfo/Cover/158267438f6343929286762c78822354.png" alt="사업자를 위한 K세미나 [비용처리]/절세/자산관리]" />
+                                                </a>
+                                                <div class="like-button-box">
+                                                    <button class="like-btn-shadow" type="button">
+                                                        <span class="like-btn-display-none">
+                                                            <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                                <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
+                                                            </svg>
+                                                        </span>
+                                                        <span class="like-btn-display">
+                                                            <svg class="like-btn-two" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="act-window-content">
+                                                <div class="act-content-date-location">
+                                                    <div class="act-content-date">
+                                                        <span class="act-content-date-text-inline">02월05일(월)</span>
+                                                        <span class="act-content-date-text-hidden">02월05일(월)</span>
+                                                    </div>
+                                                    <div class="act-content-location">
+                                                        <span>
+                                                            <span>동대문구</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="act-content-title">
+                                                    <a class="move-content" href="/wseminar/event/77701">사업자를 위한 K세미나[비용처리/절세/자산관리]</a>
+                                                </div>
+                                                <div class="act-content-money">
+                                                    <div class="money-result">
+                                                        <span class="range-money">10,000원</span>
+                                                    </div>
+                                                    <div class="check-view">
+                                                        <span class="check-view-text">조회 281</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="activity-window-bg">
+                                        <div class="activity-window">
+                                            <div class="act-window-image">
+                                                <a class="act-image-block" href="/wseminar/event/77701">
+                                                    <img class="act-image" src="https://eventusstorage.blob.core.windows.net/evs/Image/wseminar/77701/ProjectInfo/Cover/158267438f6343929286762c78822354.png" alt="사업자를 위한 K세미나 [비용처리]/절세/자산관리]" />
+                                                </a>
+                                                <div class="like-button-box">
+                                                    <button class="like-btn-shadow" type="button">
+                                                        <span class="like-btn-display-none">
+                                                            <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                                <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
+                                                            </svg>
+                                                        </span>
+                                                        <span class="like-btn-display">
+                                                            <svg class="like-btn-two" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="act-window-content">
+                                                <div class="act-content-date-location">
+                                                    <div class="act-content-date">
+                                                        <span class="act-content-date-text-inline">02월05일(월)</span>
+                                                        <span class="act-content-date-text-hidden">02월05일(월)</span>
+                                                    </div>
+                                                    <div class="act-content-location">
+                                                        <span>
+                                                            <span>동대문구</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="act-content-title">
+                                                    <a class="move-content" href="/wseminar/event/77701">사업자를 위한 K세미나[비용처리/절세/자산관리]</a>
+                                                </div>
+                                                <div class="act-content-money">
+                                                    <div class="money-result">
+                                                        <span class="range-money">10,000원</span>
+                                                    </div>
+                                                    <div class="check-view">
+                                                        <span class="check-view-text">조회 281</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="activity-window-bg">
+                                        <div class="activity-window">
+                                            <div class="act-window-image">
+                                                <a class="act-image-block" href="/wseminar/event/77701">
+                                                    <img class="act-image" src="https://eventusstorage.blob.core.windows.net/evs/Image/wseminar/77701/ProjectInfo/Cover/158267438f6343929286762c78822354.png" alt="사업자를 위한 K세미나 [비용처리]/절세/자산관리]" />
+                                                </a>
+                                                <div class="like-button-box">
+                                                    <button class="like-btn-shadow" type="button">
+                                                        <span class="like-btn-display-none">
+                                                            <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                                <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
+                                                            </svg>
+                                                        </span>
+                                                        <span class="like-btn-display">
+                                                            <svg class="like-btn-two" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="act-window-content">
+                                                <div class="act-content-date-location">
+                                                    <div class="act-content-date">
+                                                        <span class="act-content-date-text-inline">02월05일(월)</span>
+                                                        <span class="act-content-date-text-hidden">02월05일(월)</span>
+                                                    </div>
+                                                    <div class="act-content-location">
+                                                        <span>
+                                                            <span>동대문구</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="act-content-title">
+                                                    <a class="move-content" href="/wseminar/event/77701">사업자를 위한 K세미나[비용처리/절세/자산관리]</a>
+                                                </div>
+                                                <div class="act-content-money">
+                                                    <div class="money-result">
+                                                        <span class="range-money">10,000원</span>
+                                                    </div>
+                                                    <div class="check-view">
+                                                        <span class="check-view-text">조회 281</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-display-none">
+                                    <div class="filter-none-text-tie">
+                                        <p class="text-base">선택하신 필터에 맞는 행사가 없습니다.</p>
+                                        <p class="text-base">다른 조건으로 선택하거나 초기화 해보세요</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="select-page-container">
+                                <div class="select-page-box">
+                                    <div class="page-box-items">
+                                        <button class="left-move-button-bg disabled" type="button">
+                                            <svg class="left-move-icon" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                            </svg>
+                                        </button>
+                                        <div class="page-move-list">
+                                            <button class="page-number-f-btn" type="button">
+                                                <div class="page-number-f">1</div>
+                                            </button>
+                                            <button class="page-number-btn" type="button">
+                                                <div class="page-number-f">2</div>
+                                            </button>
+                                            <button class="page-number-btn" type="button">
+                                                <div class="page-number-f">3</div>
+                                            </button>
+                                            <button class="page-number-btn" type="button">
+                                                <div class="page-number-f">4</div>
+                                            </button>
+                                            <button class="page-number-btn" type="button">
+                                                <div class="page-number-f">5</div>
+                                            </button>
+                                        </div>
+                                        <button class="right-move-button-bg" type="button">
+                                            <svg class="left-move-icon" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-space-section">
+                                <div class="sub-text-title">
+                                    <span class="sub-text-count">20,415</span>
+                                    <span>개의 채널</span>
+                                </div>
+                                <div class="channel-bg">
+                                    <div class="channel-box">
+                                        <div class="channel-img-window">
+                                            <a href="/christopherhill/event">
+                                                <div class="channel-img-box">
+                                                    <div class="channel-img-round">
+                                                        <img class="img-cover" src="https://eventusstorage.blob.core.windows.net/evs/UploadedFiles/christopherhill/TopLogoImage/a8ed1a4f517240f28b13e08231851bd7.png" alt="피닉스리더십센터(주)" />
+                                                    </div>
+                                                    <div class="count-channel">
+                                                        <div class="c-6"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="channel_text-tie">
+                                                    <div class="channel-text-name">피닉스리더십센터(주)</div>
+                                                    <div class="channel-text-content">
+                                                        26
+                                                        <span>개의 행사</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <div class="channal-subcribe">
+                                                <div class="channel-subcribe-m">
+                                                    <button class="channel-sub-m-btn" type="button">
+                                                        <svg class="channel-sub-m-btn-left">
+                                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                                        </svg>
+                                                        <span>구독중</span>
+                                                    </button>
+                                                    <button class="channel-sub-m-btn-s" type="button">
+                                                        <svg class="channel-sub-m-btn-right">
+                                                            <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path>
+                                                        </svg>
+                                                        <span>알람설정</span>
+                                                    </button>
+                                                </div>
+                                                <button class="channel-click-btn-bg" type="button">
+                                                    <span>채널 구독</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="channel-box">
+                                        <div class="channel-img-window">
+                                            <a href="/christopherhill/event">
+                                                <div class="channel-img-box">
+                                                    <div class="channel-img-round">
+                                                        <img class="img-cover" src="https://eventusstorage.blob.core.windows.net/evs/UploadedFiles/christopherhill/TopLogoImage/a8ed1a4f517240f28b13e08231851bd7.png" alt="피닉스리더십센터(주)" />
+                                                    </div>
+                                                    <div class="count-channel">
+                                                        <div class="c-6"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="channel_text-tie">
+                                                    <div class="channel-text-name">피닉스리더십센터(주)</div>
+                                                    <div class="channel-text-content">
+                                                        26
+                                                        <span>개의 행사</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <div class="channal-subcribe">
+                                                <div class="channel-subcribe-m">
+                                                    <button class="channel-sub-m-btn" type="button">
+                                                        <svg class="channel-sub-m-btn-left">
+                                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                                        </svg>
+                                                        <span>구독중</span>
+                                                    </button>
+                                                    <button class="channel-sub-m-btn-s" type="button">
+                                                        <svg class="channel-sub-m-btn-right">
+                                                            <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path>
+                                                        </svg>
+                                                        <span>알람설정</span>
+                                                    </button>
+                                                </div>
+                                                <button class="channel-click-btn-bg" type="button">
+                                                    <span>채널 구독</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="channel-box">
+                                        <div class="channel-img-window">
+                                            <a href="/christopherhill/event">
+                                                <div class="channel-img-box">
+                                                    <div class="channel-img-round">
+                                                        <img class="img-cover" src="https://eventusstorage.blob.core.windows.net/evs/UploadedFiles/christopherhill/TopLogoImage/a8ed1a4f517240f28b13e08231851bd7.png" alt="피닉스리더십센터(주)" />
+                                                    </div>
+                                                    <div class="count-channel">
+                                                        <div class="c-6"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="channel_text-tie">
+                                                    <div class="channel-text-name">피닉스리더십센터(주)</div>
+                                                    <div class="channel-text-content">
+                                                        26
+                                                        <span>개의 행사</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <div class="channal-subcribe">
+                                                <div class="channel-subcribe-m">
+                                                    <button class="channel-sub-m-btn" type="button">
+                                                        <svg class="channel-sub-m-btn-left">
+                                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                                        </svg>
+                                                        <span>구독중</span>
+                                                    </button>
+                                                    <button class="channel-sub-m-btn-s" type="button">
+                                                        <svg class="channel-sub-m-btn-right">
+                                                            <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path>
+                                                        </svg>
+                                                        <span>알람설정</span>
+                                                    </button>
+                                                </div>
+                                                <button class="channel-click-btn-bg" type="button">
+                                                    <span>채널 구독</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="channel-box">
+                                        <div class="channel-img-window">
+                                            <a href="/christopherhill/event">
+                                                <div class="channel-img-box">
+                                                    <div class="channel-img-round">
+                                                        <img class="img-cover" src="https://eventusstorage.blob.core.windows.net/evs/UploadedFiles/christopherhill/TopLogoImage/a8ed1a4f517240f28b13e08231851bd7.png" alt="피닉스리더십센터(주)" />
+                                                    </div>
+                                                    <div class="count-channel">
+                                                        <div class="c-6"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="channel_text-tie">
+                                                    <div class="channel-text-name">피닉스리더십센터(주)</div>
+                                                    <div class="channel-text-content">
+                                                        26
+                                                        <span>개의 행사</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <div class="channal-subcribe">
+                                                <div class="channel-subcribe-m">
+                                                    <button class="channel-sub-m-btn" type="button">
+                                                        <svg class="channel-sub-m-btn-left">
+                                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                                        </svg>
+                                                        <span>구독중</span>
+                                                    </button>
+                                                    <button class="channel-sub-m-btn-s" type="button">
+                                                        <svg class="channel-sub-m-btn-right">
+                                                            <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path>
+                                                        </svg>
+                                                        <span>알람설정</span>
+                                                    </button>
+                                                </div>
+                                                <button class="channel-click-btn-bg" type="button">
+                                                    <span>채널 구독</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="channel-box">
+                                        <div class="channel-img-window">
+                                            <a href="/christopherhill/event">
+                                                <div class="channel-img-box">
+                                                    <div class="channel-img-round">
+                                                        <img class="img-cover" src="https://eventusstorage.blob.core.windows.net/evs/UploadedFiles/christopherhill/TopLogoImage/a8ed1a4f517240f28b13e08231851bd7.png" alt="피닉스리더십센터(주)" />
+                                                    </div>
+                                                    <div class="count-channel">
+                                                        <div class="c-6"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="channel_text-tie">
+                                                    <div class="channel-text-name">피닉스리더십센터(주)</div>
+                                                    <div class="channel-text-content">
+                                                        26
+                                                        <span>개의 행사</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <div class="channal-subcribe">
+                                                <div class="channel-subcribe-m">
+                                                    <button class="channel-sub-m-btn" type="button">
+                                                        <svg class="channel-sub-m-btn-left">
+                                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                                        </svg>
+                                                        <span>구독중</span>
+                                                    </button>
+                                                    <button class="channel-sub-m-btn-s" type="button">
+                                                        <svg class="channel-sub-m-btn-right">
+                                                            <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path>
+                                                        </svg>
+                                                        <span>알람설정</span>
+                                                    </button>
+                                                </div>
+                                                <button class="channel-click-btn-bg" type="button">
+                                                    <span>채널 구독</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="channel-box">
+                                        <div class="channel-img-window">
+                                            <a href="/christopherhill/event">
+                                                <div class="channel-img-box">
+                                                    <div class="channel-img-round">
+                                                        <img class="img-cover" src="https://eventusstorage.blob.core.windows.net/evs/UploadedFiles/christopherhill/TopLogoImage/a8ed1a4f517240f28b13e08231851bd7.png" alt="피닉스리더십센터(주)" />
+                                                    </div>
+                                                    <div class="count-channel">
+                                                        <div class="c-6"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="channel_text-tie">
+                                                    <div class="channel-text-name">피닉스리더십센터(주)</div>
+                                                    <div class="channel-text-content">
+                                                        26
+                                                        <span>개의 행사</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <div class="channal-subcribe">
+                                                <div class="channel-subcribe-m">
+                                                    <button class="channel-sub-m-btn" type="button">
+                                                        <svg class="channel-sub-m-btn-left">
+                                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                                        </svg>
+                                                        <span>구독중</span>
+                                                    </button>
+                                                    <button class="channel-sub-m-btn-s" type="button">
+                                                        <svg class="channel-sub-m-btn-right">
+                                                            <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path>
+                                                        </svg>
+                                                        <span>알람설정</span>
+                                                    </button>
+                                                </div>
+                                                <button class="channel-click-btn-bg" type="button">
+                                                    <span>채널 구독</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="channel-box">
+                                        <div class="channel-img-window">
+                                            <a href="/christopherhill/event">
+                                                <div class="channel-img-box">
+                                                    <div class="channel-img-round">
+                                                        <img class="img-cover" src="https://eventusstorage.blob.core.windows.net/evs/UploadedFiles/christopherhill/TopLogoImage/a8ed1a4f517240f28b13e08231851bd7.png" alt="피닉스리더십센터(주)" />
+                                                    </div>
+                                                    <div class="count-channel">
+                                                        <div class="c-6"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="channel_text-tie">
+                                                    <div class="channel-text-name">피닉스리더십센터(주)</div>
+                                                    <div class="channel-text-content">
+                                                        26
+                                                        <span>개의 행사</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <div class="channal-subcribe">
+                                                <div class="channel-subcribe-m">
+                                                    <button class="channel-sub-m-btn" type="button">
+                                                        <svg class="channel-sub-m-btn-left">
+                                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                                        </svg>
+                                                        <span>구독중</span>
+                                                    </button>
+                                                    <button class="channel-sub-m-btn-s" type="button">
+                                                        <svg class="channel-sub-m-btn-right">
+                                                            <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path>
+                                                        </svg>
+                                                        <span>알람설정</span>
+                                                    </button>
+                                                </div>
+                                                <button class="channel-click-btn-bg" type="button">
+                                                    <span>채널 구독</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="channel-box">
+                                        <div class="channel-img-window">
+                                            <a href="/christopherhill/event">
+                                                <div class="channel-img-box">
+                                                    <div class="channel-img-round">
+                                                        <img class="img-cover" src="https://eventusstorage.blob.core.windows.net/evs/UploadedFiles/christopherhill/TopLogoImage/a8ed1a4f517240f28b13e08231851bd7.png" alt="피닉스리더십센터(주)" />
+                                                    </div>
+                                                    <div class="count-channel">
+                                                        <div class="c-6"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="channel_text-tie">
+                                                    <div class="channel-text-name">피닉스리더십센터(주)</div>
+                                                    <div class="channel-text-content">
+                                                        26
+                                                        <span>개의 행사</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <div class="channal-subcribe">
+                                                <div class="channel-subcribe-m">
+                                                    <button class="channel-sub-m-btn" type="button">
+                                                        <svg class="channel-sub-m-btn-left">
+                                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                                        </svg>
+                                                        <span>구독중</span>
+                                                    </button>
+                                                    <button class="channel-sub-m-btn-s" type="button">
+                                                        <svg class="channel-sub-m-btn-right">
+                                                            <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path>
+                                                        </svg>
+                                                        <span>알람설정</span>
+                                                    </button>
+                                                </div>
+                                                <button class="channel-click-btn-bg" type="button">
+                                                    <span>채널 구독</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="more-channel">
+                                    <a class="more-channel-underline" href="search/channel">
+                                        <span>더 많은 채널 보기</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
