@@ -1027,7 +1027,6 @@ button:not([class*="hover:"]).hidden-flex-center {
 .best-icon-radio {
     width: 1rem;
     height: 1rem;
-    color: gray;
 }
 
 [class*="hover\:"]:active,
@@ -1042,10 +1041,6 @@ button:focus {
     outline: 2px solid transparent;
     outline-offset: 2px;
 }
-
-/* .icon-hidden-content:hover .hidden-content-border {
-    display: block;
-} */
 
 .icon-hidden-content:hover {
     display: block;
@@ -1104,17 +1099,13 @@ button:active {
     --tw-space-x-reverse: 0;
     margin-right: calc(1rem * var(--tw-space-x-reverse));
     margin-left: calc(1rem * (1 - var(--tw-space-x-reverse)));
-    opacity: 0.8;
 }
 
 .activity-sort-end {
-    opacity: 0.8;
     --tw-space-x-reverse: 0;
     margin-right: calc(1rem * var(--tw-space-x-reverse));
     margin-left: calc(1rem * (1 - var(--tw-space-x-reverse)));
     --tw-text-opacity: 1;
-    color: rgb(23 23 23 / var(--tw-text-opacity));
-    font-weight: 700;
 }
 
 audio,
