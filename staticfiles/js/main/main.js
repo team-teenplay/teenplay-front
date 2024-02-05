@@ -12,10 +12,10 @@ function autoSlide() {
     // 0s를 줘서 원래 1번 위치로 이동(슬라이드 효과는 안보임)
     count++;
     if (count == 3) {
-        slideBannerBox.style.transform = "translate(-" + 100 * (count + 1) + "vw)";
+        slideBannerBox.style.transform = "translate(-" + 99.12 * (count + 1) + "vw)";
         setTimeout(() => {
             slideBannerBox.style.transition = "transform 0s";
-            slideBannerBox.style.transform = "translate(-100vw)";
+            slideBannerBox.style.transform = "translate(-99.12vw)";
         }, 500);
         count = 0;
         bannerPageCount.innerText = `${count + 1}/3`;
@@ -25,7 +25,7 @@ function autoSlide() {
 
         // 왼쪽으로 -100 * (count + 1) 만큼 이동한다.
         // 왜 count에 + 1을 한 것인가? : 가장 앞에 6번 배너부터 시작되기 때문이다.
-        slideBannerBox.style.transform = "translate(-" + 100 * (count + 1) + "vw)";
+        slideBannerBox.style.transform = "translate(-" + 99.12 * (count + 1) + "vw)";
     }
 }
 
@@ -93,7 +93,7 @@ slideBannerBox.insertBefore(lastDiv, document.querySelector("div.slide-banner-bo
 bannerPageCount.innerText = `${count + 1}/3`;
 
 // 첫번째 배너는 6번이니까 왼쪽으로 한 번 밀어서 1번 보이게 함.
-slideBannerBox.style.transform = "translate(-100vw)";
+slideBannerBox.style.transform = "translate(-99.12vw)";
 
 // 4초마다 슬라이드 이동
 let inter = setInterval(autoSlide, 4000);
@@ -122,23 +122,23 @@ arrows.forEach((arrow) => {
                     slideBannerBox.style.transform = "translate(0vw)";
                     setTimeout(function () {
                         slideBannerBox.style.transition = "transform 0s";
-                        slideBannerBox.style.transform = "translate(-300vw)";
+                        slideBannerBox.style.transform = "translate(-297.36vw)";
                     }, 500);
                     count = 2;
                 } else {
-                    slideBannerBox.style.transform = "translate(-" + 100 * (count + 1) + "vw)";
+                    slideBannerBox.style.transform = "translate(-" + 99.12 * (count + 1) + "vw)";
                 }
             } else {
                 count++;
                 if (count == 3) {
-                    slideBannerBox.style.transform = "translate(-" + 100 * (count + 1) + "vw)";
+                    slideBannerBox.style.transform = "translate(-" + 99.12 * (count + 1) + "vw)";
                     setTimeout(function () {
                         slideBannerBox.style.transition = "transform 0s";
-                        slideBannerBox.style.transform = "translate(-100vw)";
+                        slideBannerBox.style.transform = "translate(-99.12vw)";
                     }, 500);
                     count = 0;
                 } else {
-                    slideBannerBox.style.transform = "translate(-" + 100 * (count + 1) + "vw)";
+                    slideBannerBox.style.transform = "translate(-" + 99.12 * (count + 1) + "vw)";
                 }
             }
             bannerPageCount.innerText = `${count + 1}/3`;
