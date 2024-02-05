@@ -68,6 +68,7 @@ const commentComment = document.querySelector(".comment-list-all-wrap");
 commentMenuOpenUpdate.addEventListener("click", () => {
     commentInputUpdate.classList.remove("hidden");
     commentComment.classList.add("hidden");
+    
 });
 
 const commentUploadFinish =document.getElementById("comment-update-upload");
@@ -136,3 +137,22 @@ modalPostUpdateClose.addEventListener("click", () => {
 modalPostUpdateFinish.addEventListener("click", () => {
     modalPostUpdate.classList.add("hidden");
 });
+
+// ****************************************************
+// 태그 추가
+const tag = document.querySelector(".modal-update-bottom-wrap .tag")
+const tagInput = document.querySelector(".modal-update-tag .modal-update-tag-input")
+tagInput.addEventListener("keyup", (e) => {
+    if(e.keyCode === 13) {
+        if(e.target.value) {
+            const tagDiv = document.createElement("div")
+            tagDiv.innerHTML = `<span>${e.target.value}</span>`;
+            tag.appendChild(tagDiv)
+            e.target.value = "";
+            tagDiv.addEventListener("click", () => {
+                // 취소
+                tag.removeChild(tagDiv);
+            })
+        }
+    }
+})
