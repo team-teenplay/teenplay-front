@@ -101,3 +101,8 @@ modalUnlikeExitBtnCopy.addEventListener("click", exitModal);
 //         }
 //     });
 // });
+
+const elements = document.querySelectorAll("[name='selected-recommend-btn']");
+elements.forEach((element) => {
+    console.log(element.innerHTML);
+});
