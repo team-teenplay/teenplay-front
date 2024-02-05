@@ -1242,7 +1242,7 @@ comment-menu-open-wrap {
     margin-top: 1rem;
     margin-right: .5rem;
     padding: 5px 15px 5px 15px;
-    
+    cursor: pointer;
 }
 
 .create-tag-error {
@@ -1432,7 +1432,7 @@ comment-menu-open-wrap {
     margin-top: 1rem;
     margin-right: .5rem;
     padding: 5px 15px 5px 15px;
-    
+    cursor: pointer;
 }
 
 .tag-error-text {
