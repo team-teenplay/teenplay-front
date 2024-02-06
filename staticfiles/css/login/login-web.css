@@ -14,15 +14,12 @@ html {
 body {
     position: relative;
     min-height: 100%;
+    opacity: 1;
     font-size: .9375rem;
     --tw-text-opacity: 1;
     color: rgb(23 23 23/var(--tw-text-opacity));
     margin: 0;
     line-height: inherit;
-}
-
-body[loaded] {
-    opacity: 1;
 }
 
 html > body {
@@ -167,7 +164,6 @@ button, select {
 }
 
 * {
-    letter-spacing: -.03125em;
     scrollbar-color: auto;
     scrollbar-width: auto;
     font-size: inherit;
@@ -181,7 +177,7 @@ button, select {
     flex-direction: column;
     min-height: 100vh;
     display: flex;
-    max-width: 1280px;
+    max-width: 1024px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -227,7 +223,7 @@ button, select {
 
 .title-logo {
     width: auto;
-    height: 2rem;
+    height: 2.5rem;
     display: block;
     vertical-align: middle;
 }
@@ -279,6 +275,7 @@ button, select {
     padding-right: 0.75rem;
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255/var(--tw-bg-opacity));
+    border-color: #E5E5E5;
     border-radius: 0.375rem;
     width: 100%;
     display: block;
@@ -343,6 +340,7 @@ button, select {
     padding-right: 0.75rem;
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255/var(--tw-bg-opacity));
+    border-color: #E5E5E5;
     border-radius: 0.375rem;
     width: 100%;
     display: block;
@@ -432,8 +430,7 @@ button, select {
 /* 비밀번호 찾기 버튼 부분 */
 .password-find {
     text-decoration-line: underline;
-    --tw-text-opacity: 1;
-    color: rgb(92 63 191/var(--tw-text-opacity));
+    color: #CE201B;
 }
 
 /* 개인정보 관련 경고 메세지 */
@@ -448,8 +445,7 @@ button, select {
     --tw-space-y-reverse: 0;
     margin-top: calc(1.5rem*(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(1.5rem*var(--tw-space-y-reverse));
-    --tw-border-opacity: 1;
-    border-color: rgb(92 63 191/var(--tw-border-opacity));
+    border-color: #CE201B;
     --tw-text-opacity: 1;
     color: rgb(255 255 255/var(--tw-text-opacity));
     --tw-shadow: 0 1px 1px 0 rgba(0,0,0,.05);
@@ -459,8 +455,7 @@ button, select {
     font-weight: 400;
     padding-left: 1rem;
     padding-right: 1rem;
-    --tw-bg-opacity: 1;
-    background-color: rgb(92 63 191/var(--tw-bg-opacity));
+    background-color: #CE201B;
     border-width: 1px;
     border-radius: 0.375rem;
     justify-content: center;
@@ -471,8 +466,7 @@ button, select {
 }
 
 .login-button:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(71 44 163/var(--tw-bg-opacity));
+    background-color: #9F0D08;
 }
 
 /* SNS 로그인 부분 */
@@ -594,20 +588,18 @@ button, select {
 
 /* 회원가입 버튼 */
 .sign-up {
-    outline-color: #5c3fbf;
+    outline-color: #CE201B;
     --tw-shadow: 0 0 #0000;
     --tw-shadow-colored: 0 0 #0000;
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
-    --tw-text-opacity: 1;
-    color: rgb(92 63 191/var(--tw-text-opacity));
+    color: #CE201B;
     line-height: 1;
     font-weight: 400;
     padding-left: 1rem;
     padding-right: 1rem;
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255/var(--tw-bg-opacity));
-    --tw-border-opacity: 1;
-    border-color: rgb(92 63 191/var(--tw-border-opacity));
+    border-color: #CE201B;
     border-width: 1px;
     border-radius: 0.375rem;
     justify-content: center;
@@ -618,17 +610,11 @@ button, select {
 }
 
 .sign-up:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(245 242 255/var(--tw-bg-opacity));
-}
-
-.sign-up-container:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(245 242 255/var(--tw-bg-opacity));
+    background-color: #FFF0EE;
 }
 
 /* 구분선 */
-.line-container {
+/* .line-container {
     --tw-space-y-reverse: 0;
     margin-top: calc(1.5rem*(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(1.5rem*var(--tw-space-y-reverse));
@@ -639,10 +625,10 @@ button, select {
 .line {
     border-top-width: 1px;
     flex: 1 1 0%;
-}
+} */
 
 /* 비회원 신청조회 */
-.nonmember-container {
+/* .nonmember-container {
     --tw-space-y-reverse: 0;
     margin-top: calc(1.5rem*(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(1.5rem*var(--tw-space-y-reverse));
@@ -662,4 +648,4 @@ button, select {
 
 .width-full {
     width: 100%;
-}
+} */
