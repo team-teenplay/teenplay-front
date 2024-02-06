@@ -99,7 +99,7 @@ infoFilterBtn.addEventListener("click", () => {
 });
 
 // 공유하기 버튼 클릭 시 모달창으로 클립보드에 url 복사
-const shareBtn = document.querySelector(".club-top-button");
+const shareBtn = document.getElementById("share");
 function clipCopy() {
     let dummy = document.createElement("textarea");
     document.body.appendChild(dummy);
@@ -114,6 +114,57 @@ function clipCopy() {
     );
 }
 shareBtn.addEventListener("click", clipCopy);
+
+// 가입신청 버튼 클릭 시 모달창 출력
+const applyBtn = document.getElementById("apply");
+applyBtn.addEventListener("click", () => {
+    Swal.fire({
+        title: "가입 신청하시겠습니까?",
+        text: "[TEEN_PLAYERS] 모임에 가입을 신청합니다.",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "신청",
+        cancelButtonText: "취소",
+    }).then((result) => {
+        // 가입신청 관련 서버 작업 코드 입력
+    });
+});
+
+// 승인대기 버튼 클릭 시 신청취소 모달창 출력
+const cancelBtn = document.getElementById("cancel");
+cancelBtn.addEventListener("click", () => {
+    Swal.fire({
+        title: "가입신청을 취소하시겠습니까?",
+        text: '승인대기 중입니다. 취소하시려면 "신청취소"를 눌러주세요.',
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "신청취소",
+        cancelButtonText: "닫기",
+    }).then((result) => {
+        // 신청취소 관련 서버 작업 코드 입력
+    });
+});
+
+// 탈퇴하기 버튼 클릭 시 탈퇴하기 모달창 출력
+const quitBtn = document.getElementById("quit");
+quitBtn.addEventListener("click", () => {
+    Swal.fire({
+        title: "모임을 탈퇴하시겠습니까?",
+        text: "[TEEN_PLAYERS] 모임에서 탈퇴합니다.",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "탈퇴",
+        cancelButtonText: "취소",
+    }).then((result) => {
+        // 모임탈퇴 관련 서버 작업 코드 입력
+    });
+});
 
 // 하트 아이콘 클릭 시 모달창 하트 이미지 변경, 모달창 출력
 const activeLikeBtns = document.querySelectorAll(".club-detail-like-button");

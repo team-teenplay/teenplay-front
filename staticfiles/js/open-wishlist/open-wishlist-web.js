@@ -87,6 +87,15 @@ modalPostUpdateFinish.addEventListener("click", () => {
     modalPostUpdate.classList.add("hidden");
 });
 
+// 위시리스트 게시글 수정 모달창 닫기 이벤트
+const postUpdateWrap = document.querySelector(".post-update-wrap");
+
+document.addEventListener("click", (e) => {
+    if (!postUpdateButton.contains(e.target) && !postUpdateWrap.contains(e.target)) {
+        modalPostUpdate.classList.add("hidden");
+    }
+});
+
 // 위시리스트 게시글 타이틀 입력 이벤트
 const updatePostTitle = document.querySelector(".update-category-input");
 const updatePostFinish = document.querySelector(".update-finish-botton");
@@ -221,6 +230,15 @@ modalCreateClose.addEventListener("click", () => {
 
 modalCreateFinish.addEventListener("click", () => {
     modalCreateInput.classList.add("hidden");
+});
+
+// 위시리스트 생성 모달창 닫기 이벤트
+const postCreateWrap = document.querySelector(".post-create-wrap");
+
+document.addEventListener("click", (e) => {
+    if (!wishlistCreate.contains(e.target) && !postCreateWrap.contains(e.target)) {
+        modalCreateInput.classList.add("hidden");
+    }
 });
 
 // 위시리스트 게시글 태그 추가 이벤트
