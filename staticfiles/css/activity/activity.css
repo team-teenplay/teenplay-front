@@ -804,7 +804,11 @@ textarea {
     display: flex;
 }
 
-/*  */
+.method-box-pay {
+    align-items: center;
+    display: flex;
+}
+
 [type="checkbox"]:checked:focus,
 [type="checkbox"]:checked:hover,
 [type="radio"]:checked:focus,
@@ -1139,10 +1143,16 @@ video {
 .hidden-filter-container-check {
     overflow-x: auto;
     flex-wrap: wrap;
-    display: none;
+    /* display: none; */
+    display: flex;
 }
 
-.find-filter-bg {
+.find-filter-bg,
+.find-filter-bg-two,
+.find-filter-bg-three,
+.find-filter-bg-join,
+.find-filter-bg-pay,
+.find-filter-bg-location {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
     font-weight: 300;
