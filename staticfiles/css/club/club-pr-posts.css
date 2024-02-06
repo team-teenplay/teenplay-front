@@ -291,6 +291,13 @@ menu, ol, ul {
     background-color: rgb(255 255 255/var(--tw-bg-opacity));
 }
 
+.pr-content-text-top-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .pr-content-text-name {
     --tw-text-opacity: 1;
     color: #CE201B;
@@ -505,4 +512,22 @@ menu, ol, ul {
 .pr-pagination-next:not(.disabled):hover {
     --tw-bg-opacity: 1;
     background-color: rgb(248 250 251/var(--tw-bg-opacity));
+}
+
+
+.pr-content-field {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255/var(--tw-text-opacity));
+    font-size: 12px;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    --tw-bg-opacity: 1;
+    background-color: #CE201B;
+    border-radius: 1rem;
+    width: fit-content;
+    height: fit-content;
+    display: block;
+    margin-right: 5px;
 }
