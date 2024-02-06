@@ -52,6 +52,96 @@ audio, canvas, embed, iframe, img, object, svg, video {
     vertical-align: middle;
 }
 
+[multiple], [type=date], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=time], [type=url], [type=week], select, textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-color: rgba(0,0,0,.1);
+    font-size: .9375rem;
+}
+
+[multiple], [type=date], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=time], [type=url], [type=week], select, textarea {
+    background-color: #fff;
+    border-color: #878d91;
+    border-width: 1px;
+    border-radius: 0;
+    padding-top: 0.5rem;
+    padding-right: 0.75rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    --tw-shadow: 0 0 #0000;
+}
+
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.hidden {
+    display: none!important;
+}
+
+input[type=checkbox] {
+    height: 1rem;
+    width: 1rem;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    border-width: 1px;
+    border-color: rgba(0,0,0,.1);
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255/var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: rgb(92 63 191/var(--tw-text-opacity));
+}
+
+[type=checkbox], [type=radio] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    display: inline-block;
+    vertical-align: middle;
+    background-origin: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    flex-shrink: 0;
+    height: 1rem;
+    width: 1rem;
+    color: #2563eb;
+    background-color: #fff;
+    border-color: #878d91;
+    border-width: 1px;
+    --tw-shadow: 0 0 #0000;
+}
+
+[type=button], [type=reset], [type=submit], button {
+    -webkit-appearance: button;
+    background-color: transparent;
+    background-image: none;
+}
+
+button {
+    text-align: left;
+}
+
+[role=button], button {
+    cursor: pointer;
+}
+
+button, select {
+    text-transform: none;
+}
+
 *, :after, :before {
     --tw-border-spacing-x: 0;
     --tw-border-spacing-y: 0;
@@ -85,6 +175,7 @@ audio, canvas, embed, iframe, img, object, svg, video {
     letter-spacing: -.03125em;
 }
 
+/* 화면 부분 */
 .screen-all-wrap {
     align-items: center;
     flex-direction: column;
@@ -127,6 +218,7 @@ audio, canvas, embed, iframe, img, object, svg, video {
     margin-right: auto;
 }
 
+/* 로고 부분 */
 .title-logo-container {
     justify-content: center;
     align-items: center;
@@ -140,6 +232,7 @@ audio, canvas, embed, iframe, img, object, svg, video {
     vertical-align: middle;
 }
 
+/* 타이틀 부분 */
 .title-text {
     --tw-space-y-reverse: 0;
     margin-top: calc(2rem*(1 - var(--tw-space-y-reverse)));
@@ -147,4 +240,426 @@ audio, canvas, embed, iframe, img, object, svg, video {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 700;
+}
+
+/* 로그인 정보 부분 */
+.login-all-wrap {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(2rem*(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(2rem*var(--tw-space-y-reverse));
+}
+
+.login-wrap {
+    text-align: left;
+}
+
+/* 아이디 입력 부분 */
+.id-text-container {
+    justify-content: space-between;
+    align-items: baseline;
+    display: flex;
+}
+
+.id-text {
+    display: block;
+}
+
+.id-input-container {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0.625rem*(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.625rem*var(--tw-space-y-reverse));
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
+    --tw-shadow: 0 1px 2px 0 rgba(0,0,0,.05);
+    --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+    line-height: 1;
+    font-size: .9375rem;
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255/var(--tw-bg-opacity));
+    border-radius: 0.375rem;
+    width: 100%;
+    display: block;
+    transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .15s;
+}
+
+.id-input-container:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(248 250 251/var(--tw-bg-opacity));
+}
+
+.id-input-style {
+    display: none;
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0.625rem*(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.625rem*var(--tw-space-y-reverse));
+    --tw-text-opacity: 1;
+    color: rgb(135 141 145/var(--tw-text-opacity));
+    font-size: .8125rem;
+    text-align: end;
+}
+
+.id-input-bottom {
+    --tw-space-y-reverse: 0;
+    margin-bottom: calc(0.625rem*var(--tw-space-y-reverse));
+    --tw-text-opacity: 1;
+    color: rgb(191 69 69/var(--tw-text-opacity));
+    margin-top: 0.5rem!important;
+}
+
+/* 비밀번호 입력 부분 */
+.password-wrap {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.5rem*(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.5rem*var(--tw-space-y-reverse));
+}
+
+.password-text-container {
+    justify-content: space-between;
+    align-items: baseline;
+    display: flex;
+}
+
+.password-text {
+    display: block;
+}
+
+.password-input-container {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0.625rem*(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.625rem*var(--tw-space-y-reverse));
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
+    --tw-shadow: 0 1px 2px 0 rgba(0,0,0,.05);
+    --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+    line-height: 1;
+    font-size: .9375rem;
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255/var(--tw-bg-opacity));
+    border-radius: 0.375rem;
+    width: 100%;
+    display: block;
+    transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .15s;
+}
+
+.password-input-container:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(248 250 251/var(--tw-bg-opacity));
+}
+
+.password-input-style {
+    display: none;
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0.625rem*(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.625rem*var(--tw-space-y-reverse));
+    --tw-text-opacity: 1;
+    color: rgb(135 141 145/var(--tw-text-opacity));
+    font-size: .8125rem;
+    text-align: end;
+}
+
+.password-input-bottom {
+    display: none;
+    --tw-space-y-reverse: 0;
+    margin-bottom: calc(0.625rem*var(--tw-space-y-reverse));
+    --tw-text-opacity: 1;
+    color: rgb(191 69 69/var(--tw-text-opacity));
+    margin-top: 0.5rem!important;
+}
+
+/* 로그인 실패 시 문구 출력 부분 */
+.login-check {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.5rem*(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.5rem*var(--tw-space-y-reverse));
+    --tw-text-opacity: 1;
+    color: rgb(191 69 69/var(--tw-text-opacity));
+}
+
+/* 로그인 부가 기능 부분 */
+.login-items-wrap {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.5rem*(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.5rem*var(--tw-space-y-reverse));
+}
+
+.login-items-divison {
+    justify-content: space-between;
+    display: flex;
+}
+
+/* 로그인 유지 버튼 부분 */
+.keep-wrap {
+    justify-content: space-between;
+    display: flex;
+}
+
+.keep-container {
+    align-items: center;
+    display: flex;
+}
+
+.keep-checkbox:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(248 250 251/var(--tw-bg-opacity));
+}
+
+.keep-text {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0.5rem*var(--tw-space-x-reverse));
+    margin-left: calc(0.5rem*(1 - var(--tw-space-x-reverse)));
+    font-size: .9375rem;
+    cursor: pointer;
+    display: block;
+}
+
+.keep-error {
+    --tw-text-opacity: 1;
+    color: rgb(191 69 69/var(--tw-text-opacity));
+    font-size: .8125rem;
+    margin-top: 0.25rem;
+}
+
+/* 비밀번호 찾기 버튼 부분 */
+.password-find {
+    text-decoration-line: underline;
+    --tw-text-opacity: 1;
+    color: rgb(92 63 191/var(--tw-text-opacity));
+}
+
+/* 개인정보 관련 경고 메세지 */
+.warning-message {
+    --tw-text-opacity: 1;
+    color: rgb(135 141 145/var(--tw-text-opacity));
+    margin-top: 0.25rem;
+}
+
+/* 로그인 버튼 부분 */
+.login-button {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.5rem*(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.5rem*var(--tw-space-y-reverse));
+    --tw-border-opacity: 1;
+    border-color: rgb(92 63 191/var(--tw-border-opacity));
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255/var(--tw-text-opacity));
+    --tw-shadow: 0 1px 1px 0 rgba(0,0,0,.05);
+    --tw-shadow-colored: 0 1px 1px 0 var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
+    line-height: 1;
+    font-weight: 400;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    --tw-bg-opacity: 1;
+    background-color: rgb(92 63 191/var(--tw-bg-opacity));
+    border-width: 1px;
+    border-radius: 0.375rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+}
+
+.login-button:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(71 44 163/var(--tw-bg-opacity));
+}
+
+/* SNS 로그인 부분 */
+.sns-login-all-wrap {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(2rem*(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(2rem*var(--tw-space-y-reverse));
+}
+
+/* SNS 로그인 글씨 부분 */
+.sns-text-container {
+    font-size: .9375rem;
+}
+
+/* SNS 로그인 아이콘 부분 */
+.sns-icon-container {
+    justify-content: center;
+    flex-direction: row;
+    display: flex;
+    margin-top: 1rem;
+}
+
+.sns-icon {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.icon-margin {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1rem*var(--tw-space-x-reverse));
+    margin-left: calc(1rem*(1 - var(--tw-space-x-reverse)));
+}
+
+/* 구글 로그인 부분 */
+.google-button {
+    --tw-shadow: 0 1px 1px 0 rgba(0,0,0,.05);
+    --tw-shadow-colored: 0 1px 1px 0 var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
+    line-height: 1;
+    font-weight: 400;
+    padding: 0;
+    background-color: #FFFFFF;
+    border-color: #E1E4E6;
+    border-width: 1px;
+    border-radius: 9999px;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+}
+
+.google-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+    vertical-align: middle;
+}
+
+/* 네이버 로그인 부분 */
+.naver-button {
+    --tw-shadow: 0 1px 1px 0 rgba(0,0,0,.05);
+    --tw-shadow-colored: 0 1px 1px 0 var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
+    line-height: 1;
+    font-weight: 400;
+    padding: 0;
+    --tw-bg-opacity: 1;
+    background-color: rgb(3 199 90/var(--tw-bg-opacity));
+    border-style: none;
+    border-width: 1px;
+    border-radius: 9999px;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+}
+
+.naver-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* 카카오 로그인 부분 */
+.kakao-button {
+    --tw-shadow: 0 1px 1px 0 rgba(0,0,0,.05);
+    --tw-shadow-colored: 0 1px 1px 0 var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
+    line-height: 1;
+    font-weight: 400;
+    padding: 0;
+    --tw-bg-opacity: 1;
+    background-color: rgb(254 229 0/var(--tw-bg-opacity));
+    border-style: none;
+    border-width: 1px;
+    border-radius: 9999px;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+}
+
+.kakao-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* 회원가입 부분 */
+.sign-up-wrap {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(2rem*(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(2rem*var(--tw-space-y-reverse));
+    flex-direction: column;
+    display: flex;
+}
+
+/* 회원가입 버튼 */
+.sign-up {
+    outline-color: #5c3fbf;
+    --tw-shadow: 0 0 #0000;
+    --tw-shadow-colored: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
+    --tw-text-opacity: 1;
+    color: rgb(92 63 191/var(--tw-text-opacity));
+    line-height: 1;
+    font-weight: 400;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255/var(--tw-bg-opacity));
+    --tw-border-opacity: 1;
+    border-color: rgb(92 63 191/var(--tw-border-opacity));
+    border-width: 1px;
+    border-radius: 0.375rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+}
+
+.sign-up:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(245 242 255/var(--tw-bg-opacity));
+}
+
+.sign-up-container:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(245 242 255/var(--tw-bg-opacity));
+}
+
+/* 구분선 */
+.line-container {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.5rem*(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.5rem*var(--tw-space-y-reverse));
+    align-items: center;
+    display: flex;
+}
+
+.line {
+    border-top-width: 1px;
+    flex: 1 1 0%;
+}
+
+/* 비회원 신청조회 */
+.nonmember-container {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.5rem*(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.5rem*var(--tw-space-y-reverse));
+    text-align: center;
+}
+
+.nonmember {
+    --tw-text-opacity: 1;
+    color: rgb(135 141 145/var(--tw-text-opacity));
+    font-size: .9375rem;
+}
+
+.nonmember:hover {
+    --tw-text-opacity: 1;
+    color: rgb(77 82 86/var(--tw-text-opacity));
+}
+
+.width-full {
+    width: 100%;
 }
