@@ -139,6 +139,26 @@ button, select {
     text-transform: none;
 }
 
+[multiple]:focus, [type=date]:focus, [type=datetime-local]:focus, [type=email]:focus, [type=month]:focus, [type=number]:focus, [type=password]:focus, [type=search]:focus, [type=tel]:focus, [type=text]:focus, [type=time]:focus, [type=url]:focus, [type=week]:focus, select:focus, textarea:focus {
+    --tw-border-opacity: 1;
+    border-color: #CE201B;
+    --tw-ring-opacity: 1;
+    --tw-ring-color: #CE201B;
+}
+
+[multiple]:focus, [type=date]:focus, [type=datetime-local]:focus, [type=email]:focus, [type=month]:focus, [type=number]:focus, [type=password]:focus, [type=search]:focus, [type=tel]:focus, [type=text]:focus, [type=time]:focus, [type=url]:focus, [type=week]:focus, select:focus, textarea:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    --tw-ring-inset: var(--tw-empty, /*!*/ /*!*/);
+    --tw-ring-offset-width: 0px;
+    --tw-ring-offset-color: #fff;
+    --tw-ring-color: #CE201B;
+    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+    box-shadow: var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow);
+    border-color: #CE201B;
+}
+
 *, :after, :before {
     --tw-border-spacing-x: 0;
     --tw-border-spacing-y: 0;
@@ -289,6 +309,15 @@ button, select {
     background-color: rgb(248 250 251/var(--tw-bg-opacity));
 }
 
+.id-input-container:active {
+    opacity: .8;
+}
+
+.id-input-container:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}  
+
 .id-input-style {
     display: none;
     --tw-space-y-reverse: 0;
@@ -303,8 +332,7 @@ button, select {
 .id-input-bottom {
     --tw-space-y-reverse: 0;
     margin-bottom: calc(0.625rem*var(--tw-space-y-reverse));
-    --tw-text-opacity: 1;
-    color: rgb(191 69 69/var(--tw-text-opacity));
+    color: #CE201B;
     margin-top: 0.5rem!important;
 }
 
@@ -366,12 +394,14 @@ button, select {
 }
 
 .password-input-bottom {
-    display: none;
     --tw-space-y-reverse: 0;
     margin-bottom: calc(0.625rem*var(--tw-space-y-reverse));
-    --tw-text-opacity: 1;
-    color: rgb(191 69 69/var(--tw-text-opacity));
+    color: #CE201B;
     margin-top: 0.5rem!important;
+}
+
+.not-input {
+    border-color: #CE201B;
 }
 
 /* 로그인 실패 시 문구 출력 부분 */
@@ -406,9 +436,31 @@ button, select {
     display: flex;
 }
 
-.keep-checkbox:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(248 250 251/var(--tw-bg-opacity));
+.keep-checkbox:checked:hover {
+    border-color: transparent;
+    background-color: #CE201B;
+}
+
+.keep-checkbox:focus {
+    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+    box-shadow: var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow, 0 0 #0000);
+    --tw-ring-color: #CE201B;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    --tw-ring-inset: var(--tw-empty, /*!*/ /*!*/);
+    --tw-ring-offset-width: 2px;
+    --tw-ring-offset-color: #fff;
+}
+
+.keep-checkbox:checked {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.207 4.793a1 1 0 0 1 0 1.414l-5 5a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L6.5 9.086l4.293-4.293a1 1 0 0 1 1.414 0z'/%3E%3C/svg%3E");
+    border-color: #CE201B;
+    background-color: #CE201B;
+    background-size: 100% 100%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    
 }
 
 .keep-text {
@@ -431,6 +483,10 @@ button, select {
 .password-find {
     text-decoration-line: underline;
     color: #CE201B;
+}
+
+.password-find:hover {
+    color: #9F0D08;
 }
 
 /* 개인정보 관련 경고 메세지 */
@@ -467,6 +523,16 @@ button, select {
 
 .login-button:hover {
     background-color: #9F0D08;
+}
+
+.login-button.disabled {
+    border-color: #E5E5E5;
+    background-color: #E5E5E5;
+}
+
+.login-button.disabled:hover {
+    border-color: #a3a3a3;
+    background-color: #a3a3a3;
 }
 
 /* SNS 로그인 부분 */
@@ -612,40 +678,3 @@ button, select {
 .sign-up:hover {
     background-color: #FFF0EE;
 }
-
-/* 구분선 */
-/* .line-container {
-    --tw-space-y-reverse: 0;
-    margin-top: calc(1.5rem*(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(1.5rem*var(--tw-space-y-reverse));
-    align-items: center;
-    display: flex;
-}
-
-.line {
-    border-top-width: 1px;
-    flex: 1 1 0%;
-} */
-
-/* 비회원 신청조회 */
-/* .nonmember-container {
-    --tw-space-y-reverse: 0;
-    margin-top: calc(1.5rem*(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(1.5rem*var(--tw-space-y-reverse));
-    text-align: center;
-}
-
-.nonmember {
-    --tw-text-opacity: 1;
-    color: rgb(135 141 145/var(--tw-text-opacity));
-    font-size: .9375rem;
-}
-
-.nonmember:hover {
-    --tw-text-opacity: 1;
-    color: rgb(77 82 86/var(--tw-text-opacity));
-}
-
-.width-full {
-    width: 100%;
-} */

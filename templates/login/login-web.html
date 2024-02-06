@@ -39,7 +39,9 @@
                                                     </div>
                                                     <input class="id-input-container" id="email" tabindex="1" autocomplete="off" type="email">
                                                     <div class="id-input-style"></div>
-                                                    <div class="id-input-bottom"></div>
+                                                    <div class="id-input-bottom hidden">
+                                                        <div class="id-input-error">항목을 입력하세요</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <!-- 비밀번호 입력 부분 -->
@@ -52,7 +54,9 @@
                                                     </div>
                                                     <input class="password-input-container" id="password" tabindex="2" autocomplete="off" type="password">
                                                     <div class="password-input-style"></div>
-                                                    <div class="password-input-bottom"></div>
+                                                    <div class="password-input-bottom hidden">
+                                                        <div class="password-input-error">항목을 입력하세요</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <!-- 로그인 실패 시 문구 출력 부분 -->
@@ -87,7 +91,7 @@
                                                 </div>
                                             </div>
                                             <!-- 로그인 버튼 부분 -->
-                                            <button class="login-button" type="submit">
+                                            <button class="login-button disabled" type="button">
                                                 <span>로그인</span>
                                             </button>
                                         </div>
@@ -138,16 +142,6 @@
                                     <a class="sign-up" href="https://event-us.kr/account/usersignup">
                                         <span>회원가입</span>
                                     </a>
-                                    <!-- 구분선 -->
-                                    <!-- <div class="line-container">
-                                        <div class="line"></div>
-                                    </div> -->
-                                    <!-- 비회원 신청조회 -->
-                                    <!-- <div class="nonmember-container">
-                                        <a class="nonmember" href="https://event-us.kr/account/nonmemberconfirm">
-                                            <span>비회원 신청조회 ></span>
-                                        </a>
-                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -157,5 +151,5 @@
             <div class="width-full"></div>
         </div>
     </body>
-    <script src="/staticfiles/js/login/login-web.js"></script>
+    <script src="/staticfiles/js/login/login.js"></script>
 </html>
