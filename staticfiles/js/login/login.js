@@ -8,7 +8,7 @@ const idInputError = document.querySelector(".id-input-bottom");
 const passwordInputBox =document.querySelector(".password-input-container");
 const passwordInputError =document.querySelector(".password-input-bottom");
 
-// 예시를 위해 빈칸만 비교해(버튼클릭 시 오류 메세지 출력)
+// (예시)버튼 클릭 시 오류 메세지 출력
 loginButton.addEventListener("click", () => {
     idInputError.classList.remove("hidden");
     passwordInputError.classList.remove("hidden");
