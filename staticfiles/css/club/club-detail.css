@@ -197,6 +197,7 @@ button, input, optgroup, select, textarea {
     margin-top: 5rem;
 }
 
+
 .club-top-button-container {
     font-size: .8125rem;
     padding-top: 1.5rem;
@@ -230,6 +231,35 @@ button, input, optgroup, select, textarea {
 .club-top-button:hover {
     --tw-bg-opacity: 1;
     background-color: rgb(248 250 251/var(--tw-bg-opacity));
+}
+
+.club-top-button.apply {
+    background-color: #CE201B;
+    --tw-bg-opacity: 1;
+    color: rgb(255 255 255/var(--tw-bg-opacity));
+}
+
+.club-top-button.apply:hover {
+    background-color: #9F0D08;
+}
+
+.club-top-button.cancel {
+    --tw-bg-opacity: 1;
+    background-color: rgb(225 225 225/var(--tw-bg-opacity));
+}
+
+.club-top-button.cancel:hover {
+    background-color: rgb(186, 184, 184);
+}
+
+.club-top-button.quit {
+    color: rgb(90 90 90)
+}
+
+.club-top-button-boxes {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0.5rem*var(--tw-space-x-reverse));
+    margin-left: calc(0.5rem*(1 - var(--tw-space-x-reverse)));
 }
 
 .club-share-icon {

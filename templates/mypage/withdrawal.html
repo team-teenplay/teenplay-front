@@ -7,7 +7,7 @@
         <link rel="shortcut icon" href="/staticfiles/images/teenplay_logo/logo1.png" type="image/x-icon" />
         <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet" />
         <link rel="stylesheet" href="/staticfiles/css/mypage/withdrawal.css" />
-        <link href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css" rel="stylesheet" type="text/css" />
+        <link href="https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css" rel="stylesheet" type="text/css" />
     </head>
     <body style="position: relative; min-height: 100%; top: 0px">
         <!-- 헤더 부분 -->
@@ -114,7 +114,9 @@
                                 <div class="announcement-agree">
                                     <input type="checkbox" id="agreeCheck" name="agreeCheck" />
                                     <label for="agreeCheck">안내 사항을 모두 확인하였으며,이에 동의합니다. </label>
-                                    <div class="error-box"></div>
+                                    <div class="error-box">
+                                        <div id="agree-check-error" class="error">동의에 체크해주세요</div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="withdrawal-reason-select">
@@ -131,7 +133,9 @@
                                             <option value="기타">기타</option>
                                         </select>
                                     </div>
-                                    <div class="error-box"></div>
+                                    <div class="error-box">
+                                        <div id="agree-check-error" class="error">동의에 체크해주세요</div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="reason-wirte-box">
