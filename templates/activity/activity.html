@@ -48,49 +48,39 @@
                                                 <div class="date-container">
                                                     <div class="date-box">
                                                         <input class="radio-everyday" id="ev-radio-98" type="radio" value="모든날" checked="true" />
-                                                        <label class="cursor-point-day" for="ev-radio-98">
-                                                            <span>모든날</span>
-                                                        </label>
+                                                        <label class="cursor-point-day" for="ev-radio-98"> 모든날 </label>
                                                     </div>
                                                     <div class="text-display-none-day">이 항목은 필수입니다.</div>
                                                 </div>
                                                 <div class="date-container" style="margin-top: 8px">
                                                     <div class="date-box">
                                                         <input class="radio-everyday" id="ev-radio-99" type="radio" value="오늘" />
-                                                        <label class="cursor-point-day" for="ev-radio-99">
-                                                            <span>오늘</span>
-                                                        </label>
+                                                        <label class="cursor-point-day" for="ev-radio-99"> 오늘 </label>
                                                     </div>
                                                     <div class="text-display-none-day">이 항목은 필수입니다.</div>
                                                 </div>
                                                 <div class="date-container" style="margin-top: 8px">
                                                     <div class="date-box">
                                                         <input class="radio-everyday" id="ev-radio-100" type="radio" value="이번주" />
-                                                        <label class="cursor-point-day" for="ev-radio-100">
-                                                            <span>이번주</span>
-                                                        </label>
+                                                        <label class="cursor-point-day" for="ev-radio-100"> 이번주 </label>
                                                     </div>
                                                     <div class="text-display-none-day">이 항목은 필수입니다.</div>
                                                 </div>
                                                 <div class="date-container" style="margin-top: 8px">
                                                     <div class="date-box">
                                                         <input class="radio-everyday" id="ev-radio-101" type="radio" value="이번달" />
-                                                        <label class="cursor-point-day" for="ev-radio-101">
-                                                            <span>이번달</span>
-                                                        </label>
+                                                        <label class="cursor-point-day" for="ev-radio-101"> 이번달 </label>
                                                     </div>
                                                     <div class="text-display-none-day">이 항목은 필수입니다.</div>
                                                 </div>
                                                 <div class="date-container" style="margin-top: 8px">
                                                     <div class="date-box">
                                                         <input class="radio-everyday" id="ev-radio-102" type="radio" value="기간선택" />
-                                                        <label class="cursor-point-day" for="ev-radio-102">
-                                                            <span>기간선택</span>
-                                                        </label>
+                                                        <label class="cursor-point-day" for="ev-radio-102"> 기간선택 </label>
                                                     </div>
                                                     <div class="text-display-none-day">이 항목은 필수입니다.</div>
                                                 </div>
-                                                <div class="date-display-none">
+                                                <div class="date-display-none" id="date-display-none">
                                                     <div class="date-relative-full">
                                                         <label class="relative-block">
                                                             <input type="text" class="relative-date" placeholder="기간을 선택하세요" />
@@ -132,9 +122,7 @@
                                                     <div class="end-date-box">
                                                         <div class="end-date-tie">
                                                             <input class="end-date-chk" id="ev-checkbox-104" ture-value="true" false-value="false" type="checkbox" value="true" />
-                                                            <label class="end-text-box" for="ev-checkbox-104">
-                                                                <span>모집 종료 행사</span>
-                                                            </label>
+                                                            <label class="end-text-box" for="ev-checkbox-104" value="모집 종료 행사"> 모집 종료 행사 </label>
                                                         </div>
                                                     </div>
                                                     <div class="end-text-gray" style="margin-left: 24px">
@@ -168,7 +156,7 @@
                                                     <div class="activity-tie">
                                                         <div class="activity-center">
                                                             <input class="activity-chk" id="ev-checkbox-105" ture-value="true" false-value="false" type="checkbox" value="true" />
-                                                            <label class="activity-box-text" for="ev-checkbox-105"> 창업 </label>
+                                                            <label class="activity-box-text" for="ev-checkbox-105" value="창업"> 창업 </label>
                                                         </div>
                                                     </div>
                                                     <div class="text-display-none-activity">이 항목은 필수입니다.</div>
@@ -389,9 +377,7 @@
                                     <div class="right-text-box">
                                         <div class="right-text-tie">
                                             <button class="best-text-btn" type="button" name="selected-recommend-btn">
-                                                <span class="font-bold-choice">
-                                                    <span>추천순</span>
-                                                </span>
+                                                <span class="filter-span font-bold-choice"> 추천순 </span>
                                                 <div class="best-icon">
                                                     <svg xmlns="http://www.w3.org/2000/svg" class="best-icon-radio" viewBox="0 0 20 20" fill="currentColor">
                                                         <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
@@ -406,10 +392,10 @@
                                                 </div>
                                             </button>
                                             <button class="new-btn" type="button" name="selected-recommend-btn">
-                                                <span>새 행사순</span>
+                                                <span class="filter-span">새 행사순</span>
                                             </button>
                                             <button class="activity-sort-end" type="button" name="selected-recommend-btn">
-                                                <span>모집 마감일순</span>
+                                                <span class="filter-span">모집 마감일순</span>
                                             </button>
                                         </div>
                                         <button class="hidden-right-btn" type="button">
@@ -423,19 +409,19 @@
                                     </div>
                                 </div>
                                 <!-- 검색 필터 none 인 경우 -->
-                                <div class="hidden-filter-container" style="display: none"></div>
-                                <!-- 검색 필터 사용되는 경우 
-                                <div class="hidden-filter-container">
+                                <div class="hidden-filter-container-default"></div>
+                                <!-- 검색 필터 사용되는 경우  -->
+                                <div class="hidden-filter-container-check" id="hidden-filter-container-check">
                                     <div class="find-filter-bg">
-                                        오늘
+                                        <div id="date-text">오늘</div>
                                         <button class="find-filter-exit">
-                                            <svg class="exit-icon-button" viewBox="0 0 20 20" fill="currentColor">
+                                            <svg class="exit-icon-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" id="exit-icon-button">
                                                 <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                                             </svg>
                                         </button>
                                     </div>
                                 </div>
-                                -->
+
                                 <div class="activity-find-all">
                                     <div class="activity-window-bg">
                                         <div class="activity-window">
@@ -1409,49 +1395,11 @@
     </body>
 
     <!-- footer -->
-    <script src="/staticfiles/css/activity/activity.js"></script>
-    <script></script>
-    <!-- <script>
-        const rSpan = document.querySelectorAll(".font-bold-choice");
-        const fSpan = document.getElementsByClassName("font-bold-choice-non-f");
-        const sSpan = document.getElementsByClassName("font-bold-choice-non-s");
-        rSpan.forEach((elementSpan) => {
-            console.log(getElementsByClassName(elementSpan));
-        });
-        console.log(fSpan);
-        console.log(sSpan);
-
-        document.addEventListener("click", function (e) {
-            // 클릭한 요소의 클래스 이름 가져오기
-            let clickedElement = e.target;
-            let className = clickedElement.className;
-
-            console.log(className);
-        });
-
-        // const rightTextTie = document.querySelectorAll(".right-text-tie");
-
-        // rightTextTie.forEach((element) => {
-        //     const spansInElement = element.querySelectorAll("span");
-
-        //     spansInElement.forEach((span, i) => {
-        //         span.addEventListener("click", () => {
-        //             console.log(span);
-        //             if (i == 2 && span.className != "font-bold-choice") {
-        //                 span.classList.add("font-bold-choice");
-        //             } else if (i == 0 || i == 1 || i == 2) {
-        //                 span.classList.remove("font-bold-choice");
-        //             }
-
-        //             // if (i == 3 && span.className != "font-bold-choice") {
-        //             //     // span.classList.add("font-bold-choice");
-        //             // }
-        //         });
-
-        //         // logicSpan = getComputedStyle(span);
-        //         // console.log(logicSpan.fontWeight);
-        //     });
-        // });
-    </script> -->
-    <script></script>
+    <script src="/staticfiles/js/activity/activity.js"></script>
+    <script>
+        // 1. input > label 항목 값을 가져와야함.input
+        // >> e.target 을 이용하여 label을 가져와볼것
+        // 2. labal 항목을 `` 을 이용해서 특정 div 뒤쪽에 추가
+        // 3. x버튼 클릭시 해당 value 같은 걸 찾아서 체크 박스를 해제 해야함
+    </script>
 </html>
