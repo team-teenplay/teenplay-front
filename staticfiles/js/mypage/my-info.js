@@ -47,3 +47,20 @@ const birthYear = document.querySelector(".birth-year");
 for (let i = 0; 100 >= i; i++) {
     birthYear.innerHTML += `<option value="${2010 - i}">${2010 - i}</option>`;
 }
+
+//저장하기 버튼 클릭 시 모달 나타나는 이벤트
+const saveModalWrap = document.querySelector(".save-modal-wrap");
+const saveBtn = document.querySelector(".save-btn");
+
+saveBtn.addEventListener("click", () => {
+    saveModalWrap.style.display = "block";
+});
+
+// 저장하기 모달 내의 버튼 클릭 시 모달창 끄는 이벤트
+const modalBtns = document.querySelectorAll(".modal-btn-box button");
+
+modalBtns.forEach((modalBtn) => {
+    modalBtn.addEventListener("click", () => {
+        saveModalWrap.style.display = "none";
+    });
+});
