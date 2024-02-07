@@ -209,12 +209,11 @@
                             </div>
                             <div class="main-user-status">
                                 <!-- 여기에 넣으면 추가할수있습니다(가로넓이 width만 수정)) -->
-                                <div class="main-user-status-name">작성자</div>
-                                <div class="main-user-status-date">생성일</div>
-                                <div class="main-user-status-pay">제목</div>
-                                <div class="main-user-status-recent">
-                                    좋아요
-                                </div>
+                                <div class="main-user-status-name">제목</div>
+                                <div class="main-user-status-date">작성자</div>
+                                <div class="main-user-status-pay">작성날짜</div>
+                                <div class="main-user-status-like">좋아요</div>
+                                <div class="main-user-status-recent">댓글</div>
                                 <div class="main-user-status-paycount">
                                     수정하기
                                 </div>
@@ -224,16 +223,17 @@
                             </div>
                         </div>
                         <li class="main-user-list" data-id="1">
-                            <div class="main-user-list-name">조관익</div>
-                            <div class="main-user-list-status">23.02.01</div>
-                            <div class="main-user-list-date">슬릭백</div>
-                            <div class="main-user-list-pay">0</div>
+                            <div class="main-user-list-name">슬릭백</div>
+                            <div class="main-user-list-status">조관익</div>
+                            <div class="main-user-list-date">23.02.07</div>
+                            <div class="main-user-list-like">1</div>
+                            <div class="main-user-list-pay">1</div>
                             <div class="main-user-list-detail">
                                 <button
                                     class="member-user-list-detail-button toggle-button"
                                     data-target="1"
                                 >
-                                    상세보기
+                                    수정하기
                                 </button>
                             </div>
                             <div class="main-user-list-ston">
@@ -246,18 +246,19 @@
                             </div>
                         </li>
                         <li class="main-user-list" data-id="2">
-                            <div class="main-user-list-name">김상진</div>
-                            <div class="main-user-list-status">23.12.01</div>
-                            <div class="main-user-list-date">
+                            <div class="main-user-list-name">
                                 린가드 서울 입갤
                             </div>
-                            <div class="main-user-list-pay">10</div>
+                            <div class="main-user-list-status">김우중</div>
+                            <div class="main-user-list-date">23.02.02</div>
+                            <div class="main-user-list-like">14</div>
+                            <div class="main-user-list-pay">32</div>
                             <div class="main-user-list-detail">
                                 <button
                                     class="member-user-list-detail-button toggle-button"
                                     data-target="2"
                                 >
-                                    상세보기
+                                    수정하기
                                 </button>
                             </div>
                             <div class="main-user-list-ston">
@@ -296,7 +297,7 @@
             </div>
             <!-- 수정 모달창 -->
             <div id="admin-post-modal" class="hidden">
-                <h4 class="admin-post-modal-title">홍보글 수정</h4>
+                <h4 class="admin-post-modal-title">틴플레이 수정</h4>
                 <div class="admin-post-modal-warp">
                     <!-- 여기서부터 안에 들어가는거 하나씩 / 각각 빈 div하나 만들고 안에서 생성 -->
                     <div class="titleqq">
@@ -311,31 +312,21 @@
                         </label>
                     </div>
                     <div>
-                        <p class="admin-post-modal-content-name">내용</p>
-                        <label class="admin-post-modal-content-label">
-                            <textarea
-                                class="admin-post-modal-content-input"
-                                placeholder="내용을 입력해주세요."
-                                value
-                            ></textarea>
-                        </label>
-                    </div>
-                    <div>
-                        <p class="admin-post-modal-thumbnail-name">썸네일</p>
+                        <p class="admin-post-modal-thumbnail-name">영상</p>
                         <div class="admin-post-modal-thumbnail-warp">
                             <div class="admin-post-modal-thumbnail-container">
-                                <img
+                                <video
                                     id="main-post-photo-img"
                                     class="admin-post-modal-thumbnail-img"
                                     src="/staticfiles/images/main/festival-img03.jpg"
                                     alt=""
-                                />
+                                ></video>
                             </div>
                             <div class="admin-post-modal-thumbnail-button">
                                 <button
                                     class="admin-post-modal-thumbnail-button-insert"
                                 >
-                                    이미지 업로드
+                                    영상 업로드
                                     <label
                                         class="admin-post-modal-thumbnail-label"
                                     >
@@ -349,45 +340,10 @@
                                 </button>
                             </div>
                             <p class="admin-post-modal-thumbnail-info">
-                                <span
-                                    >파일 형식은 jpg 또는 png로올려주세요</span
-                                >
+                                <span>파일 형식은 ***로올려주세요</span>
                             </p>
                         </div>
                         <!-- 여기아래에 안내문 적어주기 -->
-                    </div>
-                    <div>
-                        <p class="admin-post-modal-place-name">장소</p>
-                        <label class="admin-post-modal-place-label">
-                            <input
-                                type="text"
-                                class="admin-post-modal-place-input"
-                                placeholder="장소를 입력해주세요."
-                                value
-                            />
-                        </label>
-                    </div>
-                    <div>
-                        <p class="admin-post-modal-time-name">일시</p>
-                        <label class="admin-post-modal-time-label">
-                            <input
-                                type="text"
-                                class="admin-post-modal-time-input"
-                                placeholder="일시를 입력해주세요."
-                                value
-                            />
-                        </label>
-                    </div>
-                    <div>
-                        <p class="admin-post-modal-pay-name">비용</p>
-                        <label class="admin-post-modal-pay-label">
-                            <input
-                                type="text"
-                                class="admin-post-modal-pay-input"
-                                placeholder="비용을 입력해주세요."
-                                value
-                            />
-                        </label>
                     </div>
                 </div>
                 <!-- 버튼 아래 있는것들 -->

@@ -680,6 +680,19 @@ color: #9ca3af;
     fill: #1d1d1e;
 }
 
+.main-user-status-like{
+
+    justify-content: flex-end;
+    align-items: center;
+    flex-shrink: 0;
+    display: flex;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    color: #1d1d1e;
+    fill: #1d1d1e;
+}
+
 .main-user-status-recent{
 
     justify-content: flex-end;
@@ -744,7 +757,7 @@ color: #9ca3af;
 }
 
 .main-user-list-name{
-    width: 145px;
+    width: 112px;
     justify-content: flex-start;
     align-items: center;
     flex-shrink: 0;
@@ -758,7 +771,7 @@ color: #9ca3af;
 }
 
 .main-user-list-status{
-    width: 150px;
+    width: 122px;
     justify-content: flex-start;
     align-items: center;
     flex-shrink: 0;
@@ -771,7 +784,7 @@ color: #9ca3af;
 }
 
 .main-user-list-date{
-    width: 160px;
+    width: 137px;
     justify-content: flex-start;
     align-items: center;
     flex-shrink: 0;
@@ -784,6 +797,19 @@ color: #9ca3af;
 }
 
 .main-user-list-pay{
+    width: 90px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-shrink: 0;
+    display: flex;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    color: #1d1d1e;
+    fill: #1d1d1e;
+}
+
+.main-user-list-like{
     width: 125px;
     justify-content: flex-start;
     align-items: center;
@@ -805,7 +831,7 @@ color: #9ca3af;
 }
 
 .main-user-list-detail{
-    margin-right: 73px;
+    margin-right: 40px;
     align-items: center;
     display: flex;
 }
