@@ -366,6 +366,38 @@ button, input, optgroup, select, textarea {
     min-width: fit-content;
 }
 
+.club-detail-filter-teenplay {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1rem*var(--tw-space-x-reverse));
+    margin-left: calc(1rem*(1 - var(--tw-space-x-reverse)));
+    min-width: fit-content;
+}
+
+.club-detail-filter-upload-wrap {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1rem*var(--tw-space-x-reverse));
+    margin-left: 0;
+    min-width: fit-content;
+    color: #CE201B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.club-detail-filter-upload-wrap:hover {
+    color: #9F0D08;
+}
+
+.club-detail-filter-upload {
+    padding: 0.5rem;
+    padding-top: 0.3rem;
+}
+
+.teenplay-upload-icon {
+    width: 17px;
+    height: 17px;
+}
+
 .club-detail-active-events {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -381,6 +413,26 @@ button, input, optgroup, select, textarea {
     --tw-space-y-reverse: 0;
     margin-top: calc(1rem*(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(1rem*var(--tw-space-y-reverse));
+}
+
+.club-detail-active-empty-wrap {
+    justify-content: center;
+    align-items: center;
+    height: 24rem;
+    display: flex;
+}
+
+.club-detail-active-empty-container {
+    --tw-text-opacity: 1;
+    color: rgb(135 141 145/var(--tw-text-opacity));
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.club-detail-active-empty {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
 }
 
 .club-detail-active-container {
@@ -533,6 +585,26 @@ button, input, optgroup, select, textarea {
     --tw-space-y-reverse: 0;
     margin-top: calc(1rem*(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(1rem*var(--tw-space-y-reverse));
+}
+
+.club-finished-events-empty-wrap {
+    justify-content: center;
+    align-items: center;
+    height: 24rem;
+    display: flex;
+}
+
+.club-finished-events-empty-container {
+    --tw-text-opacity: 1;
+    color: rgb(135 141 145/var(--tw-text-opacity));
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.club-finished-events-empty {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
 }
 
 .finished-events-container {
@@ -694,6 +766,126 @@ button, input, optgroup, select, textarea {
     height: 1.25rem;
 }
 
+/* .club-teenplay-contents-wrap {
+    display: flex;
+} */
+
+.club-teenplay-contents-container {
+    flex: 1;
+    flex-basis: 1e-9px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.club-teenplay-contents-boxes {
+    touch-action: pan-y;
+    min-height: calc(100vh - 120px);
+    width: 1284px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex: none;
+    margin-bottom: 16px;
+}
+
+.club-teenplay-contents-box {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+}
+
+.club-teenplay-thumbnail-wrap {
+    background-color: rgba(0,0,0,0.05);
+    overflow: hidden;
+    display: block;
+    border-radius: 12px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.club-teenplay-thumbnail {
+    background-color: transparent;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    visibility: inherit;
+    display: inline-block;
+    min-height: 1px;
+    min-width: 1px;
+    transition-property: translate, color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .5s;
+}
+
+.club-teenplay-thumbnail:hover {
+    --tw-scale-x: 1.1;
+    --tw-scale-y: 1.1;
+    transform: translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.club-teenplay-details {
+    margin: 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.club-teenplay-title-wrap {
+    color: #0f0f0f;
+    padding: 5px 0 0 0;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.club-teenplay-title-link {
+    overflow-x: hidden;
+    max-width: 100%;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.club-teenplay-title {
+    font-size: 16px;
+    line-height: 1.5rem;
+    font-weight: 500;
+    overflow: hidden;
+    max-height: 4rem;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+.club-teenplay-views-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.club-teenplay-views-container {
+    font-size: 15px;
+    line-height: 2rem;
+    font-weight: 400;
+    overflow: hidden;
+    max-height: 4rem;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    white-space: normal;
+    display: flex;
+    color: #606060;
+    max-width: 100%;
+    flex-wrap: wrap;
+    position: relative;
+    top: -10px;
+}
+
+.club-teenplay-views {
+    display: inline-block;
+}
+
 .club-contact-wrap {
     --tw-space-y-reverse: 0;
     margin-top: calc(1.5rem*(1 - var(--tw-space-y-reverse)));
@@ -746,23 +938,65 @@ button, input, optgroup, select, textarea {
     padding-bottom: 2rem;
 }
 
+.club-info-empty-wrap {
+    justify-content: center;
+    align-items: center;
+    height: 24rem;
+    display: flex;
+}
+
+.club-info-empty-container {
+    --tw-text-opacity: 1;
+    color: rgb(135 141 145/var(--tw-text-opacity));
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.club-info-empty {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
 .club-info-container {
     overflow: hidden;
     white-space: pre-line !important;
     word-break: break-word;
 }
 
-.club-info-boxes {
+.club-info-texts {
     white-space: pre-line !important;
     word-break: break-word;
 }
 
-.club-info-box {
-    margin: 0;
-    padding: 0;
-    white-space: pre-line !important;
-    word-break: break-word;
-    display: block;
+.club-teenplay {
+    display: none;
+}
+
+.club-teenplay-wrap {
+    min-height: 24rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.club-teenplay-empty-wrap {
+    justify-content: center;
+    align-items: center;
+    height: 24rem;
+    display: flex;
+}
+
+.club-teenplay-empty-container {
+    --tw-text-opacity: 1;
+    color: rgb(135 141 145/var(--tw-text-opacity));
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.club-teenplay-empty {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
 }
 
 .club-modal-wrap {
@@ -847,3 +1081,4 @@ button, input, optgroup, select, textarea {
 .club-modal-like-wrap.unlike {
     display: none;
 }
+

@@ -38,11 +38,7 @@ moreBtn.addEventListener("click", () => {
     // 남은 개수가 8개 이하라면 이번 클릭에서 더보기 버튼이 없어져야 한다.
     if (finishedActivities.length - currentShownCount <= 8) {
         moreBtn.style.display = "none";
-        for (
-            let i = currentShownCount - 1;
-            i < finishedActivities.length;
-            i++
-        ) {
+        for (let i = currentShownCount - 1; i < finishedActivities.length; i++) {
             finishedActivities[i].style.display = "block";
         }
     }
@@ -51,51 +47,74 @@ moreBtn.addEventListener("click", () => {
         for (let i = currentShownCount - 1; i < currentShownCount + 8; i++) {
             finishedActivities[i].style.display = "block";
         }
-        moreCount.innerText = `(${currentShownCount + 8}/${
-            finishedActivities.length
-        })`;
+        moreCount.innerText = `(${currentShownCount + 8}/${finishedActivities.length})`;
     }
 });
 
 // 탭 클릭 시 활성화되는 탭 변경,
 // 그리고 아래 표시되는 내용 싹 다 변경
 const activityFilterWrap = document.querySelector(".club-detail-filter-event");
-const activityFilterBtn = document.querySelector(
-    ".club-detail-filter-event .club-detail-filter-button"
-);
+const activityFilterBtn = document.querySelector(".club-detail-filter-event .club-detail-filter-button");
 const infoFilterWrap = document.querySelector(".club-detail-filter-info");
-const infoFilterBtn = document.querySelector(
-    ".club-detail-filter-info .club-detail-filter-button"
-);
-const activityContent = document.querySelector(
-    "div.club-detail-desc-container"
-);
+const infoFilterBtn = document.querySelector(".club-detail-filter-info .club-detail-filter-button");
+const tpFilterWrap = document.querySelector(".club-detail-filter-teenplay");
+const tpFilterBtn = document.querySelector(".club-detail-filter-teenplay button");
+const activityContent = document.querySelector("div.club-detail-desc-container");
 const infoContent = document.querySelector(".club-info");
+const tpContent = document.querySelector(".club-teenplay");
 
 activityFilterBtn.addEventListener("click", () => {
     infoFilterWrap.style.border = "none";
+    tpFilterWrap.style.border = "none";
     if (!infoFilterBtn.classList.contains("off")) {
         infoFilterBtn.classList.add("off");
     }
     if (activityFilterBtn.classList.contains("off")) {
         activityFilterBtn.classList.remove("off");
     }
+    if (!tpFilterBtn.classList.contains("off")) {
+        tpFilterBtn.classList.add("off");
+    }
     activityFilterWrap.style.borderBottom = "2px solid #CE201B";
     activityContent.style.display = "block";
     infoContent.style.display = "none";
+    tpContent.style.display = "none";
 });
 
 infoFilterBtn.addEventListener("click", () => {
     activityFilterWrap.style.border = "none";
+    tpFilterWrap.style.border = "none";
     if (!activityFilterBtn.classList.contains("off")) {
         activityFilterBtn.classList.add("off");
     }
     if (infoFilterBtn.classList.contains("off")) {
         infoFilterBtn.classList.remove("off");
     }
+    if (!tpFilterBtn.classList.contains("off")) {
+        tpFilterBtn.classList.add("off");
+    }
     infoFilterWrap.style.borderBottom = "2px solid #CE201B";
-    activityContent.style.display = "none";
     infoContent.style.display = "block";
+    activityContent.style.display = "none";
+    tpContent.style.display = "none";
+});
+
+tpFilterBtn.addEventListener("click", () => {
+    activityFilterWrap.style.border = "none";
+    infoFilterWrap.style.border = "none";
+    if (!activityFilterBtn.classList.contains("off")) {
+        activityFilterBtn.classList.add("off");
+    }
+    if (!infoFilterBtn.classList.contains("off")) {
+        infoFilterBtn.classList.add("off");
+    }
+    if (tpFilterBtn.classList.contains("off")) {
+        tpFilterBtn.classList.remove("off");
+    }
+    tpFilterWrap.style.borderBottom = "2px solid #CE201B";
+    tpContent.style.display = "block";
+    activityContent.style.display = "none";
+    infoContent.style.display = "none";
 });
 
 // 공유하기 버튼 클릭 시 모달창으로 클립보드에 url 복사
@@ -107,11 +126,7 @@ function clipCopy() {
     dummy.select();
     document.execCommand("copy");
     document.body.removeChild(dummy);
-    Swal.fire(
-        "URL 복사 완료",
-        "주소가 클립보드에 복사되었습니다. <br> 원하는 곳에 붙여넣기 해주세요.",
-        "success"
-    );
+    Swal.fire("URL 복사 완료", "주소가 클립보드에 복사되었습니다. <br> 원하는 곳에 붙여넣기 해주세요.", "success");
 }
 shareBtn.addEventListener("click", clipCopy);
 
@@ -168,22 +183,14 @@ quitBtn.addEventListener("click", () => {
 
 // 하트 아이콘 클릭 시 모달창 하트 이미지 변경, 모달창 출력
 const activeLikeBtns = document.querySelectorAll(".club-detail-like-button");
-const emptyHearts = document.querySelectorAll(
-    ".club-detail-like-button .club-detail-like-icon.empty"
-);
-const fullHearts = document.querySelectorAll(
-    ".club-detail-like-button .club-detail-like-icon.full"
-);
+const emptyHearts = document.querySelectorAll(".club-detail-like-button .club-detail-like-icon.empty");
+const fullHearts = document.querySelectorAll(".club-detail-like-button .club-detail-like-icon.full");
 // 전체 모달
 const modalWrap = document.querySelector(".club-modal-wrap");
 // 모달 중에서 관심 설정할 때 표시할 부분
-const modalLikeContainer = document.querySelector(
-    ".club-modal-like-wrap:not(.unlike)"
-);
+const modalLikeContainer = document.querySelector(".club-modal-like-wrap:not(.unlike)");
 // 모달 중에서 관심 해제할 때 표시할 부분
-const modalUnlikeContainer = document.querySelector(
-    ".club-modal-like-wrap.unlike"
-);
+const modalUnlikeContainer = document.querySelector(".club-modal-like-wrap.unlike");
 
 activeLikeBtns.forEach((button, i) => {
     button.addEventListener("click", () => {
@@ -203,12 +210,8 @@ activeLikeBtns.forEach((button, i) => {
 });
 
 const finishedLikeBtns = document.querySelectorAll(".finished-events-like-btn");
-const finishedEmptyHearts = document.querySelectorAll(
-    ".finished-events-like-btn .club-detail-like-icon.empty"
-);
-const finishedFullHearts = document.querySelectorAll(
-    ".finished-events-like-btn .club-detail-like-icon.full"
-);
+const finishedEmptyHearts = document.querySelectorAll(".finished-events-like-btn .club-detail-like-icon.empty");
+const finishedFullHearts = document.querySelectorAll(".finished-events-like-btn .club-detail-like-icon.full");
 finishedLikeBtns.forEach((button, i) => {
     button.addEventListener("click", () => {
         modalWrap.style.display = "block";
