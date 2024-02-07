@@ -122,6 +122,7 @@ radioCheck.forEach((radio) => {
     });
 });
 
+// 참여방법
 let joinCheck = document.querySelectorAll(".method-box .radio-everyday");
 
 joinCheck.forEach((join) => {
@@ -139,6 +140,7 @@ joinCheck.forEach((join) => {
     });
 });
 
+// 가격
 let payCheck = document.querySelectorAll(".method-box-pay .radio-everyday");
 
 payCheck.forEach((pay) => {
@@ -156,6 +158,7 @@ payCheck.forEach((pay) => {
     });
 });
 
+// 지역
 let blockLocation = document.querySelector(".block-location");
 blockLocation.addEventListener("change", (e) => {
     let locationTextRadio = document.querySelector(".find-filter-bg-location");
@@ -193,7 +196,10 @@ endDateTie.addEventListener("click", (e) => {
         if (!e.target.checked) {
             let values = e.target.value;
             let divToRemove = document.querySelector(".find-filter-bg-two[value='" + values + "']");
-            divToRemove.parentNode.removeChild(divToRemove);
+            if (divToRemove) {
+                divToRemove.remove();
+            }
+            // divToRemove.parentNode.removeChild(divToRemove);
             // 위에서 div 생성 시 id값으로 생성해 줬기 때문에 해당 id 값을 찾아서 div를 지워주면 된다
         }
     }
@@ -233,7 +239,10 @@ actCategoryCenter.forEach((actCategory) => {
             if (!e.target.checked) {
                 let values = e.target.value;
                 let divToRemove = document.querySelector(".find-filter-bg-three[value='" + values + "']");
-                divToRemove.parentNode.removeChild(divToRemove);
+                if (divToRemove) {
+                    divToRemove.remove();
+                }
+                // divToRemove.parentNode.removeChild(divToRemove);
                 // 위에서 div 생성 시 id값으로 생성해 줬기 때문에 해당 id 값을 찾아서 div를 지워주면 된다
             }
         }
@@ -242,7 +251,7 @@ actCategoryCenter.forEach((actCategory) => {
 
 let actCategoryCenterContent = document.querySelectorAll(".act-category-center");
 
-// > 행사우형 내부에 여러 카테고리 중 클릭이 가능한 부분이 있는지 확인을 위한 반복 구문 사용
+// > 행사유형 내부에 여러 카테고리 중 클릭이 가능한 부분이 있는지 확인을 위한 반복 구문 사용
 actCategoryCenterContent.forEach((actCategory) => {
     // > 해당 행사 구문에서 반복을 돌리던 중 check이벤트가 발생 시
     actCategory.addEventListener("click", (e) => {
@@ -272,7 +281,10 @@ actCategoryCenterContent.forEach((actCategory) => {
             if (!e.target.checked) {
                 let values = e.target.value;
                 let divToRemove = document.querySelector(".find-filter-bg-three[value='" + values + "']");
-                divToRemove.parentNode.removeChild(divToRemove);
+                if (divToRemove) {
+                    divToRemove.remove();
+                }
+                // divToRemove.parentNode.removeChild(divToRemove);
                 // 위에서 div 생성 시 id값으로 생성해 줬기 때문에 해당 id 값을 찾아서 div를 지워주면 된다
             }
         }
@@ -289,7 +301,6 @@ checkExit.addEventListener("click", (e) => {
             parentDiv.style.display = "none";
 
             document.querySelectorAll(".content-date .radio-everyday").forEach(function (otherRadio) {
-                console.log(otherRadio.id);
                 if (otherRadio.id == "ev-radio-98") {
                     otherRadio.checked = true;
                 } else {
@@ -307,7 +318,6 @@ checkExit.addEventListener("click", (e) => {
             parentDiv.style.display = "none";
 
             document.querySelectorAll(".content-method .radio-everyday").forEach(function (otherRadio) {
-                console.log(otherRadio.id);
                 if (otherRadio.id == "ev-radio-115") {
                     otherRadio.checked = true;
                 } else {
@@ -325,7 +335,6 @@ checkExit.addEventListener("click", (e) => {
             parentDiv.style.display = "none";
 
             document.querySelectorAll(".content-method-pay .radio-everyday").forEach(function (otherRadio) {
-                console.log(otherRadio.id);
                 if (otherRadio.id == "ev-radio-118") {
                     otherRadio.checked = true;
                 } else {
@@ -336,4 +345,281 @@ checkExit.addEventListener("click", (e) => {
     }
 });
 
-// 치크박스 선택 시 삭제되는 기능
+// 지역
+checkExit.addEventListener("click", (e) => {
+    if (e.target.classList.contains("exit-icon-button")) {
+        let parentDiv = e.target.closest(".find-filter-bg-location");
+        if (parentDiv) {
+            parentDiv.style.display = "none";
+            // 셀렉트 박스 요소를 가져옵니다.
+            const selectElement = document.querySelector(".block-location");
+
+            // 첫 번째 옵션을 기본(default) 값으로 선택합니다.
+            selectElement.selectedIndex = 0;
+        }
+    }
+});
+
+// 모집 종료 행사
+let endDateCheck = document.querySelectorAll(".filter-space .end-date-tie");
+endDateCheck.forEach((textCategoryValue) => {
+    document.addEventListener("click", (e) => {
+        let divTest = e.target.closest("div");
+        var checkedValue = divTest.getAttribute("value");
+        // check가 되어있는 것 중에 값이 값이 같은게 있으면 삭제
+        let chkBtn = document.querySelectorAll(".filter-space .end-date-tie .end-date-chk");
+        if (textCategoryValue.innerText == checkedValue) {
+            chkBtn.forEach((inputName) => {
+                let divToRemove = document.querySelector(".find-filter-bg-two[value='" + checkedValue + "']");
+                if (divToRemove) {
+                    divToRemove.remove();
+                }
+                if (inputName.getAttribute("value") == checkedValue) {
+                    inputName.checked = false;
+                }
+            });
+        }
+    });
+});
+
+// 행사분야 체크박스 선택 시 삭제되는 기능
+
+let allCategory = document.querySelectorAll(".filter-space .activity-center");
+allCategory.forEach((textCategoryValue) => {
+    document.addEventListener("click", (e) => {
+        let divTest = e.target.closest("div");
+        var checkedValue = divTest.getAttribute("value");
+        // check가 되어있는 것 중에 값이 값이 같은게 있으면 삭제
+        let chkBtn = document.querySelectorAll(".filter-space .activity-center .activity-chk");
+        if (textCategoryValue.innerText == checkedValue) {
+            chkBtn.forEach((inputName) => {
+                let divToRemove = document.querySelector(".find-filter-bg-three[value='" + checkedValue + "']");
+                if (divToRemove) {
+                    divToRemove.remove();
+                }
+                if (inputName.getAttribute("value") == checkedValue) {
+                    inputName.checked = false;
+                }
+            });
+        }
+    });
+});
+
+// 행사유형 체크박스 선택 시 삭제되는 기능
+let allActCategory = document.querySelectorAll(".filter-space .act-category-center");
+allActCategory.forEach((textCategoryValue) => {
+    document.addEventListener("click", (e) => {
+        let divTest = e.target.closest("div");
+        var checkedValue = divTest.getAttribute("value");
+        // check가 되어있는 것 중에 값이 값이 같은게 있으면 삭제
+        let chkBtn = document.querySelectorAll(".filter-space .act-category-center .act-category-chk");
+        if (textCategoryValue.innerText == checkedValue) {
+            chkBtn.forEach((inputName) => {
+                let divToRemove = document.querySelector(".find-filter-bg-three[value='" + checkedValue + "']");
+                if (divToRemove) {
+                    divToRemove.remove();
+                }
+                if (inputName.getAttribute("value") == checkedValue) {
+                    inputName.checked = false;
+                }
+            });
+        }
+    });
+});
+
+// 핕터 초기화
+let filterReset = document.querySelector(".filter-reset");
+filterReset.addEventListener("click", (e) => {
+    // 일시 초기화
+    let dateTextRadio = document.querySelector(".find-filter-bg");
+    let dateText = document.getElementById("date-text");
+    dateTextRadio.style.display = "none";
+    dateText.innerHTML = "모든날";
+    document.querySelectorAll(".content-date .radio-everyday").forEach(function (otherRadio) {
+        if (otherRadio.id == "ev-radio-98") {
+            otherRadio.checked = true;
+        } else {
+            otherRadio.checked = false;
+        }
+        // 참여방법 초기화
+        let joinTextRadio = document.querySelector(".find-filter-bg-join");
+        let joinText = document.getElementById("join-content");
+        joinTextRadio.style.display = "none";
+        joinText.innerHTML = "전체";
+        document.querySelectorAll(".content-method .radio-everyday").forEach(function (otherRadio) {
+            if (otherRadio.id == "ev-radio-115") {
+                otherRadio.checked = true;
+            } else {
+                otherRadio.checked = false;
+            }
+        });
+
+        // 가격 초기화
+        let payTextRadio = document.querySelector(".find-filter-bg-pay");
+        let payText = document.getElementById("pay-content");
+        payTextRadio.style.display = "none";
+        payText.innerHTML = "";
+
+        document.querySelectorAll(".content-method-pay .radio-everyday").forEach(function (otherRadio) {
+            if (otherRadio.id == "ev-radio-118") {
+                otherRadio.checked = true;
+            } else {
+                otherRadio.checked = false;
+            }
+        });
+    });
+
+    // 모집 종료 행사 필터에 선택되어 보여지는 태그 삭제
+    let divToJoinRemove = document.querySelectorAll(".find-filter-bg-two");
+    divToJoinRemove.forEach((names) => {
+        names.remove();
+    });
+
+    //  모집 종료 행사 초기화
+    let selectedJoinElements = document.querySelectorAll(".filter-space .end-date-tie .end-date-chk");
+    // 각 체크된 요소에 대해 반복하여 체크를 해제합니다.
+    selectedJoinElements.forEach((checkbox) => {
+        checkbox.checked = false;
+    });
+
+    // 필터에 선택되어 보여지는 태그 삭제
+    let divToRemove = document.querySelectorAll(".find-filter-bg-three");
+    divToRemove.forEach((names) => {
+        names.remove();
+    });
+
+    // 행사 분야 초기화
+    let selectedElementsActivity = document.querySelectorAll(".filter-space .activity-center .activity-chk");
+    selectedElementsActivity.forEach((checkbox) => {
+        checkbox.checked = false;
+    });
+
+    // 행사 유형 초기화
+    let selectedElements = document.querySelectorAll(".filter-space .act-category-center .act-category-chk");
+    selectedElements.forEach((checkbox) => {
+        checkbox.checked = false;
+    });
+
+    // 지역 초기화
+    let locationTextRadio = document.querySelector(".find-filter-bg-location");
+    let locationText = document.getElementById("location-content");
+    locationTextRadio.style.display = "none";
+    locationText.innerHTML = "";
+
+    const selectElement = document.querySelector(".block-location");
+    // 첫 번째 옵션을 기본(default) 값으로 선택합니다.
+    selectElement.selectedIndex = 0;
+});
+
+// 접은 부분 피기 / 접기 (행사 분야)
+let noHide = document.querySelector(".view-btn-tie");
+let hide = document.querySelector(".view-btn-tie.hidden");
+let hideButton = document.querySelector(".another-view-btn");
+
+hideButton.addEventListener("click", (e) => {
+    let closestText = e.target.closest("span");
+    if (closestText.getAttribute("value") == "no-hidden") {
+        noHide.classList.add("hidden");
+        // 내용부분 표기
+        let boxHidden = document.querySelectorAll(".activity-box-hidden");
+        boxHidden.forEach((content) => {
+            content.style.display = "flex";
+        });
+        hide.classList.remove("hidden");
+    } else {
+        hide.classList.add("hidden");
+        let boxHidden = document.querySelectorAll(".activity-box-hidden");
+        boxHidden.forEach((content) => {
+            content.style.display = "none";
+        });
+        noHide.classList.remove("hidden");
+    }
+});
+
+// 접은 부분 피기 / 접기 (행사 유형)
+let noHideContent = document.querySelector(".view-btn-tie-two");
+let hideContent = document.querySelector(".view-btn-tie-two.hidden");
+let hideContentButton = document.querySelector(".another-view-btn-two");
+
+hideContentButton.addEventListener("click", (e) => {
+    let closestText = e.target.closest("span");
+    if (closestText.getAttribute("value") == "no-hidden") {
+        noHideContent.classList.add("hidden");
+        // 내용부분 표기
+        let boxHidden = document.querySelectorAll(".act-category-box-hidden");
+        boxHidden.forEach((content) => {
+            content.style.display = "flex";
+        });
+        hideContent.classList.remove("hidden");
+    } else {
+        hideContent.classList.add("hidden");
+        let boxHidden = document.querySelectorAll(".act-category-box-hidden");
+        boxHidden.forEach((content) => {
+            content.style.display = "none";
+        });
+        noHideContent.classList.remove("hidden");
+    }
+});
+
+// 채널 구독 선택 시 채널 구독중 으로 변경
+// 채널 구독 시 채널 변경하기
+
+let subBtn = document.querySelectorAll(".channel-click-btn-bg");
+let channelBox = document.querySelectorAll(".channel-img-box");
+
+subBtn.forEach((allBtn, i) => {
+    allBtn.addEventListener("click", (e) => {
+        channelBox.forEach((cBox, j) => {
+            if (i == j) {
+                let subModal = document.querySelectorAll(".subcribe-wrap");
+                let channelSubModal = document.querySelectorAll(".channel-subcribe-m");
+                subModal.forEach((subBox) => {
+                    subBox.style.display = "flex";
+                    subBtn[i].style.display = "none";
+                    channelSubModal.forEach((ChannelSubBox, k) => {
+                        if (i == k) {
+                            ChannelSubBox.style.display = "flex";
+                        }
+                    });
+                });
+            }
+        });
+    });
+});
+
+// 반복을 사용해서 특정 인덱스 번호가 동일한 경우 사용하기 위한
+let subBtnCopy = document.querySelectorAll(".channel-sub-m-btn");
+let channelBoxCopy = document.querySelectorAll(".channel-img-box");
+let test1 = document.querySelectorAll(".subcribe-wrap-cancel");
+let test2 = document.querySelectorAll(".channel-subcribe-m");
+
+// 구독 취소 선택 시 모달 뜨고 기존 상태로 변경
+subBtnCopy.forEach((allBtnCopy, i) => {
+    allBtnCopy.addEventListener("click", (e) => {
+        channelBoxCopy.forEach((cBox, j) => {
+            if (i == j) {
+                test1.forEach((subBox) => {
+                    subBox.style.display = "flex";
+                    subBtn[i].style.display = "flex";
+                    test2.forEach((ChannelSubBox, k) => {
+                        if (i == k) {
+                            ChannelSubBox.style.display = "none";
+                        }
+                    });
+                });
+            }
+        });
+    });
+});
+
+// 채널 구독 선택 시 나오는 모달창 끄기
+document.querySelector(".meeting-continue-btn").addEventListener("click", (e) => {
+    let subModal = document.querySelector(".subcribe-wrap");
+    subModal.style.display = "none";
+});
+
+// 채널 구독 취소 시 나오는 모달창 끄기
+document.querySelector(".meeting-cancel-btn").addEventListener("click", (e) => {
+    let subModal = document.querySelector(".subcribe-wrap-cancel");
+    subModal.style.display = "none";
+});
