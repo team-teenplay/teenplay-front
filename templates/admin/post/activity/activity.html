@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- 로고 만들어지면 href수정 -->
+        <link
+            rel="shortcut icon"
+            href="/staticfiles/images/teenplay_logo/logo1.png"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="/staticfiles/css/admin/post/activity/activity.css"
+        />
+        <title>틴플 : 관리자 페이지</title>
+    </head>
+    <body>
+        <!-- 헤더 먼저 해야합니다. 나중에 색상은 바꿔야합니다! -->
+        <header class="header-all">
+            <div class="header-logo-text">
+                <a href="" class="header-logo">
+                    <img
+                        class="header-logo-icon"
+                        src="/staticfiles/images/teenplay_logo/logo2.png"
+                        alt="로고"
+                    />
+                </a>
+                <div class="header-slash">|</div>
+                <div class="header-admin-text">
+                    <span>Admin Center</span>
+                </div>
+            </div>
+        </header>
+        <!-- 헤더  끝 좌측 안내부분 시작 -->
+        <main class="main-all">
+            <!-- 공통으로 들어가는 좌측부분 -->
+            <nav class="main-nav-wrap">
+                <!-- 위에 로그인 정보 및 로그아웃 칸 -->
+                <div class="main-admin-info">
+                    <div class="main-admin-wrap">
+                        <div class="main-admin-container">
+                            <button class="main-admin-button">
+                                <img
+                                    class="main-admin-image"
+                                    src="/staticfiles/images/teenplay_logo/logo1.png"
+                                    alt="admin사진"
+                                />
+                                <!-- 여기 중간에 뭐 이상한거 있긴한데 의미 없어보임 일단은 보류 -->
+                                <div class="main-admin-image-warp"></div>
+                            </button>
+                        </div>
+                        <h2 class="main-admin-name">TeenPlay</h2>
+                        <a href="" class="main-admin-logout">
+                            <button class="main-admin-logout-button">
+                                <div class="main-admin-logout-warp">
+                                    <div>로그아웃</div>
+                                </div>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <!-- 메뉴 선택할수 있는 칸 -->
+                <ul class="main-admin-select">
+                    <!-- 유저관리 -->
+                    <li class="main-user-other">
+                        <a href="" class="main-user-warp">
+                            <img
+                                class="main-user-image"
+                                src="/staticfiles/images/admin/all/admin-user-img.png"
+                                alt="user-image"
+                            />
+                            <span class="main-user-text">유저 관리</span>
+                        </a>
+                    </li>
+                    <!-- 쪽지 관리 -->
+                    <li class="main-user-other">
+                        <a href="" class="main-user-warp">
+                            <img
+                                class="main-user-image"
+                                src="/staticfiles/images/admin/all/message-img.png"
+                                alt="user-image"
+                            />
+                            <span class="main-user-text">쪽지 관리</span>
+                        </a>
+                    </li>
+                    <!-- 틴플레이관리 -->
+                    <li class="main-user-other">
+                        <a href="" class="main-user-warp">
+                            <img
+                                class="main-user-image"
+                                src="/staticfiles/images/admin/all/play-img.png"
+                                alt="user-image"
+                            />
+                            <span class="main-user-text">틴 플레이 관리</span>
+                        </a>
+                    </li>
+                    <!-- 게시글 관리 -->
+                    <li class="main-user">
+                        <a href="" class="main-user-warp">
+                            <img
+                                class="main-user-image"
+                                src="/staticfiles/images/admin/all/post-img.png"
+                                alt="user-image"
+                            />
+                            <span class="main-user-text">게시글 관리</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="main-user-post-promote">
+                            <svg
+                                class="main-user-post-promote-svg"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <circle cx="12" cy="12" r="4"></circle>
+                            </svg>
+                            <span class="main-user-post-promote-text"
+                                >홍보글 관리</span
+                            >
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="main-user-post-promote-add">
+                            <svg
+                                class="main-user-post-promote-svg"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <circle cx="12" cy="12" r="4"></circle>
+                            </svg>
+                            <span class="main-user-post-promote-text"
+                                >홍보모집글 관리
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="main-user-post-promote">
+                            <svg
+                                class="main-user-post-promote-svg"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <circle cx="12" cy="12" r="4"></circle>
+                            </svg>
+                            <span class="main-user-post-promote-text"
+                                >위시리스트 관리</span
+                            >
+                        </a>
+                    </li>
+                    <!-- 전체모임 관리 -->
+                    <li class="main-user-other">
+                        <a href="" class="main-user-warp">
+                            <img
+                                class="main-user-image"
+                                src="/staticfiles/images/admin/all/meeting-img.png"
+                                alt="user-image"
+                            />
+                            <span class="main-user-text">전체 모임관리</span>
+                        </a>
+                    </li>
+                    <!-- 축제관리 -->
+                    <li class="main-user-other">
+                        <a href="" class="main-user-warp">
+                            <img
+                                class="main-user-image"
+                                src="/staticfiles/images/admin/all/festival-img.png"
+                                alt="user-image"
+                            />
+                            <span class="main-user-text">축제 관리</span>
+                        </a>
+                    </li>
+                    <!-- 공지사항 관리 -->
+                    <li class="main-user-other">
+                        <a href="" class="main-user-warp">
+                            <img
+                                class="main-user-image"
+                                src="/staticfiles/images/admin/all/loudspeaker-img.png"
+                                alt="user-image"
+                            />
+                            <span class="main-user-text">공지사항 관리</span>
+                        </a>
+                    </li>
+                    <!-- 댓글관리 -->
+                    <li class="main-user-other">
+                        <a href="" class="main-user-warp">
+                            <img
+                                class="main-user-image"
+                                src="/staticfiles/images/admin/all/comment-img.png"
+                                alt="user-image"
+                            />
+                            <span class="main-user-text">댓글 관리</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- 사실상 여기만 수정하면 모든게 끝입니다! -->
+            <div class="main-user-info-warp">
+                <div class="main-user-info-container">
+                    <div class="main-user-info-box">
+                        <div class="main-user-info-top">
+                            <!-- 유저관리, 검색하는곳 -->
+                            <header class="main-user-info-text">
+                                <h1 class="main-user-info-tag">
+                                    활동 모집글 관리
+                                </h1>
+                                <div>
+                                    <div class="main-user-info-seach">
+                                        <label class="main-user-info-label">
+                                            <input
+                                                class="main-user-info-input"
+                                                placeholder="활동 모집글"
+                                                type="search"
+                                                value=""
+                                                id="member-search"
+                                            />
+                                            <button
+                                                class="main-user-search-button"
+                                                id="member-button"
+                                            >
+                                                <svg
+                                                    viewBox="0 0 24 24"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    class="main-user-search-box"
+                                                >
+                                                    <path
+                                                        id="member-search-cansle"
+                                                        fill-rule="evenodd"
+                                                        clip-rule="evenodd"
+                                                        d="M15.83 16.561a7.8 7.8 0 1 1 1.233-1.312l3.465 3.465a.9.9 0 1 1-1.272 1.273L15.83 16.56Zm1.13-5.961a6.16 6.16 0 1 1-12.32 0 6.16 6.16 0 0 1 12.32 0Z"
+                                                    ></path>
+                                                </svg>
+                                            </button>
+                                        </label>
+                                    </div>
+                                </div>
+                            </header>
+                            <!-- 전체 목록 갯수확인 -->
+                            <div class="main-user-total">
+                                <!-- 첫번째(왼쪽 전체0) -->
+                                <div class="main-user-total-list">
+                                    <span class="main-user-total-text"
+                                        >전체</span
+                                    >
+                                    <span class="main-user-total-number"
+                                        >0</span
+                                    >
+                                </div>
+                                <!-- 2번째 -->
+                                <!-- 일단은 없애요^^ -->
+                            </div>
+                            <div class="main-user-status">
+                                <!-- 여기에 넣으면 추가할수있습니다(가로넓이 width만 수정)) -->
+                                <div class="main-user-status-name">작성자</div>
+                                <div class="main-user-status-date">생성일</div>
+                                <div class="main-user-status-pay">제목</div>
+                                <div class="main-user-status-recent">
+                                    참여인원
+                                </div>
+                                <div class="main-user-status-paycount">
+                                    수정하기
+                                </div>
+                                <div class="main-user-status-status">
+                                    삭제하기
+                                </div>
+                            </div>
+                        </div>
+                        <li class="main-user-list" data-id="1">
+                            <div class="main-user-list-name">조관익</div>
+                            <div class="main-user-list-status">23.02.01</div>
+                            <div class="main-user-list-date">빙어축제</div>
+                            <div class="main-user-list-pay">0</div>
+                            <div class="main-user-list-detail">
+                                <button
+                                    class="member-user-list-detail-button toggle-button"
+                                    data-target="1"
+                                >
+                                    상세보기
+                                </button>
+                            </div>
+                            <div class="main-user-list-ston">
+                                <button
+                                    class="member-user-list-button toggle-button"
+                                    data-target="1"
+                                >
+                                    삭제하기
+                                </button>
+                            </div>
+                        </li>
+                        <li class="main-user-list" data-id="2">
+                            <div class="main-user-list-name">김상진</div>
+                            <div class="main-user-list-status">23.12.01</div>
+                            <div class="main-user-list-date">잉어축제</div>
+                            <div class="main-user-list-pay">10</div>
+                            <div class="main-user-list-detail">
+                                <button
+                                    class="member-user-list-detail-button toggle-button"
+                                    data-target="2"
+                                >
+                                    상세보기
+                                </button>
+                            </div>
+                            <div class="main-user-list-ston">
+                                <button
+                                    class="member-user-list-button toggle-button"
+                                    data-target="2"
+                                >
+                                    삭제하기
+                                </button>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </div>
+            <!-- 삭제모달 -->
+            <div id="admin-user-modal" class="hidden">
+                <h4 class="admin-user-modal-title">정말 삭제하시겠습니까?</h4>
+                <div class="admin-user-modal-button">
+                    <div class="admin-user-modal-left">
+                        <button
+                            class="admin-user-modal-left-button"
+                            id="modalCloseButton"
+                        >
+                            취소
+                        </button>
+                    </div>
+                    <div class="admin-user-modal-right">
+                        <button
+                            class="admin-user-modal-right-button"
+                            id="modalApplyButton"
+                        >
+                            삭제하기
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- 수정 모달창 -->
+            <div id="admin-post-modal" class="hidden">
+                <h4 class="admin-post-modal-title">홍보글 수정</h4>
+                <div class="admin-post-modal-warp">
+                    <!-- 여기서부터 안에 들어가는거 하나씩 / 각각 빈 div하나 만들고 안에서 생성 -->
+                    <div class="titleqq">
+                        <p class="admin-post-modal-title-name">제목</p>
+                        <label class="admin-post-modal-title-label">
+                            <input
+                                type="text"
+                                class="admin-post-modal-title-input"
+                                placeholder="제목을 입력해주세요."
+                                value
+                            />
+                        </label>
+                    </div>
+                    <div>
+                        <p class="admin-post-modal-content-name">내용</p>
+                        <label class="admin-post-modal-content-label">
+                            <textarea
+                                class="admin-post-modal-content-input"
+                                placeholder="내용을 입력해주세요."
+                                value
+                            ></textarea>
+                        </label>
+                    </div>
+                    <div>
+                        <p class="admin-post-modal-thumbnail-name">썸네일</p>
+                        <div class="admin-post-modal-thumbnail-warp">
+                            <div class="admin-post-modal-thumbnail-container">
+                                <img
+                                    id="main-post-photo-img"
+                                    class="admin-post-modal-thumbnail-img"
+                                    src="/staticfiles/images/main/festival-img03.jpg"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="admin-post-modal-thumbnail-button">
+                                <button
+                                    class="admin-post-modal-thumbnail-button-insert"
+                                >
+                                    이미지 업로드
+                                    <label
+                                        class="admin-post-modal-thumbnail-label"
+                                    >
+                                        <input
+                                            id="imageInput"
+                                            accept="image/png,image/jpeg,image/jpg"
+                                            type="file"
+                                            class="admin-post-modal-thumbnail-input"
+                                        />
+                                    </label>
+                                </button>
+                            </div>
+                            <p class="admin-post-modal-thumbnail-info">
+                                <span
+                                    >파일 형식은 jpg 또는 png로올려주세요</span
+                                >
+                            </p>
+                        </div>
+                        <!-- 여기아래에 안내문 적어주기 -->
+                    </div>
+                    <div>
+                        <p class="admin-post-modal-place-name">장소</p>
+                        <label class="admin-post-modal-place-label">
+                            <input
+                                type="text"
+                                class="admin-post-modal-place-input"
+                                placeholder="장소를 입력해주세요."
+                                value
+                            />
+                        </label>
+                    </div>
+                    <div>
+                        <p class="admin-post-modal-time-name">일시</p>
+                        <label class="admin-post-modal-time-label">
+                            <input
+                                type="text"
+                                class="admin-post-modal-time-input"
+                                placeholder="일시를 입력해주세요."
+                                value
+                            />
+                        </label>
+                    </div>
+                    <div>
+                        <p class="admin-post-modal-pay-name">비용</p>
+                        <label class="admin-post-modal-pay-label">
+                            <input
+                                type="text"
+                                class="admin-post-modal-pay-input"
+                                placeholder="비용을 입력해주세요."
+                                value
+                            />
+                        </label>
+                    </div>
+                </div>
+                <!-- 버튼 아래 있는것들 -->
+                <!-- 버튼은 다 이름 수정해줘야합니다 밥먹고 합시다 -->
+                <div class="admin-user-modal-button">
+                    <div class="admin-user-modal-left">
+                        <button
+                            class="admin-user-modal-left-detail-button"
+                            id="modalCloseButton"
+                        >
+                            취소
+                        </button>
+                    </div>
+                    <div class="admin-user-modal-right">
+                        <button
+                            class="admin-user-modal-right-detail-button"
+                            id="modalApplyButton"
+                        >
+                            수정하기
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- 모달 뒷배경 -->
+            <div id="admin-user-modal-backdrop" class="hidden"></div>
+        </main>
+    </body>
+    <script src="/staticfiles/js/admin/post/activity/admin-post-activity-search.js"></script>
+    <script src="/staticfiles/js/admin/post/activity/admin-post-activity-modal.js"></script>
+    <script src="/staticfiles/js/admin/post/activity/admin-post-activity-addimg.js"></script>
+</html>
