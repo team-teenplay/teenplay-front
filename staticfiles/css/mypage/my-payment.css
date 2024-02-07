@@ -109,13 +109,13 @@ a {
 }
 
 .mypage-container {
-    padding-top: 72px;
-    padding-bottom: 72px;
     max-width: 1280px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding: 1rem;
+    padding-top: 72px;
+    padding-bottom: 72px;
 }
 
 .mypage-box {
