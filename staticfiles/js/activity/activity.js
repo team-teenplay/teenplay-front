@@ -623,3 +623,45 @@ document.querySelector(".meeting-cancel-btn").addEventListener("click", (e) => {
     let subModal = document.querySelector(".subcribe-wrap-cancel");
     subModal.style.display = "none";
 });
+
+// 슬라이드 배너 (이미 이미지가 존재 하기 때문에 별도로 추가되는 부분은 없음)
+
+const slideContainer = document.querySelector(".swiper-wrap");
+const pageCount = document.querySelector(".swiper-page-count");
+let count = 0;
+// 페이지 생성 시 count 가 초기 상태로 1로 존재 해야하기 때문에 사용
+pageCount.innerText = `${count + 1}/2`;
+
+const autoSlide = () => {
+    slideContainer.style.transition = "transform 0.4s";
+    count++;
+    if (count == 2) {
+        slideContainer.style.transform = "translate(-" + 100 * (count + 1) + "%)";
+        setTimeout(() => {
+            slideContainer.style.transition = "transform 0s";
+            slideContainer.style.transform = "translate(-100%)";
+        }, 500);
+        count = 0;
+        pageCount.innerText = `${count + 1}/2`;
+    } else {
+        pageCount.innerText = `${count + 1}/2`;
+        slideContainer.style.transform = "translate(-" + 100 * (count + 1) + "%)";
+    }
+};
+
+slideContainer.style.transform = "translate(-100%)";
+let inter = setInterval(autoSlide, 4000);
+
+// 배너 + 선택 시 모달 생성
+let plusBtn = document.querySelector(".swiper-more-button");
+plusBtn.addEventListener("click", (e) => {
+    let thumBanner = document.querySelector(".banner-plus-bg");
+    thumBanner.style.display = "block";
+});
+
+// 배너 x 선택 시 모달 닫기
+let exitBtn = document.querySelector(".absolute-exit-icon");
+exitBtn.addEventListener("click", (e) => {
+    let thumBanner = document.querySelector(".banner-plus-bg");
+    thumBanner.style.display = "none";
+});
