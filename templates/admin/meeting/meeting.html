@@ -209,11 +209,18 @@
                             </div>
                             <div class="main-user-status">
                                 <!-- 여기에 넣으면 추가할수있습니다(가로넓이 width만 수정)) -->
-                                <div class="main-user-status-name">작성자</div>
-                                <div class="main-user-status-date">생성일</div>
-                                <div class="main-user-status-pay">제목</div>
+                                <div class="main-user-status-name">
+                                    모임이름
+                                </div>
+                                <div class="main-user-status-pay">구성원수</div>
                                 <div class="main-user-status-recent">
-                                    참여인원
+                                    누적 활동수
+                                </div>
+                                <div class="main-user-status-count">
+                                    진행중인 활동수
+                                </div>
+                                <div class="main-user-status-endcount">
+                                    종료된 활동수
                                 </div>
                                 <div class="main-user-status-paycount">
                                     수정하기
@@ -224,10 +231,11 @@
                             </div>
                         </div>
                         <li class="main-user-list" data-id="1">
-                            <div class="main-user-list-name">조관익</div>
-                            <div class="main-user-list-status">23.02.01</div>
-                            <div class="main-user-list-date">빙어축제</div>
-                            <div class="main-user-list-pay">0</div>
+                            <div class="main-user-list-name">단풍구름</div>
+                            <div class="main-user-list-date">21</div>
+                            <div class="main-user-list-pay">3</div>
+                            <div class="main-user-list-meeting">3</div>
+                            <div class="main-user-list-endmeeting">3</div>
                             <div class="main-user-list-detail">
                                 <button
                                     class="member-user-list-detail-button toggle-button"
@@ -246,10 +254,11 @@
                             </div>
                         </li>
                         <li class="main-user-list" data-id="2">
-                            <div class="main-user-list-name">김상진</div>
-                            <div class="main-user-list-status">23.12.01</div>
-                            <div class="main-user-list-date">잉어축제</div>
-                            <div class="main-user-list-pay">10</div>
+                            <div class="main-user-list-name">우리둥지</div>
+                            <div class="main-user-list-date">33</div>
+                            <div class="main-user-list-pay">11</div>
+                            <div class="main-user-list-meeting">2</div>
+                            <div class="main-user-list-endmeeting">9</div>
                             <div class="main-user-list-detail">
                                 <button
                                     class="member-user-list-detail-button toggle-button"
@@ -294,32 +303,34 @@
             </div>
             <!-- 수정 모달창 -->
             <div id="admin-post-modal" class="hidden">
-                <h4 class="admin-post-modal-title">홍보글 수정</h4>
+                <h4 class="admin-post-modal-title">모임관리 수정</h4>
                 <div class="admin-post-modal-warp">
                     <!-- 여기서부터 안에 들어가는거 하나씩 / 각각 빈 div하나 만들고 안에서 생성 -->
                     <div class="titleqq">
-                        <p class="admin-post-modal-title-name">제목</p>
+                        <p class="admin-post-modal-title-name">모임이름</p>
                         <label class="admin-post-modal-title-label">
                             <input
                                 type="text"
                                 class="admin-post-modal-title-input"
-                                placeholder="제목을 입력해주세요."
+                                placeholder="모임이름을 입력해주세요."
                                 value
                             />
                         </label>
                     </div>
                     <div>
-                        <p class="admin-post-modal-content-name">내용</p>
+                        <p class="admin-post-modal-content-name">모임소개</p>
                         <label class="admin-post-modal-content-label">
                             <textarea
                                 class="admin-post-modal-content-input"
-                                placeholder="내용을 입력해주세요."
+                                placeholder="모임소개를 입력해주세요."
                                 value
                             ></textarea>
                         </label>
                     </div>
                     <div>
-                        <p class="admin-post-modal-thumbnail-name">썸네일</p>
+                        <p class="admin-post-modal-thumbnail-name">
+                            대표이미지
+                        </p>
                         <div class="admin-post-modal-thumbnail-warp">
                             <div class="admin-post-modal-thumbnail-container">
                                 <img
@@ -352,42 +363,46 @@
                                 >
                             </p>
                         </div>
-                        <!-- 여기아래에 안내문 적어주기 -->
                     </div>
                     <div>
-                        <p class="admin-post-modal-place-name">장소</p>
-                        <label class="admin-post-modal-place-label">
-                            <input
-                                type="text"
-                                class="admin-post-modal-place-input"
-                                placeholder="장소를 입력해주세요."
-                                value
-                            />
-                        </label>
-                    </div>
-                    <div>
-                        <p class="admin-post-modal-time-name">일시</p>
-                        <label class="admin-post-modal-time-label">
-                            <input
-                                type="text"
-                                class="admin-post-modal-time-input"
-                                placeholder="일시를 입력해주세요."
-                                value
-                            />
-                        </label>
-                    </div>
-                    <div>
-                        <p class="admin-post-modal-pay-name">비용</p>
-                        <label class="admin-post-modal-pay-label">
-                            <input
-                                type="text"
-                                class="admin-post-modal-pay-input"
-                                placeholder="비용을 입력해주세요."
-                                value
-                            />
-                        </label>
+                        <p class="admin-post-modal-thumbnail-name">
+                            배경 이미지
+                        </p>
+                        <div class="admin-post-modal-thumbnail-warp">
+                            <div class="admin-post-modal-thumbnail-container">
+                                <img
+                                    id="main-post-photo-backimg"
+                                    class="admin-post-modal-thumbnail-img"
+                                    src="/staticfiles/images/main/festival-img03.jpg"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="admin-post-modal-thumbnailback-button">
+                                <button
+                                    class="admin-post-modal-thumbnailback-button-insert"
+                                >
+                                    이미지 업로드
+                                    <label
+                                        class="admin-post-modal-thumbnailback-label"
+                                    >
+                                        <input
+                                            id="backimageInput"
+                                            accept="image/png,image/jpeg,image/jpg"
+                                            type="file"
+                                            class="admin-post-modal-thumbnailback-input"
+                                        />
+                                    </label>
+                                </button>
+                            </div>
+                            <p class="admin-post-modal-thumbnailback-info">
+                                <span
+                                    >파일 형식은 jpg 또는 png로올려주세요</span
+                                >
+                            </p>
+                        </div>
                     </div>
                 </div>
+
                 <!-- 버튼 아래 있는것들 -->
                 <!-- 버튼은 다 이름 수정해줘야합니다 밥먹고 합시다 -->
                 <div class="admin-user-modal-button">
