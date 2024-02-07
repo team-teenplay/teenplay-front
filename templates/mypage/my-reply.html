@@ -3,10 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>틴플 :: 나의 위시리스트</title>
+        <title>틴플 :: 나의 댓글</title>
         <link rel="shortcut icon" href="/staticfiles/images/teenplay_logo/logo1.png" type="image/x-icon" />
         <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet" />
-        <link rel="stylesheet" href="/staticfiles/css/mypage/my-wishlist.css" />
+        <link rel="stylesheet" href="/staticfiles/css/mypage/my-reply.css" />
     </head>
     <body loaded style="position: relative; min-height: 100%; top: 0px">
         <!-- 마이페이지 헤더 부분 -->
@@ -22,7 +22,7 @@
                                 <div class="side-bar-items">
                                     <div>
                                         <!-- 주소 필요 -->
-                                        <a class="target-color" href="">나의 위시리스트</a>
+                                        <a href="">나의 위시리스트</a>
                                     </div>
                                     <div>
                                         <!-- 주소 필요 -->
@@ -30,7 +30,7 @@
                                     </div>
                                     <div>
                                         <!-- 주소 필요 -->
-                                        <a href="">나의 댓글</a>
+                                        <a class="target-color" href="">나의 댓글</a>
                                     </div>
                                     <div>
                                         <!-- 주소 필요 -->
@@ -60,7 +60,7 @@
                             </div>
                             <div class="contents">
                                 <div class="service-title-box">
-                                    <div class="service-title">나의 위시리스트</div>
+                                    <div class="service-title">나의 댓글</div>
                                     <div class="tab-list-box">
                                         <div>
                                             <div>
@@ -73,95 +73,83 @@
                                                     </div>
                                                     <div class="tab-list">
                                                         <a class="tab">전체</a>
-                                                        <a class="tab">공개</a>
-                                                        <a class="tab">비공개</a>
+                                                        <a class="tab">위시리스트</a>
+                                                        <a class="tab">홍보 게시글</a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="wishlist-box">
-                                    <table class="wishlist-table">
+                                <div class="reply-box">
+                                    <table class="reply-table">
                                         <tbody>
-                                            <tr class="wishlist-items">
-                                                <th class="wishlist-item-content">위시리스트 내용</th>
-                                                <th class="wishlist-item-time">작성시간</th>
-                                                <th class="wishlist-item-disclosure">공개여부</th>
-                                                <th class="wishlist-item-category">카테고리</th>
-                                                <th class="wishlist-item-replayes">댓글수</th>
-                                                <th class="wishlist-item-likes">좋아요</th>
-                                                <th class="wishlist-item-gap"></th>
+                                            <tr class="reply-items">
+                                                <th class="reply-item-title">제목</th>
+                                                <th class="reply-item-content">댓글 내용</th>
+                                                <th class="reply-item-category">게시판</th>
+                                                <th class="reply-item-time">작성 시간</th>
+                                                <th class="reply-item-gab"></th>
                                             </tr>
-                                            <tr class="wishlist-details">
-                                                <td class="wishlist-content">
-                                                    <a href="">대충 실험을 위해 긴 위시리스트가 있다고 가정하고 쓰고 싶은데 적당한 내용이 떠오르지 않아 적당히 적어보는 내용입니다.</a>
+                                            <tr class="reply-details">
+                                                <td class="reply-title">
+                                                    <a href="">대충 실험을 위해 긴 게시글 제목이 있다고 가정하고 쓰고 싶은데 적당한 제목이 떠오르지 않아 적당히 적어보는 제목입니다.</a>
                                                 </td>
-                                                <td class="wishlist-write-time">1일전</td>
-                                                <td class="wishlist-disclosure">비공개</td>
-                                                <td class="wishlist-category">문화·예술</td>
-                                                <td class="wishlist-replayes">2</td>
-                                                <td class="wishlist-likes">1</td>
+                                                <td class="reply-content">대충 실험을 위해 긴 댓글이 있다고 가정하고 쓰고 싶은데 적당한 댓글이 떠오르지 않아 적당히 적어보는 댓글입니다.</td>
+                                                <td class="reply-category">위시리스트</td>
+                                                <td class="reply-write-time">1일전</td>
                                                 <td>
-                                                    <button class="wishlist-remove" href="">삭제하기</button>
+                                                    <button class="reply-remove" href="">삭제하기</button>
                                                 </td>
                                             </tr>
-                                            <tr class="wishlist-details">
-                                                <td class="wishlist-content">
-                                                    <a href="">대충 실험을 위해 긴 위시리스트가 있다고 가정하고 쓰고 싶은데 적당한 내용이 떠오르지 않아 적당히 적어보는 내용입니다.</a>
+                                            <tr class="reply-details">
+                                                <td class="reply-title">
+                                                    <a href="">대충 실험을 위해 긴 게시글 제목이 있다고 가정하고 쓰고 싶은데 적당한 제목이 떠오르지 않아 적당히 적어보는 제목입니다.</a>
                                                 </td>
-                                                <td class="wishlist-write-time">1일전</td>
-                                                <td class="wishlist-disclosure">비공개</td>
-                                                <td class="wishlist-category">문화·예술</td>
-                                                <td class="wishlist-replayes">2</td>
-                                                <td class="wishlist-likes">2</td>
+                                                <td class="reply-content">대충 실험을 위해 긴 댓글이 있다고 가정하고 쓰고 싶은데 적당한 댓글이 떠오르지 않아 적당히 적어보는 댓글입니다.</td>
+                                                <td class="reply-category">위시리스트</td>
+                                                <td class="reply-write-time">2일전</td>
                                                 <td>
-                                                    <button class="wishlist-remove" href="">삭제하기</button>
+                                                    <button class="reply-remove" href="">삭제하기</button>
                                                 </td>
                                             </tr>
-                                            <tr class="wishlist-details">
-                                                <td class="wishlist-content">
-                                                    <a href="">대충 실험을 위해 긴 위시리스트가 있다고 가정하고 쓰고 싶은데 적당한 내용이 떠오르지 않아 적당히 적어보는 내용입니다.</a>
+                                            <tr class="reply-details">
+                                                <td class="reply-title">
+                                                    <a href="">대충 실험을 위해 긴 게시글 제목이 있다고 가정하고 쓰고 싶은데 적당한 제목이 떠오르지 않아 적당히 적어보는 제목입니다.</a>
                                                 </td>
-                                                <td class="wishlist-write-time">1일전</td>
-                                                <td class="wishlist-disclosure">비공개</td>
-                                                <td class="wishlist-category">문화·예술</td>
-                                                <td class="wishlist-replayes">2</td>
-                                                <td class="wishlist-likes">3</td>
+                                                <td class="reply-content">대충 실험을 위해 긴 댓글이 있다고 가정하고 쓰고 싶은데 적당한 댓글이 떠오르지 않아 적당히 적어보는 댓글입니다.</td>
+                                                <td class="reply-category">위시리스트</td>
+                                                <td class="reply-write-time">3일전</td>
                                                 <td>
-                                                    <button class="wishlist-remove" href="">삭제하기</button>
+                                                    <button class="reply-remove" href="">삭제하기</button>
                                                 </td>
                                             </tr>
-                                            <tr class="wishlist-details">
-                                                <td class="wishlist-content">
-                                                    <a href="">대충 실험을 위해 긴 위시리스트가 있다고 가정하고 쓰고 싶은데 적당한 내용이 떠오르지 않아 적당히 적어보는 내용입니다.</a>
+                                            <tr class="reply-details">
+                                                <td class="reply-title">
+                                                    <a href="">대충 실험을 위해 긴 게시글 제목이 있다고 가정하고 쓰고 싶은데 적당한 제목이 떠오르지 않아 적당히 적어보는 제목입니다.</a>
                                                 </td>
-                                                <td class="wishlist-write-time">1일전</td>
-                                                <td class="wishlist-disclosure">비공개</td>
-                                                <td class="wishlist-category">문화·예술</td>
-                                                <td class="wishlist-replayes">2</td>
-                                                <td class="wishlist-likes">4</td>
+                                                <td class="reply-content">대충 실험을 위해 긴 댓글이 있다고 가정하고 쓰고 싶은데 적당한 댓글이 떠오르지 않아 적당히 적어보는 댓글입니다.</td>
+                                                <td class="reply-category">위시리스트</td>
+                                                <td class="reply-write-time">4일전</td>
                                                 <td>
-                                                    <button class="wishlist-remove" href="">삭제하기</button>
+                                                    <button class="reply-remove" href="">삭제하기</button>
                                                 </td>
                                             </tr>
-                                            <tr class="wishlist-details">
-                                                <td class="wishlist-content">
-                                                    <a href="">대충 실험을 위해 긴 위시리스트가 있다고 가정하고 쓰고 싶은데 적당한 내용이 떠오르지 않아 적당히 적어보는 내용입니다.</a>
+                                            <tr class="reply-details">
+                                                <td class="reply-title">
+                                                    <a href="">대충 실험을 위해 긴 게시글 제목이 있다고 가정하고 쓰고 싶은데 적당한 제목이 떠오르지 않아 적당히 적어보는 제목입니다.</a>
                                                 </td>
-                                                <td class="wishlist-write-time">1일전</td>
-                                                <td class="wishlist-disclosure">비공개</td>
-                                                <td class="wishlist-category">문화·예술</td>
-                                                <td class="wishlist-replayes">2</td>
-                                                <td class="wishlist-likes">5</td>
+                                                <td class="reply-content">대충 실험을 위해 긴 댓글이 있다고 가정하고 쓰고 싶은데 적당한 댓글이 떠오르지 않아 적당히 적어보는 댓글입니다.</td>
+                                                <td class="reply-category">위시리스트</td>
+                                                <td class="reply-write-time">5일전</td>
                                                 <td>
-                                                    <button class="wishlist-remove" href="">삭제하기</button>
+                                                    <button class="reply-remove" href="">삭제하기</button>
                                                 </td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
-                                <div class="test">아직 작성한 위시리스트가 없습니다.</div>
+                                <div class="test">아직 작성한 댓글이 없습니다.</div>
                                 <!-- 페이지네이션 1페이지에 10개 -->
                                 <div class="pagination-box">
                                     <div class="pagination-contents">
@@ -236,5 +224,5 @@
             </div>
         </div>
     </body>
-    <script src="/staticfiles/js/mypage/my-wishlist.js"></script>
+    <script src="/staticfiles/js/mypage/my-reply.js"></script>
 </html>
