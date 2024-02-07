@@ -38,7 +38,7 @@
                         <div class="club-top-button-wrap">
                             <div class="club-top-button-container">
                                 <div>
-                                    <button class="club-top-button">
+                                    <button id="share" class="club-top-button">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             class="club-share-icon"
@@ -50,6 +50,37 @@
                                             ></path>
                                         </svg>
                                         <span> 공유하기 </span>
+                                    </button>
+                                </div>
+                                <!-- 이 아래 부분은 서버 작업 시 여러 버튼 중 1개만 표시합니다. -->
+                                <!-- 버튼마다 출력하는 모달창이 다릅니다. -->
+                                <!-- (모달은 다 짜놨으니 버튼 display만 바꾸시면 됩니다.) -->
+                                <!-- 서버 작업 시 상황에 맞게 나머지 버튼은 display:none 해주세요. -->
+                                <!-- 1. 초기값: 가입 신청 -->
+                                <div class="club-top-button-boxes">
+                                    <button
+                                        id="apply"
+                                        class="club-top-button apply"
+                                    >
+                                        <span> 가입신청 </span>
+                                    </button>
+                                </div>
+                                <!-- 2. 승인대기 -->
+                                <div class="club-top-button-boxes">
+                                    <button
+                                        id="cancel"
+                                        class="club-top-button cancel"
+                                    >
+                                        <span> 신청취소 </span>
+                                    </button>
+                                </div>
+                                <!-- 3. 가입중(가입됨) -->
+                                <div class="club-top-button-boxes">
+                                    <button
+                                        id="quit"
+                                        class="club-top-button quit"
+                                    >
+                                        <span> 탈퇴하기 </span>
                                     </button>
                                 </div>
                             </div>
