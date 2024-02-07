@@ -94,3 +94,94 @@ if (confirmDeleteButtonss.length > 0) {
         });
     });
 }
+
+// 공개 / 비공개 버튼
+
+const searchModal = document.getElementById("admin-message-modal-search");
+const searchOpen = document.querySelector(".main-wish-sellect-button");
+const searchSend = document.querySelector(".admin-message-modal-search-send");
+const searchReceive = document.querySelector(
+    ".admin-message-modal-search-receive"
+);
+const searchText = document.querySelector(".main-wish-sellect-button-span");
+const searchadd = document.querySelector(
+    ".admin-message-modal-search-donotreceive"
+);
+// 검색 버튼 클릭 시 모달 열기
+searchOpen.addEventListener("click", (event) => {
+    // 이벤트 전파를 막기 위해 stopPropagation() 호출
+    event.stopPropagation();
+    searchModal.classList.remove("hidden");
+});
+
+// 모달 외부를 클릭했을 때 이벤트 처리
+document.addEventListener("click", (event) => {
+    if (event.target !== searchOpen && !searchModal.contains(event.target)) {
+        // 클릭된 요소가 검색 버튼이 아니고 모달 창에 속하지 않으면 모달을 닫음
+        searchModal.classList.add("hidden");
+    }
+});
+
+// "공개/비공개" 버튼 클릭 시 모달 닫고 텍스트 변경
+searchReceive.addEventListener("click", () => {
+    searchModal.classList.add("hidden");
+    searchText.textContent = "공개/비공개";
+});
+// "공개" 버튼 클릭 시 모달 닫고 텍스트 변경
+searchSend.addEventListener("click", () => {
+    searchModal.classList.add("hidden");
+    searchText.textContent = "공개";
+});
+
+// "비공개" 버튼 클릭 시 모달 닫고 텍스트 변경
+
+searchadd.addEventListener("click", () => {
+    searchModal.classList.add("hidden");
+    searchText.textContent = "비공개";
+});
+
+// -------------------------------------------------
+// 공개 비공개 버튼
+document.addEventListener("DOMContentLoaded", function () {
+    const allItems = document.querySelectorAll(".main-user-list");
+
+    document
+        .querySelector(".admin-message-modal-search-receive")
+        .addEventListener("click", function () {
+            allItems.forEach((item) => {
+                item.classList.remove("hidden");
+            });
+        });
+
+    document
+        .querySelector(".admin-message-modal-search-send")
+        .addEventListener("click", function () {
+            allItems.forEach((item) => {
+                if (
+                    item
+                        .querySelector(".main-user-list-opne")
+                        .textContent.trim() !== "공개"
+                ) {
+                    item.classList.add("hidden");
+                } else {
+                    item.classList.remove("hidden");
+                }
+            });
+        });
+
+    document
+        .querySelector(".admin-message-modal-search-donotreceive")
+        .addEventListener("click", function () {
+            allItems.forEach((item) => {
+                if (
+                    item
+                        .querySelector(".main-user-list-opne")
+                        .textContent.trim() !== "비공개"
+                ) {
+                    item.classList.add("hidden");
+                } else {
+                    item.classList.remove("hidden");
+                }
+            });
+        });
+});
