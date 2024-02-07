@@ -38,14 +38,13 @@ const closeBtns = deleteModalwrap.querySelectorAll("button");
 
 closeBtns.forEach((closeBtn) => {
     closeBtn.addEventListener("click", (e) => {
+        deleteModalwrap.querySelector(".delete-modal-container").style.animation = "popDown 0.5s";
         if (e.target.className == "check-btn") {
-            deleteModalwrap.querySelector(".delete-modal-container").style.animation = "popDown 0.5s";
             setTimeout(() => {
                 deleteModalwrap.style.display = "none";
                 deleteTarget.closest(".letter-details").remove();
             }, 450);
         } else {
-            deleteModalwrap.querySelector(".delete-modal-container").style.animation = "popDown 0.5s";
             setTimeout(() => {
                 deleteModalwrap.style.display = "none";
             }, 450);
