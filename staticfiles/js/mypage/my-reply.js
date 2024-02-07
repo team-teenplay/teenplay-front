@@ -20,16 +20,16 @@ tabs.forEach((tab) => {
 });
 
 // 삭제하기 클릭 시 해당 목록 선택하는 이벤트
-const wishlistRemoveBtns = document.querySelectorAll(".wishlist-remove");
+const replyRemoveBtns = document.querySelectorAll(".reply-remove");
 const deleteModalwrap = document.querySelector(".delete-modal-wrap");
 let deleteTarget;
 
-wishlistRemoveBtns.forEach((wishlistRemoveBtn) => {
-    wishlistRemoveBtn.addEventListener("click", (e) => {
+replyRemoveBtns.forEach((replyRemoveBtn) => {
+    replyRemoveBtn.addEventListener("click", (e) => {
         deleteModalwrap.querySelector(".check-svg-box").style.display = "none";
         deleteModalwrap.querySelector(".delete-modal-container").style.animation = "popUp 0.5s";
         deleteModalwrap.style.display = "block";
-        deleteTarget = wishlistRemoveBtn;
+        deleteTarget = replyRemoveBtn;
     });
 });
 
@@ -42,7 +42,7 @@ closeBtns.forEach((closeBtn) => {
             deleteModalwrap.querySelector(".delete-modal-container").style.animation = "popDown 0.5s";
             setTimeout(() => {
                 deleteModalwrap.style.display = "none";
-                deleteTarget.closest(".wishlist-details").remove();
+                deleteTarget.closest(".reply-details").remove();
             }, 450);
         } else {
             deleteModalwrap.querySelector(".delete-modal-container").style.animation = "popDown 0.5s";
