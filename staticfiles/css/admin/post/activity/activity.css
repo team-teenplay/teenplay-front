@@ -693,6 +693,34 @@ color: #9ca3af;
     fill: #1d1d1e;
 }
 
+.main-user-status-stratdate{
+
+    justify-content: flex-end;
+    align-items: center;
+    flex-shrink: 0;
+    display: flex;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    color: #1d1d1e;
+    fill: #1d1d1e;
+}
+
+
+.main-user-status-edndate{
+
+    justify-content: flex-end;
+    align-items: center;
+    flex-shrink: 0;
+    display: flex;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    color: #1d1d1e;
+    fill: #1d1d1e;
+}
+
+
 .main-user-status-paycount{
 
     justify-content: flex-end;
@@ -744,7 +772,7 @@ color: #9ca3af;
 }
 
 .main-user-list-name{
-    width: 145px;
+    width: 96px;
     justify-content: flex-start;
     align-items: center;
     flex-shrink: 0;
@@ -758,7 +786,7 @@ color: #9ca3af;
 }
 
 .main-user-list-status{
-    width: 150px;
+    width: 90px;
     justify-content: flex-start;
     align-items: center;
     flex-shrink: 0;
@@ -771,7 +799,7 @@ color: #9ca3af;
 }
 
 .main-user-list-date{
-    width: 160px;
+    width: 115px;
     justify-content: flex-start;
     align-items: center;
     flex-shrink: 0;
@@ -784,7 +812,20 @@ color: #9ca3af;
 }
 
 .main-user-list-pay{
-    width: 125px;
+    width: 105px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-shrink: 0;
+    display: flex;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    color: #1d1d1e;
+    fill: #1d1d1e;
+}
+
+.main-user-list-startdate{
+    width: 100px;
     justify-content: flex-start;
     align-items: center;
     flex-shrink: 0;
@@ -797,6 +838,21 @@ color: #9ca3af;
 }
 
 
+.main-user-list-enddate{
+    width: 79px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-shrink: 0;
+    display: flex;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    color: #1d1d1e;
+    fill: #1d1d1e;
+}
+
+
+
 .main-user-list-ston{
 
     align-items: center;
@@ -805,7 +861,7 @@ color: #9ca3af;
 }
 
 .main-user-list-detail{
-    margin-right: 73px;
+    margin-right: 15px;
     align-items: center;
     display: flex;
 }

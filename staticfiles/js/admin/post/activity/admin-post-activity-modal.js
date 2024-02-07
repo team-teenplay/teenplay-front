@@ -8,6 +8,7 @@ const modalAddCloseButtons = document.querySelectorAll(
 );
 const modal = document.getElementById("admin-user-modal");
 const modalBack = document.getElementById("admin-user-modal-backdrop");
+let currentTargetLi; // 현재 대상 li 요소를 저장하는 변수
 
 modalOpenButtons.forEach((button) => {
     button.addEventListener("click", (event) => {
@@ -26,26 +27,22 @@ modalCloseButtons.forEach((button) => {
         modalBack.classList.add("hidden");
     });
 });
-const confirmDeleteButtons = document.querySelectorAll(
-    ".admin-user-modal-right-button"
-);
 
-if (confirmDeleteButtons.length > 0) {
-    confirmDeleteButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-            // 현재 대상 li 삭제
-            if (currentTargetLi) {
-                currentTargetLi.remove();
-                currentTargetLi = null;
-            }
+// 확인 삭제 버튼 클릭 시
+modalAddCloseButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        // 현재 대상 li 삭제
+        if (currentTargetLi) {
+            currentTargetLi.remove();
+            currentTargetLi = null;
+            updateTotalCount(); // 삭제가 완료된 후에 전체 숫자 업데이트
+        }
 
-            // 모달 닫기
-            modal.classList.add("hidden");
-            modalBack.classList.add("hidden");
-        });
+        // 모달 닫기
+        modal.classList.add("hidden");
+        modalBack.classList.add("hidden");
     });
-}
-
+});
 // 모달 수정창
 
 const modalDetailOpenButtons = document.querySelectorAll(
