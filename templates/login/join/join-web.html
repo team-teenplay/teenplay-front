@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/staticfiles/images/teenplay_logo/logo1.png">
+        <link rel="stylesheet" href="/staticfiles/css/login/join/join-web.css">
+        <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+        <title>틴플 :: 회원가입</title>
+    </head>
+    <body>
+        <!-- 화면 부분 -->
+        <div class="screen-all-wrap">
+            <div class="screen-full-wrap">
+                <div class="screen-wrap">
+                    <div class="app-screen-all-wrap">
+                        <div class="app-screen-wrap">
+                            <!-- 회원가입 텍스트 부분 -->
+                            <div class="join-text-container">
+                                <h1 class="join-text">
+                                    <span>회원가입</span>
+                                </h1>
+                            </div>
+                            <!-- SNS 회원가입 부분 -->
+                            <form class="sns-join-container" action="/Account/ExternalLogin?way=sign" method="post">
+                                <input type="hidden" value="o3MfpQ0fEaOuMnpUzNHcti0uUBpFfcNdA7YGfjD5J-Qiti31M8dXjwWW2aY4FtAyIO00KLFAIRBT4QBk8U0GS-Tw0GbWNuYXNwFl5nhPKp41">
+                                <div class="sns-button-items">
+                                    <!-- 카카오 버튼 -->
+                                    <button class="sns-button kakao" type="button" onclick="kakaoLogin()">
+                                        <svg class="kakao-img" version="1.1" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="m9.9999 2c5.0494 0 9.143 3.2827 9.143 7.3313 0 4.0487-4.0933 7.3313-9.143 7.3313a11.083 10.938 0 0 1-2.3926-0.26349c-0.44435-0.090231-3.4195 1.8254-4.0549 1.5791-0.44801-0.17145 1.3175-2.5653 0.75427-2.9109a6.9487 6.8574 0 0 1-3.4496-5.7359c0-4.0487 4.0933-7.3313 9.143-7.3313z" fill="#ffd95f" stroke-width=".90556"></path>
+                                        </svg>
+                                        <span class="kakao-text">
+                                            <span>카카오로 시작하기</span>
+                                        </span>
+                                    </button>
+                                    <button class="sns-button naver" type="button" onclick="naverLogin()">
+                                        <svg class="naver-img" version="1.1" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="m12.849 10.563-5.9315-8.5627h-4.9174v16h5.1511v-8.5627l5.9315 8.5627h4.9174v-15.998h-5.1511z" fill="#03cf5d" stroke-width="1.0187"></path>
+                                        </svg>
+                                        <span class="naver-text">
+                                            <span>네이버로 시작하기</span>
+                                        </span>
+                                    </button>
+                                    <button class="sns-button google" type="button" onclick="googleLogin()">
+                                        <img class="google-img" src="https://www.google.com/favicon.ico">
+                                        <span class="google-text">
+                                            <span>구글로 시작하기</span>
+                                        </span>
+                                    </button>
+                                </div>
+                            </form>
+                            <!-- 구분선 -->
+                            <div class="line-container">
+                                <div class="line"></div>
+                                <div class="line-text">
+                                    <span>또는</span>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                            <!-- 회원가입 부분 -->
+                            <form action=""></form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 하단 부분 -->
+            <div class="width-full">
+                <!-- 푸터 부분 -->
+                <footer>
+                    <div class="footer-wrap">
+                        <div class="fotter-divison-wrap">
+                            <div class="footer-container">
+                                <!-- 푸터 로고 부분 -->
+                                <div class="footer-logo-item">
+                                    <a href="https://event-us.kr/">
+                                        <img class="footer-logo" src="/staticfiles/images/teenplay_logo/logo2.png" viewBox="0 0 56.965 25.467">
+                                    </a>
+                                </div>
+                                <div class="footer-text">Every heartbeat at the Event, powered by TEENPLAY!</div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </body>
+    <script src="/staticfiles/"></script>
+</html>
