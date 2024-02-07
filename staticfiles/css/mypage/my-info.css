@@ -641,6 +641,7 @@ input[type=radio]:checked {
 .save-modal-wrap {
     z-index: 300;
     position: relative;
+    display: none
 }
 
 .save-modal-shadow {
