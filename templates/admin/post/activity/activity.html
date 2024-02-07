@@ -130,7 +130,7 @@
                                 <circle cx="12" cy="12" r="4"></circle>
                             </svg>
                             <span class="main-user-post-promote-text"
-                                >홍보모집글 관리
+                                >활동모집글 관리
                             </span>
                         </a>
                     </li>
@@ -252,10 +252,16 @@
                             <div class="main-user-status">
                                 <!-- 여기에 넣으면 추가할수있습니다(가로넓이 width만 수정)) -->
                                 <div class="main-user-status-name">작성자</div>
-                                <div class="main-user-status-date">생성일</div>
-                                <div class="main-user-status-pay">제목</div>
+                                <div class="main-user-status-date">제목</div>
+                                <div class="main-user-status-pay">작성날짜</div>
                                 <div class="main-user-status-recent">
                                     참여인원
+                                </div>
+                                <div class="main-user-status-stratdate">
+                                    시작일
+                                </div>
+                                <div class="main-user-status-edndate">
+                                    종료일
                                 </div>
                                 <div class="main-user-status-paycount">
                                     수정하기
@@ -267,9 +273,11 @@
                         </div>
                         <li class="main-user-list" data-id="1">
                             <div class="main-user-list-name">조관익</div>
-                            <div class="main-user-list-status">23.02.01</div>
-                            <div class="main-user-list-date">빙어축제</div>
-                            <div class="main-user-list-pay">0</div>
+                            <div class="main-user-list-status">야구장투어</div>
+                            <div class="main-user-list-date">23.02.02</div>
+                            <div class="main-user-list-pay">5</div>
+                            <div class="main-user-list-startdate">23.02.06</div>
+                            <div class="main-user-list-enddate">23.02.08</div>
                             <div class="main-user-list-detail">
                                 <button
                                     class="member-user-list-detail-button toggle-button"
@@ -288,10 +296,12 @@
                             </div>
                         </li>
                         <li class="main-user-list" data-id="2">
-                            <div class="main-user-list-name">김상진</div>
-                            <div class="main-user-list-status">23.12.01</div>
-                            <div class="main-user-list-date">잉어축제</div>
-                            <div class="main-user-list-pay">10</div>
+                            <div class="main-user-list-name">박종민</div>
+                            <div class="main-user-list-status">fc서울투어</div>
+                            <div class="main-user-list-date">23.02.05</div>
+                            <div class="main-user-list-pay">11</div>
+                            <div class="main-user-list-startdate">23.02.10</div>
+                            <div class="main-user-list-enddate">23.02.15</div>
                             <div class="main-user-list-detail">
                                 <button
                                     class="member-user-list-detail-button toggle-button"
@@ -336,7 +346,7 @@
             </div>
             <!-- 수정 모달창 -->
             <div id="admin-post-modal" class="hidden">
-                <h4 class="admin-post-modal-title">홍보글 수정</h4>
+                <h4 class="admin-post-modal-title">활동 모집글 수정</h4>
                 <div class="admin-post-modal-warp">
                     <!-- 여기서부터 안에 들어가는거 하나씩 / 각각 빈 div하나 만들고 안에서 생성 -->
                     <div class="titleqq">
@@ -408,12 +418,23 @@
                         </label>
                     </div>
                     <div>
-                        <p class="admin-post-modal-time-name">일시</p>
+                        <p class="admin-post-modal-time-name">시작일</p>
                         <label class="admin-post-modal-time-label">
                             <input
                                 type="text"
                                 class="admin-post-modal-time-input"
-                                placeholder="일시를 입력해주세요."
+                                placeholder="시작일을 입력해주세요."
+                                value
+                            />
+                        </label>
+                    </div>
+                    <div>
+                        <p class="admin-post-modal-time-name">종료일</p>
+                        <label class="admin-post-modal-time-label">
+                            <input
+                                type="text"
+                                class="admin-post-modal-time-input"
+                                placeholder="종료일 입력해주세요."
                                 value
                             />
                         </label>
@@ -425,6 +446,17 @@
                                 type="text"
                                 class="admin-post-modal-pay-input"
                                 placeholder="비용을 입력해주세요."
+                                value
+                            />
+                        </label>
+                    </div>
+                    <div>
+                        <p class="admin-post-modal-pay-name">유형</p>
+                        <label class="admin-post-modal-pay-label">
+                            <input
+                                type="text"
+                                class="admin-post-modal-pay-input"
+                                placeholder="유형을 입력해주세요."
                                 value
                             />
                         </label>
@@ -455,6 +487,7 @@
             <div id="admin-user-modal-backdrop" class="hidden"></div>
         </main>
     </body>
+    <script src="/staticfiles/js/admin/post/activity/admin-post-activity-delete.js"></script>
     <script src="/staticfiles/js/admin/post/activity/admin-post-activity-search.js"></script>
     <script src="/staticfiles/js/admin/post/activity/admin-post-activity-modal.js"></script>
     <script src="/staticfiles/js/admin/post/activity/admin-post-activity-addimg.js"></script>
