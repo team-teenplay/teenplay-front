@@ -59,7 +59,155 @@
                                 <div class="line"></div>
                             </div>
                             <!-- 회원가입 부분 -->
-                            <form action=""></form>
+                            <form class="input-all-wrap" novalidate>
+                                <div class="input-wrap">
+                                    <!-- 이메일 입력 부분 -->
+                                    <div class="email-container">
+                                        <div class="email-content">
+                                            <div class="email-text-divison">
+                                                <label class="email-text" for="email">
+                                                    <span>이메일(ID)</span>
+                                                </label>
+                                            </div>
+                                            <input class="input email-input" id="email" tabindex="1" autocomplete="off" type="email">
+                                            <div class="input-error noemail hidden">
+                                                <span>항목을 입력하세요</span>
+                                            </div>
+                                            <div class="email-length-error hidden">
+                                                <span>이메일 형식에 맞지 않습니다</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 이름 입력 부분 -->
+                                    <div class="name-container">
+                                        <div class="name-content">
+                                            <div class="name-text-divison">
+                                                <label class="name-text" for="name">
+                                                    <span>이름</span>
+                                                </label>
+                                                <span class="name-explain">
+                                                    <span>2자 이상</span>
+                                                </span>
+                                            </div>
+                                            <input class="input name-input" id="name" tabindex="2" autocomplete="off" type="text">
+                                            <div class="input-error noname hidden">
+                                                <div >항목을 입력하세요</div>
+                                            </div>
+                                            <div class="name-length-error hidden">
+                                                <span>2자 이상으로 작성하세요</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 비밀번호 입력 부분 -->
+                                    <div class="password-container">
+                                        <div class="password-content">
+                                            <div class="password-text-divison">
+                                                <label class="password-text" for="password">
+                                                    <span>비밀번호</span>
+                                                </label>
+                                                <span class="password-explain">
+                                                    <span>6자 이상</span>
+                                                </span>
+                                            </div>
+                                            <input class="input password-input" id="passowrd" tabindex="3" autocomplete="off" type="password">
+                                            <div class="input-error nopassword hidden">
+                                                <div>항목을 입력하세요</div>
+                                            </div>
+                                            <div class="password-length-error hidden">
+                                                <span>6자 이상으로 작성하세요</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 약관동의 부분 -->
+                                    <div class="agreement-container">
+                                        <p>
+                                            <span>약관동의</span>
+                                        </p>
+                                        <!-- [필수]만 14세 이상입니다. -->
+                                        <div class="agreement-content">
+                                            <div class="agreement-divison-content">
+                                                <div class="agreement-divison">
+                                                    <input class="agreement-button essential" id="agreement-age" tabindex="4" required type="checkbox" value="true" data-gtm-form-interact-field-id="0">
+                                                    <label class="agreement-text" for="agreement-age">
+                                                        [필수] 만 14세 이상입니다.
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="agreement-error hidden">이 항목은 필수 입니다</div>
+                                        </div>
+                                        <!-- [필수]이용약관 -->
+                                        <div class="agreement-content">
+                                            <div class="agreement-divison-content">
+                                                <div class="agreement-divison">
+                                                    <input class="agreement-button essential" id="agreement-check" tabindex="4" required type="checkbox" value="true" data-gtm-form-interact-field-id="1">
+                                                    <label class="agreement-text" for="agreement-check">
+                                                        <span>[필수] 이용약관</span>
+                                                    </label>
+                                                    <div class="agreement-add-text">
+                                                        <a class="agreement-add-link" href="https://event-us.kr/legal/service">
+                                                            <span>보기</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="agreement-error hidden">이 항목은 필수 입니다</div>
+                                        </div>
+                                        <!-- [필수]개인정보 수집·이용 동의서 -->
+                                        <div class="agreement-content">
+                                            <div class="agreement-divison-content">
+                                                <div class="agreement-divison">
+                                                    <input class="agreement-button essential" id="agreement-user" tabindex="4" required type="checkbox" value="true" data-gtm-form-interact-field-id="2">
+                                                    <label class="agreement-text" for="agreement-user">
+                                                        <span>[필수] 개인정보 수집·이용 동의서</span>
+                                                    </label>
+                                                    <div class="agreement-add-text">
+                                                        <a class="agreement-add-link" href="https://app.catchsecu.com/document/C/f796ce0cc983aef">
+                                                            <span>보기</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="agreement-error hidden">이 항목은 필수 입니다</div>
+                                        </div>
+                                        <!-- [선택]마케팅 정보 수신동의 -->
+                                        <div class="agreement-content">
+                                            <div class="agreement-divison-content">
+                                                <div class="agreement-divison">
+                                                    <input class="agreement-button" id="choice-agreement-send" tabindex="4" type="checkbox" value="true" data-gtm-form-interact-field-id="3">
+                                                    <label class="agreement-text" for="choice-agreement-send">
+                                                        <span>[선택] 마케팅 정보 수신동의</span>
+                                                    </label>
+                                                    <div class="agreement-add-text">
+                                                        <a class="agreement-add-link" href="https://event-us.kr/l/marketing">
+                                                            <span>보기</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- [선택]개인정보 수집·이용 동의서 -->
+                                        <div class="agreement-content">
+                                            <div class="agreement-divison-content">
+                                                <div class="agreement-divison">
+                                                    <input class="agreement-button" id="choice-agreement-user" tabindex="4" type="checkbox" value="true" data-gtm-form-interact-field-id="4">
+                                                    <label class="agreement-text" for="choice-agreement-user">
+                                                        <span>[선택] 개인정보 수집·이용 동의서</span>
+                                                    </label>
+                                                    <div class="agreement-add-text">
+                                                        <a class="agreement-add-link" href="https://app.catchsecu.com/document/C/f796ce0cc983aef">
+                                                            <span>보기</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 회원가입 버튼 -->
+                                    <button class="join-wrap disabled" type="button">
+                                        <span>회원가입</span>
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -85,5 +233,5 @@
             </div>
         </div>
     </body>
-    <script src="/staticfiles/"></script>
+    <script src="/staticfiles/js/login/join/join-web.js"></script>
 </html>

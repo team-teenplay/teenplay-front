@@ -3,18 +3,12 @@ const loginButton = document.querySelector(".login-button");
 
 // 아이디 미입력 이벤트
 const idInputBox = document.querySelector(".id-input-container");
-const idInputError = document.querySelector(".id-input-bottom");
-
 const passwordInputBox =document.querySelector(".password-input-container");
-const passwordInputError =document.querySelector(".password-input-bottom");
 
-// (예시)버튼 클릭 시 오류 메세지 출력
-loginButton.addEventListener("click", () => {
-    idInputError.classList.remove("hidden");
-    passwordInputError.classList.remove("hidden");
-    idInputBox.style = "border-color: #CE201B";
-    passwordInputBox.style = "border-color: #CE201B";
-});
+// 아이디 비밀번호 입력 이벤트
+(idInputBox && passwordInputBox).addEventListener("keyup", () => {
+    loginButton.classList.remove("disabled");
+})
 
 // 로그인 유지 클릭 시 메세지 출력 이벤트
 const keepCheckBox = document.querySelector(".keep-checkbox");
