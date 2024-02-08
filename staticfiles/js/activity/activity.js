@@ -41,17 +41,34 @@ const emptyHeartsCopy = document.querySelectorAll(".like-btn-shadow .like-btn-di
 const fullHeartsCopy = document.querySelectorAll(".like-btn-shadow .like-btn-display-none");
 
 // 기간선택 체크 시 기간 달력 display 유무 표시
-document.addEventListener("click", (e) => {
-    dateRange = document.querySelector(".date-display-none");
-    if (e.target.id == "ev-radio-102") {
-        dateRange.style.display = "block";
-        // > 달력 선택 시 창이 사라지지 않게 만드는 용도
-    } else if (e.target.classList == "relative-date") {
-        dateRange.style.display = "block";
-    } else {
-        dateRange.style.display = "none";
-    }
+const checkedDate = document.getElementById("ev-radio-102");
+
+const dateRangeCheck = document.querySelectorAll(".date-container .date-box .radio-everyday");
+dateRangeCheck.forEach((selectDateRange) => {
+    selectDateRange.addEventListener("click", (e) => {
+        if (selectDateRange.id == "ev-radio-102" && selectDateRange.checked == true) {
+            dateRange = document.querySelector(".date-display-none");
+            dateRange.style.display = "block";
+        } else {
+            dateRange.style.display = "none";
+        }
+    });
 });
+
+// checkedDate.addEventListener("change", (e) => {
+//     dateRange = document.querySelector(".date-display-none");
+//     dateRange.style.display = "block";
+
+// if (e.target.id == "ev-radio-102") {
+//     dateRange.style.display = "block";
+//     // > 달력 선택 시 창이 사라지지 않게 만드는 용도
+// } else if (e.target.classList == "relative-date") {
+//     console.log(e.target.classList);
+//     dateRange.style.display = "block";
+// } else {
+//     dateRange.style.display = "none";
+// }
+// });
 
 // 좋아요 선택 시 동작하는 js
 const modalWrapCopy = document.querySelector(".club-modal-wrap");
@@ -299,7 +316,6 @@ checkExit.addEventListener("click", (e) => {
         let parentDiv = e.target.closest(".find-filter-bg");
         if (parentDiv) {
             parentDiv.style.display = "none";
-
             document.querySelectorAll(".content-date .radio-everyday").forEach(function (otherRadio) {
                 if (otherRadio.id == "ev-radio-98") {
                     otherRadio.checked = true;
@@ -316,7 +332,6 @@ checkExit.addEventListener("click", (e) => {
         let parentDiv = e.target.closest(".find-filter-bg-join");
         if (parentDiv) {
             parentDiv.style.display = "none";
-
             document.querySelectorAll(".content-method .radio-everyday").forEach(function (otherRadio) {
                 if (otherRadio.id == "ev-radio-115") {
                     otherRadio.checked = true;
@@ -333,7 +348,6 @@ checkExit.addEventListener("click", (e) => {
         let parentDiv = e.target.closest(".find-filter-bg-pay");
         if (parentDiv) {
             parentDiv.style.display = "none";
-
             document.querySelectorAll(".content-method-pay .radio-everyday").forEach(function (otherRadio) {
                 if (otherRadio.id == "ev-radio-118") {
                     otherRadio.checked = true;
@@ -430,6 +444,10 @@ allActCategory.forEach((textCategoryValue) => {
 // 핕터 초기화
 let filterReset = document.querySelector(".filter-reset");
 filterReset.addEventListener("click", (e) => {
+    // 달력 초기화
+    dateRange = document.querySelector(".date-display-none");
+    dateRange.style.display = "none";
+
     // 일시 초기화
     let dateTextRadio = document.querySelector(".find-filter-bg");
     let dateText = document.getElementById("date-text");
