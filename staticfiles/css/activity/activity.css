@@ -1072,6 +1072,10 @@ button:not([class*="hover:"]).hidden-flex-center {
     height: 1rem;
 }
 
+.best-icon:hover .icon-hidden-content {
+    display: block;
+}
+
 [class*="hover\:"]:active,
 a:active,
 button:active {

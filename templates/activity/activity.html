@@ -6,7 +6,6 @@
         <link rel="stylesheet" href="/staticfiles/css/activity/activity.css" />
         <link rel="shortcut icon" href="/staticfiles/images/teenplay_logo/logo1.png" type="image/x-icon" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css" />
-
         <title>이번주, 무료행사 - 틴플</title>
     </head>
     <body class loaded style="position: relative; min-height: 100%; top: 0px">
@@ -204,6 +203,7 @@
                                                     <div class="date-relative-full">
                                                         <label class="relative-block">
                                                             <input type="text" class="relative-date" placeholder="기간을 선택하세요" />
+                                                            <!-- 달력을 jquery를 사용해서 가져오기 때문에 원본과 차이가 있음 -->
                                                             <span class="text-overflow-hidden">
                                                                 <button type="button" class="date-selector">
                                                                     <svg class="calender" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -212,24 +212,6 @@
                                                                 </button>
                                                             </span>
                                                         </label>
-                                                        <!-- 달력 들어갈 부분 -->
-                                                        <!-- <div class="calender-all-container">
-                                                            <div class="calender-all-box">
-                                                                <div class="calender-relative">
-                                                                    <div class="calender-flex-box">
-                                                                        <div class="flex-between-all">
-                                                                            <div class="flex-between-s-all">
-                                                                                <div class="flex-between-s-all-shadow"></div>
-                                                                            </div>
-                                                                            <div class="flex-left-all">
-                                                                                <div class="flex-left-items-center">
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div> -->
                                                     </div>
                                                 </div>
                                                 <div class="end-date-container" style="margin-top: 8px">
@@ -656,7 +638,7 @@
                                                     <svg xmlns="http://www.w3.org/2000/svg" class="best-icon-radio" viewBox="0 0 20 20" fill="currentColor">
                                                         <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
                                                     </svg>
-                                                    <div class="icon-hidden-content">
+                                                    <div class="icon-hidden-content" id="icon-hidden-content">
                                                         <div class="hidden-content-border">
                                                             이벤터스 추천순은 인기도, 신청률, 클릭률,
                                                             <br />
@@ -1735,4 +1717,11 @@
 
     <!-- footer -->
     <script src="/staticfiles/js/activity/activity.js"></script>
+    <!-- 여기서 달력 가져오는 js -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <script src="/staticfiles/js/activity/activity-calendar.js"></script>
+    <!-- 여기까지 -->
 </html>
