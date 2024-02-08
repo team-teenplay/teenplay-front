@@ -381,6 +381,7 @@ a {
     color: rgb(135 141 145/var(--tw-text-opacity));
     font-size: .9375rem;
     margin-bottom: 1rem;
+    display: flex;
 }
 
 .teenchin-btn-container {
