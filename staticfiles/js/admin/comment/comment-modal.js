@@ -192,11 +192,130 @@ if (confirmDeleteButtons.length > 0) {
             if (currentTargetLi) {
                 currentTargetLi.remove();
                 currentTargetLi = null;
+                updateTotalCount();
             }
 
             // 모달 닫기
             deletemodal.classList.add("hidden");
             deletemodalBack.classList.add("hidden");
         });
+        updateTotalCount();
     });
+    updateTotalCount();
 }
+
+// 여기서부터 활동중 / 정지 모달 관리
+
+const addsearchModal = document.getElementById(
+    "admin-message-modal-search-add"
+);
+const addsearchOpen = document.querySelector(".main-wish-sellect-button-add");
+const addsearchSend = document.querySelector(
+    ".admin-message-modal-search-send-add"
+);
+const addsearchReceive = document.querySelector(
+    ".admin-message-modal-search-receive-add"
+);
+const addsearchText = document.querySelector(
+    ".main-wish-sellect-button-span-add"
+);
+const addsearchadd = document.querySelector(
+    ".admin-message-modal-search-donotreceive-add"
+);
+// 검색 버튼 클릭 시 모달 열기
+addsearchOpen.addEventListener("click", (event) => {
+    // 이벤트 전파를 막기 위해 stopPropagation() 호출
+    event.stopPropagation();
+    addsearchModal.classList.remove("hidden");
+});
+
+// 모달 외부를 클릭했을 때 이벤트 처리
+document.addEventListener("click", (event) => {
+    if (
+        event.target !== addsearchOpen &&
+        !addsearchModal.contains(event.target)
+    ) {
+        // 클릭된 요소가 검색 버튼이 아니고 모달 창에 속하지 않으면 모달을 닫음
+        addsearchModal.classList.add("hidden");
+    }
+});
+
+// "공개/비공개" 버튼 클릭 시 모달 닫고 텍스트 변경
+addsearchReceive.addEventListener("click", () => {
+    addsearchModal.classList.add("hidden");
+    addsearchText.textContent = "활동중/정지";
+});
+// "공개" 버튼 클릭 시 모달 닫고 텍스트 변경
+addsearchSend.addEventListener("click", () => {
+    addsearchModal.classList.add("hidden");
+    addsearchText.textContent = "활동중";
+});
+
+// "비공개" 버튼 클릭 시 모달 닫고 텍스트 변경
+
+addsearchadd.addEventListener("click", () => {
+    addsearchModal.classList.add("hidden");
+    addsearchText.textContent = "정지";
+});
+
+// 공개 비공개 버튼 각 찾아서 하는거
+document.addEventListener("DOMContentLoaded", function () {
+    const allItems = document.querySelectorAll(".main-comment-list");
+
+    function updateTotalCount() {
+        // 숫자 세는 코드
+        const visibleItems = document.querySelectorAll(
+            ".main-comment-list:not(.hidden)"
+        );
+        const totalCount = visibleItems.length;
+        // 숫자를 표시할 요소에 totalCount를 업데이트합니다.
+        document.getElementById("total-count").textContent = totalCount;
+    }
+
+    document
+        .querySelector(".admin-message-modal-search-receive-add")
+        .addEventListener("click", function () {
+            allItems.forEach((item) => {
+                item.classList.remove("hidden");
+                updateTotalCount();
+            });
+            updateTotalCount();
+        });
+    updateTotalCount();
+
+    document
+        .querySelector(".admin-message-modal-search-send-add")
+        .addEventListener("click", function () {
+            allItems.forEach((item) => {
+                if (
+                    item
+                        .querySelector(".main-comment-list-paycount")
+                        .textContent.trim() !== "활동중"
+                ) {
+                    item.classList.add("hidden");
+                } else {
+                    item.classList.remove("hidden");
+                }
+            });
+            updateTotalCount();
+        });
+
+    document
+        .querySelector(".admin-message-modal-search-donotreceive-add")
+        .addEventListener("click", function () {
+            allItems.forEach((item) => {
+                if (
+                    item
+                        .querySelector(".main-comment-list-paycount")
+                        .textContent.trim() !== "정지"
+                ) {
+                    item.classList.add("hidden");
+                } else {
+                    item.classList.remove("hidden");
+                }
+            });
+            updateTotalCount();
+        });
+    updateTotalCount();
+    // 페이지가 로드될 때도 숫자를 업데이트합니다.
+});
