@@ -22,23 +22,24 @@ tabs.forEach((tab) => {
 // 삭제하기 클릭 시 확인 모달 표시하는 이벤트
 const letterRemoveBtns = document.querySelectorAll(".letter-remove");
 const deleteModalwrap = document.querySelector(".delete-modal-wrap");
+const deleteModalContainer = deleteModalwrap.querySelector(".delete-modal-container");
 let deleteTarget;
 
 letterRemoveBtns.forEach((letterRemoveBtn) => {
     letterRemoveBtn.addEventListener("click", (e) => {
         deleteModalwrap.querySelector(".check-svg-box").style.display = "none";
-        deleteModalwrap.querySelector(".delete-modal-container").style.animation = "popUp 0.5s";
+        deleteModalContainer.style.animation = "popUp 0.5s";
         deleteModalwrap.style.display = "block";
         deleteTarget = letterRemoveBtn;
     });
 });
 
-// 모달내 닫기 및 확인 버튼 클릭 시 이벤트
+// 삭제 모달내 닫기 및 확인 버튼 클릭 시 이벤트
 const closeBtns = deleteModalwrap.querySelectorAll("button");
 
 closeBtns.forEach((closeBtn) => {
     closeBtn.addEventListener("click", (e) => {
-        deleteModalwrap.querySelector(".delete-modal-container").style.animation = "popDown 0.5s";
+        deleteModalContainer.style.animation = "popDown 0.5s";
         if (e.target.className == "check-btn") {
             setTimeout(() => {
                 deleteModalwrap.style.display = "none";
@@ -55,13 +56,12 @@ closeBtns.forEach((closeBtn) => {
 // 내용 클릭 시 해당 목록의 정보를 모달에 담고 보여주는 이벤트
 const letterTextBtns = document.querySelectorAll(".letter-text");
 const letterModalwrap = document.querySelector(".letter-modal-wrap");
+let letterDetails;
 
 letterTextBtns.forEach((letterTextBtn) => {
     letterTextBtn.addEventListener("click", (e) => {
-        let letterDetails = e.target.closest(".letter-details");
+        letterDetails = e.target.closest(".letter-details");
         // letter-details
-        console.log(letterModalwrap.querySelector(".sender-email").innerText);
-        console.log(letterDetails.querySelector(".letter-sender").innerText);
         letterModalwrap.querySelector(".sender-email").innerText = letterDetails.querySelector(".letter-sender").innerText;
         letterModalwrap.querySelector(".receiver-email").innerText = letterDetails.querySelector(".letter-receiver").innerText;
         letterModalwrap.querySelector(".write-time").innerText = letterDetails.querySelector(".letter-write-time").innerText;
@@ -81,7 +81,7 @@ letterModalCloseBtn.addEventListener("click", () => {
     }, 450);
 });
 
-//
+// 작성하기 클릭 시 작성 모달 여는 이벤트
 const sendModalWrap = document.querySelector(".send-modal-wrap");
 const sendLetterBtn = document.querySelector(".send-letter-btn");
 
@@ -90,15 +90,17 @@ sendLetterBtn.addEventListener("click", () => {
     sendModalWrap.style.display = "block";
 });
 
-// 쪽지 보내기 모달 닫기 클릭 시 모달을 끄는 이벤트
-const sendModalBtns = document.querySelectorAll(".send-modal-wrap button");
+// 쪽지 보내기 모달 버튼 클릭 시 발생하는 이벤트
+const sendModalBtns = document.querySelectorAll(".send-modal-container button");
 
 sendModalBtns.forEach((sendModalBtn) => {
     sendModalBtn.addEventListener("click", (e) => {
         if (e.target.className == "send-check-btn") {
             sendModalWrap.querySelector(".send-modal-container").style.animation = "popDown 0.5s";
             setTimeout(() => {
-                sendModalWrap.style.display = "none";
+                sendModalWrap.querySelector(".send-modal-container").style.display = "none";
+                sendModalWrap.querySelector(".check-modal-container").style.animation = "popUp 0.5s";
+                sendModalWrap.querySelector(".check-modal-container").style.display = "flex";
                 sendModalWrap.querySelector(".send-receiver-email").value = ``;
                 sendModalWrap.querySelector("textarea[name=send-content]").value = ``;
             }, 450);
@@ -106,7 +108,21 @@ sendModalBtns.forEach((sendModalBtn) => {
             sendModalWrap.querySelector(".send-modal-container").style.animation = "popDown 0.5s";
             setTimeout(() => {
                 sendModalWrap.style.display = "none";
+                sendModalWrap.querySelector(".send-receiver-email").value = ``;
+                sendModalWrap.querySelector("textarea[name=send-content]").value = ``;
             }, 450);
         }
     });
+});
+
+// 보내기 확인 모달 내 확인 클릭 시 모달 종료하는 이벤트
+const checkModalCheckBtn = document.querySelector(".check-modal-container .check-btn");
+
+checkModalCheckBtn.addEventListener("click", () => {
+    sendModalWrap.querySelector(".check-modal-container").style.animation = "popDown 0.5s";
+    setTimeout(() => {
+        sendModalWrap.style.display = "none";
+        sendModalWrap.querySelector(".check-modal-container").style.display = "none";
+        sendModalWrap.querySelector(".send-modal-container").style.display = "flex";
+    }, 450);
 });
