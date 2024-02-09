@@ -28,3 +28,45 @@ memberButton.addEventListener("click", (e) => {
     memberSearchCansle.setAttribute("fill", "#1d1d1e");
     memberSearchCansle.setAttribute("color", "#1d1d1e");
 });
+
+// 검색기능
+
+document
+    .getElementById("member-search")
+    .addEventListener("keyup", function (event) {
+        if (event.keyCode === 13) {
+            var searchTerm = document
+                .getElementById("member-search")
+                .value.trim()
+                .toLowerCase();
+            var userList = document.querySelectorAll(".main-user-list");
+            var noResultsMsg = document.getElementById("no-results-msg");
+
+            var foundResults = false;
+
+            for (var i = 0; i < userList.length; i++) {
+                var userName = userList[i]
+                    .querySelector(".main-user-list-name")
+                    .textContent.trim()
+                    .toLowerCase();
+                if (!userName.includes(searchTerm)) {
+                    userList[i].classList.add("hide");
+                    document.getElementById("member-search").value = "";
+                } else {
+                    userList[i].classList.remove("hide");
+                    foundResults = true;
+                    document.getElementById("member-search").value = "";
+                }
+            }
+
+            if (!foundResults) {
+                noResultsMsg.classList.remove("hide");
+                document.getElementById("member-search").value = "";
+            } else {
+                noResultsMsg.classList.add("hide");
+                document.getElementById("member-search").value = "";
+            }
+
+            // 입력 필드를 비웁니다.
+        }
+    });

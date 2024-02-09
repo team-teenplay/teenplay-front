@@ -37,11 +37,53 @@ if (confirmDeleteButtons.length > 0) {
             if (currentTargetLi) {
                 currentTargetLi.remove();
                 currentTargetLi = null;
+                updateTotalCount();
             }
 
             // 모달 닫기
             modal.classList.add("hidden");
             modalBack.classList.add("hidden");
         });
+        updateTotalCount();
     });
+    updateTotalCount();
 }
+
+// 수정모달
+const modalAndOpenButtons = document.querySelectorAll(
+    ".member-user-list-detail-button"
+);
+const modalAndCloseButtons = document.querySelectorAll(
+    ".admin-user-modal-left-detail-button"
+);
+const modalAndAddCloseButtons = document.querySelectorAll(
+    ".admin-user-modal-right-detail-button"
+);
+const Andmodal = document.getElementById("admin-post-modal");
+
+modalAndOpenButtons.forEach((button) => {
+    button.addEventListener("click", (event) => {
+        const targetId = event.currentTarget.getAttribute("data-target");
+        currentTargetLi = document.querySelector(`li[data-id="${targetId}"]`);
+
+        // 모달 열기
+        Andmodal.classList.remove("hidden");
+        modalBack.classList.remove("hidden");
+    });
+});
+
+// 모달닫기
+modalAndCloseButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        Andmodal.classList.add("hidden");
+        modalBack.classList.add("hidden");
+    });
+});
+
+// 모달수정버튼
+modalAndAddCloseButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        Andmodal.classList.add("hidden");
+        modalBack.classList.add("hidden");
+    });
+});

@@ -996,7 +996,14 @@ color: #9ca3af;
       padding: 0;
       padding-left: 16px;
       padding-right: 16px;
-      background-color: #f3f3f4;
+      background-color: #fff;
+      border-width: 1px;
+      border-color: rgba(0,0,0,.1);
+  }
+
+  .admin-user-modal-left-button:hover{
+    border-color: #f3f3f4;
+    background-color: #f3f3f4;
   }
 
   .admin-user-modal-left-detail-button{
@@ -1023,7 +1030,14 @@ color: #9ca3af;
       padding: 0;
       padding-left: 16px;
       padding-right: 16px;
-      background-color: #f3f3f4;
+      background-color: #fff;
+      border-width: 1px;
+      border-color: rgba(0,0,0,.1);
+  }
+
+  .admin-user-modal-left-detail-button:hover{
+    border-color: #f3f3f4;
+    background-color: #f3f3f4;
   }
   
   .admin-user-modal-right{
@@ -1056,6 +1070,10 @@ color: #9ca3af;
     padding: 0;
   }
 
+  .admin-user-modal-right-button:hover{
+    background-color: #111;
+  }
+
   .admin-user-modal-right-detail-button{
     padding-left: 16px;
     padding-right: 16px;
@@ -1069,12 +1087,12 @@ color: #9ca3af;
     font-weight: 600;
     font-size: 14px;
     line-height: 16px;
-    color: #fff;
-    fill: #fff;
-    background-color: #1d1d1e;
+    color: #b9b9bb;
+    fill: #b9b9bb;
+    background-color: #f3f3f4;
     -webkit-appearance: button;
     background-image: none;
-    cursor: pointer;
+    cursor: default;
     text-transform: none;
     font-family: inherit;
     margin: 0;
@@ -1610,3 +1628,159 @@ color: #9ca3af;
     fill: #8a8a8b;
     margin: 0;
 }
+
+.main-user-bottom-box{
+    justify-content: center;
+    display: flex;
+    margin-bottom: 104px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-user-bottom-ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-user-bottom-reft{
+    opacity: .3;
+    border-width: 1px;
+    border-radius: 9999px;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    border-color: #e6e6e7;
+
+    color: #1d1d1e;
+    fill: #1d1d1e;
+    cursor: default;
+    -webkit-appearance: button;
+    background-color: transparent;
+    background-image: none;
+    text-transform: none;
+    font-family: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.main-user-bottom-svg{
+    width: 16px;
+    height: 16px;
+    display: block;
+    vertical-align: middle;
+
+}
+
+
+.main-margin{
+margin-left: 16px;}
+
+.main-user-bottom{
+    border-radius: 9999px;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    color: #1d1d1e;
+    fill: #1d1d1e;
+    background-color: #fff;
+    -webkit-appearance: button;
+    background-image: none;
+    cursor: pointer;
+    text-transform: none;
+    font-family: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    padding: 0;
+}
+
+.add-color{
+    background-color: #f3f3f4;}
+    
+.main-user-number{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: #1d1d1e;
+    fill: #1d1d1e;
+}
+
+
+.main-user-bottom-right{
+    opacity: .3;
+    border-width: 1px;
+    border-radius: 9999px;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    border-color: #e6e6e7;
+    color: #1d1d1e;
+    fill: #1d1d1e;
+    cursor: default;
+    -webkit-appearance: button;
+    background-color: transparent;
+    background-image: none;
+    text-transform: none;
+    font-family: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.redbox{
+    word-break: keep-all;
+    align-items: center;
+    display: flex;
+    margin-right: auto;
+}
+
+.redfont{
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    display: block;
+    vertical-align: middle;
+}
+
+#red-title{
+    display: flex;
+    margin-top: 8px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #de2c2c;
+    fill: #de2c2c;
+}
+
+#red-content{
+    display: flex;
+    margin-top: 8px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #de2c2c;
+    fill: #de2c2c;
+}
+
+#red-title.hidden {
+    display: none;
+}
+
+#red-content.hidden {
+    display: none;
+}
+
