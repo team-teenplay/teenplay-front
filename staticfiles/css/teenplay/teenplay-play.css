@@ -238,7 +238,6 @@ button, input, optgroup, select, textarea {
 
 .play-item {
     height: 100%;
-    width: 2000px;
     overflow-y: visible;
     overflow-x: visible;
     border-bottom-left-radius: 0;
@@ -250,7 +249,7 @@ button, input, optgroup, select, textarea {
     flex-shrink: 0;
     flex-direction: row;
     align-self: auto;
-    justify-content: center;
+    justify-content: flex-start;
     position: relative;
     flex-grow: 0;
     border-top-left-radius: 0;
@@ -258,18 +257,21 @@ button, input, optgroup, select, textarea {
 }
 
 .play-each {
-    position: relative;
+    position: absolute;
+    transform-origin: left;
     height: 680px;
     width: 400px;
     border: 1px solid transparent;
     border-radius: 12px;
     z-index: 777;
-    scale: 0.4;
-    transition: all .3s cubic-bezier(.4,0,1,1);
+    transition: all .5s cubic-bezier(.08,.52,.52,1);
 }
 
 .play-each.playing {
     scale: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
 }
 
 .play-each-wrap {
@@ -587,6 +589,11 @@ button, input, optgroup, select, textarea {
     cursor: pointer;
 }
 
+.play-each-wrap:hover .play-prev-btn,
+.play-each-wrap:hover .play-next-btn {
+    opacity: 1;
+}
+
 .play-prev-btn {
     display: block;
     margin: 16px;
@@ -635,4 +642,52 @@ button, input, optgroup, select, textarea {
     background-repeat: no-repeat;
     height: 30px;
     width: 30px;
+}
+
+.play-logo-wrap {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    top: 0;
+    margin-right: 16px;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 16px;
+    left: 0;
+    position: absolute;
+}
+
+.play-logo-container {
+    text-decoration: none;
+    color: rgb(0 55 107);
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    padding-bottom: 0;
+    display: inline;
+    border-left-width: 0;
+    padding-left: 0;
+    background-color: transparent;
+    touch-action: manipulation;
+    border-right-style: none;
+    border-right-width: 0;
+    box-sizing: border-box;
+    border-top-width: 0;
+    padding-right: 0;
+    cursor: pointer;
+    margin-left: 0;
+    -webkit-tap-highlight-color: transparent;
+    border-top-style: none;
+    border-left-style: none;
+    text-align: inherit;
+    margin-right: 0;
+    list-style: none;
+    outline: none;
+}
+
+.play-logo {
+    width: 130px;
+    height: 29px;
+    display: inline-block;
 }
