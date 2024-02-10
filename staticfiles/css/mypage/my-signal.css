@@ -206,12 +206,12 @@ a {
     padding-bottom: 4rem;
 }
 
-.notice-box {
+.signal-box {
     font-size: .9375rem;
     margin-bottom: 2rem;
 }
 
-.notice-top-box {
+.signal-top-box {
     justify-content: space-between;
     width: 100%;
     display: flex;
@@ -224,7 +224,7 @@ a {
     display: flex;
 }
 
-.notice-type {
+.signal-type {
     --tw-text-opacity: 1;
     color: rgb(92 63 191/var(--tw-text-opacity));
     font-weight: 700;
@@ -241,7 +241,7 @@ a {
     display: flex;
 }
 
-.notice-delete {
+.signal-delete {
     --tw-text-opacity: 1;
     color: rgb(191 69 69/var(--tw-text-opacity));
     cursor: pointer;
@@ -249,29 +249,29 @@ a {
     margin-right: 0.625rem;
 }
 
-.notice-date {
+.signal-date {
     --tw-text-opacity: 1;
     color: rgb(135 141 145/var(--tw-text-opacity));
     min-width: 78px;
 }
 
-.notice-bottom-text {
+.signal-bottom-text {
     font-size: 1rem;
     line-height: 1.5rem;
 }
 
-.notice-delete-modal {
+.signal-delete-modal {
     z-index: 200;
     position: relative;
 }
 
-.notice-delete-shadow {
+.signal-delete-shadow {
     background-color: rgba(0,0,0,.5);
     inset: 0;
     position: fixed;
 }
 
-.notice-delete-box {
+.signal-delete-box {
     justify-content: center;
     align-items: center;
     display: flex;
@@ -279,7 +279,7 @@ a {
     position: fixed;
 }
 
-.notice-delete-items {
+.signal-delete-items {
     padding: 1.5rem;
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255/var(--tw-bg-opacity));
@@ -292,11 +292,11 @@ a {
     margin-right: 1rem;
 }
 
-.notice-delete-title {
+.signal-delete-title {
     text-align: center;
 }
 
-.notice-delete-ask {
+.signal-delete-ask {
     --tw-text-opacity: 1;
     color: rgb(54 58 60/var(--tw-text-opacity));
     font-weight: 700;
@@ -306,7 +306,7 @@ a {
     margin-top: 0.25rem;
 }
 
-.notice-delete-btns {
+.signal-delete-btns {
     --tw-space-y-reverse: 0;
     margin-top: calc(1.5rem*(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(1.5rem*var(--tw-space-y-reverse));
@@ -351,7 +351,7 @@ a {
     background-color: rgb(248 250 251/var(--tw-bg-opacity));
 }
 
-.notice-none {
+.signal-none {
     --tw-text-opacity: 1;
     color: rgb(169 175 179/var(--tw-text-opacity));
     padding-top: 0;
