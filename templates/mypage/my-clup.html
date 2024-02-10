@@ -83,6 +83,7 @@
                                     </div>
                                 </div>
                                 <div class="clup-list">
+                                    <!-- 가입한 모임이 없을 경우 비워 놓으면 됩니다. -->
                                     <div class="clup-box">
                                         <div class="clup-items">
                                             <!-- 모임 상세보기 이동 주소 필요 -->
@@ -373,6 +374,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!-- 모임 목록이 10개 이상일 경우 나타나는 더보기 버튼 -->
                                 <button class="teenchin-more-btn" type="button">
                                     <div class="more-text-box">
                                         <div style="margin-right: 0.5rem">더보기</div>
@@ -381,6 +383,13 @@
                                         </svg>
                                     </div>
                                 </button>
+                                <!-- 모임 목록이 없을 경우 나타나는 문구 및 모임 홍보게시판 이동 버튼 -->
+                                <!-- 가시성을 위해 style="margin-top: 30px"을 임시로 넣음, 작업시 지우고 하세요 -->
+                                <div class="clup-none-box" style="margin-top: 30px">
+                                    <div class="clup-none-ment">가입한 모임이 없습니다.</div>
+                                    <!-- 모임 홍보 게시판 주소 필요 -->
+                                    <a class="clup-pr-link" href=""> 모임 가입하러 가기 </a>
+                                </div>
                             </div>
                         </div>
                     </div>
