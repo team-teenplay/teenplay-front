@@ -17,6 +17,7 @@ inputItem.addEventListener("keyup", () => {
     }
 });
 
+// 이메일 정상 입력 후 재설정 메일 받기 클릭 시 활성화 되는 모달창
 emailSend.addEventListener("click", () => {
     Swal.fire(
         "비밀번호 재설정 메일 발송 완료",

@@ -98,15 +98,6 @@ modalPostUpdateFinish.addEventListener("click", () => {
     modalPostUpdate.classList.add("hidden");
 });
 
-// 위시리스트 게시글 수정 모달창 닫기 이벤트
-const postUpdateWrap = document.querySelector(".post-update-wrap");
-
-document.addEventListener("click", (e) => {
-    if (!postUpdateButton.contains(e.target) && !postUpdateWrap.contains(e.target)) {
-        modalPostUpdate.classList.add("hidden");
-    }
-});
-
 // 위시리스트 게시글 타이틀 입력 이벤트
 const updatePostTitle = document.querySelector(".update-category-input");
 const updatePostFinish = document.querySelector(".update-finish-botton");
@@ -139,8 +130,9 @@ tagInput.addEventListener("keyup", (e) => {
                 e.target.value = "";
                 tagError.classList.add("hidden")
 
-                tagDiv.addEventListener("click", () => {
+                tagDiv.addEventListener("click", (e) => {
                     // 취소
+                    e.stopPropagation();
                     tag.removeChild(tagDiv);
                     tagError.classList.add("hidden")
                 });
@@ -151,17 +143,28 @@ tagInput.addEventListener("keyup", (e) => {
     }
 });
 
+// 위시리스트 게시글 수정 모달창 닫기 이벤트
+const postUpdateWrap = document.querySelector(".post-update-wrap");
+
+document.addEventListener("click", (e) => {
+    if (!postUpdateButton.contains(e.target) && !postUpdateWrap.contains(e.target)) {
+        modalPostUpdate.classList.add("hidden");
+    }
+});
+
 // 위시리스트 게시글 댓글 열고 닫기 이벤트
 const commentOpen = document.querySelector(".comment-open-wrap");
 const commentClose = document.querySelector(".comment-close-wrap");
 const comment = document.querySelector(".comment-all-wrap");
 
+// 위시리스트 게시글 댓글 열기 이벤트
 commentOpen.addEventListener("click", () => {
     commentOpen.classList.add("hidden");
     commentClose.classList.remove("hidden");
     comment.classList.remove("hidden");
 });
 
+// 위시리스트 게시글 댓글 닫기 이벤트
 commentClose.addEventListener("click", () => {
     commentOpen.classList.remove("hidden");
     commentClose.classList.add("hidden");
@@ -187,7 +190,6 @@ document.addEventListener("click", (e) => {
 const commentMenuOpenUpdate = document.getElementById("comment-menu-open-update");
 const commentInputUpdate = document.querySelector(".comment-update-box-all-wrap");
 const commentComment = document.querySelector(".comment-list-all-wrap");
-
 
 commentMenuOpenUpdate.addEventListener("click", () => {
     commentInputUpdate.classList.remove("hidden");
@@ -229,26 +231,19 @@ const modalCreateInput = document.querySelector(".post-create")
 const modalCreateClose = document.querySelector(".create-close-container")
 const modalCreateFinish = document.querySelector(".create-finish-container")
 
-
+// 위시리스트 생성 모달창 열기 이벤트
 wishlistCreate.addEventListener("click", () => {
     modalCreateInput.classList.remove("hidden");
 });
 
+// 위시리스트 생성 모달창 닫기(아이콘) 이벤트
 modalCreateClose.addEventListener("click", () => {
     modalCreateInput.classList.add("hidden");
 });
 
+// 위시리스트 생성 모달창 완료 이벤트
 modalCreateFinish.addEventListener("click", () => {
     modalCreateInput.classList.add("hidden");
-});
-
-// 위시리스트 생성 모달창 닫기 이벤트
-const postCreateWrap = document.querySelector(".post-create-wrap");
-
-document.addEventListener("click", (e) => {
-    if (!wishlistCreate.contains(e.target) && !postCreateWrap.contains(e.target)) {
-        modalCreateInput.classList.add("hidden");
-    }
 });
 
 // 위시리스트 게시글 태그 추가 이벤트
@@ -270,8 +265,9 @@ createTagInput.addEventListener("keyup", (e) => {
                 e.target.value = "";
                 createTagError.classList.add("hidden")
 
-                createTagDiv.addEventListener("click", () => {
+                createTagDiv.addEventListener("click", (e) => {
                     // 취소
+                    e.stopPropagation();
                     createTag.removeChild(createTagDiv);
                     createTagError.classList.add("hidden")
                 });
@@ -282,24 +278,11 @@ createTagInput.addEventListener("keyup", (e) => {
     }
 });
 
+// 위시리스트 생성 모달창 닫기(여백) 이벤트
+const postCreateWrap = document.querySelector(".post-create-wrap");
 
-
-
-// ****************************************************
-// 태그 추가
-// const tag = document.querySelector(".update-tags-wrap .tag")
-// const tagInput = document.querySelector(".update-tags-input-container .update-tags-input")
-// tagInput.addEventListener("keyup", (e) => {
-//     if(e.keyCode === 13) {
-//         if(e.target.value) {
-//             const tagDiv = document.createElement("div")
-//             tagDiv.innerHTML = `<span>${e.target.value}</span>`;
-//             tag.appendChild(tagDiv)
-//             e.target.value = "";
-//             tagDiv.addEventListener("click", () => {
-//                 // 취소
-//                 tag.removeChild(tagDiv);
-//             })
-//         }
-//     }
-// })
+document.addEventListener("click", (e) => {
+    if (!wishlistCreate.contains(e.target) && !postCreateWrap.contains(e.target)) {
+        modalCreateInput.classList.add("hidden");
+    }
+});
