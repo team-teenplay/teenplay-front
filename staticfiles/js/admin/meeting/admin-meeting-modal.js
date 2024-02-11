@@ -37,13 +37,17 @@ if (confirmDeleteButtons.length > 0) {
             if (currentTargetLi) {
                 currentTargetLi.remove();
                 currentTargetLi = null;
+                updateTotalCount();
             }
 
             // 모달 닫기
             modal.classList.add("hidden");
             modalBack.classList.add("hidden");
+            updateTotalCount();
         });
+        updateTotalCount();
     });
+    updateTotalCount();
 }
 
 // 모달 수정창
