@@ -44,6 +44,17 @@ likeIcon.addEventListener("click", () => {
     }
 });
 
+// 위시리스트 게시글 댓글 카운팅 이벤트
+const commentList = document.querySelectorAll(".comment-list-all-wrap");
+const commentCount =  document.querySelector(".post-comment-count");
+
+function commentCountNum() {
+    commentCount.textContent = parseInt(commentCount.textContent) + (commentList.length);
+}
+
+commentCountNum();
+
+
 // 위시리스트 게시글 메뉴 열고 닫기 이벤트
 const wishlistPostMenuButton = document.querySelector(".post-menu-container");
 const wishlistPostMenu = document.querySelector(".post-menu-open");
@@ -171,7 +182,6 @@ document.addEventListener("click", (e) => {
         wishlistCommentMenu.classList.add("hidden");
     }
 });
-
 
 // 댓글 수정 이벤트
 const commentMenuOpenUpdate = document.getElementById("comment-menu-open-update");

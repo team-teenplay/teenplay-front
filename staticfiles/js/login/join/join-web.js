@@ -61,29 +61,45 @@ function passwordCheck () {
 passwordCheck();
 
 // 약관동의
+NodeList.prototype.filter = Array.prototype.filter;
+
+// function agreementCheck () {
+//     const essentialAgreement = document.querySelectorAll(".agreement-button.essential");
+//     const agreementError = document.querySelectorAll(".agreement-error");
+
+//     let allChecked = true;
+
+//     essentialAgreement.forEach((check, index) => {
+//         check.addEventListener(("click"), () => {
+//             if (!check.checked) {
+//                 essentialAgreement[index].style.borderColor = "#CE201B";
+//                 agreementError[index].classList.remove("hidden")
+//                 allChecked = false;
+//             }
+//             agreementError[index].classList.add("hidden")
+//         });
+//     })
+
+//     return allChecked;
+// }
+
 function agreementCheck () {
     const essentialAgreement = document.querySelectorAll(".agreement-button.essential");
-    const agreementError = document.querySelectorAll(".agreement-error");
-
-    let allChecked = true;
+    // const agreementError = document.querySelectorAll(".agreement-error");
 
     essentialAgreement.forEach((check, index) => {
         check.addEventListener(("click"), () => {
-            if (!check.checked) {
-                essentialAgreement[index].style.borderColor = "#CE201B";
-                agreementError[index].classList.remove("hidden")
-                allChecked = false;
-            }
-            agreementError[index].classList.add("hidden")
-        });
+            if 
+        })
     })
-
-    return allChecked;
+    essentialAgreement.filter((agreement) => agreement.checked).length === 3
 }
+
+agreementCheck();
 
 // 전체 검사
 function allCheck () {
-    if (agreementCheck() && nameCheck() && passwordCheck() && emailCheck()) {
+    if (emailCheck() && nameCheck() && passwordCheck() && agreementCheck()) {
         joinButton.classList.remove("disabled");
         return;
     }
