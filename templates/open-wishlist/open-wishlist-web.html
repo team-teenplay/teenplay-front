@@ -95,6 +95,10 @@
                                                     <div class="explain-text"> 틴친과 나의 위시리스트를 공유해요! </div>
                                                 </div>
                                             </div>
+                                            <!-- 카테고리에 게시글이 없을 때 출력 -->
+                                            <div class="post-error">
+                                                <span>게시글이 존재하지 않습니다.</span>
+                                            </div>
                                             <!-- 위시리스트 게시글 부분 -->
                                             <div class="wishlist-post">
                                                 <div class="post-wrap">
@@ -104,6 +108,9 @@
                                                         <div class="post-profile-warp">
                                                             <!-- 위시리스트 게시글 프로필 이미지 부분 -->
                                                             <div class="post-profile-img-container">
+                                                                <!-- 프로필 사진이 있을 경우 이미지 사진 출력 -->
+                                                                <img src="/staticfiles/images/teenplay_logo/logo1.png">
+                                                                <!-- 기본 프로필 이미지 -->
                                                                 <svg class="post-profile-img-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                                                                     <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd"></path>
                                                                 </svg>
@@ -136,7 +143,7 @@
                                                                         <svg class="post-comment-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                                                                             <path fill-rule="evenodd" d="M4.848 2.771A49.144 49.144 0 0112 2.25c2.43 0 4.817.178 7.152.52 1.978.292 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.678-3.348 3.97a48.901 48.901 0 01-3.476.383.39.39 0 00-.297.17l-2.755 4.133a.75.75 0 01-1.248 0l-2.755-4.133a.39.39 0 00-.297-.17 48.9 48.9 0 01-3.476-.384c-1.978-.29-3.348-2.024-3.348-3.97V6.741c0-1.946 1.37-3.68 3.348-3.97z" clip-rule="evenodd"></path>
                                                                         </svg>
-                                                                        <span class="post-comment-count">1</span>
+                                                                        <span class="post-comment-count">0</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -240,6 +247,9 @@
                                                             <div class="comment-list-wrap">
                                                                 <!-- 위시리스트 댓글 내 프로필 사진 부분 -->
                                                                 <div class="comment-profile-container">
+                                                                    <!-- 프로필 사진이 있을 경우 이미지 사진 출력 -->
+                                                                    <img src="/staticfiles/images/teenplay_logo/logo1.png">
+                                                                    <!-- 기본 프로필 이미지 -->
                                                                     <svg class="comment-profile-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                                                                         <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd"></path>
                                                                     </svg>
@@ -456,6 +466,49 @@
                             </div>
                             <div class="tag-list tag"></div>
                             <div class="tag-error-text hidden">태그는 5개, 1개당 글자수 10자까지 생성이 가능합니다.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 프로필 입력 시  -->
+        <div class="profile hidden">
+            <div class="modal-full-wrap" role="dialog" aria-modal="true" data-headlessui-state="open" aria-labelledby="headlessui-dialog-title-42" aria-describedby="headlessui-description-43">
+                <div class="modal-screen"></div>
+                <div class="modal-divison">
+                    <!-- 위시리스트 게시글 수정 모달 부분 -->
+                    <div class="teenchin-box post-update-wrap" data-headlessui-state="open">
+                        <div class="teenchin-items">
+                            <!-- 틴친 상세프로필 이동 주소 필요 -->
+                            <a href="">
+                                <div class="profile-img-contents">
+                                    <div class="profile-img-box">
+                                        <img class="profile-img" src="https://eventusstorage.blob.core.windows.net/evs/Image/insadream/TopLogo/8a54448dc9154bbd873bf8258a99ce14.png" alt="HR에듀센터_인사드림(insadream)" />
+                                    </div>
+                                    <div class="profile-img-gap"></div>
+                                </div>
+                                <div class="profile-info-contents">
+                                    <div class="profile-name">핏자</div>
+                                    <div class="profile-info-item">449<span>개의 행사</span></div>
+                                </div>
+                            </a>
+                            <div class="teenchin-btn-container">
+                                <div class="teenchin-btn-box">
+                                    <button class="teenchin-btn" type="button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="check-svg" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>틴친중</span>
+                                    </button>
+                                    <button class="send-letter-btn" type="button">
+                                        <svg aria-label="게시물 공유" class="send-svg" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24">
+                                            <line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line>
+                                            <polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon>
+                                        </svg>
+                                        <span>쪽지 보내기</span>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
