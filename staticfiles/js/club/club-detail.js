@@ -62,10 +62,14 @@ const tpFilterBtn = document.querySelector(".club-detail-filter-teenplay button"
 const activityContent = document.querySelector("div.club-detail-desc-container");
 const infoContent = document.querySelector(".club-info");
 const tpContent = document.querySelector(".club-teenplay");
+const noticeFilterWrap = document.querySelector(".club-detail-filter-notice");
+const noticeFilterBtn = document.querySelector(".club-detail-filter-notice .club-detail-filter-button");
+const noticeContent = document.querySelector(".club-notice");
 
 activityFilterBtn.addEventListener("click", () => {
     infoFilterWrap.style.border = "none";
     tpFilterWrap.style.border = "none";
+    noticeFilterWrap.style.border = "none";
     if (!infoFilterBtn.classList.contains("off")) {
         infoFilterBtn.classList.add("off");
     }
@@ -75,15 +79,20 @@ activityFilterBtn.addEventListener("click", () => {
     if (!tpFilterBtn.classList.contains("off")) {
         tpFilterBtn.classList.add("off");
     }
+    if (!noticeFilterBtn.classList.contains("off")) {
+        noticeFilterBtn.classList.add("off");
+    }
     activityFilterWrap.style.borderBottom = "2px solid #CE201B";
     activityContent.style.display = "block";
     infoContent.style.display = "none";
     tpContent.style.display = "none";
+    noticeContent.style.display = "none";
 });
 
 infoFilterBtn.addEventListener("click", () => {
     activityFilterWrap.style.border = "none";
     tpFilterWrap.style.border = "none";
+    noticeFilterWrap.style.border = "none";
     if (!activityFilterBtn.classList.contains("off")) {
         activityFilterBtn.classList.add("off");
     }
@@ -93,15 +102,20 @@ infoFilterBtn.addEventListener("click", () => {
     if (!tpFilterBtn.classList.contains("off")) {
         tpFilterBtn.classList.add("off");
     }
+    if (!noticeFilterBtn.classList.contains("off")) {
+        noticeFilterBtn.classList.add("off");
+    }
     infoFilterWrap.style.borderBottom = "2px solid #CE201B";
     infoContent.style.display = "block";
     activityContent.style.display = "none";
     tpContent.style.display = "none";
+    noticeContent.style.display = "none";
 });
 
 tpFilterBtn.addEventListener("click", () => {
     activityFilterWrap.style.border = "none";
     infoFilterWrap.style.border = "none";
+    noticeFilterWrap.style.border = "none";
     if (!activityFilterBtn.classList.contains("off")) {
         activityFilterBtn.classList.add("off");
     }
@@ -111,10 +125,37 @@ tpFilterBtn.addEventListener("click", () => {
     if (tpFilterBtn.classList.contains("off")) {
         tpFilterBtn.classList.remove("off");
     }
+    if (!noticeFilterBtn.classList.contains("off")) {
+        noticeFilterBtn.classList.add("off");
+    }
     tpFilterWrap.style.borderBottom = "2px solid #CE201B";
     tpContent.style.display = "block";
     activityContent.style.display = "none";
     infoContent.style.display = "none";
+    noticeContent.style.display = "none";
+});
+
+noticeFilterBtn.addEventListener("click", () => {
+    activityFilterWrap.style.border = "none";
+    infoFilterWrap.style.border = "none";
+    tpFilterWrap.style.border = "none";
+    if (!activityFilterBtn.classList.contains("off")) {
+        activityFilterBtn.classList.add("off");
+    }
+    if (!infoFilterBtn.classList.contains("off")) {
+        infoFilterBtn.classList.add("off");
+    }
+    if (!tpFilterBtn.classList.contains("off")) {
+        tpFilterBtn.classList.add("off");
+    }
+    if (noticeFilterBtn.classList.contains("off")) {
+        noticeFilterBtn.classList.remove("off");
+    }
+    noticeFilterWrap.style.borderBottom = "2px solid #CE201B";
+    noticeContent.style.display = "block";
+    activityContent.style.display = "none";
+    infoContent.style.display = "none";
+    tpContent.style.display = "none";
 });
 
 // 공유하기 버튼 클릭 시 모달창으로 클립보드에 url 복사
@@ -239,3 +280,26 @@ function exitModal() {
 
 modalLikeExitBtn.addEventListener("click", exitModal);
 modalUnlikeExitBtn.addEventListener("click", exitModal);
+
+// 공지사항 각각 제목 클릭 시 세부 내용 표시
+const noticeContentWraps = document.querySelectorAll(".club-notice-content-wrap");
+const noticeTitles = document.querySelectorAll(".club-notice-box");
+const noticeShowBtns = document.querySelectorAll(".club-notice-show-icon");
+const noticeHideBtns = document.querySelectorAll(".club-notice-hide-icon");
+
+noticeTitles.forEach((title, i) => {
+    title.addEventListener("click", () => {
+        if (noticeShowBtns[i].style.display == "block") {
+            noticeShowBtns[i].style.display = "none";
+            noticeHideBtns[i].style.display = "block";
+        } else {
+            noticeShowBtns[i].style.display = "block";
+            noticeHideBtns[i].style.display = "none";
+        }
+        if (noticeContentWraps[i].style.display == "none") {
+            noticeContentWraps[i].style.display = "block";
+        } else {
+            noticeContentWraps[i].style.display = "none";
+        }
+    });
+});

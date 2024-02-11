@@ -366,6 +366,13 @@ button, input, optgroup, select, textarea {
     min-width: fit-content;
 }
 
+.club-detail-filter-notice {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1rem*var(--tw-space-x-reverse));
+    margin-left: calc(1rem*(1 - var(--tw-space-x-reverse)));
+    min-width: fit-content;
+}
+
 .club-detail-filter-teenplay {
     --tw-space-x-reverse: 0;
     margin-right: calc(1rem*var(--tw-space-x-reverse));
@@ -967,6 +974,106 @@ button, input, optgroup, select, textarea {
 .club-info-texts {
     white-space: pre-line !important;
     word-break: break-word;
+}
+
+.club-notice {
+    display: none;
+}
+
+.club-notice-wrap {
+    min-height: 24rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.club-notice-empty-wrap {
+    justify-content: center;
+    align-items: center;
+    height: 24rem;
+    display: flex;
+}
+
+.club-notice-empty-container {
+    --tw-text-opacity: 1;
+    color: rgb(135 141 145/var(--tw-text-opacity));
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.club-notice-empty {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.club-notice-container {
+    overflow: hidden;
+    word-break: break-word;
+}
+
+.club-notice-boxes {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    --tw-border-opacity: 1;
+    border-color: rgb(225 228 230/var(--tw-border-opacity));
+    border-top-width: 1px;
+}
+
+.club-notice-box {
+    cursor: pointer;
+}
+
+.club-notice-title-wrap {
+    font-weight: 700;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+.club-notice-title-container {
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+.club-notice-title {
+    margin-right: 1rem;
+}
+
+.club-notice-show-icon {
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0/var(--tw-text-opacity));
+    font-weight: 700;
+    width: 1rem;
+    height: 1rem;
+}
+
+.club-notice-hide-icon {
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0/var(--tw-text-opacity));
+    font-weight: 700;
+    width: 1rem;
+    height: 1rem;
+}
+
+.club-notice-created-date {
+    --tw-text-opacity: 1;
+    color: rgb(135 141 145/var(--tw-text-opacity));
+    font-size: .8125rem;
+}
+
+.club-notice-content-wrap {
+    --tw-text-opacity: 1!important;
+    color: rgb(135 141 145/var(--tw-text-opacity))!important;
+    font-size: .9375rem!important;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.club-notice-content {
+    font-size: 14px;
+    color: rgb(135, 141, 145);
+    background-color: white;
+    margin: 0;
 }
 
 .club-teenplay {
