@@ -1,4 +1,4 @@
-// 달력을 가져오는 jquery
+// 달력을 가져오는 jquery입니다
 function initializeDatepicker() {
     // 오늘 날짜 가져오기
     const today = moment().format("MM/DD/YYYY");
