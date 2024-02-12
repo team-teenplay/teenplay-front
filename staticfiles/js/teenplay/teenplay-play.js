@@ -172,8 +172,6 @@ prevButtons.forEach((button, i) => {
         playingIdx--;
         allVideos[playingIdx].classList.add("playing");
         allVideos[playingIdx].classList.remove("pending");
-        allVideos[playingIdx].classList.add("playing");
-        allVideos[playingIdx].classList.remove("pending");
         allVideos[playingIdx].style.transform = "translate3d(-50%, -50%, 0)";
         allVideos[playingIdx].style.top = "50%";
         allVideos[playingIdx].style.left = "50%";
