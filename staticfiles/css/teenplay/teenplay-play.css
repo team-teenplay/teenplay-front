@@ -264,7 +264,7 @@ button, input, optgroup, select, textarea {
     border: 1px solid transparent;
     border-radius: 12px;
     z-index: 777;
-    transition: all .5s cubic-bezier(.08,.52,.52,1);
+    transition: all .5s cubic-bezier(.01,.01,.52,1);
 }
 
 .play-each.playing {
