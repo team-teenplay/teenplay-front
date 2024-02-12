@@ -63,7 +63,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="normal-check-items">
-                                                    <div class="noral-content-divide">
+                                                    <div class="normal-content-divide">
                                                         <div class="divide-line"></div>
                                                     </div>
                                                     <div>
@@ -229,7 +229,152 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div></div>
+                                            <div class="detail-setting-container">
+                                                <div class="detail-setting-box">
+                                                    <div class="detail-title-box">
+                                                        <div>
+                                                            <h1 class="detail-title">행사 상세 정보</h1>
+                                                            <p class="detail-sub-title">어떤 행사를 구상 중이세요? 명확하게 입력할수록 좋아요!</p>
+                                                        </div>
+                                                        <div>
+                                                            <span class="material-symbols-outlined mdi-down"> expand_more </span>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="normal-content-divide">
+                                                            <div class="divide-line"></div>
+                                                        </div>
+                                                        <div>
+                                                            <p class="detail-subject-title">분야/유형</p>
+                                                            <div class="detail-row">
+                                                                <div class="subject-own">
+                                                                    <div class="subject-select-box">
+                                                                        <select class="subject-category" id="subject-category">
+                                                                            <option value="disabled" selected="selected">분야선택</option>
+                                                                            <option value="경영">경영</option>
+                                                                            <option value="경제/금융">경제/금융</option>
+                                                                            <option value="과학기술">과학기술</option>
+                                                                            <option value="관광/여행">관광/여행</option>
+                                                                            <option value="디자인/영상">디자인/영상</option>
+                                                                            <option value="라이프">라이프</option>
+                                                                            <option value="마케팅">마케팅</option>
+                                                                            <option value="예술">예술</option>
+                                                                            <option value="의료/의학">의료/의학</option>
+                                                                            <option value="IT프로그래밍">IT프로그래밍</option>
+                                                                            <option value="기타">기타</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="activity-title">
+                                                            <p class="activity-title-text">행사명</p>
+                                                            <div class="activity-row">
+                                                                <input class="input-activity-title" id="activity-title-input" placeholder="텍스트 입력" type="text" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="activity-intro">
+                                                            <p class="activity-intro-text">간단소개</p>
+                                                            <span class="intro-sub-title"> 행사를 다른 채널로 공유할 때 썸네일 이미지와 함께 표시됩니다. </span>
+                                                        </div>
+                                                        <div class="activity-row">
+                                                            <div class="activity-col">
+                                                                <input class="input-activity-intro" id="activity-intro-input" placeholder="소개글 입력" type="text" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="activity-location">
+                                                            <p class="activity-location-text">장소</p>
+                                                            <div class="activity-location-select-row">
+                                                                <div class="activity-location-select-col">
+                                                                    <div class="location-row-item-center">
+                                                                        <div class="location-row-item-col">
+                                                                            <div class="location-select-box">
+                                                                                <select class="location-select-default">
+                                                                                    <option value="place">도로명/지번 주소 검색</option>
+                                                                                    <option value="direct">직접 입력</option>
+                                                                                    <option value="not-yet">아직 정해지지 않음</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="location-devide-container-row">
+                                                                <div class="location-devide-container-col">
+                                                                    <div class="input-location-map-title-row">
+                                                                        <div class="input-location-map-title-col">
+                                                                            <div>
+                                                                                <span class="location-map-text-title"> 주소 </span>
+                                                                            </div>
+                                                                            <div>
+                                                                                <input class="location-map-title-input-text" placeholder="마포대로 어딘가" name="location-content-input" />
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="activity-map-row">
+                                                                        <div class="activity-map-col">
+                                                                            <div class="activity-map-box">
+                                                                                <!-- 지도 삽입 -->
+                                                                                <div class="activity-event-map"></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="map-comment">
+                                                                            <span class="map-comment-text"> * 지도 클릭시 해당 위치의 주소를 가져올 수 있습니다. </span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="input-location-name-row">
+                                                                        <div class="input-location-name-col">
+                                                                            <div>
+                                                                                <span class="location-name-title"> 장소 </span>
+                                                                            </div>
+                                                                            <div>
+                                                                                <input class="location-name-input-text" placeholder="프론트윈 16F" name="location-name-input" />
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="input-location-content-row">
+                                                                        <div class="input-location-content-col">
+                                                                            <div>
+                                                                                <span class="location-content-title"> 장소설명 </span>
+                                                                            </div>
+                                                                            <div>
+                                                                                <input class="location-content-input-text" placeholder="주차는 건물 지하에 하세요" name="location-content-input" />
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="activity-image-upload">
+                                                            <p class="activity-image-upload-title">행사 대표 이미지</p>
+                                                            <div class="activity-image-upload-container-row">
+                                                                <div class="activity-image-upload-container-col">
+                                                                    <div class="image-box-row">
+                                                                        <div class="thumnail-add-box">
+                                                                            <div class="cover-image">
+                                                                                <div class="file-box-add">
+                                                                                    <label class="input-thumnail-s-button" for="input-thumnail">썸네일 이미지 추가</label>
+                                                                                    <input type="file" id="input-thumnail" />
+                                                                                </div>
+                                                                                <div class="thumnail-size-text">
+                                                                                    <div class="thumnail-size-cursor-pointer">960*540 px</div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div></div>
+                                                                        <div></div>
+                                                                        <div></div>
+                                                                        <div></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div></div>
+                                                        <div></div>
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div></div>
                                         </div>
                                     </div>
