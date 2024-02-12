@@ -2,7 +2,7 @@
 const leftButton = document.querySelector(".main-festival-button-left");
 const rightButton = document.querySelector(".main-festival-button-right");
 
-// 숫자 버튼 요소들을 가져옵니다.
+// 숫자 버튼 요소들을 가져옵니다
 const numberButtons = document.querySelectorAll(
     ".main-festival-banner-ad-button-number button"
 );
