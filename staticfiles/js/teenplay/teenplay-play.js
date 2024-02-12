@@ -26,6 +26,8 @@ videoWraps.forEach((videoWrap, i) => {
     }
 });
 
+videos[0].play();
+
 // 일시정지, 재생 관련 버튼
 // false일 때 클릭 시 재생, true일 때 클릭 시 일시정지
 globalThis.flags = new Array(videos.length);
@@ -47,19 +49,31 @@ videos.forEach((video, i) => {
 });
 
 // 음소거 관련 버튼
-muteIcons.forEach((mute, i) => {
-    mute.addEventListener("click", (e) => {
-        e.target.style.display = "none";
-        unmuteIcons[i].style.display = "block";
-        videos[i].muted = true;
+muteIcons.forEach((mute) => {
+    mute.addEventListener("click", () => {
+        muteIcons.forEach((mute) => {
+            mute.style.display = "none";
+        });
+        videos.forEach((video) => {
+            video.muted = true;
+        });
+        unmuteIcons.forEach((unmute) => {
+            unmute.style.display = "block";
+        });
     });
 });
 
-unmuteIcons.forEach((unmute, i) => {
+unmuteIcons.forEach((unmute) => {
     unmute.addEventListener("click", (e) => {
-        e.target.style.display = "none";
-        muteIcons[i].style.display = "block";
-        videos[i].muted = false;
+        unmuteIcons.forEach((unmute) => {
+            unmute.style.display = "none";
+        });
+        videos.forEach((video) => {
+            video.muted = false;
+        });
+        muteIcons.forEach((mute) => {
+            mute.style.display = "block";
+        });
     });
 });
 
@@ -73,7 +87,8 @@ videos.forEach((video, i) => {
 
 // 이동
 
-const centerStart = nowPlaying.getBoundingClientRect().left;
+let centerStart = nowPlaying.getBoundingClientRect().left;
+centerStart = centerStart >= 700 ? centerStart : 700;
 const move = (playingIdx) => {
     const allVideos = document.querySelectorAll(".play-each");
     allVideos.forEach((video, i) => {
@@ -102,7 +117,7 @@ const showPrevBtn = (playingIdx) => {
 };
 const showNextBtn = (playingIdx) => {
     nextButtons.forEach((button, i) => {
-        if (i + 4 == playingIdx) {
+        if (playingIdx - 3 < nextButtons.length && i + 4 == playingIdx) {
             button.style.display = "block";
         } else {
             button.style.display = "none";
