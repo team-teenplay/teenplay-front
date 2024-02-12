@@ -26,33 +26,19 @@ videoWraps.forEach((videoWrap, i) => {
     }
 });
 
-// 첫 4개(default값) 위치 세팅
-let halfWidth = window.innerWidth / 2;
-halfWidth -= 246;
-
-defaultVideoWraps.forEach((video, i) => {
-    video.style.transform = `translate(${halfWidth - 200 * (4 - i)}px) scale(0.4)`;
-});
-
-// 다음 4개 위치 세팅
-halfWidth += 246;
-nextVideoWraps.forEach((videoWrap, i) => {
-    videoWrap.style.transform = `translate(${halfWidth + 200 * (i + 1)}px) scale(0.4)`;
-});
-
 // 일시정지, 재생 관련 버튼
 // false일 때 클릭 시 재생, true일 때 클릭 시 일시정지
-globalThis.flag = false;
+globalThis.flags = new Array(videos.length);
 
 videos.forEach((video, i) => {
     video.addEventListener("click", (e) => {
-        if (!globalThis.flag) {
-            globalThis.flag = true;
+        if (!globalThis.flags[i]) {
+            globalThis.flags[i] = true;
             pauseIcons[i].style.display = "none";
             playIcons[i].style.display = "block";
             e.target.pause();
         } else {
-            globalThis.flag = false;
+            globalThis.flags[i] = false;
             pauseIcons[i].style.display = "block";
             playIcons[i].style.display = "none";
             e.target.play();
@@ -85,107 +71,105 @@ videos.forEach((video, i) => {
     });
 });
 
-// 화살표 클릭 시 슬라이드 효과
-// 아래 작업에 추가로, 비동기로 다음 틴플 영상을 가져오는 코드를
-// 서버 작업 시 추가해야 합니다.
-halfWidth -= 246;
-// > 화살표(다음)
-function slideNext() {
-    const allVideoWraps = document.querySelectorAll(".play-each");
-    const videos = document.querySelectorAll(".play-video");
-    let idx = 0;
-    // 현재 재생 중인 비디오의 인덱스를 구한 후
-    // 1 증가시켜 다음 비디오를 playing으로 바꿔준다.
-    allVideoWraps.forEach((video, i) => {
-        if (video.classList.contains("playing")) {
-            idx = i + 1;
-            video.classList.remove("playing");
-            return;
+// 이동
+
+const centerStart = nowPlaying.getBoundingClientRect().left;
+const move = (playingIdx) => {
+    const allVideos = document.querySelectorAll(".play-each");
+    allVideos.forEach((video, i) => {
+        let dist = 0;
+        if (i < playingIdx) {
+            dist = centerStart - (playingIdx - i) * 246 - 312;
+            video.style.transform = `translate(${dist}px) scale(0.4)`;
+        } else if (i > playingIdx) {
+            dist = centerStart - (playingIdx - i - 1) * 246 - 312;
+            video.style.transform = `translate(${dist}px) scale(0.4)`;
         }
     });
-    allVideoWraps[idx].classList.remove("pending");
-    allVideoWraps[idx].classList.add("playing");
-    allVideoWraps[idx].style.transform = "translate3d(-50%, -50%, 0)";
+};
 
-    videos[idx - 5].pause();
-    videos[idx - 4].play();
-    globalThis.flag = false;
+move(4);
 
-    prevButtons.forEach((prev) => {
-        prev.style.display = "none";
-    });
-    if (idx > 4) {
-        prevButtons[idx - 4].style.display = "block";
-    }
-    nextButtons.forEach((next) => {
-        next.style.display = "none";
-    });
-    if (idx < allVideoWraps.length - 1) {
-        nextButtons[idx - 4].style.display = "block";
-    }
-
-    // 이제 해당 인덱스를 기준으로 양옆의 요소를 이동시킨다.
-    allVideoWraps.forEach((video, i) => {
-        if (i < idx) {
-            video.style.transform = `translate(${halfWidth - 200 * (idx - i)}px) scale(0.4)`;
-        } else if (i > idx) {
-            video.style.transform = `translate(${halfWidth + 46 + 200 * (i - idx + 1)}px) scale(0.4)`;
+// 화살표 클릭 시 이동
+const showPrevBtn = (playingIdx) => {
+    prevButtons.forEach((button, i) => {
+        if (playingIdx > 4 && i + 4 == playingIdx) {
+            button.style.display = "block";
+        } else {
+            button.style.display = "none";
         }
     });
-}
+};
+const showNextBtn = (playingIdx) => {
+    nextButtons.forEach((button, i) => {
+        if (i + 4 == playingIdx) {
+            button.style.display = "block";
+        } else {
+            button.style.display = "none";
+        }
+    });
+};
 
-// 화살표 버튼의 클릭 이벤트로 추가
-nextButtons.forEach((button) => {
-    button.addEventListener("click", slideNext);
+nextButtons.forEach((button, i) => {
+    button.addEventListener("click", () => {
+        let playingIdx = i + 4;
+        const allVideos = document.querySelectorAll(".play-each");
+        allVideos[playingIdx].classList.remove("playing");
+        allVideos[playingIdx].classList.add("pending");
+        allVideos[playingIdx].style.transform = "";
+        allVideos[playingIdx].style.top = "";
+        allVideos[playingIdx].style.left = "";
+        allVideos[playingIdx].style.scale = "";
+        videos[playingIdx - 4].pause();
+        pauseIcons[playingIdx - 4].style.display = "none";
+        playIcons[playingIdx - 4].style.display = "block";
+        globalThis.flags[playingIdx - 4] = true;
+        playingIdx++;
+        allVideos[playingIdx].classList.add("playing");
+        allVideos[playingIdx].classList.remove("pending");
+        allVideos[playingIdx].style.transform = "translate3d(-50%, -50%, 0)";
+        allVideos[playingIdx].style.top = "50%";
+        allVideos[playingIdx].style.left = "50%";
+        allVideos[playingIdx].style.scale = "1";
+        showPrevBtn(playingIdx);
+        showNextBtn(playingIdx);
+        move(playingIdx);
+        videos[playingIdx - 4].play();
+        pauseIcons[playingIdx - 4].style.display = "block";
+        playIcons[playingIdx - 4].style.display = "none";
+        globalThis.flags[playingIdx - 4] = false;
+    });
 });
-
-// < 화살표 (이전)
-// halfWidth += 246;
-function slidePrev() {
-    const allVideoWraps = document.querySelectorAll(".play-each");
-    const videos = document.querySelectorAll(".play-video");
-    let idx = 0;
-    // 현재 재생 중인 비디오의 인덱스를 구한 후
-    // 1 감소시켜 이전 비디오를 playing으로 바꿔준다.
-    allVideoWraps.forEach((video, i) => {
-        if (video.classList.contains("playing")) {
-            idx = i - 1;
-            video.classList.remove("playing");
-            return;
-        }
+prevButtons.forEach((button, i) => {
+    button.addEventListener("click", () => {
+        let playingIdx = i + 4;
+        const allVideos = document.querySelectorAll(".play-each");
+        allVideos[playingIdx].classList.remove("playing");
+        allVideos[playingIdx].classList.add("pending");
+        allVideos[playingIdx].style.transform = "";
+        allVideos[playingIdx].style.top = "";
+        allVideos[playingIdx].style.left = "";
+        allVideos[playingIdx].style.scale = "";
+        videos[playingIdx - 4].pause();
+        pauseIcons[playingIdx - 4].style.display = "none";
+        playIcons[playingIdx - 4].style.display = "block";
+        globalThis.flags[playingIdx - 4] = true;
+        playingIdx--;
+        allVideos[playingIdx].classList.add("playing");
+        allVideos[playingIdx].classList.remove("pending");
+        allVideos[playingIdx].classList.add("playing");
+        allVideos[playingIdx].classList.remove("pending");
+        allVideos[playingIdx].style.transform = "translate3d(-50%, -50%, 0)";
+        allVideos[playingIdx].style.top = "50%";
+        allVideos[playingIdx].style.left = "50%";
+        allVideos[playingIdx].style.scale = "1";
+        showPrevBtn(playingIdx);
+        showNextBtn(playingIdx);
+        move(playingIdx);
+        videos[playingIdx - 4].play();
+        globalThis.flags[playingIdx - 4] = false;
+        pauseIcons[playingIdx - 4].style.display = "block";
+        playIcons[playingIdx - 4].style.display = "none";
+        globalThis.flags[playingIdx - 4] = false;
     });
-    allVideoWraps[idx].classList.remove("pending");
-    allVideoWraps[idx].style.transform = "translate3d(-50%, -50%, 0)";
-    allVideoWraps[idx].classList.add("playing");
-
-    videos[idx - 3].pause();
-    videos[idx - 4].play();
-    globalThis.flag = false;
-
-    prevButtons.forEach((prev) => {
-        prev.style.display = "none";
-    });
-    if (idx > 4) {
-        prevButtons[idx - 4].style.display = "block";
-    }
-    nextButtons.forEach((next) => {
-        next.style.display = "none";
-    });
-    if (idx < allVideoWraps.length - 1) {
-        nextButtons[idx - 4].style.display = "block";
-    }
-
-    // 이제 해당 인덱스를 기준으로 양옆의 요소를 이동시킨다.
-    allVideoWraps.forEach((video, i) => {
-        if (i < idx) {
-            video.style.transform = `translate(${halfWidth - 200 * (idx - i)}px) scale(0.4)`;
-        } else if (i > idx) {
-            video.style.transform = `translate(${halfWidth + 46 + 200 * (i - idx + 1)}px) scale(0.4)`;
-        }
-    });
-}
-
-// 화살표 버튼의 클릭 이벤트로 추가
-prevButtons.forEach((prev) => {
-    prev.addEventListener("click", slidePrev);
 });
