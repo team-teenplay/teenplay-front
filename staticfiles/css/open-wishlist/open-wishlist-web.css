@@ -321,6 +321,14 @@ input, select, textarea {
     font-size: .8125rem;
 }
 
+/* 카테고리에 게시글이 없을 때 출력 */
+.post-error {
+    margin-top: 1rem;
+    margin-left: .5rem;
+    color: #878787;
+    font-size: 1.5rem;
+}
+
 /* 위시리스트 게시글 부분 */
 .wishlist-post {
     border-left-width: 1px;
@@ -362,6 +370,7 @@ input, select, textarea {
     height: 3rem;
     aspect-ratio: 1;
     display: flex;
+    overflow: hidden;
 }
 
 .post-profile-img-icon {
@@ -781,6 +790,7 @@ input, select, textarea {
     width: 3rem;
     aspect-ratio: 1;
     display: flex;
+    overflow: hidden;
 }
 
 .comment-profile-icon {
@@ -1439,4 +1449,147 @@ comment-menu-open-wrap {
     color: #CE201B;
     padding-left: 85px;
     margin-top: .3rem;
+}
+
+/* 틴친 */
+.teenchin-box {
+    padding: 0.125rem;
+}
+
+.teenchin-items {
+    padding: 1.5rem;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255/var(--tw-bg-opacity));
+    border-width: 1px;
+    border-radius: 0.5rem;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    margin-bottom: -1px;
+}
+
+.profile-img-contents {
+    width: 6rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-img-box {
+    position: relative;
+    padding-bottom: calc(var(--tw-aspect-h)/var(--tw-aspect-w)*100%);
+    --tw-aspect-w: 1;
+    height: 1.5rem;
+    --tw-aspect-h: 1;
+}
+
+.profile-img {
+    object-fit: cover;
+    border-width: 1px;
+    border-radius: 9999px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.profile-img-gap {
+    height: 1.5rem;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    --tw-translate-y: -1.25rem;
+    transform: translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    display: flex;
+}
+
+.profile-info-contents {
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    margin-bottom: 0.25rem;
+}
+
+.profile-name {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.profile-info-item {
+    --tw-text-opacity: 1;
+    color: rgb(135 141 145/var(--tw-text-opacity));
+    font-size: .9375rem;
+    margin-bottom: 1rem;
+}
+
+.teenchin-btn-container {
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+}
+
+.teenchin-btn-box {
+    flex-direction: row;
+    font-size: .9375rem;
+    width: 100%;
+    display: flex;
+}
+
+.teenchin-btn {
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
+    --tw-border-opacity: 1;
+    border-color: rgb(245 242 255/var(--tw-border-opacity));
+    --tw-text-opacity: 1;
+    color: rgb(92 63 191/var(--tw-text-opacity));
+    width: 50%;
+    --tw-bg-opacity: 1;
+    background-color: rgb(245 242 255/var(--tw-bg-opacity));
+    border-radius: 0.375rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+    display: flex;
+}
+
+.teenchin-btn:hover, .send-letter-btn:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(227 222 247/var(--tw-bg-opacity));
+}
+
+.check-svg, .send-svg {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.25rem;
+}
+
+.send-letter-btn {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0px*(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px*var(--tw-space-y-reverse));
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0.75rem*var(--tw-space-x-reverse));
+    margin-left: calc(0.75rem*(1 - var(--tw-space-x-reverse)));
+    width: 50%;
+    --tw-text-opacity: 1;
+    color: rgb(36 93 203/var(--tw-text-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(239 246 255/var(--tw-bg-opacity));
+    border-radius: 0.375rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+    display: flex;
 }
