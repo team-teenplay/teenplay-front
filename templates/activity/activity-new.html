@@ -9,7 +9,24 @@
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css" />
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css" />
+            <link href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css" rel="stylesheet" type="text/css" />
             <title>틴플 : 활동 참가 신청</title>
+            <!-- datapicker 시작 -->
+            <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+            <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
+            <!-- timepicker 시작 -->
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+            <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css" />
+            <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+            <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+            <!-- editer 시작 -->
+            <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet" />
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+            <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet" />
+            <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
         </head>
     </head>
     <body>
@@ -25,17 +42,17 @@
                                     <div class="nav-size">
                                         <div class="nav-content-between">
                                             <div>
-                                                <span class="activity-name">테스트</span>
+                                                <span class="activity-name">행사</span>
                                                 <span class="small-right-arrow">
                                                     <span class="material-symbols-outlined mdi-right"> chevron_right </span>
                                                 </span>
-                                                <span class="activity-join-method">오프라인 모집</span>
+                                                <span class="activity-join-method">작성하기</span>
                                             </div>
                                             <div>
                                                 <div class="nav-right-tie">
                                                     <span class="nav-right-save">저장</span>
                                                     <div>
-                                                        <span class="nav-rihgt-actvity-open">행사 게시하기</span>
+                                                        <span class="nav-rihgt-actvity-open">행사 결제하기</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -60,6 +77,7 @@
                                                     </div>
                                                     <div>
                                                         <span class="material-symbols-outlined mdi-down"> expand_more </span>
+                                                        <span class="material-symbols-outlined mdi-up"> expand_less </span>
                                                     </div>
                                                 </div>
                                                 <div class="normal-check-items">
@@ -126,9 +144,15 @@
                                                                 <div class="deadline-choice-tie">
                                                                     <div class="choice-date">
                                                                         <input class="datepicker" id="start-date" placeholder="날짜선택" autocomplete="off" />
+                                                                        <div class="error-message-box-date">
+                                                                            <div class="error-message-text">필수 항목입니다.</div>
+                                                                        </div>
                                                                     </div>
                                                                     <div class="choice-time">
                                                                         <input class="timepicker" id="start-time" placeholder="시간선택" autocomplete="off" />
+                                                                        <div class="error-message-box-time">
+                                                                            <div class="error-message-text">필수 항목입니다.</div>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -139,9 +163,15 @@
                                                                 <div class="deadline-choice-tie">
                                                                     <div class="choice-date">
                                                                         <input class="datepicker" id="end-date" placeholder="날짜선택" autocomplete="off" />
+                                                                        <div class="error-message-box-date">
+                                                                            <div class="error-message-text">필수 항목입니다.</div>
+                                                                        </div>
                                                                     </div>
                                                                     <div class="choice-time">
                                                                         <input class="timepicker" id="end-time" placeholder="시간선택" autocomplete="off" />
+                                                                        <div class="error-message-box-time">
+                                                                            <div class="error-message-text">필수 항목입니다.</div>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -238,14 +268,18 @@
                                                         </div>
                                                         <div>
                                                             <span class="material-symbols-outlined mdi-down"> expand_more </span>
+                                                            <span class="material-symbols-outlined mdi-up"> expand_less </span>
                                                         </div>
                                                     </div>
-                                                    <div>
+                                                    <div class="detail-all-box">
                                                         <div class="normal-content-divide">
                                                             <div class="divide-line"></div>
                                                         </div>
                                                         <div>
                                                             <p class="detail-subject-title">분야/유형</p>
+                                                            <div class="error-message-box-select">
+                                                                <div class="error-message-text">필수 항목입니다.</div>
+                                                            </div>
                                                             <div class="detail-row">
                                                                 <div class="subject-own">
                                                                     <div class="subject-select-box">
@@ -269,8 +303,11 @@
                                                         </div>
                                                         <div class="activity-title">
                                                             <p class="activity-title-text">행사명</p>
-                                                            <div class="activity-row">
-                                                                <input class="input-activity-title" id="activity-title-input" placeholder="텍스트 입력" type="text" />
+                                                            <div class="error-message-box">
+                                                                <div class="error-message-text">필수 항목입니다.</div>
+                                                            </div>
+                                                            <div class="activity-row-input">
+                                                                <input class="input-activity-title" id="activity-title-input" placeholder="텍스트 입력" type="text" autocomplete="off" />
                                                             </div>
                                                         </div>
                                                         <div class="activity-intro">
@@ -292,7 +329,7 @@
                                                                                 <select class="location-select-default">
                                                                                     <option value="place">도로명/지번 주소 검색</option>
                                                                                     <option value="direct">직접 입력</option>
-                                                                                    <option value="not-yet">아직 정해지지 않음</option>
+                                                                                    <option value="not-yet" selected="selected">아직 정해지지 않음</option>
                                                                                 </select>
                                                                             </div>
                                                                         </div>
@@ -305,9 +342,12 @@
                                                                         <div class="input-location-map-title-col">
                                                                             <div>
                                                                                 <span class="location-map-text-title"> 주소 </span>
+                                                                                <div class="error-message-box-address">
+                                                                                    <div class="error-message-text">필수 항목입니다.</div>
+                                                                                </div>
                                                                             </div>
                                                                             <div>
-                                                                                <input class="location-map-title-input-text" placeholder="마포대로 어딘가" name="location-content-input" />
+                                                                                <input class="location-map-title-input-text" placeholder="마포대로 어딘가" name="location-content-input" autocomplete="off" />
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -326,9 +366,12 @@
                                                                         <div class="input-location-name-col">
                                                                             <div>
                                                                                 <span class="location-name-title"> 장소 </span>
+                                                                                <div class="error-message-box-location">
+                                                                                    <div class="error-message-text">필수 항목입니다.</div>
+                                                                                </div>
                                                                             </div>
                                                                             <div>
-                                                                                <input class="location-name-input-text" placeholder="프론트윈 16F" name="location-name-input" />
+                                                                                <input class="location-name-input-text" placeholder="프론트윈 16F" name="location-name-input" autocomplete="off" />
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -338,7 +381,7 @@
                                                                                 <span class="location-content-title"> 장소설명 </span>
                                                                             </div>
                                                                             <div>
-                                                                                <input class="location-content-input-text" placeholder="주차는 건물 지하에 하세요" name="location-content-input" />
+                                                                                <input class="location-content-input-text" placeholder="주차는 건물 지하에 하세요" name="location-content-input" autocomplete="off" />
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -361,34 +404,110 @@
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div></div>
-                                                                        <div></div>
-                                                                        <div></div>
-                                                                        <div></div>
+                                                                        <div class="thumnail-expand-add-box">
+                                                                            <div class="expand-cover-image">
+                                                                                <div class="expand-file-box-add">
+                                                                                    <label class="input-expand-s-button" for="input-expand-thumnail">상단 배너 이미지 추가</label>
+                                                                                    <input type="file" id="input-expand-thumnail" />
+                                                                                </div>
+                                                                                <div class="thumnail-size-text">
+                                                                                    <div class="thumnail-size-cursor-pointer">1920*400 px</div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="image-add-check">
+                                                                            <div class="banner-image-check">
+                                                                                <div>
+                                                                                    <input class="back-thumnail-fill" type="checkbox" id="thumanil-checkbox" />
+                                                                                    <label for="thumanil-checkbox">상단 배너 이미지 사용하기</label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="thumnail-hint-text-box">
+                                                                            <span class="thumnail-hint-text"> * 대표 이미지 템플릿을 무료로 제공하고 있어요. 이미지 제작 예시를 확인하고 필요한 템플릿 파일을 다운로드해 보세요. </span>
+                                                                        </div>
+                                                                        <div class="thumnail-hint-text-box add">
+                                                                            <span class="thumnail-hint-text"> * 검증된 디자이너에게 상세페이지 시안부터 출력물까지 직접 의뢰하실수 있습니다. </span>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div></div>
-                                                        <div></div>
-                                                        <div></div>
+                                                        <div class="join-deadline-box">
+                                                            <p class="deadline-title">활동기한</p>
+                                                            <div class="deadline-content-tie">
+                                                                <div class="deadline-sub-title">
+                                                                    <div class="deadline-sub-title-text">
+                                                                        <span>시작 일시</span>
+                                                                    </div>
+                                                                    <div class="deadline-choice-tie">
+                                                                        <div class="choice-date">
+                                                                            <input class="datepicker" id="activity-start-date" placeholder="날짜선택" autocomplete="off" />
+                                                                            <div class="error-message-box-date">
+                                                                                <div class="error-message-text">필수 항목입니다.</div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="choice-time">
+                                                                            <input class="timepicker" id="activity-start-time" placeholder="시간선택" autocomplete="off" />
+                                                                            <div class="error-message-box-time">
+                                                                                <div class="error-message-text">필수 항목입니다.</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="deadline-sub-title">
+                                                                    <div class="deadline-sub-title-text">
+                                                                        <span>마감 일시</span>
+                                                                    </div>
+                                                                    <div class="deadline-choice-tie">
+                                                                        <div class="choice-date">
+                                                                            <input class="datepicker" id="activity-end-date" placeholder="날짜선택" autocomplete="off" />
+                                                                            <div class="error-message-box-date">
+                                                                                <div class="error-message-text">필수 항목입니다.</div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="choice-time">
+                                                                            <input class="timepicker" id="activity-end-time" placeholder="시간선택" autocomplete="off" />
+                                                                            <div class="error-message-box-time">
+                                                                                <div class="error-message-text">필수 항목입니다.</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- presentation 가져오기 -->
+                                                        <div class="activity-presentation-container">
+                                                            <p class="activity-resentation-title">행사 정보</p>
+                                                            <div class="presentation-row">
+                                                                <div class="presentation-col">
+                                                                    <div class="presentation-box">
+                                                                        <div class="presentation-size"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div></div>
                                         </div>
                                     </div>
-                                    <div></div>
+                                    <div class="close-button">
+                                        <div class="close-button-relative">
+                                            <div class="close-button-relative-col">
+                                                <span class="button-save">취소</span>
+                                                <span class="button-edit">수정</span>
+                                                <span class="button-activity-open"> 행사 결제하기 </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </form>
-                            <div></div>
-                            <div></div>
-                            <div></div>
                         </div>
-                        <div></div>
                     </div>
                 </div>
             </div>
         </main>
     </body>
+    <script src="/staticfiles/js/activity/activity-new.js"></script>
 </html>

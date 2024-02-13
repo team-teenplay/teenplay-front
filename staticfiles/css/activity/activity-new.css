@@ -487,6 +487,12 @@ form p:last-child {
 
 .material-symbols-outlined.mdi-down {
     cursor: pointer;
+    display: none;
+}
+
+.material-symbols-outlined.mdi-up {
+    cursor: pointer;
+    display: block;
 }
 
 .normal-content-divide {
@@ -1262,6 +1268,15 @@ select {
     flex-wrap: wrap;
 }
 
+.activity-row-input {
+    margin-right: -9px;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
 .activity-col {
     width: 50%;
     padding-right: 9px;
@@ -1776,4 +1791,359 @@ input {
 .thumnail-size-cursor-pointer {
     cursor: pointer;
     color: #878d91;
+}
+
+.thumnail-expand-add-box {
+    padding-right: 9px;
+    padding-left: 9px;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 0.75rem;
+    min-height: 1px;
+    width: 475px !important;
+    margin-top: 0 !important;
+    display: none;
+}
+
+.expand-cover-image {
+    background-image: url("https://eventusstorage.blob.core.windows.net/evsnull");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    height: 153px;
+    border: 1px dotted #e5e5e5;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-position-x: center;
+    font-size: 12px;
+}
+
+.expand-file-box-add {
+    z-index: 10;
+}
+
+.input-expand-s-button {
+    cursor: pointer;
+    background-color: #fff !important;
+    color: #878d91 !important;
+    border: solid 1px #e1e4e6 !important;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    height: 32px;
+    line-height: 33px;
+    font-size: 12px;
+    padding: 0 16px;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.2s ease-out;
+    outline: 0;
+    display: inline-block;
+    border-radius: 6px;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+    letter-spacing: -0.035em !important;
+}
+
+.expand-file-box-add input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.image-add-check {
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+    min-height: 1px;
+    padding: 0 !important;
+}
+
+.banner-image-check {
+    padding-right: 9px;
+    padding-left: 9px;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 0.75rem;
+    min-height: 1px;
+    width: 272px !important;
+    margin-top: 8px !important;
+}
+
+[type="checkbox"].back-thumnail-fill:checked + label:before {
+    top: 5px;
+    left: 1px;
+    width: 7px;
+    height: 9px;
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    transform: rotateZ(41deg);
+    transform-origin: 100% 100%;
+}
+
+[type="checkbox"].back-thumnail-fill + label:before,
+[type="checkbox"].back-thumnail-fill + label:after {
+    content: "";
+    left: 0;
+    position: absolute;
+    transition: border 0.25s, background-color 0.25s, width 0.2s 0.1s, height 0.2s 0.1s, top 0.2s 0.1s, left 0.2s 0.1s;
+    z-index: 1;
+}
+
+[type="checkbox"].back-thumnail-fill:checked + label:after {
+    border: 2px solid #5c3fbf;
+    background-color: #5c3fbf;
+    z-index: 0;
+    width: 15px;
+    height: 15px;
+    top: 5px !important;
+    left: 1px;
+    border-radius: 3px;
+}
+
+[type="checkbox"].back-thumnail-fill + label:before,
+[type="checkbox"].back-thumnail-fill + label:after {
+    content: "";
+    left: 0;
+    position: absolute;
+    transition: border 0.25s, background-color 0.25s, width 0.2s 0.1s, height 0.2s 0.1s, top 0.2s 0.1s, left 0.2s 0.1s;
+    z-index: 1;
+}
+
+[type="checkbox"].back-thumnail-fill:not(:checked) + label:before {
+    width: 0;
+    height: 0;
+    border: 3px solid transparent;
+    left: 6px;
+    top: 10px;
+    transform: rotateZ(37deg);
+    transform-origin: 100% 100%;
+}
+
+[type="checkbox"].back-thumnail-fill:not(:checked) + label:after {
+    background-color: transparent;
+    border: 1px solid #cbcbcb;
+    z-index: 0;
+    width: 15px;
+    height: 15px;
+    top: 5px !important;
+    left: 1px;
+    border-radius: 3px;
+}
+
+.thumnail-hint-text-box {
+    width: 100%;
+    padding-right: 9px;
+    padding-left: 9px;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 0.75rem;
+    min-height: 1px;
+    margin-top: 0.5rem !important;
+}
+
+.thumnail-hint-text {
+    font-size: 12px;
+    color: #878d91;
+}
+
+.thumnail-hint-text-box.add {
+    width: 100%;
+    padding-right: 9px;
+    padding-left: 9px;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 0.75rem;
+    min-height: 1px;
+    margin-top: 0rem !important;
+}
+
+.activity-presentation-container {
+    margin-top: 4rem !important;
+}
+
+.activity-resentation-title {
+    font-weight: 700 !important;
+    color: #646464;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.presentz ation-row {
+    margin-right: -9px;
+    margin-left: -9px;
+    margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.presentation-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.presentation-col {
+    width: 83.33333%;
+    padding-right: 9px;
+    padding-left: 9px;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 0.75rem;
+    min-height: 1px;
+}
+
+.presentation-box {
+    position: relative;
+    margin-top: 0.5rem !important;
+}
+
+.presentation-size {
+    width: 100%;
+    height: 461px;
+}
+
+.close-button {
+    width: 1280px !important;
+    padding: 0 1rem;
+    margin: 0 auto;
+    max-width: 100% !important;
+}
+
+.close-button-relative {
+    margin-right: -9px;
+    margin-left: -9px;
+    position: relative !important;
+    margin-bottom: 5rem !important;
+    margin-top: 1.5rem !important;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.close-button-relative:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.close-button-relative-col {
+    width: 100%;
+    padding-right: 9px;
+    padding-left: 9px;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 0.75rem;
+    min-height: 1px;
+    text-align: center !important;
+}
+
+.button-save {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.2s ease-out;
+    cursor: pointer;
+    background-color: transparent !important;
+    color: #8d71dd;
+    border: solid 1px #8d71dd;
+    font-size: 14px;
+    outline: 0;
+    display: inline-block;
+    height: 48px;
+    line-height: 49px;
+    padding: 0 30px;
+    border-radius: 6px;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+    letter-spacing: -0.035em !important;
+}
+
+.button-edit {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.2s ease-out;
+    cursor: pointer;
+    background-color: transparent !important;
+    color: #8d71dd;
+    border: solid 1px #8d71dd;
+    font-size: 14px;
+    outline: 0;
+    display: inline-block;
+    height: 48px;
+    line-height: 49px;
+    padding: 0 30px;
+    border-radius: 6px;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+    letter-spacing: -0.035em !important;
+    display: none;
+}
+.button-save {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.2s ease-out;
+    cursor: pointer;
+    background-color: transparent !important;
+    color: #8d71dd;
+    border: solid 1px #8d71dd;
+    font-size: 14px;
+    outline: 0;
+    display: inline-block;
+    height: 48px;
+    line-height: 49px;
+    padding: 0 30px;
+    border-radius: 6px;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+    letter-spacing: -0.035em !important;
+}
+
+.button-activity-open {
+    margin-left: 0.5rem !important;
+    padding-left: 4rem !important;
+    padding-right: 4rem !important;
+    text-decoration: none;
+    color: #fff;
+    background-color: #5c3fbf;
+    text-align: center;
+    transition: 0.2s ease-out;
+    cursor: pointer;
+    font-size: 14px;
+    outline: 0;
+    border: none;
+    display: inline-block;
+    height: 48px;
+    line-height: 49px;
+    padding: 0 30px;
+    border-radius: 6px;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+    letter-spacing: -0.035em !important;
+}
+
+.error-message-box,
+.error-message-box-date,
+.error-message-box-time,
+.error-message-box-select,
+.error-message-box-address,
+.error-message-box-location {
+    color: #ff5353;
+    margin-top: 5px;
+    font-size: 12px;
+    display: none;
+    font-family: "Spoqa Han Sans Neo", sans-serif;
 }
