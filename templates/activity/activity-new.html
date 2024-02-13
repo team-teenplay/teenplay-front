@@ -27,6 +27,8 @@
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
             <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet" />
             <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+            <!-- 부트 페이 연동  -->
+            <script src="https://js.bootpay.co.kr/bootpay-4.3.4.min.js" type="application/javascript"></script>
         </head>
     </head>
     <body>
@@ -174,24 +176,6 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="pay-method">
-                                                        <p class="pay-method-title">결제 방식</p>
-                                                        <div>
-                                                            <div class="no-pay-tie">
-                                                                <span>
-                                                                    <input class="all-open" type="radio" id="pay-free-radio" name="pay-radio-check" checked="true" />
-                                                                    <label class="pay-free" for="pay-free-radio">무료</label>
-                                                                </span>
-                                                            </div>
-                                                            <!-- 결제를 선택 했을 때 어떻게 처리할 건지 확인 필요 -->
-                                                            <div class="pay-tie">
-                                                                <span>
-                                                                    <input class="all-open" type="radio" id="pay-radio" name="pay-radio-check" />
-                                                                    <label for="pay-radio">유료</label>
-                                                                </span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -402,6 +386,7 @@
                                                                                 <div class="thumnail-size-text">
                                                                                     <div class="thumnail-size-cursor-pointer">960*540 px</div>
                                                                                 </div>
+                                                                                <div class="cancel-image"></div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="thumnail-expand-add-box">
@@ -410,9 +395,10 @@
                                                                                     <label class="input-expand-s-button" for="input-expand-thumnail">상단 배너 이미지 추가</label>
                                                                                     <input type="file" id="input-expand-thumnail" />
                                                                                 </div>
-                                                                                <div class="thumnail-size-text">
-                                                                                    <div class="thumnail-size-cursor-pointer">1920*400 px</div>
+                                                                                <div class="thumnail-size-text-expand">
+                                                                                    <div class="thumnail-size-cursor-pointer-expand">1920*400 px</div>
                                                                                 </div>
+                                                                                <div class="cancel-expand-image"></div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="image-add-check">
@@ -510,4 +496,5 @@
         </main>
     </body>
     <script src="/staticfiles/js/activity/activity-new.js"></script>
+    <!-- 부트 페이 연동 -->
 </html>
