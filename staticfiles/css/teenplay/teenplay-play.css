@@ -161,7 +161,7 @@ button, input, optgroup, select, textarea {
     line-height: 18px;
     margin: 0;
     overflow-y: visible;
-    height: 100%;
+    /* height: 100%; */
     direction: ltr;
     padding: 0;
     unicode-bidi: embed;
@@ -205,9 +205,7 @@ button, input, optgroup, select, textarea {
 
 .play-section {
     width: 100%;
-    overflow-x: hidden;
-    height: 100%;
-    overflow-y: hidden;
+    /* height: 100%; */
     justify-content: center;
     flex-direction: column;
     display: flex;
@@ -216,62 +214,58 @@ button, input, optgroup, select, textarea {
 }
 
 .play-items {
-    max-height: 729px;
     max-width: 1296px;
-    align-items: stretch;
     align-self: center;
     border: 0;
     box-sizing: border-box;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     flex-shrink: 0;
     font: inherit;
     font-size: 100%;
-    height: 100%;
+    height: 100vh;
     margin: 0;
     overflow: hidden;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     padding: 0;
     position: relative;
     vertical-align: baseline;
     width: 100%;
 }
 
+.play-items::-webkit-scrollbar {
+    display: none;
+}
+
 .play-item {
-    height: 100%;
-    overflow-y: visible;
-    overflow-x: visible;
+    height: 500vh;
+    display: flex;
     border-bottom-left-radius: 0;
     background-color: transparent;
     box-sizing: border-box;
-    display: flex;
-    align-items: center;
     border-bottom-right-radius: 0;
     flex-shrink: 0;
-    flex-direction: row;
-    align-self: auto;
+    flex-direction: column;
     justify-content: flex-start;
-    position: relative;
+    align-items: center;
     flex-grow: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
 
 .play-each {
-    position: absolute;
-    transform-origin: left;
-    height: 680px;
-    width: 400px;
+    position: relative;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    height: 90vh;
+    width: 53vh;
     border: 1px solid transparent;
     border-radius: 12px;
     z-index: 777;
-    transition: all .5s cubic-bezier(.08,.52,.52,1);
-}
-
-.play-each.playing {
-    scale: 1;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
+    transition: all .5s cubic-bezier(.01,.01,.52,1);
 }
 
 .play-each-wrap {
@@ -326,23 +320,6 @@ button, input, optgroup, select, textarea {
     z-index: 1000;
 }
 
-.video-thumbnail {
-    width: 100%;
-    left: 0px;
-    top: 0px;
-    display: block;
-    position: relative;
-    object-fit: cover;
-    outline: 0;
-    border: none;
-    z-index: 900;
-    opacity: .5;
-}
-
-.play-each.playing .video-thumbnail {
-    display: none;
-}
-
 .play-video {
     display: none;
 }
@@ -364,22 +341,10 @@ button, input, optgroup, select, textarea {
     display: none;
 }
 
-.play-each:not(.playing) .play-info-wrap {
-    display: none;
-}
-
-.play-each:not(.playing) .play-control-wrap {
-    display: none;
-}
-
-.play-each:not(.playing) .play-progress-bar-wrap {
-    display: none;
-}
-
 .play-control-wrap {
     border-radius: 12px;
     height: 72px;
-    min-width: 315px;
+    /* min-width: 315px; */
     position: absolute;
     top: 0;
     width: 100%;
@@ -457,7 +422,7 @@ button, input, optgroup, select, textarea {
 
 .play-progress-bar-wrap {
     bottom: 0;
-    min-width: 315px;
+    /* min-width: 315px; */
     pointer-events: none;
     position: absolute;
     width: 100%;

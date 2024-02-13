@@ -303,3 +303,197 @@ noticeTitles.forEach((title, i) => {
         }
     });
 });
+
+// 틴플레이 업로드 버튼 클릭 시 모달창
+const tpUploadModal = document.querySelector(".club-upload-modal-wrap");
+const tpUploadBtn = document.querySelector(".club-detail-filter-upload-wrap");
+const tpModalCloseBtn = document.querySelector(".upload-modal-close-wrap");
+tpUploadBtn.addEventListener("click", () => {
+    tpUploadModal.style.display = "block";
+});
+tpModalCloseBtn.addEventListener("click", () => {
+    tpUploadModal.style.display = "none";
+});
+
+// 파일 선택 클릭 시 파일 첨부가능하도록
+const fileInput = document.querySelector("input[name=Filedata]");
+const addButton = document.querySelector(".upload-modal-upload-button-wrap");
+
+addButton.addEventListener("click", () => {
+    fileInput.click();
+});
+
+// 아이콘 클릭 시 파일 첨부가능하도록
+const uploadIcon = document.querySelector(".upload-modal-content-icon-wrap");
+uploadIcon.addEventListener("click", () => {
+    fileInput.click();
+});
+
+// 파일 첨부 시 용량(20MB 이하) 체크하여 클 시 에러메시지 출력 및
+// 용량 문제 없을 시 파일 정보를 아래에 표시
+const modalContentMsg = document.querySelector(".upload-modal-content-msg");
+const fileSizeInfo = document.querySelector(".pr-file-size");
+const fileNameInfo = document.querySelector(".pr-file-name");
+const afterUploadModal = document.querySelector(".upload-modal-content-container.after");
+const beforeUploadModal = document.querySelector(".upload-modal-content-container.before");
+const fileRemoveBtn = document.querySelector(".pr-remove-btn");
+
+function checkFileSize(obj, size) {
+    let check = false;
+    let sizeInBytes = obj.files[0].size;
+    if (sizeInBytes > size) {
+        check = false;
+    } else {
+        check = true;
+    }
+    return check;
+}
+
+function getFileSizeWithExtension(sizeInBytes) {
+    let fileSizeExt = new Array("bytes", "kb", "mb", "gb");
+    let i = 0;
+    let checkSize = sizeInBytes;
+    while (checkSize > 900) {
+        checkSize /= 1024;
+        i++;
+    }
+    checkSize = Math.round(checkSize * 100) / 100 + "" + fileSizeExt[i];
+    return checkSize;
+}
+
+const MAX_SIZE = 20; // 20MB
+fileInput.addEventListener("change", (e) => {
+    if (e.target.value) {
+        let checkSize = 1024 * 1024 * MAX_SIZE;
+        if (!checkFileSize(fileInput, checkSize)) {
+            modalContentMsg.style.color = "#CE201B";
+            e.preventDefault();
+            return;
+        }
+        modalContentMsg.style.color = "#606060";
+        fileSize = e.target.files[0].size;
+        fileSizeInfo.innerText = getFileSizeWithExtension(fileSize);
+        fileNameInfo.innerText = e.target.files[0].name;
+        beforeUploadModal.classList.remove("appear");
+        beforeUploadModal.classList.add("disappear");
+        setTimeout(() => {
+            beforeUploadModal.classList.add("hidden");
+            afterUploadModal.classList.remove("hidden");
+            afterUploadModal.classList.remove("disappear");
+            afterUploadModal.classList.add("appear");
+        }, 501);
+    }
+});
+
+// 파일 첨부 후 x버튼으로 삭제하기
+fileRemoveBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    fileInput.value = "";
+    afterUploadModal.classList.remove("appear");
+    afterUploadModal.classList.add("disappear");
+    setTimeout(() => {
+        afterUploadModal.classList.add("hidden");
+        beforeUploadModal.classList.remove("hidden");
+        beforeUploadModal.classList.remove("disappear");
+        beforeUploadModal.classList.add("appear");
+    }, 501);
+    fileSizeInfo.innerText = "";
+    fileNameInfo.innerText = "";
+});
+
+// 드래그 앤 드롭으로 파일 첨부하기
+beforeUploadModal.addEventListener("dragenter", (e) => {
+    e.preventDefault();
+});
+beforeUploadModal.addEventListener("dragover", (e) => {
+    e.preventDefault();
+});
+beforeUploadModal.addEventListener("dragleave", (e) => {
+    e.preventDefault();
+});
+beforeUploadModal.addEventListener("drop", (e) => {
+    e.preventDefault();
+    let file = e.dataTransfer;
+    if (!checkFileSize(file, 1024 * 1024 * MAX_SIZE)) {
+        modalContentMsg.style.color = "#CE201B";
+        return;
+    }
+    modalContentMsg.style.color = "#606060";
+    fileSize = file.files[0].size;
+    fileSizeInfo.innerText = getFileSizeWithExtension(fileSize);
+    fileNameInfo.innerText = file.files[0].name;
+    beforeUploadModal.classList.remove("appear");
+    beforeUploadModal.classList.add("disappear");
+    setTimeout(() => {
+        beforeUploadModal.classList.add("hidden");
+        afterUploadModal.classList.remove("hidden");
+        afterUploadModal.classList.remove("disappear");
+        afterUploadModal.classList.add("appear");
+    }, 501);
+});
+
+// 틴플레이 설명 입력 시 업로드 버튼 활성화 (10자 이상)
+const teenPlayTextInput = document.querySelector(".name-form-input");
+const finalSaveButton = document.querySelector(".upload-modal-confirm-button-wrap");
+teenPlayTextInput.addEventListener("keyup", () => {
+    if (teenPlayTextInput.value.length >= 10) {
+        finalSaveButton.classList.remove("disabled");
+    } else {
+        if (!finalSaveButton.classList.contains("disabled")) {
+            finalSaveButton.classList.add("disabled");
+        }
+    }
+});
+
+// 업로드 버튼 클릭 시 모달창으로 확인
+finalSaveButton.addEventListener("click", () => {
+    Swal.fire({
+        title: "업로드하시겠습니까?",
+        text: "한 번 업로드한 틴플레이는 수정이 불가능합니다.",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "업로드",
+        cancelButtonText: "취소",
+    }).then((result) => {
+        tpModalCloseBtn.click();
+        // 틴플레이 업로드 관련 서버 작업 코드 입력
+    });
+});
+
+// 틴플레이 삭제 아이콘 마우스 올리면 색상 변경 및
+// 틴플레이 삭제 아이콘 클릭 시 모달창 출력
+// 실제 삭제는 서버에서 구현합니다.
+const teenplayDeleteIconBlacks = document.querySelectorAll(".club-teenplay-delete");
+const teenplayDeleteIconHovers = document.querySelectorAll(".club-teenplay-delete-hover");
+const teenplayDeleteWraps = document.querySelectorAll(".club-teenplay-delete-wrap");
+const teenplayContentsWrap = document.querySelector(".club-teenplay-contents-box");
+const teenplayContents = document.querySelectorAll(".club-teenplay-contents");
+
+teenplayDeleteWraps.forEach((div, i) => {
+    div.addEventListener("mouseover", () => {
+        teenplayDeleteIconBlacks[i].style.display = "none";
+        teenplayDeleteIconHovers[i].style.display = "block";
+    });
+    div.addEventListener("mouseout", () => {
+        teenplayDeleteIconBlacks[i].style.display = "block";
+        teenplayDeleteIconHovers[i].style.display = "none";
+    });
+    div.addEventListener("click", () => {
+        Swal.fire({
+            title: "정말 삭제하시겠습니까?",
+            text: "삭제하신 틴플레이는 복구가 불가능합니다.",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "삭제",
+            cancelButtonText: "취소",
+        }).then((result) => {
+            // 틴플레이 삭제 관련 서버 작업 코드 입력
+            // 완료 시 아래 코드 실행 (실제로는 또 .then(()=>{}) 으로 써야함)
+            teenplayContentsWrap.removeChild(teenplayContents[i]);
+        });
+    });
+});

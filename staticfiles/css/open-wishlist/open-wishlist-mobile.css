@@ -141,28 +141,112 @@ input, select, textarea {
     min-height: 100vh;
 }
 
-.main-screen-warp {
-    max-width: 67rem;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .main-wrap {
-    padding-bottom: 3rem;
     padding: 0;
     width: 100%;
 }
 
 .main-divison {
-    flex-direction: row;
+    flex-direction: column;
     display: flex;
+    align-items: center;
+}
+
+/* 위시리스트 전체 부분 */
+.wishlist-all-wrap {
+    flex-basis: auto;
+    max-width: 56rem;
+    width: 100%;
+    position: relative;
+    height: 844px;
+    width: 390px;
+}
+
+/* 메인 화면 상단 카테고리 */
+.top-categroy-container {
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    --tw-bg-opacity: 1;
+    background-color: rgb(248 250 251/var(--tw-bg-opacity));
+    white-space: nowrap;
+    overflow-x: auto;
+    align-items: center;
+    top: 4rem;
+    position: sticky;
+    display: flex;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.top-categroy-items {
+    padding-top: .5rem;
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0.5rem*(1 - var(--tw-space-x-reverse)));
+    margin-left: calc(0.5rem*var(--tw-space-x-reverse));
+}
+
+.top-categroy-item {
+    --tw-shadow: 0 1px 1px 0 rgba(0,0,0,.05);
+    --tw-shadow-colored: 0 1px 1px 0 var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
+    line-height: 1;
+    font-weight: 400;
+    font-size: .8125rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255/var(--tw-bg-opacity));
+    border-width: 1px;
+    border-radius: 0.375rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+}
+
+.top-categroy-item:hover {
+    background-color: #F2F4F5;
+}
+
+/* 위시리스트 전체 포스트 부분 */
+/* 위시리스트 설명 부분 */
+.explain-wrap {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255/var(--tw-bg-opacity));
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+}
+
+.explain-container {
+    padding: 2rem;
+}
+
+.explain-title {
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.explain-text {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1rem*(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1rem*var(--tw-space-y-reverse));
+    --tw-text-opacity: 1;
+    color: rgb(135 141 145/var(--tw-text-opacity));
+    font-size: .8125rem;
 }
 
 /* 태그 검색 */
 .tags-search {
-    display: block;
-    padding-right: 1rem;
-    flex-basis: 15rem;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255/var(--tw-bg-opacity));
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    margin-top: 1rem;
+    
 }
 
 .tags-search-wrap {
@@ -170,10 +254,7 @@ input, select, textarea {
     padding: 1.3rem;
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255/var(--tw-bg-opacity));
-    border-width: 1px;
-    border-radius: 0.375rem;
-    width: 15rem;
-    position: sticky;
+    width: 100%;
 }
 
 .tags-search-title {
@@ -183,9 +264,6 @@ input, select, textarea {
 .tag-search-container {
     display: block;
     width: 100%;
-    --tw-space-y-reverse: 0;
-    margin-top: calc(1rem*(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(1rem*var(--tw-space-y-reverse));
 }
 
 .tag-search {
@@ -235,111 +313,21 @@ input, select, textarea {
     color: #CE201B
 }
 
-/* 위시리스트 전체 부분 */
-.wishlist-all-wrap {
-    flex-basis: auto;
-    max-width: 56rem;
-    width: 100%;
-    position: relative;
-}
-
-/* 메인 화면 상단 카테고리 */
-.top-categroy-container {
-    padding-top: 1.5rem;
-    padding-bottom: 2rem;
-    --tw-bg-opacity: 1;
-    background-color: rgb(248 250 251/var(--tw-bg-opacity));
-    white-space: nowrap;
-    overflow-x: auto;
-    align-items: center;
-    top: 4rem;
-    position: sticky;
-    grid-template-columns: repeat(7, minmax(0, 1fr));
-    display: grid;
-}
-
-.top-categroy-items {
-    padding-top: .5rem;
-    --tw-space-x-reverse: 0;
-    margin-right: calc(0.5rem*(1 - var(--tw-space-x-reverse)));
-    margin-left: calc(0.5rem*var(--tw-space-x-reverse));
-}
-
-.top-categroy-item {
-    --tw-shadow: 0 1px 1px 0 rgba(0,0,0,.05);
-    --tw-shadow-colored: 0 1px 1px 0 var(--tw-shadow-color);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
-    line-height: 1;
-    font-weight: 400;
-    font-size: .8125rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    --tw-bg-opacity: 1;
-    background-color: rgb(255 255 255/var(--tw-bg-opacity));
-    border-width: 1px;
-    border-radius: 0.375rem;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 3rem;
-    display: flex;
-}
-
-.top-categroy-item:hover {
-    background-color: #F2F4F5;
-}
-
-/* 위시리스트 전체 포스트 부분 */
-/* 위시리스트 설명 부분 */
-.explain-wrap {
-    border-width: 1px;
-    border-radius: 0.375rem;
-    --tw-bg-opacity: 1;
-    background-color: rgb(255 255 255/var(--tw-bg-opacity));
-    border-bottom-width: 1px;
-    border-top-width: 1px;
-}
-
-.explain-container {
-    padding: 2rem;
-}
-
-.explain-title {
-    font-weight: 700;
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-}
-
-.explain-text {
-    --tw-space-y-reverse: 0;
-    margin-top: calc(1rem*(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(1rem*var(--tw-space-y-reverse));
-    --tw-text-opacity: 1;
-    color: rgb(135 141 145/var(--tw-text-opacity));
-    font-size: .8125rem;
-}
-
 /* 카테고리에 게시글이 없을 때 출력 */
 .post-error {
     margin-top: 1rem;
-    margin-left: .5rem;
+    margin-left: 1rem;
     color: #878787;
     font-size: 1.5rem;
 }
 
 /* 위시리스트 게시글 부분 */
 .wishlist-post {
-    border-left-width: 1px;
-    border-right-width: 1px;
-    border-radius: 0.375rem;
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255/var(--tw-bg-opacity));
     border-bottom-width: 1px;
     border-top-width: 1px;
     margin-top: 1rem;
-    margin-bottom: 1rem;
 }
 
 .post-wrap {
@@ -648,6 +636,10 @@ input, select, textarea {
     resize: none;
 }
 
+.comment-input-guide::placeholder {
+    font-size: .9rem;
+}
+
 .comment-input-upload-wrap {
     justify-content: flex-end;
     display: flex;
@@ -730,6 +722,10 @@ input, select, textarea {
     padding: 0;
     width: 100%;
     resize: none;
+}
+
+.comment-update-guide::placeholder {
+    font-size: .9rem;
 }
 
 .comment-update-upload-wrap {
@@ -889,6 +885,7 @@ comment-menu-open-wrap {
 .extra-wrap {
     bottom: 1rem;
     position: fixed;
+    margin-bottom: 5rem;
 }
 
 .extra-divison {
@@ -1077,7 +1074,7 @@ comment-menu-open-wrap {
 
 /* 위시리스트 모달 입력 부분 */
 .post-create-wrap {
-    padding: 1.5rem;
+    padding: 1.3rem;
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255/var(--tw-bg-opacity));
     border-radius: 0.5rem;
@@ -1089,6 +1086,7 @@ comment-menu-open-wrap {
     margin-right: 1rem;
 }
 
+/* 위시리스트 게시글 작성 상단 부분 */
 .modal-create-top-wrap {
     padding-bottom: 1rem;
     font-size: .8125rem;
@@ -1159,6 +1157,7 @@ comment-menu-open-wrap {
     background-color: #9F0D08;
 }
 
+/* 게시글 카테고리 입력 부분 */
 .create-category-input {
     --tw-space-x-reverse: 0;
     margin-right: calc(2rem*var(--tw-space-x-reverse));
@@ -1198,12 +1197,12 @@ comment-menu-open-wrap {
     --tw-divide-y-reverse: 0;
     border-top-width: calc(1px*(1 - var(--tw-divide-y-reverse)));
     border-bottom-width: calc(1px*var(--tw-divide-y-reverse));
-    padding: 1rem 0 1rem 1rem;
+    padding: 1rem 0 0 1rem;
     align-items: center;
 }
 
 .create-tags-wrap .create-tags-title {
-    width: 11%;
+    width: 27%;
 }
 
 .create-tags-title-container {
@@ -1223,9 +1222,14 @@ comment-menu-open-wrap {
 .create-tags-title-text {
     margin-right: 1rem;
 }
+
+.create-tags-input-box {
+    width: 100%;
+}
+
 .create-tags-input {
     padding: 3rem;
-    width: 40rem;
+    width: 100%;
     display: inline-block;
     padding: 5px 10px;
     cursor: pointer;
@@ -1240,7 +1244,6 @@ comment-menu-open-wrap {
     flex-wrap: wrap;
     justify-content: flex-start;
     width: 100%;
-    padding-left: 80px;
 }
 
 .create-tags-wrap .create-tag div {
@@ -1259,18 +1262,17 @@ comment-menu-open-wrap {
 
 .create-tag-error {
     color: #CE201B;
-    padding-left: 85px;
-    margin-top: .3rem;
+    margin-top: .5rem;
 }
 
 /* 위시리스트 게시글 수정 모달 부분 */
 .post-update-wrap {
-    padding: 1.5rem;
+    padding: 1.3rem;
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255/var(--tw-bg-opacity));
     border-radius: 0.5rem;
     overflow-y: auto;
-    max-width: 35rem;
+    max-width: 50rem;
     width: 100%;
     max-height: calc(100vh - 40px);
     margin-left: 1rem;
@@ -1388,12 +1390,12 @@ comment-menu-open-wrap {
     --tw-divide-y-reverse: 0;
     border-top-width: calc(1px*(1 - var(--tw-divide-y-reverse)));
     border-bottom-width: calc(1px*var(--tw-divide-y-reverse));
-    padding: 1rem 0 1rem 1rem;
+    padding: 1rem 0 0 1rem;
     align-items: center;
 }
 
 .update-tags-wrap .update-tags-title {
-    width: 11%;
+    width: 27%;
 }
 
 .update-tags-title-container {
@@ -1413,9 +1415,14 @@ comment-menu-open-wrap {
 .update-tags-title-text {
     margin-right: 1rem;
 }
+
+.update-tags-input-box {
+    width: 100%;
+}
+
 .update-tags-input {
     padding: 3rem;
-    width: 40rem;
+    width: 100%;
     display: inline-block;
     padding: 5px 10px;
     cursor: pointer;
@@ -1430,7 +1437,6 @@ comment-menu-open-wrap {
     flex-wrap: wrap;
     justify-content: flex-start;
     width: 100%;
-    padding-left: 80px;
 }
 
 .update-tags-wrap .tag div {
@@ -1449,8 +1455,7 @@ comment-menu-open-wrap {
 
 .tag-error-text {
     color: #CE201B;
-    padding-left: 85px;
-    margin-top: .3rem;
+    margin-top: .5rem;
 }
 
 /* 틴친 프로필 모달 부분 */
@@ -1727,8 +1732,7 @@ textarea[name="send-content"]::-webkit-scrollbar {
     --tw-space-x-reverse: 0;
     margin-right: calc(1rem*var(--tw-space-x-reverse));
     margin-left: calc(1rem*(1 - var(--tw-space-x-reverse)));
-    --tw-border-opacity: 1;
-    border-color: rgb(92 63 191/var(--tw-border-opacity));
+    border-color: #CE201B;
     --tw-text-opacity: 1;
     color: rgb(255 255 255/var(--tw-text-opacity));
     --tw-shadow: 0 1px 1px 0 rgba(0,0,0,.05);
@@ -1739,8 +1743,7 @@ textarea[name="send-content"]::-webkit-scrollbar {
     font-size: .8125rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    --tw-bg-opacity: 1;
-    background-color: rgb(92 63 191/var(--tw-bg-opacity));
+    background-color: #CE201B;
     border-width: 1px;
     border-radius: 0.375rem;
     justify-content: center;
@@ -1751,8 +1754,7 @@ textarea[name="send-content"]::-webkit-scrollbar {
 }
 
 .send-check-btn:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(71 44 163/var(--tw-bg-opacity));
+    background-color: #9F0D08;
 }
 
 textarea {

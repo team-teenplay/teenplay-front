@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/staticfiles/images/teenplay_logo/logo1.png">
         <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
-        <link rel="stylesheet" href="/staticfiles/css/open-wishlist/open-wishlist-web.css">
+        <link rel="stylesheet" href="/staticfiles/css/open-wishlist/open-wishlist-mobile.css">
         <title>틴플 :: 공개 위시리스트</title>
     </head>
     <body class="body">
@@ -18,26 +18,6 @@
                     <div>
                         <div class="main-wrap">
                             <div class="main-divison">
-                                <!-- 태그 검색 부분-->
-                                <div class="tags-search">
-                                    <div class="tags-search-wrap">
-                                        <div class="tags-search-title">
-                                            <span>태그 검색</span>
-                                        </div>
-                                        <div class="tag-search-container">
-                                            <div class="tag-search" type="button">
-                                                <div class="tag-search-tiems">
-                                                    <button class="tag-search-icon" type="button">
-                                                        <svg class="tag-search-icon-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                                            <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
-                                                        </svg>
-                                                    </button>
-                                                    <input class="tag-search-text" type="text" placeholder="태그를 검색해 보세요">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                                 <!-- 위시리스트 전체 부분 -->
                                 <div class="wishlist-all-wrap">
                                     <!-- 메인 화면 상단 카테고리 -->
@@ -95,12 +75,30 @@
                                                     <div class="explain-text"> 틴친과 나의 위시리스트를 공유해요! </div>
                                                 </div>
                                             </div>
+                                            <!-- 태그 검색 부분-->
+                                            <div class="tags-search">
+                                                <div class="tags-search-wrap">
+                                                    <div class="tag-search-container">
+                                                        <div class="tag-search" type="button">
+                                                            <div class="tag-search-tiems">
+                                                                <button class="tag-search-icon" type="button">
+                                                                    <svg class="tag-search-icon-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                                        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+                                                                    </svg>
+                                                                </button>
+                                                                <input class="tag-search-text" type="text" placeholder="태그를 검색해 보세요">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <!-- 카테고리에 게시글이 없을 때 출력 -->
                                             <div class="post-error">
                                                 <span>게시글이 존재하지 않습니다.</span>
                                             </div>
                                             <!-- 위시리스트 게시글 부분 -->
                                             <div class="wishlist-post">
+                                                <!-- 메뉴 박스 -->
                                                 <div class="post-wrap">
                                                     <!-- 위시리스트 게시글 상단 부분 -->
                                                     <div class="post-top-warp">
@@ -395,13 +393,13 @@
                                     <span class="create-tags-title-text">태그입력</span>
                                 </div>
                                 <div class="create-tags-input-container">
-                                    <div>
-                                        <input class="create-tags-input" type="text" placeholder="태그는 최대 5개, 1개당 10자까지 가능">
+                                    <div class="create-tags-input-box">
+                                        <input class="create-tags-input" type="text" placeholder="최대 5개, 1개당 10자까지 입력 가능" maxlength="10">
                                     </div>
                                 </div>
                             </div>
                             <div class="create-tag-list create-tag"></div>
-                            <div class="create-tag-error hidden">태그는 5개, 1개당 글자수 10자까지 생성이 가능합니다.</div>
+                            <div class="create-tag-error hidden">최대 5개, 1개당 10자까지 생성이 가능합니다.</div>
                         </div>
                     </div>
                 </div>
@@ -459,13 +457,13 @@
                                     <span class="update-tags-title-text">태그입력</span>
                                 </div>
                                 <div class="update-tags-input-container">
-                                    <div>
-                                        <input class="update-tags-input" type="text" placeholder="태그는 최대 5개, 1개당 10자까지 가능">
+                                    <div class="update-tags-input-box">
+                                        <input class="update-tags-input" type="text" placeholder="최대 5개, 1개당 10자까지 입력 가능" maxlength="10">
                                     </div>
                                 </div>
                             </div>
                             <div class="tag-list tag"></div>
-                            <div class="tag-error-text hidden">태그는 5개, 1개당 글자수 10자까지 생성이 가능합니다.</div>
+                            <div class="tag-error-text hidden">최대 5개, 1개당 10자까지 생성이 가능합니다.</div>
                         </div>
                     </div>
                 </div>
