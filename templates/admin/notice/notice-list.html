@@ -200,25 +200,72 @@
                                     <span class="main-user-total-text"
                                         >전체</span
                                     >
-                                    <span class="main-user-total-number"
+                                    <span
+                                        class="main-user-total-number"
+                                        id="total-count"
                                         >0</span
                                     >
                                 </div>
                                 <!-- 2번째 -->
                                 <!-- 일단은 없애요^^ -->
-                                <div class="main-user-total-search">
-                                    <div class="main-user-total-member-status">
-                                        <div
-                                            class="main-user-total-member-list"
-                                        >
-                                            <button
-                                                class="main-user-total-button"
+                                <div class="main-bet">
+                                    <div class="main-wish-sellect">
+                                        <div class="main-wish-sellect-warp">
+                                            <div
+                                                class="main-wish-sellect-container"
                                             >
-                                                <span
-                                                    class="main-user-total-span"
-                                                    >공지사항 작성하기</span
+                                                <button
+                                                    type="button"
+                                                    class="main-wish-sellect-button"
+                                                    aria-label="filter"
                                                 >
-                                            </button>
+                                                    <div class="div-size">
+                                                        <span
+                                                            class="main-wish-sellect-button-span"
+                                                            >카테고리</span
+                                                        >
+                                                    </div>
+                                                </button>
+                                                <!-- 공개 비공개 모달창 -->
+                                                <ul
+                                                    id="admin-message-modal-search"
+                                                    class="hidden"
+                                                >
+                                                    <button
+                                                        class="admin-message-modal-search-receive"
+                                                    >
+                                                        카테고리
+                                                    </button>
+                                                    <button
+                                                        class="admin-message-modal-search-send"
+                                                    >
+                                                        공지사항
+                                                    </button>
+                                                    <button
+                                                        class="admin-message-modal-search-donotreceive"
+                                                    >
+                                                        자주묻는질문
+                                                    </button>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="main-user-total-search">
+                                        <div
+                                            class="main-user-total-member-status"
+                                        >
+                                            <div
+                                                class="main-user-total-member-list"
+                                            >
+                                                <button
+                                                    class="main-user-total-button"
+                                                >
+                                                    <span
+                                                        class="main-user-total-span"
+                                                        >공지사항 작성하기</span
+                                                    >
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -229,6 +276,9 @@
                                     공지사항 제목
                                 </div>
                                 <div class="main-user-status-date">작성일</div>
+                                <div class="main-user-status-date">
+                                    카테고리
+                                </div>
                                 <div class="main-user-status-paycount">
                                     수정하기
                                 </div>
@@ -242,6 +292,7 @@
                                 결제오류 해결방법
                             </div>
                             <div class="main-user-list-status">23.02.01</div>
+                            <div class="main-user-list-category">공지사항</div>
                             <div class="main-user-list-detail">
                                 <button
                                     class="member-user-list-detail-button toggle-button"
@@ -264,6 +315,9 @@
                                 로그인 오류 해결방법
                             </div>
                             <div class="main-user-list-status">23.02.01</div>
+                            <div class="main-user-list-category">
+                                자주묻는질문
+                            </div>
                             <div class="main-user-list-detail">
                                 <button
                                     class="member-user-list-detail-button toggle-button"
@@ -472,10 +526,11 @@
             <div id="admin-user-modal-backdrop" class="hidden"></div>
         </main>
     </body>
+
     <script src="/staticfiles/js/admin/notice/notice-list/admin-notice-list-delete.js"></script>
     <script src="/staticfiles/js/admin/notice/notice-list/notice-list-search.js"></script>
-    <script src="/staticfiles/js/admin/notice/notice-list/notice-list-modal.js"></script>
     <script src="/staticfiles/js/admin/notice/notice-list/admin-notice-list-bottem.js"></script>
     <script src="/staticfiles/js/admin/notice/notice-list/admin-notice-list-redbox.js"></script>
     <script src="/staticfiles/js/admin/notice/notice-list/admin-notice-list-button.js"></script>
+    <script src="/staticfiles/js/admin/notice/notice-list/notice-list-modal.js"></script>
 </html>
