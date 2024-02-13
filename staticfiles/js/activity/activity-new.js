@@ -121,7 +121,7 @@ clickOpenButton.addEventListener("click", (e) => {
         activityTitle.classList.add("border-color");
     }
 
-    if (selectBox.value == "disabled") {
+    if (selectBox.value === "disabled") {
         errorMessagesBoxSelect.style.display = "block";
         selectBox.classList.add("border-color");
     }
@@ -139,6 +139,7 @@ clickOpenButton.addEventListener("click", (e) => {
             timeBoxAll[i].classList.add("border-color");
         }
     });
+
     if (locationSelect.value === "place" && locationMapTitleInputText.value === "" && locationNameInputText.value === "") {
         errorMessagesBoxAddress.style.display = "block";
         errorMessagesBoxLocation.style.display = "block";
@@ -153,11 +154,26 @@ clickOpenButton.addEventListener("click", (e) => {
         errorMessagesBoxLocation.style.display = "block";
         locationNameInputText.classList.add("border-color");
     }
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-    });
+
+    let dateBoxAllArray = [...document.querySelectorAll(".date-box")];
+    let timeBoxAllArray = [...document.querySelectorAll(".date-box")];
+
+    if (activityTitle.value != "" && selectBox.value != "disabled" && dateBoxAllArray.every((date) => date.value != "") && timeBoxAllArray.every((time) => time.value != "")) {
+        if (locationSelect.value === "place" && locationMapTitleInputText.value != "" && locationNameInputText.value != "") {
+            pay();
+        } else if (locationSelect.value === "direct" && locationNameInputText.value === "") {
+            pay();
+        } else {
+            pay();
+        }
+    } else {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    }
 });
+
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 // 경고창 해제
@@ -178,7 +194,7 @@ timeBoxAll.forEach((time, i) => {
 });
 
 // 유형 선택 시 경고창 해제
-selectBox.addEventListener("click", () => {
+selectBox.addEventListener("change", () => {
     if (selectBox.value != "disabled") {
         errorMessagesBoxSelect.style.display = "none";
         selectBox.classList.remove("border-color");
@@ -209,13 +225,13 @@ let locationMap = document.querySelector(".activity-map-col");
 let locationMapInput = document.querySelector(".input-location-map-title-col");
 let locationText = document.querySelector(".input-location-name-col");
 let locationTextDetail = document.querySelector(".input-location-content-col");
-locationSelect.addEventListener("click", () => {
-    if (locationSelect.value === "place") {
+locationSelect.addEventListener("change", () => {
+    if (locationSelect.value == "place") {
         locationMapInput.style.display = "block";
         locationMap.style.display = "block";
         locationText.style.display = "block";
         locationTextDetail.style.display = "block";
-    } else if (locationSelect.value === "direct") {
+    } else if (locationSelect.value == "direct") {
         locationMapInput.style.display = "none";
         locationMap.style.display = "none";
         locationText.style.display = "block";
@@ -279,28 +295,103 @@ clickArrorwsDown.forEach((clickArrorw, i) => {
 });
 
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-// 파일 업로드 (확인해볼것)
+// 파일 업로드
 
-const imageInput = document.getElementById("input-expand-thumnail");
+// 기본 썸네일 확인
+const input = document.getElementById("input-thumnail");
+const thumbnail = document.querySelector(".cover-image");
+const cancel = document.querySelector(".cancel-image");
+let fileBoxAdd = document.querySelector(".file-box-add");
+let fileBoxAddSize = document.querySelector(".thumnail-size-text");
 
-imageInput.addEventListener("change", function (event) {
-    const file = event.target.files[0];
-    const reader = new FileReader();
-
-    input.addEventListener("change", (e) => {
-        const [file] = e.target.files;
-        const reader = new FileReader();
-        reader.readAsDataURL(file);
-        reader.addEventListener("load", (e) => {
-            const path = e.target.result;
-
-            if (path.includes("image")) {
-                thumbnail.style.backgroundImage = `url(${path})`;
-                console.log(1);
-            } else {
-                thumbnail.style.backgroundImage = `url('images/attach.png')`;
-                console.log(2);
-            }
-        });
+input.addEventListener("change", (e) => {
+    let [file] = e.target.files;
+    let reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.addEventListener("load", (e) => {
+        const path = e.target.result;
+        cancel.style.display = "block";
+        if (path.includes("image")) {
+            thumbnail.style.backgroundImage = `url(${path})`;
+            fileBoxAdd.style.display = "none";
+            fileBoxAddSize.style.display = "none";
+        } else {
+            thumbnail.style.backgroundImage = `url("https://eventusstorage.blob.core.windows.net/evsnull")`;
+        }
     });
 });
+// x 버튼 클릭 시 삭제
+cancel.addEventListener("click", (e) => {
+    thumbnail.style.backgroundImage = `url("https://eventusstorage.blob.core.windows.net/evsnull")`;
+    cancel.style.display = "none";
+    fileBoxAdd.style.display = "block";
+    fileBoxAddSize.style.display = "block";
+    input.value = "";
+});
+
+// 추가 베너 확인
+const inputExpand = document.getElementById("input-expand-thumnail");
+const thumbnailExpand = document.querySelector(".expand-cover-image");
+const cancelExpand = document.querySelector(".cancel-expand-image");
+
+let fileBoxAddExpand = document.querySelector(".expand-file-box-add");
+let fileBoxAddSizeExpand = document.querySelector(".thumnail-size-text-expand");
+
+inputExpand.addEventListener("change", (e) => {
+    let [file] = e.target.files;
+    let readerExpand = new FileReader();
+    console.log(file);
+    readerExpand.readAsDataURL(file);
+    readerExpand.addEventListener("load", (e) => {
+        const pathExpand = e.target.result;
+        cancelExpand.style.display = "block";
+        if (pathExpand.includes("image")) {
+            thumbnailExpand.style.backgroundImage = `url(${pathExpand})`;
+            fileBoxAddExpand.style.display = "none";
+            fileBoxAddSizeExpand.style.display = "none";
+        } else {
+            thumbnailExpand.style.backgroundImage = `url("https://eventusstorage.blob.core.windows.net/evsnull")`;
+        }
+    });
+});
+
+cancelExpand.addEventListener("click", (e) => {
+    thumbnailExpand.style.backgroundImage = `url("https://eventusstorage.blob.core.windows.net/evsnull")`;
+    cancelExpand.style.display = "none";
+    fileBoxAddExpand.style.display = "block";
+    fileBoxAddSizeExpand.style.display = "block";
+    inputExpand.value = "";
+});
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// 부트 페이 연동
+const pay = async () => {
+    const response = await Bootpay.requestPayment({
+        application_id: "59a4d323396fa607cbe75de4",
+        price: 1000,
+        order_name: "테스트결제",
+        order_id: "TEST_ORDER_ID",
+        pg: "다날",
+        method: "카드",
+        tax_free: 0,
+        user: {
+            id: "회원아이디",
+            username: "회원이름",
+            phone: "01000000000",
+            email: "test@test.com",
+        },
+        items: [
+            {
+                id: "item_id",
+                name: "테스트아이템",
+                qty: 1,
+                price: 1000,
+            },
+        ],
+        extra: {
+            open_type: "iframe",
+            card_quota: "0,2,3",
+            escrow: false,
+        },
+    });
+};

@@ -1806,13 +1806,21 @@ input {
     line-height: normal;
 }
 
-.thumnail-size-text {
+.thumnail-size-text,
+.thumnail-size-text-expand {
     margin-top: 0.5rem !important;
 }
 
 .thumnail-size-cursor-pointer {
     cursor: pointer;
     color: #878d91;
+    display: block;
+}
+
+.thumnail-size-cursor-pointer-expand {
+    cursor: pointer;
+    color: #878d91;
+    display: block;
 }
 
 .thumnail-expand-add-box {
@@ -2172,4 +2180,18 @@ input {
 
 .border-color {
     border-color: #ff5353 !important;
+}
+
+.cancel-image,
+.cancel-expand-image {
+    display: none;
+    cursor: pointer;
+    background-size: 100% 100%;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    right: 5px;
+    top: 0;
+    position: absolute;
+    background-image: url("/staticfiles/images/activity-new/cancel.png");
 }
