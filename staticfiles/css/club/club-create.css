@@ -889,6 +889,16 @@ input::placeholder {
     background-color: rgb(248 250 251/var(--tw-bg-opacity));
 }
 
+.img-form-profile-size-error {
+    display: none;
+    --tw-text-opacity: 1;
+    color: #CE201B;
+    margin-top: 1rem;
+    font-size: .8125rem;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
 .cover-thumbnail-wrap {
     width: 381px;
     outline-color: #e1e4e6;
