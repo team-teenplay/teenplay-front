@@ -8,13 +8,10 @@ const controlButtons = document.querySelectorAll(".play-control-wrap");
 const progressBars = document.querySelectorAll(".progress-bar-now");
 const muteIcons = document.querySelectorAll(".mute");
 const unmuteIcons = document.querySelectorAll(".unmute");
-const videoWraps = document.querySelectorAll(".play-each:not(.default)");
+const videoWraps = document.querySelectorAll(".play-each");
 let nowPlaying = document.querySelector(".play-each.playing");
-const prevButtons = document.querySelectorAll(".play-prev-btn");
-const nextButtons = document.querySelectorAll(".play-next-btn");
-const defaultVideoWraps = document.querySelectorAll(".play-each.default");
-const nextVideoWraps = document.querySelectorAll(".play-each.pending");
-
+const slideWrap = document.querySelector(".play-items");
+const slideContainer = document.querySelector(".play-item");
 // 재생 중이 아닌 영상은 일시정지로 시작
 
 videoWraps.forEach((videoWrap, i) => {
@@ -22,7 +19,6 @@ videoWraps.forEach((videoWrap, i) => {
         videos[i].autoplay = false;
     } else {
         videos[i].autoplay = true;
-        nextButtons[i].style.display = "block";
     }
 });
 
@@ -85,105 +81,73 @@ videos.forEach((video, i) => {
     });
 });
 
-// 이동
+// 스크롤로 이전/다음 틴플레이 이동
 
-let centerStart = nowPlaying.getBoundingClientRect().left;
-console.log(centerStart);
-centerStart = centerStart >= 720 ? centerStart : 720;
-const move = (playingIdx) => {
-    const allVideos = document.querySelectorAll(".play-each");
-    allVideos.forEach((video, i) => {
-        let dist = 0;
-        if (i < playingIdx) {
-            dist = centerStart - (playingIdx - i) * 246 - 312;
-            video.style.transform = `translate(${dist}px) scale(0.4)`;
-        } else if (i > playingIdx) {
-            dist = centerStart - (playingIdx - i - 1) * 246 - 312;
-            video.style.transform = `translate(${dist}px) scale(0.4)`;
+function slideNext(idx) {
+    slideContainer.style.transition = `all 0.5s ease-in`;
+    slideContainer.style.transform = `translateY(-${window.innerHeight * idx}px)`;
+    videoWraps[idx - 1].classList.remove("playing");
+    videoWraps[idx].classList.add("playing");
+}
+
+function slidePrev(idx) {
+    slideContainer.style.transition = `all 0.5s ease-in`;
+    slideContainer.style.transform = `translateY(-${window.innerHeight * idx}px)`;
+    videoWraps[idx + 1].classList.remove("playing");
+    videoWraps[idx].classList.add("playing");
+}
+
+function manageScroll(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    return;
+}
+
+let idx = 0;
+let check = true;
+slideWrap.addEventListener("wheel", (e) => {
+    manageScroll(e);
+    if (!check) return;
+    check = false;
+    for (let i = 0; i < videoWraps.length; i++) {
+        if (videoWraps[i].classList.contains("playing")) {
+            idx = i;
+            break;
         }
-    });
-};
-
-move(4);
-
-// 화살표 클릭 시 이동
-const showPrevBtn = (playingIdx) => {
-    prevButtons.forEach((button, i) => {
-        if (playingIdx > 4 && i + 4 == playingIdx) {
-            button.style.display = "block";
-        } else {
-            button.style.display = "none";
+    }
+    if (e.deltaY > 0) {
+        setTimeout(() => {
+            check = true;
+        }, 800);
+        if (idx == videoWraps.length - 1) {
+            return;
         }
-    });
-};
-const showNextBtn = (playingIdx) => {
-    nextButtons.forEach((button, i) => {
-        if (playingIdx - 3 < nextButtons.length && i + 4 == playingIdx) {
-            button.style.display = "block";
-        } else {
-            button.style.display = "none";
+        slideNext(idx + 1);
+        videos[idx].pause();
+        globalThis.flags[idx] = true;
+        pauseIcons[idx].style.display = "none";
+        playIcons[idx].style.display = "block";
+        idx++;
+        videos[idx].play();
+        globalThis.flags[idx] = false;
+        pauseIcons[idx].style.display = "block";
+        playIcons[idx].style.display = "none";
+    } else {
+        setTimeout(() => {
+            check = true;
+        }, 800);
+        if (idx == 0) {
+            return;
         }
-    });
-};
-
-nextButtons.forEach((button, i) => {
-    button.addEventListener("click", () => {
-        let playingIdx = i + 4;
-        const allVideos = document.querySelectorAll(".play-each");
-        allVideos[playingIdx].classList.remove("playing");
-        allVideos[playingIdx].classList.add("pending");
-        allVideos[playingIdx].style.transform = "";
-        allVideos[playingIdx].style.top = "";
-        allVideos[playingIdx].style.left = "";
-        allVideos[playingIdx].style.scale = "";
-        videos[playingIdx - 4].pause();
-        pauseIcons[playingIdx - 4].style.display = "none";
-        playIcons[playingIdx - 4].style.display = "block";
-        globalThis.flags[playingIdx - 4] = true;
-        playingIdx++;
-        allVideos[playingIdx].classList.add("playing");
-        allVideos[playingIdx].classList.remove("pending");
-        allVideos[playingIdx].style.transform = "translate3d(-50%, -50%, 0)";
-        allVideos[playingIdx].style.top = "50%";
-        allVideos[playingIdx].style.left = "50%";
-        allVideos[playingIdx].style.scale = "1";
-        showPrevBtn(playingIdx);
-        showNextBtn(playingIdx);
-        move(playingIdx);
-        videos[playingIdx - 4].play();
-        pauseIcons[playingIdx - 4].style.display = "block";
-        playIcons[playingIdx - 4].style.display = "none";
-        globalThis.flags[playingIdx - 4] = false;
-    });
-});
-prevButtons.forEach((button, i) => {
-    button.addEventListener("click", () => {
-        let playingIdx = i + 4;
-        const allVideos = document.querySelectorAll(".play-each");
-        allVideos[playingIdx].classList.remove("playing");
-        allVideos[playingIdx].classList.add("pending");
-        allVideos[playingIdx].style.transform = "";
-        allVideos[playingIdx].style.top = "";
-        allVideos[playingIdx].style.left = "";
-        allVideos[playingIdx].style.scale = "";
-        videos[playingIdx - 4].pause();
-        pauseIcons[playingIdx - 4].style.display = "none";
-        playIcons[playingIdx - 4].style.display = "block";
-        globalThis.flags[playingIdx - 4] = true;
-        playingIdx--;
-        allVideos[playingIdx].classList.add("playing");
-        allVideos[playingIdx].classList.remove("pending");
-        allVideos[playingIdx].style.transform = "translate3d(-50%, -50%, 0)";
-        allVideos[playingIdx].style.top = "50%";
-        allVideos[playingIdx].style.left = "50%";
-        allVideos[playingIdx].style.scale = "1";
-        showPrevBtn(playingIdx);
-        showNextBtn(playingIdx);
-        move(playingIdx);
-        videos[playingIdx - 4].play();
-        globalThis.flags[playingIdx - 4] = false;
-        pauseIcons[playingIdx - 4].style.display = "block";
-        playIcons[playingIdx - 4].style.display = "none";
-        globalThis.flags[playingIdx - 4] = false;
-    });
+        slidePrev(idx - 1);
+        videos[idx].pause();
+        globalThis.flags[idx] = true;
+        pauseIcons[idx].style.display = "none";
+        playIcons[idx].style.display = "block";
+        idx--;
+        videos[idx].play();
+        globalThis.flags[idx] = false;
+        pauseIcons[idx].style.display = "block";
+        playIcons[idx].style.display = "none";
+    }
 });
