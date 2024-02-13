@@ -1633,7 +1633,7 @@ body {
 .redbox{
     word-break: keep-all;
     align-items: center;
-    display: flex;
+    display: flex; 
     margin-right: auto;
 }
 
