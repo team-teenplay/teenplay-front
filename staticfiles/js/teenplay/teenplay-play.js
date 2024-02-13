@@ -88,7 +88,8 @@ videos.forEach((video, i) => {
 // 이동
 
 let centerStart = nowPlaying.getBoundingClientRect().left;
-centerStart = centerStart >= 700 ? centerStart : 700;
+console.log(centerStart);
+centerStart = centerStart >= 720 ? centerStart : 720;
 const move = (playingIdx) => {
     const allVideos = document.querySelectorAll(".play-each");
     allVideos.forEach((video, i) => {
