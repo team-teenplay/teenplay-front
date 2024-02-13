@@ -1862,3 +1862,11 @@ margin-left: 16px;}
     opacity: 1;
 color: #9ca3af;
 }
+
+.main-message-info-bet {
+    padding-right: 10px;
+    border-right-width: 1px;
+    height: 18px;
+    margin-left: -16px;
+    margin-right: 12px;
+}
