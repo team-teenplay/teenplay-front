@@ -158,6 +158,8 @@ input, select, textarea {
     max-width: 56rem;
     width: 100%;
     position: relative;
+    height: 844px;
+    width: 390px;
 }
 
 /* 메인 화면 상단 카테고리 */
