@@ -63,22 +63,94 @@ lastPrevButton.addEventListener("click", () => {
 
 // 개설 완료 및 건너뛰기 버튼은 서버 작업 시 연결.
 
+// 아래는 이미지 첨부 부분입니다.
+// 이미지 썸네일을 화면에 표시하는 부분은 서버 담당 시 구현합니다.
+
 // "모임 프로필 업로드" 버튼 클릭 시 프로필 사진 input 활성화(파일 업로드)
-const profileUploadBtn = document.querySelector(
-    ".img-form-profile-upload-button"
-);
+// 및 파일 용량 체크 (프사, 커버 10MB 제한)
+function checkFileSize(obj, size) {
+    let check = false;
+    let sizeInBytes = obj.files[0].size;
+    if (sizeInBytes > size) {
+        check = false;
+    } else {
+        check = true;
+    }
+    return check;
+}
+
+function getFileSizeWithExtension(sizeInBytes) {
+    let fileSizeExt = new Array("bytes", "kb", "mb", "gb");
+    let i = 0;
+    let checkSize = sizeInBytes;
+    while (checkSize > 900) {
+        checkSize /= 1024;
+        i++;
+    }
+    checkSize = Math.round(checkSize * 100) / 100 + "" + fileSizeExt[i];
+    return checkSize;
+}
+
+const MAX_SIZE = 10; // 10MB
+
 const openProfile = () => {
     document.getElementById("profile-image").click();
 };
 
+const profileInput = document.getElementById("profile-image");
+const sizeErrorMsg = document.querySelector(".img-form-profile-size-error");
+
+profileInput.addEventListener("change", (e) => {
+    if (e.target.value) {
+        let checkSize = 1024 * 1024 * MAX_SIZE;
+        if (!checkFileSize(profileInput, checkSize)) {
+            sizeErrorMsg.style.display = "block";
+            e.preventDefault();
+            return;
+        }
+        sizeErrorMsg.style.display = "none";
+        // 서버 작업은 여기에 fetch로 작성한 후 썸네일을 받아와 화면에 표시합니다.
+    }
+});
+
 // "모임 커버 업로드" 버튼 클릭 시 커버 사진 input 활성화(파일 업로드)
-const coverUploadBtn = document.querySelector(".cover-upload-wrap");
 const coverUploadInput = document.getElementById("background-image");
 const openCover = () => {
     coverUploadInput.click();
 };
 
-// "파일 업로드" 버튼 클릭 시 커버 사진 input 활성화(파일 업로드)
-const fileUploadBtn = document.querySelector("span.upload-span");
+coverUploadInput.addEventListener("change", (e) => {
+    if (e.target.value) {
+        let checkSize = 1024 * 1024 * MAX_SIZE;
+        if (!checkFileSize(coverUploadInput, checkSize)) {
+            sizeErrorMsg.style.display = "block";
+            e.preventDefault();
+            return;
+        }
+        sizeErrorMsg.style.display = "none";
+        // 서버 작업은 여기에 fetch로 작성한 후 썸네일을 받아와 화면에 표시합니다.
+    }
+});
 
-// 드래그 앤 드롭은 추후 서버 담당 시 구현합니다.
+// 드래그 앤 드롭으로 커버 업로드하기
+
+const dragDropBox = document.querySelector(".cover-thumbnail-wrap");
+dragDropBox.addEventListener("dragenter", (e) => {
+    e.preventDefault();
+});
+dragDropBox.addEventListener("dragover", (e) => {
+    e.preventDefault();
+});
+dragDropBox.addEventListener("dragleave", (e) => {
+    e.preventDefault();
+});
+dragDropBox.addEventListener("drop", (e) => {
+    e.preventDefault();
+    let file = e.dataTransfer;
+    if (!checkFileSize(file, 1024 * 1024 * MAX_SIZE)) {
+        sizeErrorMsg.style.display = "block";
+        return;
+    }
+    sizeErrorMsg.style.display = "none";
+    // 서버 작업은 여기에 fetch로 작성한 후 썸네일을 받아와 화면에 표시합니다.
+});
