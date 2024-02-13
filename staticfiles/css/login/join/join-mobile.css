@@ -642,4 +642,5 @@ a {
     border-radius: 0.375rem;
     width: 100%;
     display: block;
+    font-size: smaller;
 }

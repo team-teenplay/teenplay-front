@@ -286,3 +286,61 @@ document.addEventListener("click", (e) => {
         modalCreateInput.classList.add("hidden");
     }
 });
+
+// 프로필 클릭 시 틴친 프로필 모달 출력 이벤트
+const postProfileImg = document.querySelector(".post-profile-img-container")
+const commentProfileImg = document.querySelector(".comment-profile-container")
+const profile = document.querySelector(".profile")
+
+postProfileImg.addEventListener("click", () => {
+    profile.classList.remove("hidden");
+});
+
+commentProfileImg.addEventListener("click", () => {
+    profile.classList.remove("hidden");
+});
+
+// 틴친 프로필 모달 닫기 이벤트
+const teenchinBox = document.querySelector(".teenchin-box")
+
+document.addEventListener("click", (e) => {
+    if (!postProfileImg.contains(e.target) && !commentProfileImg.contains(e.target) && !teenchinBox.contains(e.target)) {
+        profile.classList.add("hidden");
+    }
+});
+
+// 쪽지 보내기 클릭 시 쪽지 보내기 모달 출력 이벤트
+const sendLetterBoxBtn = document.querySelector(".send-letter-btn")
+const sendLetter = document.querySelector(".send-modal-wrap")
+
+sendLetterBoxBtn.addEventListener("click", () => {
+    profile.classList.add("hidden");
+    sendLetter.classList.remove("hidden");
+});
+
+// 쪽지 보내기 닫기(버튼) 모달 이벤트
+const sendLetterCloseBtn = document.querySelector(".send-close-btn")
+
+sendLetterCloseBtn.addEventListener("click", () => {
+    sendLetter.classList.add("hidden");
+});
+
+// 쪽지 보내기 닫기(여백) 모달 이벤트
+const sendLetterModal = document.querySelector(".send-modal-box")
+
+document.addEventListener("click", (e) => {
+    if (!sendLetterBoxBtn.contains(e.target) && !sendLetterModal.contains(e.target)) {
+        sendLetter.classList.add("hidden");
+    }
+});
+
+// 쪽지 보내기 모달 이벤트
+const sendLetterBtn = document.querySelector(".send-check-btn")
+
+sendLetterBtn.addEventListener("click", () => {
+    Swal.fire(
+        "쪽지가 전송 되었습니다.",
+        "",
+        "success"
+    );
+});

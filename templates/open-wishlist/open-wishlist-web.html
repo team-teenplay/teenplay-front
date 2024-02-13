@@ -248,7 +248,7 @@
                                                                 <!-- 위시리스트 댓글 내 프로필 사진 부분 -->
                                                                 <div class="comment-profile-container">
                                                                     <!-- 프로필 사진이 있을 경우 이미지 사진 출력 -->
-                                                                    <img src="/staticfiles/images/teenplay_logo/logo1.png">
+                                                                    <!-- <img src="/staticfiles/images/teenplay_logo/logo1.png"> -->
                                                                     <!-- 기본 프로필 이미지 -->
                                                                     <svg class="comment-profile-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                                                                         <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd"></path>
@@ -471,35 +471,44 @@
                 </div>
             </div>
         </div>
-        <!-- 프로필 입력 시  -->
+        <!-- 틴친 프로필 모달 부분  -->
         <div class="profile hidden">
             <div class="modal-full-wrap" role="dialog" aria-modal="true" data-headlessui-state="open" aria-labelledby="headlessui-dialog-title-42" aria-describedby="headlessui-description-43">
                 <div class="modal-screen"></div>
                 <div class="modal-divison">
-                    <!-- 위시리스트 게시글 수정 모달 부분 -->
+                    <!-- 틴친 프로필 정보 부분 -->
                     <div class="teenchin-box post-update-wrap" data-headlessui-state="open">
                         <div class="teenchin-items">
+                            <!-- 틴친 프로필 사진 부분 -->
                             <!-- 틴친 상세프로필 이동 주소 필요 -->
                             <a href="">
                                 <div class="profile-img-contents">
                                     <div class="profile-img-box">
-                                        <img class="profile-img" src="https://eventusstorage.blob.core.windows.net/evs/Image/insadream/TopLogo/8a54448dc9154bbd873bf8258a99ce14.png" alt="HR에듀센터_인사드림(insadream)" />
+                                        <!-- 프로필 사진이 있을 경우 이미지 사진 출력 -->
+                                        <!-- <img class="profile-img" src="/staticfiles/images/teenplay_logo/logo1.png"> -->
+                                        <!-- 프로필 기본 이미지 -->
+                                        <svg class="profile-defalut-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd"></path>
                                     </div>
+                                    <!-- 틴친 프로필 이미지 여백 부분 -->
                                     <div class="profile-img-gap"></div>
                                 </div>
+                                <!-- 틴친 프로필 이름 부분 -->
                                 <div class="profile-info-contents">
                                     <div class="profile-name">핏자</div>
-                                    <div class="profile-info-item">449<span>개의 행사</span></div>
                                 </div>
                             </a>
+                            <!-- 틴친 프로필 버튼 부분 -->
                             <div class="teenchin-btn-container">
                                 <div class="teenchin-btn-box">
+                                    <!-- 틴친중 버튼 부분 -->
                                     <button class="teenchin-btn" type="button">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="check-svg" viewBox="0 0 20 20" fill="currentColor">
                                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                                         </svg>
                                         <span>틴친중</span>
                                     </button>
+                                    <!-- 쪽지 보내기 버튼 부분 -->
                                     <button class="send-letter-btn" type="button">
                                         <svg aria-label="게시물 공유" class="send-svg" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24">
                                             <line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line>
@@ -514,6 +523,46 @@
                 </div>
             </div>
         </div>
+        <!-- 쪽지 보내기 모달 부분 -->
+        <div class="send-modal-wrap hidden">
+            <div class="modal-full-wrap" role="dialog" aria-modal="true" data-headlessui-state="open" aria-labelledby="headlessui-dialog-title-42" aria-describedby="headlessui-description-43">
+                <div class="modal-screen"></div>
+                <div class="modal-divison">
+                    <!-- 쪽지 보내기 부분 -->
+                    <div class="send-modal-container">
+                        <div class="send-modal-box">
+                            <div>
+                                <h2 class="modal-header-box">
+                                    <div class="send-modal-title">쪽지 보내기</div>
+                                </h2>
+                            </div>
+                            <div class="sender-receiver-box">
+                                <div class="sender-box">
+                                    <div class="sender-title">보낸 사람</div>
+                                    <!-- 회원의 이름과 이메일이 필요 -->
+                                    <div class="send-sender-email" type="text">아무개(example@sample.com)</div>
+                                </div>
+                                <div class="receiver-box">
+                                    <div class="receiver-title">받는 사람</div>
+                                    <!-- 형식: 아무개(example@sample.com) -->
+                                    <div class="send-receiver-email-box">
+                                        <input class="send-receiver-email" autocomplete="off" type="text" placeholder="example@sample.com"></input>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="letter-content-area">
+                                <!-- 쪽지 내용 필요 -->
+                                <textarea name="send-content" rows="10" placeholder="쪽지의 내용을 작성해 주세요."></textarea>
+                            </div>
+                            <div class="modal-btn-box">
+                                <button class="send-close-btn" type="button">닫기</button>
+                                <button class="send-check-btn" type="button">보내기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="/staticfiles/js/open-wishlist/open-wishlist-web.js"></script>
 </html>
