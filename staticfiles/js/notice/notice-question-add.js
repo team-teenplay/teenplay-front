@@ -103,7 +103,7 @@ function initializeNotice(noticeElement) {
 const noticeButton2 = document.querySelector(".main-qu-button");
 noticeButton2.addEventListener("click", addNotices2);
 
-// 초기화 함수를 통해 기존 공지사항에 클릭 이벤트 적용
+// 초기화 함수를 통해 기존 공지사항에 클릭 이벤트 적용.
 const existingNotices2 = document.querySelectorAll(".main-notice-qu-warp");
 existingNotices2.forEach((notice) => {
     initializeNotice(notice);
