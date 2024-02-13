@@ -114,37 +114,49 @@ let locationMapTitleInputText = document.querySelector(".location-map-title-inpu
 let locationNameInputText = document.querySelector(".location-name-input-text");
 let locationContentInputText = document.querySelector(".location-content-input-text");
 
-// 결제하기 버튼을 클릭했을 때 필수 값 나오기
+// 결제하기 버튼을 클릭했을 때 입력되지 않은 경고 문구 값 나오기
 clickOpenButton.addEventListener("click", (e) => {
     if (activityTitle.value === "") {
         errorMessagesBox.style.display = "block";
+        activityTitle.classList.add("border-color");
     }
 
     if (selectBox.value == "disabled") {
         errorMessagesBoxSelect.style.display = "block";
+        selectBox.classList.add("border-color");
     }
 
     dateBoxAll.forEach((date, i) => {
         if (dateBoxAll[i].value === "") {
             errorMessagesBoxDate[i].style.display = "block";
+            dateBoxAll[i].classList.add("border-color");
         }
     });
 
     timeBoxAll.forEach((time, i) => {
         if (timeBoxAll[i].value === "") {
             errorMessagesBoxTime[i].style.display = "block";
+            timeBoxAll[i].classList.add("border-color");
         }
     });
     if (locationSelect.value === "place" && locationMapTitleInputText.value === "" && locationNameInputText.value === "") {
         errorMessagesBoxAddress.style.display = "block";
         errorMessagesBoxLocation.style.display = "block";
+        locationMapTitleInputText.classList.add("border-color");
+        locationNameInputText.classList.add("border-color");
     } else if (locationMapTitleInputText.value != "" && locationNameInputText.value === "") {
         errorMessagesBoxLocation.style.display = "block";
+        locationNameInputText.classList.add("border-color");
     }
 
     if (locationSelect.value === "direct" && locationNameInputText.value === "") {
         errorMessagesBoxLocation.style.display = "block";
+        locationNameInputText.classList.add("border-color");
     }
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    });
 });
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
@@ -153,6 +165,7 @@ clickOpenButton.addEventListener("click", (e) => {
 dateBoxAll.forEach((date, i) => {
     date.addEventListener("focus", () => {
         errorMessagesBoxDate[i].style.display = "none";
+        date.classList.remove("border-color");
     });
 });
 
@@ -160,6 +173,7 @@ dateBoxAll.forEach((date, i) => {
 timeBoxAll.forEach((time, i) => {
     time.addEventListener("focus", () => {
         errorMessagesBoxTime[i].style.display = "none";
+        time.classList.remove("border-color");
     });
 });
 
@@ -167,20 +181,24 @@ timeBoxAll.forEach((time, i) => {
 selectBox.addEventListener("click", () => {
     if (selectBox.value != "disabled") {
         errorMessagesBoxSelect.style.display = "none";
+        selectBox.classList.remove("border-color");
     }
 });
 
 // 행사명 입력 시 경고창 해제
 activityTitle.addEventListener("keyup", () => {
     errorMessagesBox.style.display = "none";
+    activityTitle.classList.remove("border-color");
 });
 
 // 장소 입력 시 경고창 해제
 locationMapTitleInputText.addEventListener("keyup", () => {
     errorMessagesBoxAddress.style.display = "none";
+    locationMapTitleInputText.classList.remove("border-color");
 });
 locationNameInputText.addEventListener("keyup", () => {
     errorMessagesBoxLocation.style.display = "none";
+    locationNameInputText.classList.remove("border-color");
 });
 
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -261,7 +279,7 @@ clickArrorwsDown.forEach((clickArrorw, i) => {
 });
 
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-// 파일 업로드
+// 파일 업로드 (확인해볼것)
 
 const imageInput = document.getElementById("input-expand-thumnail");
 

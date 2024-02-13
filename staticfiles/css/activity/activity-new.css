@@ -485,6 +485,28 @@ form p:last-child {
     text-decoration: inherit;
 }
 
+input:not([type]):focus:not([readonly]),
+input[type="text"]:not(.browser-default):focus:not([readonly]),
+input[type="password"]:not(.browser-default):focus:not([readonly]),
+input[type="email"]:not(.browser-default):focus:not([readonly]),
+input[type="url"]:not(.browser-default):focus:not([readonly]),
+input[type="time"]:not(.browser-default):focus:not([readonly]),
+input[type="date"]:not(.browser-default):focus:not([readonly]),
+input[type="datetime"]:not(.browser-default):focus:not([readonly]),
+input[type="datetime-local"]:not(.browser-default):focus:not([readonly]),
+input[type="tel"]:not(.browser-default):focus:not([readonly]),
+input[type="number"]:not(.browser-default):focus:not([readonly]),
+input[type="search"]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+    /* border-bottom: 1px solid #5c3fbf; */
+    border-color: #5c3fbf !important;
+    /* box-shadow: 0 1px 0 0 #5c3fbf; */
+}
+
+select:focus {
+    outline: none;
+}
+
 .material-symbols-outlined.mdi-down {
     cursor: pointer;
     display: none;
@@ -2146,4 +2168,8 @@ input {
     font-size: 12px;
     display: none;
     font-family: "Spoqa Han Sans Neo", sans-serif;
+}
+
+.border-color {
+    border-color: #ff5353 !important;
 }
