@@ -17,31 +17,18 @@
                             <section class="play-section">
                                 <div class="play-items">
                                     <div class="play-item">
-                                        <div class="play-each default"></div>
-                                        <div class="play-each default"></div>
-                                        <div class="play-each default"></div>
-                                        <div class="play-each default"></div>
                                         <!-- 아래 div가 반복 -->
                                         <!-- 서버 작업 시에는 4-5개씩 받아오면 될 것 같습니다.. -->
-                                        <!-- 재생중이 되면 class에 playing이 추가되며 스타일이 적용됩니다. -->
                                         <!-- 현재 재생중 -->
                                         <div class="play-each playing">
                                             <section class="play-each-wrap">
                                                 <div class="play-each-container">
-                                                    <button class="play-prev-btn">
-                                                        <div class="play-prev"></div>
-                                                    </button>
                                                     <div class="video-wrap">
-                                                        <!-- 썸네일 -->
-                                                        <img src="/staticfiles/images/club/club-detail/club-shorts-thumbnail.png" class="video-thumbnail" />
                                                         <!-- 비디오 -->
                                                         <video class="play-video" preload loop autoplay>
                                                             <source src="/staticfiles/video/teenplay/teenplay_example_1.MOV" type="video/ogg" />
                                                         </video>
                                                     </div>
-                                                    <button class="play-next-btn">
-                                                        <div class="play-next"></div>
-                                                    </button>
                                                 </div>
                                                 <!-- 틴플레이 정보 -->
                                                 <div class="play-info-wrap">
@@ -118,23 +105,15 @@
                                             </div>
                                         </div>
                                         <!-- 다음 대기열 -->
-                                        <div class="play-each pending">
+                                        <div class="play-each">
                                             <section class="play-each-wrap">
                                                 <div class="play-each-container">
-                                                    <button class="play-prev-btn">
-                                                        <div class="play-prev"></div>
-                                                    </button>
                                                     <div class="video-wrap">
-                                                        <!-- 썸네일 -->
-                                                        <img src="/staticfiles/images/club/club-detail/club-shorts-thumbnail2.png" class="video-thumbnail" />
                                                         <!-- 비디오 -->
                                                         <video class="play-video" preload loop="" autoplay="">
                                                             <source src="/staticfiles/video/teenplay/teenplay_example_2.MOV" type="video/ogg" />
                                                         </video>
                                                     </div>
-                                                    <button class="play-next-btn">
-                                                        <div class="play-next"></div>
-                                                    </button>
                                                 </div>
                                                 <!-- 틴플레이 정보 -->
                                                 <div class="play-info-wrap">
@@ -211,23 +190,15 @@
                                             </div>
                                         </div>
                                         <!-- 3번째 -->
-                                        <div class="play-each pending">
+                                        <div class="play-each">
                                             <section class="play-each-wrap">
                                                 <div class="play-each-container">
-                                                    <button class="play-prev-btn">
-                                                        <div class="play-prev"></div>
-                                                    </button>
                                                     <div class="video-wrap">
-                                                        <!-- 썸네일 -->
-                                                        <img src="/staticfiles/images/club/club-detail/club-shorts-thumbnail3.png" class="video-thumbnail" />
                                                         <!-- 비디오 -->
                                                         <video class="play-video" preload loop="" autoplay="">
                                                             <source src="/staticfiles/video/teenplay/teenplay_example_2.MOV" type="video/ogg" />
                                                         </video>
                                                     </div>
-                                                    <button class="play-next-btn">
-                                                        <div class="play-next"></div>
-                                                    </button>
                                                 </div>
                                                 <!-- 틴플레이 정보 -->
                                                 <div class="play-info-wrap">
@@ -304,23 +275,15 @@
                                             </div>
                                         </div>
                                         <!-- 4번째 -->
-                                        <div class="play-each pending">
+                                        <div class="play-each">
                                             <section class="play-each-wrap">
                                                 <div class="play-each-container">
-                                                    <button class="play-prev-btn">
-                                                        <div class="play-prev"></div>
-                                                    </button>
                                                     <div class="video-wrap">
-                                                        <!-- 썸네일 -->
-                                                        <img src="/staticfiles/images/club/club-detail/club-shorts-thumbnail4.png" class="video-thumbnail" />
                                                         <!-- 비디오 -->
                                                         <video class="play-video" preload loop="" autoplay="">
                                                             <source src="/staticfiles/video/teenplay/teenplay_example_2.MOV" type="video/ogg" />
                                                         </video>
                                                     </div>
-                                                    <button class="play-next-btn">
-                                                        <div class="play-next"></div>
-                                                    </button>
                                                 </div>
                                                 <!-- 틴플레이 정보 -->
                                                 <div class="play-info-wrap">
@@ -397,23 +360,15 @@
                                             </div>
                                         </div>
                                         <!-- 5번째 -->
-                                        <div class="play-each pending">
+                                        <div class="play-each">
                                             <section class="play-each-wrap">
                                                 <div class="play-each-container">
-                                                    <button class="play-prev-btn">
-                                                        <div class="play-prev"></div>
-                                                    </button>
                                                     <div class="video-wrap">
-                                                        <!-- 썸네일 -->
-                                                        <img src="/staticfiles/images/club/club-detail/club-shorts-thumbnail5.png" class="video-thumbnail" />
                                                         <!-- 비디오 -->
                                                         <video class="play-video" preload loop="" autoplay="">
                                                             <source src="/staticfiles/video/teenplay/teenplay_example_2.MOV" type="video/ogg" />
                                                         </video>
                                                     </div>
-                                                    <button class="play-next-btn">
-                                                        <div class="play-next"></div>
-                                                    </button>
                                                 </div>
                                                 <!-- 틴플레이 정보 -->
                                                 <div class="play-info-wrap">
@@ -504,5 +459,6 @@
             </div>
         </main>
     </body>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="/staticfiles/js/teenplay/teenplay-play.js"></script>
 </html>
