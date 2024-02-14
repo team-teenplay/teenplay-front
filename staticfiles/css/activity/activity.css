@@ -82,6 +82,15 @@ body {
     --swiper-theme-color: #007aff;
 }
 
+[type="button"],
+[type="reset"],
+[type="submit"],
+button {
+    -webkit-appearance: button;
+    background-color: transparent;
+    background-image: none;
+}
+
 .main-screen {
     min-height: 100vh;
 }
