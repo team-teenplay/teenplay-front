@@ -253,7 +253,6 @@ input, select, textarea {
     overflow-x: auto;
     align-items: center;
     top: 4rem;
-    position: sticky;
     grid-template-columns: repeat(7, minmax(0, 1fr));
     display: grid;
 }

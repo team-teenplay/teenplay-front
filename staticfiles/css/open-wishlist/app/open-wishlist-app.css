@@ -173,7 +173,6 @@ input, select, textarea {
     overflow-x: auto;
     align-items: center;
     top: 4rem;
-    position: sticky;
     display: flex;
 }
 
