@@ -312,6 +312,11 @@ video {
     right: 0;
     bottom: 0;
     left: 0;
+    transition: all 0.2s linear;
+}
+
+.activity-img:hover {
+    transform: scale(1.1);
 }
 
 .like-btn-wrap {
@@ -443,6 +448,11 @@ video {
     right: 0;
     bottom: 0;
     left: 0;
+    transition: all 0.2s linear;
+}
+
+.passivity-img:hover {
+    transform: scale(1.1);
 }
 
 .txt-head-end {
@@ -493,11 +503,11 @@ video {
 }
 
 #activity-list {
-    display: none;
+    display: block;
 }
 
 #interest-activity {
-    display: block;
+    display: none;
 }
 
 .like-none {
