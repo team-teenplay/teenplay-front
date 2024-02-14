@@ -76,6 +76,11 @@ body {
     --tw-text-opacity: 1;
     color: rgb(23 23 23 / var(--tw-text-opacity));
     --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    opacity: 1;
+    font-size: 0.9375rem;
+    margin: 0;
+    line-height: inherit;
 }
 
 :root {
@@ -142,16 +147,19 @@ button {
 }
 
 .flex-wrap {
-    display: flex;
+    display: block;
 }
 
 .filter-container-hidden {
     display: none;
     margin-right: 2rem;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
 }
 
 .filter-box {
-    width: 18rem;
+    /* width: 18rem; */
+    width: 100%;
 }
 
 .filter-bg {
@@ -990,6 +998,9 @@ button:not([class*="hover:"]).hidden-flex-center {
 
 .full-wrap {
     width: 100%;
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .main-title {
@@ -2120,10 +2131,10 @@ button:disabled {
 }
 
 .relative-unline {
-    --tw-aspect-h: 3;
-    position: relative;
-    /* padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%); */
-    --tw-aspect-w: 14;
+    --tw-aspect-h: 8;
+    /* position: relative; */
+    padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
+    --tw-aspect-w: 11;
 }
 
 .img-1 {
@@ -2180,25 +2191,25 @@ video {
     right: 0;
     bottom: 0;
     left: 0;
+    inset: 0;
 }
 
 .absolute-justify-center {
-    justify-content: flex-start;
+    display: flex;
+    justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
-    display: flex;
 }
 
 .absolute-justify-text-center {
-    text-align: left;
-    padding-left: 2rem;
+    text-align: center;
 }
 
 .text-base-xl {
     color: rgb(0, 0, 0);
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
 }
 
 .text-base-xl-bold {
@@ -2216,17 +2227,15 @@ video {
     --tw-space-y-reverse: 0;
     margin-top: calc(0.5rem * (1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
-    font-size: 1.5rem;
-    line-height: 2rem;
-    display: block;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
     font-weight: 700;
 }
 
 .text-base-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-    margin-top: 2rem;
-    display: flex;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-top: 2.5rem;
     font-weight: 700;
 }
 
@@ -2236,10 +2245,7 @@ video {
 
 .text-base-talk {
     color: rgb(0, 0, 0);
-    --tw-space-x-reverse: 0;
-    margin-right: calc(2rem * var(--tw-space-x-reverse));
-    margin-left: calc(2rem * (1 - var(--tw-space-x-reverse)));
-    margin-top: 0;
+    margin-top: 0.5rem;
 }
 
 .swiper-wrap-two {
@@ -2253,15 +2259,15 @@ video {
 }
 
 .relative-unline-w {
-    --tw-aspect-h: 3;
     position: relative;
     padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
-    --tw-aspect-w: 14;
+    --tw-aspect-w: 11;
+    --tw-aspect-h: 8;
 }
 
 .img-3 {
     image-rendering: -webkit-optimize-contrast;
-    display: none;
+    display: block;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -2270,11 +2276,12 @@ video {
     bottom: 0;
     left: 0;
     object-fit: cover;
+    max-width: 100%;
 }
 
 .img-4 {
     image-rendering: -webkit-optimize-contrast;
-    display: block;
+    display: none;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -2286,32 +2293,28 @@ video {
 }
 
 .relative-underline-absolute {
+    inset: 0;
     position: absolute;
     height: 100%;
     width: 100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
 }
 
 .flex-justify-center {
-    justify-content: flex-start;
+    display: flex;
+    justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
-    display: flex;
 }
 
 .text-center-sm {
-    text-align: left;
-    padding-left: 2rem;
+    text-align: center;
 }
 
 .text-base-xl-lg {
     color: rgb(255, 255, 255);
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
 }
 
 .text-base-xl-sm {
@@ -2319,7 +2322,6 @@ video {
     --tw-space-y-reverse: 0;
     margin-top: calc(0.5rem * (1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
-    display: none;
     font-weight: 700;
     font-size: 1.25rem;
     line-height: 1.75rem;
@@ -2332,16 +2334,15 @@ video {
     margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
     font-size: 1.5rem;
     line-height: 2rem;
-    display: block;
+    display: none;
     font-weight: 700;
 }
 
 .text-base-lg-mt {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-    margin-top: 2rem;
-    display: flex;
     font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-top: 2.5rem;
 }
 
 .text-human {
@@ -2350,10 +2351,7 @@ video {
 
 .text-location {
     color: rgb(255, 255, 255);
-    --tw-space-x-reverse: 0;
-    margin-right: calc(2rem * var(--tw-space-x-reverse));
-    margin-left: calc(2rem * (1 - var(--tw-space-x-reverse)));
-    margin-top: 0;
+    margin-top: 0.5rem;
 }
 
 .swiper-wrap-three {
@@ -2375,7 +2373,7 @@ video {
 
 .img-5 {
     image-rendering: -webkit-optimize-contrast;
-    display: none;
+    display: block;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -2384,11 +2382,12 @@ video {
     bottom: 0;
     left: 0;
     object-fit: cover;
+    max-width: 100%;
 }
 
 .img-6 {
     image-rendering: -webkit-optimize-contrast;
-    display: block;
+    display: none;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -2400,32 +2399,28 @@ video {
 }
 
 .absolute-inset {
+    inset: 0;
     position: absolute;
     height: 100%;
     width: 100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
 }
 
 .flex-justify-center-items {
-    justify-content: flex-start;
+    display: flex;
+    justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
-    display: flex;
 }
 
 .text-center-pl {
-    text-align: left;
-    padding-left: 2rem;
+    text-align: center;
 }
 
 .text-base-xl-text {
     color: rgb(0, 0, 0);
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
 }
 
 .text-front-bold {
@@ -2433,7 +2428,7 @@ video {
     --tw-space-y-reverse: 0;
     margin-top: calc(0.5rem * (1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
-    display: none;
+    display: block;
     font-weight: 700;
     font-size: 1.25rem;
     line-height: 1.75rem;
@@ -2451,11 +2446,10 @@ video {
 }
 
 .text-base-front-bold {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-    margin-top: 2rem;
-    display: flex;
     font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-top: 2.5rem;
 }
 
 .text-date {
@@ -2464,10 +2458,7 @@ video {
 
 .text-location-sm {
     color: rgb(0, 0, 0);
-    --tw-space-x-reverse: 0;
-    margin-right: calc(2rem * var(--tw-space-x-reverse));
-    margin-left: calc(2rem * (1 - var(--tw-space-x-reverse)));
-    margin-top: 0;
+    margin-top: 0.5rem;
 }
 
 .swiper-wrap-four {
@@ -2489,7 +2480,7 @@ video {
 
 .img-7 {
     image-rendering: -webkit-optimize-contrast;
-    display: none;
+    display: block;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -2498,11 +2489,12 @@ video {
     bottom: 0;
     left: 0;
     object-fit: cover;
+    max-width: 100%;
 }
 
 .img-8 {
     image-rendering: -webkit-optimize-contrast;
-    display: block;
+    display: none;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -2514,32 +2506,28 @@ video {
 }
 
 .absolute-inset-zero {
+    inset: 0;
     position: absolute;
     height: 100%;
     width: 100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
 }
 
 .flex-justify-center-items-w {
-    justify-content: flex-start;
+    display: flex;
+    justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
-    display: flex;
 }
 
 .text-c-left {
-    text-align: left;
-    padding-left: 2rem;
+    text-align: center;
 }
 
 .text-base-xl-lg-a {
     color: rgb(255, 255, 255);
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
 }
 
 .text-base-sm {
@@ -2547,7 +2535,7 @@ video {
     --tw-space-y-reverse: 0;
     margin-top: calc(0.5rem * (1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
-    display: none;
+    display: block;
     font-weight: 700;
     font-size: 1.25rem;
     line-height: 1.75rem;
@@ -2565,11 +2553,10 @@ video {
 }
 
 .text-base-mt-font-bold {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-    margin-top: 2rem;
-    display: flex;
     font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-top: 2.5rem;
 }
 
 .join-everyday {
@@ -2578,10 +2565,7 @@ video {
 
 .join-location {
     color: rgb(255, 255, 255);
-    --tw-space-x-reverse: 0;
-    margin-right: calc(2rem * var(--tw-space-x-reverse));
-    margin-left: calc(2rem * (1 - var(--tw-space-x-reverse)));
-    margin-top: 0;
+    margin-top: 0.5rem;
 }
 
 .left-arrow-banner {
@@ -2625,15 +2609,12 @@ video {
 }
 
 .absolute-z-button {
-    left: 0;
-    right: 0;
     z-index: 10;
     bottom: 1.25rem;
     position: absolute;
 }
 
 .z-button-container {
-    max-width: 1024px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -2642,7 +2623,6 @@ video {
 
 .swiper-pagination {
     width: 100%;
-    justify-content: flex-end;
     display: flex;
 }
 
@@ -2653,12 +2633,10 @@ video {
 
 .swiper-page-count {
     margin-right: 2px;
+    border-radius: 9999px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    border-top-left-radius: 9999px;
-    border-bottom-left-radius: 9999px;
     padding-left: 1.5rem;
-    /* border-radius: 9999px; */
     background-color: rgba(0, 0, 0, 0.5);
     padding-right: 1.25rem;
     padding-top: 0.25rem;
