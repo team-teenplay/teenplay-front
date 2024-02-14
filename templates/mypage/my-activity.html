@@ -12,6 +12,22 @@
         <!-- 마이페이지 헤더 부분 -->
         <header></header>
         <!-- 메인 부분 -->
+        <!-- 삭제모달 -->
+        <div class="unlike-modal-container">
+            <div class="unlike-modal-wrap">
+                <div>
+                    <h2 class="unlike-modal-tit-wrap">
+                        <div class="unlike-modal-tit">관심활동에서 삭제했습니다</div>
+                    </h2>
+                </div>
+                <div class="unlike-btn-wrap">
+                    <button class="unlike-btn">
+                        닫기
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- 삭제모달끝 -->
         <main class="mypage-main">
             <div class="mypage-wrap">
                 <div>
@@ -448,7 +464,7 @@
                                     <div id="interest-activity">
                                         <div class="activity-list-container">
                                             <!-- 한칸 시작 -->
-                                            <div class="activity-wrap">
+                                            <div class="activity-wrap-interest">
                                                 <div class="activity-box">
                                                     <div class="activity-img-box">
                                                         <a href="#" class="activity-img-link">
@@ -460,7 +476,7 @@
                                                         </a>
                                                         <div class="like-btn-wrap">
                                                             <button type="button" class="like-button">
-                                                                <span>
+                                                                <span class="like-on-interest">
                                                                     <svg
                                                                         xmlns="http://www.w3.org/2000/svg"
                                                                         class="like-img-wrap"
@@ -471,6 +487,22 @@
                                                                             fill-rule="evenodd"
                                                                             d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
                                                                             clip-rule="evenodd"
+                                                                        ></path>
+                                                                    </svg>
+                                                                </span>
+                                                                <span class="like-off-interest like-none">
+                                                                    <svg
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="like-img-wrap"
+                                                                        fill="none"
+                                                                        viewBox="0 0 24 24"
+                                                                        stroke="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            stroke-width="2"
+                                                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
                                                                         ></path>
                                                                     </svg>
                                                                 </span>
@@ -503,7 +535,7 @@
                                                 </div>
                                             </div>
                                             <!-- 한칸 끝 -->
-                                            <div class="activity-wrap">
+                                            <div class="activity-wrap-interest">
                                                 <div class="activity-box">
                                                     <div class="activity-img-box">
                                                         <a href="#" class="activity-img-link">
@@ -515,7 +547,7 @@
                                                         </a>
                                                         <div class="like-btn-wrap">
                                                             <button type="button" class="like-button">
-                                                                <span>
+                                                                <span class="like-on-interest">
                                                                     <svg
                                                                         xmlns="http://www.w3.org/2000/svg"
                                                                         class="like-img-wrap"
@@ -526,6 +558,22 @@
                                                                             fill-rule="evenodd"
                                                                             d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
                                                                             clip-rule="evenodd"
+                                                                        ></path>
+                                                                    </svg>
+                                                                </span>
+                                                                <span class="like-off-interest like-none">
+                                                                    <svg
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="like-img-wrap"
+                                                                        fill="none"
+                                                                        viewBox="0 0 24 24"
+                                                                        stroke="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            stroke-width="2"
+                                                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
                                                                         ></path>
                                                                     </svg>
                                                                 </span>
@@ -557,7 +605,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="activity-wrap">
+                                            <div class="activity-wrap-interest">
                                                 <div class="activity-box">
                                                     <div class="activity-img-box">
                                                         <a href="#" class="activity-img-link">
@@ -569,7 +617,7 @@
                                                         </a>
                                                         <div class="like-btn-wrap">
                                                             <button type="button" class="like-button">
-                                                                <span>
+                                                                <span class="like-on-interest">
                                                                     <svg
                                                                         xmlns="http://www.w3.org/2000/svg"
                                                                         class="like-img-wrap"
@@ -580,6 +628,22 @@
                                                                             fill-rule="evenodd"
                                                                             d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
                                                                             clip-rule="evenodd"
+                                                                        ></path>
+                                                                    </svg>
+                                                                </span>
+                                                                <span class="like-off-interest like-none">
+                                                                    <svg
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="like-img-wrap"
+                                                                        fill="none"
+                                                                        viewBox="0 0 24 24"
+                                                                        stroke="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            stroke-width="2"
+                                                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
                                                                         ></path>
                                                                     </svg>
                                                                 </span>
@@ -611,7 +675,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="activity-wrap">
+                                            <div class="activity-wrap-interest">
                                                 <div class="activity-box">
                                                     <div class="activity-img-box">
                                                         <a href="#" class="activity-img-link">
@@ -623,7 +687,7 @@
                                                         </a>
                                                         <div class="like-btn-wrap">
                                                             <button type="button" class="like-button">
-                                                                <span>
+                                                                <span class="like-on-interest">
                                                                     <svg
                                                                         xmlns="http://www.w3.org/2000/svg"
                                                                         class="like-img-wrap"
@@ -634,6 +698,22 @@
                                                                             fill-rule="evenodd"
                                                                             d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
                                                                             clip-rule="evenodd"
+                                                                        ></path>
+                                                                    </svg>
+                                                                </span>
+                                                                <span class="like-off-interest like-none">
+                                                                    <svg
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="like-img-wrap"
+                                                                        fill="none"
+                                                                        viewBox="0 0 24 24"
+                                                                        stroke="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            stroke-width="2"
+                                                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
                                                                         ></path>
                                                                     </svg>
                                                                 </span>
@@ -668,7 +748,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="activity-wrap">
+                                            <div class="activity-wrap-interest">
                                                 <div class="activity-box">
                                                     <div class="activity-img-box">
                                                         <a href="#" class="activity-img-link">
@@ -680,7 +760,7 @@
                                                         </a>
                                                         <div class="like-btn-wrap">
                                                             <button type="button" class="like-button">
-                                                                <span>
+                                                                <span class="like-on-interest">
                                                                     <svg
                                                                         xmlns="http://www.w3.org/2000/svg"
                                                                         class="like-img-wrap"
@@ -691,6 +771,22 @@
                                                                             fill-rule="evenodd"
                                                                             d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
                                                                             clip-rule="evenodd"
+                                                                        ></path>
+                                                                    </svg>
+                                                                </span>
+                                                                <span class="like-off-interest like-none">
+                                                                    <svg
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        class="like-img-wrap"
+                                                                        fill="none"
+                                                                        viewBox="0 0 24 24"
+                                                                        stroke="currentColor"
+                                                                    >
+                                                                        <path
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            stroke-width="2"
+                                                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
                                                                         ></path>
                                                                     </svg>
                                                                 </span>
