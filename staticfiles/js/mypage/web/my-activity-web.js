@@ -86,7 +86,7 @@ likeButton.forEach((btn, i) => {
 
 function unlikeModalOn(activityDiv) {
     unlikeModal.style.display = "flex";
-    myMain.style.opacity = "0.3";
+    unlikeModal.style.backgroundColor = "rgba(0,0,0,.5)";
     unlikeCloseBtn.addEventListener("click", () => {
         myMain.style.opacity = "1";
         unlikeModal.style.display = "none";
