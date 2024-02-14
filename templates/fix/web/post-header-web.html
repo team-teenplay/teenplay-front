@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>모임, 활동, 모임홍보 관련 페이지 헤더</title>
+        <link
+            rel="shortcut icon"
+            href="/staticfiles/images/teenplay_logo/logo1.png"
+            type="image/x-icon"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/staticfiles/css/club/club-create.css" />
+        <link rel="stylesheet" href="/staticfiles/css/fix/header.css" />
+    </head>
+    <body>
+        <header id="header">
+            <nav>
+                <div class="header-wrap">
+                    <div class="header-container">
+                        <div class="header-left">
+                            <a href="">
+                                <!--  -->
+                                <img
+                                    class="post-header-logo-image"
+                                    src="/staticfiles/images/teenplay_logo/logo2.png"
+                                    alt="로고"
+                                />
+                            </a>
+                        </div>
+                        <div class="header-right">
+                            <!-- 모임 홍보게시판으로 -->
+                            <a href="" class="header-right-links">
+                                <span>활동 모집</span>
+                            </a>
+                            <a href="" class="header-right-links right-margin">
+                                <span>모임 보러가기</span>
+                            </a>
+                            <!-- 로그인 시 보이는 요소 -->
+                            <div class="member-services">
+                                <button
+                                    class="member-service-menu-btn sign"
+                                    type="button"
+                                >
+                                    <div class="member-service-menu-content">
+                                        <span>
+                                            <span class="nicknaem">양현</span>
+                                            <span class="default-nim">
+                                                님
+                                            </span>
+                                        </span>
+                                        <svg
+                                            class="down-arrow"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20"
+                                        >
+                                            <path
+                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                                            ></path>
+                                        </svg>
+                                    </div>
+                                </button>
+                                <!-- 버튼에 클릭 이벤트 발생 시 나타나는 모달창 -->
+                                <div class="mypage-menu">
+                                    <div class="member-info">
+                                        <div class="pull-nickname">
+                                            <strong>양현</strong>
+                                            <span>님</span>
+                                        </div>
+                                        <div class="member-email">
+                                            test1@gmail.com
+                                        </div>
+                                        <!-- 내 정보 수정페이지 입력 필요 -->
+                                        <a class="member-info-modify" href="">
+                                            <span>내 정보 수정 ></span>
+                                        </a>
+                                    </div>
+                                    <div class="border-line"></div>
+                                    <a class="teen-friends" href="">
+                                        <span>틴친 목록</span>
+                                    </a>
+                                    <a class="my-activities" href="">
+                                        <span>내 활동</span>
+                                    </a>
+                                    <a class="my-clups" href="">
+                                        <span>나의 모임</span>
+                                    </a>
+                                    <a class="my-signals sign" href="">
+                                        <span>알림 목록</span>
+                                    </a>
+                                    <div class="border-line"></div>
+                                    <button class="logout-btn" type="button">
+                                        <span>로그아웃</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <a href="" class="header-right-home">
+                                <span class="header-right-home-link"
+                                    >틴플레이 홈</span
+                                >
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </body>
+    <script src="/staticfiles/js/fix/post-header.js"></script>
+</html>
