@@ -344,3 +344,77 @@ sendLetterBtn.addEventListener("click", () => {
         "success"
     );
 });
+
+// 틴친 추가 모달 이벤트
+const teenFriendAdd = document.querySelector(".teenchin-add-btn")
+const teenFriendRequest = document.querySelector(".teenchin-request-btn")
+
+teenFriendAdd.addEventListener("click", () => {
+    Swal.fire({
+        title: "틴친 신청을 보낼까요?",
+        text: "",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#CE201B",
+        cancelButtonColor: "#878787",
+        confirmButtonText: "친구추가",
+        cancelButtonText: "닫기",
+    }).then((result) => {
+        if (result.value) {
+            // 틴플레이 삭제 관련 서버 작업 코드 입력
+            // 완료 시 아래 코드 실행 (실제로는 또 .then(()=>{}) 으로 써야함)
+            teenFriendAdd.classList.add("hidden");
+            teenFriendRequest.classList.remove("hidden");
+        } else if ((result.dismiss = "cancel")) {
+            return;
+        }
+    });
+});
+
+// 틴친 신청 취소 모달 이벤트
+teenFriendRequest.addEventListener("click", () => {
+    Swal.fire({
+        title: "신청을 취소할까요?",
+        text: "",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#CE201B",
+        cancelButtonColor: "#878787",
+        confirmButtonText: "신청취소",
+        cancelButtonText: "닫기",
+    }).then((result) => {
+        if (result.value) {
+            // 틴플레이 삭제 관련 서버 작업 코드 입력
+            // 완료 시 아래 코드 실행 (실제로는 또 .then(()=>{}) 으로 써야함)
+            teenFriendRequest.classList.add("hidden");
+            teenFriendAdd.classList.remove("hidden");
+        } else if ((result.dismiss = "cancel")) {
+            return;
+        }
+    });
+})
+
+// 틴친 취소 모달 이벤트
+const teenFriendCancle = document.querySelector(".teenchin-btn");
+
+teenFriendCancle.addEventListener("click", () => {
+    Swal.fire({
+        title: "틴친을 그만둘까요?",
+        text: "",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#CE201B",
+        cancelButtonColor: "#878787",
+        confirmButtonText: "틴친끊기",
+        cancelButtonText: "닫기",
+    }).then((result) => {
+        if (result.value) {
+            // 틴플레이 삭제 관련 서버 작업 코드 입력
+            // 완료 시 아래 코드 실행 (실제로는 또 .then(()=>{}) 으로 써야함)
+            teenFriendCancle.classList.add("hidden");
+            teenFriendAdd.classList.remove("hidden");
+        } else if ((result.dismiss = "cancel")) {
+            return;
+        }
+    });
+})
