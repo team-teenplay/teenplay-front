@@ -1,14 +1,5 @@
 @import url('https://webfontworld.github.io/sunn/SUIT.css');
 
-[type=checkbox]:checked {
-    background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%270%200%2016%2016%27%20fill%3D%27%23fff%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cpath%20d%3D%27M12.207%204.793a1%201%200%200%201%200%201.414l-5%205a1%201%200%200%201-1.414%200l-2-2a1%201%200%200%201%201.414-1.414L6.5%209.086l4.293-4.293a1%201%200%200%201%201.414%200z%27%2F%3E%3C%2Fsvg%3E');
-    border-color: transparent;
-    background-color: currentColor;
-    background-size: 100% 100%;
-    background-position: 50%;
-    background-repeat: no-repeat;
-   
-}
 
 *{
     --tw-border-spacing-x: 0;
@@ -102,18 +93,36 @@ main{
 }
 
 .main-festival{
-    max-width: 1280px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding: 1rem;
 }
 
-.main-festival-top{
-    margin-bottom: 1.5rem;
+.main-festival-warp{
+    gap: 1.5rem;
+    flex-direction: column;
+    display: flex;
 }
 
-.main-festival-top-sub{
+.main-festival-img{
+    max-width: 32rem;
+}
+
+.main-festival-photo{
+    border-radius: 0.375rem;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    vertical-align: middle;
+}
+
+.main-festival-content{
+    flex: 1 1 0%;
+}
+
+.main-festival-content-top-status{
     --tw-text-opacity: 1;
     color: rgb(141 113 221/var(--tw-text-opacity));
     padding-top: 0.25rem;
@@ -127,165 +136,126 @@ main{
     display: inline-block;
 }
 
-.main-festival-top-title{
+.main-festival-content-top-title{
     --tw-space-y-reverse: 0;
+    margin-top: calc(1rem*(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1rem*var(--tw-space-y-reverse));
     font-weight: 700;
     font-size: 1.125rem;
     line-height: 1.75rem;
     margin: 0;
-    margin-top: calc(1rem*(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(1rem*var(--tw-space-y-reverse));
 }
 
-.main-festival-main{
-    flex-direction: row;
-    gap: 1.5rem;
-    display: flex;
-}
-
-.main-festival-main-left{
-    max-width: 32rem;
-}
-
-.main-festival-main-left-img{
-    border-radius: 0.375rem;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    vertical-align: middle;
-}
-
-.main-festival-main-right{
-    flex: 1 1 0%;
-}
-
-.main-festival-main-right-top{
+.main-festival-content-mid-warp{
     --tw-bg-opacity: 1;
-    background-color: rgb(255 255 255/var(--tw-bg-opacity))
+    background-color: rgb(255 255 255/var(--tw-bg-opacity));
 }
 
-.main-festival-main-right-top-cost{
-    grid-template-columns: repeat(7,minmax(0,1fr));
-    display: grid;
+.main-festival-content-mid-warp-dl{
     margin: 0;
 }
 
-.main-festival-main-right-top-cost-left{
+.main-festival-content-mid-warp-dt{
     --tw-text-opacity: 1;
     color: rgb(135 141 145/var(--tw-text-opacity));
 }
 
-.main-festival-main-right-top-cost-right{
-    grid-column: span 6/span 6;
+.main-festival-content-mid-warp-dd{
     --tw-text-opacity: 1;
     color: rgb(141 113 221/var(--tw-text-opacity));
     font-weight: 700;
     margin: 0;
-    margin-top: 0;
+    margin-top: 0.25rem;
 }
 
-.main-festival-main-right-top-content{
+.main-festival-content-mid-warp-dladd{
     --tw-space-y-reverse: 0;
-    grid-template-columns: repeat(7,minmax(0,1fr));
-    display: grid;
     margin: 0;
     margin-top: calc(1rem*(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(1rem*var(--tw-space-y-reverse));
 }
 
-.main-festival-main-right-top-content-right{
-    grid-column: span 6/span 6;
+.main-festival-content-mid-warp-dtadd{
+    --tw-text-opacity: 1;
+    color: rgb(135 141 145/var(--tw-text-opacity));
+}
+
+.main-festival-content-mid-warp-ddadd{
     margin: 0;
-    margin-top: 0;
+    margin-top: 0.25rem;
 }
 
-.main-festival-main-right-top-line{
-    --tw-space-y-reverse: 0;
-    margin-top: calc(1rem*(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(1rem*var(--tw-space-y-reverse));
-    display: block;
-    padding-top: 0.5rem;
-    border-bottom-width : 1px;
-}
-
-.main-festival-main-right-mid{
+.main-festival-content-mid-container{
     --tw-space-y-reverse: 0;
     margin-top: calc(1.5rem*(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(1.5rem*var(--tw-space-y-reverse));
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.main-festival-content-mid-container-button{
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    -webkit-appearance: button;
+    background-color: transparent;
+    background-image: none;
+    transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .15s;
+    text-align: left;
+    cursor: pointer;
+    text-transform: none;
+    font-family: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.main-festival-content-mid-container-span{
+    font-weight: 700;
+}
+
+.main-festival-content-mid-container-svg{
+    width: 1.25rem;
+    height: 1.25rem;
     display: block;
+    vertical-align: middle;
 }
 
-.main-festival-main-right-mid-content{
-    grid-template-columns: repeat(7,minmax(0,1fr));
-    display: grid;
-    margin: 0;
+.main-festival-content-mid-container-in{
+    margin-top: 1rem;
 }
 
-.main-festival-main-right-mid-content-dt{
-    --tw-text-opacity: 1;
-    color: rgb(135 141 145/var(--tw-text-opacity));
+.hidden{
+    display: none;
 }
 
-.main-festival-main-right-mid-content-dd{
-    margin-top: 0;
-    grid-column: span 6/span 6;
-    margin: 0;
-}
-
-.main-festival-main-right-mid-line{
-    --tw-space-y-reverse: 0;
-    margin-top: calc(1rem*(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(1rem*var(--tw-space-y-reverse));
-    padding-top: 0.5rem;
-    border-bottom-width: 1px;
-}
-
-.main-festival-main-right-mid-bottem-content{
-    --tw-space-y-reverse: 0;
-    grid-template-columns: repeat(7,minmax(0,1fr));
-    display: grid;
-    margin: 0;
-    margin-top: calc(1rem*(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(1rem*var(--tw-space-y-reverse));
-}
-
-.main-festival-main-right-mid-content-bottem-dt{
-    --tw-text-opacity: 1;
-    color: rgb(135 141 145/var(--tw-text-opacity));
-}
-
-.main-festival-main-right-mid-content-bottem-dd{
-
-    grid-column: span 6/span 6;
-    margin: 0;
-    margin-top: 0;
-}
-
-.main-festival-main-right-bot-content{
+.main-festival-content-give{
     --tw-space-y-reverse: 0;
     margin-top: calc(1.5rem*(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(1.5rem*var(--tw-space-y-reverse));
 }
 
-.main-festival-main-right-bot-content-dl{
-    grid-template-columns: repeat(7,minmax(0,1fr));
-    display: grid;
+.main-festival-content-give-dl{
     margin: 0;
 }
 
-.main-festival-main-right-bot-content-dt{
+.main-festival-content-give-dt{
     --tw-text-opacity: 1;
     color: rgb(135 141 145/var(--tw-text-opacity));
 }
 
-.main-festival-main-right-bot-content-dd{
-    grid-column: span 6/span 6;
+.main-festival-content-give-dd{
     margin: 0;
-    margin-top: 0;
+    margin-top: 0.25rem;
 }
 
-.main-festival-main-right-bot-content-a{
+.main-festival-content-give-a{
     --tw-text-opacity: 1;
     color: rgb(141 113 221/var(--tw-text-opacity));
     transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;
@@ -294,16 +264,11 @@ main{
     text-decoration: inherit;
 }
 
-.main-festival-main-right-bot-content-a:hover{
-    --tw-text-opacity: 1;
-    color: rgb(92 63 191/var(--tw-text-opacity));
-}
-
-.main-festival-main-tag{
+.main-festival-content-url{
     margin-top: 3rem;
 }
 
-.main-festival-main-tag-a{
+.main-festival-content-url-a{
     --tw-border-opacity: 1;
     border-color: rgb(245 242 255/var(--tw-border-opacity));
     --tw-text-opacity: 1;
@@ -330,12 +295,7 @@ main{
     text-decoration: inherit;
 }
 
-.main-festival-main-tag-a:hover{
-    --tw-bg-opacity: 1;
-    background-color: rgb(227 222 247/var(--tw-bg-opacity));
-}
-
-.main-festival-main-tag-svg{
+.main-festival-content-url-svg{
     --tw-space-x-reverse: 0;
     margin-right: calc(0.25rem*var(--tw-space-x-reverse));
     margin-left: calc(0.25rem*(1 - var(--tw-space-x-reverse)));
@@ -345,23 +305,23 @@ main{
     vertical-align: middle;
 }
 
-.main-festival-banner{
+.main-festival-content-ad{
     margin-top: 3rem;
 }
 
-.main-festival-banner-warp-title{
+.main-festival-content-ad-title{
     justify-content: space-between;
     align-items: center;
     display: flex;
 }
 
-.main-festival-banner-warp-title-warp-text{
+.main-festival-content-ad-title-text{
     font-weight: 700;
     font-size: 1rem;
     line-height: 1.5rem;
 }
 
-.main-festival-banner-warp-title-warp-a{
+.main-festival-content-ad-title-a{
     --tw-text-opacity: 1;
     color: rgb(135 141 145/var(--tw-text-opacity));
     text-align: center;
@@ -372,19 +332,14 @@ main{
     text-decoration: inherit;
 }
 
-.main-festival-banner-warp-title-warp-a:hover{
-    --tw-text-opacity: 1;
-    color: rgb(77 82 86/var(--tw-text-opacity));
-}
-
-.main-festival-banner-warp-title-warp-svg{
+.main-festival-content-ad-title-svg{
     width: 1.25rem;
     height: 1.25rem;
     display: block;
     vertical-align: middle;
 }
 
-.main-festival-banner-container{
+.main-festival-content-ad-content{
     --tw-space-y-reverse: 0;
     margin-top: calc(1rem*(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(1rem*var(--tw-space-y-reverse));
@@ -393,9 +348,8 @@ main{
 .main-festival-banner-container-top{
     display: grid;
     grid-template-columns: repeat(2,minmax(0,1fr));
-    gap: 1rem; /* 요소 사이의 간격을 설정합니다. */
-    
-    
+    gap: 1rem;
+  
     
 }
 
