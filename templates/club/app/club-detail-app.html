@@ -7,6 +7,9 @@
         <link rel="shortcut icon" href="/staticfiles/images/teenplay_logo/logo1.png" type="image/x-icon" />
         <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet" />
         <link rel="stylesheet" href="/staticfiles/css/club/app/club-detail-app.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1" />
+        <meta content="yes" name="apple-mobile-web-app-capable" />
+        <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport" />
     </head>
     <body class loaded style="position: relative; min-height: 100%; top: 0px">
         <!-- 헤더 -->
@@ -41,13 +44,13 @@
                                     </button>
                                 </div>
                                 <!-- 2. 승인대기 -->
-                                <div class="club-top-button-boxes">
+                                <div class="club-top-button-boxes" style="display: none">
                                     <button id="cancel" class="club-top-button cancel">
                                         <span>신청취소</span>
                                     </button>
                                 </div>
                                 <!-- 3. 가입중(가입됨) -->
-                                <div class="club-top-button-boxes">
+                                <div class="club-top-button-boxes" style="display: none">
                                     <button id="quit" class="club-top-button quit">
                                         <span>탈퇴하기</span>
                                     </button>
@@ -1109,6 +1112,15 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    <div class="tp-show-more-btn-wrap">
+                                                        <button class="tp-show-more-btn">
+                                                            <div>더보기</div>
+
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="tp-show-more-arrow" viewBox="0 0 20 20" fill="currentColor">
+                                                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1206,19 +1218,19 @@
                                 </div>
                             </div>
                             <p class="upload-modal-content-msg-bold">동영상 파일을 드래그 앤 드롭하여 업로드</p>
-                            <p class="upload-modal-content-msg">최대 15초 길이, 최대 20MB 용량까지 업로드할 수 있습니다.</p>
+                            <p class="upload-modal-content-msg">최대 15초 길이, 최대 20MB 용량까지 <br />업로드할 수 있습니다.</p>
                             <div class="upload-modal-error-wrap"></div>
                             <div class="upload-modal-upload-button-wrap">
                                 <div class="upload-modal-upload-button-text">파일 선택</div>
                             </div>
                             <input type="file" name="Filedata" class="upload-modal-upload-file" accept="video/*" />
                             <p class="upload-modal-content-disclaimer">
-                                Teenplay에 동영상을 제출하면 Teenplay
+                                Teenplay에 동영상을 제출하면 <br />Teenplay
                                 <a href="" class="upload-modal-content-link">서비스 이용약관</a>
                                 에 동의하게 됩니다.
                             </p>
                             <p class="upload-modal-content-disclaimer">
-                                <span class="upload-modal-content-notice"> 불법촬영물 게재 시 삭제 조치되고 관련 법에 따라 처벌받을 수 있습니다. </span>
+                                <span class="upload-modal-content-notice"> 불법촬영물 게재 시 삭제 조치되고 관련 법에 따라 <br />처벌받을 수 있습니다. </span>
                                 <span class="upload-modal-content-notice"> 타인의 저작권 또는 개인 정보 보호 권리를 침해해서는 안 됩니다. </span>
                             </p>
                         </div>
@@ -1229,7 +1241,7 @@
                                 <div class="name-form-text-content">
                                     영상 아래에 모임 프로필과 함께 표시됩니다.
                                     <br />
-                                    활동과 모임을 홍보할 수 있도록 센스있게 작성해주세요!
+                                    활동, 모임을 홍보할 수 있도록 센스있게 작성해주세요!
                                 </div>
                             </div>
                             <div class="name-form-input-wrap">

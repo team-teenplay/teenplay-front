@@ -171,12 +171,15 @@ function clipCopy() {
 }
 shareBtn.addEventListener("click", clipCopy);
 
+// 모임 이름 받아와서 넣어야함(아래는 예시)
+let clubName = "TEEN_PLAYERS";
+
 // 가입신청 버튼 클릭 시 모달창 출력
 const applyBtn = document.getElementById("apply");
 applyBtn.addEventListener("click", () => {
     Swal.fire({
-        title: "가입 신청하시겠습니까?",
-        text: "[TEEN_PLAYERS] 모임에 가입을 신청합니다.",
+        title: "가입신청하시겠습니까?",
+        text: `[${clubName}] 모임에 가입을 신청합니다.`,
         icon: "warning",
         showCancelButton: true,
         confirmButtonColor: "#3085d6",
@@ -184,7 +187,12 @@ applyBtn.addEventListener("click", () => {
         confirmButtonText: "신청",
         cancelButtonText: "취소",
     }).then((result) => {
-        // 가입신청 관련 서버 작업 코드 입력
+        if (result.value) {
+            // 가입신청 관련 서버 작업 코드 입력
+            Swal.fire("신청 완료", `[${clubName}] 모임에 가입 신청이 완료되었어요!`, "success");
+        } else if (result.dismiss == "cancel") {
+            return;
+        }
     });
 });
 
@@ -201,16 +209,22 @@ cancelBtn.addEventListener("click", () => {
         confirmButtonText: "신청취소",
         cancelButtonText: "닫기",
     }).then((result) => {
-        // 신청취소 관련 서버 작업 코드 입력
+        if (result.value) {
+            // 신청취소 관련 서버 작업 코드 입력
+            Swal.fire("취소 완료", "가입 신청을 취소하였습니다.", "success");
+        } else if (result.dismiss == "cancel") {
+            return;
+        }
     });
 });
 
 // 탈퇴하기 버튼 클릭 시 탈퇴하기 모달창 출력
 const quitBtn = document.getElementById("quit");
+
 quitBtn.addEventListener("click", () => {
     Swal.fire({
         title: "모임을 탈퇴하시겠습니까?",
-        text: "[TEEN_PLAYERS] 모임에서 탈퇴합니다.",
+        text: `[${clubName}] 모임에서 탈퇴합니다.`,
         icon: "warning",
         showCancelButton: true,
         confirmButtonColor: "#3085d6",
@@ -218,7 +232,12 @@ quitBtn.addEventListener("click", () => {
         confirmButtonText: "탈퇴",
         cancelButtonText: "취소",
     }).then((result) => {
-        // 모임탈퇴 관련 서버 작업 코드 입력
+        if (result.value) {
+            // 모임탈퇴 관련 서버 작업 코드 입력
+            Swal.fire("모임 탈퇴", `[${clubName}] 모임에서 탈퇴하였습니다.`, "success");
+        } else if (result.dismiss == "cancel") {
+            return;
+        }
     });
 });
 
@@ -457,8 +476,13 @@ finalSaveButton.addEventListener("click", () => {
         confirmButtonText: "업로드",
         cancelButtonText: "취소",
     }).then((result) => {
-        tpModalCloseBtn.click();
-        // 틴플레이 업로드 관련 서버 작업 코드 입력
+        if (result.value) {
+            // 틴플레이 업로드 관련 서버 작업 코드 입력
+            tpModalCloseBtn.click();
+            Swal.fire("업로드 진행중", "업로드를 진행합니다. <br> 업로드는 최대 5분 안에 완료됩니다!", "success");
+        } else if (result.dismiss == "cancel") {
+            return;
+        }
     });
 });
 
@@ -482,8 +506,8 @@ teenplayDeleteWraps.forEach((div, i) => {
     });
     div.addEventListener("click", () => {
         Swal.fire({
-            title: "정말 삭제하시겠습니까?",
-            text: "삭제하신 틴플레이는 복구가 불가능합니다.",
+            title: "삭제하시겠습니까?",
+            text: "삭제된 틴플레이는 복구가 불가능합니다.",
             icon: "warning",
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
@@ -491,9 +515,14 @@ teenplayDeleteWraps.forEach((div, i) => {
             confirmButtonText: "삭제",
             cancelButtonText: "취소",
         }).then((result) => {
-            // 틴플레이 삭제 관련 서버 작업 코드 입력
-            // 완료 시 아래 코드 실행 (실제로는 또 .then(()=>{}) 으로 써야함)
-            teenplayContentsWrap.removeChild(teenplayContents[i]);
+            if (result.value) {
+                // 틴플레이 삭제 관련 서버 작업 코드 입력
+                // 완료 시 아래 코드 실행 (실제로는 또 .then(()=>{}) 으로 써야함)
+                Swal.fire("삭제 완료", "틴플레이 삭제가 완료되었습니다.", "success");
+                teenplayContentsWrap.removeChild(teenplayContents[i]);
+            } else if ((result.dismiss = "cancel")) {
+                return;
+            }
         });
     });
 });
