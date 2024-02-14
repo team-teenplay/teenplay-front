@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="/staticfiles/images/teenplay_logo/logo1.png"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="/staticfiles/css/festival-mobile/festival-mobile.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        />
+        <title>틴플 :: 지역축제</title>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+        />
+    </head>
+    <body>
+        <header></header>
+        <main>
+            <div class="main-festival">
+                <!-- 여기에 각각 들어감 -->
+                <div class="main-festival-search">
+                    <button class="main-festival-search-button">
+                        <svg
+                            class="main-festival-search-svg"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                clip-rule="evenodd"
+                            ></path>
+                        </svg>
+                    </button>
+                    <input
+                        type="text"
+                        placeholder="지역 또는 축제명을 검색하세요"
+                        class="main-festival-search-input"
+                    />
+                </div>
+                <!-- 검색수량확인 -->
+                <div class="main-festival-count">
+                    [전국]
+                    <span class="main-festival-count-number">00</span>
+                    개의 축제가 검색되었습니다.
+                </div>
+                <div class="main-festival-category">
+                    <select class="main-festival-category-select">
+                        <option value="">유형 선택</option>
+                        <option value="">문화관광축제</option>
+                        <option value="">일반축제</option>
+                        <option value="">전통공연</option>
+                        <option value="">연극</option>
+                        <option value="">뮤지컬</option>
+                        <option value="">오페라</option>
+                        <option value="">전시회</option>
+                        <option value="">박람회</option>
+                        <option value="">컨벤션</option>
+                        <option value="">무용</option>
+                        <option value="">클래식음악회</option>
+                        <option value="">대중콘서트</option>
+                        <option value="">영화</option>
+                        <option value="">스포츠경기</option>
+                        <option value="">기타행사</option>
+                    </select>
+                    <div class="main-festival-category-date">
+                        <div class="main-festival-category-date-warp">
+                            <label class="main-festival-category-date-label">
+                                <input
+                                    type="text"
+                                    placeholder="날짜를 선택하세요"
+                                    class="main-festival-category-date-input"
+                                />
+                                <span class="main-festival-category-date-span">
+                                    <button
+                                        class="main-festival-category-date-span-button"
+                                    >
+                                        <svg
+                                            class="main-festival-category-date-span-button-svg"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="1.5"
+                                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                                            ></path>
+                                        </svg>
+                                    </button>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="main-festival-category-event">
+                        <div class="main-festival-category-event-left">
+                            <div>
+                                <div
+                                    class="main-festival-category-event-left-warp"
+                                >
+                                    <div
+                                        class="main-festival-category-event-left-container"
+                                    >
+                                        <input
+                                            type="checkbox"
+                                            true-value="true"
+                                            false-value="false"
+                                            value="true"
+                                            id="main-festival-category-event-left-input"
+                                        />
+                                        <label
+                                            for="main-festival-category-event-left-input"
+                                            class="main-festival-category-event-left-label"
+                                            >진행중인 축제</label
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-festival-category-event-right">
+                            <div>
+                                <div
+                                    class="main-festival-category-event-right-warp"
+                                >
+                                    <div
+                                        class="main-festival-category-event-right-container"
+                                    >
+                                        <input
+                                            type="checkbox"
+                                            true-value="true"
+                                            false-value="false"
+                                            value="true"
+                                            id="main-festival-category-event-right-input"
+                                        />
+                                        <label
+                                            for="main-festival-category-event-right-input"
+                                            class="main-festival-category-event-right-label"
+                                            >종료 축제 포함</label
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 메인 축제 여기서 들어감 이제 화이팅^^ -->
+                <div></div>
+            </div>
+        </main>
+        <footer></footer>
+    </body>
+</html>
