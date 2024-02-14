@@ -654,20 +654,20 @@ const autoSlide = () => {
     slideContainer.style.transition = "transform 0.4s";
     count++;
     if (count == 2) {
-        slideContainer.style.transform = "translate(-" + 100 * (count + 1) + "%)";
+        slideContainer.style.transform = "translate(-" + 358 * (count + 1) + "px)";
         setTimeout(() => {
             slideContainer.style.transition = "transform 0s";
-            slideContainer.style.transform = "translate(-100%)";
+            slideContainer.style.transform = "translate(-358px)";
         }, 500);
         count = 0;
         pageCount.innerText = `${count + 1}/2`;
     } else {
         pageCount.innerText = `${count + 1}/2`;
-        slideContainer.style.transform = "translate(-" + 100 * (count + 1) + "%)";
+        slideContainer.style.transform = "translate(-" + 358 * (count + 1) + "px)";
     }
 };
 
-slideContainer.style.transform = "translate(-100%)";
+slideContainer.style.transform = "translate(-358px)";
 let inter = setInterval(autoSlide, 4000);
 
 // 배너 + 선택 시 모달 생성
@@ -682,4 +682,47 @@ let exitBtn = document.querySelector(".absolute-exit-icon");
 exitBtn.addEventListener("click", (e) => {
     let thumBanner = document.querySelector(".banner-plus-bg");
     thumBanner.style.display = "none";
+});
+
+//filter-container-hidden  그 필터 레이아웃
+//.full-wrap 전체 background 이미지
+//hidden-right-btn 필터 버튼
+// hidden-flex-center 필터 닫는 버튼
+
+let filterButton = document.querySelector(".hidden-right-btn");
+let filterContainer = document.querySelector(".filter-container-hidden");
+let mainContainer = document.querySelector(".full-wrap");
+let isFilterContainerVisible = false;
+
+filterButton.addEventListener("click", () => {
+    if (!isFilterContainerVisible) {
+        // 필터 컨테이너가 보이도록 변경
+        filterContainer.style.display = "flex";
+        mainContainer.style.opacity = 0; // 메인 컨테이너의 투명도를 0으로 설정하여 사라지도록 함
+        mainContainer.style.display = "none";
+        setTimeout(() => {
+            filterContainer.style.opacity = 1; // 필터 컨테이너의 투명도를 1로 설정하여 나타나도록 함
+        }, 50); // 약간의 지연을 추가하여 트랜지션이 더 부드럽게 보이도록 함
+        isFilterContainerVisible = true;
+    } else {
+        // 필터 컨테이너가 숨겨지도록 변경
+        filterContainer.style.opacity = 0; // 필터 컨테이너의 투명도를 0으로 설정하여 사라지도록 함
+        setTimeout(() => {
+            filterContainer.style.display = "none";
+            mainContainer.style.opacity = 1; // 메인 컨테이너의 투명도를 1로 설정하여 나타나도록 함
+        }, 250); // 약간의 지연을 추가하여 트랜지션이 더 부드럽게 보이도록 함
+        isFilterContainerVisible = false;
+    }
+});
+
+let searchFilterButton = document.querySelector(".hidden-flex-center");
+searchFilterButton.addEventListener("click", () => {
+    // 필터 컨테이너가 숨겨지도록 변경
+    filterContainer.style.opacity = 0; // 필터 컨테이너의 투명도를 0으로 설정하여 사라지도록 함
+    setTimeout(() => {
+        filterContainer.style.display = "none";
+        mainContainer.style.opacity = 1; // 메인 컨테이너의 투명도를 1로 설정하여 나타나도록 함
+        mainContainer.style.display = "block";
+    }, 250); // 약간의 지연을 추가하여 트랜지션이 더 부드럽게 보이도록 함
+    isFilterContainerVisible = false;
 });
