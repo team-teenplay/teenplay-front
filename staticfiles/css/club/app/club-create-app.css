@@ -271,12 +271,11 @@ button, input, optgroup, select, textarea {
 }
 
 .club-create {
-    padding-top: 5rem;
+    padding-top: 4rem;
     min-height: 100vh;
 }
 
 .create-container {
-    max-width: 1280px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -284,7 +283,7 @@ button, input, optgroup, select, textarea {
 }
 
 .name-form-wrap {
-    margin-top: 92px
+    margin-top: 92px;
 }
 
 .name-form-title-wrap {
@@ -435,7 +434,7 @@ input::placeholder {
 }
 
 .name-form-button {
-    width: 8rem;
+    width: 100%;
     --tw-text-opacity: 1;
     color: rgb(255 255 255/var(--tw-text-opacity));
     --tw-shadow: 0 1px 1px 0 rgba(0,0,0,.05);
@@ -633,7 +632,7 @@ input::placeholder {
 }
 
 .desc-form-prev-button {
-    width: 8rem;
+    width: 50%;
     --tw-shadow: 0 1px 1px 0 rgba(0,0,0,.05);
     --tw-shadow-colored: 0 1px 1px 0 var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
@@ -657,7 +656,7 @@ input::placeholder {
 }
 
 .desc-form-button {
-    width: 8rem;
+    width: 50%;
     --tw-text-opacity: 1;
     color: rgb(255 255 255/var(--tw-text-opacity));
     --tw-shadow: 0 1px 1px 0 rgba(0,0,0,.05);
@@ -900,7 +899,7 @@ input::placeholder {
 }
 
 .cover-thumbnail-wrap {
-    width: 381px;
+    width: 100%;
     outline-color: #e1e4e6;
     outline-width: 1px;
     outline-style: dashed;
@@ -956,7 +955,7 @@ input::placeholder {
 }
 
 .img-form-prev-button {
-    width: 8rem;
+    width: 50%;
     --tw-shadow: 0 1px 1px 0 rgba(0,0,0,.05);
     --tw-shadow-colored: 0 1px 1px 0 var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
@@ -980,7 +979,7 @@ input::placeholder {
 }
 
 .img-form-button {
-    width: 247px;
+    width: 50%;
     --tw-text-opacity: 1;
     color: rgb(255 255 255/var(--tw-text-opacity));
     --tw-shadow: 0 1px 1px 0 rgba(0,0,0,.05);

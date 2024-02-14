@@ -16,16 +16,14 @@ function autoSlide() {
     // 0s를 줘서 원래 1번 위치로 이동(슬라이드 효과는 안 보임)
     count++;
     if (count == 10) {
-        banner.style.transform =
-            "translate(-" + (631 * (count + 1) - 67.5) + "px)";
+        banner.style.transform = `translate(calc(-1 * (82% + 16px) * ${count + 1} + 16px))`;
         setTimeout(function () {
             banner.style.transition = "transform 0s";
-            banner.style.transform = "translate(-563.5px)";
+            banner.style.transform = `translate(calc(-1 * (82% + 16px)))`;
         }, 800);
         count = 0;
     } else {
-        banner.style.transform =
-            "translate(-" + (631 * (count + 1) - 67.5) + "px)";
+        banner.style.transform = `translate(calc(-1 * (82% + 16px) * ${count + 1} + 16px))`;
     }
 }
 
@@ -72,7 +70,7 @@ lastDiv.innerHTML = `<div class="main-slide-content-container">
 banner.insertBefore(lastDiv, document.getElementById("first-slide-banner"));
 
 // 첫 번째 배너는 10번이니까 왼쪽으로 한 번 밀어서 1번이 보이게 한다.
-banner.style.transform = "translate(-563.5px)";
+banner.style.transform = `translate(calc(-1 * (82%)))`;
 
 // 4초마다 슬라이드 이동
 let inter = setInterval(autoSlide, 4000);
@@ -90,29 +88,26 @@ arrows.forEach((arrow) => {
             if (arrowType === "slide-left-arrow") {
                 count--;
                 if (count == -1) {
-                    banner.style.transform = "translate(67.5px)";
+                    banner.style.transform = "translate(16px)";
                     setTimeout(function () {
                         banner.style.transition = "transform 0s";
-                        banner.style.transform = "translate(-6242.5px)";
+                        banner.style.transform = "translate(calc(-1 * (820% + 144px)))";
                     }, 800);
                     count = 9;
                 } else {
-                    banner.style.transform =
-                        "translate(-" + (631 * (count + 1) - 67.5) + "px)";
+                    banner.style.transform = `translate(calc(-1 * (82% + 16px) * ${count + 1} + 16px))`;
                 }
             } else {
                 count++;
                 if (count == 10) {
-                    banner.style.transform =
-                        "translate(-" + (631 * (count + 1) - 67.5) + "px)";
+                    banner.style.transform = `translate(calc(-1 * (82% + 16px) * ${count + 1} + 16px))`;
                     setTimeout(function () {
                         banner.style.transition = "transform 0s";
-                        banner.style.transform = "translate(-563.5px)";
+                        banner.style.transform = `translate(calc(-1 * (82%)))`;
                     }, 800);
                     count = 0;
                 } else {
-                    banner.style.transform =
-                        "translate(-" + (631 * (count + 1) - 67.5) + "px)";
+                    banner.style.transform = `translate(calc(-1 * (82% + 16px) * ${count + 1} + 16px))`;
                 }
             }
             inter = setInterval(autoSlide, 4000);
