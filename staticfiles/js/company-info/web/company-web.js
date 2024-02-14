@@ -1,3 +1,5 @@
+// 버튼 클릭 시 상단으로 이동하는 js
+
 const historyBtn = document.querySelector(".more-btn");
 const cropLine = document.querySelector(".histroy-crop-line");
 const contentBox = document.querySelector(".history-content-box");
@@ -49,6 +51,7 @@ moveContact.addEventListener("click", function () {
 });
 
 // 스크롤 위치 별 history team, news, contact us 항목
+// 스크롤 위치 별 보라색 표기
 const historyBg = document.querySelector(".menu-item-history");
 const historyText = document.querySelector(".history-text");
 const teamsBg = document.querySelector(".menu-item-teams");
@@ -166,7 +169,7 @@ window.addEventListener("scroll", function () {
     }
 });
 
-// 모달 팝업 open / close
+// 모달 팝업 open / close (팀원 클릭 시 나타나는 모달)
 const memberProfileClick = document.querySelectorAll(".member");
 const memberPop = document.querySelector(".teams-member-pop");
 const memberPopBk = document.querySelector(".member-pop-background");
@@ -187,7 +190,7 @@ memberPopIcon.addEventListener("click", (e) => {
     memberPop.style.display = "none";
 });
 
-// 올라가기 아이콘 수정
+// 올라가기 아이콘 수정 (최상단 올라가기)
 const goTopIcon = document.querySelector(".scroll-to-top");
 
 window.addEventListener("scroll", () => {
