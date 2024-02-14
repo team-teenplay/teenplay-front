@@ -15,12 +15,14 @@ const contentInput = document.querySelector(".pr-write-content");
 const dragDropBox = document.querySelector(".pr-write-box-wrap");
 let tempDraggedFile = false;
 
-// 이미지 업로드 옆 아이콘에 마우스 올릴 시 모달창 출력
-infoIcon.addEventListener("mouseover", () => {
+// 이미지 업로드 옆 아이콘 클릭 시 모달창 출력(모바일은 클릭만)
+infoIcon.addEventListener("click", () => {
     writeInfoModal.style.display = "block";
 });
-infoIcon.addEventListener("mouseout", () => {
-    writeInfoModal.style.display = "none";
+document.addEventListener("click", (e) => {
+    if (!e.target.classList.contains("pr-write-image-modal-btn") && !e.target.classList.contains("pr-write-image-modal-container")) {
+        writeInfoModal.style.display = "none";
+    }
 });
 
 // 이미지 없이 작성완료 클릭 시 막아주기
@@ -105,33 +107,48 @@ fileRemoveBtn.addEventListener("click", (e) => {
     uploadedImageInfo.style.display = "none";
     fileSizeInfo.innerText = "";
     fileNameInfo.innerText = "";
-});
-
-// 드래그 앤 드롭으로 이미지 첨부하기
-dragDropBox.addEventListener("dragenter", (e) => {
-    e.preventDefault();
-});
-dragDropBox.addEventListener("dragover", (e) => {
-    e.preventDefault();
-});
-dragDropBox.addEventListener("dragleave", (e) => {
-    e.preventDefault();
-});
-dragDropBox.addEventListener("drop", (e) => {
-    e.preventDefault();
-    let file = e.dataTransfer;
-    if (!checkFileSize(file, 1024 * 1024 * MAX_SIZE)) {
-        sizeErrorMsg.style.display = "block";
-        return;
-    }
-    sizeErrorMsg.style.display = "none";
-    fileSize = file.files[0].size;
-    fileSizeInfo.innerText = getFileSizeWithExtension(fileSize);
-    fileNameInfo.innerText = file.files[0].name;
-    uploadedImageInfo.style.display = "block";
-    tempDraggedFile = true;
     checkValuesAndValidateButton();
 });
+
+// // 파일 첨부 버튼은 드래그 앤 드롭 이벤트 막아주기
+// imgUploadBtn.addEventListener("dragenter", (e) => {
+//     e.preventDefault();
+// });
+// imgUploadBtn.addEventListener("dragover", (e) => {
+//     e.preventDefault();
+// });
+// imgUploadBtn.addEventListener("dragleave", (e) => {
+//     e.preventDefault();
+// });
+// imgUploadBtn.addEventListener("drop", (e) => {
+//     e.preventDefault();
+// });
+
+// // 드래그 앤 드롭으로 이미지 첨부하기
+// dragDropBox.addEventListener("dragenter", (e) => {
+//     e.preventDefault();
+// });
+// dragDropBox.addEventListener("dragover", (e) => {
+//     e.preventDefault();
+// });
+// dragDropBox.addEventListener("dragleave", (e) => {
+//     e.preventDefault();
+// });
+// dragDropBox.addEventListener("drop", (e) => {
+//     e.preventDefault();
+//     let file = e.dataTransfer;
+//     if (!checkFileSize(file, 1024 * 1024 * MAX_SIZE)) {
+//         sizeErrorMsg.style.display = "block";
+//         return;
+//     }
+//     sizeErrorMsg.style.display = "none";
+//     fileSize = file.files[0].size;
+//     fileSizeInfo.innerText = getFileSizeWithExtension(fileSize);
+//     fileNameInfo.innerText = file.files[0].name;
+//     uploadedImageInfo.style.display = "block";
+//     tempDraggedFile = true;
+//     checkValuesAndValidateButton();
+// });
 
 // 전부 다 입력 후 서버쪽 작성완료 구현은 아래 주석한 것처럼 하면 됩니다.
 
