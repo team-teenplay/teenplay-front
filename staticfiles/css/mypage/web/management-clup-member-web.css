@@ -164,18 +164,16 @@ select {
     --tw-ring-inset: var(--tw-empty, /*!*/ /*!*/);
     --tw-ring-offset-width: 0px;
     --tw-ring-offset-color: #fff;
-    --tw-ring-color: #2563eb;
+    --tw-ring-color: #2563EB;
     --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
     --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
     box-shadow: var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow);
-    border-color: #2563eb;
+    border-color: #2563EB;
 }
 
 [multiple]:focus, [type=date]:focus, [type=datetime-local]:focus, [type=email]:focus, [type=month]:focus, [type=number]:focus, [type=password]:focus, [type=search]:focus, [type=tel]:focus, [type=text]:focus, [type=time]:focus, [type=url]:focus, [type=week]:focus, select:focus, textarea:focus {
-    --tw-border-opacity: 1;
-    border-color: rgb(92 63 191/var(--tw-border-opacity));
-    --tw-ring-opacity: 1;
-    --tw-ring-color: rgb(92 63 191/var(--tw-ring-opacity));
+    border-color: #2563EB;
+    --tw-ring-color: #2563EB;
 }
 
 [role=button], button {
@@ -526,8 +524,7 @@ input[type=checkbox] {
     border-color: rgba(0,0,0,.1);
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255/var(--tw-bg-opacity));
-    --tw-text-opacity: 1;
-    color: rgb(92 63 191/var(--tw-text-opacity));
+    color: #CE201B;
 }
 
 [type=checkbox]:checked, [type=radio]:checked {
@@ -908,8 +905,7 @@ textarea[name="send-content"]::-webkit-scrollbar {
     --tw-space-x-reverse: 0;
     margin-right: calc(1rem*var(--tw-space-x-reverse));
     margin-left: calc(1rem*(1 - var(--tw-space-x-reverse)));
-    --tw-border-opacity: 1;
-    border-color: rgb(92 63 191/var(--tw-border-opacity));
+    border-color: #CE201B;
     --tw-text-opacity: 1;
     color: rgb(255 255 255/var(--tw-text-opacity));
     --tw-shadow: 0 1px 1px 0 rgba(0,0,0,.05);
@@ -920,8 +916,7 @@ textarea[name="send-content"]::-webkit-scrollbar {
     font-size: .8125rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    --tw-bg-opacity: 1;
-    background-color: rgb(92 63 191/var(--tw-bg-opacity));
+    background-color: #CE201B;
     border-width: 1px;
     border-radius: 0.375rem;
     justify-content: center;
@@ -932,8 +927,7 @@ textarea[name="send-content"]::-webkit-scrollbar {
 }
 
 .check-btn:hover, .send-check-btn:not(:disabled):hover, .kick-out-btn:hover, .kick-out-check-btn:hover, .join-btn:hover, .join-check-btn:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(71 44 163/var(--tw-bg-opacity));
+    background-color: #9F0D08;
 }
 
 .send-check-btn:disabled {
