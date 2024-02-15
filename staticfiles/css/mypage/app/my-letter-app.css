@@ -345,18 +345,18 @@ table {
     padding-right: 1.5rem;
 }
 
-.letter-item-sender, .letter-item-receiver, .letter-item-time {
+.letter-item-sender, .letter-item-receiver {
     display: table-cell;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    width: 4.5rem;
+    width: 5rem;
 }
 
 .letter-item-time, .letter-item-gab {
     display: table-cell;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    width: 7.5rem;
+    width: 3rem;
 }
 
 .letter-details {
@@ -759,4 +759,94 @@ textarea[name="send-content"]::-webkit-scrollbar {
     cursor: default;
     background-color: #9F0D08;
     border-color: #9F0D08;
+}
+
+/* 도시락 버튼 작성 */
+.button-option-style {
+    color: #878D91;
+    flex-grow: 1;
+    box-sizing: border-box;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(174, 174, 174);
+    border-radius: 6px;
+    margin: 0px;
+    font-family: "KakaoBig Bold";
+    line-height: 1.5;
+    letter-spacing: -0.1px;
+    text-decoration: none;
+    cursor: pointer;
+    background-color:white;
+    height: 40px;
+    padding: 0px 18px;
+    font-size: 14px;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
+}
+
+.button-option-menu {
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px;
+}
+
+.button-lining {
+    box-sizing: border-box;
+}
+
+.comment-setting .display-none {
+    display: none;
+}
+.comment-setting .display-flex {
+    display: flex;
+}
+
+.comment-setting {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    width: 4.5rem;
+}
+
+.comment-set-button-style {
+    width: 14px;
+    height: 14px;
+    vertical-align: top;
+}
+
+.set-button-tool {
+    position: absolute;
+    left: 17rem;
+    display: none;
+}
+
+.comment-set-button {
+    transform: rotate(90deg);
+    padding: 6px;
+    box-sizing: border-box;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    margin: 0px;
+    font-family: "KakaoBig Bold";
+    line-height: 1.5;
+    letter-spacing: -0.1px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    cursor: pointer;
+    height: auto;
+    font-size: 12px;
+}
+
+.display-none {
+    display: none;
+}
+.display-flex {
+    display: flex;
 }

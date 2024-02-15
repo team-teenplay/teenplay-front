@@ -126,3 +126,16 @@ checkModalCheckBtn.addEventListener("click", () => {
         sendModalWrap.querySelector(".send-modal-container").style.display = "flex";
     }, 450);
 });
+
+// 도시락 버튼 열면 신고하기 버튼
+const addInput = document.querySelector("button.comment-set-button");
+const addNomal = document.querySelector("div.set-button-tool");
+const reportPage = document.querySelector("div#report-btn");
+const saveReport = document.querySelector("button.report-sign-button");
+const cancleReport = document.querySelector("button.report-cancel-button");
+
+addInput.addEventListener("click", () => {
+    console.log("in");
+    addNomal.classList.toggle("display-flex");
+    // addNomal.classList.add("display-flex");
+});
