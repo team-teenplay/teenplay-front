@@ -525,6 +525,7 @@ body {
     position: relative;
     border-color: #e6e6e7;
     background-color: #fafafb;
+    overflow: hidden; /* 요소 내부 컨텐츠가 넘칠 경우 숨김 처리 */
 }
 
 #main-festival-photo-svg{
@@ -1594,10 +1595,10 @@ body {
 
 #main-festival-photo-img{
     position: absolute;
-    height: 100%;
-    width: 100%;
-    inset: 0px;
-    object-fit: cover;
+    width: 100%; /* 부모 요소의 너비에 맞추기 */
+    height: 100%; /* 부모 요소의 높이에 맞추기 */
+    object-fit: contain; /* 이미지가 완전히 표시될 수 있도록 */
+    inset: 0;
     object-position: center center;
     color: transparent;
     display: block;
