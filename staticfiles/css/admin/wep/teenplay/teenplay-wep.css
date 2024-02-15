@@ -319,7 +319,7 @@ body {
     height: 40px;
     display: flex;
     margin-bottom: 8px;
-    background-color: #f2f0fc;
+    background-color: #FFF0EE;
 }
 
 .main-user-warp{
@@ -359,7 +359,7 @@ body {
 }
 
 .main-user-other:hover{
-    background-color: #f2f0fc;
+    background-color: #FFF0EE;
     padding-left: 12px;
     padding-right: 12px;
     border-radius: 8px;
@@ -439,7 +439,7 @@ body {
     padding-left: 19px;
     padding-right: 19px;
     border-width: 2px;
-    border-color: #5b44ea;
+    border-color: #CE201B;
 }
 
 
@@ -520,8 +520,8 @@ color: #9ca3af;
 
 .main-user-total-number{
     margin-left: 4px;
-    color: #5b44ea;
-    fill: #5b44ea;
+    color: #CE201B;
+    fill: #CE201B;
 }
 
 .main-user-total-search{
@@ -972,8 +972,8 @@ color: #9ca3af;
     font-weight: 600;
       font-size: 14px;
       line-height: 16px;
-      color: #333334;
-      fill: #333334;
+      color: #878D91;
+      fill: #878D91;
   
       -webkit-appearance: button;
   
@@ -985,14 +985,14 @@ color: #9ca3af;
       padding: 0;
       padding-left: 16px;
       padding-right: 16px;
-      background-color: #fff;
+      background-color: #E1E1E1;
       border-width: 1px;
       border-color: rgba(0,0,0,.1);
   }
 
   .admin-user-modal-left-button:hover{
-    border-color: #f3f3f4;
-    background-color: #f3f3f4;
+    border-color: #C2C2C2;
+    background-color: #C2C2C2;
   }
 
   .admin-user-modal-left-detail-button{
@@ -1006,8 +1006,8 @@ color: #9ca3af;
     font-weight: 600;
       font-size: 14px;
       line-height: 16px;
-      color: #333334;
-      fill: #333334;
+      color: #878D91;
+      fill: #878D91;
   
       -webkit-appearance: button;
   
@@ -1019,14 +1019,14 @@ color: #9ca3af;
       padding: 0;
       padding-left: 16px;
       padding-right: 16px;
-      background-color: #fff;
+      background-color: #E1E1E1;
       border-width: 1px;
       border-color: rgba(0,0,0,.1);
   }
 
   .admin-user-modal-left-detail-button:hover{
-    border-color: #f3f3f4;
-    background-color: #f3f3f4;
+    border-color: #C2C2C2;
+    background-color: #C2C2C2;
   }
   
   .admin-user-modal-right{
@@ -1049,7 +1049,7 @@ color: #9ca3af;
     line-height: 16px;
     color: #fff;
     fill: #fff;
-    background-color: #1d1d1e;
+    background-color: #CE201B;
     -webkit-appearance: button;
     background-image: none;
     cursor: pointer;
@@ -1060,7 +1060,7 @@ color: #9ca3af;
   }
 
    .admin-user-modal-right-button:hover{
-    background-color: #000;
+    background-color: #9F0D08;
   }
 
   .admin-user-modal-right-detail-button{
@@ -1255,9 +1255,16 @@ color: #9ca3af;
     line-height: 20px;
     color: #1d1d1e;
     fill: #1d1d1e;
-    
-
 }
+
+.admin-post-modal-title-input:focus-within{
+    border-radius: 8px;
+    padding-left: 18px;
+    padding-right: 18px;
+    border-width: 2px;
+    border-color: #2563EB;
+}
+
 
 .admin-post-modal-content-name{
 
@@ -1790,8 +1797,8 @@ margin-left: 16px;}
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
-    color: #de2c2c;
-    fill: #de2c2c;
+    color: #CE201B;
+    fill: #CE201B;
 
 }
 
