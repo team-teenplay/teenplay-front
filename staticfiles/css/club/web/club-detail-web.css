@@ -263,11 +263,12 @@ button, input, optgroup, select, textarea {
 
 .club-top-button.cancel {
     --tw-bg-opacity: 1;
-    background-color: rgb(225 225 225/var(--tw-bg-opacity));
+    background-color: #e1e1e1;
+    color: #878D91;
 }
 
 .club-top-button.cancel:hover {
-    background-color: rgb(186, 184, 184);
+    background-color: #c2c2c2;
 }
 
 .club-top-button.quit {

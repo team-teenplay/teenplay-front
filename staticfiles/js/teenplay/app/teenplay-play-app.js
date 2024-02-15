@@ -44,6 +44,9 @@ videos.forEach((video, i) => {
     });
 });
 
+muteIcons.forEach((mute) => (mute.style.display = "none"));
+unmuteIcons.forEach((unmute) => (unmute.style.display = "block"));
+
 // 음소거 관련 버튼
 muteIcons.forEach((mute) => {
     mute.addEventListener("click", () => {
@@ -85,14 +88,14 @@ videos.forEach((video, i) => {
 
 function slideNext(idx) {
     slideContainer.style.transition = `all 0.5s ease-in`;
-    slideContainer.style.transform = `translateY(-${window.innerHeight * idx}px)`;
+    slideContainer.style.transform = `translateY(calc(-1 * (100vh * ${idx}))`;
     videoWraps[idx - 1].classList.remove("playing");
     videoWraps[idx].classList.add("playing");
 }
 
 function slidePrev(idx) {
     slideContainer.style.transition = `all 0.5s ease-in`;
-    slideContainer.style.transform = `translateY(-${window.innerHeight * idx}px)`;
+    slideContainer.style.transform = `translateY(calc(-1 * (100vh * ${idx}))`;
     videoWraps[idx + 1].classList.remove("playing");
     videoWraps[idx].classList.add("playing");
 }
@@ -150,4 +153,166 @@ slideWrap.addEventListener("wheel", (e) => {
         pauseIcons[idx].style.display = "block";
         playIcons[idx].style.display = "none";
     }
+});
+
+// 터치로 이동시키기
+
+// [html 최초 로드 및 이벤트 상시 대기 실시]
+window.onload = () => {
+    main();
+};
+
+function main() {
+    slideWrap.addEventListener("touchstart", handleStart, false);
+    slideWrap.addEventListener("touchmove", handleMove, false);
+    slideWrap.addEventListener("touchend", handleEnd, false);
+
+    // 모바일 : 터치 시작 내부 함수
+    function handleStart(e) {
+        // body 스크롤 막음
+        BodyScrollDisAble(e);
+
+        // 터치한 요소의 id값 확인
+        // let startId = e.targetTouches[0].target.id;
+        // console.log(`startId: ${startId}`);
+        // console.log("");
+
+        // 좌표값 확인
+        // let startX = e.changedTouches[0].clientX;
+        // let startY = e.changedTouches[0].clientY;
+        // console.log(`startX: ${startX}`);
+        // console.log(`startY: ${startY}`);
+        // console.log("");
+    }
+
+    // 모바일 : 터치 이동 내부 함수
+    function handleMove(e) {
+        // body 스크롤 막음
+        BodyScrollDisAble(e);
+
+        // 터치한 요소의 id값 확인
+        // let moveId = e.targetTouches[0].target.id;
+        // console.log(`moveId: ${moveId}`);
+        // console.log("");
+
+        // 좌표값 확인
+        // let moveX = e.changedTouches[0].clientX;
+        // let moveY = e.changedTouches[0].clientY;
+        // console.log(`moveX: ${moveX}`);
+        // console.log(`moveY: ${moveY}`);
+        // console.log("");
+    }
+
+    // 모바일 : 터치 종료 내부 함수
+    function handleEnd(e) {
+        // body 스크롤 허용
+        BodyScrollDisAble(e);
+
+        // 터치한 요소의 id값 확인
+        // let moveId = e.targetTouches[0].target.id;
+        // console.log(`moveId: ${moveId}`);
+        // console.log("");
+
+        // 좌표값 확인
+        // let endX = e.changedTouches[0].clientX;
+        // let endY = e.changedTouches[0].clientY;
+        // console.log(`endX: ${endX}`);
+        // console.log(`endY: ${endY}`);
+        // console.log("");
+    }
+
+    // 스크롤 막기
+    function BodyScrollDisAble() {
+        slideWrap.style.overflow = "hidden";
+    }
+
+    // 스크롤 허용
+    function BodyScrollAble() {
+        slideWrap.style.overflow = "auto";
+    }
+}
+
+// 스와이프 방향 알아내기
+let initialX = null,
+    initialY = null;
+
+function initTouch(e) {
+    initialX = `${e.touches ? e.touches[0].clientX : e.clientX}`;
+    initialY = `${e.touches ? e.touches[0].clientY : e.clientY}`;
+}
+
+let direction = 0;
+let touchIdx = 0;
+let touchCheck = true;
+
+function swipeDirection(e) {
+    if (initialX !== null && initialY !== null) {
+        const currentX = `${e.touches ? e.touches[0].clientX : e.clientX}`;
+        const currentY = `${e.touches ? e.touches[0].clientY : e.clientY}`;
+
+        let diffX = initialX - currentX;
+        let diffY = initialY - currentY;
+
+        Math.abs(diffX) <= Math.abs(diffY) && (0 < diffY ? (direction = 1) : (direction = -1));
+        // console.log(direction);
+        initialX = null;
+        initialY = null;
+
+        if (!touchCheck) return;
+        touchCheck = false;
+        for (let i = 0; i < videoWraps.length; i++) {
+            if (videoWraps[i].classList.contains("playing")) {
+                touchIdx = i;
+                break;
+            }
+        }
+        if (direction > 0) {
+            setTimeout(() => {
+                touchCheck = true;
+            }, 800);
+            if (touchIdx == videoWraps.length - 1) {
+                return;
+            }
+            slideNext(touchIdx + 1);
+            videos[touchIdx].pause();
+            globalThis.flags[touchIdx] = true;
+            pauseIcons[touchIdx].style.display = "none";
+            playIcons[touchIdx].style.display = "block";
+            touchIdx++;
+            videos[touchIdx].play();
+            globalThis.flags[touchIdx] = false;
+            pauseIcons[touchIdx].style.display = "block";
+            playIcons[touchIdx].style.display = "none";
+        } else {
+            setTimeout(() => {
+                touchCheck = true;
+            }, 800);
+            if (touchIdx == 0) {
+                return;
+            }
+            slidePrev(touchIdx - 1);
+            videos[touchIdx].pause();
+            globalThis.flags[touchIdx] = true;
+            pauseIcons[touchIdx].style.display = "none";
+            playIcons[touchIdx].style.display = "block";
+            touchIdx--;
+            videos[touchIdx].play();
+            globalThis.flags[touchIdx] = false;
+            pauseIcons[touchIdx].style.display = "block";
+            playIcons[touchIdx].style.display = "none";
+        }
+    }
+}
+
+slideWrap.addEventListener("touchstart", initTouch);
+slideWrap.addEventListener("touchmove", swipeDirection);
+// slideWrap.addEventListener("mousedown", (e) => {
+//     initTouch(e), slideWrap.addEventListener("mousemove", swipeDirection);
+// });
+slideWrap.addEventListener("mouseup", () => {
+    slideWrap.removeEventListener("mousemove", swipeDirection);
+});
+
+slideWrap.addEventListener("mousedown", (e) => {
+    0 === e.button && (initTouch(e), slideWrap.addEventListener("mousemove", swipeDirection));
 });

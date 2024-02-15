@@ -170,6 +170,7 @@ menu, ol, ul {
 
 .terms-wrap {
     min-height: 100vh;
+    padding-top: 80px;
 }
 
 .terms-container {
@@ -203,7 +204,7 @@ menu, ol, ul {
 
 .terms-subtitle {
     --tw-text-opacity: 1;
-    color: rgb(92 63 191/var(--tw-text-opacity));
+    color: #CE201B;
     font-weight: 700;
     padding: 0.5rem;
     margin: 0;
@@ -356,6 +357,7 @@ ul > li > ul > li > ul > li {
     padding-right: 0;
     --tw-text-opacity: 1;
     color: rgb(135 141 145/var(--tw-text-opacity));
+    border-left-width: 1px;
     font-size: .9375rem;
     padding-left: 1rem;
     padding-top: 1rem;
