@@ -188,12 +188,12 @@ menu, ol, ul {
 
 .select-category {
     --tw-text-opacity: 1;
-    color: rgb(141 113 221/var(--tw-text-opacity));
+    color: #CE201B;
 }
 
 .select-category:hover {
     --tw-text-opacity: 1;
-    color: rgb(92 63 191/var(--tw-text-opacity));
+    color: #9F0D08;
 }
 
 .activity-detail-link {
@@ -739,7 +739,7 @@ menu, ol, ul {
     --tw-text-opacity: 1;
     color: rgb(248 250 251/var(--tw-text-opacity));
     --tw-bg-opacity: 1;
-    background-color: rgb(141 113 221/var(--tw-bg-opacity));
+    background-color: #CE201B;
     pointer-events: none;
 }
 
