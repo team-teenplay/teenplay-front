@@ -67,104 +67,104 @@ window.addEventListener("scroll", function () {
     if (hisStyle.display == "inline-block") {
         if (window.scrollY <= 360) {
             historyBg.style.backgroundColor = "#fff";
-            historyText.style.color = "rgb(93, 63, 191)";
+            historyText.style.color = "#ce201b";
             teamsBg.style.backgroundColor = "#fff";
-            teamsText.style.color = "rgb(93, 63, 191)";
+            teamsText.style.color = "#ce201b";
             newsBg.style.backgroundColor = "#fff";
-            newsText.style.color = "rgb(93, 63, 191)";
+            newsText.style.color = "#ce201b";
             contactUsBg.style.backgroundColor = "#fff";
-            contactUsText.style.color = "rgb(93, 63, 191)";
+            contactUsText.style.color = "#ce201b";
         }
         if (window.scrollY > 360 && window.scrollY <= 1000) {
-            historyBg.style.backgroundColor = "rgb(93, 63, 191)";
+            historyBg.style.backgroundColor = "#ce201b";
             historyText.style.color = "white";
             teamsBg.style.backgroundColor = "#fff";
-            teamsText.style.color = "rgb(93, 63, 191)";
+            teamsText.style.color = "#ce201b";
             newsBg.style.backgroundColor = "#fff";
-            newsText.style.color = "rgb(93, 63, 191)";
+            newsText.style.color = "#ce201b";
             contactUsBg.style.backgroundColor = "#fff";
-            contactUsText.style.color = "rgb(93, 63, 191)";
+            contactUsText.style.color = "#ce201b";
         }
         if (window.scrollY > 1000 && window.scrollY <= 1800) {
-            teamsBg.style.backgroundColor = "#5D3FBF";
+            teamsBg.style.backgroundColor = "#CE201B";
             teamsText.style.color = "#fff";
             historyBg.style.backgroundColor = "#fff";
-            historyText.style.color = "rgb(93, 63, 191)";
+            historyText.style.color = "#ce201b";
             newsBg.style.backgroundColor = "#fff";
-            newsText.style.color = "rgb(93, 63, 191)";
+            newsText.style.color = "#ce201b";
             contactUsBg.style.backgroundColor = "#fff";
-            contactUsText.style.color = "rgb(93, 63, 191)";
+            contactUsText.style.color = "#ce201b";
         }
         if (window.scrollY > 1800 && window.scrollY <= 2800) {
-            newsBg.style.backgroundColor = "#5D3FBF";
+            newsBg.style.backgroundColor = "#CE201B";
             newsText.style.color = "#fff";
             historyBg.style.backgroundColor = "#fff";
-            historyText.style.color = "rgb(93, 63, 191)";
+            historyText.style.color = "#ce201b";
             teamsBg.style.backgroundColor = "#fff";
-            teamsText.style.color = "rgb(93, 63, 191)";
+            teamsText.style.color = "#ce201b";
             contactUsBg.style.backgroundColor = "#fff";
-            contactUsText.style.color = "rgb(93, 63, 191)";
+            contactUsText.style.color = "#ce201b";
         }
         if (window.scrollY > 2800) {
-            contactUsBg.style.backgroundColor = "#5D3FBF";
+            contactUsBg.style.backgroundColor = "#CE201B";
             contactUsText.style.color = "#fff";
             historyBg.style.backgroundColor = "#fff";
-            historyText.style.color = "rgb(93, 63, 191)";
+            historyText.style.color = "#ce201b";
             teamsBg.style.backgroundColor = "#fff";
-            teamsText.style.color = "rgb(93, 63, 191)";
+            teamsText.style.color = "#ce201b";
             newsBg.style.backgroundColor = "#fff";
-            newsText.style.color = "rgb(93, 63, 191)";
+            newsText.style.color = "#ce201b";
         }
     } else {
         if (window.scrollY <= 360) {
             historyBg.style.backgroundColor = "#fff";
-            historyText.style.color = "rgb(93, 63, 191)";
+            historyText.style.color = "#ce201b";
             teamsBg.style.backgroundColor = "#fff";
-            teamsText.style.color = "rgb(93, 63, 191)";
+            teamsText.style.color = "#ce201b";
             newsBg.style.backgroundColor = "#fff";
-            newsText.style.color = "rgb(93, 63, 191)";
+            newsText.style.color = "#ce201b";
             contactUsBg.style.backgroundColor = "#fff";
-            contactUsText.style.color = "rgb(93, 63, 191)";
+            contactUsText.style.color = "#ce201b";
         }
         if (window.scrollY > 360 && window.scrollY <= 2000) {
-            historyBg.style.backgroundColor = "rgb(93, 63, 191)";
+            historyBg.style.backgroundColor = "#ce201b";
             historyText.style.color = "white";
             teamsBg.style.backgroundColor = "#fff";
-            teamsText.style.color = "rgb(93, 63, 191)";
+            teamsText.style.color = "#ce201b";
             newsBg.style.backgroundColor = "#fff";
-            newsText.style.color = "rgb(93, 63, 191)";
+            newsText.style.color = "#ce201b";
             contactUsBg.style.backgroundColor = "#fff";
-            contactUsText.style.color = "rgb(93, 63, 191)";
+            contactUsText.style.color = "#ce201b";
         }
         if (window.scrollY > 2000 && window.scrollY <= 2900) {
-            teamsBg.style.backgroundColor = "#5D3FBF";
+            teamsBg.style.backgroundColor = "#CE201B";
             teamsText.style.color = "#fff";
             historyBg.style.backgroundColor = "#fff";
-            historyText.style.color = "rgb(93, 63, 191)";
+            historyText.style.color = "#ce201b";
             newsBg.style.backgroundColor = "#fff";
-            newsText.style.color = "rgb(93, 63, 191)";
+            newsText.style.color = "#ce201b";
             contactUsBg.style.backgroundColor = "#fff";
-            contactUsText.style.color = "rgb(93, 63, 191)";
+            contactUsText.style.color = "#ce201b";
         }
         if (window.scrollY > 2900 && window.scrollY <= 3950) {
-            newsBg.style.backgroundColor = "#5D3FBF";
+            newsBg.style.backgroundColor = "#CE201B";
             newsText.style.color = "#fff";
             historyBg.style.backgroundColor = "#fff";
-            historyText.style.color = "rgb(93, 63, 191)";
+            historyText.style.color = "#ce201b";
             teamsBg.style.backgroundColor = "#fff";
-            teamsText.style.color = "rgb(93, 63, 191)";
+            teamsText.style.color = "#ce201b";
             contactUsBg.style.backgroundColor = "#fff";
-            contactUsText.style.color = "rgb(93, 63, 191)";
+            contactUsText.style.color = "#ce201b";
         }
         if (window.scrollY > 3950) {
-            contactUsBg.style.backgroundColor = "#5D3FBF";
+            contactUsBg.style.backgroundColor = "#CE201B";
             contactUsText.style.color = "#fff";
             historyBg.style.backgroundColor = "#fff";
-            historyText.style.color = "rgb(93, 63, 191)";
+            historyText.style.color = "#ce201b";
             teamsBg.style.backgroundColor = "#fff";
-            teamsText.style.color = "rgb(93, 63, 191)";
+            teamsText.style.color = "#ce201b";
             newsBg.style.backgroundColor = "#fff";
-            newsText.style.color = "rgb(93, 63, 191)";
+            newsText.style.color = "#ce201b";
         }
     }
 });
