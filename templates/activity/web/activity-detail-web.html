@@ -342,12 +342,12 @@
                             </section>
                             <section class="comment-section">
                                 <div class="comment-title">댓글</div>
-                                <!-- 위시리스트 댓글 추가 부분 -->
+                                <!-- 댓글 추가 부분 -->
                                 <div class="k-comment-list-box-wrap">
                                     <!-- 댓글 구분선 -->
                                     <div class="k-comment-line"></div>
-                                    <!-- 위시리스트 댓글 수정 부분 -->
-                                    <div class="k-comment-update-box-all-wrap hidden">
+                                    <!-- 댓글 수정 부분 -->
+                                    <div class="k-comment-update-box-all-wrap">
                                         <div class="k-comment-update-box-wrap">
                                             <div class="k-comment-update-wrap">
                                                 <div class="k-comment-update-username-container">햄벅</div>
@@ -364,37 +364,37 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- 위시리스트 댓글 목록 부분 -->
+                                    <!-- 댓글 목록 부분 -->
                                     <div class="k-comment-list-all-wrap">
-                                        <!-- 위시리스트 개별 댓글 부분 -->
+                                        <!-- 개별 댓글 부분 -->
                                         <div class="k-comment-list-wrap">
-                                            <!-- 위시리스트 댓글 내 프로필 사진 부분 -->
+                                            <!-- 댓글 내 프로필 사진 부분 -->
                                             <div class="k-comment-profile-container">
                                                 <svg class="k-comment-profile-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                                                     <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd"></path>
                                                 </svg>
                                             </div>
-                                            <!-- 위시리스트 개별 댓글 전체 내용 부분 -->
+                                            <!-- 개별 댓글 전체 내용 부분 -->
                                             <div class="k-comment-content-container">
-                                                <!-- 위시리스트 댓글 정보 부분 -->
+                                                <!-- 댓글 정보 부분 -->
                                                 <div class="k-comment-info">
-                                                    <!-- 위시리스트 댓글 작성자 이름 부분 -->
+                                                    <!-- 댓글 작성자 이름 부분 -->
                                                     <span>햄벅</span>
-                                                    <!-- 위시리스트 댓글 작성 날짜 부분 -->
+                                                    <!-- 댓글 작성 날짜 부분 -->
                                                     <span class="k-comment-info-date">1일 전</span>
                                                 </div>
-                                                <!-- 위시리스트 개별 댓글 내용 부분 -->
+                                                <!-- 개별 댓글 내용 부분 -->
                                                 <div class="k-comment-text">가입 신청 보냈습니다~~~!</div>
                                             </div>
                                         </div>
-                                        <!-- 위시리스트 개별 댓글 메뉴 부분 -->
+                                        <!-- 개별 댓글 메뉴 부분 -->
                                         <div>
                                             <button class="k-comment-menu" type="button" aria-haspopup="menu" data-headlessui-state>
                                                 <svg class="k-comment-menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                                                     <path fill-rule="evenodd" d="M10.5 6a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm0 6a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm0 6a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" clip-rule="evenodd"></path>
                                                 </svg>
                                             </button>
-                                            <div class="k-comment-menu-open-wrap hidden" aria-labelledby="main-wishlist-content-menu" role="menu" tabindex="0" data-headlessui-state="open">
+                                            <div class="k-comment-menu-open-wrap" aria-labelledby="main-wishlist-content-menu" role="menu" tabindex="0" data-headlessui-state="open">
                                                 <div class="k-comment-menu-open-container" role="none">
                                                     <div class="k-comment-menu-open-divison" role="none">
                                                         <button class="k-comment-menu-open-choice" type="button" id="comment-menu-open-update" role="menuitem" tabindex="-1">수정</button>
@@ -405,7 +405,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- 위시리스트 전체 댓글 부분 -->
+                                <!-- 전체 댓글 부분 -->
                                 <div class="k-comment-input-box-all-wrap">
                                     <div class="k-comment-input-box-wrap">
                                         <div class="k-comment-input-wrap">
@@ -448,9 +448,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <!-- list -->
                             <div class="activity-find-more-list">
-                                <!-- 여기 아래로 가져온것-->
                                 <div class="k-activity-window-bg">
                                     <div class="k-activity-window">
                                         <div class="k-act-window-image">
@@ -795,6 +793,117 @@
                 <button class="share-close-button" type="button">닫기</button>
             </div>
         </div>
+        <!-- 틴친 프로필 모달 부분  -->
+        <div class="profile hidden">
+            <div class="modal-full-wrap" role="dialog" aria-modal="true" data-headlessui-state="open" aria-labelledby="headlessui-dialog-title-42" aria-describedby="headlessui-description-43">
+                <div class="modal-screen"></div>
+                <div class="modal-divison">
+                    <!-- 틴친 프로필 정보 부분 -->
+                    <div class="teenchin-box post-update-wrap" data-headlessui-state="open">
+                        <div class="teenchin-items">
+                            <!-- 틴친 프로필 사진 부분 -->
+                            <!-- 틴친 상세프로필 이동 주소 필요 -->
+                            <a href="">
+                                <div class="profile-img-contents">
+                                    <div class="profile-img-box">
+                                        <!-- 프로필 사진이 있을 경우 이미지 사진 출력 -->
+                                        <!-- <img class="profile-img" src="/staticfiles/images/teenplay_logo/logo1.png"> -->
+                                        <!-- 프로필 기본 이미지 -->
+                                        <svg class="profile-defalut-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd"></path>
+                                        </svg>
+                                    </div>
+                                    <!-- 틴친 프로필 이미지 여백 부분 -->
+                                    <div class="profile-img-gap"></div>
+                                </div>
+                                <!-- 틴친 프로필 이름 부분 -->
+                                <div class="profile-info-contents">
+                                    <div class="profile-name">핏자</div>
+                                </div>
+                            </a>
+                            <!-- 틴친 프로필 버튼 부분 -->
+                            <div class="teenchin-btn-container">
+                                <div class="teenchin-btn-box">
+                                    <!-- 틴친 신청 버튼 부분 -->
+                                    <button class="teenchin-add-btn" type="button">
+                                        <svg class="add-svg" fill="currentColor" version="1.0" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                            <g><path d="M16,29A13,13,0,1,1,29,16,13,13,0,0,1,16,29ZM16,5A11,11,0,1,0,27,16,11,11,0,0,0,16,5Z M16,23a1,1,0,0,1-1-1V10a1,1,0,0,1,2,0V22A1,1,0,0,1,16,23Z M22,17H10a1,1,0,0,1,0-2H22a1,1,0,0,1,0,2Z" /></g>
+                                        </svg>
+                                        <span>틴친 신청</span>
+                                    </button>
+                                    <!-- 틴친 신청중 버튼 부분 -->
+                                    <button class="teenchin-request-btn hidden" type="button">
+                                        <svg class="request-svg" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 2C17.523 2 22 6.478 22 12C22 17.522 17.523 22 12 22C6.477 22 2 17.522 2 12C2 6.478 6.477 2 12 2ZM12 3.667C7.405 3.667 3.667 7.405 3.667 12C3.667 16.595 7.405 20.333 12 20.333C16.595 20.333 20.333 16.595 20.333 12C20.333 7.405 16.595 3.667 12 3.667ZM11.9987 14.5022C12.5502 14.5022 12.9973 14.9494 12.9973 15.5009C12.9973 16.0524 12.5502 16.4996 11.9987 16.4996C11.4471 16.4996 11 16.0524 11 15.5009C11 14.9494 11.4471 14.5022 11.9987 14.5022ZM11.9945 7C12.3742 6.9997 12.6882 7.2816 12.7381 7.64764L12.7451 7.7494L12.7487 12.251C12.749 12.6652 12.4135 13.0013 11.9993 13.0016C11.6196 13.0019 11.3055 12.72 11.2556 12.354L11.2487 12.2522L11.2451 7.7506C11.2447 7.33639 11.5802 7.00033 11.9945 7Z"
+                                            />
+                                        </svg>
+                                        <span>신청중</span>
+                                    </button>
+                                    <!-- 틴친중 버튼 부분 -->
+                                    <button class="teenchin-btn hidden" type="button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="check-svg" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>틴친중</span>
+                                    </button>
+                                    <!-- 쪽지 보내기 버튼 부분 -->
+                                    <button class="send-letter-btn" type="button">
+                                        <svg aria-label="게시물 공유" class="send-svg" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24">
+                                            <line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line>
+                                            <polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon>
+                                        </svg>
+                                        <span>쪽지 보내기</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 쪽지 보내기 모달 부분 -->
+        <div class="send-modal-wrap hidden">
+            <div class="modal-full-wrap" role="dialog" aria-modal="true" data-headlessui-state="open" aria-labelledby="headlessui-dialog-title-42" aria-describedby="headlessui-description-43">
+                <div class="modal-screen"></div>
+                <div class="modal-divison">
+                    <!-- 쪽지 보내기 부분 -->
+                    <div class="send-modal-container">
+                        <div class="send-modal-box">
+                            <div>
+                                <h2 class="modal-header-box">
+                                    <div class="send-modal-title">쪽지 보내기</div>
+                                </h2>
+                            </div>
+                            <div class="sender-receiver-box">
+                                <div class="sender-box">
+                                    <div class="sender-title">보낸 사람</div>
+                                    <!-- 회원의 이름과 이메일이 필요 -->
+                                    <div class="send-sender-email" type="text">아무개(example@sample.com)</div>
+                                </div>
+                                <div class="receiver-box">
+                                    <div class="receiver-title">받는 사람</div>
+                                    <!-- 형식: 아무개(example@sample.com) -->
+                                    <div class="send-receiver-email-box">
+                                        <input class="send-receiver-email" autocomplete="off" type="text" placeholder="example@sample.com" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="letter-content-area">
+                                <!-- 쪽지 내용 필요 -->
+                                <textarea name="send-content" rows="10" placeholder="쪽지의 내용을 작성해 주세요."></textarea>
+                            </div>
+                            <div class="modal-btn-box">
+                                <button class="send-close-btn" type="button">닫기</button>
+                                <button class="send-check-btn" type="button">보내기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
     <script src="/staticfiles/js/activity/web/activity-detail-web.js"></script>
+    <!-- Swal -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </html>
