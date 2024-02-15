@@ -14,7 +14,7 @@ heartCheck.addEventListener("click", (e) => {
     let likeText = document.querySelector(".k-club-modal-like-title-text");
     // 하트가 파란색이라면
     if (e.target && color.getPropertyValue("fill") === "none") {
-        heartColor.style.fill = "rgb(232, 103, 98)";
+        heartColor.style.fill = "#CE201B";
         likeModal.style.display = "block";
         // likeText.innerHTML = "관심 활동에 추가되었습니다.";
         likeTextIcon.style.display = "flex";
@@ -35,6 +35,8 @@ closeLikeModal.addEventListener("click", (e) => {
     likeModal.style.display = "none";
 });
 
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 // // 특정 버튼 클릭 시 해당 위치로 이동
 document.querySelector(".act-intro").addEventListener("click", () => {
     // 이동하려는 대상 div 선택
@@ -47,7 +49,6 @@ document.querySelector(".act-intro").addEventListener("click", () => {
 });
 
 document.querySelector(".act-location").addEventListener("click", () => {
-    // 이동하려는 대상 div 선택
     const targetDiv = document.querySelector(".filp-more");
 
     window.scrollTo({
@@ -57,7 +58,6 @@ document.querySelector(".act-location").addEventListener("click", () => {
 });
 
 document.querySelector(".act-info").addEventListener("click", () => {
-    // 이동하려는 대상 div 선택
     const targetDiv = document.querySelector(".map-text-content-box");
 
     window.scrollTo({
@@ -67,7 +67,6 @@ document.querySelector(".act-info").addEventListener("click", () => {
 });
 
 document.querySelector(".act-noti").addEventListener("click", () => {
-    // 이동하려는 대상 div 선택
     const targetDiv = document.querySelector(".feed-main-title-box");
 
     window.scrollTo({
@@ -77,7 +76,6 @@ document.querySelector(".act-noti").addEventListener("click", () => {
 });
 
 document.querySelector(".act-inquiry").addEventListener("click", () => {
-    // 이동하려는 대상 div 선택
     const targetDiv = document.querySelector(".feed-item");
 
     window.scrollTo({
@@ -87,7 +85,6 @@ document.querySelector(".act-inquiry").addEventListener("click", () => {
 });
 
 document.querySelector(".act-suggestion").addEventListener("click", () => {
-    // 이동하려는 대상 div 선택
     const targetDiv = document.querySelector(".activity-list-more-title");
 
     window.scrollTo({
@@ -97,7 +94,6 @@ document.querySelector(".act-suggestion").addEventListener("click", () => {
 });
 
 document.querySelector(".act-cancel").addEventListener("click", () => {
-    // 이동하려는 대상 div 선택
     const targetDiv = document.querySelector(".policy-title");
 
     window.scrollTo({
@@ -105,6 +101,7 @@ document.querySelector(".act-cancel").addEventListener("click", () => {
         behavior: "smooth",
     });
 });
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 // // 특정 위치로 이동되었을 때 act 아래쪽에 줄이 생기는 액션
 // 버튼 선택 시 스타일 변경을 위한 설정  (버튼의 클래스에 따라 변경)
@@ -132,7 +129,7 @@ window.addEventListener("scroll", function () {
     if (document.documentElement.scrollTop < targetEndContainerPosition) {
         // 스크롤 위치에 따라 적절히 조정
         introLine.style.borderBottomWidth = "2px";
-        introLine.style.color = "rgb(92 63 191 / var(--tw-text-opacity))";
+        introLine.style.color = "#ce201b";
         locationLine.style.color = "";
         locationLine.style.borderColor = "";
         infoLine.style.color = "";
@@ -146,8 +143,8 @@ window.addEventListener("scroll", function () {
     }
     // 행사장소
     if (document.documentElement.scrollTop >= targetEndContainerPosition && document.documentElement.scrollTop < targetMapPosition) {
-        locationLine.style.color = "rgb(92 63 191 / var(--tw-text-opacity))";
-        locationLine.style.borderColor = "rgb(92 63 191 / var(--tw-text-opacity))";
+        locationLine.style.color = "#ce201b";
+        locationLine.style.borderColor = "#ce201b";
         introLine.style.borderBottomWidth = "0";
         introLine.style.color = "rgb(135 141 145 / var(--tw-text-opacity))";
         introLine.style.transition = "color 0.2s, border-bottom-color 0.2s";
@@ -162,8 +159,8 @@ window.addEventListener("scroll", function () {
         inquiryLine.style.borderColor = "";
         suggetsionLine.style.color = "";
         suggetsionLine.style.borderColor = "";
-        infoLine.style.color = "rgb(92 63 191 / var(--tw-text-opacity))";
-        infoLine.style.borderColor = "rgb(92 63 191 / var(--tw-text-opacity))";
+        infoLine.style.color = "#ce201b";
+        infoLine.style.borderColor = "#ce201b";
         introLine.style.transition = "color 0.3s, border-bottom-color 0.3s";
     }
     // 행사 공지
@@ -176,8 +173,8 @@ window.addEventListener("scroll", function () {
         inquiryLine.style.borderColor = "";
         suggetsionLine.style.color = "";
         suggetsionLine.style.borderColor = "";
-        notiLine.style.color = "rgb(92 63 191 / var(--tw-text-opacity))";
-        notiLine.style.borderColor = "rgb(92 63 191 / var(--tw-text-opacity))";
+        notiLine.style.color = "#ce201b";
+        notiLine.style.borderColor = "#ce201b";
         notiLine.style.transition = "color 0.3s, border-bottom-color 0.3s";
     }
     // 행사 문의 (댓글)
@@ -190,8 +187,8 @@ window.addEventListener("scroll", function () {
         notiLine.style.borderColor = "";
         suggetsionLine.style.color = "";
         suggetsionLine.style.borderColor = "";
-        inquiryLine.style.color = "rgb(92 63 191 / var(--tw-text-opacity))";
-        inquiryLine.style.borderColor = "rgb(92 63 191 / var(--tw-text-opacity))";
+        inquiryLine.style.color = "#ce201b";
+        inquiryLine.style.borderColor = "#ce201b";
         notiLine.style.transition = "color 0.3s, border-bottom-color 0.3s";
     }
     // 추천
@@ -204,11 +201,12 @@ window.addEventListener("scroll", function () {
         notiLine.style.borderColor = "";
         inquiryLine.style.color = "";
         inquiryLine.style.borderColor = "";
-        suggetsionLine.style.color = "rgb(92 63 191 / var(--tw-text-opacity))";
-        suggetsionLine.style.borderColor = "rgb(92 63 191 / var(--tw-text-opacity))";
+        suggetsionLine.style.color = "#ce201b";
+        suggetsionLine.style.borderColor = "#ce201b";
         suggetsionLine.style.transition = "color 0.1s, border-bottom-color 0.1s";
     }
 });
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 // // 접기 버튼 클릭 시 동작
 // 숨겨진 이미지 확인 및 버튼 모양 변경
@@ -230,6 +228,7 @@ filpHiddenClickBtn.addEventListener("click", () => {
     filpClickBtn.style.display = "flex";
     filpHiddenClickBtn.style.display = "none";
 });
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 // 구독하기 클릭 시 구독하기 모달 띄우기 및 아이콘 띄우기
 let subcribeButton = document.querySelector(".subcribe-button");
@@ -266,8 +265,9 @@ let subcribeCancelKeepButton = document.querySelector(".subcribe-cancel-keep-but
 subcribeCancelKeepButton.addEventListener("click", (e) => {
     subcribeModalWrapCancel.style.display = "none";
 });
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-// 관심행사 추가 시 발생되는 동작 (현재 클릭을 2번 해야 성공이 되는 증상이 발생 (bug => 수정 완료)
+// 관심행사 추가 시 발생되는 동작
 let nonLikeDisplay = document.querySelectorAll(".k-like-btn-shadow");
 let nonLikeBtn = document.querySelectorAll(".k-like-btn-display");
 let likeBtn = document.querySelectorAll(".k-like-btn-display-none");
@@ -296,6 +296,8 @@ nonLikeDisplay.forEach((displayButton, i) => {
         });
     });
 });
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 // 공유하기 버튼 클릭시 나오는 모달 및 닫기
 let shareButton = document.querySelector(".share-button");
