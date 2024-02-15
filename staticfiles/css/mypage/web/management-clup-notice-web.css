@@ -142,10 +142,8 @@ button {
 a.disabled, a:disabled, button.disabled, button:disabled {
     pointer-events: none!important;
     user-select: none!important;
-    --tw-border-opacity: 1!important;
-    border-color: rgb(242 244 245/var(--tw-border-opacity))!important;
-    --tw-bg-opacity: 1!important;
-    background-color: rgb(242 244 245/var(--tw-bg-opacity))!important;
+    border-color: #F2F4F5!important;
+    background-color: #F2F4F5!important;
     --tw-text-opacity: 1!important;
     color: rgb(206 211 214/var(--tw-text-opacity))!important;
     --tw-shadow: 0 0 #0000!important;
@@ -203,13 +201,11 @@ audio, canvas, embed, iframe, img, object, svg, video {
 }
 
 .select-category {
-    --tw-text-opacity: 1;
-    color: rgb(141 113 221/var(--tw-text-opacity));
+    color: #CE201B;
 }
 
 .select-category:hover {
-    --tw-text-opacity: 1;
-    color: rgb(92 63 191/var(--tw-text-opacity));
+    color: #9F0D08;
 }
 
 .clup-detail-link {
@@ -297,30 +293,25 @@ audio, canvas, embed, iframe, img, object, svg, video {
 }
 
 .clup-notice-delete {
-    --tw-border-opacity: 1;
-    border-color: rgb(191 69 69/var(--tw-border-opacity));
-    --tw-bg-opacity: 1;
-    background-color: rgb(191 69 69/var(--tw-bg-opacity));
+    border-color: #E1E1E1;
+    background-color: #E1E1E1;
+    color: #878D91;
 }
 
 .clup-notice-delete:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(156 49 49/var(--tw-bg-opacity));
+    background-color: #C2C2C2;
 }
 
 .clup-notice-write {
     --tw-space-x-reverse: 0;
     margin-right: calc(0.5rem*var(--tw-space-x-reverse));
     margin-left: calc(0.5rem*(1 - var(--tw-space-x-reverse)));
-    --tw-border-opacity: 1;
-    border-color: rgb(92 63 191/var(--tw-border-opacity));
-    --tw-bg-opacity: 1;
-    background-color: rgb(92 63 191/var(--tw-bg-opacity));
+    border-color: #CE201B;
+    background-color: #CE201B;
 }
 
 .clup-notice-write:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(71 44 163/var(--tw-bg-opacity));
+    background-color: #9F0D08;
 }
 
 .clup-notice-box {
@@ -392,8 +383,7 @@ input[type=checkbox] {
     border-color: rgba(0,0,0,.1);
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255/var(--tw-bg-opacity));
-    --tw-text-opacity: 1;
-    color: rgb(92 63 191/var(--tw-text-opacity));
+    color: #CE201B;
 }
 
 [type=checkbox]:focus, [type=radio]:focus {
@@ -424,8 +414,7 @@ input[type=checkbox]:focus {
     --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
     --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
     box-shadow: var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow, 0 0 #0000);
-    --tw-ring-opacity: 1;
-    --tw-ring-color: rgb(92 63 191/var(--tw-ring-opacity));
+    --tw-ring-color: #CE201B;
 }
 
 input[type=checkbox]:hover {
@@ -505,8 +494,7 @@ input[type=checkbox]:hover {
 }
 
 .clup-notice-modify-link {
-    --tw-text-opacity: 1;
-    color: rgb(92 63 191/var(--tw-text-opacity));
+    color: #CE201B;
     padding-right: 1.5rem;
     cursor: pointer;
 }

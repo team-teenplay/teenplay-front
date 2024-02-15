@@ -1000,7 +1000,24 @@ background-color: #9F0D08;
     align-items: center;
   }
 
-
+.admin-user-modal-text-message{
+    width: 300px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #333334;
+    fill: #333334;
+    background-color: #f3f3f4;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 8px;
+    align-items: center;
+    margin-bottom: 8px;
+    border: none;
+    outline: none;
+    max-height: 500px;
+    height: 100px;
+  }
   
   .admin-user-modal-text{
     width: 300px;
@@ -1017,9 +1034,7 @@ background-color: #9F0D08;
     margin-bottom: 8px;
     border: none;
     outline: none;
-    height: 100px;
     max-height: 500px;
-    
   }
   
   .admin-user-modal-title{

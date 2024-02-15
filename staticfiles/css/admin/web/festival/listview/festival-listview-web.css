@@ -1402,10 +1402,10 @@ margin-left: 16px;}
 
 .admin-post-modal-thumbnail-img{
     position: absolute;
-    height: 100%;
-    width: 100%;
+    width: 100%; /* 부모 요소의 너비에 맞추기 */
+    height: 100%; /* 부모 요소의 높이에 맞추기 */
+    object-fit: contain; /* 이미지가 완전히 표시될 수 있도록 */
     inset: 0px;
-    object-fit: cover;
     object-position: center center;
     color: transparent;
     display: block;
