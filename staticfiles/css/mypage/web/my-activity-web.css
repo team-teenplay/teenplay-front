@@ -224,7 +224,7 @@ video {
 
 .target-color {
     --tw-text-opacity: 1;
-    color: rgb(92 63 191 / var(--tw-text-opacity));
+    color: #CE201B;
 }
 
 .contents {
@@ -352,11 +352,21 @@ video {
     transition-duration: 0.15s;
 }
 
-.like-img-wrap {
-    --tw-text-opacity: 1;
-    color: rgb(232 103 98 / var(--tw-text-opacity));
+.unlike-img-wrap {
     width: 1.5rem;
     height: 1.5rem;
+}
+
+.unlike-img-wrap:hover {
+    --tw-text-opacity: 1;
+    color: rgb(232 103 98 / var(--tw-text-opacity));
+}
+
+.like-img-wrap {
+    width: 1.5rem;
+    height: 1.5rem;
+    --tw-text-opacity: 1;
+    color: rgb(232 103 98 / var(--tw-text-opacity));
 }
 
 .content-txt-box {
@@ -485,14 +495,14 @@ video {
 
 .txt-head-confirm {
     --tw-text-opacity: 1;
-    color: rgb(141 113 221 / var(--tw-text-opacity));
+    color: #CE201B;
     font-size: 0.8125rem;
     padding-top: 0.125rem;
     padding-bottom: 0.125rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     --tw-bg-opacity: 1;
-    background-color: rgb(245 242 255 / var(--tw-bg-opacity));
+    background-color: #FFF0EE;
     border-radius: 0.375rem;
     align-items: center;
     display: flex;
@@ -514,7 +524,7 @@ video {
     display: none;
 }
 
-.unlike-modal-container {
+.unlike-modal-wrap, .like-modal-wrap {
     opacity: 1 !important;
     z-index: 9999;
     justify-content: center;
@@ -524,7 +534,7 @@ video {
     position: fixed;
 }
 
-.unlike-modal-wrap {
+.unlike-modal-container, .like-modal-container {
     border: 1px solid rgb(196, 196, 196);
     padding: 1.5rem;
     --tw-bg-opacity: 1;
@@ -538,27 +548,27 @@ video {
     margin-right: 1rem;
 }
 
-.unlike-modal-tit-wrap {
+.unlike-modal-tit-wrap, .like-modal-tit-wrap {
     font-weight: 700;
     font-size: 1.125rem;
     line-height: 1.75rem;
     margin: 0;
 }
 
-.unlike-modal-tit {
+.unlike-modal-tit, .like-modal-tit {
     font-weight: 700;
     font-size: 1rem;
     line-height: 1.5rem;
 }
 
-.unlike-btn-wrap {
+.unlike-btn-wrap, .like-btn-wrap {
     --tw-space-y-reverse: 0;
     margin-top: calc(1.5rem * (1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
     display: flex;
 }
 
-.unlike-btn {
+.unlike-btn, .like-btn {
     --tw-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
     --tw-shadow-colored: 0 1px 1px 0 var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
