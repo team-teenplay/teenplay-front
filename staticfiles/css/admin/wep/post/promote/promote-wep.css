@@ -103,7 +103,7 @@ body {
     left: 0;
     top: 0;
     position: sticky;
-    background-color: #1d1d1e;
+    background-color: #CE201B;
 }
 
 .header-logo-text{
@@ -253,9 +253,9 @@ body {
     font-size: 14px;
     line-height: 16px;
     border-color: rgba(0,0,0,.1);
-    color: #333334;
-    fill: #333334;
-    background-color: #fff;
+    color: #fff;
+    fill: #fff;
+    background-color: #CE201B;
     -webkit-appearance: button;
     background-image: none;
     cursor: pointer;
@@ -268,31 +268,8 @@ body {
 }
 
 .main-admin-logout-button:hover{
-    border-color: #f3f3f4;
-    background-color: #f3f3f4;
-
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 16px;
-    justify-content: center;
-    align-items: center;
-    height: 32px;
-    display: flex;
-    position: relative;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 16px;
-    color: #333334;
-    fill: #333334;
-    -webkit-appearance: button;
-    background-image: none;
-    cursor: pointer;
-    text-transform: none;
-    font-family: inherit;
-    margin: 0;
-    padding: 0;
-    padding-left: 15px;
-    padding-right: 15px;
+    border-color: #9F0D08;
+    background-color: #9F0D08;
 }
 
 .main-admin-logout-warp{
@@ -345,7 +322,15 @@ body {
     line-height: 20px;
     color: #1d1d1e;
     fill: #1d1d1e;
+}
 
+.main-user-texta{
+    display: block;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
+    color: #CE201B;
+    fill: #CE201B;
 }
 
 .main-user-other{
@@ -520,8 +505,8 @@ color: #9ca3af;
 
 .main-user-total-number{
     margin-left: 4px;
-    color: #5b44ea;
-    fill: #5b44ea;
+    color: #CE201B;
+    fill: #CE201B;
 }
 
 .main-user-total-search{
@@ -849,9 +834,9 @@ color: #9ca3af;
     font-size: 13px;
     line-height: 16px;
     border-color: rgba(0,0,0,.1);
-    color: #333334;
-    fill: #333334;
-    background-color: #fff;
+    color: #fff;
+    fill: #fff;
+    background-color: #CE201B;
     -webkit-appearance: button;
     background-image: none;
     cursor: pointer;
@@ -865,8 +850,8 @@ color: #9ca3af;
 }
 
 .member-user-list-button:hover{
-    border-color: #f3f3f4;
-    background-color: #f3f3f4;
+    border-color: #9F0D08;
+    background-color: #9F0D08;
 }
 
 .member-user-list-detail-button{
@@ -898,8 +883,8 @@ color: #9ca3af;
 }
 
 .member-user-list-detail-button:hover{
-    border-color: #f3f3f4;
-    background-color: #f3f3f4;
+    border-color: #FFF0EE;
+    background-color: #FFF0EE;
 }
 
 /* 삭제 모달창 */
@@ -1118,8 +1103,8 @@ color: #9ca3af;
   }
 
   .main-user-post-promote:hover{
-    color: #1d1d1e;
-    fill: #1d1d1e;
+    color: #CE201B;
+    fill: #CE201B;
   }
 
   
@@ -1131,8 +1116,8 @@ color: #9ca3af;
     display: flex;
     color: inherit;
     text-decoration: inherit;
-    color: #1d1d1e;
-    fill: #1d1d1e;
+    color: #CE201B;
+    fill: #CE201B;
   }
 
   .main-user-post-promote-svg{
@@ -1152,6 +1137,11 @@ color: #9ca3af;
     line-height: 15px;
 
   }
+
+  .main-user-other:hover .main-user-text {
+    color: #CE201B;
+}
+
 
 #admin-post-modal{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -1643,7 +1633,7 @@ margin-left: 16px;}
 }
 
 .add-color{
-    background-color: #f3f3f4;}
+    background-color: #CE201B;}
     
 .main-user-number{
     font-weight: 700;
@@ -1834,8 +1824,8 @@ margin-left: 16px;}
   }
 
   .admin-message-modal-search-send-add:hover{
-    border-color: #f3f3f4;
-    background-color: #f3f3f4;
+    border-color: #FFF0EE;
+    background-color: #FFF0EE;
   }
 
   .admin-message-modal-search-receive-add{
@@ -1866,8 +1856,8 @@ margin-left: 16px;}
   }
 
   .admin-message-modal-search-receive-add:hover{
-    border-color: #f3f3f4;
-    background-color: #f3f3f4;
+    border-color: #FFF0EE;
+    background-color: #FFF0EE;
   }
 
   #admin-message-modal-search-add.hidden{

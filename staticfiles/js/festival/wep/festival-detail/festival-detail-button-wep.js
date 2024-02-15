@@ -111,7 +111,8 @@ let currentContentIndex = 0;
 // 초기화 함수 정의
 function initialize() {
     // 숫자 버튼들 중 첫 번째 버튼을 선택된 상태로 만듭니다.
-    numberButtons[currentPage].style.backgroundColor = "rgb(141, 113, 221)";
+    numberButtons[currentPage].style.backgroundColor = "#CE201B";
+    numberButtons[currentPage].style.color = "#fff";
     // 초기 컨텐츠를 로드합니다.
     replaceContent(currentPage, currentContentIndex);
 }
@@ -123,8 +124,10 @@ window.addEventListener("load", initialize);
 leftButton.addEventListener("click", function () {
     if (currentPage > 0) {
         numberButtons[currentPage].style.backgroundColor = ""; // 현재 버튼의 배경색 제거
+        numberButtons[currentPage].style.color = "#111";
         currentPage--;
-        numberButtons[currentPage].style.backgroundColor = "rgb(141, 113, 221)"; // 선택된 버튼에 배경색 적용
+        numberButtons[currentPage].style.backgroundColor = "#CE201B";
+        numberButtons[currentPage].style.color = "#fff"; // 선택된 버튼에 배경색 적용
         replaceContent(currentPage, currentContentIndex); // 페이지 내용 변경
     }
 });
@@ -133,8 +136,10 @@ leftButton.addEventListener("click", function () {
 rightButton.addEventListener("click", function () {
     if (currentPage < contents.length - 1) {
         numberButtons[currentPage].style.backgroundColor = ""; // 현재 버튼의 배경색 제거
+        numberButtons[currentPage].style.color = "#111";
         currentPage++;
-        numberButtons[currentPage].style.backgroundColor = "rgb(141, 113, 221)"; // 선택된 버튼에 배경색 적용
+        numberButtons[currentPage].style.backgroundColor = "#CE201B";
+        numberButtons[currentPage].style.color = "#fff"; // 선택된 버튼에 배경색 적용
         replaceContent(currentPage, currentContentIndex); // 페이지 내용 변경
     }
 });
@@ -143,8 +148,10 @@ rightButton.addEventListener("click", function () {
 numberButtons.forEach(function (button, index) {
     button.addEventListener("click", function () {
         numberButtons[currentPage].style.backgroundColor = ""; // 현재 버튼의 배경색 제거
+        numberButtons[currentPage].style.color = "#111";
         currentPage = index;
-        button.style.backgroundColor = "rgb(141, 113, 221)"; // 선택된 버튼에 배경색 적용
+        button.style.backgroundColor = "#CE201B";
+        button.style.color = "#fff"; // 선택된 버튼에 배경색 적용
         replaceContent(currentPage, currentContentIndex); // 페이지 내용 변경
     });
 });

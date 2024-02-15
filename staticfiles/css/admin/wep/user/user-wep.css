@@ -97,7 +97,7 @@ body {
     left: 0;
     top: 0;
     position: sticky;
-    background-color: #1d1d1e;
+    background-color: #CE201B;
 }
 
 .header-logo-text{
@@ -247,9 +247,9 @@ body {
     font-size: 14px;
     line-height: 16px;
     border-color: rgba(0,0,0,.1);
-    color: #333334;
-    fill: #333334;
-    background-color: #fff;
+    color: #fff;
+    fill: #fff;
+    background-color: #CE201B;
     -webkit-appearance: button;
     background-image: none;
     cursor: pointer;
@@ -262,36 +262,13 @@ body {
 }
 
 .main-admin-logout-button:hover{
-    border-color: #f3f3f4;
-    background-color: #f3f3f4;
-
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 16px;
-    justify-content: center;
-    align-items: center;
-    height: 32px;
-    display: flex;
-    position: relative;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 16px;
-    color: #333334;
-    fill: #333334;
-    -webkit-appearance: button;
-    background-image: none;
-    cursor: pointer;
-    text-transform: none;
-    font-family: inherit;
-    margin: 0;
-    padding: 0;
-    padding-left: 15px;
-    padding-right: 15px;
+    border-color: #9F0D08;
+    background-color: #9F0D08;
 }
 
 .member-user-list-button:hover{
-    border-color: #f3f3f4;
-    background-color: #f3f3f4;
+    border-color: #9F0D08;
+    background-color: #9F0D08;
 }
 
 .main-admin-logout-warp{
@@ -337,6 +314,16 @@ body {
     vertical-align: middle;
 }
 
+.main-user-texta{
+    display: block;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
+    color: #CE201B;
+    fill: #CE201B;
+
+}
+
 .main-user-text{
     display: block;
     font-weight: 700;
@@ -367,6 +354,11 @@ body {
     display: flex;
     margin-bottom: 8px;
 }
+
+.main-user-other:hover .main-user-text {
+    color: #CE201B;
+}
+
 
 .main-user-info-warp{
     overflow-x: auto;
@@ -878,9 +870,9 @@ color: #9ca3af;
     font-size: 13px;
     line-height: 16px;
     border-color: rgba(0,0,0,.1);
-    color: #333334;
-    fill: #333334;
-    background-color: #fff;
+    color: #fff;
+    fill: #fff;
+    background-color: #CE201B;
     -webkit-appearance: button;
     background-image: none;
     cursor: pointer;
@@ -1139,13 +1131,13 @@ color: #9ca3af;
     padding-right: 15px;}
 
   .admin-message-modal-search-send:hover{
-    border-color: #f3f3f4;
-    background-color: #f3f3f4;
+    border-color: #FFF0EE;
+    background-color: #FFF0EE;
   }
 
   .admin-message-modal-search-donotreceive:hover{
-    border-color: #f3f3f4;
-    background-color: #f3f3f4;
+    border-color: #FFF0EE;
+    background-color: #FFF0EE;
   }
 
   .admin-message-modal-search-receive{
@@ -1177,8 +1169,8 @@ color: #9ca3af;
   }
 
   .admin-message-modal-search-receive:hover{
-    border-color: #f3f3f4;
-    background-color: #f3f3f4;
+    border-color: #FFF0EE;
+    background-color: #FFF0EE;
   }
 
   #admin-message-modal-search.hidden{
@@ -1256,8 +1248,8 @@ color: #9ca3af;
 }
 
 .main-wish-sellect-button:hover{
-    border-color: #f3f3f4;
-    background-color: #f3f3f4;
+    border-color: #FFF0EE;
+    background-color: #FFF0EE;
 }
 
 /* 아래 공통으로 들어가는 페이지 선택창 */
@@ -1337,7 +1329,7 @@ margin-left: 16px;}
 }
 
 .add-color{
-    background-color: #f3f3f4;}
+    background-color: #CE201B;}
     
 .main-user-number{
     font-weight: 700;
