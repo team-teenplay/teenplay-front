@@ -187,7 +187,7 @@ a {
 
 .target-color {
     --tw-text-opacity: 1;
-    color: rgb(92 63 191/var(--tw-text-opacity));
+    color: #ce201b;
 }
 
 .contents {
@@ -226,7 +226,7 @@ a {
 
 .signal-type {
     --tw-text-opacity: 1;
-    color: rgb(92 63 191/var(--tw-text-opacity));
+    color: #ce201b;
     font-weight: 700;
     min-width: 60px;
     width: 10%;
@@ -247,6 +247,10 @@ a {
     cursor: pointer;
     height: fit-content;
     margin-right: 0.625rem;
+}
+
+.signal-delete:hover {
+    color: #9f0d08
 }
 
 .signal-date {
@@ -342,13 +346,14 @@ a {
 }
 
 .delete-check-btn {
-    color: rgb(191 69 69/var(--tw-text-opacity));
+    color: rgb(255 255 255/var(--tw-text-opacity));
+    background-color: #ce201b;
     font-weight: 700;
 }
 
 .delete-check-btn:hover {
     --tw-bg-opacity: 1;
-    background-color: rgb(248 250 251/var(--tw-bg-opacity));
+    background-color: #9f0d08;
 }
 
 .signal-none {

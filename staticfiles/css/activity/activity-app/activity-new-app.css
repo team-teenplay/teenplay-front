@@ -427,8 +427,8 @@ textarea {
 }
 
 .normal-setting-box {
-    padding-left: 6.25rem !important;
-    padding-right: 6.25rem !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
     padding-top: 5rem !important;
     padding-bottom: 5rem !important;
     border: 1px solid #e8e8e8;
@@ -732,7 +732,6 @@ select:focus {
 }
 
 .out-join-tie {
-    width: 41.66667%;
     padding-right: 9px;
     padding-left: 9px;
     float: left;
@@ -797,7 +796,7 @@ select:focus {
 }
 
 .deadline-sub-title {
-    width: 33.33333%;
+    width: 100%;
     padding-right: 9px;
     padding-left: 9px;
     float: left;
@@ -1130,7 +1129,7 @@ input.timepicker {
 }
 
 .join-max-count-access {
-    width: 16.66667%;
+    /* width: 16.66667%; */
     padding-right: 9px;
     padding-left: 9px;
     float: left;
@@ -1150,8 +1149,8 @@ input.timepicker {
 }
 
 .detail-setting-box {
-    padding-left: 6.25rem !important;
-    padding-right: 6.25rem !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
     padding-top: 5rem !important;
     padding-bottom: 5rem !important;
     margin-top: 4rem !important;
@@ -1201,7 +1200,7 @@ input.timepicker {
 }
 
 .subject-own {
-    width: 50%;
+    width: 100%;
     padding-right: 9px;
     padding-left: 9px;
     float: left;
@@ -1296,11 +1295,11 @@ select {
     margin-bottom: 0;
     display: flex;
     flex-wrap: wrap;
-    width: 50%;
+    width: 100%;
 }
 
 .activity-col {
-    width: 50%;
+    width: 100%;
     padding-right: 9px;
     float: left;
     box-sizing: border-box;
@@ -1469,7 +1468,7 @@ select {
 }
 
 .activity-location-select-col {
-    width: 83.33333%;
+    width: 100%;
     padding-right: 9px;
     padding-left: 9px;
     float: left;
@@ -1494,7 +1493,7 @@ select {
 }
 
 .location-row-item-col {
-    width: 50%;
+    width: 100%;
     padding-right: 9px;
     padding-left: 9px;
     float: left;
@@ -1543,7 +1542,7 @@ select {
 }
 
 .location-devide-container-col {
-    width: 83.33333%;
+    width: 100%;
     padding-right: 9px;
     padding-left: 9px;
     float: left;
@@ -1570,7 +1569,7 @@ select {
 
 .input-location-name-col,
 .input-location-content-col {
-    width: 83.33333%;
+    width: 100%;
     padding-right: 9px;
     padding-left: 9px;
     float: left;
@@ -1710,7 +1709,7 @@ select {
 }
 
 .activity-image-upload-container-col {
-    width: 83.33333%;
+    width: 100%;
     padding-right: 9px;
     padding-left: 9px;
     float: left;
@@ -1740,7 +1739,7 @@ select {
     box-sizing: border-box;
     padding: 0 0.75rem;
     min-height: 1px;
-    width: 272px !important;
+    width: 350px !important;
 }
 
 .cover-image {
@@ -1850,6 +1849,8 @@ input {
     position: relative;
     background-position-x: center;
     font-size: 12px;
+    margin-top: 10px;
+    width: 335px;
 }
 
 .expand-file-box-add {
@@ -2023,7 +2024,7 @@ input {
 }
 
 .presentation-col {
-    width: 83.33333%;
+    width: 100%;
     padding-right: 9px;
     padding-left: 9px;
     float: left;

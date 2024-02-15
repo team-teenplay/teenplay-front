@@ -310,3 +310,162 @@ let shareCloseButton = document.querySelector(".share-close-button");
 shareCloseButton.addEventListener("click", () => {
     shareModalWrap.style.display = "none";
 });
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// 틴친 클릭 시 나오는 모달
+
+// 프로필 클릭 시 틴친 프로필 모달 출력 이벤트
+const commentProfileImg = document.querySelector(".k-comment-profile-container");
+const profile = document.querySelector(".profile");
+
+commentProfileImg.addEventListener("click", () => {
+    profile.classList.remove("hidden");
+});
+
+// 틴친 프로필 모달 닫기 이벤트
+const teenchinBox = document.querySelector(".teenchin-box");
+
+document.addEventListener("click", (e) => {
+    if (!commentProfileImg.contains(e.target) && !teenchinBox.contains(e.target)) {
+        profile.classList.add("hidden");
+    }
+});
+
+// 쪽지 보내기 클릭 시 쪽지 보내기 모달 출력 이벤트
+const sendLetterBoxBtn = document.querySelector(".send-letter-btn");
+const sendLetter = document.querySelector(".send-modal-wrap");
+
+sendLetterBoxBtn.addEventListener("click", () => {
+    profile.classList.add("hidden");
+    sendLetter.classList.remove("hidden");
+});
+
+// 쪽지 보내기 닫기(버튼) 모달 이벤트
+const sendLetterCloseBtn = document.querySelector(".send-close-btn");
+
+sendLetterCloseBtn.addEventListener("click", () => {
+    sendLetter.classList.add("hidden");
+});
+
+// 쪽지 보내기 닫기(여백) 모달 이벤트
+const sendLetterModal = document.querySelector(".send-modal-box");
+
+document.addEventListener("click", (e) => {
+    if (!sendLetterBoxBtn.contains(e.target) && !sendLetterModal.contains(e.target)) {
+        sendLetter.classList.add("hidden");
+    }
+});
+
+// 쪽지 보내기 모달 이벤트
+const sendLetterBtn = document.querySelector(".send-check-btn");
+
+sendLetterBtn.addEventListener("click", () => {
+    Swal.fire("쪽지가 전송 되었습니다.", "", "success");
+});
+
+// 틴친 추가 모달 이벤트
+const teenFriendAdd = document.querySelector(".teenchin-add-btn");
+const teenFriendRequest = document.querySelector(".teenchin-request-btn");
+
+teenFriendAdd.addEventListener("click", () => {
+    Swal.fire({
+        title: "틴친 신청을 보낼까요?",
+        text: "",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#CE201B",
+        cancelButtonColor: "#E1E1E1",
+        confirmButtonText: "친구추가",
+        cancelButtonText: "닫기",
+    }).then((result) => {
+        if (result.value) {
+            // 틴플레이 삭제 관련 서버 작업 코드 입력
+            // 완료 시 아래 코드 실행 (실제로는 또 .then(()=>{}) 으로 써야함)
+            teenFriendAdd.classList.add("hidden");
+            teenFriendRequest.classList.remove("hidden");
+        } else if ((result.dismiss = "cancel")) {
+            return;
+        }
+    });
+});
+
+// 틴친 신청 취소 모달 이벤트
+teenFriendRequest.addEventListener("click", () => {
+    Swal.fire({
+        title: "신청을 취소할까요?",
+        text: "",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#CE201B",
+        cancelButtonColor: "#E1E1E1",
+        confirmButtonText: "신청취소",
+        cancelButtonText: "닫기",
+    }).then((result) => {
+        if (result.value) {
+            // 틴플레이 삭제 관련 서버 작업 코드 입력
+            // 완료 시 아래 코드 실행 (실제로는 또 .then(()=>{}) 으로 써야함)
+            teenFriendRequest.classList.add("hidden");
+            teenFriendAdd.classList.remove("hidden");
+        } else if ((result.dismiss = "cancel")) {
+            return;
+        }
+    });
+});
+
+// 틴친 취소 모달 이벤트
+const teenFriendCancle = document.querySelector(".teenchin-btn");
+
+teenFriendCancle.addEventListener("click", () => {
+    Swal.fire({
+        title: "틴친을 그만둘까요?",
+        text: "",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#CE201B",
+        cancelButtonColor: "#E1E1E1",
+        confirmButtonText: "틴친끊기",
+        cancelButtonText: "닫기",
+    }).then((result) => {
+        if (result.value) {
+            // 틴플레이 삭제 관련 서버 작업 코드 입력
+            // 완료 시 아래 코드 실행 (실제로는 또 .then(()=>{}) 으로 써야함)
+            teenFriendCancle.classList.add("hidden");
+            teenFriendAdd.classList.remove("hidden");
+        } else if ((result.dismiss = "cancel")) {
+            return;
+        }
+    });
+});
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// 댓글 수정
+let commentButton = document.querySelector(".k-comment-menu");
+let commentSubButton = document.querySelector(".k-comment-menu-open-divison");
+let commentCorrectionClick = document.querySelector(".k-comment-menu-open-choice");
+
+let commentCorrection = document.querySelector(".k-comment-update-box-all-wrap");
+let commentCorrectionText = document.querySelector(".k-comment-update-box-wrap");
+
+let commentListAllWrap = document.querySelector(".k-comment-list-all-wrap");
+let commentInputBoxAllWrap = document.querySelector(".k-comment-input-box-all-wrap");
+
+commentButton.addEventListener("click", (e) => {
+    commentCorrectionClick.addEventListener("click", () => {
+        commentCorrection.style.display = "block";
+        commentCorrectionText.style.display = "block";
+        commentSubButton.style.display = "none";
+        commentListAllWrap.classList.add("hidden");
+        commentInputBoxAllWrap.classList.add("hidden");
+    });
+    commentSubButton.style.display = "block";
+});
+
+let commentUpdateUploadContainer = document.querySelector(".k-comment-update-upload-container");
+commentUpdateUploadContainer.addEventListener("click", () => {
+    commentCorrection.style.display = "none";
+    commentCorrectionText.style.display = "none";
+    commentSubButton.style.display = "flex";
+    commentListAllWrap.classList.remove("hidden");
+    commentInputBoxAllWrap.classList.remove("hidden");
+    commentSubButton.style.display = "none";
+});

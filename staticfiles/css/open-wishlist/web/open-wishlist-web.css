@@ -371,6 +371,7 @@ input, select, textarea {
     aspect-ratio: 1;
     display: flex;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .post-profile-img-icon {
@@ -791,6 +792,7 @@ input, select, textarea {
     aspect-ratio: 1;
     display: flex;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .comment-profile-icon {

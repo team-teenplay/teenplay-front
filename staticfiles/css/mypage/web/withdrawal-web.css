@@ -240,7 +240,7 @@ html {
 .member-email {
     font-size: 14px;
     margin-top: 0.25rem!important;
-    color: #8d71dd!important;
+    color: #ce201b!important;
 }
 
 .info-modify-link {
@@ -439,8 +439,8 @@ input[type="checkbox"]:not(:checked) + label:after {
 }
 
 input[type="checkbox"]:checked + label:after {
-    border: 2px solid #5c3fbf;
-    background-color: #5c3fbf;
+    border: 2px solid #ce201b;
+    background-color: #ce201b;
     z-index: 0;
     width: 15px;
     height: 15px;
@@ -572,7 +572,7 @@ select:invalid, select option[value=null] {
 .withdrawal-btn {
     text-decoration: none;
     color: #fff;
-    background-color: #5c3fbf;
+    background-color: #ce201b;
     text-align: center;
     transition: .2s ease-out;
     cursor: pointer;
@@ -589,5 +589,5 @@ select:invalid, select option[value=null] {
 }
 
 .withdrawal-btn:hover {
-    background-color: #472ca3;
+    background-color: #9F0D08;
 }

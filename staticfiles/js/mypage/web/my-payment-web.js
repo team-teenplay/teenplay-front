@@ -1,4 +1,4 @@
-// 작성하기 클릭 시 작성 모달 여는 이벤트
+// 결재 취소 클릭 시 작성 모달 여는 이벤트
 const cancleModalWrap = document.querySelector(".cancle-modal-wrap");
 const paymentCancle = document.querySelector(".payment-cancle");
 
@@ -7,7 +7,7 @@ paymentCancle.addEventListener("click", () => {
     cancleModalWrap.style.display = "block";
 });
 
-// 쪽지 보내기 모달 버튼 클릭 시 발생하는 이벤트
+// 결제 취소 모달 내 버튼 클릭 시 발생하는 이벤트
 const cancleModalBtns = document.querySelectorAll(".cancle-modal-container button");
 const textarea = cancleModalWrap.querySelector("textarea[name=cancle-content]");
 
@@ -20,12 +20,14 @@ cancleModalBtns.forEach((cancleModalBtn) => {
                 cancleModalWrap.querySelector(".check-modal-container").style.animation = "popUp 0.5s";
                 cancleModalWrap.querySelector(".check-modal-container").style.display = "flex";
                 textarea.value = ``;
+                checkValue();
             }, 450);
         } else {
             cancleModalWrap.querySelector(".cancle-modal-container").style.animation = "popDown 0.5s";
             setTimeout(() => {
                 cancleModalWrap.style.display = "none";
                 textarea.value = ``;
+                checkValue();
             }, 450);
         }
     });
@@ -47,9 +49,13 @@ checkModalCheckBtn.addEventListener("click", () => {
 const cancleCheckBtn = document.querySelector(".cancle-check-btn");
 
 textarea.addEventListener("input", () => {
+    checkValue();
+});
+
+const checkValue = () => {
     if (textarea.value) {
         cancleCheckBtn.disabled = false;
         return;
     }
     cancleCheckBtn.disabled = true;
-});
+};
