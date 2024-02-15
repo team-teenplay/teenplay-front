@@ -202,7 +202,7 @@ a {
 
 .target-color {
     --tw-text-opacity: 1;
-    color: rgb(92 63 191/var(--tw-text-opacity));
+    color: #ce201b;
 }
 
 .contents {
@@ -402,12 +402,13 @@ a {
 .teenchin-btn {
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
     --tw-border-opacity: 1;
-    border-color: rgb(245 242 255/var(--tw-border-opacity));
+    border-color: #E1E1E1;;
+    border-width: 1px;
     --tw-text-opacity: 1;
-    color: rgb(92 63 191/var(--tw-text-opacity));
+    color: #878D91;
     width: 50%;
     --tw-bg-opacity: 1;
-    background-color: rgb(245 242 255/var(--tw-bg-opacity));
+    background-color: #ffffff;
     border-radius: 0.375rem;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -418,9 +419,14 @@ a {
     display: flex;
 }
 
-.teenchin-btn:hover, .send-letter-btn:hover {
+.teenchin-btn:hover {
     --tw-bg-opacity: 1;
-    background-color: rgb(227 222 247/var(--tw-bg-opacity));
+    background-color: rgb(248 250 251/var(--tw-bg-opacity));
+}
+
+.send-letter-btn:hover {
+    --tw-bg-opacity: 1;
+    background-color: #cde3fc;
 }
 
 .check-svg, .send-svg {
@@ -543,7 +549,7 @@ a {
     display: block;
 }
 
-.check-svg, .send-check-svg {
+.send-check-svg {
     --tw-text-opacity: 1;
     color: rgb(23 130 99/var(--tw-text-opacity));
     width: 1.5rem;
