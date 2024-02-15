@@ -90,9 +90,31 @@ sendLetterBtn.addEventListener("click", () => {
     sendModalWrap.style.display = "block";
 });
 
+// 받는 사람과 내용 value 상태에 따라 활성화/비활성화
+const sendReceiverEmail = sendModalWrap.querySelector(".send-receiver-email");
+const textarea = sendModalWrap.querySelector("textarea[name=send-content]");
+const sendCheckBtn = sendModalWrap.querySelector(".send-check-btn");
+
+const countValue = () => {
+    if (sendReceiverEmail.value && textarea.value) {
+        sendCheckBtn.disabled = false;
+    } else {
+        sendCheckBtn.disabled = true;
+    }
+};
+
+countValue();
+
+sendReceiverEmail.addEventListener("input", () => {
+    countValue();
+});
+
+textarea.addEventListener("input", () => {
+    countValue();
+});
+
 // 쪽지 보내기 모달 버튼 클릭 시 발생하는 이벤트
 const sendModalBtns = document.querySelectorAll(".send-modal-container button");
-
 sendModalBtns.forEach((sendModalBtn) => {
     sendModalBtn.addEventListener("click", (e) => {
         if (e.target.className == "send-check-btn") {
@@ -101,15 +123,17 @@ sendModalBtns.forEach((sendModalBtn) => {
                 sendModalWrap.querySelector(".send-modal-container").style.display = "none";
                 sendModalWrap.querySelector(".check-modal-container").style.animation = "popUp 0.5s";
                 sendModalWrap.querySelector(".check-modal-container").style.display = "flex";
-                sendModalWrap.querySelector(".send-receiver-email").value = ``;
-                sendModalWrap.querySelector("textarea[name=send-content]").value = ``;
+                sendReceiverEmail.value = ``;
+                textarea.value = ``;
+                countValue();
             }, 450);
         } else {
             sendModalWrap.querySelector(".send-modal-container").style.animation = "popDown 0.5s";
             setTimeout(() => {
                 sendModalWrap.style.display = "none";
-                sendModalWrap.querySelector(".send-receiver-email").value = ``;
-                sendModalWrap.querySelector("textarea[name=send-content]").value = ``;
+                sendReceiverEmail.value = ``;
+                textarea.value = ``;
+                countValue();
             }, 450);
         }
     });

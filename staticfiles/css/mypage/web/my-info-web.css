@@ -910,7 +910,7 @@ input[type=radio]:checked {
     margin-right: calc(1rem*var(--tw-space-x-reverse));
     margin-left: calc(1rem*(1 - var(--tw-space-x-reverse)));
     --tw-border-opacity: 1;
-    border-color: rgb(92 63 191/var(--tw-border-opacity));
+    border-color: #CE201B;
     --tw-text-opacity: 1;
     color: rgb(255 255 255/var(--tw-text-opacity));
     --tw-shadow: 0 1px 1px 0 rgba(0,0,0,.05);
@@ -922,7 +922,7 @@ input[type=radio]:checked {
     padding-left: 1rem;
     padding-right: 1rem;
     --tw-bg-opacity: 1;
-    background-color: rgb(92 63 191/var(--tw-bg-opacity));
+    background-color: #CE201B;
     border-width: 1px;
     border-radius: 0.375rem;
     justify-content: center;
@@ -934,7 +934,7 @@ input[type=radio]:checked {
 
 .check-btn:hover {
     --tw-bg-opacity: 1;
-    background-color: rgb(71 44 163/var(--tw-bg-opacity));
+    background-color: #9F0D08;
 }
 
 .extension-error-modal-wrap {

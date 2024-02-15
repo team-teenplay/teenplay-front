@@ -114,12 +114,16 @@ const sendCheckBtn = document.querySelector(".send-check-btn");
 const textarea = document.querySelector("textarea[name=send-content]");
 
 textarea.addEventListener("input", (e) => {
-    if (e.target.value) {
+    checkValue();
+});
+
+const checkValue = () => {
+    if (textarea.value) {
         sendCheckBtn.disabled = false;
         return;
     }
     sendCheckBtn.disabled = true;
-});
+};
 
 // 쪽지 보내기 모달 내 버튼 클릭 시 발생하는 이벤트
 const sendModalBtns = document.querySelectorAll(".send-modal-container button");
@@ -134,6 +138,7 @@ sendModalBtns.forEach((sendModalBtn) => {
                 sendModalWrap.querySelector(".check-modal-container").style.display = "flex";
                 sendModalWrap.querySelector(".send-receiver-email").value = ``;
                 sendModalWrap.querySelector("textarea[name=send-content]").value = ``;
+                checkValue();
             }, 450);
         } else {
             sendModalWrap.querySelector(".send-modal-container").style.animation = "popDown 0.5s";
@@ -141,6 +146,7 @@ sendModalBtns.forEach((sendModalBtn) => {
                 sendModalWrap.style.display = "none";
                 sendModalWrap.querySelector(".send-receiver-email").value = ``;
                 sendModalWrap.querySelector("textarea[name=send-content]").value = ``;
+                checkValue();
             }, 450);
         }
     });
