@@ -72,11 +72,12 @@ body{
     -webkit-appearance: none;
     margin-top: 50px;
     outline: none;
+    border-radius: 8px;
 }
 
 .main-login-id:focus-within{
   border-radius: 8px;
-  padding-left: 18px;
+  padding-left: 14px;
   padding-right: 18px;
   border-width: 2px;
   border-color: #2563EB;
@@ -101,11 +102,12 @@ body{
     margin: 0;
     outline: none;
     margin-top: 5px;
+    border-radius: 8px;
 }
 
 .main-login-pw:focus-within{
   border-radius: 8px;
-  padding-left: 18px;
+  padding-left: 14px;
   padding-right: 18px;
   border-width: 2px;
   border-color: #2563EB;
@@ -120,7 +122,7 @@ body{
     background-repeat: no-repeat;
     background-size: 20px 20px;
     position: absolute;
-    top: 13px;
+    top: 16px;
     bottom: 13px;
     right: 25px;
     margin: 0;
