@@ -73,7 +73,7 @@ $(document).ready(function () {
         height: 400, // set editor height
         minHeight: null, // set minimum height of editor
         maxHeight: null, // set maximum height of editor
-        focus: true,
+        focus: false,
         lang: "ko-KR", // 기본 메뉴언어 US->KR로 변경
     });
 
