@@ -148,13 +148,11 @@ audio, canvas, embed, iframe, img, object, svg, video {
 }
 
 .select-category {
-    --tw-text-opacity: 1;
-    color: rgb(141 113 221/var(--tw-text-opacity));
+    color: #CE201B;
 }
 
 .select-category:hover {
-    --tw-text-opacity: 1;
-    color: rgb(92 63 191/var(--tw-text-opacity));
+    color: #9F0D08;
 }
 
 .clup-detail-link {
@@ -268,7 +266,7 @@ audio, canvas, embed, iframe, img, object, svg, video {
 }
 
 .club-delete-btn {
-    background-color: #ff5353;
+    background-color: #CE201B;
     color: white;
     text-decoration: none;
     text-align: center;
@@ -285,4 +283,8 @@ audio, canvas, embed, iframe, img, object, svg, video {
     vertical-align: middle;
     -webkit-tap-highlight-color: transparent;
     letter-spacing: -.035em !important;
+}
+
+.club-delete-btn:hover {
+    background-color: #9F0D08;
 }
