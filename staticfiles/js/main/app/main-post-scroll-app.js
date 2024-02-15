@@ -27,7 +27,7 @@ postLists.forEach((postList) => {
     };
 
     const onScrollEnd = (e) => {
-        endX = e.clientX; // getClientX(e);
+        endX = getClientXWhenTouchend(e);
         listX = getTranslateX();
         if (listX > 0) {
             setTranslateX(0);
@@ -65,6 +65,12 @@ postLists.forEach((postList) => {
         // 터치 이벤트가 발생한 경우에는 e.touches[0].clientX를 참조
         // 마우스로 클릭한 지점의 X좌표는 e.clientX
         return isTouches ? e.touches[0].clientX : e.clientX;
+    };
+
+    // touchend 이벤트에서는 e.touches[0].clientX로 가져올수 없어 추가
+    const getClientXWhenTouchend = (e) => {
+        const isTouches = e.touches ? true : false;
+        return isTouches ? e.changedTouches[0].clientX : e.clientX;
     };
 
     // 두 번째 스크롤부터는 스크롤이 종료된 위치도 고려하여 계산해야 하기 때문에 요소의 translateX 위치를 가져와야 합니다.

@@ -28,6 +28,52 @@ nicknameFix.addEventListener("click", () => {
     nickname.innerText = nicknameInput.value;
 });
 
+// 모임 프로필 업로드 클릭 시 label이 클릭 되는 이벤트
+const profileUploadBtn = document.querySelector(".profile-upload-btn");
+const profileUploadLabel = document.querySelector(".profile-input-label");
+const profileInput = document.querySelector("#profile-input");
+
+profileUploadBtn.addEventListener("click", () => {
+    profileUploadLabel.click();
+});
+
+// 모임 프로필 업로드 시 이미지 확장자가 아니라면 오류 모달 표시
+const exampeExtensions = ["jpg", "jpeg", "png", "gif", "bmp", "tiff", "tif", "webp"];
+const extensionErrorModalWrap = document.querySelector(".extension-error-modal-wrap");
+const extensionErrorModalContainer = extensionErrorModalWrap.querySelector(".extension-error-modal-container");
+
+profileInput.addEventListener("change", (e) => {
+    if (e.target.value) {
+        let fileName = e.target.files[0].name;
+
+        // 이미지 관련 확장자가 아니라면 확장자 오류 모달 표시
+        if (!checkExtension(fileName, exampeExtensions)) {
+            e.target.value = "";
+            extensionErrorModalContainer.style.animation = "popUp 0.5s";
+            extensionErrorModalWrap.style.display = "block";
+            return;
+        }
+    }
+});
+
+// 확장자 오류 모달 닫는 이벤트
+const extensionErrorModalCloseBtn = document.querySelector(".extension-error-modal-close-btn");
+
+extensionErrorModalCloseBtn.addEventListener("click", () => {
+    extensionErrorModalContainer.style.animation = "popDown 0.5s";
+    setTimeout(() => {
+        extensionErrorModalWrap.style.display = "none";
+    }, 450);
+});
+
+// 파일의 확장자를 확인해주는 함수
+const checkExtension = (fileName, extensions) => {
+    // 파일 이름에서 확장자를 추출
+    const fileExtension = fileName.split(".").pop().toLowerCase();
+    // 허용할 목록들과 비교
+    return extensions.includes(fileExtension);
+};
+
 // 관심 분야 클릭 시 클래스 추가로 속성 변화
 const interestCaregories = document.querySelectorAll(".interest-category");
 
