@@ -318,7 +318,7 @@ input[type="checkbox"] {
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
     --tw-text-opacity: 1;
-    color: rgb(92 63 191 / var(--tw-text-opacity));
+    color: #ce201b;
 }
 
 [type="checkbox"] {
@@ -424,7 +424,7 @@ input[type="checkbox"]:focus {
     --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
     box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
     --tw-ring-opacity: 1;
-    --tw-ring-color: rgb(92 63 191 / var(--tw-ring-opacity));
+    --tw-ring-color: #ce201b;
 }
 
 [type="checkbox"]:checked:focus,
@@ -649,7 +649,7 @@ a {
     margin-right: calc(0.5rem * var(--tw-space-x-reverse));
     margin-left: calc(0.5rem * (1 - var(--tw-space-x-reverse)));
     --tw-text-opacity: 1;
-    color: rgb(141 113 221 / var(--tw-text-opacity));
+    color: #ce201b;
     font-weight: 700;
     font-size: 1rem;
     line-height: 1.5rem;
@@ -738,7 +738,7 @@ a {
 
 .input-name:focus {
     --tw-border-opacity: 1;
-    border-color: rgb(92 63 191 / var(--tw-border-opacity));
+    border-color: #2563eb;
     --tw-ring-opacity: 1;
     --tw-ring-color: rgb(92 63 191 / var(--tw-ring-opacity));
 }
@@ -1109,7 +1109,7 @@ a {
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
     --tw-text-opacity: 1;
-    color: rgb(92 63 191 / var(--tw-text-opacity));
+    color: #ce201b;
 }
 
 .label-ev-radio-111 {
@@ -1225,7 +1225,7 @@ a {
 
 .activity-price {
     --tw-text-opacity: 1;
-    color: rgb(141 113 221 / var(--tw-text-opacity));
+    color: #ce201b;
     font-weight: 700;
     font-size: 32px;
     padding-top: 0.625rem;
@@ -1487,8 +1487,8 @@ a {
     padding-left: 1rem;
     padding-right: 1rem;
     --tw-bg-opacity: 1;
-    background-color: rgb(92 63 191 / var(--tw-bg-opacity));
-    border-width: 1px;
+    background-color: #ce201b;
+    color: #fff;
     border-radius: 0.375rem;
     justify-content: center;
     align-items: center;
@@ -1522,7 +1522,7 @@ a {
 
 .invalid-input {
     --tw-border-opacity: 1;
-    border-color: rgb(191 69 69 / var(--tw-border-opacity));
+    border-color: #ce201b;
 }
 
 .none {

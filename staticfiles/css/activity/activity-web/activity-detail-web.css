@@ -283,11 +283,11 @@ pre {
 .content-main-text {
     display: block;
     --tw-text-opacity: 1;
-    color: rgb(92 63 191 / var(--tw-text-opacity));
+    color: #ce201b;
     text-align: center;
     padding: 1rem;
     --tw-bg-opacity: 1;
-    background-color: rgb(245 242 255 / var(--tw-bg-opacity));
+    background-color: #fff0ee;
     border-radius: 0.375rem;
     margin-top: 1rem;
 }
@@ -357,7 +357,7 @@ pre {
     margin-top: calc(1rem * (1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(1rem * var(--tw-space-y-reverse));
     --tw-text-opacity: 1;
-    color: rgb(141 113 221 / var(--tw-text-opacity));
+    color: #ce201b;
     font-size: 0.8125rem;
     flex-wrap: wrap;
     display: flex;
@@ -547,7 +547,7 @@ pre {
     margin-right: calc(0.5rem * var(--tw-space-x-reverse));
     margin-left: calc(0.5rem * (1 - var(--tw-space-x-reverse)));
     --tw-text-opacity: 1;
-    color: rgb(141 113 221 / var(--tw-text-opacity));
+    color: #ce201b;
 }
 
 .join-button-box {
@@ -568,9 +568,9 @@ pre {
 
 .real-button {
     --tw-border-opacity: 1;
-    border-color: rgb(92 63 191 / var(--tw-border-opacity));
+    border-color: #ce201b;
     --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
+    color: #fff;
     --tw-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
     --tw-shadow-colored: 0 1px 1px 0 var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -579,14 +579,17 @@ pre {
     padding-left: 1rem;
     padding-right: 1rem;
     --tw-bg-opacity: 1;
-    background-color: rgb(92 63 191 / var(--tw-bg-opacity)) !important;
-    border-width: 1px;
+    background-color: #ce201b !important;
     border-radius: 0.375rem;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 3rem;
     display: flex;
+}
+
+.real-button:hover {
+    background-color: #9f0d08 !important;
 }
 
 .divide-button-tie {
@@ -599,18 +602,20 @@ pre {
 
 .share-button {
     --tw-text-opacity: 1;
-    color: rgb(58 132 232 / var(--tw-text-opacity));
+    color: #878d91;
     padding: 0.75rem;
     --tw-bg-opacity: 1;
-    background-color: rgb(239 246 255 / var(--tw-bg-opacity)) !important;
+    background-color: #fff !important;
     border-radius: 0.375rem;
+    border-color: #e1e1e1;
+    border-width: 1px;
     justify-content: center;
     align-items: center;
     display: flex;
 }
 
 .share-button-image {
-    stroke: #3a84e8;
+    stroke: #878d91;
     width: 1rem;
     height: 1rem;
     margin-left: 0.25rem;
@@ -621,10 +626,10 @@ pre {
     margin-right: calc(0.5rem * var(--tw-space-x-reverse));
     margin-left: calc(0.5rem * (1 - var(--tw-space-x-reverse)));
     --tw-text-opacity: 1;
-    color: rgb(58 132 232 / var(--tw-text-opacity));
     padding: 0.75rem;
     --tw-bg-opacity: 1;
-    background-color: rgb(239 246 255 / var(--tw-bg-opacity)) !important;
+    background-color: #fff0ee !important;
+    color: #ce201b;
     border-radius: 0.375rem;
     justify-content: center;
     align-items: center;
@@ -632,7 +637,7 @@ pre {
 }
 
 .like-act-button-image {
-    stroke: #3a84e8;
+    stroke: #ce201b;
     width: 1rem;
     fill: none;
     height: 1rem;
@@ -673,13 +678,13 @@ pre {
 
 .act-intro {
     --tw-text-opacity: 1;
-    color: rgb(92 63 191 / var(--tw-text-opacity));
+    color: #ce201b;
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
     --tw-border-opacity: 1;
-    border-color: rgb(92 63 191 / var(--tw-border-opacity));
+    border-color: #ce201b;
     border-bottom-width: 2px;
     display: inline-block;
 }
@@ -852,14 +857,14 @@ pre {
     margin-right: calc(1rem * var(--tw-space-x-reverse));
     margin-left: calc(1rem * (1 - var(--tw-space-x-reverse)));
     --tw-text-opacity: 1;
-    color: rgb(92 63 191 / var(--tw-text-opacity));
+    color: #ce201b;
     font-size: 0.8125rem;
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     --tw-bg-opacity: 1;
-    background-color: rgb(245 242 255 / var(--tw-bg-opacity));
+    background-color: #fff0ee;
     border-radius: 9999px;
 }
 
@@ -1022,8 +1027,8 @@ p {
     padding-left: 1rem;
     padding-right: 1rem;
     --tw-bg-opacity: 1;
-    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-    border-width: 1px;
+    background-color: #ce201b;
+    color: #fff;
     border-radius: 0.375rem;
     justify-content: center;
     align-items: center;
@@ -1034,7 +1039,7 @@ p {
 
 .filp-button:hover {
     --tw-bg-opacity: 1;
-    background-color: rgb(248 250 251 / var(--tw-bg-opacity));
+    background-color: #9f0d08;
 }
 
 .filp-button-hidden {
@@ -1046,8 +1051,8 @@ p {
     padding-left: 1rem;
     padding-right: 1rem;
     --tw-bg-opacity: 1;
-    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-    border-width: 1px;
+    background-color: #ce201b;
+    color: #fff;
     border-radius: 0.375rem;
     justify-content: center;
     align-items: center;
@@ -1058,7 +1063,7 @@ p {
 
 .filp-button-hidden:hover {
     --tw-bg-opacity: 1;
-    background-color: rgb(248 250 251 / var(--tw-bg-opacity));
+    background-color: #9f0d08;
 }
 
 .filp-more-button-image {
@@ -1215,13 +1220,17 @@ p {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
     --tw-bg-opacity: 1;
-    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-    border-width: 1px;
+    background-color: #ce201b;
+    color: #fff;
     border-radius: 0.375rem;
     justify-content: center;
     align-items: center;
     width: 100%;
     display: flex;
+}
+
+.subcribe-button:hover {
+    background-color: #9f0d08;
 }
 
 .subcribe-button-checking {
@@ -1290,6 +1299,7 @@ p {
     padding: 0.75rem;
     --tw-bg-opacity: 1;
     background-color: rgb(248 250 251 / var(--tw-bg-opacity));
+    /* color: #ce201b; */
 }
 
 .comment-section {
@@ -1770,14 +1780,15 @@ p {
     color: rgb(248 250 251 / var(--tw-text-opacity));
     padding: 0.5rem;
     --tw-bg-opacity: 1;
-    background-color: rgb(141 113 221 / var(--tw-bg-opacity)) !important;
+    background-color: #ce201b !important;
     border-radius: 0.375rem;
     pointer-events: none;
 }
 
 .select-number-one:hover {
     --tw-bg-opacity: 1;
-    background-color: rgb(248 250 251 / var(--tw-bg-opacity));
+    background-color: #9f0d08;
+    color: #fff;
 }
 
 .s-numbers {
@@ -1801,7 +1812,8 @@ p {
 
 .select-number-two:hover {
     --tw-bg-opacity: 1;
-    background-color: rgb(248 250 251 / var(--tw-bg-opacity));
+    background-color: #9f0d08;
+    color: #fff;
 }
 
 .select-number-three {
@@ -1819,7 +1831,8 @@ p {
 
 .select-number-three:hover {
     --tw-bg-opacity: 1;
-    background-color: rgb(248 250 251 / var(--tw-bg-opacity));
+    background-color: #9f0d08;
+    color: #fff;
 }
 
 .page-right-arrow-button {
@@ -2040,7 +2053,7 @@ p {
     margin-right: calc(1rem * var(--tw-space-x-reverse));
     margin-left: calc(1rem * (1 - var(--tw-space-x-reverse)));
     --tw-border-opacity: 1;
-    border-color: rgb(92 63 191 / var(--tw-border-opacity)) !important;
+    border-color: #ce201b !important;
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
     --tw-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
@@ -2224,7 +2237,7 @@ button:focus {
 
 .k-act-content-title {
     font-weight: 700;
-    height: 3rem;
+    height: 1.5rem;
 }
 
 .k-move-content {
@@ -2238,7 +2251,7 @@ button:focus {
     --tw-space-y-reverse: 0;
     margin-top: calc(0.25rem * (1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
-    justify-content: space-between;
+    justify-content: right;
     align-items: center;
     display: flex;
 }
