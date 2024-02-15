@@ -240,7 +240,7 @@ table {
 }
 
 .tab-list-box {
-    padding-top: 20px;
+    padding-top: 12px;
     justify-content: flex-end;
     display: flex;
 }
@@ -340,7 +340,7 @@ table {
 }
 
 .letter-item-content {
-    width: 360px;
+    width: 155px;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
 }
@@ -349,7 +349,7 @@ table {
     display: table-cell;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    width: 6rem;
+    width: 4.5rem;
 }
 
 .letter-item-time, .letter-item-gab {
