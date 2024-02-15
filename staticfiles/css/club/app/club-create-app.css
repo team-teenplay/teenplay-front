@@ -188,7 +188,7 @@ button, input, optgroup, select, textarea {
 }
 
 .header-container {
-    padding: 0;
+    padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
