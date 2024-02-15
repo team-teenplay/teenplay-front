@@ -55,21 +55,6 @@ dateRangeCheck.forEach((selectDateRange) => {
     });
 });
 
-// checkedDate.addEventListener("change", (e) => {
-//     dateRange = document.querySelector(".date-display-none");
-//     dateRange.style.display = "block";
-
-// if (e.target.id == "ev-radio-102") {
-//     dateRange.style.display = "block";
-//     // > 달력 선택 시 창이 사라지지 않게 만드는 용도
-// } else if (e.target.classList == "relative-date") {
-//     console.log(e.target.classList);
-//     dateRange.style.display = "block";
-// } else {
-//     dateRange.style.display = "none";
-// }
-// });
-
 // 좋아요 선택 시 동작하는 js
 const modalWrapCopy = document.querySelector(".club-modal-wrap");
 // > 좋아요 선택 시 관심 설정할 때 표시할 부분
@@ -551,31 +536,6 @@ hideButton.addEventListener("click", (e) => {
             content.style.display = "none";
         });
         noHide.classList.remove("hidden");
-    }
-});
-
-// 접은 부분 피기 / 접기 (행사 유형)
-let noHideContent = document.querySelector(".view-btn-tie-two");
-let hideContent = document.querySelector(".view-btn-tie-two.hidden");
-let hideContentButton = document.querySelector(".another-view-btn-two");
-
-hideContentButton.addEventListener("click", (e) => {
-    let closestText = e.target.closest("span");
-    if (closestText.getAttribute("value") == "no-hidden") {
-        noHideContent.classList.add("hidden");
-        // 내용부분 표기
-        let boxHidden = document.querySelectorAll(".act-category-box-hidden");
-        boxHidden.forEach((content) => {
-            content.style.display = "flex";
-        });
-        hideContent.classList.remove("hidden");
-    } else {
-        hideContent.classList.add("hidden");
-        let boxHidden = document.querySelectorAll(".act-category-box-hidden");
-        boxHidden.forEach((content) => {
-            content.style.display = "none";
-        });
-        noHideContent.classList.remove("hidden");
     }
 });
 
