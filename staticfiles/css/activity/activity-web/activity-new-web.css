@@ -18,7 +18,7 @@ html {
 :root {
     --green-teal: #0bbe72;
     --aqua-marine-85: rgba(57, 234, 159, 0.85);
-    --eventus-purple: #5c3fbf;
+    --eventus-purple: #ce201b;
     --eventus-purple-soft: #8d71dd;
     --eventus-purple-deep: #472ca3;
     --eventus-yellow: #ffce2f;
@@ -370,7 +370,7 @@ textarea {
     padding: 0 16px;
     text-decoration: none;
     color: #fff;
-    background-color: #5c3fbf;
+    background-color: #ce201b;
     text-align: center;
     transition: 0.2s ease-out;
     cursor: pointer;
@@ -445,7 +445,7 @@ textarea {
     font-weight: 300 !important;
     font-size: 20px;
     margin: 0 !important;
-    color: #8d71dd !important;
+    color: #ce201b !important;
 }
 
 form p:last-child {
@@ -498,9 +498,7 @@ input[type="tel"]:not(.browser-default):focus:not([readonly]),
 input[type="number"]:not(.browser-default):focus:not([readonly]),
 input[type="search"]:not(.browser-default):focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-    /* border-bottom: 1px solid #5c3fbf; */
-    border-color: #5c3fbf !important;
-    /* box-shadow: 0 1px 0 0 #5c3fbf; */
+    border-color: #2563eb !important;
 }
 
 select:focus {
@@ -557,7 +555,7 @@ select:focus {
 [type="radio"]:checked + label:after,
 [type="radio"].all-open:checked + label:before,
 [type="radio"].all-open:checked + label:after {
-    background-color: #5c3fbf;
+    background-color: #ce201b;
 }
 
 [type="radio"]:not(:checked) + label:before,
@@ -999,11 +997,10 @@ input.timepicker {
 }
 
 .content-item {
-    border-color: #5c3fbf;
     width: 100%;
     display: inline-block;
     padding: 10.5px;
-    border: 1px solid #5c3fbf;
+    border: 1px solid #f2f4f5;
     border-radius: 3px;
     cursor: pointer;
 }
@@ -1042,8 +1039,8 @@ input.timepicker {
 }
 
 [type="checkbox"].checked-in:checked + label:after {
-    border: 2px solid #5c3fbf;
-    background-color: #5c3fbf;
+    border: 2px solid #ce201b;
+    background-color: #ce201b;
     z-index: 0;
     width: 15px;
     height: 15px;
@@ -1083,8 +1080,8 @@ input.timepicker {
     height: 22px;
     border-top: 2px solid transparent;
     border-left: 2px solid transparent;
-    border-right: 2px solid #5c3fbf;
-    border-bottom: 2px solid #5c3fbf;
+    border-right: 2px solid #ce201b;
+    border-bottom: 2px solid #ce201b;
     transform: rotate(40deg);
     backface-visibility: hidden;
     transform-origin: 100% 100%;
@@ -1169,7 +1166,7 @@ input.timepicker {
     font-weight: 300 !important;
     font-size: 20px;
     margin: 0 !important;
-    color: #8d71dd !important;
+    color: #ce201b !important;
 }
 
 .detail-sub-title {
@@ -1389,7 +1386,7 @@ select {
     min-height: 48px;
     align-items: center !important;
     z-index: 0;
-    --tags-focus-border-color: #5c3fbf !important;
+    --tags-focus-border-color: #ce201b !important;
     --tag-text-color: var(--grey-400) !important;
     --tag-text-color--edit: var(--grey-400) !important;
     --tag-remove-btn-color: var(--grey-400) !important;
@@ -1930,8 +1927,8 @@ input {
 }
 
 [type="checkbox"].back-thumnail-fill:checked + label:after {
-    border: 2px solid #5c3fbf;
-    background-color: #5c3fbf;
+    border: 2px solid #ce201b;
+    background-color: #ce201b;
     z-index: 0;
     width: 15px;
     height: 15px;
@@ -2076,28 +2073,6 @@ input {
     text-align: center !important;
 }
 
-.button-save {
-    padding-left: 1.5rem !important;
-    padding-right: 1.5rem !important;
-    text-decoration: none;
-    text-align: center;
-    transition: 0.2s ease-out;
-    cursor: pointer;
-    background-color: transparent !important;
-    color: #8d71dd;
-    border: solid 1px #8d71dd;
-    font-size: 14px;
-    outline: 0;
-    display: inline-block;
-    height: 48px;
-    line-height: 49px;
-    padding: 0 30px;
-    border-radius: 6px;
-    vertical-align: middle;
-    -webkit-tap-highlight-color: transparent;
-    letter-spacing: -0.035em !important;
-}
-
 .button-edit {
     padding-left: 1.5rem !important;
     padding-right: 1.5rem !important;
@@ -2127,9 +2102,9 @@ input {
     text-align: center;
     transition: 0.2s ease-out;
     cursor: pointer;
-    background-color: transparent !important;
-    color: #8d71dd;
-    border: solid 1px #8d71dd;
+    background-color: transparent;
+    color: #ce201b;
+    border: solid 1px #ce201b;
     font-size: 14px;
     outline: 0;
     display: inline-block;
@@ -2142,13 +2117,18 @@ input {
     letter-spacing: -0.035em !important;
 }
 
+.button-save:hover {
+    background-color: #9f0d08;
+    color: #fff;
+}
+
 .button-activity-open {
     margin-left: 0.5rem !important;
     padding-left: 4rem !important;
     padding-right: 4rem !important;
     text-decoration: none;
     color: #fff;
-    background-color: #5c3fbf;
+    background-color: #ce201b;
     text-align: center;
     transition: 0.2s ease-out;
     cursor: pointer;
@@ -2165,6 +2145,10 @@ input {
     letter-spacing: -0.035em !important;
 }
 
+.button-activity-open:hover {
+    background-color: #9f0d08;
+}
+
 .error-message-box,
 .error-message-box-date,
 .error-message-box-time,
@@ -2179,7 +2163,7 @@ input {
 }
 
 .border-color {
-    border-color: #ff5353 !important;
+    border-color: #ce201b !important;
 }
 
 .cancel-image,
