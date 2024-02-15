@@ -1322,8 +1322,9 @@ color: #9ca3af;
 
 .admin-post-modal-content-input:focus-within{
     border-radius: 8px;
-    padding-left: 18px;
-    padding-right: 18px;
+    padding-left: 19px;
+    padding-right: 19px;
+    padding-top: 9px;
     border-width: 2px;
     border-color: #2563EB;
 }
@@ -1364,10 +1365,10 @@ color: #9ca3af;
 
 .admin-post-modal-thumbnail-img{
     position: absolute;
-    height: 100%;
-    width: 100%;
+    width: 100%; /* 부모 요소의 너비에 맞추기 */
+    height: 100%; /* 부모 요소의 높이에 맞추기 */
+    object-fit: contain; /* 이미지가 완전히 표시될 수 있도록 */
     inset: 0px;
-    object-fit: cover;
     object-position: center center;
     color: transparent;
     display: block;
@@ -1552,6 +1553,10 @@ color: #9ca3af;
     color: inherit;
     margin: 0;
     padding: 0;}
+
+    .admin-post-modal-thumbnail-button-insert:hover{
+        background-color: #FFF0EE;
+    }
 
 .admin-post-modal-thumbnail-info{
     font-weight: 400;

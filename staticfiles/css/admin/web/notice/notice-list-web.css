@@ -1164,8 +1164,9 @@ color: #9ca3af;
 
 .admin-post-modal-content-input:focus-within{
     border-radius: 8px;
-    padding-left: 18px;
-    padding-right: 18px;
+    padding-left: 19px;
+    padding-right: 19px;
+    padding-top: 9px;
     border-width: 2px;
     border-color: #2563EB;
 }
