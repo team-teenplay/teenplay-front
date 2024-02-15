@@ -168,13 +168,11 @@ button, input, optgroup, select, textarea {
 }
 
 .select-category {
-    --tw-text-opacity: 1;
-    color: rgb(141 113 221/var(--tw-text-opacity));
+    color: #CE201B;
 }
 
 .select-category:hover {
-    --tw-text-opacity: 1;
-    color: rgb(92 63 191/var(--tw-text-opacity));
+    color: #9F0D08;
 }
 
 .clup-detail-link {
