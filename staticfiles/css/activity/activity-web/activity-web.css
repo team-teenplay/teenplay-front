@@ -1734,11 +1734,13 @@ button:disabled {
     --tw-border-opacity: 1;
     border-color: rgb(245 242 255 / var(--tw-border-opacity));
     --tw-text-opacity: 1;
-    color: #ce201b;
+    color: #878d91;
     width: 70%;
     --tw-bg-opacity: 1;
-    background-color: #fff0ee;
+    background-color: #fff;
+    border-color: #e1e1e1;
     border-radius: 0.375rem;
+    border-width: 1px;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -1750,7 +1752,7 @@ button:disabled {
 
 .channel-sub-m-btn:hover {
     --tw-bg-opacity: 1;
-    background-color: #ffb6ac;
+    background-color: #c2c2c2;
 }
 
 .channel-sub-m-btn-left {
@@ -1816,7 +1818,7 @@ button:disabled {
 
 .channel-click-btn-bg:hover {
     --tw-bg-opacity: 1;
-    background-color: #ffb6ac !important;
+    background-color: #9f0d08 !important;
 }
 
 .more-channel {
@@ -2038,7 +2040,7 @@ button:disabled {
     --tw-border-opacity: 1;
     /* border-color: #ce201b; */
     --tw-text-opacity: 1;
-    color: #ce201b;
+    color: #fff;
     --tw-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
     --tw-shadow-colored: 0 1px 1px 0 var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -2048,7 +2050,7 @@ button:disabled {
     padding-left: 1rem;
     padding-right: 1rem;
     --tw-bg-opacity: 1;
-    background-color: #fff0ee;
+    background-color: #ce201b;
     border-width: 1px;
     border-radius: 0.375rem;
     justify-content: center;
@@ -2060,7 +2062,7 @@ button:disabled {
 
 .meeting-move-btn:hover {
     --tw-bg-opacity: 1;
-    background-color: #ffb6ac;
+    background-color: #9f0d08;
     border-color: #9f0d08;
     border-width: 1px solid;
 }

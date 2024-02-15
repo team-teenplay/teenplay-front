@@ -122,7 +122,7 @@ header {
 }
 
 .logo-name {
-    color: #ce201b;
+    color: #333;
     font-size: 16px;
     font-weight: 800;
     margin-left: 10px;
@@ -330,7 +330,7 @@ header {
 .description-text {
     color: #fff;
     font-family: "NanumSquareRound", "Noto Sans KR", "Open Sans", "Helvetica", "Arial", sans-serif;
-    font-size: 24px;
+    font-size: 23px;
     line-height: 1.4;
     max-height: 302.4px;
     overflow: hidden;
@@ -1206,7 +1206,7 @@ header {
 }
 
 .contact-us-address {
-    color: #000;
+    color: #9f0d08;
     font-size: 16px;
     font-weight: 800;
     margin: 14px 0 10px;
@@ -1214,7 +1214,7 @@ header {
 }
 
 .contact-us-email {
-    color: #b3b3b3;
+    color: #9f0d08;
     font-weight: 800;
     text-align: center;
 }
