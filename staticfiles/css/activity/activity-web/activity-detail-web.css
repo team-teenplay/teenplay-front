@@ -2867,4 +2867,19 @@ textarea {
     outline-color: rgb(92 63 191 / var(--tw-border-opacity));
 }
 
-/* 댓글 */
+.map-box {
+    border-width: 1px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: none;
+}
+
+.map-address-text-content-box {
+    border-top-width: 1px;
+    display: flex;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    align-items: center;
+    display: none;
+}
