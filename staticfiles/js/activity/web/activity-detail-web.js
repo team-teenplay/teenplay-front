@@ -446,11 +446,26 @@ let commentCorrectionClick = document.querySelector(".k-comment-menu-open-choice
 let commentCorrection = document.querySelector(".k-comment-update-box-all-wrap");
 let commentCorrectionText = document.querySelector(".k-comment-update-box-wrap");
 
+let commentListAllWrap = document.querySelector(".k-comment-list-all-wrap");
+let commentInputBoxAllWrap = document.querySelector(".k-comment-input-box-all-wrap");
+
 commentButton.addEventListener("click", (e) => {
     commentCorrectionClick.addEventListener("click", () => {
         commentCorrection.style.display = "block";
         commentCorrectionText.style.display = "block";
         commentSubButton.style.display = "none";
+        commentListAllWrap.classList.add("hidden");
+        commentInputBoxAllWrap.classList.add("hidden");
     });
     commentSubButton.style.display = "block";
+});
+
+let commentUpdateUploadContainer = document.querySelector(".k-comment-update-upload-container");
+commentUpdateUploadContainer.addEventListener("click", () => {
+    commentCorrection.style.display = "none";
+    commentCorrectionText.style.display = "none";
+    commentSubButton.style.display = "flex";
+    commentListAllWrap.classList.remove("hidden");
+    commentInputBoxAllWrap.classList.remove("hidden");
+    commentSubButton.style.display = "none";
 });
