@@ -670,6 +670,7 @@ const autoSlide = () => {
 slideContainer.style.transform = "translate(-358px)";
 let inter = setInterval(autoSlide, 4000);
 
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 // 배너 + 선택 시 모달 생성
 let plusBtn = document.querySelector(".swiper-more-button");
 plusBtn.addEventListener("click", (e) => {
@@ -689,40 +690,68 @@ exitBtn.addEventListener("click", (e) => {
 //hidden-right-btn 필터 버튼
 // hidden-flex-center 필터 닫는 버튼
 
+// let filterButton = document.querySelector(".hidden-right-btn");
+// let filterContainer = document.querySelector(".filter-container-hidden");
+// let mainContainer = document.querySelector(".full-wrap");
+// let isFilterContainerVisible = false;
+
+// filterButton.addEventListener("click", () => {
+//     if (!isFilterContainerVisible) {
+//         // 필터 컨테이너가 보이도록 변경
+//         filterContainer.style.display = "flex";
+//         mainContainer.style.opacity = 0; // 메인 컨테이너의 투명도를 0으로 설정하여 사라지도록 함
+//         mainContainer.style.display = "none";
+//         setTimeout(() => {
+//             filterContainer.style.opacity = 1; // 필터 컨테이너의 투명도를 1로 설정하여 나타나도록 함
+//         }, 50); // 약간의 지연을 추가하여 트랜지션이 더 부드럽게 보이도록 함
+//         isFilterContainerVisible = true;
+//     } else {
+//         // 필터 컨테이너가 숨겨지도록 변경
+//         filterContainer.style.opacity = 0; // 필터 컨테이너의 투명도를 0으로 설정하여 사라지도록 함
+//         setTimeout(() => {
+//             filterContainer.style.display = "none";
+//             mainContainer.style.opacity = 1; // 메인 컨테이너의 투명도를 1로 설정하여 나타나도록 함
+//         }, 250); // 약간의 지연을 추가하여 트랜지션이 더 부드럽게 보이도록 함
+//         isFilterContainerVisible = false;
+//     }
+// });
+
+// let searchFilterButton = document.querySelector(".hidden-flex-center");
+// searchFilterButton.addEventListener("click", () => {
+//     // 필터 컨테이너가 숨겨지도록 변경
+//     filterContainer.style.opacity = 0; // 필터 컨테이너의 투명도를 0으로 설정하여 사라지도록 함
+//     setTimeout(() => {
+//         filterContainer.style.display = "none";
+//         mainContainer.style.opacity = 1; // 메인 컨테이너의 투명도를 1로 설정하여 나타나도록 함
+//         mainContainer.style.display = "block";
+//     }, 250); // 약간의 지연을 추가하여 트랜지션이 더 부드럽게 보이도록 함
+//     isFilterContainerVisible = false;
+// });
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// 여는 방식
+// let mainContainer = document.querySelector(".full-wrap");
 let filterButton = document.querySelector(".hidden-right-btn");
 let filterContainer = document.querySelector(".filter-container-hidden");
-let mainContainer = document.querySelector(".full-wrap");
-let isFilterContainerVisible = false;
+let searchFilterButton = document.querySelector(".content-hidden-fiexd");
+let mainBodyContainer = document.querySelector(".main-screen");
 
-filterButton.addEventListener("click", () => {
-    if (!isFilterContainerVisible) {
-        // 필터 컨테이너가 보이도록 변경
-        filterContainer.style.display = "flex";
-        mainContainer.style.opacity = 0; // 메인 컨테이너의 투명도를 0으로 설정하여 사라지도록 함
-        mainContainer.style.display = "none";
-        setTimeout(() => {
-            filterContainer.style.opacity = 1; // 필터 컨테이너의 투명도를 1로 설정하여 나타나도록 함
-        }, 50); // 약간의 지연을 추가하여 트랜지션이 더 부드럽게 보이도록 함
-        isFilterContainerVisible = true;
-    } else {
-        // 필터 컨테이너가 숨겨지도록 변경
-        filterContainer.style.opacity = 0; // 필터 컨테이너의 투명도를 0으로 설정하여 사라지도록 함
-        setTimeout(() => {
-            filterContainer.style.display = "none";
-            mainContainer.style.opacity = 1; // 메인 컨테이너의 투명도를 1로 설정하여 나타나도록 함
-        }, 250); // 약간의 지연을 추가하여 트랜지션이 더 부드럽게 보이도록 함
-        isFilterContainerVisible = false;
-    }
+filterButton.addEventListener("click", (e) => {
+    // 모달의 경우 가장 바깥쪽
+    filterContainer.style.animation = "slideIn 0.3s ease-in-out";
+    setTimeout(() => {
+        mainBodyContainer.style.display = "none";
+        // 애니메이션이 끝난 후 display 속성 변경
+        filterContainer.style.display = "block";
+    }, 300);
 });
 
-let searchFilterButton = document.querySelector(".hidden-flex-center");
-searchFilterButton.addEventListener("click", () => {
-    // 필터 컨테이너가 숨겨지도록 변경
-    filterContainer.style.opacity = 0; // 필터 컨테이너의 투명도를 0으로 설정하여 사라지도록 함
+// 닫는 방식
+
+searchFilterButton.addEventListener("click", (e) => {
+    filterContainer.style.animation = "slideOut 0.3s ease-in-out";
     setTimeout(() => {
+        filterContainer.removeAttribute("style");
+        mainBodyContainer.style.display = "block";
         filterContainer.style.display = "none";
-        mainContainer.style.opacity = 1; // 메인 컨테이너의 투명도를 1로 설정하여 나타나도록 함
-        mainContainer.style.display = "block";
-    }, 250); // 약간의 지연을 추가하여 트랜지션이 더 부드럽게 보이도록 함
-    isFilterContainerVisible = false;
+    }, 300);
 });

@@ -87,6 +87,24 @@ body {
     --swiper-theme-color: #007aff;
 }
 
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
 [type="button"],
 [type="reset"],
 [type="submit"],
@@ -98,6 +116,7 @@ button {
 
 .main-screen {
     min-height: 100vh;
+    /* animation: slideOut 0.3s ease-in-out; */
 }
 
 .prompt-popup-display {
@@ -152,9 +171,11 @@ button {
 
 .filter-container-hidden {
     display: none;
-    margin-right: 2rem;
-    transition: opacity 0.5s ease-in-out;
-    opacity: 0;
+    /* margin-right: 2rem; */
+    /* transition: opacity 0.5s ease-in-out; */
+    animation: slideIn 0.3s ease-in-out;
+    animation: slideOut 0.3s ease-in-out;
+    /* opacity: 0; */
 }
 
 .filter-box {
@@ -2812,4 +2833,8 @@ video {
     --tw-space-x-reverse: 0;
     margin-right: calc(2rem * var(--tw-space-x-reverse));
     margin-left: calc(2rem * (1 - var(--tw-space-x-reverse)));
+}
+
+.slideOut {
+    animation: slideOut 0.3s ease-in-out;
 }

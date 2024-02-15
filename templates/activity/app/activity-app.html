@@ -147,482 +147,6 @@
                         </div>
                     </section>
                     <div class="flex-wrap">
-                        <div class="filter-container-hidden">
-                            <div class="filter-box">
-                                <div class="filter-bg">
-                                    <div class="filter-space">
-                                        <div class="filter-content">
-                                            <div class="filter-text">
-                                                <span>필터</span>
-                                            </div>
-                                            <button type="button" class="filter-reset">
-                                                <span>필터 초기화</span>
-                                            </button>
-                                        </div>
-                                        <div class="content-date">
-                                            <div class="font-bold-date">
-                                                <span>일시</span>
-                                            </div>
-                                            <div class="date-list">
-                                                <div class="date-container-first">
-                                                    <div class="date-box">
-                                                        <input class="radio-everyday" id="ev-radio-98" type="radio" value="모든날" checked="true" />
-                                                        <label class="cursor-point-day" for="ev-radio-98"> 모든날 </label>
-                                                    </div>
-                                                    <div class="text-display-none-day">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <div class="date-container">
-                                                    <div class="date-box">
-                                                        <input class="radio-everyday" id="ev-radio-99" type="radio" value="오늘" />
-                                                        <label class="cursor-point-day" for="ev-radio-99"> 오늘 </label>
-                                                    </div>
-                                                    <div class="text-display-none-day">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <div class="date-container">
-                                                    <div class="date-box">
-                                                        <input class="radio-everyday" id="ev-radio-100" type="radio" value="이번주" />
-                                                        <label class="cursor-point-day" for="ev-radio-100"> 이번주 </label>
-                                                    </div>
-                                                    <div class="text-display-none-day">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <div class="date-container">
-                                                    <div class="date-box">
-                                                        <input class="radio-everyday" id="ev-radio-101" type="radio" value="이번달" />
-                                                        <label class="cursor-point-day" for="ev-radio-101"> 이번달 </label>
-                                                    </div>
-                                                    <div class="text-display-none-day">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <div class="date-container">
-                                                    <div class="date-box">
-                                                        <input class="radio-everyday" id="ev-radio-102" type="radio" value="기간선택" />
-                                                        <label class="cursor-point-day" for="ev-radio-102"> 기간선택 </label>
-                                                    </div>
-                                                    <div class="text-display-none-day">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <div class="date-display-none" id="date-display-none">
-                                                    <div class="date-relative-full">
-                                                        <label class="relative-block">
-                                                            <input type="text" class="relative-date" placeholder="기간을 선택하세요" />
-                                                            <!-- 달력을 jquery를 사용해서 가져오기 때문에 원본과 차이가 있음 -->
-                                                            <span class="text-overflow-hidden">
-                                                                <button type="button" class="date-selector">
-                                                                    <svg class="calender" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                                                                    </svg>
-                                                                </button>
-                                                            </span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <div class="end-date-container">
-                                                    <div class="end-date-box">
-                                                        <div class="end-date-tie">
-                                                            <input class="end-date-chk" id="ev-checkbox-104" true-value="true" false-value="false" type="checkbox" value="모집 종료 행사" />
-                                                            <label class="end-text-box" for="ev-checkbox-104" value="모집 종료 행사"> 모집 종료 행사 </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="end-text-gray">
-                                                        <span>모집 종료된 행사까지 포함하여 보기</span>
-                                                    </div>
-                                                    <div class="text-display-none-day">이 항목은 필수입니다.</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="content-lotaction-container">
-                                            <div class="content-location-text">
-                                                <span>지역</span>
-                                            </div>
-                                            <select class="block-location">
-                                                <option value="전체">전체</option>
-                                                <option value="서울/경기/인천">서울/경기/인천</option>
-                                                <option value="부산/울산/경남">부산/울산/경남</option>
-                                                <option value="대구/경북">대구/경북</option>
-                                                <option value="서울/경기">서울/경기</option>
-                                                <option value="서울/인천">서울/인천</option>
-                                                <option value="서울">서울</option>
-                                                <option value="진주">진주</option>
-                                            </select>
-                                        </div>
-                                        <div class="content-activity">
-                                            <div class="content-activity-text">
-                                                <span>행사분야</span>
-                                            </div>
-                                            <div class="content-activity-box">
-                                                <div class="activity-box">
-                                                    <div class="activity-tie">
-                                                        <div class="activity-center">
-                                                            <input class="activity-chk" id="ev-checkbox-105" true-value="true" false-value="false" type="checkbox" value="창업" />
-                                                            <label class="activity-box-text" for="ev-checkbox-105" value="창업"> 창업 </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <div class="activity-box">
-                                                    <div class="activity-tie">
-                                                        <div class="activity-center">
-                                                            <input class="activity-chk" id="ev-checkbox-106" true-value="true" false-value="false" type="checkbox" value="IT/프로그래밍" />
-                                                            <label class="activity-box-text" for="ev-checkbox-106"> IT/프로그래밍 </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <div class="activity-box">
-                                                    <div class="activity-tie">
-                                                        <div class="activity-center">
-                                                            <input class="activity-chk" id="ev-checkbox-107" true-value="true" false-value="false" type="checkbox" value="라이프" />
-                                                            <label class="activity-box-text" for="ev-checkbox-107"> 라이프 </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <div class="activity-box">
-                                                    <div class="activity-tie">
-                                                        <div class="activity-center">
-                                                            <input class="activity-chk" id="ev-checkbox-108" true-value="true" false-value="false" type="checkbox" value="경제/금융" />
-                                                            <label class="activity-box-text" for="ev-checkbox-108"> 경제/금융 </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <div class="activity-box">
-                                                    <div class="activity-tie">
-                                                        <div class="activity-center">
-                                                            <input class="activity-chk" id="ev-checkbox-109" true-value="true" false-value="false" type="checkbox" value="경영" />
-                                                            <label class="activity-box-text" for="ev-checkbox-109">경영</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <div class="activity-box-hidden" style="display: none">
-                                                    <div class="activity-tie">
-                                                        <div class="activity-center">
-                                                            <input class="activity-chk" id="ev-checkbox-580" true-value="true" false-value="false" type="checkbox" value="인문사회" />
-                                                            <label class="activity-box-text" for="ev-checkbox-580">인문사회</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <div class="activity-box-hidden" style="display: none">
-                                                    <div class="activity-tie">
-                                                        <div class="activity-center">
-                                                            <input class="activity-chk" id="ev-checkbox-580" true-value="true" false-value="false" type="checkbox" value="인문사회" />
-                                                            <label class="activity-box-text" for="ev-checkbox-580">인문사회</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <div class="activity-box-hidden" style="display: none">
-                                                    <div class="activity-tie">
-                                                        <div class="activity-center">
-                                                            <input class="activity-chk" id="ev-checkbox-581" true-value="true" false-value="false" type="checkbox" value="예술" />
-                                                            <label class="activity-box-text" for="ev-checkbox-581">예술</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <div class="activity-box-hidden" style="display: none">
-                                                    <div class="activity-tie">
-                                                        <div class="activity-center">
-                                                            <input class="activity-chk" id="ev-checkbox-582" true-value="true" false-value="false" type="checkbox" value="마케팅" />
-                                                            <label class="activity-box-text" for="ev-checkbox-582">마케팅</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <div class="activity-box-hidden" style="display: none">
-                                                    <div class="activity-tie">
-                                                        <div class="activity-center">
-                                                            <input class="activity-chk" id="ev-checkbox-583" true-value="true" false-value="false" type="checkbox" value="커리어" />
-                                                            <label class="activity-box-text" for="ev-checkbox-583">커리어</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <div class="activity-box-hidden" style="display: none">
-                                                    <div class="activity-tie">
-                                                        <div class="activity-center">
-                                                            <input class="activity-chk" id="ev-checkbox-584" true-value="true" false-value="false" type="checkbox" value="과학기술" />
-                                                            <label class="activity-box-text" for="ev-checkbox-584">과학기술</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <div class="activity-box-hidden" style="display: none">
-                                                    <div class="activity-tie">
-                                                        <div class="activity-center">
-                                                            <input class="activity-chk" id="ev-checkbox-585" true-value="true" false-value="false" type="checkbox" value="디자인/영상" />
-                                                            <label class="activity-box-text" for="ev-checkbox-585">디자인/영상</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <div class="activity-box-hidden" style="display: none">
-                                                    <div class="activity-tie">
-                                                        <div class="activity-center">
-                                                            <input class="activity-chk" id="ev-checkbox-586" true-value="true" false-value="false" type="checkbox" value="의료/의학" />
-                                                            <label class="activity-box-text" for="ev-checkbox-586">의료/의학</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <div class="activity-box-hidden" style="display: none">
-                                                    <div class="activity-tie">
-                                                        <div class="activity-center">
-                                                            <input class="activity-chk" id="ev-checkbox-587" true-value="true" false-value="false" type="checkbox" value="행사/기획" />
-                                                            <label class="activity-box-text" for="ev-checkbox-587">행사/기획</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <div class="activity-box-hidden" style="display: none">
-                                                    <div class="activity-tie">
-                                                        <div class="activity-center">
-                                                            <input class="activity-chk" id="ev-checkbox-588" true-value="true" false-value="false" type="checkbox" value="관광/여행" />
-                                                            <label class="activity-box-text" for="ev-checkbox-588">관광/여행</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <div class="activity-box-hidden" style="display: none">
-                                                    <div class="activity-tie">
-                                                        <div class="activity-center">
-                                                            <input class="activity-chk" id="ev-checkbox-589" true-value="true" false-value="false" type="checkbox" value="기타" />
-                                                            <label class="activity-box-text" for="ev-checkbox-589">기타</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <button class="another-view-btn" type="button">
-                                                    <span class="view-btn-tie">
-                                                        <!-- 기본값 -->
-                                                        <span value="no-hidden">15개 모두 보기</span>
-                                                        <span value="no-hidden">
-                                                            <svg class="rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path>
-                                                            </svg>
-                                                        </span>
-                                                    </span>
-                                                    <!-- 클릭 시 변경되는 부분 -->
-                                                    <span class="view-btn-tie hidden">
-                                                        <span>접기</span>
-                                                        <span>
-                                                            <svg class="-rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path>
-                                                            </svg>
-                                                        </span>
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="content-activity-category">
-                                            <div class="content-act-category-text">
-                                                <span>행사유형</span>
-                                            </div>
-                                            <div class="content-act-category-box">
-                                                <div class="act-category-box">
-                                                    <div class="act-category-tie">
-                                                        <div class="act-category-center">
-                                                            <input class="act-category-chk" id="ev-checkbox-110" true-value="true" false-value="false" type="checkbox" value="강연/세미나" />
-                                                            <label class="act-category-box-text" for="ev-checkbox-110"> 강연/세미나 </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <div class="act-category-box">
-                                                    <div class="act-category-tie">
-                                                        <div class="act-category-center">
-                                                            <input class="act-category-chk" id="ev-checkbox-111" true-value="true" false-value="false" type="checkbox" value="모임/커뮤니티" />
-                                                            <label class="act-category-box-text" for="ev-checkbox-111"> 모임/커뮤니티 </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <div class="act-category-box">
-                                                    <div class="act-category-tie">
-                                                        <div class="act-category-center">
-                                                            <input class="act-category-chk" id="ev-checkbox-112" true-value="true" false-value="false" type="checkbox" value="멘토링/대외활동" />
-                                                            <label class="act-category-box-text" for="ev-checkbox-112"> 멘토링/대외활동 </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <div class="act-category-box">
-                                                    <div class="act-category-tie">
-                                                        <div class="act-category-center">
-                                                            <input class="act-category-chk" id="ev-checkbox-113" true-value="true" false-value="false" type="checkbox" value="대외/공모전" />
-                                                            <label class="act-category-box-text" for="ev-checkbox-113"> 대외/공모전 </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <div class="act-category-box">
-                                                    <div class="act-category-tie">
-                                                        <div class="act-category-center">
-                                                            <input class="act-category-chk" id="ev-checkbox-114" true-value="true" false-value="false" type="checkbox" value="데모데이" />
-                                                            <label class="act-category-box-text" for="ev-checkbox-114"> 데모데이 </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <div class="act-category-box-hidden" style="display: none">
-                                                    <div class="act-category-tie">
-                                                        <div class="act-category-center">
-                                                            <input class="act-category-chk" id="ev-checkbox-358" true-value="true" false-value="false" type="checkbox" value="워크샵/클리닉" />
-                                                            <label class="act-category-box-text" for="ev-checkbox-358"> 워크샵/클리닉</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <div class="act-category-box-hidden" style="display: none">
-                                                    <div class="act-category-tie">
-                                                        <div class="act-category-center">
-                                                            <input class="act-category-chk" id="ev-checkbox-359" true-value="true" false-value="false" type="checkbox" value="박람회" />
-                                                            <label class="act-category-box-text" for="ev-checkbox-359"> 박람회</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <div class="act-category-box-hidden" style="display: none">
-                                                    <div class="act-category-tie">
-                                                        <div class="act-category-center">
-                                                            <input class="act-category-chk" id="ev-checkbox-360" true-value="true" false-value="false" type="checkbox" value="관광" />
-                                                            <label class="act-category-box-text" for="ev-checkbox-360"> 관광</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <div class="act-category-box-hidden" style="display: none">
-                                                    <div class="act-category-tie">
-                                                        <div class="act-category-center">
-                                                            <input class="act-category-chk" id="ev-checkbox-361" true-value="true" false-value="false" type="checkbox" value="콘테스트" />
-                                                            <label class="act-category-box-text" for="ev-checkbox-361"> 콘테스트</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <div class="act-category-box-hidden" style="display: none">
-                                                    <div class="act-category-tie">
-                                                        <div class="act-category-center">
-                                                            <input class="act-category-chk" id="ev-checkbox-362" true-value="true" false-value="false" type="checkbox" value="회의" />
-                                                            <label class="act-category-box-text" for="ev-checkbox-362"> 회의</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <div class="act-category-box-hidden" style="display: none">
-                                                    <div class="act-category-tie">
-                                                        <div class="act-category-center">
-                                                            <input class="act-category-chk" id="ev-checkbox-363" true-value="true" false-value="false" type="checkbox" value="축제" />
-                                                            <label class="act-category-box-text" for="ev-checkbox-363"> 축제</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <div class="act-category-box-hidden" style="display: none">
-                                                    <div class="act-category-tie">
-                                                        <div class="act-category-center">
-                                                            <input class="act-category-chk" id="ev-checkbox-364" true-value="true" false-value="false" type="checkbox" value="기타" />
-                                                            <label class="act-category-box-text" for="ev-checkbox-364"> 기타</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <button class="another-view-btn-two" type="button">
-                                                    <span class="view-btn-tie-two">
-                                                        <!-- 기본값 -->
-                                                        <span value="no-hidden">15개 모두 보기</span>
-                                                        <span value="no-hidden">
-                                                            <svg class="rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path>
-                                                            </svg>
-                                                        </span>
-                                                    </span>
-                                                    <!-- 클릭 시 변경되는 부분 -->
-                                                    <span class="view-btn-tie-two hidden">
-                                                        <span>접기</span>
-                                                        <span>
-                                                            <svg class="-rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path>
-                                                            </svg>
-                                                        </span>
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="content-method">
-                                            <div class="content-method-text">
-                                                <span>참여 방법</span>
-                                            </div>
-                                            <div class="method-list">
-                                                <div class="method-container">
-                                                    <div class="method-box" checked="true">
-                                                        <input class="radio-everyday" id="ev-radio-115" type="radio" value="전체" checked="true" />
-                                                        <label class="cursor-point-method" for="ev-radio-115">전체 </label>
-                                                    </div>
-                                                    <div class="text-display-none-day">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <div class="method-container">
-                                                    <div class="method-box">
-                                                        <input class="radio-everyday" id="ev-radio-116" type="radio" value="온라인" />
-                                                        <label class="cursor-point-method" for="ev-radio-116">온라인</label>
-                                                    </div>
-                                                    <div class="text-display-none-day">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <div class="method-container">
-                                                    <div class="method-box">
-                                                        <input class="radio-everyday" id="ev-radio-117" type="radio" value="오프라인" />
-                                                        <label class="cursor-point-method" for="ev-radio-117">오프라인</label>
-                                                    </div>
-                                                    <div class="text-display-none-day">이 항목은 필수입니다.</div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="content-method-pay">
-                                            <div class="content-method-pay-text">
-                                                <span>가격</span>
-                                            </div>
-                                            <div class="method-list">
-                                                <div class="method-container">
-                                                    <div class="method-box-pay">
-                                                        <input class="radio-everyday" id="ev-radio-118" type="radio" value="전체" checked="true" />
-                                                        <label class="cursor-point-method" for="ev-radio-118">
-                                                            <span>전체</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="text-display-none-day">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <div class="method-container">
-                                                    <div class="method-box-pay" style="margin-top: 8px">
-                                                        <input class="radio-everyday" id="ev-radio-119" type="radio" value="무료" />
-                                                        <label class="cursor-point-method" for="ev-radio-119">
-                                                            <span>무료</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="text-display-none-day">이 항목은 필수입니다.</div>
-                                                </div>
-                                                <div class="method-price-tie">
-                                                    <div class="method-container">
-                                                        <div class="method-box-pay" style="margin-top: 8px">
-                                                            <input class="radio-everyday" id="ev-radio-120" type="radio" value="유료" />
-                                                            <label class="cursor-point-method" for="ev-radio-120">
-                                                                <span>유료</span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="text-display-none-day">이 항목은 필수입니다.</div>
-                                                    </div>
-                                                    <span class="text-price">0 ~ 100,000원+</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="content-hidden-fiexd">
-                                            <div class="hidden-border-text"></div>
-                                            <button class="hidden-flex-center">843개의 행사보기</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <div class="full-wrap">
                             <div class="main-space-section" id="event-section">
                                 <div class="main-title">
@@ -1709,6 +1233,483 @@
                                 </div>
                             </div>
                         </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 모바일 필터 모달 -->
+        <div class="filter-container-hidden">
+            <div class="filter-box">
+                <div class="filter-bg">
+                    <div class="filter-space">
+                        <div class="filter-content">
+                            <div class="filter-text">
+                                <span>필터</span>
+                            </div>
+                            <button type="button" class="filter-reset">
+                                <span>필터 초기화</span>
+                            </button>
+                        </div>
+                        <div class="content-date">
+                            <div class="font-bold-date">
+                                <span>일시</span>
+                            </div>
+                            <div class="date-list">
+                                <div class="date-container-first">
+                                    <div class="date-box">
+                                        <input class="radio-everyday" id="ev-radio-98" type="radio" value="모든날" checked="true" />
+                                        <label class="cursor-point-day" for="ev-radio-98"> 모든날 </label>
+                                    </div>
+                                    <div class="text-display-none-day">이 항목은 필수입니다.</div>
+                                </div>
+                                <div class="date-container">
+                                    <div class="date-box">
+                                        <input class="radio-everyday" id="ev-radio-99" type="radio" value="오늘" />
+                                        <label class="cursor-point-day" for="ev-radio-99"> 오늘 </label>
+                                    </div>
+                                    <div class="text-display-none-day">이 항목은 필수입니다.</div>
+                                </div>
+                                <div class="date-container">
+                                    <div class="date-box">
+                                        <input class="radio-everyday" id="ev-radio-100" type="radio" value="이번주" />
+                                        <label class="cursor-point-day" for="ev-radio-100"> 이번주 </label>
+                                    </div>
+                                    <div class="text-display-none-day">이 항목은 필수입니다.</div>
+                                </div>
+                                <div class="date-container">
+                                    <div class="date-box">
+                                        <input class="radio-everyday" id="ev-radio-101" type="radio" value="이번달" />
+                                        <label class="cursor-point-day" for="ev-radio-101"> 이번달 </label>
+                                    </div>
+                                    <div class="text-display-none-day">이 항목은 필수입니다.</div>
+                                </div>
+                                <div class="date-container">
+                                    <div class="date-box">
+                                        <input class="radio-everyday" id="ev-radio-102" type="radio" value="기간선택" />
+                                        <label class="cursor-point-day" for="ev-radio-102"> 기간선택 </label>
+                                    </div>
+                                    <div class="text-display-none-day">이 항목은 필수입니다.</div>
+                                </div>
+                                <div class="date-display-none" id="date-display-none">
+                                    <div class="date-relative-full">
+                                        <label class="relative-block">
+                                            <input type="text" class="relative-date" placeholder="기간을 선택하세요" />
+                                            <!-- 달력을 jquery를 사용해서 가져오기 때문에 원본과 차이가 있음 -->
+                                            <span class="text-overflow-hidden">
+                                                <button type="button" class="date-selector">
+                                                    <svg class="calender" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                                    </svg>
+                                                </button>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="end-date-container">
+                                    <div class="end-date-box">
+                                        <div class="end-date-tie">
+                                            <input class="end-date-chk" id="ev-checkbox-104" true-value="true" false-value="false" type="checkbox" value="모집 종료 행사" />
+                                            <label class="end-text-box" for="ev-checkbox-104" value="모집 종료 행사"> 모집 종료 행사 </label>
+                                        </div>
+                                    </div>
+                                    <div class="end-text-gray">
+                                        <span>모집 종료된 행사까지 포함하여 보기</span>
+                                    </div>
+                                    <div class="text-display-none-day">이 항목은 필수입니다.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-lotaction-container">
+                            <div class="content-location-text">
+                                <span>지역</span>
+                            </div>
+                            <select class="block-location">
+                                <option value="전체">전체</option>
+                                <option value="서울/경기/인천">서울/경기/인천</option>
+                                <option value="부산/울산/경남">부산/울산/경남</option>
+                                <option value="대구/경북">대구/경북</option>
+                                <option value="서울/경기">서울/경기</option>
+                                <option value="서울/인천">서울/인천</option>
+                                <option value="서울">서울</option>
+                                <option value="진주">진주</option>
+                            </select>
+                        </div>
+                        <div class="content-activity">
+                            <div class="content-activity-text">
+                                <span>행사분야</span>
+                            </div>
+                            <div class="content-activity-box">
+                                <div class="activity-box">
+                                    <div class="activity-tie">
+                                        <div class="activity-center">
+                                            <input class="activity-chk" id="ev-checkbox-105" true-value="true" false-value="false" type="checkbox" value="창업" />
+                                            <label class="activity-box-text" for="ev-checkbox-105" value="창업"> 창업 </label>
+                                        </div>
+                                    </div>
+                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                </div>
+                                <div class="activity-box">
+                                    <div class="activity-tie">
+                                        <div class="activity-center">
+                                            <input class="activity-chk" id="ev-checkbox-106" true-value="true" false-value="false" type="checkbox" value="IT/프로그래밍" />
+                                            <label class="activity-box-text" for="ev-checkbox-106"> IT/프로그래밍 </label>
+                                        </div>
+                                    </div>
+                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                </div>
+                                <div class="activity-box">
+                                    <div class="activity-tie">
+                                        <div class="activity-center">
+                                            <input class="activity-chk" id="ev-checkbox-107" true-value="true" false-value="false" type="checkbox" value="라이프" />
+                                            <label class="activity-box-text" for="ev-checkbox-107"> 라이프 </label>
+                                        </div>
+                                    </div>
+                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                </div>
+                                <div class="activity-box">
+                                    <div class="activity-tie">
+                                        <div class="activity-center">
+                                            <input class="activity-chk" id="ev-checkbox-108" true-value="true" false-value="false" type="checkbox" value="경제/금융" />
+                                            <label class="activity-box-text" for="ev-checkbox-108"> 경제/금융 </label>
+                                        </div>
+                                    </div>
+                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                </div>
+                                <div class="activity-box">
+                                    <div class="activity-tie">
+                                        <div class="activity-center">
+                                            <input class="activity-chk" id="ev-checkbox-109" true-value="true" false-value="false" type="checkbox" value="경영" />
+                                            <label class="activity-box-text" for="ev-checkbox-109">경영</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                </div>
+                                <div class="activity-box-hidden" style="display: none">
+                                    <div class="activity-tie">
+                                        <div class="activity-center">
+                                            <input class="activity-chk" id="ev-checkbox-580" true-value="true" false-value="false" type="checkbox" value="인문사회" />
+                                            <label class="activity-box-text" for="ev-checkbox-580">인문사회</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                </div>
+                                <div class="activity-box-hidden" style="display: none">
+                                    <div class="activity-tie">
+                                        <div class="activity-center">
+                                            <input class="activity-chk" id="ev-checkbox-580" true-value="true" false-value="false" type="checkbox" value="인문사회" />
+                                            <label class="activity-box-text" for="ev-checkbox-580">인문사회</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                </div>
+                                <div class="activity-box-hidden" style="display: none">
+                                    <div class="activity-tie">
+                                        <div class="activity-center">
+                                            <input class="activity-chk" id="ev-checkbox-581" true-value="true" false-value="false" type="checkbox" value="예술" />
+                                            <label class="activity-box-text" for="ev-checkbox-581">예술</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                </div>
+                                <div class="activity-box-hidden" style="display: none">
+                                    <div class="activity-tie">
+                                        <div class="activity-center">
+                                            <input class="activity-chk" id="ev-checkbox-582" true-value="true" false-value="false" type="checkbox" value="마케팅" />
+                                            <label class="activity-box-text" for="ev-checkbox-582">마케팅</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                </div>
+                                <div class="activity-box-hidden" style="display: none">
+                                    <div class="activity-tie">
+                                        <div class="activity-center">
+                                            <input class="activity-chk" id="ev-checkbox-583" true-value="true" false-value="false" type="checkbox" value="커리어" />
+                                            <label class="activity-box-text" for="ev-checkbox-583">커리어</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                </div>
+                                <div class="activity-box-hidden" style="display: none">
+                                    <div class="activity-tie">
+                                        <div class="activity-center">
+                                            <input class="activity-chk" id="ev-checkbox-584" true-value="true" false-value="false" type="checkbox" value="과학기술" />
+                                            <label class="activity-box-text" for="ev-checkbox-584">과학기술</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                </div>
+                                <div class="activity-box-hidden" style="display: none">
+                                    <div class="activity-tie">
+                                        <div class="activity-center">
+                                            <input class="activity-chk" id="ev-checkbox-585" true-value="true" false-value="false" type="checkbox" value="디자인/영상" />
+                                            <label class="activity-box-text" for="ev-checkbox-585">디자인/영상</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                </div>
+                                <div class="activity-box-hidden" style="display: none">
+                                    <div class="activity-tie">
+                                        <div class="activity-center">
+                                            <input class="activity-chk" id="ev-checkbox-586" true-value="true" false-value="false" type="checkbox" value="의료/의학" />
+                                            <label class="activity-box-text" for="ev-checkbox-586">의료/의학</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                </div>
+                                <div class="activity-box-hidden" style="display: none">
+                                    <div class="activity-tie">
+                                        <div class="activity-center">
+                                            <input class="activity-chk" id="ev-checkbox-587" true-value="true" false-value="false" type="checkbox" value="행사/기획" />
+                                            <label class="activity-box-text" for="ev-checkbox-587">행사/기획</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                </div>
+                                <div class="activity-box-hidden" style="display: none">
+                                    <div class="activity-tie">
+                                        <div class="activity-center">
+                                            <input class="activity-chk" id="ev-checkbox-588" true-value="true" false-value="false" type="checkbox" value="관광/여행" />
+                                            <label class="activity-box-text" for="ev-checkbox-588">관광/여행</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                </div>
+                                <div class="activity-box-hidden" style="display: none">
+                                    <div class="activity-tie">
+                                        <div class="activity-center">
+                                            <input class="activity-chk" id="ev-checkbox-589" true-value="true" false-value="false" type="checkbox" value="기타" />
+                                            <label class="activity-box-text" for="ev-checkbox-589">기타</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                </div>
+                                <button class="another-view-btn" type="button">
+                                    <span class="view-btn-tie">
+                                        <!-- 기본값 -->
+                                        <span value="no-hidden">15개 모두 보기</span>
+                                        <span value="no-hidden">
+                                            <svg class="rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path>
+                                            </svg>
+                                        </span>
+                                    </span>
+                                    <!-- 클릭 시 변경되는 부분 -->
+                                    <span class="view-btn-tie hidden">
+                                        <span>접기</span>
+                                        <span>
+                                            <svg class="-rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path>
+                                            </svg>
+                                        </span>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="content-activity-category">
+                            <div class="content-act-category-text">
+                                <span>행사유형</span>
+                            </div>
+                            <div class="content-act-category-box">
+                                <div class="act-category-box">
+                                    <div class="act-category-tie">
+                                        <div class="act-category-center">
+                                            <input class="act-category-chk" id="ev-checkbox-110" true-value="true" false-value="false" type="checkbox" value="강연/세미나" />
+                                            <label class="act-category-box-text" for="ev-checkbox-110"> 강연/세미나 </label>
+                                        </div>
+                                    </div>
+                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                </div>
+                                <div class="act-category-box">
+                                    <div class="act-category-tie">
+                                        <div class="act-category-center">
+                                            <input class="act-category-chk" id="ev-checkbox-111" true-value="true" false-value="false" type="checkbox" value="모임/커뮤니티" />
+                                            <label class="act-category-box-text" for="ev-checkbox-111"> 모임/커뮤니티 </label>
+                                        </div>
+                                    </div>
+                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                </div>
+                                <div class="act-category-box">
+                                    <div class="act-category-tie">
+                                        <div class="act-category-center">
+                                            <input class="act-category-chk" id="ev-checkbox-112" true-value="true" false-value="false" type="checkbox" value="멘토링/대외활동" />
+                                            <label class="act-category-box-text" for="ev-checkbox-112"> 멘토링/대외활동 </label>
+                                        </div>
+                                    </div>
+                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                </div>
+                                <div class="act-category-box">
+                                    <div class="act-category-tie">
+                                        <div class="act-category-center">
+                                            <input class="act-category-chk" id="ev-checkbox-113" true-value="true" false-value="false" type="checkbox" value="대외/공모전" />
+                                            <label class="act-category-box-text" for="ev-checkbox-113"> 대외/공모전 </label>
+                                        </div>
+                                    </div>
+                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                </div>
+                                <div class="act-category-box">
+                                    <div class="act-category-tie">
+                                        <div class="act-category-center">
+                                            <input class="act-category-chk" id="ev-checkbox-114" true-value="true" false-value="false" type="checkbox" value="데모데이" />
+                                            <label class="act-category-box-text" for="ev-checkbox-114"> 데모데이 </label>
+                                        </div>
+                                    </div>
+                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                </div>
+                                <div class="act-category-box-hidden" style="display: none">
+                                    <div class="act-category-tie">
+                                        <div class="act-category-center">
+                                            <input class="act-category-chk" id="ev-checkbox-358" true-value="true" false-value="false" type="checkbox" value="워크샵/클리닉" />
+                                            <label class="act-category-box-text" for="ev-checkbox-358"> 워크샵/클리닉</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                </div>
+                                <div class="act-category-box-hidden" style="display: none">
+                                    <div class="act-category-tie">
+                                        <div class="act-category-center">
+                                            <input class="act-category-chk" id="ev-checkbox-359" true-value="true" false-value="false" type="checkbox" value="박람회" />
+                                            <label class="act-category-box-text" for="ev-checkbox-359"> 박람회</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                </div>
+                                <div class="act-category-box-hidden" style="display: none">
+                                    <div class="act-category-tie">
+                                        <div class="act-category-center">
+                                            <input class="act-category-chk" id="ev-checkbox-360" true-value="true" false-value="false" type="checkbox" value="관광" />
+                                            <label class="act-category-box-text" for="ev-checkbox-360"> 관광</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                </div>
+                                <div class="act-category-box-hidden" style="display: none">
+                                    <div class="act-category-tie">
+                                        <div class="act-category-center">
+                                            <input class="act-category-chk" id="ev-checkbox-361" true-value="true" false-value="false" type="checkbox" value="콘테스트" />
+                                            <label class="act-category-box-text" for="ev-checkbox-361"> 콘테스트</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                </div>
+                                <div class="act-category-box-hidden" style="display: none">
+                                    <div class="act-category-tie">
+                                        <div class="act-category-center">
+                                            <input class="act-category-chk" id="ev-checkbox-362" true-value="true" false-value="false" type="checkbox" value="회의" />
+                                            <label class="act-category-box-text" for="ev-checkbox-362"> 회의</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                </div>
+                                <div class="act-category-box-hidden" style="display: none">
+                                    <div class="act-category-tie">
+                                        <div class="act-category-center">
+                                            <input class="act-category-chk" id="ev-checkbox-363" true-value="true" false-value="false" type="checkbox" value="축제" />
+                                            <label class="act-category-box-text" for="ev-checkbox-363"> 축제</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                </div>
+                                <div class="act-category-box-hidden" style="display: none">
+                                    <div class="act-category-tie">
+                                        <div class="act-category-center">
+                                            <input class="act-category-chk" id="ev-checkbox-364" true-value="true" false-value="false" type="checkbox" value="기타" />
+                                            <label class="act-category-box-text" for="ev-checkbox-364"> 기타</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-display-none-activity">이 항목은 필수입니다.</div>
+                                </div>
+                                <button class="another-view-btn-two" type="button">
+                                    <span class="view-btn-tie-two">
+                                        <!-- 기본값 -->
+                                        <span value="no-hidden">15개 모두 보기</span>
+                                        <span value="no-hidden">
+                                            <svg class="rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path>
+                                            </svg>
+                                        </span>
+                                    </span>
+                                    <!-- 클릭 시 변경되는 부분 -->
+                                    <span class="view-btn-tie-two hidden">
+                                        <span>접기</span>
+                                        <span>
+                                            <svg class="-rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path>
+                                            </svg>
+                                        </span>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="content-method">
+                            <div class="content-method-text">
+                                <span>참여 방법</span>
+                            </div>
+                            <div class="method-list">
+                                <div class="method-container">
+                                    <div class="method-box" checked="true">
+                                        <input class="radio-everyday" id="ev-radio-115" type="radio" value="전체" checked="true" />
+                                        <label class="cursor-point-method" for="ev-radio-115">전체 </label>
+                                    </div>
+                                    <div class="text-display-none-day">이 항목은 필수입니다.</div>
+                                </div>
+                                <div class="method-container">
+                                    <div class="method-box">
+                                        <input class="radio-everyday" id="ev-radio-116" type="radio" value="온라인" />
+                                        <label class="cursor-point-method" for="ev-radio-116">온라인</label>
+                                    </div>
+                                    <div class="text-display-none-day">이 항목은 필수입니다.</div>
+                                </div>
+                                <div class="method-container">
+                                    <div class="method-box">
+                                        <input class="radio-everyday" id="ev-radio-117" type="radio" value="오프라인" />
+                                        <label class="cursor-point-method" for="ev-radio-117">오프라인</label>
+                                    </div>
+                                    <div class="text-display-none-day">이 항목은 필수입니다.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-method-pay">
+                            <div class="content-method-pay-text">
+                                <span>가격</span>
+                            </div>
+                            <div class="method-list">
+                                <div class="method-container">
+                                    <div class="method-box-pay">
+                                        <input class="radio-everyday" id="ev-radio-118" type="radio" value="전체" checked="true" />
+                                        <label class="cursor-point-method" for="ev-radio-118">
+                                            <span>전체</span>
+                                        </label>
+                                    </div>
+                                    <div class="text-display-none-day">이 항목은 필수입니다.</div>
+                                </div>
+                                <div class="method-container">
+                                    <div class="method-box-pay" style="margin-top: 8px">
+                                        <input class="radio-everyday" id="ev-radio-119" type="radio" value="무료" />
+                                        <label class="cursor-point-method" for="ev-radio-119">
+                                            <span>무료</span>
+                                        </label>
+                                    </div>
+                                    <div class="text-display-none-day">이 항목은 필수입니다.</div>
+                                </div>
+                                <div class="method-price-tie">
+                                    <div class="method-container">
+                                        <div class="method-box-pay" style="margin-top: 8px">
+                                            <input class="radio-everyday" id="ev-radio-120" type="radio" value="유료" />
+                                            <label class="cursor-point-method" for="ev-radio-120">
+                                                <span>유료</span>
+                                            </label>
+                                        </div>
+                                        <div class="text-display-none-day">이 항목은 필수입니다.</div>
+                                    </div>
+                                    <span class="text-price">0 ~ 100,000원+</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-hidden-fiexd">
+                            <div class="hidden-border-text"></div>
+                            <button class="hidden-flex-center">843개의 행사보기</button>
+                        </div>
                     </div>
                 </div>
             </div>
