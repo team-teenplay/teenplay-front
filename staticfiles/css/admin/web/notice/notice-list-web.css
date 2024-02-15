@@ -9,6 +9,7 @@ input {
     }
   }
 
+  
 .blow-up:hover{
     transform: scale(1.2, 1.2); 
     transition-duration: 0.5s;
