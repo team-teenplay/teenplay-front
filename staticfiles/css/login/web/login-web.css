@@ -92,7 +92,7 @@ input[type=checkbox] {
     flex-shrink: 0;
     height: 1rem;
     width: 1rem;
-    color: #2563eb;
+    color: #2563EB;
     background-color: #fff;
     border-color: #878d91;
     border-width: 1px;
@@ -300,8 +300,7 @@ button, select {
 }
 
 .input:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(248 250 251/var(--tw-bg-opacity));
+    background-color: #F2F4F5;
 }
 
 .input.color:focus {
@@ -439,13 +438,13 @@ button, select {
 }
 
 .login-button.disabled {
-    border-color: #E5E5E5;
-    background-color: #E5E5E5;
+    border-color: #F2F4F5;
+    background-color: #F2F4F5;
 }
 
 .login-button.disabled:hover {
-    border-color: #a3a3a3;
-    background-color: #a3a3a3;
+    border-color: #C2C2C2;
+    background-color: #C2C2C2;
 }
 
 /* SNS 로그인 부분 */

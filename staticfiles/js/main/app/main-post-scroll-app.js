@@ -27,7 +27,7 @@ postLists.forEach((postList) => {
     };
 
     const onScrollEnd = (e) => {
-        endX = getClientX(e);
+        endX = e.clientX; // getClientX(e);
         listX = getTranslateX();
         if (listX > 0) {
             setTranslateX(0);
