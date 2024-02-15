@@ -23,7 +23,7 @@ let dangerText = document.querySelectorAll(".aggreement-text-danger");
 aggreementAnothers.forEach((another, i) => {
     another.addEventListener("click", (e) => {
         if (i == 0) {
-            if (!aggreementAllChecks.checked == false) {
+            if (aggreementAllChecks.checked) {
                 aggreementAllChecks.checked = true;
                 aggreementAgeCheck.checked = true;
                 aggreementPersonerCheck.checked = true;
@@ -45,8 +45,7 @@ aggreementAnothers.forEach((another, i) => {
             }
         }
         if (i == 1) {
-            console.log(1);
-            if (!aggreementAgeCheck.checked) {
+            if (aggreementAgeCheck.checked) {
                 aggreementAgeCheck.checked = true;
                 dangerText[i - 1].classList.remove("none");
             } else {
@@ -54,7 +53,7 @@ aggreementAnothers.forEach((another, i) => {
             }
         }
         if (i == 2) {
-            if (!aggreementPersonerCheck.checked) {
+            if (aggreementPersonerCheck.checked) {
                 aggreementPersonerCheck.checked = true;
                 dangerText[i - 1].classList.remove("none");
             } else {
@@ -62,7 +61,7 @@ aggreementAnothers.forEach((another, i) => {
             }
         }
         if (i == 3) {
-            if (!aggreementServiceCheck.checked) {
+            if (aggreementServiceCheck.checked) {
                 aggreementServiceCheck.checked = true;
                 dangerText[i - 1].classList.remove("none");
             } else {
@@ -70,7 +69,7 @@ aggreementAnothers.forEach((another, i) => {
             }
         }
         if (i == 4) {
-            if (!aggreementPrivacyCheck.checked) {
+            if (aggreementPrivacyCheck.checked) {
                 aggreementPrivacyCheck.checked = true;
                 dangerText[i - 1].classList.remove("none");
             } else {
@@ -78,7 +77,7 @@ aggreementAnothers.forEach((another, i) => {
             }
         }
         if (i == 5) {
-            if (!aggreementPayCheck.checked) {
+            if (aggreementPayCheck.checked) {
                 aggreementPayCheck.checked = true;
                 dangerText[i - 1].classList.remove("none");
             } else {
