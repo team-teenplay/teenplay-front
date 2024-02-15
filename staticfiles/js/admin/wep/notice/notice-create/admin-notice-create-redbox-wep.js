@@ -1,7 +1,7 @@
 function applyStyles(inputElement, redBoxElement) {
     if (!inputElement.value.trim()) {
         redBoxElement.classList.remove("hidden");
-        inputElement.style.border = "2px solid red";
+        inputElement.style.border = "2px solid #CE201B";
         // placeholder 스타일 설정
         inputElement.style.paddingLeft = "18px";
         inputElement.style.paddingRight = "18px";

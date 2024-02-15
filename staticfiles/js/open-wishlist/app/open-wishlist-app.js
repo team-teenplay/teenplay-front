@@ -356,7 +356,7 @@ teenFriendAdd.addEventListener("click", () => {
         icon: "warning",
         showCancelButton: true,
         confirmButtonColor: "#CE201B",
-        cancelButtonColor: "#878787",
+        cancelButtonColor: "#E1E1E1",
         confirmButtonText: "친구추가",
         cancelButtonText: "닫기",
     }).then((result) => {
@@ -379,7 +379,7 @@ teenFriendRequest.addEventListener("click", () => {
         icon: "warning",
         showCancelButton: true,
         confirmButtonColor: "#CE201B",
-        cancelButtonColor: "#878787",
+        cancelButtonColor: "#E1E1E1",
         confirmButtonText: "신청취소",
         cancelButtonText: "닫기",
     }).then((result) => {
@@ -404,7 +404,7 @@ teenFriendCancle.addEventListener("click", () => {
         icon: "warning",
         showCancelButton: true,
         confirmButtonColor: "#CE201B",
-        cancelButtonColor: "#878787",
+        cancelButtonColor: "#E1E1E1",
         confirmButtonText: "틴친끊기",
         cancelButtonText: "닫기",
     }).then((result) => {
