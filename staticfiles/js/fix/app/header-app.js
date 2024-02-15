@@ -12,7 +12,7 @@ checkBtn.addEventListener("click", () => {
     sendEmailModal.style.display = "none";
 });
 
-//
+// 마이페이지 목록 버튼 클릭 시 발생 하는 이벤트
 const memberServiceBtn = document.querySelector(".member-service-btn");
 const mypageModalNav = document.querySelector(".mypage-modal-nav");
 const mypageModalAside = document.querySelector(".mypage-modal-aside");
@@ -21,7 +21,7 @@ memberServiceBtn.addEventListener("click", () => {
     mypageModalAside.style.display = "flex";
 });
 
-//
+//마이페이지 목록 내 X 버튼 클릭 시 발생하는 이벤트
 const closeBtn = document.querySelector(".close-btn");
 
 closeBtn.addEventListener("click", () => {
@@ -36,25 +36,21 @@ closeBtn.addEventListener("click", () => {
 const categoryBox = document.querySelector(".category-box");
 const categoryGroupContainer = document.querySelector(".category-group-container");
 
-categoryBox.addEventListener("click", () => {
-    categoryGroupContainer.style.display = categoryGroupContainer.style.display == "none" ? "flex" : "none";
-});
-
-// const mypageServices = document.querySelector(".member-services");
-// const mypageMenu = document.querySelector(".mypage-menu");
-// const AllWhithoutClass = document.querySelectorAll("body :not(.member-services) :not(.mypage-menu)");
+// categoryBox.addEventListener("click", () => {
+//     categoryGroupContainer.style.display = categoryGroupContainer.style.display == "none" ? "flex" : "none";
+// });
 
 // 마이페이지 간이 목록 이외 클릭 시 none처리 이벤트
-// document.addEventListener("click", (e) => {
-//     if (!e.target.closest(".member-services")) {
-//         mypageMenu.classList.remove("display:flex");
-//     } else {
-//         console.log("else");
-//         if (e.target.closest(".member-service-menu-btn")) {
-//             mypageMenu.classList.toggle("display:flex");
-//         }
-//     }
-// });
+document.addEventListener("click", (e) => {
+    if (!e.target.closest(".category-container")) {
+        categoryGroupContainer.classList.remove("display:flex");
+    } else {
+        console.log("else");
+        if (e.target.closest(".category-box")) {
+            categoryGroupContainer.classList.toggle("display:flex");
+        }
+    }
+});
 
 // 헤더의 검색창 클릭 시 검색 모달창 block처리 이벤트
 const searchModal = document.querySelector(".search-modal-container");

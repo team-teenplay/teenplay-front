@@ -296,7 +296,7 @@ table {
     margin-top: calc(0.25rem*(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0.25rem*var(--tw-space-y-reverse));
     --tw-text-opacity: 1;
-    color: rgb(141 113 221/var(--tw-text-opacity));
+    color: #ce201b;
     font-size: .8125rem;
 }
 
