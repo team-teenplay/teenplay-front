@@ -11,8 +11,8 @@ function updateButtonStatus() {
     );
     buttonElement.disabled = isAnyInputEmpty;
     buttonElement.style.backgroundColor = isAnyInputEmpty
-        ? "#f3f3f4"
-        : "#1d1d1e";
+        ? "#F2F4F5"
+        : "#CE201B";
     buttonElement.style.cursor = isAnyInputEmpty ? "default" : "pointer";
     buttonElement.style.color = isAnyInputEmpty ? "#b9b9bb" : "#fff";
 }

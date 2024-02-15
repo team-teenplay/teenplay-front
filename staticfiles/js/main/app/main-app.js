@@ -37,21 +37,21 @@ lastDiv.classList.add(`slide-content-wrap`);
 
 // 가장 마지막에 첫번째 배너를 이어 붙인다, 슬라이드 모션이 자연스럽게 1번으로 돌아가게 하기 위함
 let firstText = `<div class="slide-content-container">
-                    <img class="slide-content-background" alt="대전 청년창업사관학교 14기 전국 스타트업 모집 !" src="/staticfiles/images/main/festival-img01.png" />
+                    <img class="slide-content-background" alt=" KYOBO x 창업도약패키지" src="/staticfiles/images/main/app/main-app-banner01.png" />
                     <div class="slide-text-content">
                         <!-- 해당 축제 링크 필요 -->
-                        <a class="slide-text-link" href="" target="_blank">
+                        <a class="slide-text-link" href="" target="_blank" ondragstart="return false">
                             <div class="slide-text-box">
                                 <div>
-                                    <div class="festival-title">대전 청년창업사관학교 14기 전국 스타트업 모집 !</div>
+                                    <div class="festival-title">KYOBO x 창업도약패키지</div>
                                     <div class="festival-contents">
-                                        창업지원금에 블루포인트 투자유치 가능성까지
+                                        사업설명회 : 24. 2. 19.(월) 15:00 / 광화문 교보생명빌딩 17층 이노스테이지
                                         <br />
-                                        블루포인트 심사역들이 직접 기획·운영 하는 대전 청년창업사관학교 !
+                                        협업분야 : 보험·AI
                                     </div>
                                 </div>
                                 <div class="festival-info">
-                                    <div>2024. 01. 15.(월) ~ 2024. 02. 05.(월)</div>
+                                    <div>2024. 01. 30.(화) ~ 2024. 02. 23.(금)</div>
                                     <div>온라인 접수</div>
                                 </div>
                             </div>
@@ -64,22 +64,26 @@ slideBannerBox.appendChild(firstDiv);
 
 // 가장 첫번째에 마지막 배너를 이어 붙인다, 이전 버튼 클릭 시 슬라이드 모션이 자연스럽게 6번으로 돌아가게 하기 위함
 let lastText = `<div class="slide-content-container">
-                    <img class="slide-content-background" alt="[모두의특강] ChatGPT Store 오픈!" src="/staticfiles/images/main/festival-img03.jpg" />
+                    <img class="slide-content-background" alt="가장 효과적인 생존전략 d·camp officehours" src="/staticfiles/images/main/app/main-app-banner03.png" />
                     <div class="slide-text-content">
                         <!-- 해당 축제 링크 필요 -->
-                        <a class="slide-text-link" href="" target="_blank">
-                            <div class="slide-text-box">
+                        <a class="slide-text-link" href="" target="_blank" ondragstart="return false">
+                            <div class="slide-text-box" style="color: rgb(53, 37, 40)">
                                 <div>
-                                    <div class="festival-title">[모두의특강] ChatGPT Store 오픈!</div>
-                                    <div class="festival-contents">
-                                        직접 사용해 본 유용한 앱은 어떤 것일까?
+                                    <div class="festival-title">
+                                        가장 효과적인 생존전략
                                         <br />
-                                        그리고 스토어의 미래도 함께 나눠봐요
+                                        d·camp officehours
+                                    </div>
+                                    <div class="festival-contents">
+                                        스타트업 생존 패키지,
+                                        <br />
+                                        투자 검토는 물론 사업 고도화에 필요한 라인업을 만나보세요!
                                     </div>
                                 </div>
                                 <div class="festival-info">
-                                    <div>2024. 02. 06.(화) 18:00</div>
-                                    <div>온라인 행사</div>
+                                    <div>2024. 02. 20.(화) ~ 2024. 02. 29.(목)</div>
+                                    <div>오프라인 행사</div>
                                 </div>
                             </div>
                         </a>
@@ -97,58 +101,6 @@ slideBannerBox.style.transform = "translate(-100%)";
 
 // 4초마다 슬라이드 이동
 let inter = setInterval(autoSlide, 4000);
-
-// 원하는 번호의 배너 보기
-// 각 버튼마다 클릭 이벤트 적용
-
-// 이전 버튼, 다음 버튼 구현
-const arrows = document.querySelectorAll("div.arrow");
-
-// 버튼을 광클하지 못하게 막아주는 FLAG
-let arrowButtonCheck = true;
-
-arrows.forEach((arrow) => {
-    // 각 버튼에 click이벤트를 걸어줌.
-    arrow.addEventListener("click", () => {
-        if (arrowButtonCheck) {
-            arrowButtonCheck = false; // 누르자마자 바로 false
-            clearInterval(inter); // autoSlide 타이머 제거, 동시에 돌아가면 안됨.
-            slideBannerBox.style.transition = "transform 0.5s";
-            let arrowType = arrow.classList[0];
-            if (arrowType == "banner-left-arrow") {
-                // 이전버튼 인지 다음 버튼인지 구분
-                count--;
-                if (count == -1) {
-                    slideBannerBox.style.transform = "translate(0%)";
-                    setTimeout(function () {
-                        slideBannerBox.style.transition = "transform 0s";
-                        slideBannerBox.style.transform = "translate(-300%)";
-                    }, 500);
-                    count = 2;
-                } else {
-                    slideBannerBox.style.transform = "translate(-" + 100 * (count + 1) + "%)";
-                }
-            } else {
-                count++;
-                if (count == 3) {
-                    slideBannerBox.style.transform = "translate(-" + 100 * (count + 1) + "%)";
-                    setTimeout(function () {
-                        slideBannerBox.style.transition = "transform 0s";
-                        slideBannerBox.style.transform = "translate(-100%)";
-                    }, 500);
-                    count = 0;
-                } else {
-                    slideBannerBox.style.transform = "translate(-" + 100 * (count + 1) + "%)";
-                }
-            }
-            bannerPageCount.innerText = `${count + 1}/3`;
-            inter = setInterval(autoSlide, 4000);
-            setTimeout(() => {
-                arrowButtonCheck = true;
-            }, 500);
-        }
-    });
-});
 
 // 베너 페이지 수 옆 + 클릭 시 베너 모달창 block처리 이벤트
 const bannerMoreButton = document.querySelector(".banner-more-button");
@@ -198,11 +150,11 @@ joinBtns.forEach((joinBtn) => {
     joinBtn.addEventListener("click", () => {
         joinBtn.style.display = "none";
         joinBtn.previousElementSibling.style.display = "flex";
-        joinCheckBox.style.display = "block";
+        joinCheckBox.style.display = "flex";
         joinMaodalContainer.style.display = "block";
         joinCancleMent.style.display = "none";
         joinApplicationMent.style.display = "block";
-        joinGuideMent.innerText = "가입 신청이 처리 된다면 메일로 알려드려요.";
+        joinGuideMent.innerText = "가입 신청이 처리 된다면 알림으로 알려드려요.";
         continuouslyBtn.style.removeProperty("flex");
         continuouslyBtn.innerText = "계속 살펴보기";
         clupPageBtn.style.display = "flex";
@@ -247,7 +199,7 @@ joinStatuses.forEach((joinStatus) => {
         joinMaodalContainer.style.display = "block";
         joinCheckBox.style.display = "none";
         joinCancleMent.style.display = "block";
-        joinGuideMent.innerText = "모임에서 탈퇴했습니다.\n더이상 새로운 모임 알림 메일을 받을 수 없습니다.";
+        joinGuideMent.innerText = "모임에서 탈퇴했습니다.\n더이상 새로운 모임 알림을 받을 수 없습니다.";
         joinStatus.parentElement.style.display = "none";
         joinStatus.parentElement.nextElementSibling.style.display = "flex";
         continuouslyBtn.style.flex = "1 1 0%";
@@ -281,16 +233,16 @@ signalBtns.forEach((signalBtn) => {
             joinCheckBox.style.display = "none";
             signalCancleMent.style.display = "block";
             signalCancleMent.innerText = "모임알림을 해제했습니다.";
-            joinGuideMent.innerText = "더이상 새로운 모임 알림 메일을 받을 수 없습니다.";
+            joinGuideMent.innerText = "더이상 새로운 모임 알림을 받을 수 없습니다.";
             continuouslyBtn.style.flex = "1 1 0%";
             continuouslyBtn.innerText = "확인";
             clupPageBtn.style.display = "none";
             signalCheck = false;
         } else {
-            joinCheckBox.style.display = "block";
+            joinCheckBox.style.display = "flex";
             signalCancleMent.style.display = "block";
-            signalCancleMent.innerText = "모임알림을 해제했습니다.";
-            joinGuideMent.innerText = "가입 모임에 새로운 소식이 생긴다면 메일로 알려드려요.";
+            signalCancleMent.innerText = "모임알림을 설정했습니다.";
+            joinGuideMent.innerText = `모임에 새로운 소식이 있다면 알림으로 알려드려요.`;
             continuouslyBtn.style.flex = "1 1 0%";
             continuouslyBtn.innerText = "확인";
             clupPageBtn.style.display = "none";

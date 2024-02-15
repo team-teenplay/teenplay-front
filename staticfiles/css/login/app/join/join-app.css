@@ -100,8 +100,7 @@ input[type=checkbox] {
 }
 
 input[type=checkbox]:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(248 250 251/var(--tw-bg-opacity));
+    background-color: #F2F4F5;
 }
 
 input[type=checkbox]:focus {
@@ -144,7 +143,7 @@ input[type=checkbox]:focus {
     flex-shrink: 0;
     height: 1rem;
     width: 1rem;
-    color: #2563eb;
+    color: #2563EB;
     background-color: #fff;
     border-color: #878d91;
     border-width: 1px;
@@ -279,8 +278,7 @@ a {
 
 /* 카카오 버튼 */
 .kakao:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(248 250 251/var(--tw-bg-opacity));
+    background-color: #F2F4F5;
 }
 
 .kakao-img {
@@ -299,8 +297,7 @@ a {
 }
 
 .naver:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(248 250 251/var(--tw-bg-opacity));
+    background-color: #F2F4F5;
 }
 
 .naver-img{
@@ -319,8 +316,7 @@ a {
 }
 
 .google:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(248 250 251/var(--tw-bg-opacity));
+    background-color: #F2F4F5;
 }
 
 .google-img {
@@ -461,8 +457,7 @@ a {
 }
 
 .input:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(248 250 251/var(--tw-bg-opacity));
+    background-color: #F2F4F5;
 }
 
 /* 입력창 에러 시 공통 스타일 */
@@ -593,13 +588,13 @@ a {
 }
 
 .join-wrap.disabled {
-    border-color: #E5E5E5;
-    background-color: #E5E5E5;
+    border-color: #F2F4F5;
+    background-color: #F2F4F5;
 }
 
 .join-wrap.disabled:hover {
-    border-color: #a3a3a3;
-    background-color: #a3a3a3;
+    border-color: #C2C2C2;
+    background-color: #C2C2C2;
 }
 
 /* 하단 부분 */

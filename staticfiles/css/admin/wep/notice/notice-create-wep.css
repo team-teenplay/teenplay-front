@@ -97,7 +97,7 @@ body {
     left: 0;
     top: 0;
     position: sticky;
-    background-color: #1d1d1e;
+    background-color: #CE201B;
 }
 
 .header-logo-text{
@@ -247,9 +247,9 @@ body {
     font-size: 14px;
     line-height: 16px;
     border-color: rgba(0,0,0,.1);
-    color: #333334;
-    fill: #333334;
-    background-color: #fff;
+    color: #fff;
+    fill: #fff;
+    background-color: #CE201B;
     -webkit-appearance: button;
     background-image: none;
     cursor: pointer;
@@ -262,31 +262,8 @@ body {
 }
 
 .main-admin-logout-button:hover{
-    border-color: #f3f3f4;
-    background-color: #f3f3f4;
-
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 16px;
-    justify-content: center;
-    align-items: center;
-    height: 32px;
-    display: flex;
-    position: relative;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 16px;
-    color: #333334;
-    fill: #333334;
-    -webkit-appearance: button;
-    background-image: none;
-    cursor: pointer;
-    text-transform: none;
-    font-family: inherit;
-    margin: 0;
-    padding: 0;
-    padding-left: 15px;
-    padding-right: 15px;
+    border-color: #9F0D08;
+    background-color: #9F0D08;
 }
 
 .main-admin-logout-warp{
@@ -313,7 +290,7 @@ body {
     height: 40px;
     display: flex;
     margin-bottom: 8px;
-    background-color: #f2f0fc;
+    background-color: #FFF0EE;
 }
 
 .main-user-warp{
@@ -342,6 +319,16 @@ body {
 
 }
 
+.main-user-texta{
+    display: block;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
+    color: #CE201B;
+    fill: #CE201B;
+
+}
+
 .main-user-other{
     padding-left: 12px;
     padding-right: 12px;
@@ -353,7 +340,7 @@ body {
 }
 
 .main-user-other:hover{
-    background-color: #f2f0fc;
+    background-color: #FFF0EE;
     padding-left: 12px;
     padding-right: 12px;
     border-radius: 8px;
@@ -362,6 +349,11 @@ body {
     display: flex;
     margin-bottom: 8px;
 }
+
+.main-user-other:hover .main-user-text {
+    color: #CE201B;
+}
+
 
 .main-festival-add{
     overflow-x: auto;
@@ -423,7 +415,7 @@ body {
     border-color: rgba(0,0,0,.1);
     color: #333334;
     fill: #333334;
-    background-color: #fff;
+    background-color: #E1E1E1;
     -webkit-appearance: button;
     background-image: none;
     cursor: pointer;
@@ -436,8 +428,8 @@ body {
 }
 
 .main-festival-add-top-cancle-button:hover{
-    border-color: #f3f3f4;
-    background-color: #f3f3f4;
+    border-color: #C2C2C2;
+    background-color: #C2C2C2;
 }
 
 .main-festival-add-top-cancle-text{
@@ -757,7 +749,7 @@ body {
     padding-left: 18px;
     padding-right: 18px;
     border-width: 2px;
-    border-color: #5b44ea;
+    border-color: #2563EB;
 }
 
 .main-festival-info-categoty-input:focus-within{
@@ -765,7 +757,7 @@ body {
     padding-left: 18px;
     padding-right: 18px;
     border-width: 2px;
-    border-color: #5b44ea;
+    border-color: #2563EB;
 }
 
 .main-festival-info-subtitle{
@@ -828,6 +820,15 @@ body {
  
     
 }
+
+.main-festival-info-detail-textarea:focus-within{
+    border-radius: 8px;
+    padding-left: 18px;
+    padding-right: 18px;
+    border-width: 2px;
+    border-color: #2563EB;
+}
+
 
 
 
@@ -1358,35 +1359,35 @@ body {
     padding-left: 18px;
     padding-right: 18px;
     border-width: 2px;
-    border-color: #5b44ea;
+    border-color: #2563EB;
 }
 .main-festival-plan-detail-pay-input:focus-within{
     border-radius: 8px;
     padding-left: 18px;
     padding-right: 18px;
     border-width: 2px;
-    border-color: #5b44ea;
+    border-color: #2563EB;
 }
 .main-festival-plan-detail-adress-input:focus-within{
     border-radius: 8px;
     padding-left: 18px;
     padding-right: 18px;
     border-width: 2px;
-    border-color: #5b44ea;
+    border-color: #2563EB;
 }
 .main-festival-plan-detail-adressadd-input:focus-within{
     border-radius: 8px;
     padding-left: 18px;
     padding-right: 18px;
     border-width: 2px;
-    border-color: #5b44ea;
+    border-color: #2563EB;
 }
 .main-festival-plan-detail-startdate-input:focus-within{
     border-radius: 8px;
     padding-left: 18px;
     padding-right: 18px;
     border-width: 2px;
-    border-color: #5b44ea;
+    border-color: #2563EB;
 }
 
 .main-festival-plan-detail-lastdate-input:focus-within{
@@ -1394,7 +1395,7 @@ body {
     padding-left: 18px;
     padding-right: 18px;
     border-width: 2px;
-    border-color: #5b44ea;
+    border-color: #2563EB;
 }
 
 .main-festival-plan-detail-time-input:focus-within{
@@ -1402,7 +1403,7 @@ body {
     padding-left: 18px;
     padding-right: 18px;
     border-width: 2px;
-    border-color: #5b44ea;
+    border-color: #2563EB;
 }
 
 .main-festival-admin-detail-info-input:focus-within{
@@ -1410,7 +1411,7 @@ body {
     padding-left: 18px;
     padding-right: 18px;
     border-width: 2px;
-    border-color: #5b44ea;
+    border-color: #2563EB;
 }
 
 .main-festival-admin-detail-phone-input:focus-within{
@@ -1418,7 +1419,7 @@ body {
     padding-left: 18px;
     padding-right: 18px;
     border-width: 2px;
-    border-color: #5b44ea;
+    border-color: #2563EB;
 }
 
 .main-festival-give-detail-info-input:focus-within{
@@ -1426,7 +1427,7 @@ body {
     padding-left: 18px;
     padding-right: 18px;
     border-width: 2px;
-    border-color: #5b44ea;
+    border-color: #2563EB;
 }
 
 .main-festival-give-detail-phone-input:focus-within{
@@ -1434,12 +1435,12 @@ body {
     padding-left: 18px;
     padding-right: 18px;
     border-width: 2px;
-    border-color: #5b44ea;
+    border-color: #2563EB;
 }
 
 .main-festival-info-detail-textbox:focus-within{
     border-radius: 8px;
-    border-color: #5b44ea;
+    border-color: #2563EB;
 }
 
 /* 빨간색 뜨는거 만들기 */
@@ -1450,8 +1451,8 @@ body {
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
-    color: #de2c2c;
-    fill: #de2c2c;
+    color: #CE201B;
+    fill: #CE201B;
 }
 
 #red-title{
@@ -1460,8 +1461,8 @@ body {
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
-    color: #de2c2c;
-    fill: #de2c2c;
+    color: #CE201B;
+    fill: #CE201B;
 
 }
 
@@ -1471,8 +1472,8 @@ body {
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
-    color: #de2c2c;
-    fill: #de2c2c;
+    color: #CE201B;
+    fill: #CE201B;
 
 }
 
@@ -1482,8 +1483,8 @@ body {
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
-    color: #de2c2c;
-    fill: #de2c2c;
+    color: #CE201B;
+    fill: #CE201B;
 }
 
 #red-addressdetail{
@@ -1492,8 +1493,8 @@ body {
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
-    color: #de2c2c;
-    fill: #de2c2c;
+    color: #CE201B;
+    fill: #CE201B;
 }
 
 #red-place{
@@ -1502,8 +1503,8 @@ body {
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
-    color: #de2c2c;
-    fill: #de2c2c;
+    color: #CE201B;
+    fill: #CE201B;
 }
 
 #red-start{
@@ -1512,8 +1513,8 @@ body {
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
-    color: #de2c2c;
-    fill: #de2c2c;
+    color: #CE201B;
+    fill: #CE201B;
 }
 
 #red-last{
@@ -1522,8 +1523,8 @@ body {
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
-    color: #de2c2c;
-    fill: #de2c2c;
+    color: #CE201B;
+    fill: #CE201B;
 }
 
 #red-time{
@@ -1532,8 +1533,8 @@ body {
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
-    color: #de2c2c;
-    fill: #de2c2c;
+    color: #CE201B;
+    fill: #CE201B;
 }
 
 #red-info{
@@ -1542,8 +1543,8 @@ body {
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
-    color: #de2c2c;
-    fill: #de2c2c;
+    color: #CE201B;
+    fill: #CE201B;
 }
 
 #red-phone{
@@ -1552,8 +1553,8 @@ body {
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
-    color: #de2c2c;
-    fill: #de2c2c;
+    color: #CE201B;
+    fill: #CE201B;
 }
 
 #red-give{
@@ -1562,8 +1563,8 @@ body {
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
-    color: #de2c2c;
-    fill: #de2c2c;
+    color: #CE201B;
+    fill: #CE201B;
 }
 
 #red-url{
@@ -1572,8 +1573,8 @@ body {
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
-    color: #de2c2c;
-    fill: #de2c2c;
+    color: #CE201B;
+    fill: #CE201B;
 }
 
 #red-url.hidden {

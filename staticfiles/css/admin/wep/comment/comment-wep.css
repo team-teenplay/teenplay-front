@@ -97,7 +97,7 @@ body {
     left: 0;
     top: 0;
     position: sticky;
-    background-color: #1d1d1e;
+    background-color: #CE201B;
 }
 
 .header-logo-text{
@@ -234,7 +234,6 @@ body {
 }
 
 .main-admin-logout-button{
-
     border-style: solid;
     border-width: 1px;
     border-radius: 16px;
@@ -247,9 +246,9 @@ body {
     font-size: 14px;
     line-height: 16px;
     border-color: rgba(0,0,0,.1);
-    color: #333334;
-    fill: #333334;
-    background-color: #fff;
+    color: #fff;
+    fill: #fff;
+    background-color: #CE201B;
     -webkit-appearance: button;
     background-image: none;
     cursor: pointer;
@@ -262,31 +261,8 @@ body {
 }
 
 .main-admin-logout-button:hover{
-    border-color: #f3f3f4;
-    background-color: #f3f3f4;
-
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 16px;
-    justify-content: center;
-    align-items: center;
-    height: 32px;
-    display: flex;
-    position: relative;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 16px;
-    color: #333334;
-    fill: #333334;
-    -webkit-appearance: button;
-    background-image: none;
-    cursor: pointer;
-    text-transform: none;
-    font-family: inherit;
-    margin: 0;
-    padding: 0;
-    padding-left: 15px;
-    padding-right: 15px;
+    border-color: #9F0D08;
+    background-color: #9F0D08;
 }
 
 .main-admin-logout-warp{
@@ -313,7 +289,7 @@ body {
     height: 40px;
     display: flex;
     margin-bottom: 8px;
-    background-color: #f2f0fc;
+    background-color: #FFF0EE
 }
 
 .main-comment-warp{
@@ -339,7 +315,15 @@ body {
     line-height: 20px;
     color: #1d1d1e;
     fill: #1d1d1e;
+}
 
+.main-comment-texta{
+    display: block;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
+    color: #CE201B;
+    fill: #CE201B;
 }
 
 .main-comment-other{
@@ -353,7 +337,7 @@ body {
 }
 
 .main-comment-other:hover{
-    background-color: #f2f0fc;
+    background-color: #FFF0EE;
     padding-left: 12px;
     padding-right: 12px;
     border-radius: 8px;
@@ -361,6 +345,10 @@ body {
     height: 40px;
     display: flex;
     margin-bottom: 8px;
+}
+
+.main-comment-other:hover .main-comment-text {
+    color: #CE201B;
 }
 
 .main-comment-info-warp{
@@ -433,7 +421,7 @@ body {
     padding-left: 19px;
     padding-right: 19px;
     border-width: 2px;
-    border-color: #5b44ea;
+    border-color: #ce201b;
 }
 
 .main-comment-info-choice{
@@ -574,8 +562,8 @@ color: #9ca3af;
 
 .main-comment-total-number{
     margin-left: 4px;
-    color: #5b44ea;
-    fill: #5b44ea;
+    color: #CE201B;
+    fill: #CE201B;
 }
 
 .main-comment-total-search{
@@ -933,9 +921,9 @@ color: #9ca3af;
     font-size: 13px;
     line-height: 16px;
     border-color: rgba(0,0,0,.1);
-    color: #333334;
-    fill: #333334;
-    background-color: #fff;
+    color: #fff;
+    fill: #fff;
+    background-color: #CE201B;
     -webkit-appearance: button;
     background-image: none;
     cursor: pointer;
@@ -949,13 +937,13 @@ color: #9ca3af;
 }
 
 .member-user-list-button:hover{
-border-color: #f3f3f4;
-background-color: #f3f3f4;
+border-color: #9F0D08;
+background-color: #9F0D08;
 }
 
 .member-user-list-delete-button:hover{
-    border-color: #f3f3f4;
-    background-color: #f3f3f4;
+    border-color: #FFF0EE;
+    background-color: #FFF0EE;
     }
 
 .main-comment-list-check{
@@ -1128,8 +1116,8 @@ background-color: #f3f3f4;
     font-weight: 600;
       font-size: 14px;
       line-height: 16px;
-      color: #333334;
-      fill: #333334;
+      color: #878D91;
+      fill: #878D91;
   
       -webkit-appearance: button;
   
@@ -1141,14 +1129,14 @@ background-color: #f3f3f4;
       padding: 0;
       padding-left: 16px;
       padding-right: 16px;
-      background-color: #fff;
+      background-color: #E1E1E1;
       border-width: 1px;
       border-color: rgba(0,0,0,.1);
   }
 
   .admin-user-modal-left-button:hover{
-    border-color: #f3f3f4;
-    background-color: #f3f3f4;
+    border-color: #C2C2C2;
+    background-color: #C2C2C2;
   }
 
   .admin-user-modal-left-delete-button
@@ -1164,11 +1152,9 @@ background-color: #f3f3f4;
     font-weight: 600;
       font-size: 14px;
       line-height: 16px;
-      color: #333334;
-      fill: #333334;
-  
+      color: #878D91;
+      fill: #878D91;
       -webkit-appearance: button;
-  
       background-image: none;
       cursor: pointer;
       text-transform: none;
@@ -1177,14 +1163,14 @@ background-color: #f3f3f4;
       padding: 0;
       padding-left: 16px;
       padding-right: 16px;
-      background-color: #fff;
+      background-color: #E1E1E1;
       border-width: 1px;
       border-color: rgba(0,0,0,.1);
   }
 
   .admin-user-modal-left-delete-button:hover{
-    border-color: #f3f3f4;
-    background-color: #f3f3f4;
+    border-color: #C2C2C2;
+    background-color: #C2C2C2;
   }
 
   .admin-user-modal-right-delete-button
@@ -1203,7 +1189,7 @@ background-color: #f3f3f4;
     line-height: 16px;
     color: #fff;
     fill: #fff;
-    background-color: #1d1d1e;
+    background-color: #CE201B;
     -webkit-appearance: button;
     background-image: none;
     cursor: pointer;
@@ -1214,7 +1200,7 @@ background-color: #f3f3f4;
   }
 
   .admin-user-modal-right-delete-button:hover{
-    background-color: #111;
+    background-color: #9F0D08;
   }
   
   .admin-user-modal-right{
@@ -1237,7 +1223,7 @@ background-color: #f3f3f4;
     line-height: 16px;
     color: #fff;
     fill: #fff;
-    background-color: #1d1d1e;
+    background-color: #CE201B;
     -webkit-appearance: button;
     background-image: none;
     cursor: pointer;
@@ -1248,7 +1234,7 @@ background-color: #f3f3f4;
   }
 
   .admin-user-modal-right-button:hover{
-    background-color: #111;
+    background-color: #9F0D08;
 
   }
   
@@ -1495,8 +1481,8 @@ background-color: #f3f3f4;
   }
 
   .admin-comment-modal-search-send:hover{
-    border-color: #f3f3f4;
-    background-color: #f3f3f4;
+    border-color: #FFF0EE;
+    background-color: #FFF0EE;
   }
 
   .admin-comment-modal-search-receive{
@@ -1527,8 +1513,8 @@ background-color: #f3f3f4;
   }
 
   .admin-comment-modal-search-receive:hover{
-    border-color: #f3f3f4;
-    background-color: #f3f3f4;
+    border-color: #FFF0EE;
+    background-color: #FFF0EE;
   }
 
   #admin-comment-modal-search.hidden{
@@ -1629,7 +1615,9 @@ margin-left: 16px;}
 }
 
 .add-color{
-    background-color: #f3f3f4;}
+    background-color: #CE201B;
+}
+
     
 .main-user-number{
     font-weight: 700;
@@ -1638,6 +1626,7 @@ margin-left: 16px;}
     color: #1d1d1e;
     fill: #1d1d1e;
 }
+
 
 
 .main-user-bottom-right{
@@ -1846,23 +1835,23 @@ margin-left: 16px;}
     }
 
     .admin-message-modal-search-receive-add:hover{
-        border-color: #f3f3f4;
-        background-color: #f3f3f4;
+        border-color: #FFF0EE;
+        background-color: #FFF0EE;
       }
 
       .admin-message-modal-search-send-add:hover{
-        border-color: #f3f3f4;
-        background-color: #f3f3f4;
+        border-color: #FFF0EE;
+        background-color: #FFF0EE;
       }
 
       .admin-message-modal-search-donotreceive-add:hover{
-        border-color: #f3f3f4;
-        background-color: #f3f3f4;
+        border-color: #FFF0EE;
+        background-color: #FFF0EE;
       }
 
       .main-wish-sellect-button-add:hover{
-        border-color: #f3f3f4;
-        background-color: #f3f3f4;
+        border-color: #FFF0EE;
+        background-color: #FFF0EE;
       }
 
       .hidden{
