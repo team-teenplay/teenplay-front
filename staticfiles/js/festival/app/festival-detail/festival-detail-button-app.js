@@ -12,28 +12,28 @@ const contents = [
     // 첫번째 페이지
     [
         {
-            imgUrl: "이미지 URL1",
+            imgUrl: "https://tong.visitkorea.or.kr/cms/resource/07/3051907_image2_1.jpg",
             date: "날짜1",
             place: "장소1",
             eventName: "이벤트 이름1",
             content: "내용1",
         },
         {
-            imgUrl: "이미지 URL2",
+            imgUrl: "https://tong.visitkorea.or.kr/cms/resource/84/3019684_image2_1.jpg",
             date: "날짜2",
             place: "장소2",
             eventName: "이벤트 이름2",
             content: "내용2",
         },
         {
-            imgUrl: "이미지 URL3",
+            imgUrl: "https://tong.visitkorea.or.kr/cms/resource/84/3019684_image2_1.jpg",
             date: "날짜3",
             place: "장소3",
             eventName: "이벤트 이름3",
             content: "내용3",
         },
         {
-            imgUrl: "이미지 URL4",
+            imgUrl: "https://tong.visitkorea.or.kr/cms/resource/07/3051907_image2_1.jpg",
             date: "날짜4",
             place: "장소4",
             eventName: "이벤트 이름4",
@@ -43,28 +43,28 @@ const contents = [
     // 두번째 페이지
     [
         {
-            imgUrl: "새로운 이미지 URL1",
+            imgUrl: "https://tong.visitkorea.or.kr/cms/resource/48/3073148_image2_1.jpg",
             date: "새로운 날짜1",
             place: "새로운 장소1",
             eventName: "새로운 이벤트 이름1",
             content: "새로운 내용1",
         },
         {
-            imgUrl: "새로운 이미지 URL2",
+            imgUrl: "https://tong.visitkorea.or.kr/cms/resource/84/3019684_image2_1.jpg",
             date: "새로운 날짜2",
             place: "새로운 장소2",
             eventName: "새로운 이벤트 이름2",
             content: "새로운 내용2",
         },
         {
-            imgUrl: "새로운 이미지 URL3",
+            imgUrl: "https://tong.visitkorea.or.kr/cms/resource/81/3078781_image2_1.jpg",
             date: "새로운 날짜3",
             place: "새로운 장소3",
             eventName: "새로운 이벤트 이름3",
             content: "새로운 내용3",
         },
         {
-            imgUrl: "새로운 이미지 URL4",
+            imgUrl: "https://tong.visitkorea.or.kr/cms/resource/37/2580637_image2_1.JPG",
             date: "새로운 날짜4",
             place: "새로운 장소4",
             eventName: "새로운 이벤트 이름4",
@@ -74,28 +74,28 @@ const contents = [
     // 세번째 페이지
     [
         {
-            imgUrl: "또 다른 이미지 URL1",
+            imgUrl: "https://tong.visitkorea.or.kr/cms/resource/37/2580637_image2_1.JPG",
             date: "또 다른 날짜1",
             place: "또 다른 장소1",
             eventName: "또 다른 이벤트 이름1",
             content: "또 다른 내용1",
         },
         {
-            imgUrl: "또 다른 이미지 URL2",
+            imgUrl: "https://tong.visitkorea.or.kr/cms/resource/81/3078781_image2_1.jpg",
             date: "또 다른 날짜2",
             place: "또 다른 장소2",
             eventName: "또 다른 이벤트 이름2",
             content: "또 다른 내용2",
         },
         {
-            imgUrl: "또 다른 이미지 URL3",
+            imgUrl: "https://tong.visitkorea.or.kr/cms/resource/37/2580637_image2_1.JPG",
             date: "또 다른 날짜3",
             place: "또 다른 장소3",
             eventName: "또 다른 이벤트 이름3",
             content: "또 다른 내용3",
         },
         {
-            imgUrl: "또 다른 이미지 URL4",
+            imgUrl: "https://tong.visitkorea.or.kr/cms/resource/81/3078781_image2_1.jpg",
             date: "또 다른 날짜4",
             place: "또 다른 장소4",
             eventName: "또 다른 이벤트 이름4",
@@ -111,7 +111,8 @@ let currentContentIndex = 0;
 // 초기화 함수 정의
 function initialize() {
     // 숫자 버튼들 중 첫 번째 버튼을 선택된 상태로 만듭니다.
-    numberButtons[currentPage].style.backgroundColor = "rgb(141, 113, 221)";
+    numberButtons[currentPage].style.backgroundColor = "#CE201B";
+    numberButtons[currentPage].style.color = "#fff";
     // 초기 컨텐츠를 로드합니다.
     replaceContent(currentPage, currentContentIndex);
 }
@@ -123,8 +124,10 @@ window.addEventListener("load", initialize);
 leftButton.addEventListener("click", function () {
     if (currentPage > 0) {
         numberButtons[currentPage].style.backgroundColor = ""; // 현재 버튼의 배경색 제거
+        numberButtons[currentPage].style.color = "#111";
         currentPage--;
-        numberButtons[currentPage].style.backgroundColor = "rgb(141, 113, 221)"; // 선택된 버튼에 배경색 적용
+        numberButtons[currentPage].style.backgroundColor = "#CE201B";
+        numberButtons[currentPage].style.color = "#fff"; // 선택된 버튼에 배경색 적용
         replaceContent(currentPage, currentContentIndex); // 페이지 내용 변경
     }
 });
@@ -133,8 +136,10 @@ leftButton.addEventListener("click", function () {
 rightButton.addEventListener("click", function () {
     if (currentPage < contents.length - 1) {
         numberButtons[currentPage].style.backgroundColor = ""; // 현재 버튼의 배경색 제거
+        numberButtons[currentPage].style.color = "#111";
         currentPage++;
-        numberButtons[currentPage].style.backgroundColor = "rgb(141, 113, 221)"; // 선택된 버튼에 배경색 적용
+        numberButtons[currentPage].style.backgroundColor = "#CE201B";
+        numberButtons[currentPage].style.color = "#fff"; // 선택된 버튼에 배경색 적용
         replaceContent(currentPage, currentContentIndex); // 페이지 내용 변경
     }
 });
@@ -143,8 +148,10 @@ rightButton.addEventListener("click", function () {
 numberButtons.forEach(function (button, index) {
     button.addEventListener("click", function () {
         numberButtons[currentPage].style.backgroundColor = ""; // 현재 버튼의 배경색 제거
+        numberButtons[currentPage].style.color = "#111";
         currentPage = index;
-        button.style.backgroundColor = "rgb(141, 113, 221)"; // 선택된 버튼에 배경색 적용
+        button.style.backgroundColor = "#CE201B";
+        button.style.color = "#fff"; // 선택된 버튼에 배경색 적용
         replaceContent(currentPage, currentContentIndex); // 페이지 내용 변경
     });
 });
