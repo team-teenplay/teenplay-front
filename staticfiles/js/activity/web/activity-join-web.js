@@ -8,13 +8,12 @@ surveyRadioTie.addEventListener("click", (e) => {
 });
 
 // 동의하기 약관 checkbox 전체 버튼 및 개별 선택 체크
-// let aggreementBetweenCenter = document.querySelector(".aggreement-between-center");
 let aggreementAllChecks = document.querySelector(".aggreement-all-checks");
 let aggreementAgeCheck = document.querySelector(".aggreement-age-check");
 let aggreementPersonerCheck = document.querySelector(".aggreement-personerinfo-check");
 let aggreementServiceCheck = document.querySelector(".aggreement-service-check");
-let aggreementPrivacyCheck = document.querySelector(".aggreement-privacy-check");
 let aggreementPayCheck = document.querySelector(".aggreement-pay-check");
+let aggreementPrivacyCheck = document.querySelector(".aggreement-privacy-check");
 
 let aggreementAnothers = document.querySelectorAll(".aggreement-between-center");
 
@@ -24,8 +23,7 @@ let dangerText = document.querySelectorAll(".aggreement-text-danger");
 aggreementAnothers.forEach((another, i) => {
     another.addEventListener("click", (e) => {
         if (i == 0) {
-            console.log(aggreementAllChecks.check);
-            if (!aggreementAllChecks.checked) {
+            if (!aggreementAllChecks.checked == false) {
                 aggreementAllChecks.checked = true;
                 aggreementAgeCheck.checked = true;
                 aggreementPersonerCheck.checked = true;
@@ -47,6 +45,7 @@ aggreementAnothers.forEach((another, i) => {
             }
         }
         if (i == 1) {
+            console.log(1);
             if (!aggreementAgeCheck.checked) {
                 aggreementAgeCheck.checked = true;
                 dangerText[i - 1].classList.remove("none");

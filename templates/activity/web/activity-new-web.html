@@ -10,7 +10,7 @@
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css" />
             <link href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css" rel="stylesheet" type="text/css" />
-            <title>틴플 : 활동 참가 신청</title>
+            <title>틴플 : 활동 신규 작성</title>
             <!-- datapicker 시작 -->
             <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />
             <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -38,23 +38,6 @@
                 <div class="host-center-body">
                     <div class="load-mask-none" style="display: none">데이터 로드중...</div>
                     <div class="event-body-section">
-                        <div class="create-nav-bar">
-                            <div class="nav-bar-container">
-                                <div class="nav-row">
-                                    <div class="nav-size">
-                                        <div class="nav-content-between">
-                                            <div>
-                                                <span class="activity-name">행사</span>
-                                                <span class="small-right-arrow">
-                                                    <span class="material-symbols-outlined mdi-right"> chevron_right </span>
-                                                </span>
-                                                <span class="activity-join-method">작성하기</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <div class="content-section">
                             <form class="setting-wrap">
                                 <div class="setting-container">
@@ -187,7 +170,7 @@
                                                                 <span>
                                                                     <input class="all-open" type="radio" id="access-non-clear" name="access" />
                                                                     <label for="access-non-clear">수동</label>
-                                                                    <span class="access-description">호스트가 참가신청 전까지 대기 상태입니다.</span>
+                                                                    <span class="access-description">모임장이 참가신청 전까지 대기 상태입니다.</span>
                                                                 </span>
                                                             </div>
                                                         </div>
@@ -292,7 +275,7 @@
                                                         </div>
                                                         <div class="activity-row">
                                                             <div class="activity-col">
-                                                                <input class="input-activity-intro" id="activity-intro-input" placeholder="소개글 입력" type="text" />
+                                                                <input class="input-activity-intro" id="activity-intro-input" placeholder="소개글 입력" type="text" autocomplete="off" />
                                                             </div>
                                                         </div>
                                                         <div class="activity-location">
