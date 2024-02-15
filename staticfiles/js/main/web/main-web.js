@@ -37,7 +37,7 @@ lastDiv.classList.add(`slide-content-wrap`);
 
 // 가장 마지막에 첫번째 배너를 이어 붙인다, 슬라이드 모션이 자연스럽게 1번으로 돌아가게 하기 위함
 let firstText = `<div class="slide-content-container">
-                    <img class="slide-content-background" alt="대전 청년창업사관학교 14기 전국 스타트업 모집 !" src="/staticfiles/images/main/festival-img01.png" />
+                    <img class="slide-content-background" alt="대전 청년창업사관학교 14기 전국 스타트업 모집 !" src="/staticfiles/images/main/web/festival-img01.png" />
                     <div class="slide-text-content">
                         <!-- 해당 축제 링크 필요 -->
                         <a class="slide-text-link" href="" target="_blank">
@@ -64,7 +64,7 @@ slideBannerBox.appendChild(firstDiv);
 
 // 가장 첫번째에 마지막 배너를 이어 붙인다, 이전 버튼 클릭 시 슬라이드 모션이 자연스럽게 6번으로 돌아가게 하기 위함
 let lastText = `<div class="slide-content-container">
-                    <img class="slide-content-background" alt="[모두의특강] ChatGPT Store 오픈!" src="/staticfiles/images/main/festival-img03.jpg" />
+                    <img class="slide-content-background" alt="[모두의특강] ChatGPT Store 오픈!" src="/staticfiles/images/main/web/festival-img03.jpg" />
                     <div class="slide-text-content">
                         <!-- 해당 축제 링크 필요 -->
                         <a class="slide-text-link" href="" target="_blank">
@@ -178,11 +178,7 @@ likeBtns.forEach((likeBtn) => {
     likeBtn.addEventListener("click", () => {
         let spans = likeBtn.children;
         spans.forEach((span) => {
-            if (span.style.display) {
-                span.style.display === "none" ? (span.style.display = "block") : (span.style.display = "none");
-                return;
-            }
-            span.style.display = "none";
+            span.style.display === "none" ? (span.style.display = "block") : (span.style.display = "none");
         });
     });
 });
@@ -198,7 +194,7 @@ joinBtns.forEach((joinBtn) => {
     joinBtn.addEventListener("click", () => {
         joinBtn.style.display = "none";
         joinBtn.previousElementSibling.style.display = "flex";
-        joinCheckBox.style.display = "block";
+        joinCheckBox.style.display = "flex";
         joinMaodalContainer.style.display = "block";
         joinCancleMent.style.display = "none";
         joinApplicationMent.style.display = "block";
@@ -287,7 +283,7 @@ signalBtns.forEach((signalBtn) => {
             clupPageBtn.style.display = "none";
             signalCheck = false;
         } else {
-            joinCheckBox.style.display = "block";
+            joinCheckBox.style.display = "flex";
             signalCancleMent.style.display = "block";
             signalCancleMent.innerText = "모임알림을 해제했습니다.";
             joinGuideMent.innerText = "가입 모임에 새로운 소식이 생긴다면 메일로 알려드려요.";
