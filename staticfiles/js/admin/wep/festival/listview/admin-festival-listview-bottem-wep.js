@@ -17,7 +17,6 @@ buttons.forEach((button, index) => {
             `#button${index + 1} .main-user-number`
         ).style.color = "#fff";
     });
-
     // 페이지 로딩 시 초기화할 때 1번 버튼의 글자색도 #fff로 변경합니다.
     if (index === 0) {
         document.querySelector(
