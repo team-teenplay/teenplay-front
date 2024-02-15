@@ -257,9 +257,9 @@ button, input, optgroup, select, textarea {
 
 .play-each {
     position: relative;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    height: 90vh;
+    margin-top: 11vh;
+    margin-bottom: 11vh;
+    height: 78vh;
     width: 100vw;
     border: 1px solid transparent;
     border-radius: 12px;
