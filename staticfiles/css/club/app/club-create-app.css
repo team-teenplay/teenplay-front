@@ -309,9 +309,9 @@ button, input, optgroup, select, textarea {
 
 .name-form-number-wrap {
     --tw-text-opacity: 1;
-    color: rgb(141 113 221/var(--tw-text-opacity));
+    color: #CE201B;
     --tw-border-opacity: 1;
-    border-color: rgb(141 113 221/var(--tw-border-opacity));
+    border-color: #CE201B;
     border-width: 1px;
     border-radius: 9999px;
     justify-content: center;
@@ -416,9 +416,9 @@ input::placeholder {
 
 [type=text]:focus {
     --tw-border-opacity: 1;
-    border-color: rgb(92 63 191/var(--tw-border-opacity));
+    border-color: #2563EB;
     --tw-ring-opacity: 1;
-    --tw-ring-color: rgb(92 63 191/var(--tw-ring-opacity));
+    --tw-ring-color: #2563EB;
     outline: 2px solid transparent;
     outline-offset: 2px;
     --tw-ring-inset: var(--tw-empty, /*!*/ /*!*/);
@@ -530,9 +530,9 @@ input::placeholder {
 
 .desc-form-number-wrap {
     --tw-text-opacity: 1;
-    color: rgb(141 113 221/var(--tw-text-opacity));
+    color: #CE201B;
     --tw-border-opacity: 1;
-    border-color: rgb(141 113 221/var(--tw-border-opacity));
+    border-color: #CE201B;
     border-width: 1px;
     border-radius: 9999px;
     justify-content: center;
@@ -568,7 +568,7 @@ input::placeholder {
 
 .desc-form-circle-blue {
     --tw-bg-opacity: 1;
-    background-color: rgb(141 113 221/var(--tw-bg-opacity));
+    background-color: #CE201B;
     align-self: center;
     border-radius: 9999px;
     width: 0.625rem;
@@ -755,9 +755,9 @@ input::placeholder {
 
 .img-form-number-wrap {
     --tw-text-opacity: 1;
-    color: rgb(141 113 221/var(--tw-text-opacity));
+    color: #CE201B;
     --tw-border-opacity: 1;
-    border-color: rgb(141 113 221/var(--tw-border-opacity));
+    border-color: #CE201B;
     border-width: 1px;
     border-radius: 9999px;
     justify-content: center;
@@ -793,7 +793,7 @@ input::placeholder {
 
 .img-form-circle-blue {
     --tw-bg-opacity: 1;
-    background-color: rgb(141 113 221/var(--tw-bg-opacity));
+    background-color: #CE201B;
     align-self: center;
     border-radius: 9999px;
     width: 0.625rem;

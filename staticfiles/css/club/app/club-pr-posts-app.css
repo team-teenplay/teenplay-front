@@ -190,7 +190,7 @@ menu, ol, ul {
 }
 
 .pr-top-banner-wrap {
-    height: 332px;
+    height: 250px;
     background-repeat: no-repeat;
     background-position: 0;
     background-size: cover;
@@ -203,7 +203,6 @@ menu, ol, ul {
     flex-direction: row;
     height: 100%;
     display: flex;
-    max-width: 1280px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -220,8 +219,8 @@ menu, ol, ul {
     --tw-text-opacity: 1;
     color: rgb(255 255 255/var(--tw-text-opacity));
     margin-bottom: 1.5rem;
-    font-size: 3rem;
-    line-height: 1;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
 }
 
 .pr-top-banner-text-content {
@@ -231,14 +230,14 @@ menu, ol, ul {
 }
 
 .pr-top-banner-icon-wrap {
-    top: 10%;
+    top: 45%;
     flex-direction: column;
     display: flex;
     position: relative;
 }
 
 .pr-top-banner-icon {
-    height: 75%;
+    height: 30%;
 }
 
 .pr-border {
@@ -248,7 +247,6 @@ menu, ol, ul {
 
 .pr-content-wrap {
     margin-top: 2.5rem;
-    max-width: 1280px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -256,7 +254,7 @@ menu, ol, ul {
 }
 
 .pr-content-container {
-    grid-template-columns: repeat(3,minmax(0,1fr));
+    grid-template-columns: repeat(1,minmax(0,1fr));
     row-gap: 2.5rem;
     column-gap: 2rem;
     display: grid;

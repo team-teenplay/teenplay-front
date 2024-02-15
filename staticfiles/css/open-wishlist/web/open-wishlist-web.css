@@ -1560,6 +1560,50 @@ comment-menu-open-wrap {
     display: flex;
 }
 
+/* 틴친 신청 버튼 부분 */
+.teenchin-add-btn {
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
+    border-color: #CE201B;
+    border-width: 1px;
+    color: #CE201B;
+    width: 50%;
+    background-color: #FFFFFF;
+    border-radius: 0.375rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+    display: flex;
+}
+
+.teenchin-add-btn:hover {
+    background-color: #FFF0EE;
+}
+
+/* 틴친 신청중 버튼 부분 */
+.teenchin-request-btn {
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
+    border-color: #c2c2c2;
+    border-width: 1px;
+    color: #FFFFFF;
+    width: 50%;
+    background-color: #c2c2c2;
+    border-radius: 0.375rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+    display: flex;
+}
+
+.teenchin-request-btn:hover {
+    background-color: rgb(144, 144, 144);
+}
+
 /* 틴친중 버튼 부분 */
 .teenchin-btn {
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);

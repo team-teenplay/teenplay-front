@@ -156,7 +156,6 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
 }
 
 .slide-banner-container {
-    touch-action: pan-y;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -172,14 +171,12 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
     height: 100%;
     z-index: 1;
     display: flex;
-    transition-property: transform;
     box-sizing: content-box;
 }
 
 .slide-content-wrap {
-    width: 100%;
-    backface-visibility: hidden;
     flex-shrink: 0;
+    width: 100%;
     height: 100%;
     position: relative;
     transition-property: transform;
@@ -188,13 +185,13 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
 .slide-content-container {
     position: relative;
     padding-bottom: calc(var(--tw-aspect-h)/var(--tw-aspect-w)*100%);
-    --tw-aspect-w: 14;
-    --tw-aspect-h: 3;
+    --tw-aspect-w: 11;
+    --tw-aspect-h: 8;
 }
 
 .slide-content-background {
     opacity: 1;
-    display: block;
+    object-fit: cover;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -202,7 +199,6 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
     right: 0;
     bottom: 0;
     left: 0;
-    object-fit: cover;
 }
 
 .slide-text-content {
@@ -213,16 +209,12 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
     right: 0;
     bottom: 0;
     left: 0;
-    max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
     padding: 1rem;
 }
 
 .slide-text-link {
-    padding-top: 2rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
     align-items: center;
     height: 100%;
     display: flex;
@@ -230,37 +222,31 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
 
 .slide-text-box {
     color: rgb(255, 255, 255);
-    justify-content: space-around;
-    height: 100%;
+    justify-content: space-between;
     flex-direction: column;
+    height: 50%;
     display: flex;
 }
 
 .festival-title {
-    line-height: 2.5rem;
-    font-size: 32px;
     font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2rem;
 }
 
 .festival-contents {
     --tw-space-y-reverse: 0;
     margin-top: calc(2rem*(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(2rem*var(--tw-space-y-reverse));
-    display: block;
     font-size: 1.25rem;
     line-height: 1.75rem;
+    display: none;
 }
 
 .festival-info {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    display: flex;
     font-weight: 700;
-}
-.festival-info div:last-child {
-        --tw-space-x-reverse: 0;
-    margin-right: calc(2rem*var(--tw-space-x-reverse));
-    margin-left: calc(2rem*(1 - var(--tw-space-x-reverse)));
+    font-size: 1rem;
+    line-height: 1.5rem;
 }
 
 .banner-left-arrow {
@@ -301,15 +287,12 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
 }
 
 .banner-service-wrap {
-    left: 0;
-    right: 0;
     z-index: 10;
     bottom: 1.25rem;
     position: absolute;
 }
 
 .banner-service-container {
-    max-width: 1280px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -318,7 +301,6 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
 
 .banner-service-box {
     width: 100%;
-    justify-content: flex-end;
     display: flex;
 }
 
@@ -394,24 +376,24 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
 }
 
 .banner-close-container {
-    width: 3.5rem;
-    height: 3.5rem;
-    right: -3.5rem;
     justify-content: center;
     align-items: center;
+    width: 1.75rem;
+    height: 1.75rem;
     display: flex;
     z-index: 200;
     top: 0;
+    right: -1.75rem;
     position: absolute;
 }
 
 .banner-close-box {
-    width: 3.5rem;
-    height: 3.5rem;
     background-color: rgba(0,0,0,.6);
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    width: 1.75rem;
+    height: 1.75rem;
     display: flex;
     position: fixed;
 }
@@ -425,11 +407,11 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
 
 .inner-banner-wrap {
     zoom: 0.7;
+    flex-basis: 100%;
     position: relative;
     padding-bottom: calc(var(--tw-aspect-h)/var(--tw-aspect-w)*100%);
-    --tw-aspect-w: 14;
-    --tw-aspect-h: 3;
-    flex-basis: 100%;
+    --tw-aspect-w: 11;
+    --tw-aspect-h: 8;
 }
 
 .sections-wrap section:not(:first-child) {
@@ -439,7 +421,6 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
 }
 
 .post-area-wrap {
-    max-width: 1280px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -468,9 +449,9 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
     --tw-space-y-reverse: 0;
     margin-top: calc(0.5rem*(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0.5rem*var(--tw-space-y-reverse));
-    display: block;
     --tw-text-opacity: 1;
     color: rgb(135 141 145/var(--tw-text-opacity));
+    display: none;
 }
 
 .more-post-list {
@@ -486,7 +467,7 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
 }
 
 .more-posts-text {
-    display: inline;
+    display: none;
 }
 
 .right-svg {
@@ -498,12 +479,11 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
     --tw-space-y-reverse: 0;
     margin-top: calc(1rem*(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(1rem*var(--tw-space-y-reverse));
-    margin-right: auto;
     padding-bottom: 2rem;
+    margin-right: -1rem;
 }
 
 .post-box {
-    touch-action: pan-y;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -526,7 +506,7 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
 }
 
 .post-substance {
-    width: 13.797vw;;
+    width: 153.565px;;
     margin-right: 16px;
     backface-visibility: hidden;
     flex-shrink: 0;
@@ -575,12 +555,6 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
     
 }
 
-.post-thumbnail:hover {
-    --tw-scale-x: 1.1;
-    --tw-scale-y: 1.1;
-    transform: translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .like-box {
     top: 0.5rem;
     right: 0.5rem;
@@ -606,11 +580,6 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
 .unlike-svg {
     width: 1.5rem;
     height: 1.5rem;
-}
-
-.like-btn:hover .unlike-svg {
-    --tw-text-opacity: 1;
-    color: rgb(232 103 98/var(--tw-text-opacity));
 }
 
 .post-contents {
@@ -648,7 +617,10 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
 }
 
 .post-title-link {
+    -webkit-line-clamp: 2;
     overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
 }
 
 .post-title-link:active {
@@ -659,7 +631,7 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
     --tw-space-y-reverse: 0;
     margin-top: calc(0.25rem*(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0.25rem*var(--tw-space-y-reverse));
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     display: flex;
 }
@@ -686,7 +658,7 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
 }
 
 .clup-container {
-    padding: 1.5rem;
+    padding: 0.75rem;
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255/var(--tw-bg-opacity));
     border-width: 1px;
@@ -698,7 +670,7 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
 }
 
 .clup-profile-box {
-    width: 6rem;
+    width: 5rem;
     margin-left: auto;
     margin-right: auto;
 }
@@ -757,7 +729,6 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
 }
 
 .clup-service{
-    height: auto;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -765,8 +736,8 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
 }
 
 .clup-btn-box {
-    flex-direction: row;
     font-size: .9375rem;
+    flex-direction: column;
     width: 100%;
     display: flex;
 }
@@ -778,16 +749,17 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
     --tw-border-opacity: 1;
     border-color: rgb(245 242 255/var(--tw-border-opacity));
     --tw-text-opacity: 1;
-    color: rgb(92 63 191/var(--tw-text-opacity));
+    color: #ce201b;
     width: 50%;
     --tw-bg-opacity: 1;
-    background-color: rgb(245 242 255/var(--tw-bg-opacity));
+    background-color: #fff0ee;
     border-radius: 0.375rem;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
     justify-content: center;
     align-items: center;
+    width: 100%;
     height: 2.5rem;
     display: flex;
 }
@@ -800,12 +772,8 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
 
 .signal-on {
     --tw-space-y-reverse: 0;
-    margin-top: calc(0px*(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(0px*var(--tw-space-y-reverse));
-    --tw-space-x-reverse: 0;
-    margin-right: calc(0.75rem*var(--tw-space-x-reverse));
-    margin-left: calc(0.75rem*(1 - var(--tw-space-x-reverse)));
-    width: 50%;
+    margin-top: calc(0.75rem*(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.75rem*var(--tw-space-y-reverse));
     --tw-text-opacity: 1;
     color: rgb(36 93 203/var(--tw-text-opacity));
     --tw-bg-opacity: 1;
@@ -816,6 +784,7 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
     white-space: nowrap;
     justify-content: center;
     align-items: center;
+    width: 100%;
     height: 2.5rem;
     display: flex;
 }
@@ -828,12 +797,9 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
 
 .signal-off {
     --tw-space-y-reverse: 0;
-    margin-top: calc(0px*(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(0px*var(--tw-space-y-reverse));
-    --tw-space-x-reverse: 0;
-    margin-right: calc(0.75rem*var(--tw-space-x-reverse));
-    margin-left: calc(0.75rem*(1 - var(--tw-space-x-reverse)));
-    width: 50%;
+    margin-top: calc(0.75rem*(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.75rem*var(--tw-space-y-reverse));
+    width: 100%;
     --tw-text-opacity: 1;
     color: rgb(36 93 203/var(--tw-text-opacity));
     --tw-bg-opacity: 1;
@@ -863,13 +829,13 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
 
 .join-btn {
     --tw-border-opacity: 1;
-    border-color: rgb(92 63 191/var(--tw-border-opacity));
+    border-color: #CE201B;
     --tw-text-opacity: 1;
     color: rgb(255 255 255/var(--tw-text-opacity));
     width: 70%;
     font-size: .9375rem;
     --tw-bg-opacity: 1;
-    background-color: rgb(92 63 191/var(--tw-bg-opacity));
+    background-color: #CE201B;
     border-radius: 0.375rem;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -999,7 +965,7 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
     margin-right: calc(1rem*var(--tw-space-x-reverse));
     margin-left: calc(1rem*(1 - var(--tw-space-x-reverse)));
     --tw-border-opacity: 1;
-    border-color: rgb(92 63 191/var(--tw-border-opacity));
+    border-color: #CE201B;
     --tw-text-opacity: 1;
     color: rgb(255 255 255/var(--tw-text-opacity));
     --tw-shadow: 0 1px 1px 0 rgba(0,0,0,.05);
@@ -1011,7 +977,7 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
     padding-left: 1rem;
     padding-right: 1rem;
     --tw-bg-opacity: 1;
-    background-color: rgb(92 63 191/var(--tw-bg-opacity));
+    background-color: #CE201B;
     border-width: 1px;
     border-radius: 0.375rem;
     justify-content: center;
@@ -1019,9 +985,4 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
     width: 100%;
     height: 2.5rem;
     display: flex;
-}
-
-.clup-page-btn:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(71 44 163/var(--tw-bg-opacity));
 }

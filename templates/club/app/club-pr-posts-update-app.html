@@ -7,11 +7,14 @@
         <link rel="shortcut icon" href="/staticfiles/images/teenplay_logo/logo1.png" type="image/x-icon" />
         <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet" />
         <link rel="stylesheet" href="/staticfiles/css/club/app/club-pr-posts-write-app.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1" />
+        <meta content="yes" name="apple-mobile-web-app-capable" />
+        <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport" />
     </head>
     <body class loaded style="position: relative; min-height: 100%">
         <!-- 헤더 들어갈 자리 -->
         <header></header>
-        <!-- 홍보글 작성 시작 -->
+        <!-- 홍보글 수정 시작 -->
         <main class="pr-write-main">
             <form name="write" class="pr-write-form">
                 <div class="pr-write-msg-wrap">
@@ -35,7 +38,7 @@
                         </div>
                     </div>
                     <div class="pr-write-title-wrap">
-                        <select name="category" class="pr-write-fields" required>
+                        <select name="category" class="pr-write-fields" required size="1">
                             <option value class="pr-write-default">카테고리</option>
                             <option value="문화·예술">문화·예술</option>
                             <option value="운동·액티비티">운동·액티비티</option>
@@ -79,7 +82,7 @@
                                         <button class="pr-write-box-button" type="button">파일 선택</button>
                                     </div>
                                     <div class="pr-write-box-text-wrap">
-                                        <div>또는 드래그 앤 드롭 하세요</div>
+                                        <!-- <div>또는 드래그 앤 드롭 하세요</div> -->
                                         <div class="pr-write-box-text">(최대 10MB)</div>
                                     </div>
                                 </div>
