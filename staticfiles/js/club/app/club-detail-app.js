@@ -451,11 +451,113 @@ beforeUploadModal.addEventListener("drop", (e) => {
     }, 501);
 });
 
-// 틴플레이 설명 입력 시 업로드 버튼 활성화 (10자 이상)
+// 썸네일 업로드 창 클릭 시 파일 첨부 가능하도록
+const thumbnailInput = document.querySelector("#background-image");
+const thumbnailUploadBox = document.querySelector(".cover-thumbnail-wrap");
+
+thumbnailUploadBox.addEventListener("click", () => {
+    thumbnailInput.click();
+});
+
+// 썸네일 용량 제한(10MB) 초과 시 에러메시지 출력 / 괜찮을 시 정보 보이게
+const thumbnailSizeMsg = document.querySelector(".img-form-profile-size-error");
+const THUMBNAIL_SIZE = 10;
+const thumbnailSizeInfo = document.querySelector(".pr-thumbnail-size");
+const thumbnailNameInfo = document.querySelector(".pr-thumbnail-name");
+const uploadedThumbnailInfo = document.querySelector(".pr-write-uploaded-thumbnail-container");
+
+thumbnailInput.addEventListener("change", (e) => {
+    if (e.target.value) {
+        let checkSize = 1024 * 1024 * THUMBNAIL_SIZE;
+        if (!checkFileSize(thumbnailInput, checkSize)) {
+            thumbnailSizeMsg.style.display = "block";
+            e.preventDefault();
+            return;
+        }
+        thumbnailSizeMsg.style.display = "none";
+        fileSize = e.target.files[0].size;
+        thumbnailSizeInfo.innerText = getFileSizeWithExtension(fileSize);
+        thumbnailNameInfo.innerText = e.target.files[0].name;
+        thumbnailUploadBox.classList.remove("appear");
+        thumbnailUploadBox.classList.add("disappear");
+        setTimeout(() => {
+            thumbnailUploadBox.classList.add("hidden");
+            uploadedThumbnailInfo.classList.remove("hidden");
+            uploadedThumbnailInfo.classList.remove("disappear");
+            uploadedThumbnailInfo.classList.add("appear");
+        }, 501);
+    }
+});
+
+// 드래그 앤 드롭으로 썸네일 첨부하기
+thumbnailUploadBox.addEventListener("dragenter", (e) => {
+    e.preventDefault();
+});
+thumbnailUploadBox.addEventListener("dragover", (e) => {
+    e.preventDefault();
+});
+thumbnailUploadBox.addEventListener("dragleave", (e) => {
+    e.preventDefault();
+});
+thumbnailUploadBox.addEventListener("drop", (e) => {
+    e.preventDefault();
+    let file = e.dataTransfer;
+    let checkSize = 1024 * 1024 * THUMBNAIL_SIZE;
+    if (!checkFileSize(file, checkSize)) {
+        thumbnailSizeMsg.style.display = "block";
+        e.preventDefault();
+        return;
+    }
+    thumbnailSizeMsg.style.display = "none";
+    fileSize = file.files[0].size;
+    thumbnailSizeInfo.innerText = getFileSizeWithExtension(fileSize);
+    thumbnailNameInfo.innerText = file.files[0].name;
+    thumbnailUploadBox.classList.remove("appear");
+    thumbnailUploadBox.classList.add("disappear");
+    setTimeout(() => {
+        thumbnailUploadBox.classList.add("hidden");
+        uploadedThumbnailInfo.classList.remove("hidden");
+        uploadedThumbnailInfo.classList.remove("disappear");
+        uploadedThumbnailInfo.classList.add("appear");
+    }, 501);
+});
+
+// 썸네일 첨부 후 x버튼으로 삭제하기
+const thumbnailRemoveBtn = document.querySelector(".pr-thumbnail-remove-btn");
 const teenPlayTextInput = document.querySelector(".name-form-input");
 const finalSaveButton = document.querySelector(".upload-modal-confirm-button-wrap");
+
+thumbnailRemoveBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    thumbnailInput.value = "";
+    uploadedThumbnailInfo.classList.remove("appear");
+    uploadedThumbnailInfo.classList.add("disappear");
+    setTimeout(() => {
+        uploadedThumbnailInfo.classList.add("hidden");
+        thumbnailUploadBox.classList.remove("hidden");
+        thumbnailUploadBox.classList.remove("disappear");
+        thumbnailUploadBox.classList.add("appear");
+    }, 501);
+    thumbnailSizeInfo.innerText = "";
+    thumbnailNameInfo.innerText = "";
+    if (!finalSaveButton.classList.contains("disabled")) {
+        finalSaveButton.classList.add("disabled");
+    }
+});
+
+// 틴플레이 설명 및 썸네일 업로드 시 업로드 버튼 활성화 (10자 이상)
 teenPlayTextInput.addEventListener("keyup", () => {
-    if (teenPlayTextInput.value.length >= 10) {
+    if (teenPlayTextInput.value.length >= 10 && thumbnailInput.files.length) {
+        finalSaveButton.classList.remove("disabled");
+    } else {
+        if (!finalSaveButton.classList.contains("disabled")) {
+            finalSaveButton.classList.add("disabled");
+        }
+    }
+});
+
+thumbnailInput.addEventListener("change", (e) => {
+    if (e.target.files.length && teenPlayTextInput.value.length >= 10) {
         finalSaveButton.classList.remove("disabled");
     } else {
         if (!finalSaveButton.classList.contains("disabled")) {
