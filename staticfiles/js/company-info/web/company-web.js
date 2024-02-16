@@ -50,6 +50,8 @@ moveContact.addEventListener("click", function () {
     });
 });
 
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 // 스크롤 위치 별 history team, news, contact us 항목
 // 스크롤 위치 별 보라색 표기
 const historyBg = document.querySelector(".menu-item-history");
@@ -64,108 +66,59 @@ const historyBtn2 = document.querySelector(".more-btn");
 const hisStyle = getComputedStyle(historyBtn2);
 
 window.addEventListener("scroll", function () {
-    if (hisStyle.display == "inline-block") {
-        if (window.scrollY <= 360) {
-            historyBg.style.backgroundColor = "#fff";
-            historyText.style.color = "#ce201b";
-            teamsBg.style.backgroundColor = "#fff";
-            teamsText.style.color = "#ce201b";
-            newsBg.style.backgroundColor = "#fff";
-            newsText.style.color = "#ce201b";
-            contactUsBg.style.backgroundColor = "#fff";
-            contactUsText.style.color = "#ce201b";
-        }
-        if (window.scrollY > 360 && window.scrollY <= 1000) {
-            historyBg.style.backgroundColor = "#ce201b";
-            historyText.style.color = "white";
-            teamsBg.style.backgroundColor = "#fff";
-            teamsText.style.color = "#ce201b";
-            newsBg.style.backgroundColor = "#fff";
-            newsText.style.color = "#ce201b";
-            contactUsBg.style.backgroundColor = "#fff";
-            contactUsText.style.color = "#ce201b";
-        }
-        if (window.scrollY > 1000 && window.scrollY <= 1800) {
-            teamsBg.style.backgroundColor = "#CE201B";
-            teamsText.style.color = "#fff";
-            historyBg.style.backgroundColor = "#fff";
-            historyText.style.color = "#ce201b";
-            newsBg.style.backgroundColor = "#fff";
-            newsText.style.color = "#ce201b";
-            contactUsBg.style.backgroundColor = "#fff";
-            contactUsText.style.color = "#ce201b";
-        }
-        if (window.scrollY > 1800 && window.scrollY <= 2800) {
-            newsBg.style.backgroundColor = "#CE201B";
-            newsText.style.color = "#fff";
-            historyBg.style.backgroundColor = "#fff";
-            historyText.style.color = "#ce201b";
-            teamsBg.style.backgroundColor = "#fff";
-            teamsText.style.color = "#ce201b";
-            contactUsBg.style.backgroundColor = "#fff";
-            contactUsText.style.color = "#ce201b";
-        }
-        if (window.scrollY > 2800) {
-            contactUsBg.style.backgroundColor = "#CE201B";
-            contactUsText.style.color = "#fff";
-            historyBg.style.backgroundColor = "#fff";
-            historyText.style.color = "#ce201b";
-            teamsBg.style.backgroundColor = "#fff";
-            teamsText.style.color = "#ce201b";
-            newsBg.style.backgroundColor = "#fff";
-            newsText.style.color = "#ce201b";
-        }
-    } else {
-        if (window.scrollY <= 360) {
-            historyBg.style.backgroundColor = "#fff";
-            historyText.style.color = "#ce201b";
-            teamsBg.style.backgroundColor = "#fff";
-            teamsText.style.color = "#ce201b";
-            newsBg.style.backgroundColor = "#fff";
-            newsText.style.color = "#ce201b";
-            contactUsBg.style.backgroundColor = "#fff";
-            contactUsText.style.color = "#ce201b";
-        }
-        if (window.scrollY > 360 && window.scrollY <= 2000) {
-            historyBg.style.backgroundColor = "#ce201b";
-            historyText.style.color = "white";
-            teamsBg.style.backgroundColor = "#fff";
-            teamsText.style.color = "#ce201b";
-            newsBg.style.backgroundColor = "#fff";
-            newsText.style.color = "#ce201b";
-            contactUsBg.style.backgroundColor = "#fff";
-            contactUsText.style.color = "#ce201b";
-        }
-        if (window.scrollY > 2000 && window.scrollY <= 2900) {
-            teamsBg.style.backgroundColor = "#CE201B";
-            teamsText.style.color = "#fff";
-            historyBg.style.backgroundColor = "#fff";
-            historyText.style.color = "#ce201b";
-            newsBg.style.backgroundColor = "#fff";
-            newsText.style.color = "#ce201b";
-            contactUsBg.style.backgroundColor = "#fff";
-            contactUsText.style.color = "#ce201b";
-        }
-        if (window.scrollY > 2900 && window.scrollY <= 3950) {
-            newsBg.style.backgroundColor = "#CE201B";
-            newsText.style.color = "#fff";
-            historyBg.style.backgroundColor = "#fff";
-            historyText.style.color = "#ce201b";
-            teamsBg.style.backgroundColor = "#fff";
-            teamsText.style.color = "#ce201b";
-            contactUsBg.style.backgroundColor = "#fff";
-            contactUsText.style.color = "#ce201b";
-        }
-        if (window.scrollY > 3950) {
-            contactUsBg.style.backgroundColor = "#CE201B";
-            contactUsText.style.color = "#fff";
-            historyBg.style.backgroundColor = "#fff";
-            historyText.style.color = "#ce201b";
-            teamsBg.style.backgroundColor = "#fff";
-            teamsText.style.color = "#ce201b";
-            newsBg.style.backgroundColor = "#fff";
-            newsText.style.color = "#ce201b";
-        }
+    let sectionTeamsDiv = document.querySelector(".section-teams");
+    let sectionNewsDiv = document.querySelector(".section-news");
+    let sectionNewsMoreBtnBox = document.querySelector(".news-more-btn-box");
+
+    if (window.scrollY <= 360) {
+        historyBg.style.backgroundColor = "#fff";
+        historyText.style.color = "#ce201b";
+        teamsBg.style.backgroundColor = "#fff";
+        teamsText.style.color = "#ce201b";
+        newsBg.style.backgroundColor = "#fff";
+        newsText.style.color = "#ce201b";
+        contactUsBg.style.backgroundColor = "#fff";
+        contactUsText.style.color = "#ce201b";
+    }
+    if (window.scrollY > 360 && window.scrollY <= sectionTeamsDiv.offsetTop) {
+        historyBg.style.backgroundColor = "#ce201b";
+        historyText.style.color = "white";
+        teamsBg.style.backgroundColor = "#fff";
+        teamsText.style.color = "#ce201b";
+        newsBg.style.backgroundColor = "#fff";
+        newsText.style.color = "#ce201b";
+        contactUsBg.style.backgroundColor = "#fff";
+        contactUsText.style.color = "#ce201b";
+    }
+    if (window.scrollY >= sectionTeamsDiv.offsetTop - 100 && window.scrollY < sectionNewsDiv.offsetTop) {
+        teamsBg.style.backgroundColor = "#CE201B";
+        teamsText.style.color = "#fff";
+        historyBg.style.backgroundColor = "#fff";
+        historyText.style.color = "#ce201b";
+        newsBg.style.backgroundColor = "#fff";
+        newsText.style.color = "#ce201b";
+        contactUsBg.style.backgroundColor = "#fff";
+        contactUsText.style.color = "#ce201b";
+    }
+    if (window.scrollY >= sectionNewsDiv.offsetTop - 100 && window.scrollY < sectionNewsMoreBtnBox.offsetTop) {
+        newsBg.style.backgroundColor = "#CE201B";
+        newsText.style.color = "#fff";
+        historyBg.style.backgroundColor = "#fff";
+        historyText.style.color = "#ce201b";
+        teamsBg.style.backgroundColor = "#fff";
+        teamsText.style.color = "#ce201b";
+        contactUsBg.style.backgroundColor = "#fff";
+        contactUsText.style.color = "#ce201b";
+    }
+    if (window.scrollY > sectionNewsMoreBtnBox.offsetTop - 100) {
+        contactUsBg.style.backgroundColor = "#CE201B";
+        contactUsText.style.color = "#fff";
+        historyBg.style.backgroundColor = "#fff";
+        historyText.style.color = "#ce201b";
+        teamsBg.style.backgroundColor = "#fff";
+        teamsText.style.color = "#ce201b";
+        newsBg.style.backgroundColor = "#fff";
+        newsText.style.color = "#ce201b";
     }
 });
 
@@ -190,6 +143,8 @@ memberPopIcon.addEventListener("click", (e) => {
     memberPop.style.display = "none";
 });
 
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 // 올라가기 아이콘 수정 (최상단 올라가기)
 const goTopIcon = document.querySelector(".scroll-to-top");
 
@@ -205,5 +160,16 @@ goTopIcon.addEventListener("click", () => {
     window.scrollTo({
         top: 0,
         behavior: "smooth",
+    });
+});
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// 맴버 more button
+let memberMoreButton = document.querySelector(".member-more-btn-box");
+memberMoreButton.addEventListener("click", (e) => {
+    let memberDisplay = document.querySelectorAll(".member-display.hidden");
+    memberDisplay.forEach((member) => {
+        member.classList.remove("hidden");
+        memberMoreButton.classList.add("hidden");
     });
 });
