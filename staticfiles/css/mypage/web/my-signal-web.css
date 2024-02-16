@@ -235,6 +235,7 @@ a {
 
 .target-title {
     width: 90%;
+    font-weight: 700;
 }
 
 .check-date {
@@ -260,8 +261,8 @@ a {
 }
 
 .signal-bottom-text {
-    font-size: 1rem;
     line-height: 1.5rem;
+    margin-left: 7.4%;
 }
 
 .signal-delete-modal {
