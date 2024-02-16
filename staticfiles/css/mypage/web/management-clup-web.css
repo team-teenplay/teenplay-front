@@ -359,6 +359,12 @@ menu, ol, ul {
     display: flex;
 }
 
+.activity-recruiting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .member-list-link, .clup-notice-brief-link, .activity-recruiting-link, .ended-activities-link {
     font-weight: 700;
     font-size: 1.25rem;

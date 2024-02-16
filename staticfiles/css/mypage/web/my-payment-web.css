@@ -455,9 +455,13 @@ textarea {
     color: inherit;
     margin: 0;
     margin-top: 0.5rem;
-    overflow: hidden;
+    overflow: none;
     --tw-border-opacity: 1;
     outline-color: rgb(92 63 191/var(--tw-border-opacity));
+}
+
+textarea:focus {
+    outline: #2563EB auto 1px;
 }
 
 textarea[name="cancle-content"]::-webkit-scrollbar {

@@ -737,7 +737,7 @@ a {
     outline: 2px solid transparent;
     outline-offset: 2px;
     --tw-border-opacity: 1;
-    border-color: rgb(92 63 191/var(--tw-border-opacity));
+    border-color: #2563EB;
     --tw-ring-opacity: 1;
     --tw-ring-color: rgb(92 63 191/var(--tw-ring-opacity));
     --tw-ring-inset: var(--tw-empty, /*!*/ /*!*/);
@@ -770,6 +770,10 @@ textarea {
     overflow: hidden;
     --tw-border-opacity: 1;
     outline-color: rgb(92 63 191/var(--tw-border-opacity));
+}
+
+textarea:focus {
+    outline: #2563EB auto 1px;
 }
 
 textarea[name="send-content"]::-webkit-scrollbar {
