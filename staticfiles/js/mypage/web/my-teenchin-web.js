@@ -55,13 +55,13 @@ const modalHeaderTitle = teenchinModalWrap.querySelector(".modal-header-title");
 
 const madalContent = (e, profileName) => {
     if (e.target.closest(".teenchin-btn")) {
-        teenchinModalTitle.innerText = `${profileName}님과\n친틴을 취소 하시겠습니까?`;
+        teenchinModalTitle.innerText = `${profileName}님과\n틴친을 취소 하시겠습니까?`;
         teenchinModalBtn.innerText = `틴친끊기`;
-        modalHeaderTitle.innerText = `더 이상 ${profileName}님과\n친틴관계가 아닙니다.`;
+        modalHeaderTitle.innerText = `더 이상 ${profileName}님과\n틴친관계가 아닙니다.`;
     } else if (e.target.closest(".teenchin-wait-btn")) {
-        teenchinModalTitle.innerText = `${profileName}님에게\n보낸 친틴 신청을 취소하시겠습니까?`;
+        teenchinModalTitle.innerText = `${profileName}님에게\n보낸 틴친 신청을 취소하시겠습니까?`;
         teenchinModalBtn.innerText = `취소하기`;
-        modalHeaderTitle.innerText = `${profileName}님에게\n보낸 친틴 신청을 취소했습니다.`;
+        modalHeaderTitle.innerText = `${profileName}님에게\n보낸 틴친 신청을 취소했습니다.`;
     }
 };
 

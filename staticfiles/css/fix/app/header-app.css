@@ -211,6 +211,7 @@ em {
     flex-direction: column;
     height: 4rem;
     display: flex;
+    justify-content: center;
 }
 
 .name_size {

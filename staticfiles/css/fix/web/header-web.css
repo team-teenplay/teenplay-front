@@ -349,6 +349,11 @@ em {
     display: flex;
 }
 
+.name-box {
+    position: relative;
+    display: flex;
+}
+
 .nicknaem {
     font-weight: 700;
     padding-right: 0.25rem;
@@ -356,6 +361,43 @@ em {
 
 .default-nim {
     padding-right: 0.25rem;
+}
+
+.signal-sign-box {
+    flex: 0 1;
+    height: 100%;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.signal-sign-item {
+    background: #ce201b;
+    top: calc(100% - 18.8px);
+    left: calc(100% - 69px);
+    position: absolute;
+    font-size: 10px;
+    height: 15px;
+    min-width: 15px;
+    max-width: 23px;
+    padding: 0 2px;
+    align-items: center;
+    border-radius: 28px;
+    display: flex;
+    font-weight: 400;
+    justify-content: center;
+    line-height: 13px;
+}
+
+.signal-sign {
+    color: rgb(255, 255, 255);
+    line-height: 9px;
+    font-size: 10px;
+    word-wrap: break-word;
+    word-break: keep-all;
+    font-weight: 600!important;
 }
 
 .down-arrow {
@@ -430,6 +472,28 @@ em {
     padding-bottom: 0.5rem;
     padding-left: 1rem;
     padding-right: 1rem;
+}
+
+.my-signals {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mypage-menu-signal-count {
+    padding: 0 2px;
+    background: #ce201b;
+    font-size: 10px;
+    height: 15px;
+    min-width: 15px;
+    max-width: 23px;
+    align-items: center;
+    border-radius: 28px;
+    display: flex;
+    justify-content: center;
+    line-height: 13px;
+    margin-top: 1.26px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
 }
 
 .teen-friends:hover, .my-activities:hover, .my-clups:hover, .my-signals:hover {
