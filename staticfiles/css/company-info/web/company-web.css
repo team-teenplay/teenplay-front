@@ -892,7 +892,8 @@ header {
     position: relative;
 }
 
-.member {
+.member,
+.member-display {
     cursor: pointer;
     line-height: 1.4;
     margin-bottom: 30px;
@@ -1379,4 +1380,8 @@ header {
 .z-alert-ul {
     padding-left: 0;
     list-style: none;
+}
+
+.hidden {
+    display: none;
 }
