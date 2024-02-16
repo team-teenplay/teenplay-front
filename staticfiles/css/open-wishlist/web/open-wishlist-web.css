@@ -288,7 +288,7 @@ input, select, textarea {
 }
 
 .top-categroy-item:hover {
-    background-color: #E1E1E1;
+    background-color: #FFF0EE;
 }
 
 /* 위시리스트 전체 포스트 부분 */
@@ -1456,10 +1456,19 @@ comment-menu-open-wrap {
 /* 틴친 프로필 모달 부분 */
 .teenchin-box {
     padding: 0.125rem;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255/var(--tw-bg-opacity));
+    border-radius: 0.5rem;
+    overflow-y: auto;
+    max-width: 20rem;
+    width: 100%;
+    max-height: calc(100vh - 40px);
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .teenchin-items {
-    padding: 1.5rem;
+    padding: 1.6rem 1.3rem;
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255/var(--tw-bg-opacity));
     align-items: center;
@@ -1470,7 +1479,7 @@ comment-menu-open-wrap {
 
 /* 틴친 프로필 사진 부분 */
 .profile-img-contents {
-    width: 6rem;
+    width: 5rem;
     margin-left: auto;
     margin-right: auto;
 }
@@ -1505,8 +1514,8 @@ comment-menu-open-wrap {
 }
 
 .profile-defalut-img {
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
     margin: 1rem;
 }
 
@@ -1548,8 +1557,6 @@ comment-menu-open-wrap {
 /* 틴친 프로필 버튼 부분 */
 .teenchin-btn-container {
     height: auto;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     display: flex;
 }
@@ -1558,14 +1565,17 @@ comment-menu-open-wrap {
     flex-direction: row;
     font-size: .9375rem;
     width: 100%;
+    justify-content: center;
+    align-items: center;
     display: flex;
+    flex-direction: column;
 }
 
 /* 틴친 신청 버튼 부분 */
 .teenchin-add-btn {
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
     color: #FFFFFF;
-    width: 50%;
+    width: 87%;
     background-color: #CE201B;
     border-radius: 0.375rem;
     text-overflow: ellipsis;
@@ -1587,7 +1597,7 @@ comment-menu-open-wrap {
     --tw-border-opacity: 1;
     border-color: rgb(245 242 255/var(--tw-border-opacity));
     color: #CE201B;
-    width: 50%;
+    width: 87%;
     background-color: #FFF0EE;
     border-radius: 0.375rem;
     text-overflow: ellipsis;
@@ -1609,7 +1619,7 @@ comment-menu-open-wrap {
     border-color: #E1E1E1;
     border-width: 1px;
     color: #878D91;
-    width: 50%;
+    width: 87%;
     background-color: #FFFFFF;
     border-radius: 0.375rem;
     text-overflow: ellipsis;
@@ -1626,24 +1636,17 @@ comment-menu-open-wrap {
 }
 
 .add-svg, .request-svg, .check-svg, .send-check-svg {
-    width: 1rem;
-    height: 1rem;
+    width: 1.1rem;
+    height: 1.1rem;
     margin-right: 0.25rem;
 }
 
 /* 쪽지 보내기 버튼 부분 */
 .send-letter-btn {
-    --tw-space-y-reverse: 0;
-    margin-top: calc(0px*(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(0px*var(--tw-space-y-reverse));
-    --tw-space-x-reverse: 0;
-    margin-right: calc(0.75rem*var(--tw-space-x-reverse));
-    margin-left: calc(0.75rem*(1 - var(--tw-space-x-reverse)));
-    width: 50%;
-    --tw-text-opacity: 1;
-    color: rgb(36 93 203/var(--tw-text-opacity));
-    --tw-bg-opacity: 1;
-    background-color: rgb(239 246 255/var(--tw-bg-opacity));
+    margin-top: 0.6rem;
+    width: 87%;
+    color: #245DCB;
+    background-color: #EFF6FF;
     border-radius: 0.375rem;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -1655,7 +1658,7 @@ comment-menu-open-wrap {
 }
 
 .send-letter-btn:hover {
-    background-color: #c0d4ee;
+    background-color: #CDE3FC;
 }
 
 .send-svg {

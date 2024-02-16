@@ -477,11 +477,12 @@ const sendLetterBtn = document.querySelector(".send-check-btn")
 
 // 쪽지 보내기 버튼 클릭 시 쪽지 발송 완료 모달 활성화
 sendLetterBtn.addEventListener("click", () => {
-    Swal.fire(
-        "쪽지가 전송 되었습니다.",
-        "",
-        "success"
-    );
+    Swal.fire({
+        title: "쪽지가 전송 되었습니다.",
+        text: "",
+        icon: "success",
+        confirmButtonColor: "#CE201B"
+    });
 });
 
 
@@ -497,7 +498,7 @@ teenFriendAdd.addEventListener("click", () => {
     Swal.fire({
         title: "틴친 신청을 보낼까요?",
         text: "",
-        icon: "warning",
+        icon: "question",
         showCancelButton: true,
         confirmButtonColor: "#CE201B",
         cancelButtonColor: "#E1E1E1",
@@ -549,7 +550,7 @@ teenFriendCancle.addEventListener("click", () => {
     Swal.fire({
         title: "틴친을 그만둘까요?",
         text: "",
-        icon: "warning",
+        icon: "error",
         showCancelButton: true,
         confirmButtonColor: "#CE201B",
         cancelButtonColor: "#E1E1E1",
