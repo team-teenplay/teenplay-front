@@ -395,6 +395,10 @@ table {
     
 }
 
+.letter-receiver {
+    display: none;
+}
+
 .letter-remove {
     --tw-text-opacity: 1;
     color: rgb(191 69 69/var(--tw-text-opacity));
