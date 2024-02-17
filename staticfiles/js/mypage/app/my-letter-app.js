@@ -60,6 +60,7 @@ let letterDetails;
 
 letterTextBtns.forEach((letterTextBtn) => {
     letterTextBtn.addEventListener("click", (e) => {
+        console.log("in");
         letterDetails = e.target.closest(".letter-details");
         // letter-details
         letterModalwrap.querySelector(".sender-email").innerText = letterDetails.querySelector(".letter-sender").innerText;
