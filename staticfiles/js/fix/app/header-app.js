@@ -89,7 +89,7 @@ searchInput.addEventListener("input", (e) => {
 });
 
 // 엔터키를 누를 경우 input의 value를 최근 검색기록 목록에 최신순으로 추가
-const recentlyKeywordList = document.querySelector(".recently-keyword-list");
+const recentlyKeywordAppList = document.querySelector(".recently-keyword-app-list");
 
 searchInput.addEventListener("keyup", (e) => {
     let text = ``;
@@ -105,7 +105,7 @@ searchInput.addEventListener("keyup", (e) => {
         text += `</svg>`;
         text += `</button>`;
         text += `</div>`;
-        recentlyKeywordList.innerHTML = text + recentlyKeywordList.innerHTML;
+        recentlyKeywordAppList.innerHTML = text + recentlyKeywordAppList.innerHTML;
         e.target.value = "";
         countKeyword();
         createEvent();
@@ -117,7 +117,7 @@ const countKeyword = () => {
     const recentlyKeywordItem = document.querySelectorAll(".recently-keyword-item");
 
     if (recentlyKeywordItem.length > 6) {
-        recentlyKeywordList.removeChild(recentlyKeywordItem[6]);
+        recentlyKeywordAppList.removeChild(recentlyKeywordItem[6]);
     }
 };
 
@@ -137,7 +137,7 @@ createEvent();
 const deleteSearchLogBtn = document.querySelector(".delete-search-log-btn");
 
 deleteSearchLogBtn.addEventListener("click", () => {
-    recentlyKeywordList.innerHTML = "";
+    recentlyKeywordAppList.innerHTML = "";
 });
 
 // 검색 모달 내 더보기 버튼 클릭 시 더보기 사라지고 리스트에 클레스로 준 속성 지우기
