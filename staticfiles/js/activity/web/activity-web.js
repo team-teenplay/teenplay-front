@@ -36,9 +36,8 @@ document.querySelectorAll(".content-method-pay .radio-everyday").forEach(functio
         });
     });
 });
-const activeLikeBtnsCopy = document.querySelectorAll(".like-btn-shadow");
-const emptyHeartsCopy = document.querySelectorAll(".like-btn-shadow .like-btn-display");
-const fullHeartsCopy = document.querySelectorAll(".like-btn-shadow .like-btn-display-none");
+
+//  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 // 기간선택 체크 시 기간 달력 display 유무 표시
 const checkedDate = document.getElementById("ev-radio-102");
@@ -55,7 +54,12 @@ dateRangeCheck.forEach((selectDateRange) => {
     });
 });
 
+//  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 // 좋아요 선택 시 동작하는 js
+const activeLikeBtnsCopy = document.querySelectorAll(".like-btn-shadow");
+const emptyHeartsCopy = document.querySelectorAll(".like-btn-shadow .like-btn-display");
+const fullHeartsCopy = document.querySelectorAll(".like-btn-shadow .like-btn-display-none");
 const modalWrapCopy = document.querySelector(".club-modal-wrap");
 // > 좋아요 선택 시 관심 설정할 때 표시할 부분
 const modalLikeContainerCopy = document.querySelector(".club-modal-like-wrap:not(.unlike)");
@@ -251,6 +255,7 @@ actCategoryCenter.forEach((actCategory) => {
     });
 });
 
+//  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 let actCategoryCenterContent = document.querySelectorAll(".act-category-center");
 
 // > 행사유형 내부에 여러 카테고리 중 클릭이 가능한 부분이 있는지 확인을 위한 반복 구문 사용
@@ -293,6 +298,7 @@ actCategoryCenterContent.forEach((actCategory) => {
     });
 });
 
+//  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 // 필터 타이틀에서 x 버튼 클릭 시 display 가 none으로 변경되고 초기 상태로 돌아가는 기능
 let checkExit = document.getElementById("hidden-filter-container-check");
 
@@ -404,28 +410,7 @@ allCategory.forEach((textCategoryValue) => {
     });
 });
 
-// 행사유형 체크박스 선택 시 삭제되는 기능
-let allActCategory = document.querySelectorAll(".filter-space .act-category-center");
-allActCategory.forEach((textCategoryValue) => {
-    document.addEventListener("click", (e) => {
-        let divTest = e.target.closest("div");
-        var checkedValue = divTest.getAttribute("value");
-        // check가 되어있는 것 중에 값이 값이 같은게 있으면 삭제
-        let chkBtn = document.querySelectorAll(".filter-space .act-category-center .act-category-chk");
-        if (textCategoryValue.innerText == checkedValue) {
-            chkBtn.forEach((inputName) => {
-                let divToRemove = document.querySelector(".find-filter-bg-three[value='" + checkedValue + "']");
-                if (divToRemove) {
-                    divToRemove.remove();
-                }
-                if (inputName.getAttribute("value") == checkedValue) {
-                    inputName.checked = false;
-                }
-            });
-        }
-    });
-});
-
+//  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 // 핕터 초기화
 let filterReset = document.querySelector(".filter-reset");
 filterReset.addEventListener("click", (e) => {
@@ -514,6 +499,7 @@ filterReset.addEventListener("click", (e) => {
     selectElement.selectedIndex = 0;
 });
 
+//  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 // 접은 부분 피기 / 접기 (행사 분야)
 let noHide = document.querySelector(".view-btn-tie");
 let hide = document.querySelector(".view-btn-tie.hidden");
@@ -539,69 +525,7 @@ hideButton.addEventListener("click", (e) => {
     }
 });
 
-// 채널 구독 선택 시 채널 구독중 으로 변경
-// 채널 구독 시 채널 변경하기
-
-let subBtn = document.querySelectorAll(".channel-click-btn-bg");
-let channelBox = document.querySelectorAll(".channel-img-box");
-
-subBtn.forEach((allBtn, i) => {
-    allBtn.addEventListener("click", (e) => {
-        channelBox.forEach((cBox, j) => {
-            if (i == j) {
-                let subModal = document.querySelectorAll(".subcribe-wrap");
-                let channelSubModal = document.querySelectorAll(".channel-subcribe-m");
-                subModal.forEach((subBox) => {
-                    subBox.style.display = "flex";
-                    subBtn[i].style.display = "none";
-                    channelSubModal.forEach((ChannelSubBox, k) => {
-                        if (i == k) {
-                            ChannelSubBox.style.display = "flex";
-                        }
-                    });
-                });
-            }
-        });
-    });
-});
-
-// 반복을 사용해서 특정 인덱스 번호가 동일한 경우 사용하기 위한
-let subBtnCopy = document.querySelectorAll(".channel-sub-m-btn");
-let channelBoxCopy = document.querySelectorAll(".channel-img-box");
-let test1 = document.querySelectorAll(".subcribe-wrap-cancel");
-let test2 = document.querySelectorAll(".channel-subcribe-m");
-
-// 구독 취소 선택 시 모달 뜨고 기존 상태로 변경
-subBtnCopy.forEach((allBtnCopy, i) => {
-    allBtnCopy.addEventListener("click", (e) => {
-        channelBoxCopy.forEach((cBox, j) => {
-            if (i == j) {
-                test1.forEach((subBox) => {
-                    subBox.style.display = "flex";
-                    subBtn[i].style.display = "flex";
-                    test2.forEach((ChannelSubBox, k) => {
-                        if (i == k) {
-                            ChannelSubBox.style.display = "none";
-                        }
-                    });
-                });
-            }
-        });
-    });
-});
-
-// 채널 구독 선택 시 나오는 모달창 끄기
-document.querySelector(".meeting-continue-btn").addEventListener("click", (e) => {
-    let subModal = document.querySelector(".subcribe-wrap");
-    subModal.style.display = "none";
-});
-
-// 채널 구독 취소 시 나오는 모달창 끄기
-document.querySelector(".meeting-cancel-btn").addEventListener("click", (e) => {
-    let subModal = document.querySelector(".subcribe-wrap-cancel");
-    subModal.style.display = "none";
-});
-
+//  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 // 슬라이드 배너 (이미 이미지가 존재 하기 때문에 별도로 추가되는 부분은 없음)
 
 const slideContainer = document.querySelector(".swiper-wrap");

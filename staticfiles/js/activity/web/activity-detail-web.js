@@ -299,19 +299,6 @@ nonLikeDisplay.forEach((displayButton, i) => {
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-// 공유하기 버튼 클릭시 나오는 모달 및 닫기
-let shareButton = document.querySelector(".share-button");
-let shareModalWrap = document.querySelector(".share-modal-wrap");
-shareButton.addEventListener("click", () => {
-    shareModalWrap.style.display = "flex";
-});
-
-let shareCloseButton = document.querySelector(".share-close-button");
-shareCloseButton.addEventListener("click", () => {
-    shareModalWrap.style.display = "none";
-});
-
-// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 // 틴친 클릭 시 나오는 모달
 
 // 프로필 클릭 시 틴친 프로필 모달 출력 이벤트
@@ -469,3 +456,17 @@ commentUpdateUploadContainer.addEventListener("click", () => {
     commentInputBoxAllWrap.classList.remove("hidden");
     commentSubButton.style.display = "none";
 });
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// 공유하기 버튼
+const shareBtn = document.getElementById("share-button");
+function clipCopy() {
+    let dummy = document.createElement("textarea");
+    document.body.appendChild(dummy);
+    dummy.value = window.document.location.href;
+    dummy.select();
+    document.execCommand("copy");
+    document.body.removeChild(dummy);
+    Swal.fire("URL 복사 완료", "주소가 클립보드에 복사되었습니다. <br> 원하는 곳에 붙여넣기 해주세요.", "success");
+}
+shareBtn.addEventListener("click", clipCopy);

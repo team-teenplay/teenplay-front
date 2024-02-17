@@ -65,15 +65,11 @@
                                                             </div>
                                                             <div class="devide-items-center">
                                                                 <div class="divide-count-flex">
-                                                                    <div class="divide-inline">
-                                                                        <button class="p-button" type="button">-</button>
-                                                                        <div class="select-count">1</div>
-                                                                        <button class="m-button" type="button">+</button>
-                                                                    </div>
                                                                     <div class="leftover-box">
                                                                         <div class="leftover-text-c">
-                                                                            <span>잔여 수량</span>
-                                                                            <span>: 198</span>
+                                                                            <span>0</span>
+                                                                            <span> / </span>
+                                                                            <span>128</span>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -90,7 +86,7 @@
                                             </div>
                                         </form>
                                         <div class="divide-button-tie">
-                                            <button class="share-button" type="button">
+                                            <button class="share-button" id="share-button" type="button">
                                                 <span>공유</span>
                                                 <svg class="share-button-image" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path
@@ -283,10 +279,10 @@
                                         <dt class="map-text-sub-title">장소</dt>
                                         <dd class="map-content">온라인으로 진행되는 행사입니다.</dd>
                                     </div>
-                                    <!-- <div>지도가 들어갈 장소입니다.</div> -->
+                                    <!-- 지도가 들어갈 장소입니다. -->
                                     <div class="map-address-text-content-box">
                                         <dt class="map-text-sub-title">주소</dt>
-                                        <dd class="map-content">강남구 역삼로.</dd>
+                                        <dd class="map-content">강남구 역삼로 (위에나 아래를 선택하시면 됩니다.)</dd>
                                     </div>
                                     <div class="map-box"></div>
                                 </dl>
@@ -441,7 +437,7 @@
                             <div class="activity-list-more-title">
                                 <div>
                                     <div class="more-activity-title-text">
-                                        <span>이런 행사는 어때요?</span>
+                                        <span>이런 활동는 어때요?</span>
                                     </div>
                                 </div>
                                 <div>
@@ -757,24 +753,6 @@
                     <h2 class="share-title">공유하기</h2>
                 </div>
                 <div class="share-items">
-                    <button class="share-facebook-item" type="button">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="share-facebook-image" viewBox="0 0 24 24">
-                            <path
-                                fill="#1877f2"
-                                d="M22.68 0H1.32C.6 0 0 .6 0 1.32v21.36C0 23.4.6 24 1.32 24h11.5v-9.3H9.69v-3.62h3.13V8.41c0-3.1 1.9-4.79 4.66-4.79 1.32 0 2.46.1 2.8.15V7h-1.92c-1.5 0-1.8.71-1.8 1.76v2.32h3.59l-.47 3.62h-3.12V24h6.12c.73 0 1.32-.6 1.32-1.32V1.32C24 .6 23.4 0 22.68 0z"
-                            ></path>
-                        </svg>
-                    </button>
-                    <button class="share-kakao-item" type="button">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="share-kakao-image" viewBox="0 0 256 256">
-                            <path fill="#FFE812" d="M256 236c0 11-9 20-20 20H20c-11 0-20-9-20-20V20C0 9 9 0 20 0h216c11 0 20 9 20 20v216z"></path>
-                            <path d="M128 36C70.6 36 24 72.7 24 118c0 29.3 19.5 55 48.7 69.5-1.5 5.5-10.2 35.3-10.5 37.7 0 0-.2 1.7.9 2.4s2.5.1 2.5.1c3.3-.4 38-24.8 44-29 6 .9 12.1 1.3 18.4 1.3 57.4 0 104-36.7 104-82s-46.6-82-104-82z"></path>
-                            <path
-                                fill="#FFE812"
-                                d="M70.5 146.6c-3.3 0-6-2.5-6-5.7v-35.7h-9.4a5.9 5.9 0 0 1 0-11.7H86a5.9 5.9 0 0 1 0 11.8h-9.4v35.6c0 3.2-2.7 5.7-6 5.7zm52.6 0c-2.5 0-4.4-1-5-2.7l-3-7.8H97l-3 7.8c-.6 1.6-2.5 2.6-5 2.6a9.2 9.2 0 0 1-3.8-.8c-1.7-.7-3.3-2.8-1.4-8.5L98 99.4a9 9 0 0 1 8-5.9c4 0 7 3 8 6l14.3 37.7c1.9 5.7.3 7.8-1.4 8.5a9.2 9.2 0 0 1-3.8.8zM112 125.4l-6-17-6 17h12zm26 20.3a5.6 5.6 0 0 1-5.8-5.6V99.5c0-3.3 2.8-6 6.2-6s6.1 2.7 6.1 6v35.3h12.8c3.1 0 5.7 2.4 5.7 5.4s-2.6 5.6-5.8 5.6H138zm33.3.7a6 6 0 0 1-6-6v-41a6 6 0 0 1 12 0v12.9l16.8-16.7c.8-.9 2-1.4 3.3-1.4a6 6 0 0 1 4.1 1.8 6 6 0 0 1 1.8 3.8c0 1.4-.4 2.7-1.3 3.7l-13.7 13.6 14.8 19.6a6 6 0 0 1 1.1 4.4 6 6 0 0 1-2.3 4 6 6 0 0 1-3.6 1.2 6 6 0 0 1-4.8-2.4l-14-18.6-2.2 2v13.1a6 6 0 0 1-6 6z"
-                            ></path>
-                        </svg>
-                    </button>
                     <button class="link-copy-item" type="button">
                         <div class="link-copy-image-bg">
                             <svg xmlns="http://www.w3.org/2000/svg" class="link-copy-image" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -782,18 +760,6 @@
                             </svg>
                         </div>
                     </button>
-                </div>
-                <div class="share-qr-text-box">
-                    <button class="share-qr-text" type="button">QR 코드 생성하기</button>
-                    <!-- qr 생성 시 나오는 이미지-->
-                    <div class="share-qr-image-box">
-                        <div class="qr-full-image">
-                            <div id="_uiSahare_Qr"></div>
-                        </div>
-                    </div>
-                    <div class="share-qr-close-box">
-                        <button class="save-qr-text" type="button">QR코드 저장하기</button>
-                    </div>
                 </div>
                 <button class="share-close-button" type="button">닫기</button>
             </div>
