@@ -501,10 +501,6 @@ em {
     background-color: rgb(248 250 251/var(--tw-bg-opacity));
 }
 
-.sign {
-    /* 붉은점 */
-}
-
 .logout-btn {
     --tw-text-opacity: 1;
     color: rgb(191 69 69/var(--tw-text-opacity));
