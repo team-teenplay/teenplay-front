@@ -1,36 +1,49 @@
-const mypageServices = document.querySelector(".member-services");
-const mypageMenu = document.querySelector(".mypage-menu");
-const AllWhithoutClass = document.querySelectorAll("body :not(.member-services) :not(.mypage-menu)");
+const sendEmailATag = document.querySelector(".send-email");
+const sendEmailModal = document.querySelector(".send-email-modal-container");
+const checkBtn = document.querySelector(".check-btn");
 
-// 마이페이지 간이 목록 이외 클릭 시 none처리 이벤트
-document.addEventListener("click", (e) => {
-    if (!e.target.closest(".member-services")) {
-        mypageMenu.classList.remove("display:flex");
-    } else {
-        console.log("else");
-        if (e.target.closest(".member-service-menu-btn")) {
-            mypageMenu.classList.toggle("display:flex");
-        }
-    }
+// 인증 메일 발송하기 클릭 시 모달창 block처리 이벤트
+sendEmailATag.addEventListener("click", () => {
+    sendEmailModal.style.display = "block";
+});
+
+// 모달창 내 확인 버튼 클릭 시 모달창 none처리 이벤트
+checkBtn.addEventListener("click", () => {
+    sendEmailModal.style.display = "none";
+});
+
+// 마이페이지 목록 버튼 클릭 시 발생 하는 이벤트
+const memberServiceBtn = document.querySelector(".member-service-btn");
+const mypageModalNav = document.querySelector(".mypage-modal-nav");
+const mypageModalAside = document.querySelector(".mypage-modal-aside");
+
+memberServiceBtn.addEventListener("click", () => {
+    mypageModalAside.style.display = "flex";
+});
+
+//마이페이지 목록 내 X 버튼 클릭 시 발생하는 이벤트
+const closeBtn = document.querySelector(".close-btn");
+
+closeBtn.addEventListener("click", () => {
+    mypageModalNav.style.animation = "slideOut 0.3s ease-in-out";
+    setTimeout(() => {
+        mypageModalNav.removeAttribute("style");
+        mypageModalAside.style.display = "none";
+    }, 300);
 });
 
 // 헤더의 검색창 클릭 시 검색 모달창 block처리 이벤트
 const searchModal = document.querySelector(".search-modal-container");
-const searchButton = document.querySelector(".search-btn");
+const mypageSearchButton = document.querySelector(".mypage-search-btn");
 
-searchButton.addEventListener("click", () => {
+mypageSearchButton.addEventListener("click", () => {
     searchModal.style.display = "block";
 });
 
-// 검색창 클릭 시 검색 모달 block처리 이벤트
+// 뒤로가기 클릭 시 검색 모달 none처리 이벤트
 const backButton = document.querySelector(".back-btn");
-const searchModalShadow = document.querySelector(".search-modal-shadow");
 
 backButton.addEventListener("click", () => {
-    searchModal.style.display = "none";
-});
-
-searchModalShadow.addEventListener("click", () => {
     searchModal.style.display = "none";
 });
 
@@ -51,7 +64,7 @@ searchInput.addEventListener("input", (e) => {
 });
 
 // 엔터키를 누를 경우 input의 value를 최근 검색기록 목록에 최신순으로 추가
-const recentlyKeywordList = document.querySelector(".recently-keyword-list");
+const recentlyKeywordAppList = document.querySelector(".recently-keyword-app-list");
 
 searchInput.addEventListener("keyup", (e) => {
     let text = ``;
@@ -67,7 +80,7 @@ searchInput.addEventListener("keyup", (e) => {
         text += `</svg>`;
         text += `</button>`;
         text += `</div>`;
-        recentlyKeywordList.innerHTML = text + recentlyKeywordList.innerHTML;
+        recentlyKeywordAppList.innerHTML = text + recentlyKeywordAppList.innerHTML;
         e.target.value = "";
         countKeyword();
         createEvent();
@@ -79,7 +92,7 @@ const countKeyword = () => {
     const recentlyKeywordItem = document.querySelectorAll(".recently-keyword-item");
 
     if (recentlyKeywordItem.length > 6) {
-        recentlyKeywordList.removeChild(recentlyKeywordItem[6]);
+        recentlyKeywordAppList.removeChild(recentlyKeywordItem[6]);
     }
 };
 
@@ -99,7 +112,7 @@ createEvent();
 const deleteSearchLogBtn = document.querySelector(".delete-search-log-btn");
 
 deleteSearchLogBtn.addEventListener("click", () => {
-    recentlyKeywordList.innerHTML = "";
+    recentlyKeywordAppList.innerHTML = "";
 });
 
 // 검색 모달 내 더보기 버튼 클릭 시 더보기 사라지고 리스트에 클레스로 준 속성 지우기
