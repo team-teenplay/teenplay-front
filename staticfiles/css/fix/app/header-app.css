@@ -299,12 +299,15 @@ em {
     background-color: #FFB6AC;
 }
 
-.member-service-btn {
+.member-service-btn, .mypage-search-btn {
     --tw-space-x-reverse: 0;
     margin-right: calc(1rem*var(--tw-space-x-reverse));
     margin-left: calc(1rem*(1 - var(--tw-space-x-reverse)));
     --tw-text-opacity: 1;
-    color: #9f0d08;
+    color: #ce201b;
+}
+
+.member-service-btn {
     position: relative;
 }
 
@@ -873,6 +876,15 @@ em {
     margin-top: calc(1rem*(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(1rem*var(--tw-space-y-reverse));
     grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 0.5rem;
+    display: grid;
+}
+
+.recently-keyword-app-list {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1rem*(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1rem*var(--tw-space-y-reverse));
+    grid-template-columns: repeat(1,minmax(0,1fr));
     gap: 0.5rem;
     display: grid;
 }
