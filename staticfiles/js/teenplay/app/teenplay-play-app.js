@@ -12,6 +12,10 @@ const videoWraps = document.querySelectorAll(".play-each");
 let nowPlaying = document.querySelector(".play-each.playing");
 const slideWrap = document.querySelector(".play-items");
 const slideContainer = document.querySelector(".play-item");
+const likeBtns = document.querySelectorAll(".play-like-btn");
+const emptyHeart = document.querySelectorAll(".play-like-icon.empty");
+const fullHeart = document.querySelectorAll(".play-like-icon.full");
+
 // 재생 중이 아닌 영상은 일시정지로 시작
 
 videoWraps.forEach((videoWrap, i) => {
@@ -316,3 +320,19 @@ slideWrap.addEventListener("mouseup", () => {
 slideWrap.addEventListener("mousedown", (e) => {
     0 === e.button && (initTouch(e), slideWrap.addEventListener("mousemove", swipeDirection));
 });
+
+// 좋아요 아이콘 클릭 시 반영
+likeBtns.forEach((button, i) => {
+    button.addEventListener("click", () => {
+        if (emptyHeart[i].style.display == "none") {
+            emptyHeart[i].style.display = "block";
+            fullHeart[i].style.display = "none";
+        } else {
+            emptyHeart[i].style.display = "none";
+            fullHeart[i].style.display = "block";
+        }
+    });
+});
+
+// 좋아요 수 증가는 비동기로 좋아요 db에 반영 후 가져와 넣기 때문에
+// 현재 화면에서는 구현하지 않습니다.

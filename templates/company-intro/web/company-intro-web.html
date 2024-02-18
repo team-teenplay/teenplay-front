@@ -344,7 +344,7 @@
                                                     <div class="member-position">플랫폼 사업팀</div>
                                                     <div class="member-appointment">CX 매니저</div>
                                                 </div>
-                                                <div class="member">
+                                                <div class="member-display hidden">
                                                     <div class="member-profile-image-box">
                                                         <div class="member-image-background">
                                                             <img class="image-background-logo" src="https://file.zillinks.com/prod/uploads/e6c9c88846934bdd91496b4e52613104_profileImg.png" alt="주식회사 틴플" />
@@ -355,7 +355,7 @@
                                                     <div class="member-position">플랫폼 사업팀</div>
                                                     <div class="member-appointment">개발 리더</div>
                                                 </div>
-                                                <div class="member">
+                                                <div class="member-display hidden">
                                                     <div class="member-profile-image-box">
                                                         <div class="member-image-background">
                                                             <img class="image-background-logo" src="https://file.zillinks.com/prod/uploads/e6c9c88846934bdd91496b4e52613104_profileImg.png" alt="주식회사 틴플" />
@@ -366,31 +366,9 @@
                                                     <div class="member-position">플랫폼 사업팀</div>
                                                     <div class="member-appointment">개발 매니저</div>
                                                 </div>
-                                                <div class="member">
-                                                    <div class="member-profile-image-box">
-                                                        <div class="member-image-background">
-                                                            <img class="image-background-logo" src="https://file.zillinks.com/prod/uploads/e6c9c88846934bdd91496b4e52613104_profileImg.png" alt="주식회사 틴플" />
-                                                        </div>
-                                                        <div class="member-image-picture" style="background-image: url('https://file.zillinks.com/prod/uploads/6e4a3c0a42c397d95ea19f30d200658e_profileImg.png')"></div>
-                                                    </div>
-                                                    <div class="member-name">Byoungmoon Hwang</div>
-                                                    <div class="member-position">솔루션 사업팀</div>
-                                                    <div class="member-appointment">총괄 리더</div>
-                                                </div>
-                                                <div class="member">
-                                                    <div class="member-profile-image-box">
-                                                        <div class="member-image-background">
-                                                            <img class="image-background-logo" src="https://file.zillinks.com/prod/uploads/e6c9c88846934bdd91496b4e52613104_profileImg.png" alt="주식회사 틴플" />
-                                                        </div>
-                                                        <div class="member-image-picture" style="background-image: url('https://file.zillinks.com/prod/uploads/6fd393f5de0fa5fd6c871b1b79a1cfeb_profileImg.png')"></div>
-                                                    </div>
-                                                    <div class="member-name">Jihye Seo</div>
-                                                    <div class="member-position">솔루션 사업팀</div>
-                                                    <div class="member-appointment">세일즈 매니저</div>
-                                                </div>
                                             </div>
                                             <div class="member-more-btn-box">
-                                                <div class="more-btn">More Team.. (8/15)</div>
+                                                <div class="more-btn">More Team.. (4/6)</div>
                                             </div>
                                         </div>
                                     </div>
@@ -516,7 +494,8 @@
                                 </div>
                                 <div class="section-contact-us">
                                     <div class="contact-us-container">
-                                        <div class="map"></div>
+                                        <!-- 지도 -->
+                                        <div class="map" id="map"></div>
                                         <div class="contact-us-address">서울 마포구 마포대로 122(공덕동, 신용보증기금빌딩) 프론트원 16층 이벤터스</div>
                                         <div class="contact-us-email">business@event-us.kr</div>
                                     </div>
@@ -558,4 +537,30 @@
         </div>
     </body>
     <script src="/staticfiles/js/company-info/web/company-web.js"></script>
+    <!-- 카카오 지도 -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=45b14d1f35867ccb8958b2d44d2b6a26"></script>
+    <script>
+        var mapContainer = document.getElementById("map"), // 지도를 표시할 div
+            mapOption = {
+                center: new kakao.maps.LatLng(37.568, 126.9793), // 지도의 중심좌표
+                level: 3, // 지도의 확대 레벨
+            };
+
+        var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+        // 마커가 표시될 위치입니다
+        var markerPosition = new kakao.maps.LatLng(37.568, 126.9793);
+
+        // 마커를 생성합니다
+        var marker = new kakao.maps.Marker({
+            position: markerPosition,
+        });
+
+        // 마커가 지도 위에 표시되도록 설정합니다
+        marker.setMap(map);
+
+        // 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
+        var zoomControl = new kakao.maps.ZoomControl();
+        map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+    </script>
 </html>

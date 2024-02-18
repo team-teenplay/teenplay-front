@@ -779,7 +779,7 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
     border-color: #FFF0EE;
     --tw-text-opacity: 1;
     color: #ce201b;
-    width: 50%;
+    width: 45%;
     --tw-bg-opacity: 1;
     background-color: #FFF0EE;
     border-radius: 0.375rem;
@@ -805,7 +805,7 @@ blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
     --tw-space-x-reverse: 0;
     margin-right: calc(0.75rem*var(--tw-space-x-reverse));
     margin-left: calc(0.75rem*(1 - var(--tw-space-x-reverse)));
-    width: 50%;
+    width: 55%;
     --tw-text-opacity: 1;
     color: rgb(36 93 203/var(--tw-text-opacity));
     --tw-bg-opacity: 1;
