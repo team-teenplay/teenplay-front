@@ -175,7 +175,7 @@ button, input, optgroup, select, textarea {
     color: #9F0D08;
 }
 
-.clup-detail-link {
+.club-detail-link {
     --tw-space-x-reverse: 0;
     margin-right: calc(2.5rem*var(--tw-space-x-reverse));
     margin-left: calc(2.5rem*(1 - var(--tw-space-x-reverse)));
@@ -185,7 +185,7 @@ button, input, optgroup, select, textarea {
     cursor: pointer;
 }
 
-.clup-detail-link:hover {
+.club-detail-link:hover {
     font-weight: 700;
 }
 

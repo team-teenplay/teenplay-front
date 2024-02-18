@@ -194,7 +194,7 @@ menu, ol, ul {
     color:  #9F0D08;
 }
 
-.clup-detail-link {
+.club-detail-link {
     --tw-space-x-reverse: 0;
     margin-right: calc(2.5rem*var(--tw-space-x-reverse));
     margin-left: calc(2.5rem*(1 - var(--tw-space-x-reverse)));
@@ -204,7 +204,7 @@ menu, ol, ul {
     cursor: pointer;
 }
 
-.clup-detail-link:hover {
+.club-detail-link:hover {
     font-weight: 700;
 }
 
@@ -216,12 +216,12 @@ menu, ol, ul {
     height: 1rem;
 }
 
-.clup-menagement-wrap {
+.club-menagement-wrap {
     --tw-bg-opacity: 1;
     background-color: rgb(248 250 251/var(--tw-bg-opacity));
 }
 
-.clup-menagement-container {
+.club-menagement-container {
     padding-bottom: 6rem;
     max-width: 1280px;
     width: 100%;
@@ -230,39 +230,39 @@ menu, ol, ul {
     padding: 1rem;
 }
 
-.clup-name-activity {
+.club-name-activity {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
 }
 
-.clup-name-activity-box {
+.club-name-activity-box {
     grid-template-columns: repeat(2,minmax(0,1fr));
     display: grid;
 }
 
-.clup-prfile-box {
+.club-prfile-box {
     align-items: center;
     display: flex;
 }
 
-.clup-prfile {
+.club-prfile {
     width: 2.5rem;
     height: 2.5rem;
 }
 
-.clup-prfile-img {
+.club-prfile-img {
     border-width: 1px;
     border-radius: 9999px;
 }
 
-.clup-name-box {
+.club-name-box {
     padding-left: 0.625rem;
     padding-right: 0.625rem;
     align-items: center;
     display: flex;
 }
 
-.clup-name {
+.club-name {
     font-weight: 700;
     font-size: 1.5rem;
     line-height: 2rem;
@@ -303,12 +303,12 @@ menu, ol, ul {
     background-color: #9F0D08;
 }
 
-.clup-info {
+.club-info {
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255/var(--tw-bg-opacity));
 }
 
-.clup-info-box {
+.club-info-box {
     padding-top: 1.75rem;
     padding-bottom: 1.75rem;
     padding-left: 1.5rem;
@@ -320,18 +320,18 @@ menu, ol, ul {
     border-radius: 0.375rem;
 }
 
-.clup-info-title {
+.club-info-title {
     font-weight: 700;
     font-size: .9375rem;
     padding-bottom: 0.625rem;
 }
 
-.clup-info-list {
+.club-info-list {
     grid-template-columns: repeat(4,minmax(0,1fr));
     display: grid;
 }
 
-.clup-info-list > div:not(:first-child) {
+.club-info-list > div:not(:first-child) {
     --tw-space-y-reverse: 0;
     margin-top: calc(0px*(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0px*var(--tw-space-y-reverse));
@@ -340,7 +340,7 @@ menu, ol, ul {
     margin-left: calc(1rem*(1 - var(--tw-space-x-reverse)));
 }
 
-.member-info-box, .clup-notice-brief-box, .activity-recruiting-box {
+.member-info-box, .club-notice-brief-box, .activity-recruiting-box {
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255/var(--tw-bg-opacity));
     --tw-border-opacity: 1;
@@ -351,7 +351,7 @@ menu, ol, ul {
     height: 10rem;
 }
 
-.member-info-items, .clup-notice-brief-items, .activity-recruiting-items, .ended-activities-items {
+.member-info-items, .club-notice-brief-items, .activity-recruiting-items, .ended-activities-items {
     padding: 1.5rem;
     justify-content: space-between;
     flex-direction: column;
@@ -365,17 +365,17 @@ menu, ol, ul {
     align-items: center;
 }
 
-.member-list-link, .clup-notice-brief-link, .activity-recruiting-link, .ended-activities-link {
+.member-list-link, .club-notice-brief-link, .activity-recruiting-link, .ended-activities-link {
     font-weight: 700;
     font-size: 1.25rem;
     line-height: 1.75rem;
 }
 
-.member-list-link:hover, .clup-notice-brief-link:hover, .clup-activity-link:hover, .teenplay-notice-link:hover {
+.member-list-link:hover, .club-notice-brief-link:hover, .club-activity-link:hover, .teenplay-notice-link:hover {
     text-decoration-line: underline;
 }
 
-.member-count, .clup-notice-count, .activity-recruiting-count, .ended-activities-count {
+.member-count, .club-notice-count, .activity-recruiting-count, .ended-activities-count {
     font-weight: 300;
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -556,23 +556,23 @@ menu, ol, ul {
     display: block;
 }
 
-.clup-activities-box {
+.club-activities-box {
     padding-top: 2rem;
     overflow-x: auto;
 }
 
-.clup-activities-items {
+.club-activities-items {
     min-width: 768px;
 }
 
-.clup-activities-categories {
+.club-activities-categories {
     --tw-text-opacity: 1;
     color: rgb(135 141 145/var(--tw-text-opacity));
     font-size: .9375rem;
     display: flex;
 }
 
-.clup-activities-number, .clup-activities-hits, .clup-activity-number, .clup-activity-hits {
+.club-activities-number, .club-activities-hits, .club-activity-number, .club-activity-hits {
     min-width: min-content;
     width: 8.333333%;
 }
@@ -619,17 +619,17 @@ menu, ol, ul {
     display: block;
 } 
 
-.clup-activities-title {
+.club-activities-title {
     min-width: min-content;
     width: 50%;
 }
 
-.clup-activities-date, .clup-activities-open-date, .clup-activity-date, .clup-activity-open-date {
+.club-activities-date, .club-activities-open-date, .club-activity-date, .club-activity-open-date {
     min-width: min-content;
     width: 16.666667%;
 }
 
-.clup-activities-contents {
+.club-activities-contents {
     padding-top: 1.25rem;
 }
 
@@ -641,13 +641,13 @@ menu, ol, ul {
     width: 100%;
 }
 
-.clup-activity-content {
+.club-activity-content {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
     display: flex;
 }
 
-.clup-activity-title {
+.club-activity-title {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -764,7 +764,7 @@ menu, ol, ul {
     display: grid;
 }
 
-.teenplay-notice-box, .clup-notice-box {
+.teenplay-notice-box, .club-notice-box {
     height: 244px;
     grid-column: span 4/span 4;
     --tw-bg-opacity: 1;
@@ -776,36 +776,36 @@ menu, ol, ul {
     border-radius: 0.375rem;
 }
 
-.teenplay-notice-items, .clup-notice-items {
+.teenplay-notice-items, .club-notice-items {
     padding: 1.5rem;
 }
 
-.teenplay-notice-item, .clup-notice-item {
+.teenplay-notice-item, .club-notice-item {
     overflow-x: auto;
 }
 
-.teenplay-notice-content, .clup-notice-content {
+.teenplay-notice-content, .club-notice-content {
     min-width: 414px;
 }
 
-.teenplay-notice-categories, .clup-notice-categories {
+.teenplay-notice-categories, .club-notice-categories {
     --tw-text-opacity: 1;
     color: rgb(135 141 145/var(--tw-text-opacity));
     font-size: .9375rem;
     display: flex;
 }
 
-.teenplay-notice-category-kind, .teenplay-notice-kind, .clup-notice-category-kind, .clup-notice-kind {
+.teenplay-notice-category-kind, .teenplay-notice-kind, .club-notice-category-kind, .club-notice-kind {
     min-width: min-content;
     width: 8.333333%;
 }
 
-.teenplay-notice-category-title, .clup-notice-category-title {
+.teenplay-notice-category-title, .club-notice-category-title {
     min-width: min-content;
     width: 75%;
 }
 
-.teenplay-notice-category-date, .teenplay-notice-date, .clup-notice-category-date, .clup-notice-date {
+.teenplay-notice-category-date, .teenplay-notice-date, .club-notice-category-date, .club-notice-date {
     min-width: min-content;
     width: 20%;
 }
@@ -818,13 +818,13 @@ menu, ol, ul {
     width: 100%;
 }
 
-.teenplay-notice-info, .clup-notice-info {
+.teenplay-notice-info, .club-notice-info {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
     display: flex;
 }
 
-.teenplay-notice-title, .clup-notice-title {
+.teenplay-notice-title, .club-notice-title {
     padding-right: 1rem;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -833,13 +833,13 @@ menu, ol, ul {
     display: flex;
 }
 
-.teenplay-notice-link, .clup-notice-link {
+.teenplay-notice-link, .club-notice-link {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
 }
 
-.clup-notice-box {
+.club-notice-box {
     --tw-space-x-reverse: 0;
     margin-right: calc(1rem*var(--tw-space-x-reverse));
     margin-left: calc(1rem*(1 - var(--tw-space-x-reverse)));
