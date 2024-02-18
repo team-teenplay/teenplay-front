@@ -2467,7 +2467,7 @@ button:focus {
 
 /* 위시리스트 게시글 수정 모달 부분 */
 .post-update-wrap {
-    padding: 1.5rem;
+    padding: 0.5rem;
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
     border-radius: 0.5rem;
