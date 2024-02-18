@@ -65,6 +65,7 @@ lastPrevButton.addEventListener("click", () => {
 
 // 아래는 이미지 첨부 부분입니다.
 // 이미지 썸네일을 화면에 표시하는 부분은 서버 담당 시 구현합니다.
+// 우선은 그대로 표시하겠습니다.
 
 // "모임 프로필 업로드" 버튼 클릭 시 프로필 사진 input 활성화(파일 업로드)
 // 및 파일 용량 체크 (프사, 커버 10MB 제한)
@@ -99,6 +100,33 @@ const openProfile = () => {
 
 const profileInput = document.getElementById("profile-image");
 const sizeErrorMsg = document.querySelector(".img-form-profile-size-error");
+const profileImage = document.querySelector(".img-form-thumbnail");
+const profileBackground = document.querySelector(".img-form-thumbnail-bg");
+const profileDeleteButton = document.querySelector(".profile-delete-wrap");
+const profileDeleteIconDefault = document.querySelector(".profile-delete");
+const profileDeleteIconHover = document.querySelector(".profile-delete-hover");
+
+// 삭제 버튼 hover 이벤트마다 색상 변경부터
+profileDeleteButton.addEventListener("mouseover", () => {
+    profileDeleteIconDefault.style.display = "none";
+    profileDeleteIconHover.style.display = "block";
+});
+
+profileDeleteButton.addEventListener("mouseout", () => {
+    profileDeleteIconDefault.style.display = "block";
+    profileDeleteIconHover.style.display = "none";
+});
+
+profileDeleteButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    sizeErrorMsg.style.display = "none";
+    profileInput.value = "";
+    profileImage.setAttribute("src", "https://event-us.kr/Content/neweventus/image/hostcenter/hostcenter_create_upload_01.png");
+    profileBackground.style.display = "none";
+    // 삭제 버튼 안 보이게 하기
+    profileDeleteButton.style.display = "none";
+});
 
 profileInput.addEventListener("change", (e) => {
     if (e.target.value) {
@@ -110,6 +138,15 @@ profileInput.addEventListener("change", (e) => {
         }
         sizeErrorMsg.style.display = "none";
         // 서버 작업은 여기에 fetch로 작성한 후 썸네일을 받아와 화면에 표시합니다.
+        // 우선은 올린 이미지를 그대로 표시하겠습니다.
+        let reader = new FileReader();
+        reader.onload = (e) => {
+            profileImage.setAttribute("src", e.target.result);
+            profileBackground.style.display = "block";
+            // 삭제 버튼 보이게 하기
+            profileDeleteButton.style.display = "inline-block";
+        };
+        reader.readAsDataURL(e.target.files[0]);
     }
 });
 
@@ -118,6 +155,41 @@ const coverUploadInput = document.getElementById("background-image");
 const openCover = () => {
     coverUploadInput.click();
 };
+
+// 업로드 시 사이즈 체크 및 썸네일 표시
+const coverImage = document.querySelector(".cover-thumbnail");
+const coverUploadWrap = document.querySelector(".cover-upload-wrap");
+const uploadSpanGray = document.querySelector(".upload-span-gray");
+const coverBackground = document.querySelector(".cover-thumbnail-container");
+const coverDeleteButton = document.querySelector(".cover-delete-wrap");
+const coverDeleteIconDefault = document.querySelector(".cover-delete");
+const coverDeleteIconHover = document.querySelector(".cover-delete-hover");
+
+// 삭제 버튼 hover 이벤트마다 색상 변경부터
+coverDeleteButton.addEventListener("mouseover", () => {
+    coverDeleteIconDefault.style.display = "none";
+    coverDeleteIconHover.style.display = "block";
+});
+
+coverDeleteButton.addEventListener("mouseout", () => {
+    coverDeleteIconDefault.style.display = "block";
+    coverDeleteIconHover.style.display = "none";
+});
+
+coverDeleteButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    sizeErrorMsg.style.display = "none";
+    coverImage.setAttribute("src", "https://event-us.kr/Content/neweventus/image/hostcenter/hostcenter_create_upload_01.png");
+    coverUploadInput.value = "";
+    // 글들 다 보이게
+    coverUploadWrap.style.display = "block";
+    uploadSpanGray.style.display = "block";
+    // 배경 지우기
+    coverBackground.style.display = "none";
+    // 삭제 버튼 안 보이게 하기
+    coverDeleteButton.style.display = "none";
+});
 
 coverUploadInput.addEventListener("change", (e) => {
     if (e.target.value) {
@@ -129,6 +201,19 @@ coverUploadInput.addEventListener("change", (e) => {
         }
         sizeErrorMsg.style.display = "none";
         // 서버 작업은 여기에 fetch로 작성한 후 썸네일을 받아와 화면에 표시합니다.
+        // 우선은 올린 이미지를 그대로 표시하겠습니다.
+        let reader = new FileReader();
+        reader.onload = (e) => {
+            coverImage.setAttribute("src", e.target.result);
+            // 글들 다 지우기
+            coverUploadWrap.style.display = "none";
+            uploadSpanGray.style.display = "none";
+            // 배경 투명한 어두운 색으로 삭제 버튼 잘 보이도록 하기
+            coverBackground.style.display = "block";
+            // 삭제 버튼 보이게 하기
+            coverDeleteButton.style.display = "inline-block";
+        };
+        reader.readAsDataURL(e.target.files[0]);
     }
 });
 
