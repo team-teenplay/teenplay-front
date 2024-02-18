@@ -299,17 +299,48 @@ em {
     background-color: #FFB6AC;
 }
 
-.member-service-btn {
+.member-service-btn, .mypage-search-btn {
     --tw-space-x-reverse: 0;
     margin-right: calc(1rem*var(--tw-space-x-reverse));
     margin-left: calc(1rem*(1 - var(--tw-space-x-reverse)));
     --tw-text-opacity: 1;
-    color: #9f0d08;
+    color: #ce201b;
+}
+
+.member-service-btn {
+    position: relative;
 }
 
 .member-service-svg {
     width: 1.25rem;
     height: 1.25rem;
+}
+
+.signal-sign-box {
+    flex: 0 1;
+    height: 100%;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.signal-sign-item {
+    background: #ce201b;
+    top: calc(100% - 28px);
+    left: calc(100% - 22px);
+    position: absolute;
+    font-size: 10px;
+    height: 6px;
+    min-width: 6px;
+    padding: 0 2px;
+    align-items: center;
+    border-radius: 28px;
+    display: flex;
+    font-weight: 400;
+    justify-content: center;
+    line-height: 13px;
 }
 
 .search-box {
@@ -849,6 +880,15 @@ em {
     display: grid;
 }
 
+.recently-keyword-app-list {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1rem*(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1rem*var(--tw-space-y-reverse));
+    grid-template-columns: repeat(1,minmax(0,1fr));
+    gap: 0.5rem;
+    display: grid;
+}
+
 .recently-keyword-item {
     justify-content: space-between;
     align-items: center;
@@ -1053,11 +1093,41 @@ em {
     margin-bottom: calc(0.5rem*var(--tw-space-y-reverse));
 }
 
+.mypage-item-link:last-child {
+    position: relative;
+}
+
 .mypage-item-svg {
     --tw-text-opacity: 1;
     color: rgb(206 211 214/var(--tw-text-opacity));
     width: 1.25rem;
     height: 1.25rem;
+}
+
+.modal-signal-sign-item {
+    background: #ce201b;
+    top: calc(100% - 38.1px);
+    left: calc(100% - 289px);
+    position: absolute;
+    font-size: 10px;
+    height: 15px;
+    min-width: 15px;
+    padding: 0 2px;
+    align-items: center;
+    border-radius: 28px;
+    display: flex;
+    font-weight: 400;
+    justify-content: center;
+    line-height: 9px;
+}
+
+.signal-sign {
+    color: rgb(255, 255, 255);
+    line-height: 9px;
+    font-size: 10px;
+    word-wrap: break-word;
+    word-break: keep-all;
+    font-weight: 600;
 }
 
 .logout-wrap {

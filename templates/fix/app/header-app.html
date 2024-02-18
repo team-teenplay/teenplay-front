@@ -31,7 +31,6 @@
                         <div class="logo-and-search">
                             <!-- 메인페이지 경로 -->
                             <a href="">
-                                <!--  -->
                                 <img class="logo-image" src="/staticfiles/images/teenplay_logo/logo2.png" alt="로고" />
                             </a>
                         </div>
@@ -42,6 +41,9 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" class="member-service-svg" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
                                 </svg>
+                                <div class="signal-sign-box">
+                                    <div class="signal-sign-item"></div>
+                                </div>
                             </button>
                         </div>
                     </div>
@@ -219,7 +221,7 @@
                                                         </div>
                                                     </div>
                                                     <!-- 최근 검색한 키워드 최신순으로 6개 표시 -->
-                                                    <div class="recently-keyword-list">
+                                                    <div class="recently-keyword-app-list">
                                                         <div class="recently-keyword-item">
                                                             <a class="search-keyword-link" href="">keyword</a>
                                                             <button class="cancle-btn" type="button">
@@ -307,14 +309,7 @@
                             <div class="mypage-list-wrap">
                                 <!-- 해당 페이지 주소 필요 -->
                                 <a class="mypage-item-link" href="">
-                                    <span>틴친 목록</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="mypage-item-svg" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
-                                    </svg>
-                                </a>
-                                <!-- 해당 페이지 주소 필요 -->
-                                <a class="mypage-item-link" href="">
-                                    <span>나의 활동</span>
+                                    <span>나의 위시리스트</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" class="mypage-item-svg" viewBox="0 0 20 20" fill="currentColor">
                                         <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
                                     </svg>
@@ -328,10 +323,50 @@
                                 </a>
                                 <!-- 해당 페이지 주소 필요 -->
                                 <a class="mypage-item-link" href="">
+                                    <span>나의 댓글</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="mypage-item-svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                                <!-- 해당 페이지 주소 필요 -->
+                                <a class="mypage-item-link" href="">
+                                    <span>나의 활동</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="mypage-item-svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                                <!-- 해당 페이지 주소 필요 -->
+                                <a class="mypage-item-link" href="">
+                                    <span>틴친 목록</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="mypage-item-svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                                <!-- 해당 페이지 주소 필요 -->
+                                <a class="mypage-item-link" href="">
+                                    <span>결제 내역</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="mypage-item-svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                                <!-- 해당 페이지 주소 필요 -->
+                                <a class="mypage-item-link" href="">
+                                    <span>쪽지 목록</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="mypage-item-svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                                <!-- 해당 페이지 주소 필요 -->
+                                <a class="mypage-item-link" href="">
                                     <span>알림 목록</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" class="mypage-item-svg" viewBox="0 0 20 20" fill="currentColor">
                                         <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
                                     </svg>
+                                    <div class="signal-sign-box">
+                                        <div class="modal-signal-sign-item">
+                                            <div class="signal-sign">N</div>
+                                        </div>
+                                    </div>
                                 </a>
                             </div>
                         </div>

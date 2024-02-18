@@ -11,6 +11,17 @@
     <body class loaded style="position: relative; min-height: 100%; top: 0px">
         <!-- 해더 부분 -->
         <header id="header">
+            <!-- 배너 부분 로컬 회원중 인증을 하지 않았을 때 표시 -->
+            <div class="banner-wrap">
+                <span> <span class="name_size">서경덕</span>님 </span>
+                <span class="certify-message">qwer1234@gmail.com 이메일을 확인하여 인증을 완료해주세요.</span>
+                <a class="send-email">
+                    인증 메일 발송하기
+                    <svg xmlns="http://www.w3.org/2000/svg" class="arrow" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
             <!-- 네비 부분 -->
             <nav>
                 <div class="main-nav-wrap">
@@ -40,9 +51,14 @@
                                 <div class="member-services">
                                     <button class="member-service-menu-btn sign" type="button">
                                         <div class="member-service-menu-content">
-                                            <span>
+                                            <span class="name-box">
                                                 <span class="nicknaem">경덕</span>
                                                 <span class="default-nim"> 님 </span>
+                                                <div class="signal-sign-box">
+                                                    <div class="signal-sign-item">
+                                                        <div class="signal-sign">3</div>
+                                                    </div>
+                                                </div>
                                             </span>
                                             <svg class="down-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                                 <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"></path>
@@ -72,8 +88,9 @@
                                         <a class="my-clups" href="">
                                             <span>나의 모임</span>
                                         </a>
-                                        <a class="my-signals sign" href="">
+                                        <a class="my-signals" href="">
                                             <span>알림 목록</span>
+                                            <div class="mypage-menu-signal-count">3</div>
                                         </a>
                                         <div class="border-line"></div>
                                         <button class="logout-btn" type="button">
@@ -84,7 +101,7 @@
                                 <!-- 로그인, 비로그인 상관없이 보이는 요소 -->
                                 <div class="my-profile-box">
                                     <!-- 클릭 시 이동할 페이지 작성 필요 -->
-                                    <a class="my-profile" href="">내 프로필</a>
+                                    <a class="my-profile" href="">틴플레이 홈</a>
                                 </div>
                             </div>
                         </div>
