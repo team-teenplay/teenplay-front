@@ -237,7 +237,7 @@ body {
 
     border-style: solid;
     border-width: 1px;
-    border-radius: 16px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     height: 32px;
@@ -285,7 +285,7 @@ body {
 .main-user{
     padding-left: 12px;
     padding-right: 12px;
-    border-radius: 8px;
+    border-radius: 6px;
     align-items: center;
     height: 40px;
     display: flex;
@@ -337,7 +337,7 @@ body {
 .main-user-other{
     padding-left: 12px;
     padding-right: 12px;
-    border-radius: 8px;
+    border-radius: 6px;
     align-items: center;
     height: 40px;
     display: flex;
@@ -348,7 +348,7 @@ body {
     background-color: #FFF0EE;
     padding-left: 12px;
     padding-right: 12px;
-    border-radius: 8px;
+    border-radius: 6px;
     align-items: center;
     height: 40px;
     display: flex;
@@ -402,7 +402,7 @@ body {
 .main-festival-add-top-cancle-button{
     border-style: solid;
     border-width: 1px;
-    border-radius: 20px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     height: 40px;
@@ -445,7 +445,7 @@ body {
 .main-festival-add-top-create-button{
     padding-left: 16px;
     padding-right: 16px;
-    border-radius: 20px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -509,7 +509,7 @@ body {
 .main-festival-photo-warp{
     padding: 24px;
     border-width: 1px;
-    border-radius: 8px;
+    border-radius: 6px;
     border-color: #e6e6e7;
     background-color: #fff;
 }
@@ -532,7 +532,7 @@ body {
     --tw-border-opacity: 1;
     border-color: rgb(225 221 249/var(--tw-border-opacity));
     border-width: 2px;
-    border-radius: 8px;
+    border-radius: 6px;
     width: 48px;
     height: 48px;
     display: block;
@@ -547,7 +547,7 @@ body {
 
     border-style: solid;
     border-width: 1px;
-    border-radius: 20px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     height: 40px;
@@ -677,7 +677,7 @@ body {
 .main-festival-info-detail-label{
     border-style: solid;
     border-width: 1px;
-    border-radius: 8px;
+    border-radius: 6px;
     overflow: hidden;
     display: flex;
     position: relative;
@@ -703,7 +703,7 @@ body {
 }
 
 .main-festival-info-detail-input:focus-within{
-    border-radius: 8px;
+    border-radius: 6px;
     padding-left: 18px;
     padding-right: 18px;
     border-width: 2px;
@@ -735,7 +735,7 @@ body {
     direction: ltr;
     text-align: left;
     border: none;
-    border-radius: 10px;
+    border-radius: 6px;
     box-shadow: none;
     box-sizing: border-box;
     display: flex;
@@ -767,13 +767,16 @@ body {
     padding-left: 20px;
     padding-right: 20px;
     border : 1px solid  rgba(0,0,0,.1);
+    resize: none;
+    overflow:auto;
 }
 
 .main-festival-info-detail-textarea:focus-within{
-    border-radius: 8px;
-    padding-left: 18px;
-    padding-right: 18px;
+    border-radius: 6px;
+    padding-left: 19px;
+    padding-right: 19px;
     border-width: 2px;
+    padding-top: 9px;
     border-color: #2563EB;
 }
 
@@ -836,7 +839,7 @@ body {
 .main-festival-plan-detail-pay-label{
     border-style: solid;
     border-width: 1px;
-    border-radius: 8px;
+    border-radius: 6px;
     overflow: hidden;
     display: flex;
     position: relative;
@@ -874,7 +877,7 @@ body {
 .main-festival-plan-detail-adress-label{
     border-style: solid;
     border-width: 1px;
-    border-radius: 8px;
+    border-radius: 6px;
     overflow: hidden;
     display: flex;
     position: relative;
@@ -912,7 +915,7 @@ body {
 .main-festival-plan-detail-adressadd-label{
     border-style: solid;
     border-width: 1px;
-    border-radius: 8px;
+    border-radius: 6px;
     overflow: hidden;
     display: flex;
     position: relative;
@@ -950,7 +953,7 @@ body {
 .main-festival-plan-detail-place-label{
     border-style: solid;
     border-width: 1px;
-    border-radius: 8px;
+    border-radius: 6px;
     overflow: hidden;
     display: flex;
     position: relative;
@@ -988,7 +991,7 @@ body {
 .main-festival-plan-detail-startdate-label{
     border-style: solid;
     border-width: 1px;
-    border-radius: 8px;
+    border-radius: 6px;
     overflow: hidden;
     display: flex;
     position: relative;
@@ -1026,7 +1029,7 @@ body {
 .main-festival-plan-detail-lastdate-label{
     border-style: solid;
     border-width: 1px;
-    border-radius: 8px;
+    border-radius: 6px;
     overflow: hidden;
     display: flex;
     position: relative;
@@ -1064,7 +1067,7 @@ body {
 .main-festival-plan-detail-time-label{
     border-style: solid;
     border-width: 1px;
-    border-radius: 8px;
+    border-radius: 6px;
     overflow: hidden;
     display: flex;
     position: relative;
@@ -1145,7 +1148,7 @@ body {
 .main-festival-admin-detail-info-label{
     border-style: solid;
     border-width: 1px;
-    border-radius: 8px;
+    border-radius: 6px;
     overflow: hidden;
     display: flex;
     position: relative;
@@ -1183,7 +1186,7 @@ body {
 .main-festival-admin-detail-phone-label{
     border-style: solid;
     border-width: 1px;
-    border-radius: 8px;
+    border-radius: 6px;
     overflow: hidden;
     display: flex;
     position: relative;
@@ -1237,7 +1240,7 @@ body {
 .main-festival-give-detail-info-label{
     border-style: solid;
     border-width: 1px;
-    border-radius: 8px;
+    border-radius: 6px;
     overflow: hidden;
     display: flex;
     position: relative;
@@ -1275,7 +1278,7 @@ body {
 .main-festival-give-detail-phone-label{
     border-style: solid;
     border-width: 1px;
-    border-radius: 8px;
+    border-radius: 6px;
     overflow: hidden;
     display: flex;
     position: relative;
@@ -1302,35 +1305,35 @@ body {
 
 
 .main-festival-plan-detail-place-input:focus-within{
-    border-radius: 8px;
+    border-radius: 6px;
     padding-left: 18px;
     padding-right: 18px;
     border-width: 2px;
     border-color: #2563EB;
 }
 .main-festival-plan-detail-pay-input:focus-within{
-    border-radius: 8px;
+    border-radius: 6px;
     padding-left: 18px;
     padding-right: 18px;
     border-width: 2px;
     border-color: #2563EB;
 }
 .main-festival-plan-detail-adress-input:focus-within{
-    border-radius: 8px;
+    border-radius: 6px;
     padding-left: 18px;
     padding-right: 18px;
     border-width: 2px;
     border-color: #2563EB;
 }
 .main-festival-plan-detail-adressadd-input:focus-within{
-    border-radius: 8px;
+    border-radius: 6px;
     padding-left: 18px;
     padding-right: 18px;
     border-width: 2px;
     border-color: #2563EB;
 }
 .main-festival-plan-detail-startdate-input:focus-within{
-    border-radius: 8px;
+    border-radius: 6px;
     padding-left: 18px;
     padding-right: 18px;
     border-width: 2px;
@@ -1338,7 +1341,7 @@ body {
 }
 
 .main-festival-plan-detail-lastdate-input:focus-within{
-    border-radius: 8px;
+    border-radius: 6px;
     padding-left: 18px;
     padding-right: 18px;
     border-width: 2px;
@@ -1346,7 +1349,7 @@ body {
 }
 
 .main-festival-plan-detail-time-input:focus-within{
-    border-radius: 8px;
+    border-radius: 6px;
     padding-left: 18px;
     padding-right: 18px;
     border-width: 2px;
@@ -1354,7 +1357,7 @@ body {
 }
 
 .main-festival-admin-detail-info-input:focus-within{
-    border-radius: 8px;
+    border-radius: 6px;
     padding-left: 18px;
     padding-right: 18px;
     border-width: 2px;
@@ -1362,7 +1365,7 @@ body {
 }
 
 .main-festival-admin-detail-phone-input:focus-within{
-    border-radius: 8px;
+    border-radius: 6px;
     padding-left: 18px;
     padding-right: 18px;
     border-width: 2px;
@@ -1370,7 +1373,7 @@ body {
 }
 
 .main-festival-give-detail-info-input:focus-within{
-    border-radius: 8px;
+    border-radius: 6px;
     padding-left: 18px;
     padding-right: 18px;
     border-width: 2px;
@@ -1378,7 +1381,7 @@ body {
 }
 
 .main-festival-give-detail-phone-input:focus-within{
-    border-radius: 8px;
+    border-radius: 6px;
     padding-left: 18px;
     padding-right: 18px;
     border-width: 2px;
@@ -1386,7 +1389,7 @@ body {
 }
 
 .main-festival-info-detail-textbox:focus-within{
-    border-radius: 8px;
+    border-radius: 6px;
     border-color: #2563EB;
 }
 

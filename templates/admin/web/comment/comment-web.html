@@ -182,11 +182,12 @@
                                                                 >작성자</span
                                                             >
                                                             <svg
-                                                                viewBox="0 0 24 24"
                                                                 xmlns="http://www.w3.org/2000/svg"
-                                                                class="main-comment-info-button-font"
+                                                                viewBox="0 0 24 24"
+                                                                class="main-comment-info-button-svg"
                                                             >
                                                                 <path
+                                                                    class="arrow"
                                                                     fill-rule="evenodd"
                                                                     clip-rule="evenodd"
                                                                     d="M3.27 8.42a1.076 1.076 0 0 1 1.587-.13L12 14.832l7.143-6.544a1.076 1.076 0 0 1 1.586.13 1.26 1.26 0 0 1-.122 1.696L12 18l-8.607-7.885A1.26 1.26 0 0 1 3.27 8.42Z"
@@ -233,6 +234,7 @@
                                                     class="main-comment-search-box"
                                                 >
                                                     <path
+                                                        class="arrow"
                                                         id="member-search-cansle"
                                                         fill-rule="evenodd"
                                                         clip-rule="evenodd"
@@ -258,45 +260,71 @@
                                     >
                                 </div>
                                 <!-- 상태 활성화창 -->
-                                <div class="main-wish-sellect">
-                                    <div class="main-wish-sellect-warp">
-                                        <div
-                                            class="main-wish-sellect-container"
-                                        >
-                                            <button
-                                                type="button"
-                                                class="main-wish-sellect-button-add"
-                                                aria-label="filter"
+                                <div class="main-bet">
+                                    <div class="main-wish-sellect">
+                                        <div class="main-wish-sellect-warp">
+                                            <div
+                                                class="main-wish-sellect-container"
                                             >
-                                                <div class="div-size">
+                                                <button
+                                                    type="button"
+                                                    class="main-wish-sellect-button-add"
+                                                    aria-label="filter"
+                                                >
                                                     <span
                                                         class="main-wish-sellect-button-span-add"
-                                                        >활동중/정지</span
+                                                        >전체</span
                                                     >
-                                                </div>
-                                            </button>
-                                            <!-- 공개 비공개 모달창 -->
-                                            <ul
-                                                id="admin-message-modal-search-add"
-                                                class="hidden"
-                                            >
-                                                <button
-                                                    class="admin-message-modal-search-receive-add"
-                                                >
-                                                    활동중/정지
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 24 24"
+                                                        class="main-comment-info-button-svga"
+                                                    >
+                                                        <path
+                                                            class="arrow"
+                                                            fill-rule="evenodd"
+                                                            clip-rule="evenodd"
+                                                            d="M3.27 8.42a1.076 1.076 0 0 1 1.587-.13L12 14.832l7.143-6.544a1.076 1.076 0 0 1 1.586.13 1.26 1.26 0 0 1-.122 1.696L12 18l-8.607-7.885A1.26 1.26 0 0 1 3.27 8.42Z"
+                                                        ></path>
+                                                    </svg>
                                                 </button>
-                                                <button
-                                                    class="admin-message-modal-search-send-add"
+                                                <!-- 공개 비공개 모달창 -->
+                                                <ul
+                                                    id="admin-message-modal-search-add"
+                                                    class="hidden"
                                                 >
-                                                    활동중
-                                                </button>
-                                                <button
-                                                    class="admin-message-modal-search-donotreceive-add"
-                                                >
-                                                    정지
-                                                </button>
-                                            </ul>
+                                                    <button
+                                                        class="admin-message-modal-search-receive-add"
+                                                    >
+                                                        전체
+                                                    </button>
+                                                    <button
+                                                        class="admin-message-modal-search-send-add"
+                                                    >
+                                                        활동중
+                                                    </button>
+                                                    <button
+                                                        class="admin-message-modal-search-donotreceive-add"
+                                                    >
+                                                        정지
+                                                    </button>
+                                                </ul>
+                                            </div>
                                         </div>
+                                    </div>
+                                    <div class="main-comment-list-stopa">
+                                        <button
+                                            class="member-user-list-button toggle-button"
+                                        >
+                                            상태변경
+                                        </button>
+                                    </div>
+                                    <div class="main-comment-list-delete">
+                                        <button
+                                            class="member-user-list-delete-button"
+                                        >
+                                            댓글삭제
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -304,25 +332,22 @@
                             <div class="main-comment-status">
                                 <!-- 여기에 넣으면 추가할수있습니다(가로넓이 width만 수정)) -->
                                 <div class="main-comment-status-name">
-                                    작성자
+                                    전체선택
                                 </div>
                                 <div class="main-comment-status-status">
-                                    게시글
+                                    작성자
                                 </div>
                                 <div class="main-comment-status-date">
-                                    작성일
+                                    게시글
                                 </div>
                                 <div class="main-comment-status-recent">
-                                    댓글 내용 확인
+                                    작성일
                                 </div>
                                 <div class="main-comment-status-paycount">
-                                    댓글 삭제
+                                    댓글 내용
                                 </div>
                                 <div class="main-comment-status-paycount">
-                                    상태
-                                </div>
-                                <div class="main-comment-status-stop">
-                                    활동정지
+                                    유저상태
                                 </div>
                             </div>
                         </div>
@@ -330,11 +355,17 @@
                         <!-- 일단 하나 만들어봅시다. -->
 
                         <li class="main-comment-list" data-number="1">
-                            <div class="main-comment-list-name">조관익</div>
-                            <div class="main-comment-list-status">
-                                번지점프할사람!
+                            <div class="main-comment-list-name">
+                                <input
+                                    type="checkbox"
+                                    class="main-comment-list-checkbox"
+                                />
                             </div>
-                            <div class="main-comment-list-date">23.02.01</div>
+                            <div class="main-comment-list-status">조관익</div>
+                            <div class="main-comment-list-paycount">
+                                맛집갈사람!
+                            </div>
+                            <div class="main-comment-list-date">24.02.16</div>
                             <div class="main-comment-list-check">
                                 <span
                                     class="main-comment-list-input"
@@ -343,32 +374,22 @@
                                     >정말 재미있는 보여요!</span
                                 >
                             </div>
-                            <div class="main-comment-list-delete">
-                                <button
-                                    class="member-user-list-delete-button"
-                                    data-target="1"
-                                >
-                                    댓글삭제
-                                </button>
-                            </div>
-                            <div data-id="1" class="main-comment-list-paycount">
+                            <div data-id="1" class="main-comment-list-stop">
                                 활동중
-                            </div>
-                            <div class="main-comment-list-stop">
-                                <button
-                                    class="member-user-list-button toggle-button"
-                                    data-target="1"
-                                >
-                                    상태변경
-                                </button>
                             </div>
                         </li>
                         <li class="main-comment-list" data-number="2">
-                            <div class="main-comment-list-name">이동현</div>
-                            <div class="main-comment-list-status">
-                                번지점프할사람!
+                            <div class="main-comment-list-name">
+                                <input
+                                    type="checkbox"
+                                    class="main-comment-list-checkbox"
+                                />
                             </div>
-                            <div class="main-comment-list-date">23.02.01</div>
+                            <div class="main-comment-list-status">이동현</div>
+                            <div class="main-comment-list-paycount">
+                                맛집갈사람!
+                            </div>
+                            <div class="main-comment-list-date">23.01.05</div>
                             <div class="main-comment-list-check">
                                 <span
                                     class="main-comment-list-input"
@@ -377,24 +398,8 @@
                                     >정말 재미있는 보여요!</span
                                 >
                             </div>
-                            <div class="main-comment-list-delete">
-                                <button
-                                    class="member-user-list-delete-button"
-                                    data-target="2"
-                                >
-                                    댓글삭제
-                                </button>
-                            </div>
-                            <div data-id="2" class="main-comment-list-paycount">
+                            <div data-id="2" class="main-comment-list-stop">
                                 활동중
-                            </div>
-                            <div class="main-comment-list-stop">
-                                <button
-                                    class="member-user-list-button toggle-button"
-                                    data-target="2"
-                                >
-                                    상태변경
-                                </button>
                             </div>
                         </li>
                         <div class="main-user-bottom-box">

@@ -206,71 +206,97 @@
                                     >
                                 </div>
                                 <!-- 상태 나타내는 창 -->
-                                <div class="main-wish-sellect">
-                                    <div class="main-wish-sellect-warp">
-                                        <div
-                                            class="main-wish-sellect-container"
-                                        >
-                                            <button
-                                                type="button"
-                                                class="main-wish-sellect-button"
-                                                aria-label="filter"
+                                <div class="main-bet">
+                                    <div class="main-wish-sellect">
+                                        <div class="main-wish-sellect-warp">
+                                            <div
+                                                class="main-wish-sellect-container"
                                             >
-                                                <div class="div-size">
-                                                    <span
-                                                        class="main-wish-sellect-button-span"
-                                                        >활동중/정지</span
+                                                <button
+                                                    type="button"
+                                                    class="main-wish-sellect-button"
+                                                    aria-label="filter"
+                                                >
+                                                    <div class="div-size">
+                                                        <span
+                                                            class="main-wish-sellect-button-span"
+                                                            >전체</span
+                                                        >
+                                                        <svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            viewBox="0 0 24 24"
+                                                            class="main-comment-info-button-svg"
+                                                        >
+                                                            <path
+                                                                fill-rule="evenodd"
+                                                                clip-rule="evenodd"
+                                                                d="M3.27 8.42a1.076 1.076 0 0 1 1.587-.13L12 14.832l7.143-6.544a1.076 1.076 0 0 1 1.586.13 1.26 1.26 0 0 1-.122 1.696L12 18l-8.607-7.885A1.26 1.26 0 0 1 3.27 8.42Z"
+                                                            ></path>
+                                                        </svg>
+                                                    </div>
+                                                </button>
+                                                <!-- 공개 비공개 모달창 -->
+                                                <ul
+                                                    id="admin-message-modal-search"
+                                                    class="hidden"
+                                                >
+                                                    <button
+                                                        class="admin-message-modal-search-receive"
                                                     >
-                                                </div>
-                                            </button>
-                                            <!-- 공개 비공개 모달창 -->
-                                            <ul
-                                                id="admin-message-modal-search"
-                                                class="hidden"
-                                            >
-                                                <button
-                                                    class="admin-message-modal-search-receive"
-                                                >
-                                                    활동중/정지
-                                                </button>
-                                                <button
-                                                    class="admin-message-modal-search-send"
-                                                >
-                                                    활동중
-                                                </button>
-                                                <button
-                                                    class="admin-message-modal-search-donotreceive"
-                                                >
-                                                    정지
-                                                </button>
-                                            </ul>
+                                                        전체
+                                                    </button>
+                                                    <button
+                                                        class="admin-message-modal-search-send"
+                                                    >
+                                                        활동중
+                                                    </button>
+                                                    <button
+                                                        class="admin-message-modal-search-donotreceive"
+                                                    >
+                                                        정지
+                                                    </button>
+                                                </ul>
+                                            </div>
                                         </div>
+                                    </div>
+                                    <div class="main-user-list-ston">
+                                        <button
+                                            class="member-user-list-button toggle-button"
+                                        >
+                                            상태변경
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                             <!-- 전체 밑에 상태, 이름 등등 나타내는곳 -->
                             <div class="main-user-status">
                                 <!-- 여기에 넣으면 추가할수있습니다(가로넓이 width만 수정)) -->
-                                <div class="main-user-status-name">이름</div>
-                                <div class="main-user-status-date">가입일</div>
-                                <div class="main-user-status-pay">
+                                <div class="main-user-status-name">
+                                    전체선택
+                                </div>
+                                <div class="main-user-status-date">이름</div>
+                                <div class="main-user-status-pay">가입일</div>
+                                <div class="main-user-status-recent">
                                     개설 모임 수
                                 </div>
-                                <div class="main-user-status-recent">
+                                <div class="main-user-status-paycount">
                                     참여중인 모임 수
                                 </div>
-                                <div class="main-user-status-paycount">
+                                <div class="main-user-status-status">
                                     누적 활동 수
                                 </div>
-                                <div class="main-user-status-status">상태</div>
-                                <div class="main-user-status-stop">
-                                    활동정지
-                                </div>
+                                <div class="main-user-status-stop">상태</div>
                             </div>
                         </div>
                         <!-- 맴버 정보 들어가야함 (지금은 없고 나중에어떤식인지 배워봅시다.) -->
                         <!-- 일단 하나 만들어봅시다. -->
-                        <li class="main-user-list">
+                        <li class="main-user-list" data-number="1">
+                            <div class="main-user-list-check">
+                                <input
+                                    type="checkbox"
+                                    class="main-comment-list-checkbox"
+                                />
+                            </div>
                             <div class="main-user-list-name">조관익</div>
                             <div class="main-user-list-status">23.02.01</div>
                             <div class="main-user-list-date">0</div>
@@ -279,16 +305,14 @@
                             <div data-id="1" class="main-user-list-message">
                                 활동중
                             </div>
-                            <div class="main-user-list-ston">
-                                <button
-                                    class="member-user-list-button toggle-button"
-                                    data-target="1"
-                                >
-                                    상태변경
-                                </button>
-                            </div>
                         </li>
-                        <li class="main-user-list">
+                        <li class="main-user-list" data-number="2">
+                            <div class="main-user-list-check">
+                                <input
+                                    type="checkbox"
+                                    class="main-comment-list-checkbox"
+                                />
+                            </div>
                             <div class="main-user-list-name">박씨</div>
                             <div class="main-user-list-status">23.01.01</div>
                             <div class="main-user-list-date">4</div>
@@ -297,16 +321,14 @@
                             <div data-id="2" class="main-user-list-message">
                                 활동중
                             </div>
-                            <div class="main-user-list-ston">
-                                <button
-                                    class="member-user-list-button toggle-button"
-                                    data-target="2"
-                                >
-                                    상태변경
-                                </button>
-                            </div>
                         </li>
-                        <li class="main-user-list">
+                        <li class="main-user-list" data-number="3">
+                            <div class="main-user-list-check">
+                                <input
+                                    type="checkbox"
+                                    class="main-comment-list-checkbox"
+                                />
+                            </div>
                             <div class="main-user-list-name">김씨</div>
                             <div class="main-user-list-status">23.05.01</div>
                             <div class="main-user-list-date">2</div>
@@ -314,14 +336,6 @@
                             <div class="main-user-list-paycount">0</div>
                             <div data-id="3" class="main-user-list-message">
                                 활동중
-                            </div>
-                            <div class="main-user-list-ston">
-                                <button
-                                    class="member-user-list-button toggle-button"
-                                    data-target="3"
-                                >
-                                    상태변경
-                                </button>
                             </div>
                         </li>
 

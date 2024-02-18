@@ -1,5 +1,14 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
+[type=checkbox]:checked {
+    background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%270%200%2016%2016%27%20fill%3D%27%23fff%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cpath%20d%3D%27M12.207%204.793a1%201%200%200%201%200%201.414l-5%205a1%201%200%200%201-1.414%200l-2-2a1%201%200%200%201%201.414-1.414L6.5%209.086l4.293-4.293a1%201%200%200%201%201.414%200z%27%2F%3E%3C%2Fsvg%3E');
+    border-color: transparent;
+    background-color: #CE201B;
+    background-size: 100% 100%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+
 input {
     &::-webkit-search-decoration,
     &::-webkit-search-cancel-button,
@@ -237,7 +246,7 @@ body {
 
     border-style: solid;
     border-width: 1px;
-    border-radius: 16px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     height: 32px;
@@ -285,7 +294,7 @@ body {
 .main-message{
     padding-left: 12px;
     padding-right: 12px;
-    border-radius: 8px;
+    border-radius: 6px;
     align-items: center;
     height: 40px;
     display: flex;
@@ -331,7 +340,7 @@ body {
 .main-message-other{
     padding-left: 12px;
     padding-right: 12px;
-    border-radius: 8px;
+    border-radius: 6px;
     align-items: center;
     height: 40px;
     display: flex;
@@ -342,7 +351,7 @@ body {
     background-color: #FFF0EE;
     padding-left: 12px;
     padding-right: 12px;
-    border-radius: 8px;
+    border-radius: 6px;
     align-items: center;
     height: 40px;
     display: flex;
@@ -366,7 +375,7 @@ body {
     row-gap: 0;
     column-gap: 16px;
     grid-template-columns: repeat(12,minmax(0,1fr));
-    width: 944px;
+    width: 1375px;
     display: grid;
     margin-left: auto;
     margin-right: auto;
@@ -410,7 +419,7 @@ body {
     padding-left: 20px;
     padding-right: 20px;
     border-width: 1px;
-    border-radius: 20px;
+    border-radius: 6px;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -442,7 +451,7 @@ body {
 .main-message-info-button{
     outline: 2px solid transparent;
     outline-offset: 2px;
-    border-radius: 16px;
+    border-radius: 6px;
     align-items: center;
     max-width: 164px;
     display: flex;
@@ -591,7 +600,7 @@ color: #9ca3af;
     padding-left: 16px;
     padding-right: 16px;
     border-width: 1px;
-    border-radius: 16px;
+    border-radius: 6px;
     align-items: center;
     max-width: 164px;
     height: 32px;
@@ -637,7 +646,7 @@ color: #9ca3af;
     color: #b9b9bb;
     fill: #b9b9bb;
     background-color: #f3f3f4;
-    border-radius: 16px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     height: 32px;
@@ -686,6 +695,7 @@ color: #9ca3af;
 }
 
 .main-message-status-name{
+    cursor: pointer;
     justify-content: flex-start;
     align-items: center;
     flex-shrink: 0;
@@ -817,7 +827,7 @@ color: #9ca3af;
 }
 
 .main-message-list-name{
-    width: 148px;
+    width: 214px;
     justify-content: flex-start;
     align-items: center;
     flex-shrink: 0;
@@ -830,7 +840,7 @@ color: #9ca3af;
 }
 
 .main-message-list-status{
-    width: 138px;
+    width: 214px;
     justify-content: flex-start;
     align-items: center;
     flex-shrink: 0;
@@ -843,7 +853,7 @@ color: #9ca3af;
 }
 
 .main-message-list-date{
-    width: 145px;
+    width: 219px;
     justify-content: flex-start;
     align-items: center;
     flex-shrink: 0;
@@ -856,7 +866,7 @@ color: #9ca3af;
 }
 
 .main-message-list-pay{
-    width: 140px;
+    width: 211px;
     justify-content: flex-start;
     align-items: center;
     flex-shrink: 0;
@@ -869,7 +879,7 @@ color: #9ca3af;
 }
 
 .main-message-list-paycount{
-    width: 105px;
+    width: 140px;
     justify-content: flex-start;
     align-items: center;
     flex-shrink: 0;
@@ -888,41 +898,39 @@ color: #9ca3af;
 }
 
 .member-user-list-button{
-    width: 90px;
-    border-style: solid;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
     border-width: 1px;
-    border-radius: 20px;
-    justify-content: center;
+    border-radius: 6px;
     align-items: center;
-    height: 40px;
+    max-width: 164px;
+    height: 32px;
     display: flex;
-    position: relative;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 16px;
     border-color: rgba(0,0,0,.1);
-    color: #fff;
-    fill: #fff;
-    background-color: #CE201B;
+    background-color: #fff;
     -webkit-appearance: button;
     background-image: none;
     cursor: pointer;
     text-transform: none;
     font-family: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: inherit;
+    color: inherit;
     margin: 0;
-    padding: 0;
-    padding-left: 20px;
-    padding-right: 20px;
-
 }
 
 .member-user-list-button:hover{
-border-color: #9F0D08;
-background-color: #9F0D08;
+border-color: #FFF0EE;
+background-color: #FFF0EE;
 }
 
 .main-message-list-check{
-    width: 187px;
+    width: 255px;
     justify-content: flex-start;
     align-items: center;
     flex-shrink: 0;
@@ -938,7 +946,7 @@ background-color: #9F0D08;
     width: 102px;
     border-style: solid;
     border-width: 1px;
-    border-radius: 20px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     height: 40px;
@@ -977,7 +985,7 @@ background-color: #9F0D08;
     --tw-shadow-colored: 0px 2px 8px var(--tw-shadow-color);
     padding: 32px;
     border-width: 1px;
-    border-radius: 16px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -1010,13 +1018,16 @@ background-color: #9F0D08;
     background-color: #f3f3f4;
     padding-left: 12px;
     padding-right: 12px;
-    border-radius: 8px;
+    border-radius: 6px;
     align-items: center;
     margin-bottom: 8px;
     border: none;
     outline: none;
     max-height: 500px;
     height: 100px;
+    overflow: auto;
+    resize: none;
+
   }
   
   .admin-user-modal-text{
@@ -1029,12 +1040,14 @@ background-color: #9F0D08;
     background-color: #f3f3f4;
     padding-left: 12px;
     padding-right: 12px;
-    border-radius: 8px;
+    border-radius: 6px;
     align-items: center;
     margin-bottom: 8px;
     border: none;
     outline: none;
     max-height: 500px;
+    resize: none;
+    overflow: auto;
   }
   
   .admin-user-modal-title{
@@ -1064,7 +1077,7 @@ background-color: #9F0D08;
   
   .admin-user-modal-left-button{
   
-    border-radius: 20px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -1097,7 +1110,7 @@ background-color: #9F0D08;
   .admin-user-modal-right-button{
     padding-left: 16px;
     padding-right: 16px;
-    border-radius: 20px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -1151,7 +1164,7 @@ background-color: #9F0D08;
     --tw-shadow-colored: 0px 2px 8px var(--tw-shadow-color);
     padding: 32px;
     border-width: 1px;
-    border-radius: 16px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -1187,7 +1200,7 @@ background-color: #9F0D08;
     background-color: #f3f3f4;
     padding-left: 12px;
     padding-right: 12px;
-    border-radius: 8px;
+    border-radius: 6px;
     align-items: center;
     margin-bottom: 8px;
     border: none;
@@ -1223,7 +1236,7 @@ background-color: #9F0D08;
   
   .admin-message-modal-left-button{
   
-    border-radius: 20px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -1263,7 +1276,7 @@ background-color: #9F0D08;
   .admin-message-modal-right-button{
     padding-left: 16px;
     padding-right: 16px;
-    border-radius: 20px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -1318,7 +1331,7 @@ background-color: #9F0D08;
     --tw-shadow-colored: 0px 2px 8px var(--tw-shadow-color);
     padding: 6px;
     border-width: 1px;
-    border-radius: 16px;
+    border-radius: 6px;
     justify-content: center;
 
     display: flex;
@@ -1342,7 +1355,7 @@ background-color: #9F0D08;
   .admin-message-modal-search-send{
     border-style: solid;
 
-    border-radius: 16px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     height: 32px;
@@ -1375,7 +1388,7 @@ background-color: #9F0D08;
   .admin-message-modal-search-receive{
     border-style: solid;
 
-    border-radius: 16px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     height: 32px;
@@ -1463,7 +1476,7 @@ background-color: #9F0D08;
 margin-left: 16px;}
 
 .main-user-bottom{
-    border-radius: 9999px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     width: 32px;
@@ -1524,6 +1537,7 @@ margin-left: 16px;}
 
  .main-wish-sellect{
     /* column-gap: 12px; 박스 더 넣을거면 키면 됩니다. */
+    padding-right: 5px;
     display: flex;
     align-items: center;
 }
@@ -1545,7 +1559,7 @@ margin-left: 16px;}
     padding-left: 16px;
     padding-right: 16px;
     border-width: 1px;
-    border-radius: 16px;
+    border-radius: 6px;
     align-items: center;
     max-width: 164px;
     height: 32px;
@@ -1565,7 +1579,8 @@ margin-left: 16px;}
 
 }
 .div-size{
-    width: 66px;
+    width: 65px;
+    display: flex;
 
 }
 
@@ -1709,9 +1724,9 @@ margin-left: 16px;}
     padding-top: 8px;
     padding-bottom: 8px;
     padding-left: 16px;
-    padding-right: 16px;
+
     border-width: 1px;
-    border-radius: 16px;
+    border-radius: 6px;
     align-items: center;
     max-width: 164px;
     height: 32px;
@@ -1730,10 +1745,7 @@ margin-left: 16px;}
     margin: 0;
 
 }
-.div-size{
-    width: 66px;
 
-}
 
 .main-wish-sellect-button-span{
     white-space: nowrap;
@@ -1752,7 +1764,7 @@ margin-left: 16px;}
     --tw-shadow-colored: 0px 2px 8px var(--tw-shadow-color);
     padding: 6px;
     border-width: 1px;
-    border-radius: 16px;
+    border-radius: 6px;
     justify-content: center;
 
     display: flex;
@@ -1762,13 +1774,11 @@ margin-left: 16px;}
     border-color: #e6e6e7;
     background-color: #fff;
     top: 51%;
-    left: -6%;
-
-
+    left: 0%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 110px;
+    width: 88px;
     height: 70px;
     
   }
@@ -1780,7 +1790,7 @@ margin-left: 16px;}
   .admin-message-modal-search-send-add{
     border-style: solid;
 
-    border-radius: 16px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     height: 32px;
@@ -1807,7 +1817,7 @@ margin-left: 16px;}
 
   .admin-message-modal-search-donotreceive-add{    
     border-style: solid;
-    border-radius: 16px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     height: 32px;
@@ -1833,7 +1843,7 @@ margin-left: 16px;}
 .admin-message-modal-search-receive-add{
     border-style: solid;
 
-    border-radius: 16px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     height: 32px;
@@ -1887,3 +1897,69 @@ margin-left: 16px;}
     border-color: #FFF0EE;
     background-color: #FFF0EE;
     }
+
+    .main-comment-info-button-svgg{
+        flex-shrink: 0;
+        width: 10px;
+        height: 10px;
+        margin-left: 4px;
+        display: block;
+        vertical-align: middle;
+        margin-top: 4px;
+        position: fixed;
+        right: 242px;
+      }
+
+      .main-comment-info-button-svg{
+        flex-shrink: 0;
+        width: 10px;
+        height: 10px;
+        margin-left: 4px;
+        display: block;
+        vertical-align: middle;
+
+      }
+
+      .main-comment-list-check{
+        width: 216px;
+        justify-content: flex-start;
+        align-items: center;
+        flex-shrink: 0;
+        display: flex;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 18px;
+        color: #1d1d1e;
+        fill: #1d1d1e;
+    }
+
+    .main-comment-list-checkbox{
+        height: 1rem;
+        width: 1rem;
+        cursor: pointer;
+        border-radius: 0.25rem;
+        border-width: 1px;
+        border-color: rgba(0,0,0,.1);
+        --tw-bg-opacity: 1;
+        background-color: rgb(255 255 255/var(--tw-bg-opacity));
+        --tw-text-opacity: 1;
+        color: rgb(92 63 191/var(--tw-text-opacity));
+        appearance: none;
+        padding: 0;
+        -webkit-print-color-adjust: exact;
+        display: inline-block;
+        vertical-align: middle;
+        background-origin: border-box;
+        user-select: none;
+        flex-shrink: 0;
+        --tw-shadow: 0 0 #0000;
+        font-family: inherit;
+        font-size: 100%;
+        font-weight: inherit;
+        line-height: inherit;
+        margin: 0;
+      }
+
+      .main-bet{
+        display: flex;
+      }

@@ -160,7 +160,7 @@
                             <!-- 유저관리, 검색하는곳 -->
                             <header class="main-user-info-text">
                                 <h1 class="main-user-info-tag">축제 관리</h1>
-                                <div>
+                                <div class="main-bet">
                                     <div class="main-user-info-seach">
                                         <label class="main-user-info-label">
                                             <div
@@ -179,6 +179,17 @@
                                                                 class="main-message-info-button-text"
                                                                 >축제제목</span
                                                             >
+                                                            <svg
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                viewBox="0 0 24 24"
+                                                                class="main-comment-info-button-svg"
+                                                            >
+                                                                <path
+                                                                    fill-rule="evenodd"
+                                                                    clip-rule="evenodd"
+                                                                    d="M3.27 8.42a1.076 1.076 0 0 1 1.587-.13L12 14.832l7.143-6.544a1.076 1.076 0 0 1 1.586.13 1.26 1.26 0 0 1-.122 1.696L12 18l-8.607-7.885A1.26 1.26 0 0 1 3.27 8.42Z"
+                                                                ></path>
+                                                            </svg>
                                                         </button>
                                                         <div>
                                                             <!-- 검색창 모달 -->
@@ -245,40 +256,55 @@
                                 </div>
                                 <!-- 2번째 -->
                                 <!-- 일단은 없애요^^ -->
-                                <div class="main-user-total-search">
-                                    <div class="main-user-total-member-status">
+                                <div class="main-bet">
+                                    <div class="main-user-total-search">
                                         <div
-                                            class="main-user-total-member-list"
+                                            class="main-user-total-member-status"
                                         >
-                                            <button
-                                                class="main-user-total-button"
+                                            <div
+                                                class="main-user-total-member-list"
                                             >
-                                                <span
-                                                    class="main-user-total-span"
-                                                    >축제 작성하기</span
+                                                <button
+                                                    class="main-user-total-button"
                                                 >
-                                            </button>
+                                                    <span
+                                                        class="main-user-total-span"
+                                                        >축제 작성하기</span
+                                                    >
+                                                </button>
+                                            </div>
                                         </div>
+                                    </div>
+                                    <div class="main-user-list-ston">
+                                        <button
+                                            class="member-user-list-button toggle-button"
+                                        >
+                                            삭제하기
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                             <div class="main-user-status">
                                 <!-- 여기에 넣으면 추가할수있습니다(가로넓이 width만 수정)) -->
+                                <div class="main-user-status-check">
+                                    전체선택
+                                </div>
                                 <div class="main-user-status-name">
                                     축제제목
                                 </div>
                                 <div class="main-user-status-date">시작일</div>
                                 <div class="main-user-status-pay">종료일</div>
                                 <div class="main-user-status-recent">장소</div>
-                                <div class="main-user-status-paycount">
-                                    수정하기
-                                </div>
-                                <div class="main-user-status-status">
-                                    삭제하기
-                                </div>
+                                <div class="main-user-status-paycount"></div>
                             </div>
                         </div>
                         <li class="main-user-list" data-id="1">
+                            <div class="main-user-list-check">
+                                <input
+                                    type="checkbox"
+                                    class="main-comment-list-checkbox"
+                                />
+                            </div>
                             <div class="main-user-list-name">빙어축제</div>
                             <div class="main-user-list-status">23.02.01</div>
                             <div class="main-user-list-date">23.02.03</div>
@@ -291,16 +317,14 @@
                                     상세보기
                                 </button>
                             </div>
-                            <div class="main-user-list-ston">
-                                <button
-                                    class="member-user-list-button toggle-button"
-                                    data-target="1"
-                                >
-                                    삭제하기
-                                </button>
-                            </div>
                         </li>
                         <li class="main-user-list" data-id="2">
+                            <div class="main-user-list-check">
+                                <input
+                                    type="checkbox"
+                                    class="main-comment-list-checkbox"
+                                />
+                            </div>
                             <div class="main-user-list-name">송어축제</div>
                             <div class="main-user-list-status">23.12.01</div>
                             <div class="main-user-list-date">23.12.03</div>
@@ -311,14 +335,6 @@
                                     data-target="2"
                                 >
                                     상세보기
-                                </button>
-                            </div>
-                            <div class="main-user-list-ston">
-                                <button
-                                    class="member-user-list-button toggle-button"
-                                    data-target="2"
-                                >
-                                    삭제하기
                                 </button>
                             </div>
                         </li>
@@ -427,17 +443,17 @@
             </div>
             <!-- 수정 모달창 -->
             <div id="admin-post-modal" class="hidden">
-                <h4 class="admin-post-modal-title">홍보글 수정</h4>
+                <h4 class="admin-post-modal-title">홍보글 상세정보</h4>
                 <div class="admin-post-modal-warp">
                     <!-- 여기서부터 안에 들어가는거 하나씩 / 각각 빈 div하나 만들고 안에서 생성 -->
                     <div class="titleqq">
                         <p class="admin-post-modal-title-name">제목</p>
                         <label class="admin-post-modal-title-label">
                             <input
+                                readonly
                                 oninput="updateButtonStatus()"
                                 type="text"
                                 class="admin-post-modal-title-input"
-                                placeholder="제목을 입력해주세요."
                                 value
                             />
                         </label>
@@ -463,9 +479,9 @@
                         <p class="admin-post-modal-content-name">내용</p>
                         <label class="admin-post-modal-content-label">
                             <textarea
+                                readonly
                                 oninput="updateButtonStatus()"
                                 class="admin-post-modal-content-input"
-                                placeholder="내용을 입력해주세요."
                                 value
                             ></textarea>
                         </label>
@@ -494,32 +510,13 @@
                                 <img
                                     id="main-post-photo-img"
                                     class="admin-post-modal-thumbnail-img"
-                                    src="/staticfiles/images/main/festival-img03.jpg"
+                                    src="/staticfiles/images/teenplay_logo/logo3.png"
                                     alt=""
                                 />
                             </div>
-                            <div class="admin-post-modal-thumbnail-button">
-                                <button
-                                    class="admin-post-modal-thumbnail-button-insert"
-                                >
-                                    이미지 업로드
-                                    <label
-                                        class="admin-post-modal-thumbnail-label"
-                                    >
-                                        <input
-                                            id="imageInput"
-                                            accept="image/png,image/jpeg,image/jpg"
-                                            type="file"
-                                            class="admin-post-modal-thumbnail-input"
-                                        />
-                                    </label>
-                                </button>
-                            </div>
-                            <p class="admin-post-modal-thumbnail-info">
-                                <span
-                                    >파일 형식은 jpg 또는 png로올려주세요</span
-                                >
-                            </p>
+                            <div
+                                class="admin-post-modal-thumbnail-button"
+                            ></div>
                         </div>
                         <!-- 여기아래에 안내문 적어주기 -->
                     </div>
@@ -530,7 +527,7 @@
                                 oninput="updateButtonStatus()"
                                 type="text"
                                 class="admin-post-modal-pay-input"
-                                placeholder="이용요금을 입력해주세요."
+                                readonly
                                 value
                             />
                         </label>
@@ -559,7 +556,7 @@
                                 oninput="updateButtonStatus()"
                                 type="text"
                                 class="admin-post-modal-adress-input"
-                                placeholder="주소를 입력해주세요."
+                                readonly
                                 value
                             />
                         </label>
@@ -588,7 +585,7 @@
                                 oninput="updateButtonStatus()"
                                 type="text"
                                 class="admin-post-modal-adressadd-input"
-                                placeholder="상세주소를 입력해주세요."
+                                readonly
                                 value
                             />
                         </label>
@@ -617,7 +614,7 @@
                                 oninput="updateButtonStatus()"
                                 type="text"
                                 class="admin-post-modal-place-input"
-                                placeholder="행사장소를 입력해주세요."
+                                readonly
                                 value
                             />
                         </label>
@@ -646,7 +643,7 @@
                                 oninput="updateButtonStatus()"
                                 type="text"
                                 class="admin-post-modal-sttime-input"
-                                placeholder="행사 시작일을 입력해주세요."
+                                readonly
                                 value
                             />
                         </label>
@@ -675,7 +672,7 @@
                                 oninput="updateButtonStatus()"
                                 type="text"
                                 class="admin-post-modal-endtime-input"
-                                placeholder="행사 종료일을 입력해주세요."
+                                readonly
                                 value
                             />
                         </label>
@@ -704,7 +701,7 @@
                                 oninput="updateButtonStatus()"
                                 type="text"
                                 class="admin-post-modal-time-input"
-                                placeholder="행사 시간을 입력해주세요."
+                                readonly
                                 value
                             />
                         </label>
@@ -733,7 +730,7 @@
                                 oninput="updateButtonStatus()"
                                 type="text"
                                 class="admin-post-modal-opne-input"
-                                placeholder="주최자 정보를 입력해주세요."
+                                readonly
                                 value
                             />
                         </label>
@@ -762,7 +759,7 @@
                                 oninput="updateButtonStatus()"
                                 type="text"
                                 class="admin-post-modal-phone-input"
-                                placeholder="주최자 정보를 입력해주세요."
+                                readonly
                                 value
                             />
                         </label>
@@ -791,7 +788,7 @@
                                 oninput="updateButtonStatus()"
                                 type="text"
                                 class="admin-post-modal-give-input"
-                                placeholder="주최자 정보를 입력해주세요."
+                                readonly
                                 value
                             />
                         </label>
@@ -820,7 +817,7 @@
                                 oninput="updateButtonStatus()"
                                 type="text"
                                 class="admin-post-modal-url-input"
-                                placeholder="주최자 url을 입력해주세요."
+                                readonly
                                 value
                             />
                         </label>
@@ -849,15 +846,7 @@
                             class="admin-user-modal-left-detail-button"
                             id="modalCloseButton"
                         >
-                            취소
-                        </button>
-                    </div>
-                    <div class="admin-user-modal-right">
-                        <button
-                            class="admin-user-modal-right-detail-button"
-                            id="modalApplyButton"
-                        >
-                            수정하기
+                            닫기
                         </button>
                     </div>
                 </div>
@@ -870,6 +859,5 @@
     <script src="/staticfiles/js/admin/web/festival/listview/admin-festival-listview-bottem-web.js"></script>
     <script src="/staticfiles/js/admin/web/festival/listview/admin-festival-listview-modal-web.js"></script>
     <script src="/staticfiles/js/admin/web/festival/listview/admin-festival-listview-button-web.js"></script>
-    <script src="/staticfiles/js/admin/web/festival/listview/admin-festival-listview-redbox-web.js"></script>
     <script src="/staticfiles/js/admin/web/festival/listview/admin-festival-listview-search-web.js"></script>
 </html>

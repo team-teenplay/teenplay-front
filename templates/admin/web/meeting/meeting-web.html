@@ -206,31 +206,42 @@
                                 </div>
                                 <!-- 2번째 -->
                                 <!-- 일단은 없애요^^ -->
+                                <div class="main-user-list-ston">
+                                    <button
+                                        class="member-user-list-button toggle-button"
+                                    >
+                                        삭제하기
+                                    </button>
+                                </div>
                             </div>
                             <div class="main-user-status">
                                 <!-- 여기에 넣으면 추가할수있습니다(가로넓이 width만 수정)) -->
                                 <div class="main-user-status-name">
-                                    모임이름
+                                    전체선택
                                 </div>
-                                <div class="main-user-status-pay">구성원수</div>
+                                <div class="main-user-status-pay">모임이름</div>
                                 <div class="main-user-status-recent">
-                                    누적 활동수
+                                    구성원수
                                 </div>
                                 <div class="main-user-status-count">
-                                    진행중인 활동수
+                                    누적 활동수
                                 </div>
                                 <div class="main-user-status-endcount">
-                                    종료된 활동수
+                                    진행중인 활동수
                                 </div>
                                 <div class="main-user-status-paycount">
-                                    수정하기
+                                    종료된 활동수
                                 </div>
-                                <div class="main-user-status-status">
-                                    삭제하기
-                                </div>
+                                <div class="main-user-status-status"></div>
                             </div>
                         </div>
                         <li class="main-user-list" data-id="1">
+                            <div class="main-user-list-check">
+                                <input
+                                    type="checkbox"
+                                    class="main-comment-list-checkbox"
+                                />
+                            </div>
                             <div class="main-user-list-name">단풍구름</div>
                             <div class="main-user-list-date">21</div>
                             <div class="main-user-list-pay">3</div>
@@ -244,16 +255,14 @@
                                     상세보기
                                 </button>
                             </div>
-                            <div class="main-user-list-ston">
-                                <button
-                                    class="member-user-list-button toggle-button"
-                                    data-target="1"
-                                >
-                                    삭제하기
-                                </button>
-                            </div>
                         </li>
                         <li class="main-user-list" data-id="2">
+                            <div class="main-user-list-check">
+                                <input
+                                    type="checkbox"
+                                    class="main-comment-list-checkbox"
+                                />
+                            </div>
                             <div class="main-user-list-name">우리둥지</div>
                             <div class="main-user-list-date">33</div>
                             <div class="main-user-list-pay">11</div>
@@ -265,14 +274,6 @@
                                     data-target="2"
                                 >
                                     상세보기
-                                </button>
-                            </div>
-                            <div class="main-user-list-ston">
-                                <button
-                                    class="member-user-list-button toggle-button"
-                                    data-target="2"
-                                >
-                                    삭제하기
                                 </button>
                             </div>
                         </li>
@@ -380,7 +381,7 @@
             </div>
             <!-- 수정 모달창 -->
             <div id="admin-post-modal" class="hidden">
-                <h4 class="admin-post-modal-title">모임관리 수정</h4>
+                <h4 class="admin-post-modal-title">모임관리 상세보기</h4>
                 <div class="admin-post-modal-warp">
                     <!-- 여기서부터 안에 들어가는거 하나씩 / 각각 빈 div하나 만들고 안에서 생성 -->
                     <div class="titleqq">
@@ -390,7 +391,7 @@
                                 oninput="updateButtonStatus()"
                                 type="text"
                                 class="admin-post-modal-title-input"
-                                placeholder="모임이름을 입력해주세요."
+                                readonly
                                 value
                             />
                         </label>
@@ -418,7 +419,7 @@
                             <textarea
                                 oninput="updateButtonStatus()"
                                 class="admin-post-modal-content-input"
-                                placeholder="모임소개를 입력해주세요."
+                                readonly
                                 value
                             ></textarea>
                         </label>
@@ -449,32 +450,10 @@
                                 <img
                                     id="main-post-photo-img"
                                     class="admin-post-modal-thumbnail-img"
-                                    src="/staticfiles/images/main/festival-img03.jpg"
+                                    src="/staticfiles/images/teenplay_logo/logo3.png"
                                     alt=""
                                 />
                             </div>
-                            <div class="admin-post-modal-thumbnail-button">
-                                <button
-                                    class="admin-post-modal-thumbnail-button-insert"
-                                >
-                                    이미지 업로드
-                                    <label
-                                        class="admin-post-modal-thumbnail-label"
-                                    >
-                                        <input
-                                            id="imageInput"
-                                            accept="image/png,image/jpeg,image/jpg"
-                                            type="file"
-                                            class="admin-post-modal-thumbnail-input"
-                                        />
-                                    </label>
-                                </button>
-                            </div>
-                            <p class="admin-post-modal-thumbnail-info">
-                                <span
-                                    >파일 형식은 jpg 또는 png로올려주세요</span
-                                >
-                            </p>
                         </div>
                     </div>
                     <div>
@@ -486,32 +465,10 @@
                                 <img
                                     id="main-post-photo-backimg"
                                     class="admin-post-modal-thumbnail-img"
-                                    src="/staticfiles/images/main/festival-img03.jpg"
+                                    src="/staticfiles/images/teenplay_logo/logo3.png"
                                     alt=""
                                 />
                             </div>
-                            <div class="admin-post-modal-thumbnailback-button">
-                                <button
-                                    class="admin-post-modal-thumbnailback-button-insert"
-                                >
-                                    이미지 업로드
-                                    <label
-                                        class="admin-post-modal-thumbnailback-label"
-                                    >
-                                        <input
-                                            id="backimageInput"
-                                            accept="image/png,image/jpeg,image/jpg"
-                                            type="file"
-                                            class="admin-post-modal-thumbnailback-input"
-                                        />
-                                    </label>
-                                </button>
-                            </div>
-                            <p class="admin-post-modal-thumbnailback-info">
-                                <span
-                                    >파일 형식은 jpg 또는 png로올려주세요</span
-                                >
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -527,14 +484,6 @@
                             취소
                         </button>
                     </div>
-                    <div class="admin-user-modal-right">
-                        <button
-                            class="admin-user-modal-right-detail-button"
-                            id="modalApplyButton"
-                        >
-                            수정하기
-                        </button>
-                    </div>
                 </div>
             </div>
             <!-- 모달 뒷배경 -->
@@ -546,6 +495,5 @@
     <script src="/staticfiles/js/admin/web/meeting/admin-meeting-bottem-web.js"></script>
     <script src="/staticfiles/js/admin/web/meeting/admin-meeting-button-web.js"></script>
     <script src="/staticfiles/js/admin/web/meeting/admin-meeting-modal-web.js"></script>
-    <script src="/staticfiles/js/admin/web/meeting/admin-meeting-redbox-web.js"></script>
     <script src="/staticfiles/js/admin/web/meeting/admin-meeting-search-web.js"></script>
 </html>
