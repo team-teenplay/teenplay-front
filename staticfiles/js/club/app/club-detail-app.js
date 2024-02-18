@@ -329,9 +329,11 @@ const tpUploadBtn = document.querySelector(".club-detail-filter-upload-wrap");
 const tpModalCloseBtn = document.querySelector(".upload-modal-close-wrap");
 tpUploadBtn.addEventListener("click", () => {
     tpUploadModal.style.display = "block";
+    tpUploadBtn.style.display = "none";
 });
 tpModalCloseBtn.addEventListener("click", () => {
     tpUploadModal.style.display = "none";
+    tpUploadBtn.style.display = "flex";
 });
 
 // 파일 선택 클릭 시 파일 첨부가능하도록

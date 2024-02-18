@@ -486,6 +486,48 @@ button, input, optgroup, select, textarea {
     margin-top: 0;
 }
 
+.play-like-info-wrap {
+    bottom: calc(50% - 32px);
+    right: 16px;
+    position: absolute;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.play-like-count {
+    font-size: 10px;
+    --tw-text-opacity: 1;
+    color:rgb(255 255 255/var(--tw-text-opacity))
+}
+
+.play-like-btn {
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+    --tw-drop-shadow: drop-shadow(0 1px 2px rgba(0,0,0,.1)) drop-shadow(0 1px 1px rgba(0,0,0,.06));
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255/var(--tw-text-opacity));
+    align-items: center;
+    display: flex;
+}
+
+.play-like-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.play-like-icon:hover {
+    --tw-text-opacity: 1;
+    color: rgb(232 103 98/var(--tw-text-opacity));
+}
+
+.play-like-icon.full {
+    display: none;
+    --tw-text-opacity: 1;
+    color: rgb(232 103 98/var(--tw-text-opacity));
+}
+
 .play-writer-wrap {
     order: 6;
     display: flex;
