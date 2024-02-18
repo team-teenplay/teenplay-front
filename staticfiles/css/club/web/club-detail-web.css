@@ -252,27 +252,42 @@ button, input, optgroup, select, textarea {
 }
 
 .club-top-button.apply {
-    background-color: #CE201B;
+    /* background-color: #CE201B; */
+    background-color: #2563EB;
     --tw-bg-opacity: 1;
     color: rgb(255 255 255/var(--tw-bg-opacity));
 }
 
 .club-top-button.apply:hover {
-    background-color: #9F0D08;
+    /* background-color: #9F0D08; */
+    background-color: #245DCB;
 }
 
 .club-top-button.cancel {
     --tw-bg-opacity: 1;
-    background-color: #e1e1e1;
-    color: #878D91;
+    /* background-color: #e1e1e1; */
+    /* color: #878D91; */
+    /* background-color: #2563EB; */
+    background-color: #CE201B;
+    --tw-bg-opacity: 1;
+    color: rgb(255 255 255/var(--tw-bg-opacity));
 }
 
 .club-top-button.cancel:hover {
-    background-color: #c2c2c2;
+    /* background-color: #c2c2c2; */
+    /* background-color: #245DCB; */
+    background-color: #9F0D08;
 }
 
 .club-top-button.quit {
-    color: rgb(90 90 90)
+    /* color: rgb(90 90 90) */
+    background-color: #CE201B;
+    --tw-bg-opacity: 1;
+    color: rgb(255 255 255/var(--tw-bg-opacity));
+}
+
+.club-top-button.quit:hover {
+    background-color: #9F0D08;
 }
 
 .club-top-button-boxes {
@@ -821,6 +836,10 @@ button, input, optgroup, select, textarea {
     gap: 5px;
 }
 
+.club-teenplay-contents {
+    position: relative;
+}
+
 .club-teenplay-thumbnail-wrap {
     background-color: rgba(0,0,0,0.05);
     overflow: hidden;
@@ -842,6 +861,7 @@ button, input, optgroup, select, textarea {
     transition-property: translate, color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;
     transition-timing-function: cubic-bezier(.4,0,.2,1);
     transition-duration: .5s;
+    /* opacity: 0.8; */
 }
 
 .club-teenplay-thumbnail:hover {
@@ -860,7 +880,7 @@ button, input, optgroup, select, textarea {
     color: #0f0f0f;
     padding: 5px 0 0 0;
     margin: 0;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .club-teenplay-title-link {
@@ -886,8 +906,9 @@ button, input, optgroup, select, textarea {
 
 .club-teenplay-views-wrap {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .club-teenplay-views-container {
@@ -905,24 +926,40 @@ button, input, optgroup, select, textarea {
     max-width: 100%;
     flex-wrap: wrap;
     position: relative;
-    top: -10px;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+    top: -5px;
 }
 
 .club-teenplay-views {
     display: inline-block;
 }
 
+.club-teenplay-date-container {
+    color: #606060;
+    text-overflow: ellipsis;
+    white-space: normal;
+    margin-right: 12px;
+}
+
 .club-teenplay-delete-wrap {
     display: inline-block;
-    margin-right: 8px;
-    margin-bottom: 3px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    /* margin-right: 8px;
+    margin-bottom: 3px; */
+    background-image: linear-gradient(180deg,rgba(0,0,0,.4),transparent);
 }
 
 .club-teenplay-delete, .club-teenplay-delete-hover {
+    cursor: pointer;
     width: 20px;
     height: 20px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
 }
 
 .club-teenplay-delete-hover {
