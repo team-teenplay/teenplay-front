@@ -370,11 +370,9 @@ menu, ol, ul {
     line-height: 1.75rem;
 }
 
-.member-list-link:hover, .activity-activity-link:hover, .teenplay-notice-link:hover {
+.member-list-link:hover, .activity-notice-brief-link:hover, .activity-activity-link:hover, .teenplay-notice-link:hover {
     text-decoration-line: underline;
 }
-
-/* .activity-notice-brief-link:hover */
 
 .member-count, .activity-notice-count, .activity-recruiting-count, .ended-activities-count {
     font-weight: 300;
@@ -574,9 +572,14 @@ menu, ol, ul {
     display: flex;
 }
 
-.activity-activities-number, .activity-activities-hits, .activity-activity-number, .activity-activity-hits {
+.activity-activities-categorys, .activity-activity-categorys {
     min-width: min-content;
-    width: 25.333333%;
+    width: 14.333333%;
+}
+
+.activity-activities-name, .activity-activity-name {
+    min-width: min-content;
+    width: 49.333333%;
 }
 
 .activities-hits-box {
@@ -621,14 +624,15 @@ menu, ol, ul {
     display: block;
 } 
 
-.activity-activities-title {
+
+.activity-activities-place, .activity-activity-place {
     min-width: min-content;
-    width: 55.666667%;
+    width: 9.666667%;
 }
 
-.activity-activities-date, .activity-activities-open-date, .activity-activity-date, .activity-activity-open-date {
+.activity-activities-open-date, .activity-activity-open-date {
     min-width: min-content;
-    width: 16.666667%;
+    width: 33.666667%;
 }
 
 .activity-activities-contents {
@@ -649,11 +653,11 @@ menu, ol, ul {
     display: flex;
 }
 
-.activity-activity-title {
+.activity-activities-hits, .activity-activity-hits {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    width: 55.666667%;
+    width: 45.666667%;
 }
 
 .pagination-wrap {
