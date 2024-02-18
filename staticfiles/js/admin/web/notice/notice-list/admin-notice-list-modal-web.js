@@ -1,52 +1,61 @@
-// 모달창
-const modalOpenButtons = document.querySelectorAll(".member-user-list-button");
-const modalCloseButtons = document.querySelectorAll(
+const modalDeleteOpenButtons = document.querySelectorAll(
+    ".member-user-list-button"
+);
+const modalDeleteCloseButtons = document.querySelectorAll(
     ".admin-user-modal-left-button"
 );
-const modalAddCloseButtons = document.querySelectorAll(
+const modalDeleteAddCloseButtons = document.querySelectorAll(
     ".admin-user-modal-right-button"
 );
-const modal = document.getElementById("admin-user-modal");
-const modalBack = document.getElementById("admin-user-modal-backdrop");
 
-modalOpenButtons.forEach((button) => {
+const deletemodal = document.getElementById("admin-user-modal");
+const deletemodalBack = document.getElementById("admin-user-modal-backdrop");
+let currentTargetLi;
+
+modalDeleteCloseButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        deletemodal.classList.add("hidden");
+        deletemodalBack.classList.add("hidden");
+    });
+});
+
+modalDeleteOpenButtons.forEach((button) => {
     button.addEventListener("click", (event) => {
         const targetId = event.currentTarget.getAttribute("data-target");
-        currentTargetLi = document.querySelector(`li[data-id="${targetId}"]`);
+        currentTargetLi = document.querySelector(
+            `li[data-number="${targetId}"]`
+        );
 
         // 모달 열기
-        modal.classList.remove("hidden");
-        modalBack.classList.remove("hidden");
+        deletemodal.classList.remove("hidden");
+        deletemodalBack.classList.remove("hidden");
     });
 });
 
-modalCloseButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-        modal.classList.add("hidden");
-        modalBack.classList.add("hidden");
-    });
-});
-const confirmDeleteButtons = document.querySelectorAll(
-    ".admin-user-modal-right-button"
-);
+const deleteButton = document.querySelector(".admin-user-modal-right-button");
 
-if (confirmDeleteButtons.length > 0) {
-    confirmDeleteButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-            // 현재 대상 li 삭제
-            if (currentTargetLi) {
-                currentTargetLi.remove();
-                currentTargetLi = null;
-                updateTotalCount();
-            }
+deleteButton.addEventListener("click", () => {
+    const checkedItems = document.querySelectorAll(
+        ".main-comment-list-checkbox:checked"
+    );
 
-            // 모달 닫기
-            modal.classList.add("hidden");
-            modalBack.classList.add("hidden");
-        });
-        updateTotalCount();
+    checkedItems.forEach((checkbox) => {
+        const targetId = checkbox.closest("li").getAttribute("data-id");
+        const targetLi = document.querySelector(`li[data-id="${targetId}"]`);
+        if (targetLi) {
+            targetLi.remove();
+        }
     });
+
     updateTotalCount();
+
+    // 모달 닫기
+    deletemodal.classList.add("hidden");
+    deletemodalBack.classList.add("hidden");
+});
+
+function updateTotalCount() {
+    // 각종 업데이트 코드
 }
 
 // 수정모달
@@ -100,10 +109,12 @@ const searchText = document.querySelector(".main-wish-sellect-button-span");
 const searchadd = document.querySelector(
     ".admin-message-modal-search-donotreceive"
 );
+const path = document.querySelector(".main-comment-info-button-svg");
 // 검색 버튼 클릭 시 모달 열기
 searchOpen.addEventListener("click", (event) => {
     // 이벤트 전파를 막기 위해 stopPropagation() 호출
     event.stopPropagation();
+    path.setAttribute("transform", "rotate(180)");
     searchModal.classList.remove("hidden");
 });
 
@@ -111,17 +122,20 @@ searchOpen.addEventListener("click", (event) => {
 document.addEventListener("click", (event) => {
     if (event.target !== searchOpen && !searchModal.contains(event.target)) {
         // 클릭된 요소가 검색 버튼이 아니고 모달 창에 속하지 않으면 모달을 닫음
+        path.removeAttribute("transform");
         searchModal.classList.add("hidden");
     }
 });
 
 // "공개/비공개" 버튼 클릭 시 모달 닫고 텍스트 변경
 searchReceive.addEventListener("click", () => {
+    path.removeAttribute("transform");
     searchModal.classList.add("hidden");
     searchText.textContent = "카테고리";
 });
 // "공개" 버튼 클릭 시 모달 닫고 텍스트 변경
 searchSend.addEventListener("click", () => {
+    path.removeAttribute("transform");
     searchModal.classList.add("hidden");
     searchText.textContent = "공지사항";
 });
@@ -129,6 +143,7 @@ searchSend.addEventListener("click", () => {
 // "비공개" 버튼 클릭 시 모달 닫고 텍스트 변경
 
 searchadd.addEventListener("click", () => {
+    path.removeAttribute("transform");
     searchModal.classList.add("hidden");
     searchText.textContent = "자주묻는질문";
 });
@@ -196,3 +211,25 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 updateTotalCount();
+
+// 체크박스 채워주기
+document.addEventListener("DOMContentLoaded", function () {
+    const statusName = document.querySelector(".main-user-status-name");
+    const checkboxes = document.querySelectorAll(".main-comment-list-checkbox");
+
+    statusName.addEventListener("click", function () {
+        let allChecked = true;
+        checkboxes.forEach((checkbox) => {
+            if (!checkbox.checked) {
+                allChecked = false;
+                checkbox.checked = true;
+            }
+        });
+
+        if (allChecked) {
+            checkboxes.forEach((checkbox) => {
+                checkbox.checked = false;
+            });
+        }
+    });
+});

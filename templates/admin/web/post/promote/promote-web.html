@@ -222,6 +222,17 @@
                                                                 class="main-message-info-button-text-add"
                                                                 >모임이름</span
                                                             >
+                                                            <svg
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                viewBox="0 0 24 24"
+                                                                class="main-comment-info-button-svg"
+                                                            >
+                                                                <path
+                                                                    fill-rule="evenodd"
+                                                                    clip-rule="evenodd"
+                                                                    d="M3.27 8.42a1.076 1.076 0 0 1 1.587-.13L12 14.832l7.143-6.544a1.076 1.076 0 0 1 1.586.13 1.26 1.26 0 0 1-.122 1.696L12 18l-8.607-7.885A1.26 1.26 0 0 1 3.27 8.42Z"
+                                                                ></path>
+                                                            </svg>
                                                         </button>
                                                         <div>
                                                             <!-- 검색창 모달 -->
@@ -287,9 +298,19 @@
                                 </div>
                                 <!-- 2번째 -->
                                 <!-- 일단은 없애요^^ -->
+                                <div class="main-user-list-ston">
+                                    <button
+                                        class="member-user-list-button toggle-button"
+                                    >
+                                        삭제하기
+                                    </button>
+                                </div>
                             </div>
                             <div class="main-user-status">
                                 <!-- 여기에 넣으면 추가할수있습니다(가로넓이 width만 수정)) -->
+                                <div class="main-user-status-checkbox">
+                                    전체선택
+                                </div>
                                 <div class="main-user-status-name">
                                     모임이름
                                 </div>
@@ -299,15 +320,16 @@
                                 <div class="main-user-status-recent">
                                     조회수
                                 </div>
-                                <div class="main-user-status-paycount">
-                                    수정하기
-                                </div>
-                                <div class="main-user-status-status">
-                                    삭제하기
-                                </div>
+                                <div class="main-user-status-paycount"></div>
                             </div>
                         </div>
                         <li class="main-user-list" data-id="1">
+                            <div class="main-user-list-check">
+                                <input
+                                    type="checkbox"
+                                    class="main-comment-list-checkbox"
+                                />
+                            </div>
                             <div class="main-user-list-name">단풍구름</div>
                             <div class="main-user-list-date">내일 놀사람</div>
                             <div class="main-user-list-status">23.02.01</div>
@@ -321,37 +343,25 @@
                                     상세보기
                                 </button>
                             </div>
-                            <div class="main-user-list-ston">
-                                <button
-                                    class="member-user-list-button toggle-button"
-                                    data-target="1"
-                                >
-                                    삭제하기
-                                </button>
-                            </div>
                         </li>
                         <li class="main-user-list" data-id="2">
-                            <div class="main-user-list-name">우리둥지</div>
-                            <div class="main-user-list-date">
-                                맛집투어 가실분
+                            <div class="main-user-list-check">
+                                <input
+                                    type="checkbox"
+                                    class="main-comment-list-checkbox"
+                                />
                             </div>
-                            <div class="main-user-list-status">23.12.01</div>
-                            <div class="main-user-list-pay">10</div>
-                            <div class="main-user-list-comment">0</div>
+                            <div class="main-user-list-name">우리둥지</div>
+                            <div class="main-user-list-date">여행갈사람!</div>
+                            <div class="main-user-list-status">23.02.03</div>
+                            <div class="main-user-list-pay">5</div>
+                            <div class="main-user-list-comment">10</div>
                             <div class="main-user-list-detail">
                                 <button
                                     class="member-user-list-detail-button toggle-button"
                                     data-target="2"
                                 >
                                     상세보기
-                                </button>
-                            </div>
-                            <div class="main-user-list-ston">
-                                <button
-                                    class="member-user-list-button toggle-button"
-                                    data-target="2"
-                                >
-                                    삭제하기
                                 </button>
                             </div>
                         </li>
@@ -460,7 +470,7 @@
             </div>
             <!-- 수정 모달창 -->
             <div id="admin-post-modal" class="hidden">
-                <h4 class="admin-post-modal-title">홍보글 수정</h4>
+                <h4 class="admin-post-modal-title">홍보글 상세보기</h4>
                 <div class="admin-post-modal-warp">
                     <!-- 여기서부터 안에 들어가는거 하나씩 / 각각 빈 div하나 만들고 안에서 생성 -->
                     <div class="titleqq">
@@ -470,7 +480,7 @@
                                 oninput="updateButtonStatus()"
                                 type="text"
                                 class="admin-post-modal-title-input"
-                                placeholder="제목을 입력해주세요."
+                                readonly
                                 value
                             />
                         </label>
@@ -498,7 +508,7 @@
                             <textarea
                                 oninput="updateButtonStatus()"
                                 class="admin-post-modal-content-input"
-                                placeholder="내용을 입력해주세요."
+                                readonly
                                 value
                             ></textarea>
                         </label>
@@ -527,56 +537,23 @@
                                 <img
                                     id="main-post-photo-img"
                                     class="admin-post-modal-thumbnail-img"
-                                    src="/staticfiles/images/main/festival-img03.jpg"
+                                    src="/staticfiles/images/teenplay_logo/logo3.png"
                                     alt=""
                                 />
                             </div>
-                            <div class="admin-post-modal-thumbnail-button">
-                                <button
-                                    class="admin-post-modal-thumbnail-button-insert"
-                                >
-                                    이미지 업로드
-                                    <label
-                                        class="admin-post-modal-thumbnail-label"
-                                    >
-                                        <input
-                                            id="imageInput"
-                                            accept="image/png,image/jpeg,image/jpg"
-                                            type="file"
-                                            class="admin-post-modal-thumbnail-input"
-                                        />
-                                    </label>
-                                </button>
-                            </div>
-                            <p class="admin-post-modal-thumbnail-info">
-                                <span
-                                    >파일 형식은 jpg 또는 png로올려주세요</span
-                                >
-                            </p>
                         </div>
                         <!-- 여기아래에 안내문 적어주기 -->
                     </div>
                     <div>
                         <p class="admin-post-modal-place-name">카테고리</p>
                         <label class="admin-post-modal-place-label">
-                            <select class="admin-post-modal-place-input" value>
-                                <option value="문화·예술">문화·예술</option>
-                                <option value="운동·액티비티">
-                                    운동·액티비티
-                                </option>
-                                <option value="푸드·드링크">푸드·드링크</option>
-                                <option value="취미">취미</option>
-                                <option value="여행·동행">여행·동행</option>
-                                <option value="성장·자기개발">
-                                    성장·자기개발
-                                </option>
-                                <option value="동네·또래">동네·또래</option>
-                                <option value="연애·소개팅">연애·소개팅</option>
-                                <option value="재테크">재테크</option>
-                                <option value="외국어">외국어</option>
-                                <option value="스터디">스터디</option>
-                                <option value="기타">기타</option>
-                            </select>
+                            <input
+                                oninput="updateButtonStatus()"
+                                type="text"
+                                class="admin-post-modal-title-input"
+                                readonly
+                                value
+                            />
                         </label>
                         <!-- 값 미입력시 -->
                         <div id="red-category" class="hidden">
@@ -604,15 +581,7 @@
                             class="admin-user-modal-left-detail-button"
                             id="modalCloseButton"
                         >
-                            취소
-                        </button>
-                    </div>
-                    <div class="admin-user-modal-right">
-                        <button
-                            class="admin-user-modal-right-detail-button"
-                            id="modalApplyButton"
-                        >
-                            수정하기
+                            닫기
                         </button>
                     </div>
                 </div>
@@ -626,6 +595,5 @@
     <script src="/staticfiles/js/admin/web/post/promote/admin-post-promote-bottem-web.js"></script>
     <script src="/staticfiles/js/admin/web/post/promote/admin-post-promote-button-web.js"></script>
     <script src="/staticfiles/js/admin/web/post/promote/admin-post-promote-modal-web.js"></script>
-    <script src="/staticfiles/js/admin/web/post/promote/admin-post-promote-redbox-web.js"></script>
     <script src="/staticfiles/js/admin/web/post/promote/admin-post-promote-search-web.js"></script>
 </html>

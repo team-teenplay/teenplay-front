@@ -1,5 +1,14 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
+[type=checkbox]:checked {
+    background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%270%200%2016%2016%27%20fill%3D%27%23fff%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cpath%20d%3D%27M12.207%204.793a1%201%200%200%201%200%201.414l-5%205a1%201%200%200%201-1.414%200l-2-2a1%201%200%200%201%201.414-1.414L6.5%209.086l4.293-4.293a1%201%200%200%201%201.414%200z%27%2F%3E%3C%2Fsvg%3E');
+    border-color: transparent;
+    background-color: #CE201B;
+    background-size: 100% 100%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+
 input {
     &::-webkit-search-decoration,
     &::-webkit-search-cancel-button,
@@ -236,7 +245,6 @@ body {
 .main-admin-logout-button{
     border-style: solid;
     border-width: 1px;
-    border-radius: 16px;
     justify-content: center;
     align-items: center;
     height: 32px;
@@ -258,6 +266,7 @@ body {
     padding: 0;
     padding-left: 15px;
     padding-right: 15px;
+    border-radius: 6px;
 }
 
 .main-admin-logout-button:hover{
@@ -284,7 +293,7 @@ body {
 .main-comment{
     padding-left: 12px;
     padding-right: 12px;
-    border-radius: 8px;
+    border-radius: 6px;
     align-items: center;
     height: 40px;
     display: flex;
@@ -329,7 +338,7 @@ body {
 .main-comment-other{
     padding-left: 12px;
     padding-right: 12px;
-    border-radius: 8px;
+    border-radius: 6px;
     align-items: center;
     height: 40px;
     display: flex;
@@ -340,7 +349,7 @@ body {
     background-color: #FFF0EE;
     padding-left: 12px;
     padding-right: 12px;
-    border-radius: 8px;
+    border-radius: 6px;
     align-items: center;
     height: 40px;
     display: flex;
@@ -363,7 +372,7 @@ body {
     row-gap: 0;
     column-gap: 16px;
     grid-template-columns: repeat(12,minmax(0,1fr));
-    width: 944px;
+    width: 1375px;
     display: grid;
     margin-left: auto;
     margin-right: auto;
@@ -407,7 +416,7 @@ body {
     padding-left: 20px;
     padding-right: 20px;
     border-width: 1px;
-    border-radius: 20px;
+    border-radius: 6px;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -439,7 +448,7 @@ body {
 .main-comment-info-button{
     outline: 2px solid transparent;
     outline-offset: 2px;
-    border-radius: 16px;
+    border-radius: 6px;
     align-items: center;
     max-width: 164px;
     display: flex;
@@ -588,7 +597,7 @@ color: #9ca3af;
     padding-left: 16px;
     padding-right: 16px;
     border-width: 1px;
-    border-radius: 16px;
+    border-radius: 6px;
     align-items: center;
     max-width: 164px;
     height: 32px;
@@ -634,7 +643,7 @@ color: #9ca3af;
     color: #b9b9bb;
     fill: #b9b9bb;
     background-color: #f3f3f4;
-    border-radius: 16px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     height: 32px;
@@ -683,6 +692,7 @@ color: #9ca3af;
 }
 
 .main-comment-status-name{
+    cursor: pointer;
     justify-content: flex-start;
     align-items: center;
     flex-shrink: 0;
@@ -814,7 +824,7 @@ color: #9ca3af;
 }
 
 .main-comment-list-name{
-    width: 120px;
+    width: 268px;
     justify-content: flex-start;
     align-items: center;
     flex-shrink: 0;
@@ -827,7 +837,20 @@ color: #9ca3af;
 }
 
 .main-comment-list-status{
-    width: 152px;
+    width: 258px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-shrink: 0;
+    display: flex;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    color: #1d1d1e;
+    fill: #1d1d1e;
+}
+
+.main-comment-list-paycount{
+    width: 257px;
     justify-content: flex-start;
     align-items: center;
     flex-shrink: 0;
@@ -840,6 +863,19 @@ color: #9ca3af;
 }
 
 .main-comment-list-date{
+    width: 248px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-shrink: 0;
+    display: flex;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    color: #1d1d1e;
+    fill: #1d1d1e;
+}
+
+.main-comment-list-stop{
     width: 123px;
     justify-content: flex-start;
     align-items: center;
@@ -852,102 +888,83 @@ color: #9ca3af;
     fill: #1d1d1e;
 }
 
-
-
-.main-comment-list-paycount{
-    width: 110px;
-    justify-content: flex-start;
-    align-items: center;
-    flex-shrink: 0;
-    display: flex;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 18px;
-    color: #1d1d1e;
-    fill: #1d1d1e;
-}
-
 .main-comment-list-delete{
-    padding-right: 83px;
     align-items: center;
     display: flex;
 }
 
 .member-user-list-delete-button{
-    width: 90px;
-    border-style: solid;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
     border-width: 1px;
-    border-radius: 20px;
-    justify-content: center;
+    border-radius: 6px;
     align-items: center;
-    height: 40px;
+    max-width: 164px;
+    height: 32px;
     display: flex;
-    position: relative;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 16px;
     border-color: rgba(0,0,0,.1);
-    color: #333334;
-    fill: #333334;
-    background-color: #fff;
-    -webkit-appearance: button;
-    background-image: none;
-    cursor: pointer;
-    text-transform: none;
-    font-family: inherit;
-    margin: 0;
-    padding: 0;
-    padding-left: 20px;
-    padding-right: 20px;
-
-}
-
-.main-comment-list-stop{
-    align-items: center;
-    display: flex;
-}
-
-.member-user-list-button{
-    width: 90px;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 20px;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-    display: flex;
-    position: relative;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 16px;
-    border-color: rgba(0,0,0,.1);
-    color: #fff;
-    fill: #fff;
     background-color: #CE201B;
     -webkit-appearance: button;
     background-image: none;
     cursor: pointer;
     text-transform: none;
     font-family: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: inherit;
+    color: #fff;
     margin: 0;
-    padding: 0;
-    padding-left: 20px;
-    padding-right: 20px;
+}
 
+.main-comment-list-stopa{
+    padding-right: 5px;
+    align-items: center;
+    display: flex;
+}
+
+.member-user-list-button{
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-width: 1px;
+    border-radius: 6px;
+    align-items: center;
+    max-width: 164px;
+    height: 32px;
+    display: flex;
+    border-color: rgba(0,0,0,.1);
+    background-color: #fff;
+    -webkit-appearance: button;
+    background-image: none;
+    cursor: pointer;
+    text-transform: none;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: inherit;
+    color: inherit;
+    margin: 0;
 }
 
 .member-user-list-button:hover{
-border-color: #9F0D08;
-background-color: #9F0D08;
+border-color: #FFF0EE;
+background-color: #FFF0EE;
 }
 
 .member-user-list-delete-button:hover{
-    border-color: #FFF0EE;
-    background-color: #FFF0EE;
+    border-color: #9F0D08;
+    background-color: #9F0D08;
     }
 
 .main-comment-list-check{
-    width: 185px;
+    width: 285px;
     justify-content: flex-start;
     align-items: center;
     flex-shrink: 0;
@@ -963,7 +980,7 @@ background-color: #9F0D08;
     width: 102px;
     border-style: solid;
     border-width: 1px;
-    border-radius: 20px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     height: 40px;
@@ -1002,7 +1019,7 @@ background-color: #9F0D08;
     --tw-shadow-colored: 0px 2px 8px var(--tw-shadow-color);
     padding: 32px;
     border-width: 1px;
-    border-radius: 16px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -1032,7 +1049,7 @@ background-color: #9F0D08;
     --tw-shadow-colored: 0px 2px 8px var(--tw-shadow-color);
     padding: 32px;
     border-width: 1px;
-    border-radius: 16px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -1069,12 +1086,13 @@ background-color: #9F0D08;
     background-color: #f3f3f4;
     padding-left: 12px;
     padding-right: 12px;
-    border-radius: 8px;
+    border-radius: 6px;
     align-items: center;
     margin-bottom: 8px;
     border: none;
     outline: none;
     max-height: 500px;
+    resize: none;
     
   }
   
@@ -1105,7 +1123,7 @@ background-color: #9F0D08;
   
   .admin-user-modal-left-button{
   
-    border-radius: 20px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -1141,7 +1159,7 @@ background-color: #9F0D08;
   .admin-user-modal-left-delete-button
   {
   
-    border-radius: 20px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -1176,7 +1194,7 @@ background-color: #9F0D08;
    {
     padding-left: 16px;
     padding-right: 16px;
-    border-radius: 20px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -1210,7 +1228,7 @@ background-color: #9F0D08;
   .admin-user-modal-right-button{
     padding-left: 16px;
     padding-right: 16px;
-    border-radius: 20px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -1269,7 +1287,7 @@ background-color: #9F0D08;
     --tw-shadow-colored: 0px 2px 8px var(--tw-shadow-color);
     padding: 32px;
     border-width: 1px;
-    border-radius: 16px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -1305,7 +1323,7 @@ background-color: #9F0D08;
     background-color: #f3f3f4;
     padding-left: 12px;
     padding-right: 12px;
-    border-radius: 8px;
+    border-radius: 6px;
     align-items: center;
     margin-bottom: 8px;
     border: none;
@@ -1341,7 +1359,7 @@ background-color: #9F0D08;
   
   .admin-comment-modal-left-button{
   
-    border-radius: 20px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -1375,7 +1393,7 @@ background-color: #9F0D08;
   .admin-comment-modal-right-button{
     padding-left: 16px;
     padding-right: 16px;
-    border-radius: 20px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -1430,7 +1448,7 @@ background-color: #9F0D08;
     --tw-shadow-colored: 0px 2px 8px var(--tw-shadow-color);
     padding: 6px;
     border-width: 1px;
-    border-radius: 16px;
+    border-radius: 6px;
     justify-content: center;
 
     display: flex;
@@ -1454,7 +1472,7 @@ background-color: #9F0D08;
   .admin-comment-modal-search-send{
     border-style: solid;
 
-    border-radius: 16px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     height: 32px;
@@ -1487,7 +1505,7 @@ background-color: #9F0D08;
   .admin-comment-modal-search-receive{
     border-style: solid;
 
-    border-radius: 16px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     height: 32px;
@@ -1593,7 +1611,7 @@ background-color: #9F0D08;
 margin-left: 16px;}
 
 .main-user-bottom{
-    border-radius: 9999px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     width: 32px;
@@ -1655,6 +1673,7 @@ margin-left: 16px;}
 
 .main-wish-sellect{
     /* column-gap: 12px; 박스 더 넣을거면 키면 됩니다. */
+    padding-right: 5px;
     display: flex;
     align-items: center;
 }
@@ -1676,7 +1695,7 @@ margin-left: 16px;}
     padding-left: 16px;
     padding-right: 16px;
     border-width: 1px;
-    border-radius: 16px;
+    border-radius: 6px;
     align-items: center;
     max-width: 164px;
     height: 32px;
@@ -1696,7 +1715,8 @@ margin-left: 16px;}
 
 }
 .div-size{
-    width: 66px;
+    width: 51px;
+    display: flex;
 
 }
 
@@ -1717,7 +1737,7 @@ margin-left: 16px;}
     --tw-shadow-colored: 0px 2px 8px var(--tw-shadow-color);
     padding: 6px;
     border-width: 1px;
-    border-radius: 16px;
+    border-radius: 6px;
     justify-content: center;
 
     display: flex;
@@ -1733,7 +1753,7 @@ margin-left: 16px;}
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 110px;
+    width: 81px;
     height: 70px;
     
   }
@@ -1745,7 +1765,7 @@ margin-left: 16px;}
   .admin-message-modal-search-send-add{
     border-style: solid;
 
-    border-radius: 16px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     height: 32px;
@@ -1772,7 +1792,7 @@ margin-left: 16px;}
 
   .admin-message-modal-search-donotreceive-add{    
     border-style: solid;
-    border-radius: 16px;
+    border-radius: 6px;
     justify-content: center;
     align-items: center;
     height: 32px;
@@ -1798,7 +1818,7 @@ margin-left: 16px;}
     .admin-message-modal-search-receive-add{
         border-style: solid;
     
-        border-radius: 16px;
+        border-radius: 6px;
         justify-content: center;
         align-items: center;
         height: 32px;
@@ -1855,4 +1875,54 @@ margin-left: 16px;}
 
       .hidden{
         display: none;
+      }
+
+      .main-comment-info-button-svg{
+        flex-shrink: 0;
+        width: 10px;
+        height: 10px;
+        margin-left: 4px;
+        display: block;
+        vertical-align: middle;
+      }
+
+      .main-comment-info-button-svga{
+        flex-shrink: 0;
+        width: 10px;
+        height: 10px;
+        margin-left: 4px;
+        display: block;
+        vertical-align: middle;
+      }
+
+      .main-bet{
+        display: flex;
+      }
+
+
+      .main-comment-list-checkbox{
+        height: 1rem;
+        width: 1rem;
+        cursor: pointer;
+        border-radius: 0.25rem;
+        border-width: 1px;
+        border-color: rgba(0,0,0,.1);
+        --tw-bg-opacity: 1;
+        background-color: rgb(255 255 255/var(--tw-bg-opacity));
+        --tw-text-opacity: 1;
+        color: rgb(92 63 191/var(--tw-text-opacity));
+        appearance: none;
+        padding: 0;
+        -webkit-print-color-adjust: exact;
+        display: inline-block;
+        vertical-align: middle;
+        background-origin: border-box;
+        user-select: none;
+        flex-shrink: 0;
+        --tw-shadow: 0 0 #0000;
+        font-family: inherit;
+        font-size: 100%;
+        font-weight: inherit;
+        line-height: inherit;
+        margin: 0;
       }

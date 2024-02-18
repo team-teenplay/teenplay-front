@@ -224,6 +224,17 @@
                                                             class="main-wish-sellect-button-span"
                                                             >카테고리</span
                                                         >
+                                                        <svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            viewBox="0 0 24 24"
+                                                            class="main-comment-info-button-svg"
+                                                        >
+                                                            <path
+                                                                fill-rule="evenodd"
+                                                                clip-rule="evenodd"
+                                                                d="M3.27 8.42a1.076 1.076 0 0 1 1.587-.13L12 14.832l7.143-6.544a1.076 1.076 0 0 1 1.586.13 1.26 1.26 0 0 1-.122 1.696L12 18l-8.607-7.885A1.26 1.26 0 0 1 3.27 8.42Z"
+                                                            ></path>
+                                                        </svg>
                                                     </div>
                                                 </button>
                                                 <!-- 공개 비공개 모달창 -->
@@ -268,26 +279,38 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="main-user-list-ston">
+                                        <button
+                                            class="member-user-list-button toggle-button"
+                                        >
+                                            삭제하기
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                             <div class="main-user-status">
                                 <!-- 여기에 넣으면 추가할수있습니다(가로넓이 width만 수정)) -->
+
                                 <div class="main-user-status-name">
+                                    전체선택
+                                </div>
+                                <div class="main-user-status-date">
                                     공지사항 제목
                                 </div>
                                 <div class="main-user-status-date">작성일</div>
-                                <div class="main-user-status-date">
+                                <div class="main-user-status-paycount">
                                     카테고리
                                 </div>
-                                <div class="main-user-status-paycount">
-                                    수정하기
-                                </div>
-                                <div class="main-user-status-status">
-                                    삭제하기
-                                </div>
+                                <div class="main-user-status-status"></div>
                             </div>
                         </div>
                         <li class="main-user-list" data-id="1">
+                            <div class="main-comment-list-check">
+                                <input
+                                    type="checkbox"
+                                    class="main-comment-list-checkbox"
+                                />
+                            </div>
                             <div class="main-user-list-name">
                                 결제오류 해결방법
                             </div>
@@ -298,19 +321,17 @@
                                     class="member-user-list-detail-button toggle-button"
                                     data-target="1"
                                 >
-                                    수정하기
-                                </button>
-                            </div>
-                            <div class="main-user-list-ston">
-                                <button
-                                    class="member-user-list-button toggle-button"
-                                    data-target="1"
-                                >
-                                    삭제하기
+                                    상세보기
                                 </button>
                             </div>
                         </li>
                         <li class="main-user-list" data-id="2">
+                            <div class="main-comment-list-check">
+                                <input
+                                    type="checkbox"
+                                    class="main-comment-list-checkbox"
+                                />
+                            </div>
                             <div class="main-user-list-name">
                                 로그인 오류 해결방법
                             </div>
@@ -323,15 +344,7 @@
                                     class="member-user-list-detail-button toggle-button"
                                     data-target="2"
                                 >
-                                    수정하기
-                                </button>
-                            </div>
-                            <div class="main-user-list-ston">
-                                <button
-                                    class="member-user-list-button toggle-button"
-                                    data-target="2"
-                                >
-                                    삭제하기
+                                    상세보기
                                 </button>
                             </div>
                         </li>
@@ -440,7 +453,7 @@
             </div>
             <!-- 수정하기 -->
             <div id="admin-post-modal" class="hidden">
-                <h4 class="admin-post-modal-title">공지사항 수정</h4>
+                <h4 class="admin-post-modal-title">공지사항 상세보기</h4>
                 <div class="admin-post-modal-warp">
                     <!-- 여기서부터 안에 들어가는거 하나씩 / 각각 빈 div하나 만들고 안에서 생성 -->
                     <div class="titleqq">
@@ -450,7 +463,7 @@
                                 oninput="updateButtonStatus()"
                                 type="text"
                                 class="admin-post-modal-title-input"
-                                placeholder="제목을 입력해주세요."
+                                readonly
                                 value
                             />
                         </label>
@@ -480,7 +493,7 @@
                             <textarea
                                 oninput="updateButtonStatus()"
                                 class="admin-post-modal-content-input"
-                                placeholder="내용을 입력해주세요."
+                                readonly
                                 value
                             ></textarea>
                         </label>
@@ -513,14 +526,6 @@
                             취소
                         </button>
                     </div>
-                    <div class="admin-user-modal-right">
-                        <button
-                            class="admin-user-modal-right-detail-button"
-                            id="modalApplyButton"
-                        >
-                            수정하기
-                        </button>
-                    </div>
                 </div>
             </div>
             <div id="admin-user-modal-backdrop" class="hidden"></div>
@@ -531,6 +536,5 @@
     <script src="/staticfiles/js/admin/web/notice/notice-list/admin-notice-list-bottem-web.js"></script>
     <script src="/staticfiles/js/admin/web/notice/notice-list/admin-notice-list-button-web.js"></script>
     <script src="/staticfiles/js/admin/web/notice/notice-list/admin-notice-list-modal-web.js"></script>
-    <script src="/staticfiles/js/admin/web/notice/notice-list/admin-notice-list-redbox-web.js"></script>
     <script src="/staticfiles/js/admin/web/notice/notice-list/admin-notice-list-search-web.js"></script>
 </html>
