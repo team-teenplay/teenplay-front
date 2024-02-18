@@ -544,6 +544,7 @@ header {
     display: flex;
     margin-bottom: 10px;
     padding-right: 30px;
+    padding-top: 1px;
 }
 
 .history-item-three-year {
@@ -1190,6 +1191,7 @@ header {
     border: 1px solid;
     border-radius: 6px;
     height: 400px;
+    width: 100%;
 }
 
 .map-box-style {
@@ -1350,7 +1352,7 @@ header {
     transition: opacity 0.4s, transform 0.4s;
 }
 
-.scroll-to-top.hidden {
+.scroll-to-top.hidden-up {
     opacity: 0;
     transform: translateY(20px);
 }
