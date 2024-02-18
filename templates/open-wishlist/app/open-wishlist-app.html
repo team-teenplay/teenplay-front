@@ -155,15 +155,6 @@
                                                                         <path fill-rule="evenodd" d="M10.5 6a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm0 6a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm0 6a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" clip-rule="evenodd"></path>
                                                                     </svg>
                                                                 </button>
-                                                                <!-- 위시리스트 게시글 메뉴 열기 부분 -->
-                                                                <div class="post-menu-open hidden" aria-labelledby="main-wishlist-content-menu" role="menu" tabindex="0" data-headlessui-state="open">
-                                                                    <div class="post-menu-open-container" role="none">
-                                                                        <div class="post-menu-open-divison" role="none">
-                                                                            <button class="post-menu-open-choice" type="button" id="post-menu-open-update" role="menuitem" tabindex="-1">수정</button>
-                                                                            <button class="post-menu-open-choice" type="button" id="post-menu-open-delete" role="menuitem" tabindex="-1">삭제</button>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -275,19 +266,22 @@
                                                                         <path fill-rule="evenodd" d="M10.5 6a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm0 6a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm0 6a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" clip-rule="evenodd"></path>
                                                                     </svg>
                                                                 </button>
-                                                                <div class="comment-menu-open-wrap hidden" aria-labelledby="main-wishlist-content-menu" role="menu" tabindex="0" data-headlessui-state="open">
-                                                                    <div class="comment-menu-open-container" role="none">
-                                                                        <div class="comment-menu-open-divison" role="none">
-                                                                            <button class="comment-menu-open-choice" type="button" id="comment-menu-open-update" role="menuitem" tabindex="-1">수정</button>
-                                                                            <button class="comment-menu-open-choice" type="button" id="comment-menu-open-delete" role="menuitem" tabindex="-1">삭제</button>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <!-- 댓글 구분선 -->
                                                     <div class="comment-line"></div>
+                                                </div>
+                                            </div>
+                                            <!-- 게시글 더보기 버튼 -->
+                                            <div class="post-watch">
+                                                <div class="post-watch-wrap">
+                                                    <button class="post-watch-button" type="button">
+                                                        <span> 더보기 </span>
+                                                        <svg class="post-watch-button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                                            <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z" clip-rule="evenodd"></path>
+                                                        </svg>
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
@@ -579,6 +573,34 @@
                                 <button class="send-close-btn" type="button">닫기</button>
                                 <button class="send-check-btn" type="button">보내기</button>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 댓글 수정/삭제 모달창 -->
+        <div class="comment-modal-wrap hidden">
+            <div class="comment-modal-bg"></div>
+            <div class="comment-modal-container">
+                <div class="comment-menu-open-wrap app" aria-labelledby="main-wishlist-content-menu" role="menu" tabindex="0" data-headlessui-state="open">
+                    <div class="comment-menu-open-container app" role="none">
+                        <div class="comment-menu-open-divison app" role="none">
+                            <button class="comment-menu-open-choice app" type="button" id="comment-menu-open-update" role="menuitem" tabindex="-1">수정</button>
+                            <button class="comment-menu-open-choice app" type="button" id="comment-menu-open-delete" role="menuitem" tabindex="-1">삭제</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 게시글 수정/삭제 모달창 -->
+        <div class="post-modal-wrap hidden">
+            <div class="post-modal-bg"></div>
+            <div class="post-modal-container">
+                <div class="post-menu-open-wrap app" aria-labelledby="main-wishlist-content-menu" role="menu" tabindex="0" data-headlessui-state="open">
+                    <div class="post-menu-open-container app" role="none">
+                        <div class="post-menu-open-divison app" role="none">
+                            <button class="post-menu-open-choice app" type="button" id="post-menu-open-update" role="menuitem" tabindex="-1">수정</button>
+                            <button class="post-menu-open-choice app" type="button" id="post-menu-open-delete" role="menuitem" tabindex="-1">삭제</button>
                         </div>
                     </div>
                 </div>

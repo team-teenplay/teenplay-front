@@ -85,7 +85,7 @@ commentCountNum();
 // 위시리스트 게시글 내 메뉴 버튼 쿼리
 const wishlistPostMenuButton = document.querySelector(".post-menu-container");
 // 위시리스트 게시글 메뉴(기본 가려짐) 쿼리
-const wishlistPostMenu = document.querySelector(".post-menu-open");
+const wishlistPostMenu = document.querySelector(".post-modal-wrap");
 
 // 위시리스트 게시글 내 메뉴 버튼 클릭 시 클릭 이벤트 발생
 // 위시리스트 게시글 메뉴를 활성화 or 비활성화
@@ -96,9 +96,11 @@ wishlistPostMenuButton.addEventListener("click", () => {
 
 
 // 위시리스트 메뉴 닫기 이벤트
+const wishlistPostMenuBox = document.querySelector(".post-menu-open-container");
+
 // 여백 클릭 시 위시리스트 메뉴 자동 숨기기
 document.addEventListener("click", (e) => {
-    if (!wishlistPostMenuButton.contains(e.target) && !wishlistPostMenu.contains(e.target)) {
+    if (!wishlistPostMenuButton.contains(e.target) && !wishlistPostMenuBox.contains(e.target)) {
         wishlistPostMenu.classList.add("hidden");
     }
 });
@@ -118,6 +120,7 @@ const modalPostUpdateFinish = document.querySelector(".update-finish-botton");
 // 위시리스트 수정 메뉴 버튼 클릭 시 이벤트 발생
 // 위시리스트 수정 모달 보이기
 postUpdateButton.addEventListener("click", () => {
+    wishlistPostMenu.classList.add("hidden");
     modalPostUpdate.classList.remove("hidden");
 });
 
@@ -238,7 +241,7 @@ commentClose.addEventListener("click", () => {
 // 위시리스트 댓글 내 메뉴 버튼 쿼리
 const wishlistCommentMenuButton = document.querySelector(".comment-menu");
 // 위시리스트 댓글 메뉴 목록 쿼리
-const wishlistCommentMenu = document.querySelector(".comment-menu-open-wrap");
+const wishlistCommentMenu = document.querySelector(".comment-modal-wrap");
 
 // 위시리스트 댓글 버튼 클릭 시 이벤트 발생
 // 위시리스트 댓글 메뉴를 활성화 or 비활성화
@@ -250,9 +253,12 @@ wishlistCommentMenuButton.addEventListener("click", () => {
 
 
 // 위시리스트 댓글 메뉴 닫기 이벤트
-// 여백 클릭 시 댓글 메뉴 비활성화
+// 
+const commentMenuOpenContainer = document.querySelector(".comment-menu-open-container");
+
+// 위시리스트 댓글 메뉴 닫기 이벤트
 document.addEventListener("click", (e) => {
-    if (!wishlistCommentMenuButton.contains(e.target) && !wishlistCommentMenu.contains(e.target)) {
+    if (!wishlistCommentMenuButton.contains(e.target) && !commentMenuOpenContainer.contains(e.target)) {
         wishlistCommentMenu.classList.add("hidden");
     }
 });
@@ -272,7 +278,7 @@ const commentComment = document.querySelector(".comment-list-all-wrap");
 commentMenuOpenUpdate.addEventListener("click", () => {
     commentInputUpdate.classList.remove("hidden");
     commentComment.classList.add("hidden");
-    
+    wishlistCommentMenu.classList.add("hidden");
 });
 
 // 댓글 수정 등록 버튼
