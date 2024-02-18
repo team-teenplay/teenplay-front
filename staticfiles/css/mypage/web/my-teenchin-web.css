@@ -445,9 +445,9 @@ a {
 
 .teenchin-agree-btn {
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
-    color: #178263;
+    color: #878D91;
     width: 50%;
-    background-color: #dbfed8;
+    background-color: #E1E1E1;
     border-radius: 0.375rem;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -459,7 +459,7 @@ a {
 }
 
 .teenchin-agree-btn:hover {
-    background-color: #9eddab;
+    background-color: #C2C2C2;
 }
 
 .send-letter-btn:hover {
