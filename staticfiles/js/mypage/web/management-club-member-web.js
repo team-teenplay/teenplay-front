@@ -89,6 +89,7 @@ sendModalBtns.forEach((sendModalBtn) => {
                 sendModalWrap.querySelector(".check-modal-container").style.display = "flex";
                 sendModalWrap.querySelector(".send-receiver-email").innerHTML = ``;
                 sendModalWrap.querySelector("textarea[name=send-content]").value = ``;
+                sendCheckBtn.disabled = true;
             }, 450);
         } else {
             sendModalWrap.querySelector(".send-modal-container").style.animation = "popDown 0.5s";
@@ -96,6 +97,7 @@ sendModalBtns.forEach((sendModalBtn) => {
                 sendModalWrap.style.display = "none";
                 sendModalWrap.querySelector(".send-receiver-email").innerHTML = ``;
                 sendModalWrap.querySelector("textarea[name=send-content]").value = ``;
+                sendCheckBtn.disabled = true;
             }, 450);
         }
     });

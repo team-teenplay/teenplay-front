@@ -1,24 +1,24 @@
-// clup-name-input의 글자수 표시하는 이벤트
-const clupNameInput = document.querySelector(".clup-name-input");
+// club-name-input의 글자수 표시하는 이벤트
+const clubNameInput = document.querySelector(".club-name-input");
 const inputValueCount = document.querySelector(".input-value-count");
 
-inputValueCount.innerText = `${clupNameInput.value.length} / 20`;
+inputValueCount.innerText = `${clubNameInput.value.length} / 20`;
 
-clupNameInput.addEventListener("input", () => {
-    inputValueCount.innerText = `${clupNameInput.value.length} / 20`;
+clubNameInput.addEventListener("input", () => {
+    inputValueCount.innerText = `${clubNameInput.value.length} / 20`;
 });
 
 // 모임 프로필 업로드 클릭 시 label이 클릭 되는 이벤트
-const clupProfileUploadBtn = document.querySelector(".clup-profile-upload-btn");
-const clupProfileUploadLabel = document.querySelector(".clup-profile-input-label");
-const clupProfileInput = document.querySelector("#clup-profile-input");
+const clubProfileUploadBtn = document.querySelector(".club-profile-upload-btn");
+const clubProfileUploadLabel = document.querySelector(".club-profile-input-label");
+const clubProfileInput = document.querySelector("#club-profile-input");
 
-clupProfileUploadBtn.addEventListener("click", () => {
-    clupProfileUploadLabel.click();
+clubProfileUploadBtn.addEventListener("click", () => {
+    clubProfileUploadLabel.click();
 });
 
 // 모임 프로필 업로드 시 이미지 확장자가 아니라면 오류 모달 표시
-clupProfileInput.addEventListener("change", (e) => {
+clubProfileInput.addEventListener("change", (e) => {
     if (e.target.value) {
         let fileName = e.target.files[0].name;
 
@@ -112,32 +112,32 @@ backgroundCancleBox.addEventListener("click", () => {
 });
 
 // 모임명, 담당자 이름, 이메일, 전화번호의 상태에 따라 발생하는 이벤트
-const clupManagerNameInput = document.querySelector("#clup-manager-name-input");
-const clupManagerEmailInput = document.querySelector("#clup-manager-email-input");
-const clupManagerPhoneInput = document.querySelector("#clup-manager-phone-input");
-const clupNameInputError = document.querySelector(".clup-name-input-error");
+const clubManagerNameInput = document.querySelector("#club-manager-name-input");
+const clubManagerEmailInput = document.querySelector("#club-manager-email-input");
+const clubManagerPhoneInput = document.querySelector("#club-manager-phone-input");
+const clubNameInputError = document.querySelector(".club-name-input-error");
 const noneNameWarning = document.querySelector(".none-name-warning");
 const noneEmailWarning = document.querySelector(".none-email-warning");
 const nonePhoneWarning = document.querySelector(".none-phone-warning");
-const clupSaveBtn = document.querySelector(".clup-save-btn");
+const clubSaveBtn = document.querySelector(".club-save-btn");
 
 const checkInputValue = () => {
-    if (!clupNameInput.value || !clupManagerNameInput.value || !clupManagerEmailInput.value || !clupManagerPhoneInput.value) {
-        clupSaveBtn.disabled = true;
+    if (!clubNameInput.value || !clubManagerNameInput.value || !clubManagerEmailInput.value || !clubManagerPhoneInput.value) {
+        clubSaveBtn.disabled = true;
         return;
     }
-    clupSaveBtn.disabled = false;
+    clubSaveBtn.disabled = false;
 };
-clupNameInput.addEventListener("input", () => {
+clubNameInput.addEventListener("input", () => {
     checkInputValue();
 });
-clupManagerNameInput.addEventListener("input", () => {
+clubManagerNameInput.addEventListener("input", () => {
     checkInputValue();
 });
-clupManagerEmailInput.addEventListener("input", () => {
+clubManagerEmailInput.addEventListener("input", () => {
     checkInputValue();
 });
-clupManagerPhoneInput.addEventListener("input", () => {
+clubManagerPhoneInput.addEventListener("input", () => {
     checkInputValue();
 });
 checkInputValue();

@@ -6,7 +6,7 @@
         <title>틴플 :: 모임 설정</title>
         <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet" />
         <link rel="shortcut icon" href="/staticfiles/images/teenplay_logo/logo1.png" type="image/x-icon" />
-        <link rel="stylesheet" href="/staticfiles/css/mypage/web/management-clup-setting-web.css" />
+        <link rel="stylesheet" href="/staticfiles/css/mypage/web/management-club-setting-web.css" />
     </head>
     <body style="position: relative; min-height: 100%; top: 0px">
         <!-- 헤더 부분 -->
@@ -27,7 +27,7 @@
                         <a class="sud-header-category select-category" href="">모임 설정</a>
                     </div>
                     <!-- 모임 상세페이지 주소 필요 -->
-                    <a class="clup-detail-link" href="" target="_blank">
+                    <a class="club-detail-link" href="" target="_blank">
                         <span>모임 페이지 바로가기</span>
                         <svg xmlns="http://www.w3.org/2000/svg" class="move-svg" viewBox="0 0 20 20" fill="currentColor">
                             <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
@@ -36,38 +36,38 @@
                     </a>
                 </div>
             </div>
-            <div class="clup-setting-wrap">
-                <div class="clup-setting-container">
-                    <h1 class="clup-setting-header">모임 설정</h1>
+            <div class="club-setting-wrap">
+                <div class="club-setting-container">
+                    <h1 class="club-setting-header">모임 설정</h1>
                     <form action="">
-                        <div class="clup-setting-box">
-                            <div class="clup-name-items">
-                                <div class="clup-name-title">모임명</div>
-                                <div class="clup-name-setting">
+                        <div class="club-setting-box">
+                            <div class="club-name-items">
+                                <div class="club-name-title">모임명</div>
+                                <div class="club-name-setting">
                                     <div>
-                                        <input class="clup-name-input" id="clup-name" name="clup-name" autocomplete="off" type="text" maxlength="20" placeholder="한글, 영문, 특수문자 포함 20자" />
+                                        <input class="club-name-input" id="club-name" name="club-name" autocomplete="off" type="text" maxlength="20" placeholder="한글, 영문, 특수문자 포함 20자" />
                                         <!-- 입력마다 숫자 변경 -->
                                         <div class="input-value-count"></div>
-                                        <!-- <div class="clup-name-input-error">항목을 입력하세요</div> -->
+                                        <!-- <div class="club-name-input-error">항목을 입력하세요</div> -->
                                     </div>
                                 </div>
                             </div>
-                            <div class="clup-profile-items">
-                                <div class="clup-profile-title">모임 프로필 업로드</div>
-                                <div class="clup-profile-setting">
-                                    <div class="clup-profile-thumbnail-box">
+                            <div class="club-profile-items">
+                                <div class="club-profile-title">모임 프로필 업로드</div>
+                                <div class="club-profile-setting">
+                                    <div class="club-profile-thumbnail-box">
                                         <!-- 프로필 썸네일이 들어가는 자리 -->
-                                        <img class="clup-profile-thumbnail" src="/staticfiles/images/teenplay_logo/logo1.png" />
+                                        <img class="club-profile-thumbnail" src="/staticfiles/images/teenplay_logo/logo1.png" />
                                     </div>
-                                    <button class="clup-profile-upload-btn" type="button">모임 프로필 업로드</button>
+                                    <button class="club-profile-upload-btn" type="button">모임 프로필 업로드</button>
                                 </div>
                             </div>
-                            <label class="clup-profile-input-label" for="clup-profile-input"></label>
-                            <input id="clup-profile-input" type="file" name="" accept="image/*" />
-                            <input class="clup-profile-input-thumbnail" />
-                            <div class="clup-background-items">
-                                <div class="clup-background-title">모임 커버</div>
-                                <div class="clup-background-setting">
+                            <label class="club-profile-input-label" for="club-profile-input"></label>
+                            <input id="club-profile-input" type="file" name="" accept="image/*" />
+                            <input class="club-profile-input-thumbnail" />
+                            <div class="club-background-items">
+                                <div class="club-background-title">모임 커버</div>
+                                <div class="club-background-setting">
                                     <div class="none-background-wrap">
                                         <!-- 배경화면 이미지가 없을 경우 -->
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="none-background-sng">
@@ -101,61 +101,61 @@
                                 </div>
                                 <input class="background-img-input" type="file" name="" id="" accept="image/*" />
                             </div>
-                            <div class="clup-oneline-intro-items">
-                                <div class="clup-oneline-intro-title">모임 간략 정보</div>
-                                <div class="clup-oneline-intro-setting">
-                                    <input class="clup-oneline-intro-input" id="" name="" autocomplete="off" type="text" value="채널을 구독하고 최신 행사 소식을 가장 빠르게 받아보세요!" />
+                            <div class="club-oneline-intro-items">
+                                <div class="club-oneline-intro-title">모임 간략 정보</div>
+                                <div class="club-oneline-intro-setting">
+                                    <input class="club-oneline-intro-input" id="" name="" autocomplete="off" type="text" value="채널을 구독하고 최신 행사 소식을 가장 빠르게 받아보세요!" />
                                 </div>
                             </div>
-                            <div class="clup-details-intro-items">
-                                <div class="clup-details-intro-title">모임 상세 정보</div>
+                            <div class="club-details-intro-items">
+                                <div class="club-details-intro-title">모임 상세 정보</div>
                                 <div>
-                                    <textarea class="clup-details-intro-setting" name="" id="" cols="30" rows="10"></textarea>
+                                    <textarea class="club-details-intro-setting" name="" id="" cols="30" rows="10"></textarea>
                                 </div>
                             </div>
-                            <div class="clup-manager-info-items">
-                                <div class="clup-manager-info-header">
-                                    <div class="clup-manager-info-title">모임 담당자 정보 관리</div>
-                                    <div class="clup-manager-info-warning">이메일 또는 전화번호는 필수 입력 항목입니다.</div>
+                            <div class="club-manager-info-items">
+                                <div class="club-manager-info-header">
+                                    <div class="club-manager-info-title">모임 담당자 정보 관리</div>
+                                    <div class="club-manager-info-warning">이메일 또는 전화번호는 필수 입력 항목입니다.</div>
                                 </div>
-                                <div class="clup-manager-info-setting">
+                                <div class="club-manager-info-setting">
                                     <div>
-                                        <div class="clup-manager-name-box">
-                                            <label style="display: block" for="clup-manager-name-input">
-                                                <div class="clup-manager-name-title">이름*</div>
+                                        <div class="club-manager-name-box">
+                                            <label style="display: block" for="club-manager-name-input">
+                                                <div class="club-manager-name-title">이름*</div>
                                             </label>
                                         </div>
-                                        <input name="" id="clup-manager-name-input" autocomplete="off" type="text" />
+                                        <input name="" id="club-manager-name-input" autocomplete="off" type="text" />
                                         <!-- <div class="none-name-warning" style="display: none">항목을 입력하세요</div> -->
                                     </div>
                                     <div class="email-phone-box">
                                         <div class="email-items">
-                                            <div class="clup-manager-email-box">
-                                                <label style="display: block" for="clup-manager-email-input">
-                                                    <div class="clup-manager-email-title">이메일*</div>
+                                            <div class="club-manager-email-box">
+                                                <label style="display: block" for="club-manager-email-input">
+                                                    <div class="club-manager-email-title">이메일*</div>
                                                 </label>
                                             </div>
-                                            <input name="" id="clup-manager-email-input" autocomplete="off" type="text" />
+                                            <input name="" id="club-manager-email-input" autocomplete="off" type="text" />
                                             <!-- <div class="none-email-warning" style="display: none">항목을 입력하세요</div> -->
                                         </div>
                                         <div class="phone-items">
-                                            <div class="clup-manager-phone-box">
-                                                <label style="display: block" for="clup-manager-phone-input">
-                                                    <div class="clup-manager-phone-title">전화번호*</div>
+                                            <div class="club-manager-phone-box">
+                                                <label style="display: block" for="club-manager-phone-input">
+                                                    <div class="club-manager-phone-title">전화번호*</div>
                                                 </label>
                                             </div>
-                                            <input name="" id="clup-manager-phone-input" autocomplete="off" type="text" />
+                                            <input name="" id="club-manager-phone-input" autocomplete="off" type="text" />
                                             <!-- <div class="none-phone-warning" style="display: none">항목을 입력하세요</div> -->
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="border-line"></div>
-                            <div class="clup-delete-save-box">
+                            <div class="club-delete-save-box">
                                 <!-- 모임 삭제 페이지 주소 필요 -->
-                                <a class="clup-delete-link" href="">모임 삭제</a>
+                                <a class="club-delete-link" href="">모임 삭제</a>
                                 <!-- submit으로 바꿔야됨 -->
-                                <button class="clup-save-btn" type="submit">저장</button>
+                                <button class="club-save-btn" type="submit">저장</button>
                             </div>
                         </div>
                     </form>
@@ -184,5 +184,5 @@
             </div>
         </div>
     </body>
-    <script src="/staticfiles/js/mypage/web/management-clup-setting-web.js"></script>
+    <script src="/staticfiles/js/mypage/web/management-club-setting-web.js"></script>
 </html>

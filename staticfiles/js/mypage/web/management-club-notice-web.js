@@ -1,17 +1,17 @@
 // checkbox가 1개 이상 checked일 경우 공지 삭제 버튼 활성화
-const clupNoticeDelete = document.querySelector(".clup-notice-delete");
-const clupNoticeCheckboxes = document.querySelectorAll("#clup-notice-checkbox");
+const clubNoticeDelete = document.querySelector(".club-notice-delete");
+const clubNoticeCheckboxes = document.querySelectorAll("#club-notice-checkbox");
 const allChecked = document.querySelector("#all-checked");
 
-clupNoticeCheckboxes.forEach((clupNoticeCheckbox) => {
-    clupNoticeCheckbox.addEventListener("input", () => {
-        const clupNoticeCheckedCheckboxes = document.querySelectorAll("#clup-notice-checkbox:checked");
+clubNoticeCheckboxes.forEach((clubNoticeCheckbox) => {
+    clubNoticeCheckbox.addEventListener("input", () => {
+        const clubNoticeCheckedCheckboxes = document.querySelectorAll("#club-notice-checkbox:checked");
 
         // 체크된 체크박스가 없다면 공지 삭제 비활성화, 있다면 활성화
         disabledBtn();
 
         // 체크된 체크박스 개수가 전체 체크박스 개수와 같다면 allChecked 체크상태로, 아니라면 풀린상태로
-        if (clupNoticeCheckedCheckboxes.length == clupNoticeCheckboxes.length) {
+        if (clubNoticeCheckedCheckboxes.length == clubNoticeCheckboxes.length) {
             allChecked.checked = true;
         } else {
             allChecked.checked = false;
@@ -21,8 +21,8 @@ clupNoticeCheckboxes.forEach((clupNoticeCheckbox) => {
 
 // 항목의 체크박스 클릭 시 모든 체크박스에 발생하는 이벤트
 allChecked.addEventListener("input", (e) => {
-    clupNoticeCheckboxes.forEach((clupNoticeCheckbox) => {
-        clupNoticeCheckbox.checked = e.target.checked;
+    clubNoticeCheckboxes.forEach((clubNoticeCheckbox) => {
+        clubNoticeCheckbox.checked = e.target.checked;
     });
 
     disabledBtn();
@@ -32,7 +32,7 @@ allChecked.addEventListener("input", (e) => {
 const deleteModalWrap = document.querySelector(".delete-modal-wrap");
 const deleteModalContainer = deleteModalWrap.querySelector(".delete-modal-container");
 
-clupNoticeDelete.addEventListener("click", () => {
+clubNoticeDelete.addEventListener("click", () => {
     deleteModalContainer.style.animation = "popUp 0.5s";
     deleteModalWrap.style.display = "block";
 });
@@ -49,10 +49,10 @@ deleteModalBtns.forEach((deleteModalBtn) => {
                 deleteModalWrap.style.display = "none";
             }, 450);
         } else if (e.target.className == "delete-btn") {
-            let clupNoticeCheckedCheckboxes = document.querySelectorAll("#clup-notice-checkbox:checked");
+            let clubNoticeCheckedCheckboxes = document.querySelectorAll("#club-notice-checkbox:checked");
 
-            clupNoticeCheckedCheckboxes.forEach((clupNoticeCheckedCheckbox) => {
-                clupNoticeCheckedCheckbox.closest(".clup-notice-info").remove();
+            clubNoticeCheckedCheckboxes.forEach((clubNoticeCheckedCheckbox) => {
+                clubNoticeCheckedCheckbox.closest(".club-notice-info").remove();
             });
 
             allChecked.checked = false;
@@ -77,31 +77,31 @@ deleteModalBtns.forEach((deleteModalBtn) => {
 
 // 공지 삭제 비활성화 함수
 const disabledBtn = () => {
-    const clupNoticeCheckedCheckboxes = document.querySelectorAll("#clup-notice-checkbox:checked");
+    const clubNoticeCheckedCheckboxes = document.querySelectorAll("#club-notice-checkbox:checked");
 
     // 체크된 체크박스가 없다면 공지 삭제 비활성화, 있다면 활성화
-    if (clupNoticeCheckedCheckboxes.length == 0) {
-        clupNoticeDelete.disabled = true;
+    if (clubNoticeCheckedCheckboxes.length == 0) {
+        clubNoticeDelete.disabled = true;
     } else {
-        clupNoticeDelete.disabled = false;
+        clubNoticeDelete.disabled = false;
     }
 };
 
 //  제목 클릭 시 상세보기가 나오고 나와 있을 경우 끄는 이벤트
-const clupNoticeTitles = document.querySelectorAll(".clup-notice-title");
+const clubNoticeTitles = document.querySelectorAll(".club-notice-title");
 
-clupNoticeTitles.forEach((clupNoticeTitle) => {
-    clupNoticeTitle.addEventListener("click", (e) => {
-        let targetSvg = clupNoticeTitle.querySelector(".club-notice-show-icon");
+clubNoticeTitles.forEach((clubNoticeTitle) => {
+    clubNoticeTitle.addEventListener("click", (e) => {
+        let targetSvg = clubNoticeTitle.querySelector(".club-notice-show-icon");
 
         if (targetSvg.classList.contains("true")) {
             targetSvg.classList.remove("true");
             targetSvg.removeAttribute("transform");
-            clupNoticeTitle.closest(".clup-notice-info").querySelector(".club-notice-content-box").removeAttribute("style");
+            clubNoticeTitle.closest(".club-notice-info").querySelector(".club-notice-content-box").removeAttribute("style");
             return;
         }
         targetSvg.classList.add("true");
-        clupNoticeTitle.querySelector(".club-notice-show-icon").setAttribute("transform", "rotate(180)");
-        clupNoticeTitle.closest(".clup-notice-info").querySelector(".club-notice-content-box").style.display = "block";
+        clubNoticeTitle.querySelector(".club-notice-show-icon").setAttribute("transform", "rotate(180)");
+        clubNoticeTitle.closest(".club-notice-info").querySelector(".club-notice-content-box").style.display = "block";
     });
 });

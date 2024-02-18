@@ -236,7 +236,7 @@ select {
     color: #9F0D08;
 }
 
-.clup-detail-link {
+.club-detail-link {
     --tw-space-x-reverse: 0;
     margin-right: calc(2.5rem*var(--tw-space-x-reverse));
     margin-left: calc(2.5rem*(1 - var(--tw-space-x-reverse)));
@@ -246,7 +246,7 @@ select {
     cursor: pointer;
 }
 
-.clup-detail-link:hover {
+.club-detail-link:hover {
     font-weight: 700;
 }
 
@@ -604,17 +604,19 @@ input[type=checkbox]:hover {
 }
 
 .member-status-stand-btn {
-    --tw-text-opacity: 1;
     color: #CE201B;
     font-size: .8125rem;
     padding-top: 0.375rem;
     padding-bottom: 0.375rem;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
-    --tw-bg-opacity: 1;
     background-color: #FFF0EE;
     border-radius: 9999px;
     cursor: pointer;
+}
+
+.member-status-stand-btn:hover {
+    background-color: #FFB6AC;
 }
 
 .member-join-date {
@@ -625,16 +627,19 @@ input[type=checkbox]:hover {
 }
 
 .member-status-join-btn {
-    --tw-text-opacity: 1;
     color: #178263;
     font-size: .8125rem;
     padding-top: 0.375rem;
     padding-bottom: 0.375rem;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
-    background-color: #edfff8;
+    background-color: #dbfed8;
     border-radius: 9999px;
     cursor: pointer;
+}
+
+.member-status-join-btn:hover {
+    background-color: #9EDDAB;
 }
 
 .pagination-wrap {
