@@ -692,41 +692,41 @@ exitBtn.addEventListener("click", (e) => {
 
 // let filterButton = document.querySelector(".hidden-right-btn");
 // let filterContainer = document.querySelector(".filter-container-hidden");
-// let mainContainer = document.querySelector(".full-wrap");
-// let isFilterContainerVisible = false;
+let mainContainer = document.querySelector(".full-wrap");
+let isFilterContainerVisible = false;
 
-// filterButton.addEventListener("click", () => {
-//     if (!isFilterContainerVisible) {
-//         // 필터 컨테이너가 보이도록 변경
-//         filterContainer.style.display = "flex";
-//         mainContainer.style.opacity = 0; // 메인 컨테이너의 투명도를 0으로 설정하여 사라지도록 함
-//         mainContainer.style.display = "none";
-//         setTimeout(() => {
-//             filterContainer.style.opacity = 1; // 필터 컨테이너의 투명도를 1로 설정하여 나타나도록 함
-//         }, 50); // 약간의 지연을 추가하여 트랜지션이 더 부드럽게 보이도록 함
-//         isFilterContainerVisible = true;
-//     } else {
-//         // 필터 컨테이너가 숨겨지도록 변경
-//         filterContainer.style.opacity = 0; // 필터 컨테이너의 투명도를 0으로 설정하여 사라지도록 함
-//         setTimeout(() => {
-//             filterContainer.style.display = "none";
-//             mainContainer.style.opacity = 1; // 메인 컨테이너의 투명도를 1로 설정하여 나타나도록 함
-//         }, 250); // 약간의 지연을 추가하여 트랜지션이 더 부드럽게 보이도록 함
-//         isFilterContainerVisible = false;
-//     }
-// });
+filterButton.addEventListener("click", () => {
+    if (!isFilterContainerVisible) {
+        // 필터 컨테이너가 보이도록 변경
+        filterContainer.style.display = "flex";
+        mainContainer.style.opacity = 0; // 메인 컨테이너의 투명도를 0으로 설정하여 사라지도록 함
+        mainContainer.style.display = "none";
+        setTimeout(() => {
+            filterContainer.style.opacity = 1; // 필터 컨테이너의 투명도를 1로 설정하여 나타나도록 함
+        }, 50); // 약간의 지연을 추가하여 트랜지션이 더 부드럽게 보이도록 함
+        isFilterContainerVisible = true;
+    } else {
+        // 필터 컨테이너가 숨겨지도록 변경
+        filterContainer.style.opacity = 0; // 필터 컨테이너의 투명도를 0으로 설정하여 사라지도록 함
+        setTimeout(() => {
+            filterContainer.style.display = "none";
+            mainContainer.style.opacity = 1; // 메인 컨테이너의 투명도를 1로 설정하여 나타나도록 함
+        }, 250); // 약간의 지연을 추가하여 트랜지션이 더 부드럽게 보이도록 함
+        isFilterContainerVisible = false;
+    }
+});
 
 // let searchFilterButton = document.querySelector(".hidden-flex-center");
-// searchFilterButton.addEventListener("click", () => {
-//     // 필터 컨테이너가 숨겨지도록 변경
-//     filterContainer.style.opacity = 0; // 필터 컨테이너의 투명도를 0으로 설정하여 사라지도록 함
-//     setTimeout(() => {
-//         filterContainer.style.display = "none";
-//         mainContainer.style.opacity = 1; // 메인 컨테이너의 투명도를 1로 설정하여 나타나도록 함
-//         mainContainer.style.display = "block";
-//     }, 250); // 약간의 지연을 추가하여 트랜지션이 더 부드럽게 보이도록 함
-//     isFilterContainerVisible = false;
-// });
+searchFilterButton.addEventListener("click", () => {
+    // 필터 컨테이너가 숨겨지도록 변경
+    filterContainer.style.opacity = 0; // 필터 컨테이너의 투명도를 0으로 설정하여 사라지도록 함
+    setTimeout(() => {
+        filterContainer.style.display = "none";
+        mainContainer.style.opacity = 1; // 메인 컨테이너의 투명도를 1로 설정하여 나타나도록 함
+        mainContainer.style.display = "block";
+    }, 250); // 약간의 지연을 추가하여 트랜지션이 더 부드럽게 보이도록 함
+    isFilterContainerVisible = false;
+});
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 // 여는 방식
 // let mainContainer = document.querySelector(".full-wrap");
