@@ -251,6 +251,7 @@ menu, ol, ul {
     margin-left: auto;
     margin-right: auto;
     padding: 1rem;
+    position: relative;
 }
 
 .pr-content-container {
@@ -556,6 +557,56 @@ menu, ol, ul {
     --tw-space-x-reverse: 0;
     margin-right: calc(0.25rem*var(--tw-space-x-reverse));
     margin-left: calc(0.25rem*(1 - var(--tw-space-x-reverse)));
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* 추가 기능 부분 */
+.extra-all-wrap {
+    right: 5rem;
+    bottom: 0;
+    position: absolute;
+}
+
+.extra-wrap {
+    bottom: 1rem;
+    position: fixed;
+}
+
+.extra-divison {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+/* 위시리스트 추가하기 */
+.extra-create-container {
+    justify-content: flex-end;
+    display: flex;
+}
+
+.extra-create-button {
+    --tw-shadow: 0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);
+    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
+    --tw-text-opacity: 1;
+    color: rgb(135 141 145/var(--tw-text-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255/var(--tw-bg-opacity));
+    border-width: 1px;
+    border-radius: 9999px;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    aspect-ratio: 1;
+    display: flex;
+}
+
+.extra-create-button:hover {
+    background-color: #F2F4F5;
+}
+
+.extra-create-icon {
     width: 1.25rem;
     height: 1.25rem;
 }
