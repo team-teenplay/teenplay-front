@@ -720,7 +720,7 @@ em {
 
 .sub-nav-name:hover {
     --tw-text-opacity: 1;
-    color: rgb(92 63 191/var(--tw-text-opacity));
+    color: #ce201b;
 }
 
 .dividing-line {

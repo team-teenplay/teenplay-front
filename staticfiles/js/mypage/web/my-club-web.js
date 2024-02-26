@@ -49,7 +49,7 @@ signalBtns.forEach((signalBtn) => {
         e.target.closest("#signal-btn").querySelector(".signal-off-svg").classList.replace("signal-off-svg", "signal-on-svg");
         messageModalBox.querySelector(".message-check-box").style.display = "";
         messageModalBox.querySelector(".modal-header-title").innerText = "모임 알림을 설정했습니다.";
-        messageModalBox.querySelector(".message-guide-ment").innerText = "모임에 새로운 행사가 개설되면 메일로 알려드려요";
+        messageModalBox.querySelector(".message-guide-ment").innerText = "모임에 새로운 행사가 개설되면 알림으로 알려드려요";
         messageModalBox.querySelector(".continuously-btn").innerText = "계속 살펴보기";
         messageModalBox.querySelector(".club-page-btn").style.display = "";
         messageMaodalContainer.style.display = "block";
