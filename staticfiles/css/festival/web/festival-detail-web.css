@@ -783,3 +783,37 @@ main{
     --tw-bg-opacity: 1;
     background-color: rgb(248 250 251/var(--tw-bg-opacity));
 }
+
+.extra-create-container {
+    position: fixed;
+    bottom: 20px; /* 예시로 20px의 여백을 줍니다. */
+    right: 19%; /* 화면의 중앙에 위치하도록 설정합니다. */
+    transform: translateX(50%); /* 오른쪽 방향으로 50%만큼 이동시킵니다. */
+    z-index: 9999; /* 다른 요소 위에 나타나도록 함 */
+}
+
+.extra-create-button {
+    --tw-shadow: 0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);
+    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
+    --tw-text-opacity: 1;
+    color: rgb(135 141 145/var(--tw-text-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255/var(--tw-bg-opacity));
+    border-width: 1px;
+    border-radius: 9999px;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    aspect-ratio: 1;
+    display: flex;
+}
+
+.extra-create-button:hover {
+    background-color: #F2F4F5;
+}
+
+.extra-create-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}

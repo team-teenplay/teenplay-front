@@ -14,6 +14,14 @@
             href="/staticfiles/css/admin/web/festival/create/festival-create-web.css"
         />
         <title>틴플 :: 관리자 페이지</title>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+        />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     </head>
     <body>
         <!-- 헤더 먼저 해야합니다. 나중에 색상은 바꿔야합니다! -->
@@ -475,10 +483,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- 내용5. 행사 시작일 -->
+                            <!-- 내용5. 행사 기간 -->
                             <div>
                                 <p class="main-festival-plan-detail-startdate">
-                                    행사 시작일
+                                    행사 기간
                                 </p>
                                 <label
                                     class="main-festival-plan-detail-startdate-label"
@@ -510,7 +518,7 @@
                                 </div>
                             </div>
                             <!-- 내용6. 행사 종료일 -->
-                            <div>
+                            <!-- <div>
                                 <p class="main-festival-plan-detail-lastdate">
                                     행사 종료일
                                 </p>
@@ -524,9 +532,9 @@
                                         placeholder="행사 종료일을 입력해주세요."
                                         value
                                     />
-                                </label>
-                                <!-- 값 미입력시 -->
-                                <div id="red-last" class="hidden">
+                                </label> -->
+                            <!-- 값 미입력시 -->
+                            <!-- <div id="red-last" class="hidden">
                                     <div class="redbox">
                                         <svg
                                             viewBox="0 0 25 25"
@@ -542,7 +550,7 @@
                                         값을 입력해주세요.
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- 내용7. 행사 시간 -->
                             <div>
                                 <p class="main-festival-plan-detail-time">
@@ -759,6 +767,7 @@
             </div>
         </main>
     </body>
+    <script src="/staticfiles/js/admin/web/festival/create/admin-festival-create-calendar-web.js"></script>
     <script src="/staticfiles/js/admin/web/festival/create/admin-festival-create-addimg-web.js"></script>
     <script src="/staticfiles/js/admin/web/festival/create/admin-festival-create-button-web.js"></script>
     <script src="/staticfiles/js/admin/web/festival/create/admin-festival-create-redbox-web.js"></script>
